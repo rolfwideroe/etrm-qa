@@ -1,0 +1,64 @@
+﻿@model PreTestWeb.Models.Server
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Server</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ServerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EcmDb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EcmDb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SystemDb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SystemDb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dwh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dwh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SqlServer.SqlServerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SqlServer.SqlServerName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

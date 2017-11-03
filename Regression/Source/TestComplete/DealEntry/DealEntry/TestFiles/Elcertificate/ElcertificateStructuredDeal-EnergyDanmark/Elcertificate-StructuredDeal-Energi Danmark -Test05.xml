@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Elcertificate</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Sell</BuySell>
+      <TransactionName>Test</TransactionName>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company C</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>Elcertificate</PriceBasis>
+      <FromDate Month = "November" Year= "2013" >01/11/2013</FromDate>
+      <ToDate Month = "April" Year= "2014" >30/04/2014</ToDate>
+      <PriceType>End User El-Certificate</PriceType>
+    </InstrumentData>
+    <SettlementData>
+      <QuantityUnit>ECS</QuantityUnit>
+      <Currency>SEK</Currency>
+      <CurrencySource>Viz</CurrencySource>
+      <Resolution>Monthly</Resolution>
+     <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "01/11/2013 " Quantity= "300" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/12/2013" Quantity= "270" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/03/2013" Quantity= "32" Price= "15" />	
+		<QuantitiesAndPrice StartofPeriod = "01/04/2014" Quantity= "140" Price= "200" />
+	  </QuantitiesAndPriceSeriesEditor>
+    </SettlementData>
+    <Fees />
+    <DealDetails />
+    <ReferenceData>
+      <QuotaRegion>Sweden</QuotaRegion>
+    </ReferenceData>
+  </Transaction>
+</DealEntry>

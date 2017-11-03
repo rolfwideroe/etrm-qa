@@ -1,0 +1,72 @@
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>165</TransactionId>
+  <DealType>Electricity-FixedPriceFloatingVolume</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>test1</InstrumentName>
+    <PriceBasis>NordPool System Price</PriceBasis>
+    <FromDate>2015-01-01T00:00:00</FromDate>
+    <ToDate>2015-12-31T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <VolumeReferenceExternalId>for fixed pricve floating volume</VolumeReferenceExternalId>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>5</Quantity>
+    <QuantityUnit>Percent</QuantityUnit>
+    <Price>25</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+	<CounterpartyTrader>Markus TraderCounterparty</CounterpartyTrader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-10T11:37:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.0001" FeeUnit="NOK/MWh" />
+      <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.01" FeeUnit="NOK" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.02" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.25" FeeUnit="EUR" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ModificationDateTimeUtc>2015-06-10T12:44:46Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>8760</Deliveries>
+    <OriginalQuantity>5</OriginalQuantity>
+    <ReferringId>166</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="Electr-FPFV" ValueType="System.String" />
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+        <Property Name="RemitReporting" Value="True" ValueType="System.Boolean" />
+        <Property Name="BuyerInitiatorAggressor" Value="Initiator" ValueType="System.String" />
+        <Property Name="SellerInitiatorAggressor" Value="Aggressor" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>

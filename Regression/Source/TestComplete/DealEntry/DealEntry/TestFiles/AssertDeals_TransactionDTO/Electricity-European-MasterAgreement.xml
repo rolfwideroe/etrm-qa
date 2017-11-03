@@ -1,0 +1,106 @@
+<TestCase>
+<DealEntry>
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>European</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>Nord Pool</ExecutionVenue>
+      <PriceBasis>NordPool System Price</PriceBasis>
+      <Period>FWYR-15</Period>
+      <LoadProfile>Base (System)</LoadProfile>
+      <TimeZone>(UTC+01:00) Central Europe Standard Time</TimeZone>
+      <UnderlyingInstrumentType>Forward</UnderlyingInstrumentType>
+      <PutCall>Put</PutCall>
+      <Strike>50</Strike>
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>25</Quantity>
+      <Price>1.02</Price>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+	  <MasterAgreement>A-B Elect Euro</MasterAgreement>
+	  <SettlementRule>ElectEuropean</SettlementRule>
+    </SettlementData>
+    <Fees />
+    <DealDetails>
+	    <TradeTime>12:00</TradeTime>
+	</DealDetails>
+    <ReferenceData />
+  </Transaction>
+</DealEntry>
+<QaTransactionDTO>
+<TransactionId>217</TransactionId>
+  <DealType>Electricity-European</DealType>
+  <BuySell>Sell</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company B</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company B</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>EURP YR-15 18-DEC-14 50.00</InstrumentName>
+    <PriceBasis>NordPool System Price</PriceBasis>
+    <FromDate>2015-01-01T00:00:00</FromDate>
+    <ToDate>2015-12-31T00:00:00</ToDate>
+    <PutCall>Put</PutCall>
+    <Strike>50</Strike>
+    <ExpiryDate>2014-12-18T00:00:00</ExpiryDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+	<UnderlyingExecutionVenue>Nord Pool</UnderlyingExecutionVenue>
+	<UnderlyingDeliveryType>Physical</UnderlyingDeliveryType>
+	<UnderlyingInstrumentType>Forward</UnderlyingInstrumentType>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>25</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>1.02</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <MasterAgreement>A-B Elect Euro</MasterAgreement>
+    <SettlementRule>ElectEuropean</SettlementRule>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-10T10:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ModificationDateTimeUtc>2015-10-27T13:27:29Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>8760</Deliveries>
+    <OriginalQuantity>25</OriginalQuantity>
+    <ReferringId>218</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

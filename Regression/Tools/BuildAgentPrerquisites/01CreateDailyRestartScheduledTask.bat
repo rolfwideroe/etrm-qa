@@ -1,0 +1,1 @@
+SchTasks /Create /SC DAILY /TN "Daily Restart" /TR "shutdown -r -f -t 0" /ST 23:30 /RU bradyplc\qainstall /RP Isetitup2 /RL HIGHEST

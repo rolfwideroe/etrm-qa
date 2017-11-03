@@ -1,0 +1,21 @@
+<TestCase>
+	<CreateProxyPriceBookSettings>
+		<ProxyName>Electricity_TestProxyTemplate</ProxyName>
+		<Commodity>Electricity</Commodity>
+		<CommodityUnit>MWh</CommodityUnit>
+		<ReferenceArea>NO1</ReferenceArea>		
+		<Currency>NOK</Currency>
+		<CurrencyUnit>NOK</CurrencyUnit>
+		<CurrencySource>Viz</CurrencySource>
+		<FunctionType>@Curve</FunctionType>
+		<FunctionDefinition>ExcelAdapter{NO1}</FunctionDefinition>
+	</CreateProxyPriceBookSettings>
+	<UpdateProxyPriceBookSettings>		
+		<CommodityUnit>kWh</CommodityUnit>
+		<Currency>SEK</Currency>
+		<CurrencyUnit>SEK</CurrencyUnit>
+		<CurrencySource>Nordpool</CurrencySource>
+		<FunctionType>@Curve</FunctionType>
+		<FunctionDefinition>NPX{NPS}</FunctionDefinition>
+	</UpdateProxyPriceBookSettings>
+</TestCase>

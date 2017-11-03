@@ -1,0 +1,26 @@
+<TestCase>
+	<CreateIndexPriceBookSettings>
+		<IndexName>Electricity_TestIndexTemplate</IndexName>
+		<Commodity>Electricity</Commodity>
+		<CommodityUnit>MWh</CommodityUnit>
+		<Resolution>Day</Resolution>
+		<ResolutionTimeZone>(UTC+01:00) Central Europe Standard Time</ResolutionTimeZone>
+		<Currency>NOK</Currency>
+		<CurrencyUnit>NOK</CurrencyUnit>
+		<CurrencySource>Viz</CurrencySource>
+		<FunctionType>@Index</FunctionType>
+		<FunctionDefinition>TestFormula</FunctionDefinition>
+	</CreateIndexPriceBookSettings>
+	<UpdateIndexPriceBookSettings>
+		<IndexName>Electricity_TestIndexTemplate_updated</IndexName>
+		<Commodity>Electricity</Commodity>
+		<CommodityUnit>kWh</CommodityUnit>
+		<Resolution>Hour</Resolution>
+		<ResolutionTimeZone>(UTC+01:00) Central Europe Standard Time</ResolutionTimeZone>
+		<Currency>USD</Currency>
+		<CurrencyUnit>USD</CurrencyUnit>
+		<CurrencySource>Nordpool</CurrencySource>
+		<FunctionType>@Curve</FunctionType>
+		<FunctionDefinition>ExcelAdapter{NO3}</FunctionDefinition>
+	</UpdateIndexPriceBookSettings>
+</TestCase>

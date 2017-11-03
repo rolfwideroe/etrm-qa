@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Buy</BuySell>
+      <TransactionName>FlexibleTimeSeries Volume Profile</TransactionName>
+	  <ModelType>Generation</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>TTF</PriceBasis>
+      <FromDate>10/06/2013</FromDate>
+      <ToDate>10/09/2013</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Spot w/margin</PriceType>
+    </InstrumentData>
+    <SettlementData>
+	  <QuantityUnit>Sm3/d</QuantityUnit>
+      <Currency>NOK</Currency>
+      <CurrencySource>Viz</CurrencySource>
+	  <PriceVolumeUnit>NOK/Sm3</PriceVolumeUnit>
+	 <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Daily" EffectiveFrom = "10/06/2013" Visibitily="true" VolumeProfile="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="0" />			
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>YearVolumeProfileLeap</Profile>
+				<FDate>10/06/2013</FDate>
+				<TDate>10/09/2013</TDate>
+				<Unit>Sm3</Unit>
+				<Resolution>Month</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "10/06/2013" Value="1403"/>
+					<Volume StartOfPeriod = "01/07/2013" Value="1701"/>
+					<Volume StartOfPeriod = "01/08/2013" Value="1602"/>
+					<Volume StartOfPeriod = "01/09/2013" Value="1202"/>
+				</VolumeAndPrice>
+			</DistributeVolume>
+		</ForecastedVolume>
+		<ForecastedPrice  GUIName = "Forecasted Price" Resolution= "Daily" EffectiveFrom = "10/06/2013" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="1.1" />
+				<TimeSeriesValue StartofPeriod="11/06/2013" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="1.1" />
+				<TimeSeriesValue StartofPeriod="25/06/2013" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="26/06/2013" Value="3.1" />
+				<TimeSeriesValue StartofPeriod="27/06/2013" Value="4.1" />
+				<TimeSeriesValue StartofPeriod="28/06/2013" Value="5.1" />
+				<TimeSeriesValue StartofPeriod="29/06/2013" Value="6.1" />
+				<TimeSeriesValue StartofPeriod="30/06/2013" Value="7.1" />				
+			</TimeSeriesDetails>
+		</ForecastedPrice>
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Daily" EffectiveFrom = "" Visibitily="true" VolumeProfile="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="0" />						
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>YearVolumeProfile</Profile>
+				<FDate>10/06/2013</FDate>
+				<TDate>10/09/2013</TDate>
+				<Unit>Sm3</Unit>
+				<Resolution>Quarter</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "10/06/2013" Value="3403"/>
+					<Volume StartOfPeriod = "01/07/2013" Value="17501"/>
+				</VolumeAndPrice>
+			</DistributeVolume>			
+		</RealizedVolume>
+		<RealizedPrice GUIName = "Realized Price" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">		
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="0.1" />
+				<TimeSeriesValue StartofPeriod="11/06/2013" Value="0.2" />
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="0.1" />
+				<TimeSeriesValue StartofPeriod="25/06/2013" Value="0.2" />
+				<TimeSeriesValue StartofPeriod="26/06/2013" Value="0.3" />
+				<TimeSeriesValue StartofPeriod="27/06/2013" Value="0.4" />
+				<TimeSeriesValue StartofPeriod="28/06/2013" Value="0.5" />
+				<TimeSeriesValue StartofPeriod="29/06/2013" Value="0.6" />
+				<TimeSeriesValue StartofPeriod="30/06/2013" Value="0.7" />				
+			</TimeSeriesDetails>							
+		</RealizedPrice>
+	  </FlexibleStructuredDealInformation>	
+    </SettlementData>
+	<ReferenceData>
+		<ExternalId>Gas-FSD-Daily Volume Profile</ExternalId>		
+	</ReferenceData>
+  </Transaction>
+</DealEntry>

@@ -1,0 +1,104 @@
+<TestCase>
+<DealEntry>
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Forward</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Buy</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Counterparty A</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>Nord Pool</ExecutionVenue>
+      <PriceBasis>NordPool System Price</PriceBasis>
+      <Period>M12-13</Period>
+      <LoadProfile>Base (System)</LoadProfile>
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>40</Quantity>
+      <Price>28</Price>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+    </SettlementData>
+    <Fees>
+	  <Broker>Test Broker A</Broker> 	
+    </Fees>
+    <DealDetails>
+      <Trader>DealImport</Trader>
+      <Status>Active</Status>
+	  <TradeTime>00:00</TradeTime>
+    </DealDetails>
+    <ReferenceData>
+		<Comment>PassElectricityForwardFee-CommissionAndBroker-NPSP-Portfolio</Comment>
+	</ReferenceData>
+  </Transaction>
+</DealEntry>
+<QaTransactionDTO>
+  <TransactionId>159</TransactionId>
+  <DealType>Electricity-Forward</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Counterparty A</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Counterparty A</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>M12-13</InstrumentName>
+    <PriceBasis>NordPool System Price</PriceBasis>
+    <FromDate>2013-12-01T00:00:00</FromDate>
+    <ToDate>2013-12-31T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>40</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>28</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-09T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.12" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.12" FeeUnit="EUR/MWh" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+	<Comment>PassElectricityForwardFee-CommissionAndBroker-NPSP-Portfolio</Comment>
+    <ModificationDateTimeUtc>2015-01-15T15:09:55Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>744</Deliveries>
+    <OriginalQuantity>40</OriginalQuantity>
+    <ReferringId>160</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

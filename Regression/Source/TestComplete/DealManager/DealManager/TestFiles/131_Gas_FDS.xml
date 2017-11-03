@@ -1,0 +1,94 @@
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Update>
+	<TransactionID>131</TransactionID>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+	<SettlementData>
+    <FlexibleStructuredDealInformation>
+			<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Daily" EffectiveFrom = "10/06/2013" Visibitily="true">	
+				<TimeSeriesDetails>
+					<TimeSeriesValue StartofPeriod="10/06/2013" Value="0.885" />
+					<TimeSeriesValue StartofPeriod="11/06/2013" Value="25" />				
+					<TimeSeriesValue StartofPeriod="12/06/2013" Value="42" />
+					<TimeSeriesValue StartofPeriod="13/06/2013" Value="46" />
+					<TimeSeriesValue StartofPeriod="14/06/2013" Value="0.885" />
+					<TimeSeriesValue StartofPeriod="15/06/2013" Value="46" />
+				</TimeSeriesDetails>	
+			</ForecastedVolume>
+			<ForecastedPrice  GUIName = "Forecasted Price" Resolution= "Daily" EffectiveFrom = "10/06/2013" Visibitily="true">
+				<TimeSeriesDetails>
+					<TimeSeriesValue StartofPeriod="10/06/2013" Value="9" />
+					<TimeSeriesValue StartofPeriod="11/06/2013" Value="8" />				
+					<TimeSeriesValue StartofPeriod="12/06/2013" Value="7" />
+					<TimeSeriesValue StartofPeriod="13/06/2013" Value="6" />
+					<TimeSeriesValue StartofPeriod="14/06/2013" Value="5" />
+					<TimeSeriesValue StartofPeriod="15/06/2013" Value="4" />
+				</TimeSeriesDetails>	
+			</ForecastedPrice>
+			<ForecastedPrice  GUIName = "Forecasted Price" Resolution= "Daily" EffectiveFrom = "11/06/2013" Visibitily="true">
+				<TimeSeriesDetails>
+					<TimeSeriesValue StartofPeriod="10/06/2013" Value="9.11" />
+					<TimeSeriesValue StartofPeriod="11/06/2013" Value="8.11" />				
+					<TimeSeriesValue StartofPeriod="12/06/2013" Value="7.11" />
+					<TimeSeriesValue StartofPeriod="13/06/2013" Value="6.11" />
+					<TimeSeriesValue StartofPeriod="14/06/2013" Value="5.12" />
+					<TimeSeriesValue StartofPeriod="15/06/2013" Value="4.13" />
+				</TimeSeriesDetails>	
+			</ForecastedPrice>
+			<RealizedVolume GUIName = "Realized Volume" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">
+				<TimeSeriesDetails>
+					<TimeSeriesValue StartofPeriod="10/06/2013" Value="9" />
+					<TimeSeriesValue StartofPeriod="11/06/2013" Value="8" />				
+					<TimeSeriesValue StartofPeriod="12/06/2013" Value="7" />
+					<TimeSeriesValue StartofPeriod="13/06/2013" Value="6" />
+					<TimeSeriesValue StartofPeriod="14/06/2013" Value="5" />
+					<TimeSeriesValue StartofPeriod="15/06/2013" Value="4" />
+				</TimeSeriesDetails>	
+			</RealizedVolume>
+			<RealizedPrice GUIName = "Realized Price" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">		
+				<TimeSeriesDetails>
+					<TimeSeriesValue StartofPeriod="10/06/2013" Value="9.2" />
+					<TimeSeriesValue StartofPeriod="11/06/2013" Value="8.2" />				
+					<TimeSeriesValue StartofPeriod="12/06/2013" Value="7.2" />
+					<TimeSeriesValue StartofPeriod="13/06/2013" Value="6.2" />
+					<TimeSeriesValue StartofPeriod="14/06/2013" Value="5.2" />
+					<TimeSeriesValue StartofPeriod="15/06/2013" Value="4.2" />
+				</TimeSeriesDetails>					
+			</RealizedPrice>
+		  </FlexibleStructuredDealInformation>	
+    </SettlementData>
+    <Fees>
+      <Broker>Test Broker A</Broker>
+      <BrokerFixed>0.123</BrokerFixed>
+      <ClearingFixed>0.123</ClearingFixed>
+      <CommissionFixed>0</CommissionFixed>
+      <TradingFixed>0.123</TradingFixed>
+    </Fees>
+	<ReferenceData>
+		<ExternalId>131 ExternalID</ExternalId>
+	</ReferenceData>
+<EMIR>
+    <TimestampCleared>18/12/2013</TimestampCleared>
+    <TimestampClearedTime>10:53</TimestampClearedTime>
+    <TimestampConfC.party>17/12/2013</TimestampConfC.party>
+    <TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+    <TimestampConfBroker>18/12/2013</TimestampConfBroker>
+    <TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+    <TerminationDate>20/12/2013</TerminationDate>
+    <UniqueTradeIdentifier>Unique ID gas flexible str_deal versioned</UniqueTradeIdentifier>
+    <DealCompression>No</DealCompression>
+	<EMIRStatus>Not EMIR relevant</EMIRStatus>
+</EMIR>
+</Update>
+<Copy>	
+	<ReferenceData>
+		<DealGroup1>Add new group 1</DealGroup1>
+		<DealGroup2>Add new group 2</DealGroup2>
+		<DealGroup3>Add new group 3</DealGroup3>
+		<Comment>Copy of 129</Comment>
+	</ReferenceData>
+	<EMIR>    
+		<UniqueTradeIdentifier>Unique ID gas FSD vers. copied</UniqueTradeIdentifier>		
+	</EMIR>
+</Copy>
+</DealEntry>

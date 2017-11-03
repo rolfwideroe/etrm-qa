@@ -1,0 +1,56 @@
+﻿@model IEnumerable<PreTestWeb.Models.Server>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ServerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EcmDb)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SystemDb)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dwh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SqlServer.SqlServerName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EcmDb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SystemDb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dwh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SqlServer.SqlServerName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ServerId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ServerId })
+        </td>
+    </tr>
+}
+
+</table>

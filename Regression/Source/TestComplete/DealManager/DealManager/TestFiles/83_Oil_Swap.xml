@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Update>
+	<TransactionID>83</TransactionID>
+    <Commodity>Oil</Commodity>
+    <InstrumentType>Swap</InstrumentType>
+    <GeneralData>
+      <BuySell>Buy</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <SwapPriceType>ICE Front Line Future</SwapPriceType>
+	  <PriceBasis>BrentOil</PriceBasis>
+	  <FromDate Month = "July " Year= "2013" >01/07/2013</FromDate>
+    </InstrumentData>
+    <SettlementData>
+      <QuantityUnit>Bbl</QuantityUnit>
+      <PriceVolumeUnit>USD/bbl</PriceVolumeUnit>
+	  	<QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "01/07/2013 " Quantity= "2.5" Price= "0.5" />
+		<QuantitiesAndPrice StartofPeriod = "01/11/2014" Quantity= "52" Price= "17" />
+		<QuantitiesAndPrice StartofPeriod = "01/12/2014" Quantity= "32" Price= "15" />	
+    </QuantitiesAndPriceSeriesEditor>
+    </SettlementData>
+    <DealDetails>
+		<TradeTime>00:00</TradeTime>
+    </DealDetails>
+<ReferenceData>
+	<Comment>Updated 83</Comment>
+</ReferenceData>
+</Update>
+<Copy>
+	<ReferenceData>
+		<Comment>Copy of 83</Comment>
+	</ReferenceData>
+</Copy>
+</DealEntry>

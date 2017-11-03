@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Update>
+	<TransactionID>97</TransactionID>
+    <Commodity>Coal</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <InstrumentData>
+	  <PriceType>Fixed</PriceType>
+      <IndexFormula>Coal index</IndexFormula>
+      <FromDate>31/08/2013</FromDate>
+      <ToDate>27/09/2013</ToDate>      
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>100</Quantity>
+      <QuantityUnit>Ton</QuantityUnit>
+      <Price>10</Price>
+      <PriceVolumeUnit>USD/Ton</PriceVolumeUnit>
+	  <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "31/08/2013 " Quantity= "0.5" Price= "2" />
+		<QuantitiesAndPrice StartofPeriod = "26/09/2013" Quantity= "52" Price= "1.5" />
+		<QuantitiesAndPrice StartofPeriod = "27/09/2013" Quantity= "32" Price= "15" />	
+	  </QuantitiesAndPriceSeriesEditor>
+    </SettlementData>
+	<ReferenceData>
+		<Comment>Updated 97</Comment>
+	</ReferenceData>
+</Update>
+<Copy>
+	<ReferenceData>
+		<Comment>Copy of 97</Comment>
+	</ReferenceData>
+</Copy>
+</DealEntry>

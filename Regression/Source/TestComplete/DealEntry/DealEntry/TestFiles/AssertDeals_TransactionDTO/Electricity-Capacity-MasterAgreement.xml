@@ -1,0 +1,109 @@
+<TestCase>
+<DealEntry>
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Capacity</InstrumentType>
+    <GeneralData>
+      <BuySell>Buy</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company D</CounterpartyPortfolio>
+      <Interconnector>DE.ENBW_DE.EON</Interconnector>
+    </Portfolios>
+    <InstrumentData>
+	  <!--DestinationReferencePriceSeries>EEX System-EUR-Offpeak day</DestinationReferencePriceSeries-->
+      <Period>FWYR-15</Period>
+      <LoadProfile>Off-peak (System)</LoadProfile>
+      <Priority>Firm</Priority>
+      <ExpiryTime>12:00</ExpiryTime>
+      <Expiryoffset>1</Expiryoffset>
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>15.44</Quantity>
+      <Price>0.7732</Price>
+      <PriceMargin>0</PriceMargin>
+      <MarketPriceMultiplicator>0</MarketPriceMultiplicator>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>	  
+	  <MasterAgreement>A-D ElectCapacity</MasterAgreement>
+	  <SettlementRule>ElectCapacity</SettlementRule>
+    </SettlementData>
+    <Fees />
+	<DealDetails>
+		<Trader>Vizard</Trader>
+		<Status>Draft</Status>
+		<TradeDate>10/06/2013</TradeDate>
+		<TradeTime>10:24</TradeTime>
+	</DealDetails>
+    <ReferenceData />
+  </Transaction>
+</DealEntry>
+<QaTransactionDTO>
+  <TransactionId>215</TransactionId>
+  <DealType>Electricity-Capacity</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company D</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company D</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>YR-15</InstrumentName>
+    <PriceBasis>EEX</PriceBasis>
+    <PriceBasisToArea>EEX</PriceBasisToArea>
+    <FromDate>2015-01-01T00:00:00</FromDate>
+    <ToDate>2015-12-31T00:00:00</ToDate>
+    <PutCall>Call</PutCall>
+    <LoadProfile>Off peak</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone> 
+    <Interconnector>DE.ENBW_DE.EON</Interconnector>
+    <ExpiryTime>12:00:00</ExpiryTime>
+    <ExpiryOffset>1</ExpiryOffset>
+    <Priority>Firm</Priority>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>15.44</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>0.7732</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <MasterAgreement>A-D ElectCapacity</MasterAgreement>
+    <SettlementRule>ElectCapacity</SettlementRule>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Draft</Status>
+    <TradeDateTimeUtc>2013-06-10T08:24:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ModificationDateTimeUtc>2015-10-27T13:26:58Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>8760</Deliveries>
+    <OriginalQuantity>15.44</OriginalQuantity>
+    <ReferringId>216</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

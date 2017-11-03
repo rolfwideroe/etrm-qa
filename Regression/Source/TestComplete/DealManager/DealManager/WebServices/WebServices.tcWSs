@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="child list">
+			<Node name="item0000000000">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="LookUpService1\LookUpService.tcWS"/>
+				</Node>
+				<Prp name="index" type="I" value="0"/>
+				<Prp name="key" type="S" value="{BF1DDD05-9749-4162-BF7B-E505D2846A74}"/>
+				<Prp name="pluginname" type="S" value="Web Services"/>
+				<Prp name="type" type="S" value="{FDE830DE-DB45-4B3F-9158-5C1FB0B40C28}"/>
+				<Prp name="typename" type="S" value="Web Service"/>
+			</Node>
+		</Node>
+		<Node name="folders">
+			<Node name="folders"/>
+		</Node>
+		<Node name="settings">
+			<Prp name="settingsversion" type="S" value="9.0"/>
+		</Node>
+		<Prp name="signature" type="S" value="{B80B4499-CFD0-49B8-A39C-3264E9ED9080}"/>
+		<Prp name="version" type="S" value="9.0"/>
+	</Node>
+</Nodes>

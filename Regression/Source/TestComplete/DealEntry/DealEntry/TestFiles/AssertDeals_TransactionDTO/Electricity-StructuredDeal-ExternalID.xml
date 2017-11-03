@@ -1,0 +1,172 @@
+<TestCase>
+<DealEntry>
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>	
+	  <TransactionName>Open external ID</TransactionName>
+	  <ModelType>Fixed Volume</ModelType>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+	  <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>TestFormula</IndexFormula>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>NordPool System Price</PriceBasis>
+      <ReferencePriceSeries>SP1-EUR-Day</ReferencePriceSeries>
+	  <FromDate>01/10/2013</FromDate>
+      <ToDate>30/04/2014</ToDate>   
+    </InstrumentData>
+    <SettlementData>
+       <Price>0</Price>
+       <PriceMargin>0</PriceMargin>
+       <Currency>EUR</Currency>
+       <CurrencySource>Viz</CurrencySource>
+       <Resolution>Monthly</Resolution>
+	   <MasterAgreement>A-B ElectStrDeal</MasterAgreement>
+	   <SettlementRule>ElectStrDeal</SettlementRule>
+	   <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "01/10/2013" QuantityInProfile= "9.885" PriceInProfile= "91" QuantityOutProfile= "5" PriceOutProfile= "19"/>
+		<QuantitiesAndPrice StartofPeriod = "01/12/2013" QuantityInProfile= "10.885" PriceInProfile= "92" QuantityOutProfile= "8" PriceOutProfile= "29"/>
+		<QuantitiesAndPrice StartofPeriod = "01/01/2014" QuantityInProfile= "0.885" PriceInProfile= "93" QuantityOutProfile= "9" PriceOutProfile= "39"/>
+		<QuantitiesAndPrice StartofPeriod = "01/03/2014" QuantityInProfile= "3.885" PriceInProfile= "95" QuantityOutProfile= "0.8" PriceOutProfile= "49"/>
+		<QuantitiesAndPrice StartofPeriod = "01/04/2014" QuantityInProfile= "8.885" PriceInProfile= "99" QuantityOutProfile= "0.36" PriceOutProfile= "9"/>
+	  </QuantitiesAndPriceSeriesEditor>
+    </SettlementData>
+    <Fees>
+	  <Broker>Test Broker A</Broker>
+      <BrokerVariable>0.122</BrokerVariable>
+	  <BrokerFixed>1.22</BrokerFixed>
+      <ClearingVariable>0.123</ClearingVariable>
+      <ClearingFixed>1.23</ClearingFixed>
+	  <CommissionVariable>0.124</CommissionVariable>
+	  <CommissionFixed>1.24</CommissionFixed>
+      <TradingVariable>0.125</TradingVariable>
+	  <TradingFixed>1.25</TradingFixed>   
+    </Fees>
+    <DealDetails>
+        <TradeTime>00:00</TradeTime>
+    </DealDetails>
+    <ReferenceData>
+		<ExternalId>Open external ID for fixed str.deal</ExternalId>
+	</ReferenceData>
+		<EMIR>
+		<TimestampCleared>18/12/2013</TimestampCleared>
+		<TimestampClearedTime>10:53</TimestampClearedTime>
+		<TimestampConfC.party>17/12/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/12/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>UTI El-Str.D.with open ExternalID</UniqueTradeIdentifier>
+		<DealCompression>No</DealCompression>
+		<EMIRStatus>EMIR risk reducing</EMIRStatus>
+	</EMIR>
+	<REMIT>
+		<REMITReporting>Yes</REMITReporting>
+		<BuyerInitiatorAggressor>Initiator</BuyerInitiatorAggressor>
+		<SellerInitiatorAggressor>Aggressor</SellerInitiatorAggressor>
+	</REMIT>
+  </Transaction>
+</DealEntry>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>2065</TransactionId>
+  <DealType>Electricity-StructuredDeal</DealType>
+  <BuySell>Sell</BuySell>
+  <ContractModelType>Fixed Volume</ContractModelType>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company B</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company B</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>Open external ID</InstrumentName>
+    <PriceBasis>NordPool System Price</PriceBasis>
+    <FromDate>2013-10-01T00:00:00</FromDate>
+    <ToDate>2014-04-30T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <PriceType>Indexed</PriceType>
+	<ReferencePriceSeries>SP1-EUR-Day</ReferencePriceSeries>
+    <IndexFormula>TestFormula</IndexFormula>
+  </InstrumentData>
+  <SettlementData>
+  <QuantityUnit>MW</QuantityUnit>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <MarketPriceMultiplicator>1</MarketPriceMultiplicator>
+    <MasterAgreement>A-B ElectStrDeal</MasterAgreement>
+    <SettlementRule>ElectStrDeal</SettlementRule>
+    <Resolution>Month</Resolution>
+    <PriceVolumeTimeSeriesDetails>
+      <PriceVolumeTimeSeriesDetail FromDateTime="2013-10-01T00:00:00" ToDateTime="2013-11-01T00:00:00" Price="91" Volume="9.885" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2013-11-01T00:00:00" ToDateTime="2013-12-01T00:00:00" Price="0" Volume="0" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2013-12-01T00:00:00" ToDateTime="2014-01-01T00:00:00" Price="92" Volume="10.885" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2014-01-01T00:00:00" ToDateTime="2014-02-01T00:00:00" Price="93" Volume="0.885" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2014-02-01T00:00:00" ToDateTime="2014-03-01T00:00:00" Price="0" Volume="0" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2014-03-01T00:00:00" ToDateTime="2014-04-01T00:00:00" Price="95" Volume="3.885" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2014-04-01T00:00:00" ToDateTime="2014-05-01T00:00:00" Price="99" Volume="8.885" />
+    </PriceVolumeTimeSeriesDetails>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-09T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.122" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="1.22" FeeUnit="EUR" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="1.23" FeeUnit="EUR" />
+      <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.124" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="1.24" FeeUnit="EUR" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.125" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="1.25" FeeUnit="EUR" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>Open external ID for fixed str.deal</ExternalId>
+    <ModificationDateTimeUtc>2015-02-24T07:27:08Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>5088</Deliveries>
+    <OriginalQuantity>0</OriginalQuantity>
+    <ReferringId>2066</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+   <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="UTI El-Str.D.with open ExternalID" ValueType="System.String" />
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+        <Property Name="TerminationDate" Value="2013-12-20T00:00:00" ValueType="System.DateTime" />
+        <Property Name="EMIRStatus" Value="EMIR risk reducing" ValueType="System.String" />
+        <Property Name="RemitReporting" Value="True" ValueType="System.Boolean" />
+        <Property Name="BuyerInitiatorAggressor" Value="Initiator" ValueType="System.String" />
+        <Property Name="SellerInitiatorAggressor" Value="Aggressor" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+    <TimeStampClearedUtc>2013-12-18T09:53:00Z</TimeStampClearedUtc>
+    <TimeStampConfirmationBrokerUtc>2013-12-18T09:55:00Z</TimeStampConfirmationBrokerUtc>
+    <TimeStampConfirmationCounterPartyUtc>2013-12-17T09:54:00Z</TimeStampConfirmationCounterPartyUtc>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

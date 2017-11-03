@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Sell</BuySell>
+      <TransactionName>FlexibleTimeSeries YearVolumeProfileLeap</TransactionName>
+	  <ModelType>Generation</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>EEX</PriceBasis>
+      <FromDate>01/01/2014</FromDate>
+      <ToDate>31/12/2016</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Spot w/margin</PriceType>
+    </InstrumentData>
+    <SettlementData>
+      <Currency>EUR</Currency>
+      <CurrencySource>ECB</CurrencySource>
+	 <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Yearly" EffectiveFrom = "10/06/2013" Visibitily="true" VolumeProfile="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="0" />			
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>YearVolumeProfileLeap</Profile>
+				<FDate>01/01/2014</FDate>
+				<TDate>31/12/2016</TDate>
+				<Unit>MWh</Unit>
+				<Resolution>Year</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "01/01/2014" Value="5003"/>
+					<Volume StartOfPeriod = "01/01/2015" Value="6051"/>
+					<Volume StartOfPeriod = "01/01/2016" Value="7502"/>
+				</VolumeAndPrice>
+			</DistributeVolume>
+		</ForecastedVolume>
+		<ForecastedPrice  GUIName = "Forecasted Price" Resolution= "Yearly" EffectiveFrom = "10/06/2013" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="01/01/2014" Value="1.1" />
+				<TimeSeriesValue StartofPeriod="01/01/2015" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="01/01/2016" Value="3.1" />			
+			</TimeSeriesDetails>
+		</ForecastedPrice>
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Yearly" EffectiveFrom = "" Visibitily="true" VolumeProfile="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="0" />						
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>YearVolumeProfile</Profile>
+				<FDate>01/01/2014</FDate>
+				<TDate>31/12/2016</TDate>
+				<Unit>MWh</Unit>
+				<Resolution>Year</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "01/01/2014" Value="5003"/>
+					<Volume StartOfPeriod = "01/01/2015" Value="6051"/>
+					<Volume StartOfPeriod = "01/01/2016" Value="7502"/>
+				</VolumeAndPrice>
+			</DistributeVolume>
+		</RealizedVolume>
+		<RealizedPrice GUIName = "Realized Price" Resolution= "Quarterly" EffectiveFrom = "" Visibitily="true">		
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="01/01/2014" Value="1.27" />
+				<TimeSeriesValue StartofPeriod="01/04/2014" Value="2.3" />
+				<TimeSeriesValue StartofPeriod="01/07/2014" Value="3.4" />				
+				<TimeSeriesValue StartofPeriod="01/10/2014" Value="1.27" />
+				<TimeSeriesValue StartofPeriod="01/01/2015" Value="2.3" />
+				<TimeSeriesValue StartofPeriod="01/04/2015" Value="3.4" />		
+				<TimeSeriesValue StartofPeriod="01/07/2015" Value="1.27" />
+				<TimeSeriesValue StartofPeriod="01/10/2015" Value="2.3" />
+				<TimeSeriesValue StartofPeriod="01/01/2016" Value="3.4" />		
+				<TimeSeriesValue StartofPeriod="01/04/2016" Value="1.27" />
+				<TimeSeriesValue StartofPeriod="01/07/2016" Value="2.3" />
+				<TimeSeriesValue StartofPeriod="01/10/2016" Value="3.4" />		
+			</TimeSeriesDetails>							
+		</RealizedPrice>
+	  </FlexibleStructuredDealInformation>	
+    </SettlementData>
+    <Fees />
+	<EMIR>
+		<TimestampCleared>18/12/2013</TimestampCleared>
+		<TimestampClearedTime>10:53</TimestampClearedTime>
+		<TimestampConfC.party>17/12/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/12/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>Electricity-FSD-YearVolumeProfile</UniqueTradeIdentifier>
+		<DealCompression>No</DealCompression>
+		<EMIRStatus>EMIR risk reducing</EMIRStatus>
+	</EMIR>
+  </Transaction>
+</DealEntry>

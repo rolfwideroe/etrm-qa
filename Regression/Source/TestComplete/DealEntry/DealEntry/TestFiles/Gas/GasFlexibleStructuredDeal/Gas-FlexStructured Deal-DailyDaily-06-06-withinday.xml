@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Sell</BuySell>
+      <TransactionName>FlexibleTimeSeries Within-Day</TransactionName>
+	  <ModelType>Generation</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company C</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <PriceBasis>Germany NCG</PriceBasis>
+      <FromDate>09/06/2013</FromDate>
+      <ToDate>09/06/2013</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>TestGasFormula</IndexFormula>
+    </InstrumentData>
+    <SettlementData>
+	  <QuantityUnit>Sm3/d</QuantityUnit>
+      <Currency>NOK</Currency>
+      <CurrencySource>ECB</CurrencySource>	  
+	  <PriceVolumeUnit>NOK/Sm3</PriceVolumeUnit>
+      <FlexibleTimeSeries>Yes</FlexibleTimeSeries>
+	  <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Daily" EffectiveFrom = "10/06/2013" Visibitily="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="09/06/2013" Value="2.02" />
+			</TimeSeriesDetails>	
+		</ForecastedVolume>
+		<ForecastedPrice  GUIName = "Forecasted Price" Resolution= "Daily" EffectiveFrom = "10/06/2013" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="09/06/2013" Value="12.02" />
+			</TimeSeriesDetails>	
+		</ForecastedPrice>
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="09/06/2013" Value="3.02" />
+			</TimeSeriesDetails>	
+		</RealizedVolume>
+		<RealizedPrice GUIName = "Realized Price" Resolution= "Daily" EffectiveFrom = "" Visibitily="false">		
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="09/06/2013" Value="42.2" />
+			</TimeSeriesDetails>					
+		</RealizedPrice>
+	  </FlexibleStructuredDealInformation>	
+    </SettlementData>
+    <Fees>
+      <Broker>Test Broker A</Broker>
+	  <BrokerFixed>1</BrokerFixed>
+	  <BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+	  <ClearingFixed>1</ClearingFixed>
+	  <ClearingFeeCurrency>NOK</ClearingFeeCurrency>
+	  <CommissionFixed>1</CommissionFixed>
+	  <CommissionFeeCurrency>NOK</CommissionFeeCurrency>
+	  <TradingFixed>1</TradingFixed>
+	  <TradingFeeCurrency>NOK</TradingFeeCurrency>	 
+    </Fees>
+    <DealDetails>
+		<TradeTime>02:22</TradeTime>
+		<TradeDate>10/06/2013</TradeDate>
+	</DealDetails>
+    <ReferenceData />
+	<REMIT>
+		<REMITReporting>Yes</REMITReporting>
+		<BuyerInitiatorAggressor>Sleeve</BuyerInitiatorAggressor>
+		<SellerInitiatorAggressor>Initiator</SellerInitiatorAggressor>
+	</REMIT>
+	<DealGroup>
+		<DealGroup1>Within-Day</DealGroup1>
+		<DealGroup2>DealGroupOne</DealGroup2>
+		<DealGroup3>DealGroupTwo</DealGroup3>
+	</DealGroup>
+	<QA>
+		<CustomProperty1>qa1</CustomProperty1>
+		<CustomProperty2>qa2</CustomProperty2>
+		<CustomProperty3>qa3</CustomProperty3>
+	</QA>
+	<TestCustomer>
+		<CustomProperty4>Name</CustomProperty4>
+		<CustomProperty5>Customportfolio</CustomProperty5>
+		<CustomProperty6>trademark</CustomProperty6>
+		<CustomProperty7>type</CustomProperty7>
+		<CustomProperty8>country</CustomProperty8>
+		<CustomProperty9>city</CustomProperty9>
+		<CustomProperty10>contact</CustomProperty10>
+	</TestCustomer>
+  </Transaction>
+</DealEntry>

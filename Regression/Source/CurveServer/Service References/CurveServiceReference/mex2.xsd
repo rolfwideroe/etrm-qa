@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Elviz.API" elementFormDefault="qualified" targetNamespace="Elviz.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://qa132a:8009/CurveService/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://qa132a:8009/CurveService/mex?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:complexType name="PriceCurveDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommodityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsIndexPriceCurve" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMarketPriceCurve" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsProxyPriceCurve" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LoadType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriceBookAppendix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriceBookName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriceCurveVolatility" nillable="true" type="tns:PriceCurveVolatilityDto" />
+      <xs:element minOccurs="0" name="PriceSeriesEndUtc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PriceSeriesResolution" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriceSeriesStartUtc" type="xs:dateTime" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Prices" nillable="true" type="q1:ArrayOfdouble" />
+      <xs:element minOccurs="0" name="ReferenceAreaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportDateUtc" type="xs:dateTime" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ValueDatesUtc" nillable="true" type="q2:ArrayOfdateTime" />
+      <xs:element minOccurs="0" name="VolumeUnit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PriceCurveDto" nillable="true" type="tns:PriceCurveDto" />
+  <xs:complexType name="PriceCurveVolatilityDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SummerLong" type="xs:double" />
+      <xs:element minOccurs="0" name="SummerMedium" type="xs:double" />
+      <xs:element minOccurs="0" name="SummerNumberOfYearsBetweenShortAndMedium" type="xs:double" />
+      <xs:element minOccurs="0" name="SummerShort" type="xs:double" />
+      <xs:element minOccurs="0" name="WinterLong" type="xs:double" />
+      <xs:element minOccurs="0" name="WinterMedium" type="xs:double" />
+      <xs:element minOccurs="0" name="WinterNumberOfYearsBetweenShortAndMedium" type="xs:double" />
+      <xs:element minOccurs="0" name="WinterShort" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PriceCurveVolatilityDto" nillable="true" type="tns:PriceCurveVolatilityDto" />
+  <xs:element name="GetPriceCurve">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="priceBookName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="referenceAreaName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loadType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceCurveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPriceCurveResult" nillable="true" type="tns:PriceCurveDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceCurveByCurrency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="priceBookName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="referenceAreaName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loadType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="reportCurrencyISOName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceCurveByCurrencyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPriceCurveByCurrencyResult" nillable="true" type="tns:PriceCurveDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForwardInterestRates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="currencyISOCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currencySource" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lastDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="resolution" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForwardInterestRatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="GetForwardInterestRatesResult" nillable="true" type="q3:ArrayOfKeyValuePairOfdateTimedouble" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForwardExchangeRates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseCurrencyISOCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="crossCurrencyISOCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currencySource" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lastDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="resolution" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetForwardExchangeRatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="GetForwardExchangeRatesResult" nillable="true" type="q4:ArrayOfKeyValuePairOfdateTimedouble" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

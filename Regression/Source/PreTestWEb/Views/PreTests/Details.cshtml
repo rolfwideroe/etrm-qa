@@ -1,0 +1,55 @@
+﻿@model PreTestWeb.Models.PreTest
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PreTest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdServer.ServerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdServer.ServerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TestServer.ServerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TestServer.ServerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Workspaces.FirstOrDefault().WorkspaceName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Workspaces.FirstOrDefault().WorkspaceName)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PreTestId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

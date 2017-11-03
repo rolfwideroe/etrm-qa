@@ -1,0 +1,6 @@
+CREATE DATABASE QASystem_Reg161_Snapshot_A03 ON
+( NAME = QASystem_Reg161_A03, FILENAME = 
+'F:\MSSQL\Snapshots\QASystem_Reg161_Snapshot_A03_2016-04-20.ss' )
+AS SNAPSHOT OF  QASystem_Reg161_A03;
+GO
+

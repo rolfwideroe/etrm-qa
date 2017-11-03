@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Elviz.API" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Elviz.API" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Elviz.API/Imports">
+      <xsd:import schemaLocation="http://netvs-qa162a01:8009/PortfolioManagementService/mex?xsd=xsd0" namespace="Elviz.API" />
+      <xsd:import schemaLocation="http://netvs-qa162a01:8009/PortfolioManagementService/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://netvs-qa162a01:8009/PortfolioManagementService/mex?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model" />
+      <xsd:import schemaLocation="http://netvs-qa162a01:8009/PortfolioManagementService/mex?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPortfolioManagementService_CreateCompanies_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCompanies" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_CreateCompanies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCompaniesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_UpdateCompanies_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanies" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_UpdateCompanies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompaniesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_FindCompanies_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindCompanies" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_FindCompanies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindCompaniesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_GetAllPortfolios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPortfolios" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_GetAllPortfolios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPortfoliosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_CreatePortfolios_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePortfolios" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_CreatePortfolios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePortfoliosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_UpdatePortfolios_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePortfolios" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_UpdatePortfolios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePortfoliosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_FindPortfolios_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPortfolios" />
+  </wsdl:message>
+  <wsdl:message name="IPortfolioManagementService_FindPortfolios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPortfoliosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPortfolioManagementService">
+    <wsdl:operation name="CreateCompanies">
+      <wsdl:input wsaw:Action="Elviz.API/IPortfolioManagementService/CreateCompanies" message="tns:IPortfolioManagementService_CreateCompanies_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IPortfolioManagementService/CreateCompaniesResponse" message="tns:IPortfolioManagementService_CreateCompanies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompanies">
+      <wsdl:input wsaw:Action="Elviz.API/IPortfolioManagementService/UpdateCompanies" message="tns:IPortfolioManagementService_UpdateCompanies_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IPortfolioManagementService/UpdateCompaniesResponse" message="tns:IPortfolioManagementService_UpdateCompanies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindCompanies">
+      <wsdl:input wsaw:Action="Elviz.API/IPortfolioManagementService/FindCompanies" message="tns:IPortfolioManagementService_FindCompanies_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IPortfolioManagementService/FindCompaniesResponse" message="tns:IPortfolioManagementService_FindCompanies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPortfolios">
+      <wsdl:input wsaw:Action="Elviz.API/IPortfolioManagementService/GetAllPortfolios" message="tns:IPortfolioManagementService_GetAllPortfolios_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IPortfolioManagementService/GetAllPortfoliosResponse" message="tns:IPortfolioManagementService_GetAllPortfolios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePortfolios">
+      <wsdl:input wsaw:Action="Elviz.API/IPortfolioManagementService/CreatePortfolios" message="tns:IPortfolioManagementService_CreatePortfolios_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IPortfolioManagementService/CreatePortfoliosResponse" message="tns:IPortfolioManagementService_CreatePortfolios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePortfolios">
+      <wsdl:input wsaw:Action="Elviz.API/IPortfolioManagementService/UpdatePortfolios" message="tns:IPortfolioManagementService_UpdatePortfolios_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IPortfolioManagementService/UpdatePortfoliosResponse" message="tns:IPortfolioManagementService_UpdatePortfolios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPortfolios">
+      <wsdl:input wsaw:Action="Elviz.API/IPortfolioManagementService/FindPortfolios" message="tns:IPortfolioManagementService_FindPortfolios_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IPortfolioManagementService/FindPortfoliosResponse" message="tns:IPortfolioManagementService_FindPortfolios_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

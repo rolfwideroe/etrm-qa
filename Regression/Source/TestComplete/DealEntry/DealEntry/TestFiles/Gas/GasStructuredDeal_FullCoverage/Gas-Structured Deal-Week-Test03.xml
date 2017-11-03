@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+	  <TransactionName>str deal weekly 03</TransactionName>
+	  <ModelType>Fixed Volume</ModelType>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <PriceBasis>TTF</PriceBasis>
+      <FromDate>21/10/2013</FromDate>
+      <ToDate>30/03/2014</ToDate>
+      <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>TestGasFormula</IndexFormula>
+    </InstrumentData>
+    <SettlementData>
+      <QuantityUnit>MWh/d</QuantityUnit>
+      <MarketPriceMultiplicator>0.7732</MarketPriceMultiplicator>
+      <PriceVolumeUnit>EUR/MWh</PriceVolumeUnit>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+      <Resolution>Weekly</Resolution>
+	  <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "21/10/2013 " Quantity= "9" Price= "4.5" />
+		<QuantitiesAndPrice StartofPeriod = "28/10/2013" Quantity= "5.3" Price= "1.9" />
+		<QuantitiesAndPrice StartofPeriod = "04/11/2013" Quantity= "3.9" Price= "7.25" />	
+		<QuantitiesAndPrice StartofPeriod = "17/03/2014" Quantity= "2.8" Price= "2.0" />	
+		<QuantitiesAndPrice StartofPeriod = "24/03/2014" Quantity= "1.5" Price= "5" />	
+    </QuantitiesAndPriceSeriesEditor>
+    </SettlementData>
+    <Fees />
+    <DealDetails />
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

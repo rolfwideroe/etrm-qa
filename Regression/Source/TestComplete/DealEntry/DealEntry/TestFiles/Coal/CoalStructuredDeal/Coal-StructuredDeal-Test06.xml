@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Coal</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+	  <TransactionName>Coal str deal 06</TransactionName>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>Coal API #2</PriceBasis>
+      <FromDate>31/08/2013</FromDate>
+      <ToDate>27/09/2013</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>Coal index</IndexFormula>
+    </InstrumentData>
+    <SettlementData>
+		<Resolution>CoalMonthly</Resolution>
+	    <Currency>EUR</Currency>
+		<PriceVolumeUnit>EUR/Ton</PriceVolumeUnit>
+		<Quantity>100</Quantity>		 
+	  <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "31/08/2013 " Quantity= "0.589" Price= "0.5" />
+	  </QuantitiesAndPriceSeriesEditor>
+      <CurrencySource>NordPool</CurrencySource>      
+    </SettlementData>	
+	<EMIR>
+		<TimestampCleared>18/12/2013</TimestampCleared>
+		<TimestampClearedTime>10:53</TimestampClearedTime>
+		<TimestampConfC.party>17/12/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/12/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>Coal-StructuredDeal</UniqueTradeIdentifier>
+		<DealCompression>Yes</DealCompression>
+		<EMIRStatus>EMIR speculative</EMIRStatus>
+	</EMIR>
+	<TestCustomer>
+		<CustomProperty4>Name</CustomProperty4>
+		<CustomProperty5>Customportfolio</CustomProperty5>
+		<CustomProperty6>trademark</CustomProperty6>
+		<CustomProperty7>type</CustomProperty7>
+		<CustomProperty8>country</CustomProperty8>
+		<CustomProperty9>city</CustomProperty9>
+		<CustomProperty10>contact</CustomProperty10>
+	</TestCustomer>
+  </Transaction>
+</DealEntry>

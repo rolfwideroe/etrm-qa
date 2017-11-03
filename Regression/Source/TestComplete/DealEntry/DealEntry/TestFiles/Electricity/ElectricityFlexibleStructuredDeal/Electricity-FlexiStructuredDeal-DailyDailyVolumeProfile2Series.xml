@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Sell</BuySell>
+      <TransactionName>FlexibleTimeSeries Volume Profile</TransactionName>
+	  <ModelType>Generation</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>EEX</PriceBasis>
+      <FromDate>24/06/2013</FromDate>
+      <ToDate>29/09/2013</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Spot w/margin</PriceType>
+    </InstrumentData>
+    <SettlementData>
+      <Currency>EUR</Currency>
+      <CurrencySource>ECB</CurrencySource>
+	 <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Daily" EffectiveFrom = "10/06/2013" Visibitily="true" VolumeProfile="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="0" />			
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>Base</Profile>
+				<FDate>25/06/2013</FDate>
+				<TDate>25/09/2013</TDate>
+				<Unit>MWh</Unit>
+				<Resolution>Quarter</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "10/06/2013" Value="403"/>
+					<Volume StartOfPeriod = "01/07/2013" Value="401"/>
+				</VolumeAndPrice>
+			</DistributeVolume>
+		</ForecastedVolume>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Daily" EffectiveFrom = "25/06/2013" Visibitily="true" VolumeProfile="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="0" />			
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>Base</Profile>
+				<FDate>26/08/2013</FDate>
+				<TDate>28/09/2013</TDate>
+				<Unit>MWh</Unit>
+				<Resolution>Week</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "26/08/2013" Value="103"/>
+					<Volume StartOfPeriod = "02/09/2013" Value="101"/>
+					<Volume StartOfPeriod = "09/09/2013" Value="102"/>
+					<Volume StartOfPeriod = "16/09/2013" Value="104"/>
+					<Volume StartOfPeriod = "23/09/2013" Value="105"/>
+				</VolumeAndPrice>
+			</DistributeVolume>
+		</ForecastedVolume>
+		<ForecastedPrice  GUIName = "Forecasted Price" Resolution= "Daily" EffectiveFrom = "10/06/2013" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="1.1" />
+				<TimeSeriesValue StartofPeriod="25/06/2013" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="26/06/2013" Value="3.1" />
+				<TimeSeriesValue StartofPeriod="27/06/2013" Value="4.1" />
+				<TimeSeriesValue StartofPeriod="28/06/2013" Value="5.1" />
+				<TimeSeriesValue StartofPeriod="29/06/2013" Value="6.1" />
+				<TimeSeriesValue StartofPeriod="30/06/2013" Value="7.1" />				
+			</TimeSeriesDetails>
+		</ForecastedPrice>
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Daily" EffectiveFrom = "" Visibitily="true" VolumeProfile="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="0" />						
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>Base</Profile>
+				<FDate>13/09/2013</FDate>
+				<TDate>20/09/2013</TDate>
+				<Unit>MWh</Unit>
+				<Resolution>Day</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "13/09/2013" Value="503"/>
+					<Volume StartOfPeriod = "14/09/2013" Value="501"/>
+					<Volume StartOfPeriod = "15/09/2013" Value="502"/>
+					<Volume StartOfPeriod = "16/09/2013" Value="505"/>
+					<Volume StartOfPeriod = "17/09/2013" Value="504"/>
+				</VolumeAndPrice>
+			</DistributeVolume>			
+		</RealizedVolume>
+		<RealizedPrice GUIName = "Realized Price" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">		
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="0.1" />
+				<TimeSeriesValue StartofPeriod="25/06/2013" Value="0.2" />
+				<TimeSeriesValue StartofPeriod="26/06/2013" Value="0.3" />
+				<TimeSeriesValue StartofPeriod="27/06/2013" Value="0.4" />
+				<TimeSeriesValue StartofPeriod="28/06/2013" Value="0.5" />
+				<TimeSeriesValue StartofPeriod="29/06/2013" Value="0.6" />
+				<TimeSeriesValue StartofPeriod="30/06/2013" Value="0.7" />				
+			</TimeSeriesDetails>							
+		</RealizedPrice>
+	  </FlexibleStructuredDealInformation>	
+    </SettlementData>
+    <Fees />
+	<EMIR>
+		<TimestampCleared>18/12/2013</TimestampCleared>
+		<TimestampClearedTime>10:53</TimestampClearedTime>
+		<TimestampConfC.party>17/12/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/12/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>Electricity-FSD-DailyDailyVolumeProfile2Series</UniqueTradeIdentifier>
+		<DealCompression>No</DealCompression>
+		<EMIRStatus>EMIR risk reducing</EMIRStatus>
+	</EMIR>
+  </Transaction>
+</DealEntry>

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Sell</BuySell>
+      <TransactionName>FlexibleTimeSeries 15 min Hourly</TransactionName>
+	  <ModelType>Retail</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>EEX</PriceBasis>
+      <FromDate>10/10/2015</FromDate>
+      <ToDate>10/10/2015</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Indexed w/margin</PriceType>
+	  <IndexFormula>TestFormula</IndexFormula>
+    </InstrumentData>
+    <SettlementData>
+      <Currency>EUR</Currency>
+      <CurrencySource>ECB</CurrencySource>
+      <Resolution>Daily</Resolution>
+	  <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "15 min" EffectiveFrom = "10/06/2013" Visibitily="true" >	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/10/2015" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 00:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 00:30:00" Value="2.3" />				
+				<TimeSeriesValue StartofPeriod="10/10/2015 00:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 01:00:00" Value="2.3" />		
+				<TimeSeriesValue StartofPeriod="10/10/2015 01:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 01:30:00" Value="0" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 01:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 02:30:00" Value="2.3" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 02:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 03:30:00" Value="2.3" />			
+			</TimeSeriesDetails>
+		</ForecastedVolume>
+		<ForecastedPrice  GUIName = "Forecasted Price" Resolution= "15 min" EffectiveFrom = "10/06/2013" Visibitily="true" >
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/10/2015" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 00:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 00:30:00" Value="2.3" />				
+				<TimeSeriesValue StartofPeriod="10/10/2015 00:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 01:00:00" Value="2.3" />		
+				<TimeSeriesValue StartofPeriod="10/10/2015 01:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 01:30:00" Value="0" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 01:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 02:30:00" Value="2.3" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 02:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 03:30:00" Value="2.3" />				
+			</TimeSeriesDetails>
+		</ForecastedPrice>
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Hourly" EffectiveFrom = "" Visibitily="true" >
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/10/2015" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 01:00:00" Value="0.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 02:00:00" Value="0.3" />	
+				<TimeSeriesValue StartofPeriod="10/10/2015 03:00:00" Value="0.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 04:00:00" Value="0.3" />								
+				<TimeSeriesValue StartofPeriod="10/10/2015 05:00:00" Value="32" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 06:00:00" Value="43" />				
+			</TimeSeriesDetails>		
+		</RealizedVolume>
+		<RealizedPrice GUIName = "Realized Price" Resolution= "Hourly" EffectiveFrom = "" Visibitily="true" >		
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/10/2015" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 01:00:00" Value="6.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 02:00:00" Value="5.3" />	
+				<TimeSeriesValue StartofPeriod="10/10/2015 03:00:00" Value="1.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 04:00:00" Value="2.3" />								
+				<TimeSeriesValue StartofPeriod="10/10/2015 05:00:00" Value="3.2" />
+				<TimeSeriesValue StartofPeriod="10/10/2015 06:00:00" Value="4.3" />				
+			</TimeSeriesDetails>					
+		</RealizedPrice>
+	  </FlexibleStructuredDealInformation>
+    </SettlementData>
+    <Fees />
+  </Transaction>
+</DealEntry>

@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<TestCase>
+<DealEntry>
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Forward</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Buy</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>Norway 2</PriceBasis>
+	  <ReferencePriceSeries>NO2-Day-EUR</ReferencePriceSeries>
+      <Period>Q1-16</Period>
+      <LoadProfile>Base (System)</LoadProfile>
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>40</Quantity>
+      <Price>28</Price>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+	  <MasterAgreement>A-B elect forward</MasterAgreement>
+	  <SettlementRule>ElectForward</SettlementRule>
+    </SettlementData>
+    <Fees>
+		 <Broker>Test Broker A</Broker>
+		 <BrokerVariable>10%</BrokerVariable>
+		 <BrokerFixed>1</BrokerFixed>
+		 <BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+		 <ClearingVariable>1%</ClearingVariable>
+		 <ClearingFixed>1</ClearingFixed>
+		 <ClearingFeeCurrency>NOK</ClearingFeeCurrency>	  	  
+		 <CommissionVariable>2%</CommissionVariable>
+		 <CommissionFixed>1</CommissionFixed>
+		 <CommissionFeeCurrency>NOK</CommissionFeeCurrency>
+		 <TradingVariable>0.5%</TradingVariable>
+		 <TradingFixed>1</TradingFixed>
+		 <TradingFeeCurrency>NOK</TradingFeeCurrency>	
+    </Fees>
+    <DealDetails>
+      <Trader>DealImport</Trader>
+      <Status>Active</Status>
+	  <TradeTime>00:00</TradeTime>
+    </DealDetails>
+    <ReferenceData>
+	<Comment>PassElectricityForwardMasterAgreement</Comment>
+	</ReferenceData>
+  </Transaction>
+</DealEntry>
+<QaTransactionDTO>
+  <TransactionId>2245</TransactionId>
+  <DealType>Electricity-Forward</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company B</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company B</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>Q1-16</InstrumentName>
+    <PriceBasis>Norway 2</PriceBasis>
+    <FromDate>2016-01-01T00:00:00</FromDate>
+    <ToDate>2016-03-31T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>	
+    <ReferencePriceSeries>NO2-Day-EUR</ReferencePriceSeries>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>40</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>28</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>	
+    <MasterAgreement>A-B elect forward</MasterAgreement>
+    <SettlementRule>ElectForward</SettlementRule>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-09T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2.8" FeeUnit="NOK/MWh" />
+      <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="1" FeeUnit="NOK" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.28" FeeUnit="NOK/MWh" />
+      <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="1" FeeUnit="NOK" />
+      <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.56" FeeUnit="NOK/MWh" />
+      <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="1" FeeUnit="NOK" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.14" FeeUnit="NOK/MWh" />
+      <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="1" FeeUnit="NOK" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <Comment>PassElectricityForwardMasterAgreement</Comment>
+    <ModificationDateTimeUtc>2015-05-19T12:39:01Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>2183</Deliveries>
+    <OriginalQuantity>40</OriginalQuantity>
+    <ReferringId>2246</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>
+

@@ -1,0 +1,103 @@
+<TestCase>
+<DealEntry>
+  <Transaction> 
+    <Commodity>ElCertificate</Commodity>
+    <InstrumentType>Future</InstrumentType>
+    <GeneralData>     
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+   <Portfolios>    
+		<Portfolio>API Test Customer</Portfolio> 
+		<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio> 
+   </Portfolios> 
+    <InstrumentData>        
+        <ExecutionVenue>Nord Pool</ExecutionVenue> 
+        <PriceBasis>Elcertificate</PriceBasis> 
+		<Period>ELCSEKD1206-13</Period>  		
+    </InstrumentData> 
+    <SettlementData> 
+        <Quantity>12</Quantity> 
+        <Price>5</Price> 
+        <Currency>EUR</Currency> 
+        <CurrencySource>Viz</CurrencySource>
+		<MasterAgreement>[None]</MasterAgreement>
+		<SettlementRule>[None]</SettlementRule>		
+	</SettlementData> 
+	<Fees>
+		<BrokerFeeCurrency>EUR</BrokerFeeCurrency>
+		<ClearingFeeCurrency>EUR</ClearingFeeCurrency>
+		<CommissionFeeCurrency>EUR</CommissionFeeCurrency>
+		<TradingFeeCurrency>EUR</TradingFeeCurrency>
+	</Fees>
+	<DealDetails>
+       <TradeTime>00:00</TradeTime>
+    </DealDetails>
+    <ReferenceData> 
+        <Comment>PassElCertificateFutureCommissionFee-All-Portfolio</Comment> 
+    </ReferenceData> 
+  </Transaction> 
+</DealEntry>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>1183</TransactionId>
+  <DealType>Elcertificate-Future</DealType>
+  <BuySell>Sell</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>ELCSEKD1206-13</InstrumentName>
+    <PriceBasis>Elcertificate</PriceBasis>
+    <FromDate>2013-06-12T00:00:00</FromDate>
+    <ToDate>2013-06-12T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>12</Quantity>
+    <QuantityUnit>ECS</QuantityUnit>
+    <Price>5</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerECS</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-09T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="1.33" FeeUnit="EUR/ECS" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="1.1" FeeUnit="EUR/ECS" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <Comment>PassElCertificateFutureCommissionFee-All-Portfolio</Comment>
+    <ModificationDateTimeUtc>2015-02-09T12:11:33Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>24</Deliveries>
+    <OriginalQuantity>12</OriginalQuantity>
+    <ReferringId>1184</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

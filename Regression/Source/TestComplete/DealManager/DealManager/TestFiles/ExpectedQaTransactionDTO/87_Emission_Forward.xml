@@ -1,0 +1,68 @@
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>87</TransactionId>
+  <DealType>Emission-Forward</DealType>
+  <BuySell>Sell</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Nord Pool ASA</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Nord Pool ASA</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>EUADEC-13</InstrumentName>
+    <PriceBasis>EUA</PriceBasis>
+    <FromDate>2013-12-16T00:00:00</FromDate>
+    <ToDate>2013-12-16T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>100</Quantity>
+    <QuantityUnit>Ton</QuantityUnit>
+    <Price>41</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerTon</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-09T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>Test Broker B</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/Ton" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.123" FeeUnit="NOK/Ton" />
+      <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="1" FeeUnit="NOK" />
+      <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/Ton" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/Ton" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+	<ExternalId>EmissionForwardDistr</ExternalId>
+    <Comment>Updated 87</Comment>
+    <ModificationDateTimeUtc>2015-01-05T16:40:02Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>24</Deliveries>
+    <OriginalQuantity>100</OriginalQuantity>
+    <ReferringId>88</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>

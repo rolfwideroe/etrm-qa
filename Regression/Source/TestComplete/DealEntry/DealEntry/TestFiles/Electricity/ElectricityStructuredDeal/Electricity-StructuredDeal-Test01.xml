@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+	  <TransactionName>StructuralDealTest01</TransactionName>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Buy</BuySell>
+	  <ModelType>Fixed Volume</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>  
+	  <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>NordPool System Price</PriceBasis>
+      <FromDate>01/10/2013</FromDate>
+      <ToDate>30/04/2014</ToDate>
+      <LoadProfile>Custom Profile</LoadProfile>
+      <PriceType>Spot w/margin</PriceType>
+    </InstrumentData>
+    <SettlementData>
+      <Price>0</Price>
+      <PriceMargin>0</PriceMargin>
+      <Currency>NOK</Currency>
+      <CurrencySource>Viz</CurrencySource>
+      <Resolution>Monthly</Resolution>
+	   <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "01/10/2013" QuantityInProfile= "9.885" PriceInProfile= "91" QuantityOutProfile= "5" PriceOutProfile= "19"/>
+		<QuantitiesAndPrice StartofPeriod = "01/11/2013" QuantityInProfile= "10.885" PriceInProfile= "92" QuantityOutProfile= "8" PriceOutProfile= "29"/>
+		<QuantitiesAndPrice StartofPeriod = "01/01/2014" QuantityInProfile= "0.885" PriceInProfile= "93" QuantityOutProfile= "9" PriceOutProfile= "39"/>
+		<QuantitiesAndPrice StartofPeriod = "01/03/2014" QuantityInProfile= "3.885" PriceInProfile= "95" QuantityOutProfile= "0.8" PriceOutProfile= "49"/>
+		<QuantitiesAndPrice StartofPeriod = "01/04/2014" QuantityInProfile= "8.885" PriceInProfile= "99" QuantityOutProfile= "0.36" PriceOutProfile= "9"/>
+    </QuantitiesAndPriceSeriesEditor>
+    </SettlementData>
+    <Fees>
+		 <Broker>Test Broker A</Broker>
+		 <BrokerVariable>0.01</BrokerVariable>
+		 <BrokerFixed>1</BrokerFixed>
+		 <BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+		 <ClearingVariable>0.01</ClearingVariable>
+		 <ClearingFixed>1</ClearingFixed>
+		 <ClearingFeeCurrency>NOK</ClearingFeeCurrency>	  	  
+		 <CommissionVariable>0.01</CommissionVariable>
+		 <CommissionFixed>1</CommissionFixed>
+		 <CommissionFeeCurrency>NOK</CommissionFeeCurrency>
+		 <TradingVariable>0.01</TradingVariable>
+		 <TradingFixed>1</TradingFixed>
+		 <TradingFeeCurrency>NOK</TradingFeeCurrency>	
+    </Fees>
+    <DealDetails />
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

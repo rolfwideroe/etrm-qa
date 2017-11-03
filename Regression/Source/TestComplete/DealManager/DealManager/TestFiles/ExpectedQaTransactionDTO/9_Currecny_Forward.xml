@@ -1,0 +1,71 @@
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>9</TransactionId>
+  <DealType>Currency-CurrencyForward</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company D</PortfolioName>
+    <PortfolioExternalId>Test Company D</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Currency Counterparty B</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Currency Counterparty B</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>EURDKK 04-Aug-13</InstrumentName>
+    <FromDate>2013-08-04T00:00:00</FromDate>
+    <ToDate>2013-08-04T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <BaseIsoCurrency>DKK</BaseIsoCurrency>
+    <CrossIsoCurrency>EUR</CrossIsoCurrency>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>36000</Quantity>
+    <Price>7.99</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>None</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-09T23:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+	<Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>
+	<Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.1" FeeUnit="EUR/DKK" />
+      <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.3" FeeUnit="EUR" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.25" FeeUnit="EUR/DKK" />
+      <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.25" FeeUnit="EUR" />
+      <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.14" FeeUnit="EUR/DKK" />
+      <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.4" FeeUnit="EUR" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.33" FeeUnit="EUR/DKK" />
+      <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.3" FeeUnit="EUR" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <Comment>Updated 9</Comment>
+    <ModificationDateTimeUtc>2014-12-30T02:01:02Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>1</Deliveries>
+    <OriginalQuantity>36000</OriginalQuantity>
+    <ReferringId>10</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Viz.Base" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Viz.Base" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="PeriodKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Min_1" />
+      <xs:enumeration value="Min_5" />
+      <xs:enumeration value="Min_10" />
+      <xs:enumeration value="Min_12" />
+      <xs:enumeration value="Min_15" />
+      <xs:enumeration value="Min_20" />
+      <xs:enumeration value="Min_30" />
+      <xs:enumeration value="Hour" />
+      <xs:enumeration value="Day" />
+      <xs:enumeration value="WorkDay" />
+      <xs:enumeration value="WeekEnd" />
+      <xs:enumeration value="WorkDayWeek" />
+      <xs:enumeration value="Week" />
+      <xs:enumeration value="Month" />
+      <xs:enumeration value="Quarter" />
+      <xs:enumeration value="Season" />
+      <xs:enumeration value="HalfYear" />
+      <xs:enumeration value="Year" />
+      <xs:enumeration value="Custom" />
+      <xs:enumeration value="CoalMonth" />
+      <xs:enumeration value="Banded" />
+      <xs:enumeration value="Single" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PeriodKind" nillable="true" type="tns:PeriodKind" />
+</xs:schema>

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<PreTestWeb.Models.Workspace>
+
+@{
+    ViewBag.Title = "Workspaces Index Page";
+}
+
+<h2>@Html.ActionLink((string)@ViewBag.PreTestName, "Index", "PreTests") / Workspaces
+</h2>
+
+<p>
+    @Html.ActionLink("Setup Workspace", "Create",new {@preTestId=@ViewBag.PreTestId})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Workspace
+        </th>
+        <th>
+            Reportdate
+        </th>
+        <th>
+            Timeout (sec)
+        </th>
+        <th>
+            Running in Prod
+        </th>
+        <th>
+            Last Prod Run
+        </th>
+        <th>
+            Running in Test
+        </th>
+        <th>
+            Last Test Run
+        </th>
+        <th>
+            Last Test Result
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkspaceName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReportDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeOutInSeconds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsRunningInProdEnv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdEnvRuns.LastOrDefault().JobResult)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsRunningInTestEnv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestEnvRuns.LastOrDefault().JobResult)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastTestResult)
+        </td>
+        <td>
+            @Html.ActionLink("Monitors", "NavigateToMonitors", new { id = item.WorkspaceId }) |
+            @Html.ActionLink("Run and Compare", "RunInTestEnvAndCompare", new {id = item.WorkspaceId}) |
+            @Html.ActionLink("Recompare", "ReCompare", new {id = item.WorkspaceId}) |
+            @Html.ActionLink("Run in Prod", "RunInProdEnv", new {workspaceId = item.WorkspaceId}) |
+            @Html.ActionLink("Test Runs", "NavigateToTestEnvRuns", new {id = item.WorkspaceId}) |
+            @Html.ActionLink("Prod Runs", "NavigateToProdEnvRuns", new {workspaceId = item.WorkspaceId}) |
+            @Html.ActionLink("Edit", "Edit", new { id = item.WorkspaceId })  |
+            @Html.ActionLink("Delete", "Delete", new {id = item.WorkspaceId})
+        </td>
+    </tr>
+}
+    <div>
+        @Html.ActionLink("Back to Pretest List", "Index", "PreTests")
+    </div>
+</table>

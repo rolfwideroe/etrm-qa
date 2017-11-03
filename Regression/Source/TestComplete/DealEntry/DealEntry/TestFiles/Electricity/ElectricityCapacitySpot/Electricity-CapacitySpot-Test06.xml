@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Capacity Spot</InstrumentType>
+    <GeneralData>
+      <BuySell>Buy</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+      <Interconnector>DE.EON_DE.ENBW</Interconnector>
+    </Portfolios>
+    <InstrumentData>
+      <LoadProfile>Peak (System)</LoadProfile>
+      <Priority>Firm</Priority>
+      <ExpiryTime>12:00</ExpiryTime>
+      <Expiryoffset>1</Expiryoffset>
+      <Date>27/10/2013</Date>
+    </InstrumentData>
+    <SettlementData>
+	<QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 " Quantity= "0.5" Price= "0.5" />
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 01:00:00" Quantity= "1" Price= "10" />
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 03:00:00" Quantity= "2" Price= "20" />	
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 08:00:00" Quantity= "3" Price= "30" />			
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 21:00:00" Quantity= "4" Price= "32" />	
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 23:00:00" Quantity= "7" Price= "31" />	
+    </QuantitiesAndPriceSeriesEditor>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+    </SettlementData>
+    <Fees />
+    <DealDetails />
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

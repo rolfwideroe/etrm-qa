@@ -1,0 +1,104 @@
+<TestCase>
+<DealEntry>
+  <Transaction> 
+    <Commodity>ElCertificate</Commodity>
+    <InstrumentType>Forward</InstrumentType>
+    <GeneralData>     
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+   <Portfolios>    
+		<Portfolio>Test Company A</Portfolio> 
+		<CounterpartyPortfolio>EEX</CounterpartyPortfolio> 
+   </Portfolios> 
+    <InstrumentData>        
+	   	<ExecutionVenue>Nord Pool</ExecutionVenue> 
+        <PriceBasis>ElCertificate NASDAQ</PriceBasis> 
+        <Period>ELCEURMAR-14</Period>    
+    </InstrumentData> 
+    <SettlementData> 
+        <Quantity>12</Quantity> 
+        <Price>5</Price> 
+        <Currency>EUR</Currency> 
+        <CurrencySource>Viz</CurrencySource> 
+	</SettlementData>
+	<Fees> 	
+		<Broker>Test Broker A</Broker>
+		<BrokerFeeCurrency>EUR</BrokerFeeCurrency>
+		<ClearingFeeCurrency>EUR</ClearingFeeCurrency>
+		<CommissionFeeCurrency>EUR</CommissionFeeCurrency>
+		<TradingFeeCurrency>EUR</TradingFeeCurrency>
+	</Fees> 	
+	<DealDetails>
+       <TradeTime>00:00</TradeTime>
+    </DealDetails>
+    <ReferenceData> 
+        <Comment>ElCertificateForwarBrokerClearingTradingFee-ElcertNASDAQ-All-Portfolio</Comment> 
+    </ReferenceData> 
+  </Transaction> 
+</DealEntry>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>783</TransactionId>
+  <DealType>Elcertificate-Forward</DealType>
+  <BuySell>Sell</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>EEX</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>EEX</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>ELCEURMAR-14</InstrumentName>
+    <PriceBasis>ElCertificate NASDAQ</PriceBasis>
+    <FromDate>2014-03-18T00:00:00</FromDate>
+    <ToDate>2014-03-18T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>12</Quantity>
+    <QuantityUnit>ECS</QuantityUnit>
+    <Price>5</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerECS</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-09T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.23" FeeUnit="EUR/ECS" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.14" FeeUnit="EUR/ECS" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="2.5" FeeUnit="EUR/ECS" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <Comment>ElCertificateForwarBrokerClearingTradingFee-ElcertNASDAQ-All-Portfolio</Comment>
+    <ModificationDateTimeUtc>2015-02-06T13:50:16Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>24</Deliveries>
+    <OriginalQuantity>12</OriginalQuantity>
+    <ReferringId>784</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

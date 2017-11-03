@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Elviz.API" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Elviz.API" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Elviz.API/Imports">
+      <xsd:import schemaLocation="http://netvs-qa161a02:8009/DealService/mex?xsd=xsd0" namespace="Elviz.API" />
+      <xsd:import schemaLocation="http://netvs-qa161a02:8009/DealService/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://netvs-qa161a02:8009/DealService/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://netvs-qa161a02:8009/DealService/mex?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDealService_ImportDeal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDeal" />
+  </wsdl:message>
+  <wsdl:message name="IDealService_ImportDeal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportDealResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDealService_UpdateStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDealService_UpdateStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDealService_SetPropertyValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPropertyValues" />
+  </wsdl:message>
+  <wsdl:message name="IDealService_SetPropertyValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPropertyValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDealService_SetGroupField_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetGroupField" />
+  </wsdl:message>
+  <wsdl:message name="IDealService_SetGroupField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetGroupFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDealService_PartialUpdateImportDeal_InputMessage">
+    <wsdl:part name="parameters" element="tns:PartialUpdateImportDeal" />
+  </wsdl:message>
+  <wsdl:message name="IDealService_PartialUpdateImportDeal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PartialUpdateImportDealResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDealService">
+    <wsdl:operation name="ImportDeal">
+      <wsdl:input wsaw:Action="Elviz.API/IDealService/ImportDeal" message="tns:IDealService_ImportDeal_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IDealService/ImportDealResponse" message="tns:IDealService_ImportDeal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStatus">
+      <wsdl:input wsaw:Action="Elviz.API/IDealService/UpdateStatus" message="tns:IDealService_UpdateStatus_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IDealService/UpdateStatusResponse" message="tns:IDealService_UpdateStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPropertyValues">
+      <wsdl:input wsaw:Action="Elviz.API/IDealService/SetPropertyValues" message="tns:IDealService_SetPropertyValues_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IDealService/SetPropertyValuesResponse" message="tns:IDealService_SetPropertyValues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetGroupField">
+      <wsdl:input wsaw:Action="Elviz.API/IDealService/SetGroupField" message="tns:IDealService_SetGroupField_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IDealService/SetGroupFieldResponse" message="tns:IDealService_SetGroupField_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PartialUpdateImportDeal">
+      <wsdl:input wsaw:Action="Elviz.API/IDealService/PartialUpdateImportDeal" message="tns:IDealService_PartialUpdateImportDeal_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/IDealService/PartialUpdateImportDealResponse" message="tns:IDealService_PartialUpdateImportDeal_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="classes">
+			<Node name="class0">
+				<Node name="fields">
+					<Node name="field0">
+						<Prp name="checked" type="B" value="-1"/>
+						<Prp name="membervalue" type="S" value=""/>
+						<Prp name="name" type="S" value="ID"/>
+						<Prp name="valuetype" type="I" value="0"/>
+					</Node>
+					<Node name="field1">
+						<Prp name="checked" type="B" value="-1"/>
+						<Prp name="membervalue" type="S" value=""/>
+						<Prp name="name" type="S" value="TimeStamp"/>
+						<Prp name="valuetype" type="I" value="0"/>
+					</Node>
+					<Node name="field2">
+						<Prp name="checked" type="B" value="-1"/>
+						<Prp name="membervalue" type="S" value=""/>
+						<Prp name="name" type="S" value="InXML"/>
+						<Prp name="valuetype" type="I" value="0"/>
+					</Node>
+					<Node name="field3">
+						<Prp name="checked" type="B" value="-1"/>
+						<Prp name="membervalue" type="S" value=""/>
+						<Prp name="name" type="S" value="OutXML"/>
+						<Prp name="valuetype" type="I" value="0"/>
+					</Node>
+					<Node name="field4">
+						<Prp name="checked" type="B" value="-1"/>
+						<Prp name="membervalue" type="S" value=""/>
+						<Prp name="name" type="S" value="TemplateName"/>
+						<Prp name="valuetype" type="I" value="0"/>
+					</Node>
+					<Node name="field5">
+						<Prp name="checked" type="B" value="-1"/>
+						<Prp name="membervalue" type="S" value=""/>
+						<Prp name="name" type="S" value="Commodity"/>
+						<Prp name="valuetype" type="I" value="0"/>
+					</Node>
+				</Node>
+				<Node name="methods">
+					<Node name="method0">
+						<Prp name="membervalue" type="S" value="ClassMethods.CInit"/>
+						<Prp name="name" type="S" value="Init"/>
+						<Prp name="valuetype" type="I" value="8"/>
+					</Node>
+					<Node name="method1">
+						<Prp name="membervalue" type="S" value="ClassMethods.CXML2Form"/>
+						<Prp name="name" type="S" value="XML2Form"/>
+						<Prp name="valuetype" type="I" value="8"/>
+					</Node>
+					<Node name="method2">
+						<Prp name="membervalue" type="S" value="ClassMethods.CForm2XML"/>
+						<Prp name="name" type="S" value="Form2XML"/>
+						<Prp name="valuetype" type="I" value="8"/>
+					</Node>
+					<Node name="method3">
+						<Prp name="membervalue" type="S" value="ClassMethods.CCompareXMLs"/>
+						<Prp name="name" type="S" value="CompareXMLs"/>
+						<Prp name="valuetype" type="I" value="8"/>
+					</Node>
+					<Node name="method4">
+						<Prp name="membervalue" type="S" value="ClassMethods.CDisableTemplate"/>
+						<Prp name="name" type="S" value="DisableTemplate"/>
+						<Prp name="valuetype" type="I" value="8"/>
+					</Node>
+					<Node name="method5">
+						<Prp name="membervalue" type="S" value="ClassMethods.CCloseMainWindow"/>
+						<Prp name="name" type="S" value="CloseMainWindow"/>
+						<Prp name="valuetype" type="I" value="8"/>
+					</Node>
+					<Node name="method6">
+						<Prp name="membervalue" type="S" value="_33.CSetValueFromXMLtoTemplate133"/>
+						<Prp name="name" type="S" value="SetValueFromXMLtoTemplate133"/>
+						<Prp name="valuetype" type="I" value="8"/>
+					</Node>
+				</Node>
+				<Prp name="name" type="S" value="CSimpleTest"/>
+			</Node>
+			<Node name="class1">
+				<Node name="fields"/>
+				<Node name="methods"/>
+				<Prp name="name" type="S" value="EmptyClass"/>
+			</Node>
+			<Node name="class2">
+				<Node name="fields"/>
+				<Node name="methods">
+					<Node name="method0">
+						<Prp name="membervalue" type="S" value="ForwardCurveSettings.CWriteToXMLControlsValuesForwardCurveSettings"/>
+						<Prp name="name" type="S" value="WriteToXMLControlsValuesForwardCurveSettings"/>
+						<Prp name="valuetype" type="I" value="8"/>
+					</Node>
+				</Node>
+				<Prp name="name" type="S" value="CForwardCurve"/>
+			</Node>
+		</Node>
+		<Node name="data"/>
+	</Node>
+</Nodes>

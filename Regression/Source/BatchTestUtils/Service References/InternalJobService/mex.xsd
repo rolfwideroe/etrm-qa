@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bradyplc.com/etrm/Jobs/v1" elementFormDefault="qualified" targetNamespace="http://bradyplc.com/etrm/Jobs/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://netvs-qa171a02:8009/JobService/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="QueryJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobCriteria" nillable="true" type="tns:JobCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="JobCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobCriteria" nillable="true" type="tns:JobCriteria" />
+  <xs:element name="QueryJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryJobsResult" nillable="true" type="tns:ArrayOfJob" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfJob">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Job" nillable="true" type="tns:Job" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJob" nillable="true" type="tns:ArrayOfJob" />
+  <xs:complexType name="Job">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="JobType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastRunResult" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastRunTimeUtc" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Job" nillable="true" type="tns:Job" />
+  <xs:element name="SubmitJobExecution">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobExecutionRequest" nillable="true" type="tns:JobExecutionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="JobExecutionRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="JobId" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="OptionalParameters" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobExecutionRequest" nillable="true" type="tns:JobExecutionRequest" />
+  <xs:element name="SubmitJobExecutionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubmitJobExecutionResult" nillable="true" type="tns:JobExecutionStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="JobExecutionStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExecutionId" type="xs:int" />
+      <xs:element minOccurs="0" name="JobType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobExecutionStatus" nillable="true" type="tns:JobExecutionStatus" />
+  <xs:element name="GetExecutionStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobStatusRequest" nillable="true" type="tns:JobStatusRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="JobStatusRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExecutionId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobStatusRequest" nillable="true" type="tns:JobStatusRequest" />
+  <xs:element name="GetExecutionStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetExecutionStatusResult" nillable="true" type="tns:JobExecutionStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WaitForExecutionStatusChange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobStatusRequest" nillable="true" type="tns:JobStatusRequest" />
+        <xs:element minOccurs="0" name="statusChangeWaitSeconds" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WaitForExecutionStatusChangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="WaitForExecutionStatusChangeResult" nillable="true" type="tns:JobExecutionStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryJobExecutionLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobLogRequest" nillable="true" type="tns:JobLogCriteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="JobLogCriteria">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExecutionId" type="xs:int" />
+      <xs:element minOccurs="0" name="Severity" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobLogCriteria" nillable="true" type="tns:JobLogCriteria" />
+  <xs:element name="QueryJobExecutionLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryJobExecutionLogResult" nillable="true" type="tns:ArrayOfLogEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfLogEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LogEntry" nillable="true" type="tns:LogEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLogEntry" nillable="true" type="tns:ArrayOfLogEntry" />
+  <xs:complexType name="LogEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Severity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeStampUtc" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogEntry" nillable="true" type="tns:LogEntry" />
+</xs:schema>

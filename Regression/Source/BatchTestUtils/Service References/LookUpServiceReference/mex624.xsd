@@ -1,0 +1,1587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="Elviz.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model" />
+  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Viz.Base" />
+  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model.Transactions" />
+  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Viz.Services.AuditTrailService.ClientLibrary" />
+  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API" />
+  <xs:element name="LookUp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlAsString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LookUpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LookUpResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPortfolios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPortfoliosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="Elviz.API" minOccurs="0" name="GetAllPortfoliosResult" nillable="true" type="q1:ArrayOfPortfolio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfPortfolio">
+    <xs:sequence>
+      <xs:element xmlns:q2="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="Portfolio" nillable="true" type="q2:Portfolio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q3="Elviz.API" name="ArrayOfPortfolio" nillable="true" type="q3:ArrayOfPortfolio" />
+  <xs:complexType name="Portfolio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExternalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentCompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentPortfolioId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PortfolioId" type="xs:int" />
+      <xs:element minOccurs="0" name="PortfolioName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="Elviz.API" minOccurs="0" name="Properties" nillable="true" type="q4:ArrayOfProperty" />
+      <xs:element minOccurs="0" name="ReplicationId" type="ser:guid" />
+      <xs:element xmlns:q5="Elviz.API" minOccurs="0" name="Status" type="q5:PortfolioStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q6="Elviz.API" name="Portfolio" nillable="true" type="q6:Portfolio" />
+  <xs:complexType name="ArrayOfProperty">
+    <xs:sequence>
+      <xs:element xmlns:q7="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="Property" nillable="true" type="q7:Property" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q8="Elviz.API" name="ArrayOfProperty" nillable="true" type="q8:ArrayOfProperty" />
+  <xs:complexType name="Property">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q9="Elviz.API" name="Property" nillable="true" type="q9:Property" />
+  <xs:simpleType name="PortfolioStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Deleted">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q10="Elviz.API" name="PortfolioStatus" nillable="true" type="q10:PortfolioStatus" />
+  <xs:element name="GetAllCompanies">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCompaniesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="Elviz.API" minOccurs="0" name="GetAllCompaniesResult" nillable="true" type="q11:ArrayOfCompany" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfCompany">
+    <xs:sequence>
+      <xs:element xmlns:q12="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="Company" nillable="true" type="q12:Company" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q13="Elviz.API" name="ArrayOfCompany" nillable="true" type="q13:ArrayOfCompany" />
+  <xs:complexType name="Company">
+    <xs:sequence>
+      <xs:element xmlns:q14="Elviz.API" minOccurs="0" name="Addresses" nillable="true" type="q14:ArrayOfProperty" />
+      <xs:element minOccurs="0" name="CompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryIsoCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrgNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentCompanyId" nillable="true" type="xs:int" />
+      <xs:element xmlns:q15="Elviz.API" minOccurs="0" name="Phones" nillable="true" type="q15:ArrayOfProperty" />
+      <xs:element xmlns:q16="Elviz.API" minOccurs="0" name="Properties" nillable="true" type="q16:ArrayOfProperty" />
+      <xs:element minOccurs="0" name="ReplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q17="Elviz.API" minOccurs="0" name="Status" type="q17:CompanyStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q18="Elviz.API" name="Company" nillable="true" type="q18:Company" />
+  <xs:simpleType name="CompanyStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Deleted">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q19="Elviz.API" name="CompanyStatus" nillable="true" type="q19:CompanyStatus" />
+  <xs:element name="GetTransactionsByFilterAndTradeDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="elvizFilterName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tradeDateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="tradeDateTo" type="xs:dateTime" />
+        <xs:element xmlns:q20="Elviz.API" minOccurs="0" name="retrievalOptions" nillable="true" type="q20:RetrievalOptions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RetrievalOptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExcludeTimeSeries" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q21="Elviz.API" name="RetrievalOptions" nillable="true" type="q21:RetrievalOptions" />
+  <xs:element name="GetTransactionsByFilterAndTradeDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="Elviz.API" minOccurs="0" name="GetTransactionsByFilterAndTradeDateResult" nillable="true" type="q22:ArrayOfTransactionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfTransactionDTO">
+    <xs:sequence>
+      <xs:element xmlns:q23="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="TransactionDTO" nillable="true" type="q23:TransactionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q24="Elviz.API" name="ArrayOfTransactionDTO" nillable="true" type="q24:ArrayOfTransactionDTO" />
+  <xs:complexType name="TransactionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuctionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Audited" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Authorised" type="xs:boolean" />
+      <xs:element xmlns:q25="Elviz.API" minOccurs="0" name="BalanceArea" nillable="true" type="q25:BalanceArea" />
+      <xs:element xmlns:q26="Elviz.API" minOccurs="0" name="BaseCurrency" nillable="true" type="q26:Currency" />
+      <xs:element xmlns:q27="Elviz.API" minOccurs="0" name="BookPriceType" nillable="true" type="q27:BookPriceType" />
+      <xs:element xmlns:q28="Elviz.API" minOccurs="0" name="Broker" nillable="true" type="q28:Company" />
+      <xs:element minOccurs="0" name="BrokerFee" type="xs:double" />
+      <xs:element xmlns:q29="Elviz.API" minOccurs="0" name="BrokerFeeCurrency" nillable="true" type="q29:Currency" />
+      <xs:element minOccurs="0" name="CapFloorPricingResolution" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CapacityBidQuantity" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="CapacityId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CapacityPrice" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="CapacityTradeQuantity" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="CascadingOriginId" nillable="true" type="xs:int" />
+      <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CascadingOriginIds" nillable="true" type="q30:ArrayOfint" />
+      <xs:element xmlns:q31="Elviz.API" minOccurs="0" name="CashFlowPeriods" nillable="true" type="q31:ArrayOfCashFlowPeriod" />
+      <xs:element minOccurs="0" name="CertificateType" nillable="true" type="xs:string" />
+      <xs:element xmlns:q32="Elviz.API" minOccurs="0" name="ClearingCurrency" nillable="true" type="q32:Currency" />
+      <xs:element minOccurs="0" name="ClearingFee" type="xs:double" />
+      <xs:element xmlns:q33="Elviz.API" minOccurs="0" name="ClearingType" type="q33:ClearingType" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommissionFee" type="xs:double" />
+      <xs:element xmlns:q34="Elviz.API" minOccurs="0" name="CommissionFeeCurrency" nillable="true" type="q34:Currency" />
+      <xs:element xmlns:q35="Elviz.API" minOccurs="0" name="Commodity" nillable="true" type="q35:Commodity" />
+      <xs:element minOccurs="0" name="CompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ConfirmedByBroker" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ConfirmedByCounterparty" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ContractModelType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContractSplitId" type="xs:int" />
+      <xs:element minOccurs="0" name="CounterPartyCompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="CounterPartyCompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CounterPartyCompanyShortName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q36="Elviz.API" minOccurs="0" name="CounterPartyPortfolio" nillable="true" type="q36:Portfolio" />
+      <xs:element minOccurs="0" name="CounterPartyTrader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CounterpartyTransactionAuthorised" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element xmlns:q37="Elviz.API" minOccurs="0" name="CrossCurrency" nillable="true" type="q37:Currency" />
+      <xs:element xmlns:q38="Elviz.API" minOccurs="0" name="Currency" nillable="true" type="q38:Currency" />
+      <xs:element xmlns:q39="Elviz.API" minOccurs="0" name="CurrencySource" nillable="true" type="q39:CurrencySource" />
+      <xs:element minOccurs="0" name="CustomCompanyId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomCompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DealGroup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeclareId" type="xs:int" />
+      <xs:element minOccurs="0" name="Deliveries" type="xs:int" />
+      <xs:element minOccurs="0" name="DeliveryAreaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryLocation" nillable="true" type="xs:string" />
+      <xs:element xmlns:q40="Elviz.API" minOccurs="0" name="DeliveryType" type="q40:DeliveryType" />
+      <xs:element minOccurs="0" name="DestinationReferencePriceSeries" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistributedQuantity" type="xs:double" />
+      <xs:element minOccurs="0" name="DistributionParentTransactionId" type="xs:int" />
+      <xs:element minOccurs="0" name="EnergySource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntryFee" type="xs:double" />
+      <xs:element xmlns:q41="Elviz.API" minOccurs="0" name="EntryFeeCurrency" nillable="true" type="q41:Currency" />
+      <xs:element minOccurs="0" name="EnvironmentLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExitFee" type="xs:double" />
+      <xs:element xmlns:q42="Elviz.API" minOccurs="0" name="ExitFeeCurrency" nillable="true" type="q42:Currency" />
+      <xs:element minOccurs="0" name="ExpiryDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExpiryOffset" type="xs:int" />
+      <xs:element minOccurs="0" name="ExternalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalSource" nillable="true" type="xs:string" />
+      <xs:element xmlns:q43="Elviz.API" minOccurs="0" name="Fees" nillable="true" type="q43:ArrayOfFee" />
+      <xs:element minOccurs="0" name="FlexibleTimeSeries" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FromCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromDate" type="xs:dateTime" />
+      <xs:element xmlns:q44="Elviz.API" minOccurs="0" name="FutureSettlementType" nillable="true" type="q44:FutureSettlementType" />
+      <xs:element minOccurs="0" name="GroupField1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupField2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupField3" nillable="true" type="xs:string" />
+      <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model" minOccurs="0" name="HistoricContractPrices" nillable="true" type="q45:PriceSeries" />
+      <xs:element xmlns:q46="Elviz.API" minOccurs="0" name="IndexFormula" nillable="true" type="q46:IndexedPriceBookTemplate" />
+      <xs:element minOccurs="0" name="InitialPrice" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="InstrumentName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q47="Elviz.API" minOccurs="0" name="InstrumentType" nillable="true" type="q47:InstrumentType" />
+      <xs:element xmlns:q48="Elviz.API" minOccurs="0" name="Interconnector" nillable="true" type="q48:Interconnector" />
+      <xs:element xmlns:q49="Elviz.API" minOccurs="0" name="LoadProfile" nillable="true" type="q49:LoadProfile" />
+      <xs:element minOccurs="0" name="LossFactor" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="MarketPriceMultiplicator" type="xs:double" />
+      <xs:element minOccurs="0" name="MasterAgreementName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxVol" type="xs:double" />
+      <xs:element minOccurs="0" name="MinVol" type="xs:double" />
+      <xs:element minOccurs="0" name="ModificationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NominationFee" type="xs:double" />
+      <xs:element xmlns:q50="Elviz.API" minOccurs="0" name="NominationFeeCurrency" nillable="true" type="q50:Currency" />
+      <xs:element xmlns:q51="Elviz.API" minOccurs="0" name="NominationsHourly" nillable="true" type="q51:ArrayOfVppNomination" />
+      <xs:element minOccurs="0" name="OriginalQuantity" type="xs:double" />
+      <xs:element minOccurs="0" name="Originator" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Paid" type="xs:boolean" />
+      <xs:element xmlns:q52="Elviz.API" minOccurs="0" name="Portfolio" nillable="true" type="q52:Portfolio" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element xmlns:q53="Elviz.API" minOccurs="0" name="PriceBasis" nillable="true" type="q53:PriceBasis" />
+      <xs:element xmlns:q54="Elviz.API" minOccurs="0" name="PriceBasisToArea" nillable="true" type="q54:PriceBasis" />
+      <xs:element xmlns:q55="Elviz.API" minOccurs="0" name="PriceVolumeTimeSeriesDetails" nillable="true" type="q55:ArrayOfPriceVolumeTimeSeriesDetail" />
+      <xs:element minOccurs="0" name="PriceVolumeTimeSeriesTimeZoneName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q56="Elviz.API" minOccurs="0" name="PriceVolumeUnit" type="q56:PriceVolumeUnit" />
+      <xs:element xmlns:q57="Elviz.API" minOccurs="0" name="Priority" type="q57:Priority" />
+      <xs:element minOccurs="0" name="ProductionFacility" nillable="true" type="xs:string" />
+      <xs:element xmlns:q58="Elviz.API" minOccurs="0" name="PropertyGroups" nillable="true" type="q58:ArrayOfPropertyGroup" />
+      <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Viz.Base" minOccurs="0" name="PublishedPeriodType" nillable="true" type="q59:PeriodKind" />
+      <xs:element xmlns:q60="Elviz.API" minOccurs="0" name="PutCall" type="q60:PutCall" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+      <xs:element xmlns:q61="Elviz.API" minOccurs="0" name="QuantityUnit" type="q61:QuantityUnit" />
+      <xs:element minOccurs="0" name="QuotaRegion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferencePriceSeries" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferringId" type="xs:int" />
+      <xs:element xmlns:q62="Elviz.API" minOccurs="0" name="Resolution" type="q62:TimeResolution" />
+      <xs:element minOccurs="0" name="RiskValue" type="xs:double" />
+      <xs:element minOccurs="0" name="SamplingFrom" nillable="true" type="xs:dateTime" />
+      <xs:element xmlns:q63="Elviz.API" minOccurs="0" name="SamplingPeriod" nillable="true" type="q63:SamplingPeriod" />
+      <xs:element minOccurs="0" name="SamplingTo" nillable="true" type="xs:dateTime" />
+      <xs:element xmlns:q64="Elviz.API" minOccurs="0" name="SettlementRule" nillable="true" type="q64:SettlementRule" />
+      <xs:element xmlns:q65="Elviz.API" minOccurs="0" name="Status" type="q65:TransactionStatus" />
+      <xs:element minOccurs="0" name="Strike" type="xs:double" />
+      <xs:element minOccurs="0" name="ThresholdPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="TicketNumber" nillable="true" type="xs:string" />
+      <xs:element xmlns:q66="Elviz.API" minOccurs="0" name="TimeSeriesSet" nillable="true" type="q66:ArrayOfTimeSeries" />
+      <xs:element minOccurs="0" name="TimeStampClearedUTC" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TimeStampConfirmationBrokerUTC" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TimeStampConfirmationCounterPartyUTC" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TimezoneName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimezoneOffset" type="xs:int" />
+      <xs:element minOccurs="0" name="ToCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TradeDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TradeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Trader" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TradingFee" type="xs:double" />
+      <xs:element xmlns:q67="Elviz.API" minOccurs="0" name="TradingFeeCurrency" nillable="true" type="q67:Currency" />
+      <xs:element minOccurs="0" name="TransactionAuthorised" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TransactionId" type="xs:int" />
+      <xs:element minOccurs="0" name="TransferDate" type="xs:dateTime" />
+      <xs:element xmlns:q68="Elviz.API" minOccurs="0" name="Type" type="q68:TransactionType" />
+      <xs:element xmlns:q69="Elviz.API" minOccurs="0" name="UnderlyingDeliveryType" nillable="true" type="q69:DeliveryType" />
+      <xs:element xmlns:q70="Elviz.API" minOccurs="0" name="UnderlyingExecutionVenue" nillable="true" type="q70:ExecutionVenue" />
+      <xs:element xmlns:q71="Elviz.API" minOccurs="0" name="UnderlyingInstrumentType" nillable="true" type="q71:InstrumentType" />
+      <xs:element minOccurs="0" name="UserSpecifiedName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q72="Elviz.API" minOccurs="0" name="Venue" nillable="true" type="q72:ExecutionVenue" />
+      <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model.Transactions" minOccurs="0" name="Version" nillable="true" type="q73:VersionInfo" />
+      <xs:element minOccurs="0" name="VolumeReferenceExternalId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q74="Elviz.API" name="TransactionDTO" nillable="true" type="q74:TransactionDTO" />
+  <xs:complexType name="BalanceArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EICCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q75="Elviz.API" name="BalanceArea" nillable="true" type="q75:BalanceArea" />
+  <xs:complexType name="Currency">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrencyId" type="xs:int" />
+      <xs:element minOccurs="0" name="ISOCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q76="Elviz.API" name="Currency" nillable="true" type="q76:Currency" />
+  <xs:simpleType name="BookPriceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Fixed">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Spot">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Indexed">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AverageTradedCloseWithMargin">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AverageTradedAskWithMargin">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AverageTradedBidWithMargin">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EndUserElCertificate">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CapFloor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q77="Elviz.API" name="BookPriceType" nillable="true" type="q77:BookPriceType" />
+  <xs:complexType name="ArrayOfCashFlowPeriod">
+    <xs:sequence>
+      <xs:element xmlns:q78="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="CashFlowPeriod" nillable="true" type="q78:CashFlowPeriod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q79="Elviz.API" name="ArrayOfCashFlowPeriod" nillable="true" type="q79:ArrayOfCashFlowPeriod" />
+  <xs:complexType name="CashFlowPeriod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Value" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q80="Elviz.API" name="CashFlowPeriod" nillable="true" type="q80:CashFlowPeriod" />
+  <xs:simpleType name="ClearingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Broker">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Voice">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Electronic">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q81="Elviz.API" name="ClearingType" nillable="true" type="q81:ClearingType" />
+  <xs:complexType name="Commodity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q82="Elviz.API" name="Commodity" nillable="true" type="q82:Commodity" />
+  <xs:complexType name="CurrencySource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrencySourceId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q83="Elviz.API" name="CurrencySource" nillable="true" type="q83:CurrencySource" />
+  <xs:simpleType name="DeliveryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Physical">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Financial" />
+      <xs:enumeration value="FinancialOrPhysical">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q84="Elviz.API" name="DeliveryType" nillable="true" type="q84:DeliveryType" />
+  <xs:complexType name="ArrayOfFee">
+    <xs:sequence>
+      <xs:element xmlns:q85="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="Fee" nillable="true" type="q85:Fee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q86="Elviz.API" name="ArrayOfFee" nillable="true" type="q86:ArrayOfFee" />
+  <xs:complexType name="Fee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FeeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeeUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeeValue" type="xs:double" />
+      <xs:element minOccurs="0" name="FeeValueType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q87="Elviz.API" name="Fee" nillable="true" type="q87:Fee" />
+  <xs:simpleType name="FutureSettlementType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SettledByQuotes">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SettledAsForward">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q88="Elviz.API" name="FutureSettlementType" nillable="true" type="q88:FutureSettlementType" />
+  <xs:complexType name="IndexedPriceBookTemplate">
+    <xs:sequence>
+      <xs:element xmlns:q89="Elviz.API" minOccurs="0" name="Commodity" nillable="true" type="q89:Commodity" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q90="Elviz.API" name="IndexedPriceBookTemplate" nillable="true" type="q90:IndexedPriceBookTemplate" />
+  <xs:complexType name="InstrumentType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q91="Elviz.API" base="q91:DomainObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q92="Elviz.API" name="InstrumentType" nillable="true" type="q92:InstrumentType" />
+  <xs:complexType name="DomainObject">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element xmlns:q93="Elviz.API" name="DomainObject" nillable="true" type="q93:DomainObject" />
+  <xs:complexType name="Interconnector">
+    <xs:sequence>
+      <xs:element xmlns:q94="Elviz.API" minOccurs="0" name="DestinationArea" nillable="true" type="q94:BalanceArea" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LossFactor" type="xs:double" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q95="Elviz.API" minOccurs="0" name="OriginArea" nillable="true" type="q95:BalanceArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q96="Elviz.API" name="Interconnector" nillable="true" type="q96:Interconnector" />
+  <xs:complexType name="LoadProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q97="Elviz.API" base="q97:DomainObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomProfileType" nillable="true" type="q97:CustomLoadType" />
+          <xs:element minOccurs="0" name="EmptyDaysMode" type="q97:LoadProfileEmptyDaysMode" />
+          <xs:element xmlns:q98="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="HolidayProfile" nillable="true" type="q98:ArrayOfboolean" />
+          <xs:element minOccurs="0" name="HolidayTreatment" type="q97:LoadProfileHolidayTreatment" />
+          <xs:element minOccurs="0" name="HourSelectMode" type="q97:LoadProfileHourSelectMode" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SystemProfile" nillable="true" type="q97:SystemLoadType" />
+          <xs:element xmlns:q99="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="WeekDayProfile" nillable="true" type="q99:ArrayOfboolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns:q100="Elviz.API" name="LoadProfile" nillable="true" type="q100:LoadProfile" />
+  <xs:simpleType name="CustomLoadType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Day">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Week">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">200</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Year">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">300</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q101="Elviz.API" name="CustomLoadType" nillable="true" type="q101:CustomLoadType" />
+  <xs:simpleType name="LoadProfileEmptyDaysMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="IncludeDayIfNotInProfile" />
+      <xs:enumeration value="ExcludeDayIfNotInProfile" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q102="Elviz.API" name="LoadProfileEmptyDaysMode" nillable="true" type="q102:LoadProfileEmptyDaysMode" />
+  <xs:simpleType name="LoadProfileHolidayTreatment">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="IgnoreHolidays" />
+      <xs:enumeration value="NoLoadOnHolidays" />
+      <xs:enumeration value="SpecificLoadOnHolidays" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q103="Elviz.API" name="LoadProfileHolidayTreatment" nillable="true" type="q103:LoadProfileHolidayTreatment" />
+  <xs:simpleType name="LoadProfileHourSelectMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="SelectPeak" />
+      <xs:enumeration value="SelectOffPeak" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q104="Elviz.API" name="LoadProfileHourSelectMode" nillable="true" type="q104:LoadProfileHourSelectMode" />
+  <xs:simpleType name="SystemLoadType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SystemBase">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SystemPeak">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SystemOffPeak">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WeekEndPeak">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WeekEndOffPeak">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SuperPeak">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q105="Elviz.API" name="SystemLoadType" nillable="true" type="q105:SystemLoadType" />
+  <xs:complexType name="ArrayOfVppNomination">
+    <xs:sequence>
+      <xs:element xmlns:q106="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="VppNomination" nillable="true" type="q106:VppNomination" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q107="Elviz.API" name="ArrayOfVppNomination" nillable="true" type="q107:ArrayOfVppNomination" />
+  <xs:complexType name="VppNomination">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="From" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="To" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Value" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q108="Elviz.API" name="VppNomination" nillable="true" type="q108:VppNomination" />
+  <xs:complexType name="PriceBasis">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BenchName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q109="Elviz.API" minOccurs="0" name="Calendar" nillable="true" type="q109:HolidayCalendar" />
+      <xs:element xmlns:q110="Elviz.API" minOccurs="0" name="Commodity" nillable="true" type="q110:Commodity" />
+      <xs:element minOccurs="0" name="HasHourlyHistory" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsGridPoint" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PeakProfileId" type="xs:int" />
+      <xs:element xmlns:q111="Elviz.API" minOccurs="0" name="PriceUnit" nillable="true" type="q111:PriceVolumeUnit" />
+      <xs:element xmlns:q112="Elviz.API" minOccurs="0" name="QuantityUnit" nillable="true" type="q112:QuantityUnit" />
+      <xs:element minOccurs="0" name="SettlementAreaId" type="xs:int" />
+      <xs:element minOccurs="0" name="SettlementAreaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuperPeakProfileId" type="xs:int" />
+      <xs:element minOccurs="0" name="WeekendPeakProfileId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q113="Elviz.API" name="PriceBasis" nillable="true" type="q113:PriceBasis" />
+  <xs:complexType name="HolidayCalendar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CalendarId" type="xs:int" />
+      <xs:element xmlns:q114="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Holidays" nillable="true" type="q114:ArrayOfdateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q115="Elviz.API" name="HolidayCalendar" nillable="true" type="q115:HolidayCalendar" />
+  <xs:simpleType name="PriceVolumeUnit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="PerMWh" />
+      <xs:enumeration value="CentsPerTherm" />
+      <xs:enumeration value="PerTon">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">110</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PerECS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">111</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Perm3">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">112</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PerBbl">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">150</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PerDay">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">151</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PerWSpoints">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">152</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PerYMWhd">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">153</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Pergal">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">154</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PerGJ">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PerSm3">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q116="Elviz.API" name="PriceVolumeUnit" nillable="true" type="q116:PriceVolumeUnit" />
+  <xs:simpleType name="QuantityUnit">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MW">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MWhd">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MWh">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="KW">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MJd">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MJh">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">101</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GJd">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">102</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GJh">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">103</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TJd">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">104</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TJh">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">105</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="kWhd">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">106</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Nm3d">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">107</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Nm3h">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">108</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="thd">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">109</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Ton">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">110</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ECS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">111</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="thh">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">112</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MMJd">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">113</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sm3d">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">114</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sm3h">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">115</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Him3d">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">116</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Him3h">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">117</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Lom3d">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">118</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Lom3h">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">119</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LOT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">120</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bbl">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">150</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Day">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">151</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="gal">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">152</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Percent">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">153</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Th">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">154</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sm3">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">155</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GJ">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">156</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="kWh">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">157</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q117="Elviz.API" name="QuantityUnit" nillable="true" type="q117:QuantityUnit" />
+  <xs:complexType name="ArrayOfPriceVolumeTimeSeriesDetail">
+    <xs:sequence>
+      <xs:element xmlns:q118="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="PriceVolumeTimeSeriesDetail" nillable="true" type="q118:PriceVolumeTimeSeriesDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q119="Elviz.API" name="ArrayOfPriceVolumeTimeSeriesDetail" nillable="true" type="q119:ArrayOfPriceVolumeTimeSeriesDetail" />
+  <xs:complexType name="PriceVolumeTimeSeriesDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="UntilDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UtcFromDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UtcUntilDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Volume" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q120="Elviz.API" name="PriceVolumeTimeSeriesDetail" nillable="true" type="q120:PriceVolumeTimeSeriesDetail" />
+  <xs:simpleType name="Priority">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Firm" />
+      <xs:enumeration value="Interruptible" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q121="Elviz.API" name="Priority" nillable="true" type="q121:Priority" />
+  <xs:complexType name="ArrayOfPropertyGroup">
+    <xs:sequence>
+      <xs:element xmlns:q122="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="PropertyGroup" nillable="true" type="q122:PropertyGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q123="Elviz.API" name="ArrayOfPropertyGroup" nillable="true" type="q123:ArrayOfPropertyGroup" />
+  <xs:complexType name="PropertyGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q124="Elviz.API" minOccurs="0" name="Properties" nillable="true" type="q124:ArrayOfProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q125="Elviz.API" name="PropertyGroup" nillable="true" type="q125:PropertyGroup" />
+  <xs:simpleType name="PutCall">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Put" />
+      <xs:enumeration value="Call" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q126="Elviz.API" name="PutCall" nillable="true" type="q126:PutCall" />
+  <xs:simpleType name="TimeResolution">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Minutes15" />
+      <xs:enumeration value="Minutes30" />
+      <xs:enumeration value="Hour" />
+      <xs:enumeration value="Day" />
+      <xs:enumeration value="Week" />
+      <xs:enumeration value="Month" />
+      <xs:enumeration value="Quarter" />
+      <xs:enumeration value="Year" />
+      <xs:enumeration value="Unspecified" />
+      <xs:enumeration value="EntirePeriod" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q127="Elviz.API" name="TimeResolution" nillable="true" type="q127:TimeResolution" />
+  <xs:simpleType name="SamplingPeriod">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Week">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Month">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Day">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Quarter">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q128="Elviz.API" name="SamplingPeriod" nillable="true" type="q128:SamplingPeriod" />
+  <xs:complexType name="SettlementRule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillingPeriodicity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BusinessDaysOffset" type="xs:int" />
+      <xs:element minOccurs="0" name="CalendarDaysOffset" type="xs:int" />
+      <xs:element xmlns:q129="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="HolidayCalendars" nillable="true" type="q129:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q130="Elviz.API" name="SettlementRule" nillable="true" type="q130:SettlementRule" />
+  <xs:simpleType name="TransactionStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Deleted">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cleared">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cancelled" />
+      <xs:enumeration value="Onhold">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Declared">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MatchedExternally">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BidRejected">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Draft">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q131="Elviz.API" name="TransactionStatus" nillable="true" type="q131:TransactionStatus" />
+  <xs:complexType name="ArrayOfTimeSeries">
+    <xs:sequence>
+      <xs:element xmlns:q132="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="TimeSeries" nillable="true" type="q132:TimeSeries" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q133="Elviz.API" name="ArrayOfTimeSeries" nillable="true" type="q133:ArrayOfTimeSeries" />
+  <xs:complexType name="TimeSeries">
+    <xs:sequence>
+      <xs:element xmlns:q134="Elviz.API" minOccurs="0" name="Resolution" type="q134:TimeResolution" />
+      <xs:element minOccurs="0" name="TimeSeriesGuid" type="ser:guid" />
+      <xs:element xmlns:q135="Elviz.API" minOccurs="0" name="TimeSeriesType" nillable="true" type="q135:TimeSeriesType" />
+      <xs:element xmlns:q136="Elviz.API" minOccurs="0" name="TimeSeriesValues" nillable="true" type="q136:ArrayOfTimeSeriesValue" />
+      <xs:element minOccurs="0" name="TimezoneName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model.Transactions" minOccurs="0" name="Version" nillable="true" type="q137:VersionInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q138="Elviz.API" name="TimeSeries" nillable="true" type="q138:TimeSeries" />
+  <xs:complexType name="TimeSeriesType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q139="Elviz.API" name="TimeSeriesType" nillable="true" type="q139:TimeSeriesType" />
+  <xs:complexType name="ArrayOfTimeSeriesValue">
+    <xs:sequence>
+      <xs:element xmlns:q140="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="TimeSeriesValue" nillable="true" type="q140:TimeSeriesValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q141="Elviz.API" name="ArrayOfTimeSeriesValue" nillable="true" type="q141:ArrayOfTimeSeriesValue" />
+  <xs:complexType name="TimeSeriesValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UntilDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UtcFromDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UtcUntilDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q142="Elviz.API" name="TimeSeriesValue" nillable="true" type="q142:TimeSeriesValue" />
+  <xs:simpleType name="TransactionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Buy">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sell">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q143="Elviz.API" name="TransactionType" nillable="true" type="q143:TransactionType" />
+  <xs:complexType name="ExecutionVenue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CalendarId" type="xs:int" />
+      <xs:element minOccurs="0" name="ExecutionVenueId" type="xs:int" />
+      <xs:element minOccurs="0" name="ExecutionVenueName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q144="Elviz.API" name="ExecutionVenue" nillable="true" type="q144:ExecutionVenue" />
+  <xs:element name="GetTransactionsInFilter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filterName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q145="Elviz.API" minOccurs="0" name="retrievalOptions" nillable="true" type="q145:RetrievalOptions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionsInFilterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="Elviz.API" minOccurs="0" name="GetTransactionsInFilterResult" nillable="true" type="q146:ArrayOfTransactionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoesFilterExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filterName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoesFilterExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoesFilterExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionsInFilterForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filterName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q147="Elviz.API" minOccurs="0" name="retrievalOptions" nillable="true" type="q147:RetrievalOptions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionsInFilterForUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="Elviz.API" minOccurs="0" name="GetTransactionsInFilterForUserResult" nillable="true" type="q148:ArrayOfTransactionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoesFilterExistForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filterName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoesFilterExistForUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoesFilterExistForUserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExecutionVenueHolidays">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="executionVenueName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExecutionVenueHolidaysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q149="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetExecutionVenueHolidaysResult" nillable="true" type="q149:ArrayOfdateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorisationsForAllPortfolios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contractStartDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="contractToDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="reportDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuthorisationsForAllPortfoliosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="Elviz.API" minOccurs="0" name="GetAuthorisationsForAllPortfoliosResult" nillable="true" type="q150:ArrayOfPortfolioAuthorisationDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfPortfolioAuthorisationDTO">
+    <xs:sequence>
+      <xs:element xmlns:q151="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="PortfolioAuthorisationDTO" nillable="true" type="q151:PortfolioAuthorisationDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q152="Elviz.API" name="ArrayOfPortfolioAuthorisationDTO" nillable="true" type="q152:ArrayOfPortfolioAuthorisationDTO" />
+  <xs:complexType name="PortfolioAuthorisationDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthorisedBuyQuantity" type="xs:double" />
+      <xs:element minOccurs="0" name="AuthorisedSellQuantity" type="xs:double" />
+      <xs:element minOccurs="0" name="PortfolioExternalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PortfolioId" type="xs:int" />
+      <xs:element minOccurs="0" name="PortfolioName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantityUnit" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q153="Elviz.API" name="PortfolioAuthorisationDTO" nillable="true" type="q153:PortfolioAuthorisationDTO" />
+  <xs:element name="GetTransactionsByIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q154:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionsByIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q155="Elviz.API" minOccurs="0" name="GetTransactionsByIdsResult" nillable="true" type="q155:ArrayOfTransactionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuditTrailEntries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q156="Elviz.API" minOccurs="0" name="criteria" nillable="true" type="q156:Criteria" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Criteria">
+    <xs:sequence>
+      <xs:element xmlns:q157="Elviz.API" minOccurs="0" name="Action" nillable="true" type="q157:Action" />
+      <xs:element minOccurs="0" name="ChangeFromTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ChangeUntilTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ChangedByUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityId" nillable="true" type="xs:long" />
+      <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/Viz.Services.AuditTrailService.ClientLibrary" minOccurs="0" name="EntityType" nillable="true" type="q158:EntityType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q159="Elviz.API" name="Criteria" nillable="true" type="q159:Criteria" />
+  <xs:simpleType name="Action">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Add" />
+      <xs:enumeration value="Update" />
+      <xs:enumeration value="Delete" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element xmlns:q160="Elviz.API" name="Action" nillable="true" type="q160:Action" />
+  <xs:element name="GetAuditTrailEntriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="Elviz.API" minOccurs="0" name="GetAuditTrailEntriesResult" nillable="true" type="q161:ArrayOfAuditTrailEntry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfAuditTrailEntry">
+    <xs:sequence>
+      <xs:element xmlns:q162="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="AuditTrailEntry" nillable="true" type="q162:AuditTrailEntry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q163="Elviz.API" name="ArrayOfAuditTrailEntry" nillable="true" type="q163:ArrayOfAuditTrailEntry" />
+  <xs:complexType name="AuditTrailEntry">
+    <xs:sequence>
+      <xs:element xmlns:q164="Elviz.API" minOccurs="0" name="Action" type="q164:Action" />
+      <xs:element minOccurs="0" name="ChangeTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ChangedByUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityId" type="xs:long" />
+      <xs:element minOccurs="0" name="EntityTypeName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="FieldValues" nillable="true" type="q165:ArrayOfKeyValuePairOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q166="Elviz.API" name="AuditTrailEntry" nillable="true" type="q166:AuditTrailEntry" />
+  <xs:element name="GetTransactionsInFilterByIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filterName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q167="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q167:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionsInFilterByIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q168="Elviz.API" minOccurs="0" name="GetTransactionsInFilterByIdsResult" nillable="true" type="q168:ArrayOfTransactionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionsByFilterAndReportDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filterName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportDate" type="xs:dateTime" />
+        <xs:element xmlns:q169="Elviz.API" minOccurs="0" name="retrievalOptions" nillable="true" type="q169:RetrievalOptions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionsByFilterAndReportDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="Elviz.API" minOccurs="0" name="GetTransactionsByFilterAndReportDateResult" nillable="true" type="q170:ArrayOfTransactionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionsByIdsAndReportDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q171:ArrayOfint" />
+        <xs:element minOccurs="0" name="reportDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionsByIdsAndReportDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q172="Elviz.API" minOccurs="0" name="GetTransactionsByIdsAndReportDateResult" nillable="true" type="q172:ArrayOfTransactionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstrumentCodesByTransactionIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q173="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="transactionIds" nillable="true" type="q173:ArrayOfint" />
+        <xs:element minOccurs="0" name="executionVenueForOTCProductCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstrumentCodesByTransactionIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API" minOccurs="0" name="GetInstrumentCodesByTransactionIdsResult" nillable="true" type="q174:ArrayOfInstrumentCodes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstrumentCodesByTransactionExternalIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="transactionExternalIds" nillable="true" type="q175:ArrayOfstring" />
+        <xs:element minOccurs="0" name="executionVenueForOTCProductCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstrumentCodesByTransactionExternalIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API" minOccurs="0" name="GetInstrumentCodesByTransactionExternalIdsResult" nillable="true" type="q176:ArrayOfInstrumentCodes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q177="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="transactionIds" nillable="true" type="q177:ArrayOfint" />
+        <xs:element minOccurs="0" name="executionVenueForOTCProductCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q178="Elviz.API" minOccurs="0" name="GetProductNamesResult" nillable="true" type="q178:ArrayOfTransactionProductName" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfTransactionProductName">
+    <xs:sequence>
+      <xs:element xmlns:q179="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="TransactionProductName" nillable="true" type="q179:TransactionProductName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q180="Elviz.API" name="ArrayOfTransactionProductName" nillable="true" type="q180:ArrayOfTransactionProductName" />
+  <xs:complexType name="TransactionProductName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q181="Elviz.API" name="TransactionProductName" nillable="true" type="q181:TransactionProductName" />
+  <xs:element name="GetOriginalTransactionsByExternalIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q182="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="externalIds" nillable="true" type="q182:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOriginalTransactionsByExternalIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q183="Elviz.API" minOccurs="0" name="GetOriginalTransactionsByExternalIdsResult" nillable="true" type="q183:ArrayOfTransactionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOriginalTransactionsByUTI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q184="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="utis" nillable="true" type="q184:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOriginalTransactionsByUTIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q185="Elviz.API" minOccurs="0" name="GetOriginalTransactionsByUTIResult" nillable="true" type="q185:ArrayOfTransactionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductionFacilities">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductionFacilitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q186="Elviz.API" minOccurs="0" name="GetProductionFacilitiesResult" nillable="true" type="q186:ArrayOfProductionFacility" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfProductionFacility">
+    <xs:sequence>
+      <xs:element xmlns:q187="Elviz.API" minOccurs="0" maxOccurs="unbounded" name="ProductionFacility" nillable="true" type="q187:ProductionFacility" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q188="Elviz.API" name="ArrayOfProductionFacility" nillable="true" type="q188:ArrayOfProductionFacility" />
+  <xs:complexType name="ProductionFacility">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccreditationNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EnergySourceId" type="xs:int" />
+      <xs:element xmlns:q189="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EnvironmentLabelIds" nillable="true" type="q189:ArrayOfint" />
+      <xs:element minOccurs="0" name="FirstProductionYear" type="xs:int" />
+      <xs:element minOccurs="0" name="GSRN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HasEnergySourceId" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasFirstProductionYear" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasId" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasInstalledCapacity" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="InstalledCapacity" type="xs:double" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element xmlns:q190="Elviz.API" name="ProductionFacility" nillable="true" type="q190:ProductionFacility" />
+</xs:schema>

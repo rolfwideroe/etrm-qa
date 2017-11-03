@@ -1,0 +1,66 @@
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>89</TransactionId>
+  <DealType>Emission-Future</DealType>
+  <BuySell>Sell</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>ICE</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>ICE</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>ICE</ExecutionVenue>
+    <InstrumentName>EUAJUN-13</InstrumentName>
+    <PriceBasis>EUA</PriceBasis>
+    <FromDate>2013-06-24T00:00:00</FromDate>
+    <ToDate>2013-06-24T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>50</Quantity>
+    <QuantityUnit>Ton</QuantityUnit>
+    <Price>805</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerTon</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-10T11:11:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/Ton" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/Ton" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/Ton" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+	<ExternalId>EmissionFutureDistr</ExternalId>
+    <Comment>Updated 89</Comment>
+    <ModificationDateTimeUtc>2015-01-05T16:39:33Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>24</Deliveries>
+    <OriginalQuantity>50</OriginalQuantity>
+    <ReferringId>90</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>

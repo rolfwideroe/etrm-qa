@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Buy</BuySell>
+      <TransactionName>FlexibleTimeSeries 15 min15 min</TransactionName>
+	  <ModelType>Generation</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>EEX</PriceBasis>
+      <FromDate>10/05/2015</FromDate>
+      <ToDate>10/05/2015</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>TestFormula</IndexFormula>
+    </InstrumentData>
+    <SettlementData>
+      <Currency>NOK</Currency>
+      <CurrencySource>ECB</CurrencySource>
+	  <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "15 min" EffectiveFrom = "10/06/2013" Visibitily="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/05/2015" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:30:00" Value="2.3" />				
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:00:00" Value="2.3" />		
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:30:00" Value="0" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 02:30:00" Value="2.3" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 02:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 03:30:00" Value="2.3" />								
+			</TimeSeriesDetails>
+		</ForecastedVolume>
+		<ForecastedPrice  GUIName = "Forecasted Price" Resolution= "15 min" EffectiveFrom = "10/06/2013" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/05/2015" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:30:00" Value="2.3" />				
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:00:00" Value="2.3" />		
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:30:00" Value="0" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 02:30:00" Value="2.3" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 02:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 03:30:00" Value="2.3" />		
+			</TimeSeriesDetails>
+		</ForecastedPrice>
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "15 min" EffectiveFrom = "" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/05/2015" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:30:00" Value="2.3" />				
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:00:00" Value="2.3" />		
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:30:00" Value="0" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 02:30:00" Value="2.3" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 02:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 03:30:00" Value="2.3" />					
+			</TimeSeriesDetails>		
+		</RealizedVolume>
+		<RealizedPrice GUIName = "Realized Price" Resolution= "15 min" EffectiveFrom = "" Visibitily="true">		
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/05/2015" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:30:00" Value="2.3" />				
+				<TimeSeriesValue StartofPeriod="10/05/2015 00:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:00:00" Value="2.3" />		
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:15:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:30:00" Value="0" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 01:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 02:30:00" Value="2.3" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 02:45:00" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="10/05/2015 03:30:00" Value="2.3" />		
+			</TimeSeriesDetails>					
+		</RealizedPrice>
+	  </FlexibleStructuredDealInformation>
+    </SettlementData>
+    <Fees />
+    <DealDetails />
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

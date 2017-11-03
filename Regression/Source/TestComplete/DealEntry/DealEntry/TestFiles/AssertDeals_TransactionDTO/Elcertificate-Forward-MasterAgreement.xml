@@ -1,0 +1,120 @@
+<TestCase>
+<DealEntry>
+<Transaction>
+    <Commodity>Elcertificate</Commodity>
+    <InstrumentType>Forward</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>API Test Customer</Portfolio>
+      <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>Elcertificate</PriceBasis>
+      <Period>ECS Dec-14</Period>
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>100</Quantity>
+      <Price>5</Price>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+	  <MasterAgreement>API-ElCertificate</MasterAgreement>
+	  <SettlementRule>ElCertForward</SettlementRule>
+    </SettlementData>
+  <Fees>
+    <BrokerFeeCurrency>EUR</BrokerFeeCurrency>
+    <ClearingFeeCurrency>EUR</ClearingFeeCurrency>
+    <CommissionFeeCurrency>EUR</CommissionFeeCurrency>
+    <TradingFeeCurrency>EUR</TradingFeeCurrency>
+  </Fees>
+  <DealDetails>
+		<TradeTime>23:24</TradeTime>
+	</DealDetails>
+    <ReferenceData />
+	<EMIR>
+		<TimestampCleared>18/12/2013</TimestampCleared>
+		<TimestampClearedTime>10:53</TimestampClearedTime>
+		<TimestampConfC.party>17/12/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/12/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>Elcertificate-Forward-test</UniqueTradeIdentifier>
+		<DealCompression>Yes</DealCompression>
+		<EMIRStatus>Not EMIR relevant</EMIRStatus>
+	</EMIR>
+  </Transaction>
+</DealEntry>
+<QaTransactionDTO>
+  <TransactionId>197</TransactionId>
+  <DealType>Elcertificate-Forward</DealType>
+  <BuySell>Sell</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>ECS Dec-14</InstrumentName>
+    <PriceBasis>Elcertificate</PriceBasis>
+    <FromDate>2014-12-18T00:00:00</FromDate>
+    <ToDate>2014-12-18T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>100</Quantity>
+    <QuantityUnit>ECS</QuantityUnit>
+    <Price>5</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerECS</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <MasterAgreement>API-ElCertificate</MasterAgreement>
+    <SettlementRule>ElCertForward</SettlementRule>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-10T21:24:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.133" FeeUnit="EUR/ECS" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ModificationDateTimeUtc>2015-10-27T14:30:37Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>24</Deliveries>
+    <OriginalQuantity>100</OriginalQuantity>
+    <ReferringId>198</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="Elcertificate-Forward-test" ValueType="System.String" />
+        <Property Name="DealCompression" Value="True" ValueType="System.Boolean" />
+        <Property Name="TerminationDate" Value="2013-12-20T00:00:00" ValueType="System.DateTime" />
+        <Property Name="EMIRStatus" Value="Not EMIR relevant" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+    <TimeStampClearedUtc>2013-12-18T09:53:00Z</TimeStampClearedUtc>
+    <TimeStampConfirmationBrokerUtc>2013-12-18T09:55:00Z</TimeStampConfirmationBrokerUtc>
+    <TimeStampConfirmationCounterPartyUtc>2013-12-17T09:54:00Z</TimeStampConfirmationCounterPartyUtc>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

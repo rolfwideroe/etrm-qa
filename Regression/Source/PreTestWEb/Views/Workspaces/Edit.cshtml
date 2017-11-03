@@ -1,0 +1,72 @@
+﻿@model PreTestWeb.Models.Workspace
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>
+    @Html.ActionLink((string) @ViewBag.PreTestName, "Index", "PreTests")
+    / @Html.ActionLink(Model.WorkspaceName, "Index", "Workspaces", new { preTestId = Model.PreTest.PreTestId }, null)
+    / Edit Workspace 
+</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.WorkspaceId)
+        @Html.HiddenFor(model => model.PreTestId)
+        @Html.HiddenFor(model => model.WorkspaceName)
+        @Html.HiddenFor(model => model.ReportDate)
+        @Html.HiddenFor(model => model.ErmEcm)
+        @Html.HiddenFor(model => model.IsRunningInProdEnv)
+        @Html.HiddenFor(model => model.IsRunningInTestEnv)
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.PreTestId, "PreTestId", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("PreTestId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PreTestId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WorkspaceName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.WorkspaceName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.WorkspaceName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReportDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ReportDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ReportDate, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TimeOutInSeconds, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TimeOutInSeconds, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TimeOutInSeconds, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

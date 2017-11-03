@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+	  <TransactionName>StructuralDealTest3</TransactionName>
+	  <ModelType>Fixed Volume</ModelType>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Buy</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>NordPool System Price</PriceBasis>
+      <FromDate>01/10/2013</FromDate>
+      <ToDate>04/10/2013</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>TestFormula</IndexFormula>
+    </InstrumentData>
+    <SettlementData>
+      <Currency>EUR</Currency>
+      <CurrencySource>NordPool</CurrencySource>
+      <Resolution>Hourly</Resolution>
+	  <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "01/10/2013" Quantity= "0.885" Price= "9" />
+		<QuantitiesAndPrice StartofPeriod = "01/10/2013 01:00:00" Quantity= "25" Price= "7" />
+		<QuantitiesAndPrice StartofPeriod = "01/10/2013 02:00:00" Quantity= "42" Price= "3" />			
+		<QuantitiesAndPrice StartofPeriod = "01/10/2013 16:00:00" Quantity= "46" Price= "9" />	
+		<QuantitiesAndPrice StartofPeriod = "02/10/2013" Quantity= "0.885" Price= "9" />
+      </QuantitiesAndPriceSeriesEditor>
+    </SettlementData>
+    <Fees />
+    <DealDetails />
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

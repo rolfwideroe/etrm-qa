@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Sell</BuySell>
+      <TransactionName>FlexibleTimeSeries Daily-Daily</TransactionName>
+	  <ModelType>Generation</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company C</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <PriceBasis>Germany NCG</PriceBasis>
+      <ToDate>24/03/2015</ToDate>
+	  <FromDate>24/03/2014</FromDate>      
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>TestGasFormula</IndexFormula>
+    </InstrumentData>
+    <SettlementData>
+	  <QuantityUnit>Sm3/d</QuantityUnit>
+      <Currency>NOK</Currency>
+      <CurrencySource>ECB</CurrencySource>	  
+	  <PriceVolumeUnit>NOK/Sm3</PriceVolumeUnit>
+      <FlexibleTimeSeries>Yes</FlexibleTimeSeries>
+	  <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Daily" EffectiveFrom = "10/06/2013" Visibitily="true" VolumeProfile="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/03/2014" Value="0" />
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>Base</Profile>
+				<FDate>24/03/2014</FDate>
+				<TDate>27/05/2014</TDate>
+				<Unit>Sm3</Unit>
+				<Resolution>Month</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "24/03/2014" Value="503"/>
+					<Volume StartOfPeriod = "01/04/2014" Value="501"/>
+					<Volume StartOfPeriod = "01/05/2014" Value="502"/>
+				</VolumeAndPrice>
+			</DistributeVolume>			
+		</ForecastedVolume>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Daily" EffectiveFrom = "01/01/2014" Visibitily="true" VolumeProfile="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/03/2014" Value="0" />
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>Base</Profile>
+				<FDate>24/03/2014</FDate>
+				<TDate>24/03/2015</TDate>
+				<Unit>Sm3</Unit>
+				<Resolution>Year</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "24/03/2014" Value="8503"/>
+					<Volume StartOfPeriod = "01/01/2015" Value="8501"/>
+				</VolumeAndPrice>
+			</DistributeVolume>			
+		</ForecastedVolume>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Daily" EffectiveFrom = "01/07/2014" Visibitily="true" VolumeProfile="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/03/2014" Value="0" />
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>Base</Profile>
+				<FDate>01/07/2014</FDate>
+				<TDate>24/03/2015</TDate>
+				<Unit>Sm3</Unit>
+				<Resolution>Quarter</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "01/07/2014" Value="3503"/>
+					<Volume StartOfPeriod = "01/10/2014" Value="3501"/>
+					<Volume StartOfPeriod = "01/01/2015" Value="3502"/>
+				</VolumeAndPrice>
+			</DistributeVolume>			
+		</ForecastedVolume>		
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/03/2014" Value="3.02" />
+				<TimeSeriesValue StartofPeriod="25/03/2014" Value="3.03" />				
+				<TimeSeriesValue StartofPeriod="26/03/2014" Value="3.04" />
+				<TimeSeriesValue StartofPeriod="27/03/2014" Value="3.05" />
+				<TimeSeriesValue StartofPeriod="28/03/2014" Value="3.06" />
+				<TimeSeriesValue StartofPeriod="29/03/2014" Value="3.07" />
+				<TimeSeriesValue StartofPeriod="30/03/2014" Value="3.08" />				
+				<TimeSeriesValue StartofPeriod="31/03/2014" Value="3.03" />
+			</TimeSeriesDetails>	
+		</RealizedVolume>
+		<RealizedPrice GUIName = "Realized Price" Resolution= "Daily" EffectiveFrom = "" Visibitily="false">		
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/03/2014" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="25/03/2014" Value="2.3" />				
+				<TimeSeriesValue StartofPeriod="26/03/2014" Value="2.4" />
+				<TimeSeriesValue StartofPeriod="27/03/2014" Value="2.5" />
+				<TimeSeriesValue StartofPeriod="28/03/2014" Value="2.6" />
+				<TimeSeriesValue StartofPeriod="29/03/2014" Value="2.7" />
+				<TimeSeriesValue StartofPeriod="30/03/2014" Value="2.8" />				
+				<TimeSeriesValue StartofPeriod="31/03/2014" Value="2.3" />
+			</TimeSeriesDetails>					
+		</RealizedPrice>
+	  </FlexibleStructuredDealInformation>	
+    </SettlementData>
+    <Fees /> 
+    <DealDetails />
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

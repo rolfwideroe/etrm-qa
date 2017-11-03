@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>European</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Buy</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Nord Pool ASA</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>Italy</PriceBasis>	  
+	  <UnderlyingInstrumentType>Structured Deal</UnderlyingInstrumentType>
+      <Period>FWYR-15</Period>
+      <LoadProfile>Base (System)</LoadProfile>
+      <TimeZone>(UTC+01:00) Central Europe Standard Time</TimeZone>
+      <PutCall>Call</PutCall>
+      <Strike>50</Strike>
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>25</Quantity>
+      <Price>1.02</Price>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>	  
+		<QuantitiesSeriesEditor>
+			<Resolution>Monthly</Resolution>
+			<Quantity StartofPeriod = "01/01/2015" Quantity= "0.885" />
+			<Quantity StartofPeriod = "01/02/2015" Quantity= "525" />
+			<Quantity StartofPeriod = "01/03/2015" Quantity= "462" />	
+			<Quantity StartofPeriod = "01/04/2015" Quantity= "132" />	
+			<Quantity StartofPeriod = "01/05/2015" Quantity= "0.885" />
+			<Quantity StartofPeriod = "01/06/2015" Quantity= "525" />
+			<Quantity StartofPeriod = "01/06/2015" Quantity= "462" />	
+			<Quantity StartofPeriod = "01/07/2015" Quantity= "13" />	
+			<Quantity StartofPeriod = "01/08/2015" Quantity= "32" />	
+			<Quantity StartofPeriod = "01/09/2015" Quantity= "12" />	
+		</QuantitiesSeriesEditor>
+    </SettlementData>
+    <Fees />
+  </Transaction>
+  	<EMIR>
+		<TimestampCleared>17/12/2013</TimestampCleared>
+		<TimestampClearedTime>10:51</TimestampClearedTime>
+		<TimestampConfC.party>17/12/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:52</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/12/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>Unique ID 123456-GRTH</UniqueTradeIdentifier>
+		<DealCompression>No</DealCompression>
+		<EMIRStatus>EMIR risk reducing</EMIRStatus>
+	</EMIR>
+</DealEntry>

@@ -1,0 +1,61 @@
+﻿@model PreTestWeb.Models.TestEnvRun
+
+@{
+    ViewBag.Title = "Log";
+}
+
+<h2>
+    @Html.ActionLink(Model.Workspace.PreTest.Name, "Index", "PreTests")
+    / @Html.ActionLink(Model.Workspace.WorkspaceName, "Index", "Workspaces", new { preTestId = Model.Workspace.PreTest.PreTestId }, null)
+    / @Html.ActionLink("Test Runs", "Index", new { workspaceId = Model.Workspace.WorkspaceId }, null)
+</h2>
+
+<div>
+    <h4>Test Env ETRM Log</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RunStartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RunStartTime)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.JobResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobResult)
+        </dd>*@
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.TestServerJobLog)
+        </dt>*@
+
+        <dd>
+            <pre>
+            @Html.DisplayFor(model => model.TestServerJobLog)
+            </pre>
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.EtrmVersion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EtrmVersion)
+        </dd>*@
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Workspace.WorkspaceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Workspace.WorkspaceName)
+        </dd>*@
+
+    </dl>
+</div>
+

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="QaAppServerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/QATestService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/QATestService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/QATestService?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/QATestService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/QATestService" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/QATestService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IQaAppServerService_GetSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettings" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_GetSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_SetSettingsDWord_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSettingsDWord" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_SetSettingsDWord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSettingsDWordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_SetSettingsString_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSettingsString" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_SetSettingsString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSettingsStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_ReinstallDbPatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReinstallDbPatch" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_ReinstallDbPatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReinstallDbPatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_StartElvizServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartElvizServices" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_StartElvizServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartElvizServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_StopElvizServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopElvizServices" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_StopElvizServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopElvizServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_RestartElvizServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:RestartElvizServices" />
+  </wsdl:message>
+  <wsdl:message name="IQaAppServerService_RestartElvizServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestartElvizServicesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IQaAppServerService">
+    <wsdl:operation name="GetSettings">
+      <wsdl:input wsam:Action="http://tempuri.org/IQaAppServerService/GetSettings" message="tns:IQaAppServerService_GetSettings_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IQaAppServerService/GetSettingsResponse" message="tns:IQaAppServerService_GetSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSettingsDWord">
+      <wsdl:input wsam:Action="http://tempuri.org/IQaAppServerService/SetSettingsDWord" message="tns:IQaAppServerService_SetSettingsDWord_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IQaAppServerService/SetSettingsDWordResponse" message="tns:IQaAppServerService_SetSettingsDWord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSettingsString">
+      <wsdl:input wsam:Action="http://tempuri.org/IQaAppServerService/SetSettingsString" message="tns:IQaAppServerService_SetSettingsString_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IQaAppServerService/SetSettingsStringResponse" message="tns:IQaAppServerService_SetSettingsString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReinstallDbPatch">
+      <wsdl:input wsam:Action="http://tempuri.org/IQaAppServerService/ReinstallDbPatch" message="tns:IQaAppServerService_ReinstallDbPatch_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IQaAppServerService/ReinstallDbPatchResponse" message="tns:IQaAppServerService_ReinstallDbPatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartElvizServices">
+      <wsdl:input wsam:Action="http://tempuri.org/IQaAppServerService/StartElvizServices" message="tns:IQaAppServerService_StartElvizServices_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IQaAppServerService/StartElvizServicesResponse" message="tns:IQaAppServerService_StartElvizServices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopElvizServices">
+      <wsdl:input wsam:Action="http://tempuri.org/IQaAppServerService/StopElvizServices" message="tns:IQaAppServerService_StopElvizServices_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IQaAppServerService/StopElvizServicesResponse" message="tns:IQaAppServerService_StopElvizServices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RestartElvizServices">
+      <wsdl:input wsam:Action="http://tempuri.org/IQaAppServerService/RestartElvizServices" message="tns:IQaAppServerService_RestartElvizServices_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IQaAppServerService/RestartElvizServicesResponse" message="tns:IQaAppServerService_RestartElvizServices_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IQaAppServerService" type="tns:IQaAppServerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSettings">
+      <soap:operation soapAction="http://tempuri.org/IQaAppServerService/GetSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSettingsDWord">
+      <soap:operation soapAction="http://tempuri.org/IQaAppServerService/SetSettingsDWord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSettingsString">
+      <soap:operation soapAction="http://tempuri.org/IQaAppServerService/SetSettingsString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReinstallDbPatch">
+      <soap:operation soapAction="http://tempuri.org/IQaAppServerService/ReinstallDbPatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartElvizServices">
+      <soap:operation soapAction="http://tempuri.org/IQaAppServerService/StartElvizServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StopElvizServices">
+      <soap:operation soapAction="http://tempuri.org/IQaAppServerService/StopElvizServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RestartElvizServices">
+      <soap:operation soapAction="http://tempuri.org/IQaAppServerService/RestartElvizServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QaAppServerService">
+    <wsdl:port name="BasicHttpBinding_IQaAppServerService" binding="tns:BasicHttpBinding_IQaAppServerService">
+      <soap:address location="http://netvs-qa172a02:8009/QATestService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

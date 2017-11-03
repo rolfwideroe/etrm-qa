@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Elviz.API" elementFormDefault="qualified" targetNamespace="Elviz.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://netvs-qa162a01:8009/PortfolioManagementService/mex?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model" />
+  <xs:import schemaLocation="http://netvs-qa162a01:8009/PortfolioManagementService/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://netvs-qa162a01:8009/PortfolioManagementService/mex?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="CreateCompanies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companies" nillable="true" type="tns:ArrayOfCompanyDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfCompanyDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyDto" nillable="true" type="tns:CompanyDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyDto" nillable="true" type="tns:ArrayOfCompanyDto" />
+  <xs:complexType name="CompanyDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Addresses" nillable="true" type="tns:ArrayOfProperty" />
+      <xs:element minOccurs="0" name="CountryIsoCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model" minOccurs="0" name="CreditRiskProperties" nillable="true" type="q1:CreditRiskPropertiesDto" />
+      <xs:element minOccurs="0" name="ExternalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrgNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentExternalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phones" nillable="true" type="tns:ArrayOfProperty" />
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:ArrayOfProperty" />
+      <xs:element minOccurs="0" name="Roles" nillable="true" type="tns:ArrayOfCompanyRole" />
+      <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompanyDto" nillable="true" type="tns:CompanyDto" />
+  <xs:complexType name="ArrayOfProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Property" nillable="true" type="tns:Property" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProperty" nillable="true" type="tns:ArrayOfProperty" />
+  <xs:complexType name="Property">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Property" nillable="true" type="tns:Property" />
+  <xs:complexType name="ArrayOfCompanyRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompanyRole" type="tns:CompanyRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompanyRole" nillable="true" type="tns:ArrayOfCompanyRole" />
+  <xs:simpleType name="CompanyRole">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TradeCompany">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Customer">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Counterparty">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Broker">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Exchange">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BillingCompany">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PortfolioManager">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CurrencyCounterparty">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GeneralClearingMember">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BalanceResponsibleParty">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CompanyRole" nillable="true" type="tns:CompanyRole" />
+  <xs:element name="CreateCompaniesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCompanies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companies" nillable="true" type="tns:ArrayOfCompanyDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCompaniesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCompanies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="externalIds" nillable="true" type="q2:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindCompaniesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindCompaniesResult" nillable="true" type="tns:ArrayOfCompanyDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPortfolios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPortfoliosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllPortfoliosResult" nillable="true" type="tns:ArrayOfPortfolioDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfPortfolioDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PortfolioDto" nillable="true" type="tns:PortfolioDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPortfolioDto" nillable="true" type="tns:ArrayOfPortfolioDto" />
+  <xs:complexType name="PortfolioDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyExternalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentPortfolioExternalId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:ArrayOfProperty" />
+      <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PortfolioDto" nillable="true" type="tns:PortfolioDto" />
+  <xs:element name="CreatePortfolios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="portfolios" nillable="true" type="tns:ArrayOfPortfolioDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePortfoliosResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePortfolios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="portfolios" nillable="true" type="tns:ArrayOfPortfolioDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePortfoliosResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPortfolios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="externalIds" nillable="true" type="q3:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPortfoliosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FindPortfoliosResult" nillable="true" type="tns:ArrayOfPortfolioDto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

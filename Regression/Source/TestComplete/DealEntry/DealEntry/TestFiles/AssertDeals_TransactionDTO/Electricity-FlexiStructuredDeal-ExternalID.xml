@@ -1,0 +1,237 @@
+<TestCase>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Sell</BuySell>
+      <TransactionName>FlexibleTimeSeries DailyDaily</TransactionName>
+	  <ModelType>Retail</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company C</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>NordPool System Price</PriceBasis>
+	  <ReferencePriceSeries>NO1-EUR-15 Min</ReferencePriceSeries>
+      <FromDate>24/06/2013</FromDate>
+      <ToDate>30/06/2013</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Spot w/margin</PriceType>	  	  
+	  <HistoricContractPrices>SP1 IntraDay 15min</HistoricContractPrices>
+    </InstrumentData>
+    <SettlementData>
+      <Currency>EUR</Currency>
+      <CurrencySource>ECB</CurrencySource>
+	  <MasterAgreement>A-C ElectStrDeal</MasterAgreement>
+      <SettlementRule>ElectFSD</SettlementRule>
+	 <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Daily" EffectiveFrom = "10/06/2013" Visibitily="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="1" />
+				<TimeSeriesValue StartofPeriod="25/06/2013" Value="2" />
+				<TimeSeriesValue StartofPeriod="26/06/2013" Value="3" />
+				<TimeSeriesValue StartofPeriod="29/06/2013" Value="6" />
+				<TimeSeriesValue StartofPeriod="30/06/2013" Value="7" />				
+			</TimeSeriesDetails>
+		</ForecastedVolume>
+		<ForecastedPrice  GUIName = "Forecasted Price" Resolution= "Daily" EffectiveFrom = "10/06/2013" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="1.1" />
+				<TimeSeriesValue StartofPeriod="25/06/2013" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="26/06/2013" Value="3.1" />
+				<TimeSeriesValue StartofPeriod="29/06/2013" Value="6.1" />
+				<TimeSeriesValue StartofPeriod="30/06/2013" Value="7.1" />				
+			</TimeSeriesDetails>
+		</ForecastedPrice>
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="10" />
+				<TimeSeriesValue StartofPeriod="25/06/2013" Value="20" />
+				<TimeSeriesValue StartofPeriod="28/06/2013" Value="50" />
+				<TimeSeriesValue StartofPeriod="29/06/2013" Value="60" />
+				<TimeSeriesValue StartofPeriod="30/06/2013" Value="70" />				
+			</TimeSeriesDetails>			
+		</RealizedVolume>
+		<RealizedPrice GUIName = "Realized Price" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">		
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="0.1" />
+				<TimeSeriesValue StartofPeriod="25/06/2013" Value="0.2" />
+				<TimeSeriesValue StartofPeriod="28/06/2013" Value="0.5" />
+				<TimeSeriesValue StartofPeriod="29/06/2013" Value="0.6" />
+				<TimeSeriesValue StartofPeriod="30/06/2013" Value="0.7" />				
+			</TimeSeriesDetails>							
+		</RealizedPrice>
+	  </FlexibleStructuredDealInformation>	
+    </SettlementData>
+    <Fees>
+      <Broker>Test Broker A</Broker>
+	  <BrokerFixed>1.22</BrokerFixed>
+      <ClearingFixed>1.23</ClearingFixed>
+	  <CommissionFixed>1.24</CommissionFixed>
+	  <TradingFixed>1.25</TradingFixed>
+  </Fees>
+	 <DealDetails>
+        <TradeTime>00:00</TradeTime>
+    </DealDetails>
+	<ReferenceData>
+		<ExternalId>GUI-Electricity-FlexiStructuredDeal-ExternalID</ExternalId>
+	</ReferenceData>
+	<EMIR>
+		<TimestampCleared>18/12/2013</TimestampCleared>
+		<TimestampClearedTime>10:53</TimestampClearedTime>
+		<TimestampConfC.party>17/12/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/12/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>Unique ID electricity flexi str deal</UniqueTradeIdentifier>
+		<DealCompression>No</DealCompression>
+		<EMIRStatus>EMIR risk reducing</EMIRStatus>
+	</EMIR>
+  </Transaction>
+</DealEntry>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>175</TransactionId>
+  <DealType>Electricity-StructuredDeal</DealType>
+  <BuySell>Sell</BuySell>
+  <ContractModelType>Retail</ContractModelType>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company C</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company C</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>FlexibleTimeSeries DailyDaily</InstrumentName>
+    <PriceBasis>NordPool System Price</PriceBasis>
+    <FromDate>2013-06-24T00:00:00</FromDate>
+    <ToDate>2013-06-30T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <PriceType>Spot</PriceType>
+    <HistoricContractPrices>SP1-IntraDay-15min</HistoricContractPrices>	
+    <ReferencePriceSeries>NO1-EUR-15 Min</ReferencePriceSeries>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>2.71428571428571</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>5.31052631578947</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>ECB</CurrencySource>
+    <MarketPriceMultiplicator>1</MarketPriceMultiplicator>
+	<MasterAgreement>A-C ElectStrDeal</MasterAgreement>
+    <SettlementRule>ElectFSD</SettlementRule>
+    <TimeSeriesSet>
+      <TimeSeries>
+        <TimeSeries>
+          <Resolution>Day</Resolution>
+          <TimeSeriesTypeName>Forecasted Price</TimeSeriesTypeName>
+          <TimezoneName>Central Europe Standard Time</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2013-06-24T00:00:00" ToDateTime="2013-06-25T00:00:00" Value="1.1" />
+            <TimeSeriesValue FromDateTime="2013-06-25T00:00:00" ToDateTime="2013-06-26T00:00:00" Value="2.1" />
+            <TimeSeriesValue FromDateTime="2013-06-26T00:00:00" ToDateTime="2013-06-27T00:00:00" Value="3.1" />
+            <TimeSeriesValue FromDateTime="2013-06-27T00:00:00" ToDateTime="2013-06-28T00:00:00" />
+            <TimeSeriesValue FromDateTime="2013-06-28T00:00:00" ToDateTime="2013-06-29T00:00:00" />
+            <TimeSeriesValue FromDateTime="2013-06-29T00:00:00" ToDateTime="2013-06-30T00:00:00" Value="6.1" />
+            <TimeSeriesValue FromDateTime="2013-06-30T00:00:00" ToDateTime="2013-07-01T00:00:00" Value="7.1" />
+          </TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>Day</Resolution>
+          <TimeSeriesTypeName>Forecasted Volume</TimeSeriesTypeName>
+          <TimezoneName>Central Europe Standard Time</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2013-06-24T00:00:00" ToDateTime="2013-06-25T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2013-06-25T00:00:00" ToDateTime="2013-06-26T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2013-06-26T00:00:00" ToDateTime="2013-06-27T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2013-06-27T00:00:00" ToDateTime="2013-06-28T00:00:00" />
+            <TimeSeriesValue FromDateTime="2013-06-28T00:00:00" ToDateTime="2013-06-29T00:00:00" />
+            <TimeSeriesValue FromDateTime="2013-06-29T00:00:00" ToDateTime="2013-06-30T00:00:00" Value="6" />
+            <TimeSeriesValue FromDateTime="2013-06-30T00:00:00" ToDateTime="2013-07-01T00:00:00" Value="7" />
+          </TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>Day</Resolution>
+          <TimeSeriesTypeName>Realized Price</TimeSeriesTypeName>
+          <TimezoneName>Central Europe Standard Time</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2013-06-24T00:00:00" ToDateTime="2013-06-25T00:00:00" Value="0.1" />
+            <TimeSeriesValue FromDateTime="2013-06-25T00:00:00" ToDateTime="2013-06-26T00:00:00" Value="0.2" />
+            <TimeSeriesValue FromDateTime="2013-06-26T00:00:00" ToDateTime="2013-06-27T00:00:00" />
+            <TimeSeriesValue FromDateTime="2013-06-27T00:00:00" ToDateTime="2013-06-28T00:00:00" />
+            <TimeSeriesValue FromDateTime="2013-06-28T00:00:00" ToDateTime="2013-06-29T00:00:00" Value="0.5" />
+            <TimeSeriesValue FromDateTime="2013-06-29T00:00:00" ToDateTime="2013-06-30T00:00:00" Value="0.6" />
+            <TimeSeriesValue FromDateTime="2013-06-30T00:00:00" ToDateTime="2013-07-01T00:00:00" Value="0.7" />
+          </TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>Day</Resolution>
+          <TimeSeriesTypeName>Realized Volume</TimeSeriesTypeName>
+          <TimezoneName>Central Europe Standard Time</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2013-06-24T00:00:00" ToDateTime="2013-06-25T00:00:00" Value="10" />
+            <TimeSeriesValue FromDateTime="2013-06-25T00:00:00" ToDateTime="2013-06-26T00:00:00" Value="20" />
+            <TimeSeriesValue FromDateTime="2013-06-26T00:00:00" ToDateTime="2013-06-27T00:00:00" />
+            <TimeSeriesValue FromDateTime="2013-06-27T00:00:00" ToDateTime="2013-06-28T00:00:00" />
+            <TimeSeriesValue FromDateTime="2013-06-28T00:00:00" ToDateTime="2013-06-29T00:00:00" Value="50" />
+            <TimeSeriesValue FromDateTime="2013-06-29T00:00:00" ToDateTime="2013-06-30T00:00:00" Value="60" />
+            <TimeSeriesValue FromDateTime="2013-06-30T00:00:00" ToDateTime="2013-07-01T00:00:00" Value="70" />
+          </TimeSeriesValues>
+        </TimeSeries>
+      </TimeSeries>
+    </TimeSeriesSet>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-09T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="1.22" FeeUnit="EUR" />
+      <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="1.23" FeeUnit="EUR" />
+      <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="1.24" FeeUnit="EUR" />
+      <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="1.25" FeeUnit="EUR" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>GUI-Electricity-FlexiStructuredDeal-ExternalID</ExternalId>
+    <ModificationDateTimeUtc>2015-02-04T13:00:30Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>168</Deliveries>
+    <OriginalQuantity>0</OriginalQuantity>
+    <ReferringId>176</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="Unique ID electricity flexi str deal" ValueType="System.String" />
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+        <Property Name="TerminationDate" Value="2013-12-20T00:00:00" ValueType="System.DateTime" />
+        <Property Name="EMIRStatus" Value="EMIR risk reducing" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+    <TimeStampClearedUtc>2013-12-18T09:53:00Z</TimeStampClearedUtc>
+    <TimeStampConfirmationBrokerUtc>2013-12-18T09:55:00Z</TimeStampConfirmationBrokerUtc>
+    <TimeStampConfirmationCounterPartyUtc>2013-12-17T09:54:00Z</TimeStampConfirmationCounterPartyUtc>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

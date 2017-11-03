@@ -1,0 +1,62 @@
+﻿@model IEnumerable<PreTestWeb.Models.TestResult>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    @Html.ActionLink((string)ViewBag.PreTestName, "Index", "PreTests")
+    / @Html.ActionLink((string)ViewBag.WorkspaceName, "Index", "Workspaces", new { preTestId = (int)ViewBag.PreTestId }, null)
+    / @Html.ActionLink("Test Runs", "Index","TestEnvRuns",  new { workspaceId = (int)ViewBag.WorkspaceId }, null)
+
+</h2>
+<h3>Test Results</h3>
+@*<h4>
+    @Model.FirstOrDefault().TestEnvRun.RunStartTime
+</h4>*@ 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Monitor.MonitorType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Monitor.MonitorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Monitor.Tollerance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestResultStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestResultMessage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Monitor.MonitorType.MonitorTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Monitor.MonitorName)
+        </td>
+        <th>
+            @Html.DisplayFor(modelItem => item.Monitor.Tollerance)
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestResultStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestResultMessage)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TestResultId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TestResultId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TestResultId })
+        </td>*@
+    </tr>
+}
+
+</table>

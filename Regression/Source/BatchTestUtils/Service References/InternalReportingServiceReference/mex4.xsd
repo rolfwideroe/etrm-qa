@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API.ReportingApi" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API.ReportingApi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfReportEngineDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReportEngineDescription" nillable="true" type="tns:ReportEngineDescription" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReportEngineDescription" nillable="true" type="tns:ArrayOfReportEngineDescription" />
+  <xs:complexType name="ReportEngineDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArtifactDescriptions" nillable="true" type="tns:ArrayOfArtifactDescription" />
+      <xs:element minOccurs="0" name="ReportDisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SettingDescriptions" nillable="true" type="tns:ArrayOfSettingDescription" />
+      <xs:element minOccurs="0" name="UniqueId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReportEngineDescription" nillable="true" type="tns:ReportEngineDescription" />
+  <xs:complexType name="ArrayOfArtifactDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ArtifactDescription" nillable="true" type="tns:ArtifactDescription" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArtifactDescription" nillable="true" type="tns:ArrayOfArtifactDescription" />
+  <xs:complexType name="ArtifactDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubArtifacts" nillable="true" type="tns:ArrayOfArtifactDescription" />
+      <xs:element minOccurs="0" name="UniqueId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArtifactDescription" nillable="true" type="tns:ArtifactDescription" />
+  <xs:complexType name="ArrayOfSettingDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SettingDescription" nillable="true" type="tns:SettingDescription" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSettingDescription" nillable="true" type="tns:ArrayOfSettingDescription" />
+  <xs:complexType name="SettingDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SettingsGroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SettingDescription" nillable="true" type="tns:SettingDescription" />
+  <xs:complexType name="ArrayOfSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Setting" nillable="true" type="tns:Setting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSetting" nillable="true" type="tns:ArrayOfSetting" />
+  <xs:complexType name="Setting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsNotSet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SettingId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XmlEncodedValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Setting" nillable="true" type="tns:Setting" />
+  <xs:complexType name="ArrayOfSettingsVerificationIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SettingsVerificationIssue" nillable="true" type="tns:SettingsVerificationIssue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSettingsVerificationIssue" nillable="true" type="tns:ArrayOfSettingsVerificationIssue" />
+  <xs:complexType name="SettingsVerificationIssue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppliesToSetting" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Severity" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SettingsVerificationIssue" nillable="true" type="tns:SettingsVerificationIssue" />
+  <xs:complexType name="Report">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataTableArtifacts" nillable="true" type="tns:ArrayOfDataTableArtifact" />
+      <xs:element minOccurs="0" name="Settings" nillable="true" type="tns:ArrayOfSetting" />
+      <xs:element minOccurs="0" name="TimeSeriesArtifacts" nillable="true" type="tns:ArrayOfTimeSeriesGroupArtifact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Report" nillable="true" type="tns:Report" />
+  <xs:complexType name="ArrayOfDataTableArtifact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataTableArtifact" nillable="true" type="tns:DataTableArtifact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataTableArtifact" nillable="true" type="tns:ArrayOfDataTableArtifact" />
+  <xs:complexType name="DataTableArtifact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArtifactId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataTable" nillable="true">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:appinfo>
+              <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importance" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataTableArtifact" nillable="true" type="tns:DataTableArtifact" />
+  <xs:complexType name="ArrayOfTimeSeriesGroupArtifact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimeSeriesGroupArtifact" nillable="true" type="tns:TimeSeriesGroupArtifact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimeSeriesGroupArtifact" nillable="true" type="tns:ArrayOfTimeSeriesGroupArtifact" />
+  <xs:complexType name="TimeSeriesGroupArtifact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArtifactId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Importance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeSeries" nillable="true" type="tns:ArrayOfTimeSeries" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimeSeriesGroupArtifact" nillable="true" type="tns:TimeSeriesGroupArtifact" />
+  <xs:complexType name="ArrayOfTimeSeries">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimeSeries" nillable="true" type="tns:TimeSeries" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimeSeries" nillable="true" type="tns:ArrayOfTimeSeries" />
+  <xs:complexType name="TimeSeries">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:ArrayOfProperty" />
+      <xs:element minOccurs="0" name="TimeSeriesElements" nillable="true" type="tns:ArrayOfTimeSeriesElement" />
+      <xs:element minOccurs="0" name="TimeZone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimeSeries" nillable="true" type="tns:TimeSeries" />
+  <xs:complexType name="ArrayOfProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Property" nillable="true" type="tns:Property" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProperty" nillable="true" type="tns:ArrayOfProperty" />
+  <xs:complexType name="Property">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PropertyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Property" nillable="true" type="tns:Property" />
+  <xs:complexType name="ArrayOfTimeSeriesElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TimeSeriesElement" nillable="true" type="tns:TimeSeriesElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTimeSeriesElement" nillable="true" type="tns:ArrayOfTimeSeriesElement" />
+  <xs:complexType name="TimeSeriesElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FromTimeUtc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UntilTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UntilTimeUtc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Value" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimeSeriesElement" nillable="true" type="tns:TimeSeriesElement" />
+</xs:schema>

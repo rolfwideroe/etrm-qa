@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Update>
+	<TransactionID>15</TransactionID>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Asian</InstrumentType>    
+    <SettlementData>
+      <Quantity>5</Quantity>
+      <Price>7</Price>
+      <Currency>USD</Currency>
+      <CurrencySource>ECB</CurrencySource>
+    </SettlementData>
+    <Fees>
+        <Broker>Test Broker A</Broker>
+		<BrokerVariable>4</BrokerVariable>
+		<BrokerFeeCurrency>DKK</BrokerFeeCurrency>
+		<CommissionFixed>3.6</CommissionFixed>
+		<CommissionFeeCurrency>USD</CommissionFeeCurrency>
+		<TradingVariable>7.2</TradingVariable>
+		<TradingFeeCurrency>GBP</TradingFeeCurrency>				
+    </Fees>
+    <ReferenceData>
+		<Comment>Updated 15</Comment>
+	</ReferenceData>
+	<REMIT>
+		<REMITReporting>Yes</REMITReporting>
+		<BuyerInitiatorAggressor>Initiator</BuyerInitiatorAggressor>
+		<SellerInitiatorAggressor>Aggressor</SellerInitiatorAggressor>
+	</REMIT>
+	</Update>
+	  <Copy>
+		<InstrumentData>
+			<ExecutionVenue>Nord Pool</ExecutionVenue>
+			<PriceBasis>EEX</PriceBasis>
+		</InstrumentData>	
+	  	<ReferenceData>
+			<Comment>Copied El-Asian - trans 15</Comment>
+		</ReferenceData>
+	  </Copy>
+</DealEntry>

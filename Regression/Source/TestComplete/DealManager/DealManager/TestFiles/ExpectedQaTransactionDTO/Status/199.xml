@@ -1,0 +1,78 @@
+<QaTransactionDTO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TransactionId>199</TransactionId>
+  <DealType>Gas-European</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company B</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company B</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>ICE</ExecutionVenue>
+    <InstrumentName>EURP Apr-13 27-MAR-13 1.00</InstrumentName>
+    <PriceBasis>ICE NBP</PriceBasis>
+    <FromDate>2013-04-01T00:00:00</FromDate>
+    <ToDate>2013-04-30T00:00:00</ToDate>
+    <PutCall>Put</PutCall>
+    <Strike>1</Strike>
+    <ExpiryDate>2013-03-27T00:00:00</ExpiryDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>CET 06-06</TimeZone>    
+	<UnderlyingExecutionVenue>ICE</UnderlyingExecutionVenue>
+	<UnderlyingInstrumentType>Future</UnderlyingInstrumentType>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>2</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>2</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <MasterAgreement>A-B GasEuropean</MasterAgreement>
+    <SettlementRule>GasEuropean</SettlementRule>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Declared</Status>
+    <TradeDateTimeUtc>2013-03-10T12:42:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>API Test Broker</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.3" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR" />
+      <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.4" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="4" FeeUnit="EUR" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.5" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="5" FeeUnit="EUR" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <Comment>gas european</Comment>
+    <ModificationDateTimeUtc>2015-11-20T13:37:47Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>720</Deliveries>
+    <OriginalQuantity>2</OriginalQuantity>
+    <ReferringId>200</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>

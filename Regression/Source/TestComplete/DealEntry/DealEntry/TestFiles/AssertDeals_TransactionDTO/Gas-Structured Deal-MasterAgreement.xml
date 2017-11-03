@@ -1,0 +1,147 @@
+<TestCase>
+<DealEntry>
+  <Transaction>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+	  <TransactionName>str deal MastAgr</TransactionName>
+	  <ModelType>Fixed Volume</ModelType>
+	  <BuySell>Buy</BuySell>
+      <DeliveryType>Physical</DeliveryType>
+      <BalanceArea>TTF</BalanceArea>
+	  <DeliveryLocation>TTF_DeliveryLocation</DeliveryLocation>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company B</Portfolio>
+      <CounterpartyPortfolio>Test Company C</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <PriceBasis>TTF</PriceBasis>
+      <FromDate>01/01/2014</FromDate>
+      <ToDate>31/07/2014</ToDate>
+      <PriceType>Fixed</PriceType>
+    </InstrumentData>
+    <SettlementData>
+      <QuantityUnit>GJ/d</QuantityUnit>
+      <PriceVolumeUnit>NOK/GJ</PriceVolumeUnit>
+      <Currency>NOK</Currency>
+      <CurrencySource>Viz</CurrencySource>
+      <Resolution>Monthly</Resolution>
+	  <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "01/01/2014 " Quantity= "0.589" Price= "0.5" />
+		<QuantitiesAndPrice StartofPeriod = "01/02/2014" Quantity= "5" Price= "1.7999" />
+		<QuantitiesAndPrice StartofPeriod = "01/03/2014" Quantity= "3" Price= "3.25" />	
+		<QuantitiesAndPrice StartofPeriod = "01/04/2014" Quantity= "2" Price= "2.35" />	
+		<QuantitiesAndPrice StartofPeriod = "01/05/2014" Quantity= "1" Price= "1.5" />	
+		<QuantitiesAndPrice StartofPeriod = "01/06/2014" Quantity= "2.2" Price= "2.5" />	
+		<QuantitiesAndPrice StartofPeriod = "01/07/2014" Quantity= "1.8" Price= "1.3" />	
+      </QuantitiesAndPriceSeriesEditor>
+	  <MasterAgreement>B-C GasStrDeal</MasterAgreement>
+	  <SettlementRule>GasStrDeal</SettlementRule>
+    </SettlementData>
+    <Fees />
+    <DealDetails>
+	  <TradeTime>00:00</TradeTime>
+	</DealDetails>
+    <ReferenceData />
+	<EMIR>
+		<TimestampCleared>18/11/2013</TimestampCleared>
+		<TimestampClearedTime>10:53</TimestampClearedTime>
+		<TimestampConfC.party>17/11/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/11/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>Gas str deal M-A</UniqueTradeIdentifier>
+		<DealCompression>Yes</DealCompression>
+		<EMIRStatus>Not EMIR relevant</EMIRStatus>
+	</EMIR>
+	<REMIT>
+		<REMITReporting>Yes</REMITReporting>
+		<BuyerInitiatorAggressor>Initiator</BuyerInitiatorAggressor>
+		<SellerInitiatorAggressor>Aggressor</SellerInitiatorAggressor>
+	</REMIT>
+  </Transaction>
+</DealEntry>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>1837</TransactionId>
+  <DealType>Gas-StructuredDeal</DealType>
+  <BuySell>Buy</BuySell>
+  <ContractModelType>Fixed Volume</ContractModelType>
+  <DeliveryType>Physical</DeliveryType>
+  <DeliveryLocation>TTF_DeliveryLocation</DeliveryLocation>
+  <Portfolios>
+    <PortfolioName>Test Company B</PortfolioName>
+    <PortfolioExternalId>Test Company B</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company C</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company C</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>str deal MastAgr</InstrumentName>
+    <PriceBasis>TTF</PriceBasis>
+    <FromDate>2014-01-01T00:00:00</FromDate>
+    <ToDate>2014-07-31T00:00:00</ToDate>
+    <TimeZone>CET 06-06</TimeZone>
+    <PriceType>Fixed</PriceType>
+    <BalanceArea>TTF</BalanceArea>
+  </InstrumentData>
+  <SettlementData>
+    <QuantityUnit>GJd</QuantityUnit>
+    <PriceIsoCurrency>NOK</PriceIsoCurrency>
+    <PriceVolumeUnit>PerGJ</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <MasterAgreement>B-C GasStrDeal</MasterAgreement>
+    <SettlementRule>GasStrDeal</SettlementRule>
+    <Resolution>Month</Resolution>
+    <PriceVolumeTimeSeriesDetails>
+      <PriceVolumeTimeSeriesDetail FromDateTime="2014-01-01T00:00:00" ToDateTime="2014-02-01T00:00:00" Price="0.5" Volume="0.589" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2014-02-01T00:00:00" ToDateTime="2014-03-01T00:00:00" Price="1.7999" Volume="5" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2014-03-01T00:00:00" ToDateTime="2014-04-01T00:00:00" Price="3.25" Volume="3" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2014-04-01T00:00:00" ToDateTime="2014-05-01T00:00:00" Price="2.35" Volume="2" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2014-05-01T00:00:00" ToDateTime="2014-06-01T00:00:00" Price="1.5" Volume="1" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2014-06-01T00:00:00" ToDateTime="2014-07-01T00:00:00" Price="2.5" Volume="2.2" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2014-07-01T00:00:00" ToDateTime="2014-08-01T00:00:00" Price="1.3" Volume="1.8" />
+    </PriceVolumeTimeSeriesDetails>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-09T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ModificationDateTimeUtc>2017-02-27T14:07:11Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>5087</Deliveries>
+    <OriginalQuantity>0</OriginalQuantity>
+    <ReferringId>1838</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="Gas str deal M-A" ValueType="System.String" />
+        <Property Name="DealCompression" Value="True" ValueType="System.Boolean" />
+        <Property Name="TerminationDate" Value="2013-12-20T00:00:00" ValueType="System.DateTime" />
+        <Property Name="EMIRStatus" Value="Not EMIR relevant" ValueType="System.String" />
+        <Property Name="RemitReporting" Value="True" ValueType="System.Boolean" />
+        <Property Name="BuyerInitiatorAggressor" Value="Initiator" ValueType="System.String" />
+        <Property Name="SellerInitiatorAggressor" Value="Aggressor" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+    <TimeStampClearedUtc>2013-11-18T09:53:00Z</TimeStampClearedUtc>
+    <TimeStampConfirmationBrokerUtc>2013-11-18T09:55:00Z</TimeStampConfirmationBrokerUtc>
+    <TimeStampConfirmationCounterPartyUtc>2013-11-17T09:54:00Z</TimeStampConfirmationCounterPartyUtc>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>
