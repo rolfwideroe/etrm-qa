@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PretestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Monitors">
+          <Key>
+            <PropertyRef Name="MonitorId" />
+          </Key>
+          <Property Name="MonitorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkspaceId" Type="int" Nullable="false" />
+          <Property Name="MonitorTypeId" Type="int" Nullable="false" />
+          <Property Name="MonitorName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Query" Type="text" Nullable="false" />
+          <Property Name="Tollerance" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MonitorTypes">
+          <Key>
+            <PropertyRef Name="MonitorTypeId" />
+          </Key>
+          <Property Name="MonitorTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MonitorTypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EtrmName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="DefaultQuery" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PreTests">
+          <Key>
+            <PropertyRef Name="PreTestId" />
+          </Key>
+          <Property Name="PreTestId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ProdServerId" Type="int" Nullable="false" />
+          <Property Name="TestServerId" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProdEnvRuns">
+          <Key>
+            <PropertyRef Name="ProdEnvRunId" />
+          </Key>
+          <Property Name="ProdEnvRunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkspaceId" Type="int" Nullable="false" />
+          <Property Name="RunStartTime" Type="datetime" Nullable="false" />
+          <Property Name="JobResult" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProdServerLog" Type="nvarchar(max)" />
+          <Property Name="EtrmVersion" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Servers">
+          <Key>
+            <PropertyRef Name="ServerId" />
+          </Key>
+          <Property Name="ServerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SqlServerId" Type="int" Nullable="false" />
+          <Property Name="ServerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EcmDb" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SystemDb" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Dwh" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SqlServers">
+          <Key>
+            <PropertyRef Name="SqlServerId" />
+          </Key>
+          <Property Name="SqlServerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SqlServerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SqlUserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SqlPassword" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TestEnvRuns">
+          <Key>
+            <PropertyRef Name="TestEnvRunId" />
+          </Key>
+          <Property Name="TestEnvRunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WorkspaceId" Type="int" Nullable="false" />
+          <Property Name="RunStartTime" Type="datetime" Nullable="false" />
+          <Property Name="JobResult" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TestServerJobLog" Type="nvarchar(max)" />
+          <Property Name="EtrmVersion" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TestResults">
+          <Key>
+            <PropertyRef Name="TestResultId" />
+          </Key>
+          <Property Name="TestResultId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MonitorId" Type="int" Nullable="false" />
+          <Property Name="TestEnvRunId" Type="int" Nullable="false" />
+          <Property Name="TestResultStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TestResultMessage" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Workspaces">
+          <Key>
+            <PropertyRef Name="WorkspaceId" />
+          </Key>
+          <Property Name="WorkspaceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PreTestId" Type="int" Nullable="false" />
+          <Property Name="WorkspaceName" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ErmEcm" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="ReportDate" Type="date" Nullable="false" />
+          <Property Name="TimeOutInSeconds" Type="int" Nullable="false" />
+          <Property Name="IsRunningInProdEnv" Type="bit" Nullable="false" />
+          <Property Name="IsRunningInTestEnv" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Monitors_MonitorTypes">
+          <End Role="MonitorTypes" Type="Self.MonitorTypes" Multiplicity="1" />
+          <End Role="Monitors" Type="Self.Monitors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MonitorTypes">
+              <PropertyRef Name="MonitorTypeId" />
+            </Principal>
+            <Dependent Role="Monitors">
+              <PropertyRef Name="MonitorTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monitors_Workspaces">
+          <End Role="Workspaces" Type="Self.Workspaces" Multiplicity="1" />
+          <End Role="Monitors" Type="Self.Monitors" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workspaces">
+              <PropertyRef Name="WorkspaceId" />
+            </Principal>
+            <Dependent Role="Monitors">
+              <PropertyRef Name="WorkspaceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PreTestsProdServer_Servers">
+          <End Role="Servers" Type="Self.Servers" Multiplicity="1" />
+          <End Role="PreTests" Type="Self.PreTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servers">
+              <PropertyRef Name="ServerId" />
+            </Principal>
+            <Dependent Role="PreTests">
+              <PropertyRef Name="ProdServerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PreTestsTestServer_Servers">
+          <End Role="Servers" Type="Self.Servers" Multiplicity="1" />
+          <End Role="PreTests" Type="Self.PreTests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servers">
+              <PropertyRef Name="ServerId" />
+            </Principal>
+            <Dependent Role="PreTests">
+              <PropertyRef Name="TestServerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProdEnvRuns_Workspaces">
+          <End Role="Workspaces" Type="Self.Workspaces" Multiplicity="1" />
+          <End Role="ProdEnvRuns" Type="Self.ProdEnvRuns" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workspaces">
+              <PropertyRef Name="WorkspaceId" />
+            </Principal>
+            <Dependent Role="ProdEnvRuns">
+              <PropertyRef Name="WorkspaceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProdServers_SqlServers">
+          <End Role="SqlServers" Type="Self.SqlServers" Multiplicity="1" />
+          <End Role="Servers" Type="Self.Servers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlServers">
+              <PropertyRef Name="SqlServerId" />
+            </Principal>
+            <Dependent Role="Servers">
+              <PropertyRef Name="SqlServerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestEnvRuns_Workspaces">
+          <End Role="Workspaces" Type="Self.Workspaces" Multiplicity="1" />
+          <End Role="TestEnvRuns" Type="Self.TestEnvRuns" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workspaces">
+              <PropertyRef Name="WorkspaceId" />
+            </Principal>
+            <Dependent Role="TestEnvRuns">
+              <PropertyRef Name="WorkspaceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestResults_Monitors">
+          <End Role="Monitors" Type="Self.Monitors" Multiplicity="1" />
+          <End Role="TestResults" Type="Self.TestResults" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monitors">
+              <PropertyRef Name="MonitorId" />
+            </Principal>
+            <Dependent Role="TestResults">
+              <PropertyRef Name="MonitorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestResults_TestEnvRuns">
+          <End Role="TestEnvRuns" Type="Self.TestEnvRuns" Multiplicity="1" />
+          <End Role="TestResults" Type="Self.TestResults" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestEnvRuns">
+              <PropertyRef Name="TestEnvRunId" />
+            </Principal>
+            <Dependent Role="TestResults">
+              <PropertyRef Name="TestEnvRunId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Workspaces_PreTests">
+          <End Role="PreTests" Type="Self.PreTests" Multiplicity="1" />
+          <End Role="Workspaces" Type="Self.Workspaces" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PreTests">
+              <PropertyRef Name="PreTestId" />
+            </Principal>
+            <Dependent Role="Workspaces">
+              <PropertyRef Name="PreTestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PretestModelStoreContainer">
+          <EntitySet Name="Monitors" EntityType="Self.Monitors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MonitorTypes" EntityType="Self.MonitorTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreTests" EntityType="Self.PreTests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProdEnvRuns" EntityType="Self.ProdEnvRuns" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Servers" EntityType="Self.Servers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SqlServers" EntityType="Self.SqlServers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TestEnvRuns" EntityType="Self.TestEnvRuns" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TestResults" EntityType="Self.TestResults" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Workspaces" EntityType="Self.Workspaces" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Monitors_MonitorTypes" Association="Self.FK_Monitors_MonitorTypes">
+            <End Role="MonitorTypes" EntitySet="MonitorTypes" />
+            <End Role="Monitors" EntitySet="Monitors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monitors_Workspaces" Association="Self.FK_Monitors_Workspaces">
+            <End Role="Workspaces" EntitySet="Workspaces" />
+            <End Role="Monitors" EntitySet="Monitors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PreTestsProdServer_Servers" Association="Self.FK_PreTestsProdServer_Servers">
+            <End Role="Servers" EntitySet="Servers" />
+            <End Role="PreTests" EntitySet="PreTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PreTestsTestServer_Servers" Association="Self.FK_PreTestsTestServer_Servers">
+            <End Role="Servers" EntitySet="Servers" />
+            <End Role="PreTests" EntitySet="PreTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProdEnvRuns_Workspaces" Association="Self.FK_ProdEnvRuns_Workspaces">
+            <End Role="Workspaces" EntitySet="Workspaces" />
+            <End Role="ProdEnvRuns" EntitySet="ProdEnvRuns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProdServers_SqlServers" Association="Self.FK_ProdServers_SqlServers">
+            <End Role="SqlServers" EntitySet="SqlServers" />
+            <End Role="Servers" EntitySet="Servers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestEnvRuns_Workspaces" Association="Self.FK_TestEnvRuns_Workspaces">
+            <End Role="Workspaces" EntitySet="Workspaces" />
+            <End Role="TestEnvRuns" EntitySet="TestEnvRuns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestResults_Monitors" Association="Self.FK_TestResults_Monitors">
+            <End Role="Monitors" EntitySet="Monitors" />
+            <End Role="TestResults" EntitySet="TestResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestResults_TestEnvRuns" Association="Self.FK_TestResults_TestEnvRuns">
+            <End Role="TestEnvRuns" EntitySet="TestEnvRuns" />
+            <End Role="TestResults" EntitySet="TestResults" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Workspaces_PreTests" Association="Self.FK_Workspaces_PreTests">
+            <End Role="PreTests" EntitySet="PreTests" />
+            <End Role="Workspaces" EntitySet="Workspaces" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PretestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MonitorType">
+          <Key>
+            <PropertyRef Name="MonitorTypeId" />
+          </Key>
+          <Property Name="MonitorTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MonitorTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EtrmName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DefaultQuery" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Monitors" Relationship="PretestModel.FK_Monitors_MonitorTypes" FromRole="MonitorType" ToRole="Monitor" />
+        </EntityType>
+        <EntityType Name="PreTest">
+          <Key>
+            <PropertyRef Name="PreTestId" />
+          </Key>
+          <Property Name="PreTestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProdServerId" Type="Int32" Nullable="false" />
+          <Property Name="TestServerId" Type="Int32" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ProdServer" Relationship="PretestModel.FK_PreTestsProdServer_Servers" FromRole="PreTest" ToRole="Server" />
+          <NavigationProperty Name="TestServer" Relationship="PretestModel.FK_PreTestsTestServer_Servers" FromRole="PreTest" ToRole="Server" />
+          <NavigationProperty Name="Workspaces" Relationship="PretestModel.FK_Workspaces_PreTests" FromRole="PreTest" ToRole="Workspace" />
+        </EntityType>
+        <EntityType Name="ProdEnvRun">
+          <Key>
+            <PropertyRef Name="ProdEnvRunId" />
+          </Key>
+          <Property Name="ProdEnvRunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkspaceId" Type="Int32" Nullable="false" />
+          <Property Name="RunStartTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="JobResult" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProdServerLog" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EtrmVersion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Workspace" Relationship="PretestModel.FK_ProdEnvRuns_Workspaces" FromRole="ProdEnvRun" ToRole="Workspace" />
+        </EntityType>
+        <EntityType Name="TestEnvRun">
+          <Key>
+            <PropertyRef Name="TestEnvRunId" />
+          </Key>
+          <Property Name="TestEnvRunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkspaceId" Type="Int32" Nullable="false" />
+          <Property Name="RunStartTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="JobResult" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TestServerJobLog" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EtrmVersion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="TestResults" Relationship="Self.FK_TestResults_TestEnvRuns" FromRole="TestEnvRuns" ToRole="TestResults" />
+          <NavigationProperty Name="Workspace" Relationship="PretestModel.FK_TestEnvRuns_Workspaces" FromRole="TestEnvRun" ToRole="Workspace" />
+        </EntityType>
+        <EntityType Name="TestResult">
+          <Key>
+            <PropertyRef Name="TestResultId" />
+          </Key>
+          <Property Name="TestResultId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MonitorId" Type="Int32" Nullable="false" />
+          <Property Name="TestEnvRunId" Type="Int32" Nullable="false" />
+          <Property Name="TestResultStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TestResultMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TestEnvRun" Relationship="Self.FK_TestResults_TestEnvRuns" FromRole="TestResults" ToRole="TestEnvRuns" />
+          <NavigationProperty Name="Monitor" Relationship="PretestModel.FK_TestResults_Monitors" FromRole="TestResult" ToRole="Monitor" />
+        </EntityType>
+        <Association Name="FK_TestResults_TestEnvRuns">
+          <End Role="TestEnvRuns" Type="Self.TestEnvRun" Multiplicity="1" />
+          <End Role="TestResults" Type="Self.TestResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TestEnvRuns">
+              <PropertyRef Name="TestEnvRunId" />
+            </Principal>
+            <Dependent Role="TestResults">
+              <PropertyRef Name="TestEnvRunId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PretestModelEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MonitorTypes" EntityType="Self.MonitorType" />
+          <EntitySet Name="PreTests" EntityType="Self.PreTest" />
+          <EntitySet Name="ProdEnvRuns" EntityType="Self.ProdEnvRun" />
+          <EntitySet Name="TestEnvRuns" EntityType="Self.TestEnvRun" />
+          <EntitySet Name="TestResults" EntityType="Self.TestResult" />
+          <AssociationSet Name="FK_TestResults_TestEnvRuns" Association="Self.FK_TestResults_TestEnvRuns">
+            <End Role="TestEnvRuns" EntitySet="TestEnvRuns" />
+            <End Role="TestResults" EntitySet="TestResults" />
+          </AssociationSet>
+          <EntitySet Name="Servers" EntityType="PretestModel.Server" />
+          <EntitySet Name="SqlServers" EntityType="PretestModel.SqlServer" />
+          <AssociationSet Name="FK_PreTestsProdServer_Servers" Association="PretestModel.FK_PreTestsProdServer_Servers">
+            <End Role="Server" EntitySet="Servers" />
+            <End Role="PreTest" EntitySet="PreTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PreTestsTestServer_Servers" Association="PretestModel.FK_PreTestsTestServer_Servers">
+            <End Role="Server" EntitySet="Servers" />
+            <End Role="PreTest" EntitySet="PreTests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProdServers_SqlServers" Association="PretestModel.FK_ProdServers_SqlServers">
+            <End Role="SqlServer" EntitySet="SqlServers" />
+            <End Role="Server" EntitySet="Servers" />
+          </AssociationSet>
+          <EntitySet Name="Workspaces" EntityType="PretestModel.Workspace" />
+          <AssociationSet Name="FK_Workspaces_PreTests" Association="PretestModel.FK_Workspaces_PreTests">
+            <End Role="PreTest" EntitySet="PreTests" />
+            <End Role="Workspace" EntitySet="Workspaces" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProdEnvRuns_Workspaces" Association="PretestModel.FK_ProdEnvRuns_Workspaces">
+            <End Role="Workspace" EntitySet="Workspaces" />
+            <End Role="ProdEnvRun" EntitySet="ProdEnvRuns" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestEnvRuns_Workspaces" Association="PretestModel.FK_TestEnvRuns_Workspaces">
+            <End Role="Workspace" EntitySet="Workspaces" />
+            <End Role="TestEnvRun" EntitySet="TestEnvRuns" />
+          </AssociationSet>
+          <EntitySet Name="Monitors" EntityType="PretestModel.Monitor" />
+          <AssociationSet Name="FK_Monitors_MonitorTypes" Association="PretestModel.FK_Monitors_MonitorTypes">
+            <End Role="MonitorType" EntitySet="MonitorTypes" />
+            <End Role="Monitor" EntitySet="Monitors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monitors_Workspaces" Association="PretestModel.FK_Monitors_Workspaces">
+            <End Role="Workspace" EntitySet="Workspaces" />
+            <End Role="Monitor" EntitySet="Monitors" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TestResults_Monitors" Association="PretestModel.FK_TestResults_Monitors">
+            <End Role="Monitor" EntitySet="Monitors" />
+            <End Role="TestResult" EntitySet="TestResults" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Server">
+          <Key>
+            <PropertyRef Name="ServerId" />
+          </Key>
+          <Property Name="ServerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SqlServerId" Type="Int32" Nullable="false" />
+          <Property Name="ServerName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EcmDb" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SystemDb" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Dwh" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PreTests" Relationship="PretestModel.FK_PreTestsProdServer_Servers" FromRole="Server" ToRole="PreTest" />
+          <NavigationProperty Name="PreTests1" Relationship="PretestModel.FK_PreTestsTestServer_Servers" FromRole="Server" ToRole="PreTest" />
+          <NavigationProperty Name="SqlServer" Relationship="PretestModel.FK_ProdServers_SqlServers" FromRole="Server" ToRole="SqlServer" />
+        </EntityType>
+        <EntityType Name="SqlServer">
+          <Key>
+            <PropertyRef Name="SqlServerId" />
+          </Key>
+          <Property Name="SqlServerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SqlServerName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SqlUserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SqlPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Servers" Relationship="PretestModel.FK_ProdServers_SqlServers" FromRole="SqlServer" ToRole="Server" />
+        </EntityType>
+        <Association Name="FK_PreTestsProdServer_Servers">
+          <End Type="PretestModel.Server" Role="Server" Multiplicity="1" />
+          <End Type="PretestModel.PreTest" Role="PreTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Server">
+              <PropertyRef Name="ServerId" />
+            </Principal>
+            <Dependent Role="PreTest">
+              <PropertyRef Name="ProdServerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PreTestsTestServer_Servers">
+          <End Type="PretestModel.Server" Role="Server" Multiplicity="1" />
+          <End Type="PretestModel.PreTest" Role="PreTest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Server">
+              <PropertyRef Name="ServerId" />
+            </Principal>
+            <Dependent Role="PreTest">
+              <PropertyRef Name="TestServerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProdServers_SqlServers">
+          <End Type="PretestModel.SqlServer" Role="SqlServer" Multiplicity="1" />
+          <End Type="PretestModel.Server" Role="Server" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SqlServer">
+              <PropertyRef Name="SqlServerId" />
+            </Principal>
+            <Dependent Role="Server">
+              <PropertyRef Name="SqlServerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Workspace">
+          <Key>
+            <PropertyRef Name="WorkspaceId" />
+          </Key>
+          <Property Name="WorkspaceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PreTestId" Type="Int32" Nullable="false" />
+          <Property Name="WorkspaceName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ErmEcm" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="ReportDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="TimeOutInSeconds" Type="Int32" Nullable="false" />
+          <Property Name="IsRunningInProdEnv" Type="Boolean" Nullable="false" />
+          <Property Name="IsRunningInTestEnv" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="PreTest" Relationship="PretestModel.FK_Workspaces_PreTests" FromRole="Workspace" ToRole="PreTest" />
+          <NavigationProperty Name="ProdEnvRuns" Relationship="PretestModel.FK_ProdEnvRuns_Workspaces" FromRole="Workspace" ToRole="ProdEnvRun" />
+          <NavigationProperty Name="TestEnvRuns" Relationship="PretestModel.FK_TestEnvRuns_Workspaces" FromRole="Workspace" ToRole="TestEnvRun" />
+          <NavigationProperty Name="Monitors" Relationship="PretestModel.FK_Monitors_Workspaces" FromRole="Workspace" ToRole="Monitor" />
+        </EntityType>
+        <Association Name="FK_Workspaces_PreTests">
+          <End Type="PretestModel.PreTest" Role="PreTest" Multiplicity="1" />
+          <End Type="PretestModel.Workspace" Role="Workspace" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PreTest">
+              <PropertyRef Name="PreTestId" />
+            </Principal>
+            <Dependent Role="Workspace">
+              <PropertyRef Name="PreTestId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProdEnvRuns_Workspaces">
+          <End Type="PretestModel.Workspace" Role="Workspace" Multiplicity="1" />
+          <End Type="PretestModel.ProdEnvRun" Role="ProdEnvRun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workspace">
+              <PropertyRef Name="WorkspaceId" />
+            </Principal>
+            <Dependent Role="ProdEnvRun">
+              <PropertyRef Name="WorkspaceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestEnvRuns_Workspaces">
+          <End Type="PretestModel.Workspace" Role="Workspace" Multiplicity="1" />
+          <End Type="PretestModel.TestEnvRun" Role="TestEnvRun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workspace">
+              <PropertyRef Name="WorkspaceId" />
+            </Principal>
+            <Dependent Role="TestEnvRun">
+              <PropertyRef Name="WorkspaceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Monitor">
+          <Key>
+            <PropertyRef Name="MonitorId" />
+          </Key>
+          <Property Name="MonitorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WorkspaceId" Type="Int32" Nullable="false" />
+          <Property Name="MonitorTypeId" Type="Int32" Nullable="false" />
+          <Property Name="MonitorName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Query" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Tollerance" Type="Double" Nullable="false" />
+          <NavigationProperty Name="MonitorType" Relationship="PretestModel.FK_Monitors_MonitorTypes" FromRole="Monitor" ToRole="MonitorType" />
+          <NavigationProperty Name="Workspace" Relationship="PretestModel.FK_Monitors_Workspaces" FromRole="Monitor" ToRole="Workspace" />
+          <NavigationProperty Name="TestResults" Relationship="PretestModel.FK_TestResults_Monitors" FromRole="Monitor" ToRole="TestResult" />
+        </EntityType>
+        <Association Name="FK_Monitors_MonitorTypes">
+          <End Type="PretestModel.MonitorType" Role="MonitorType" Multiplicity="1" />
+          <End Type="PretestModel.Monitor" Role="Monitor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MonitorType">
+              <PropertyRef Name="MonitorTypeId" />
+            </Principal>
+            <Dependent Role="Monitor">
+              <PropertyRef Name="MonitorTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monitors_Workspaces">
+          <End Type="PretestModel.Workspace" Role="Workspace" Multiplicity="1" />
+          <End Type="PretestModel.Monitor" Role="Monitor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Workspace">
+              <PropertyRef Name="WorkspaceId" />
+            </Principal>
+            <Dependent Role="Monitor">
+              <PropertyRef Name="WorkspaceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TestResults_Monitors">
+          <End Type="PretestModel.Monitor" Role="Monitor" Multiplicity="1" />
+          <End Type="PretestModel.TestResult" Role="TestResult" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Monitor">
+              <PropertyRef Name="MonitorId" />
+            </Principal>
+            <Dependent Role="TestResult">
+              <PropertyRef Name="MonitorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PretestModelStoreContainer" CdmEntityContainer="PretestModelEntities">
+          <EntitySetMapping Name="MonitorTypes">
+            <EntityTypeMapping TypeName="PretestModel.MonitorType">
+              <MappingFragment StoreEntitySet="MonitorTypes">
+                <ScalarProperty Name="MonitorTypeId" ColumnName="MonitorTypeId" />
+                <ScalarProperty Name="MonitorTypeName" ColumnName="MonitorTypeName" />
+                <ScalarProperty Name="EtrmName" ColumnName="EtrmName" />
+                <ScalarProperty Name="DefaultQuery" ColumnName="DefaultQuery" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PreTests">
+            <EntityTypeMapping TypeName="PretestModel.PreTest">
+              <MappingFragment StoreEntitySet="PreTests">
+                <ScalarProperty Name="PreTestId" ColumnName="PreTestId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProdServerId" ColumnName="ProdServerId" />
+                <ScalarProperty Name="TestServerId" ColumnName="TestServerId" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProdEnvRuns">
+            <EntityTypeMapping TypeName="PretestModel.ProdEnvRun">
+              <MappingFragment StoreEntitySet="ProdEnvRuns">
+                <ScalarProperty Name="ProdEnvRunId" ColumnName="ProdEnvRunId" />
+                <ScalarProperty Name="WorkspaceId" ColumnName="WorkspaceId" />
+                <ScalarProperty Name="RunStartTime" ColumnName="RunStartTime" />
+                <ScalarProperty Name="JobResult" ColumnName="JobResult" />
+                <ScalarProperty Name="ProdServerLog" ColumnName="ProdServerLog" />
+                <ScalarProperty Name="EtrmVersion" ColumnName="EtrmVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestEnvRuns">
+            <EntityTypeMapping TypeName="PretestModel.TestEnvRun">
+              <MappingFragment StoreEntitySet="TestEnvRuns">
+                <ScalarProperty Name="TestEnvRunId" ColumnName="TestEnvRunId" />
+                <ScalarProperty Name="WorkspaceId" ColumnName="WorkspaceId" />
+                <ScalarProperty Name="RunStartTime" ColumnName="RunStartTime" />
+                <ScalarProperty Name="JobResult" ColumnName="JobResult" />
+                <ScalarProperty Name="TestServerJobLog" ColumnName="TestServerJobLog" />
+                <ScalarProperty Name="EtrmVersion" ColumnName="EtrmVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TestResults">
+            <EntityTypeMapping TypeName="PretestModel.TestResult">
+              <MappingFragment StoreEntitySet="TestResults">
+                <ScalarProperty Name="TestResultId" ColumnName="TestResultId" />
+                <ScalarProperty Name="MonitorId" ColumnName="MonitorId" />
+                <ScalarProperty Name="TestEnvRunId" ColumnName="TestEnvRunId" />
+                <ScalarProperty Name="TestResultStatus" ColumnName="TestResultStatus" />
+                <ScalarProperty Name="TestResultMessage" ColumnName="TestResultMessage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Servers">
+            <EntityTypeMapping TypeName="PretestModel.Server">
+              <MappingFragment StoreEntitySet="Servers">
+                <ScalarProperty Name="Dwh" ColumnName="Dwh" />
+                <ScalarProperty Name="SystemDb" ColumnName="SystemDb" />
+                <ScalarProperty Name="EcmDb" ColumnName="EcmDb" />
+                <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+                <ScalarProperty Name="SqlServerId" ColumnName="SqlServerId" />
+                <ScalarProperty Name="ServerId" ColumnName="ServerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SqlServers">
+            <EntityTypeMapping TypeName="PretestModel.SqlServer">
+              <MappingFragment StoreEntitySet="SqlServers">
+                <ScalarProperty Name="SqlPassword" ColumnName="SqlPassword" />
+                <ScalarProperty Name="SqlUserName" ColumnName="SqlUserName" />
+                <ScalarProperty Name="SqlServerName" ColumnName="SqlServerName" />
+                <ScalarProperty Name="SqlServerId" ColumnName="SqlServerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Workspaces">
+            <EntityTypeMapping TypeName="PretestModel.Workspace">
+              <MappingFragment StoreEntitySet="Workspaces">
+                <ScalarProperty Name="IsRunningInTestEnv" ColumnName="IsRunningInTestEnv" />
+                <ScalarProperty Name="IsRunningInProdEnv" ColumnName="IsRunningInProdEnv" />
+                <ScalarProperty Name="TimeOutInSeconds" ColumnName="TimeOutInSeconds" />
+                <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+                <ScalarProperty Name="ErmEcm" ColumnName="ErmEcm" />
+                <ScalarProperty Name="WorkspaceName" ColumnName="WorkspaceName" />
+                <ScalarProperty Name="PreTestId" ColumnName="PreTestId" />
+                <ScalarProperty Name="WorkspaceId" ColumnName="WorkspaceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monitors">
+            <EntityTypeMapping TypeName="PretestModel.Monitor">
+              <MappingFragment StoreEntitySet="Monitors">
+                <ScalarProperty Name="Tollerance" ColumnName="Tollerance" />
+                <ScalarProperty Name="Query" ColumnName="Query" />
+                <ScalarProperty Name="MonitorName" ColumnName="MonitorName" />
+                <ScalarProperty Name="MonitorTypeId" ColumnName="MonitorTypeId" />
+                <ScalarProperty Name="WorkspaceId" ColumnName="WorkspaceId" />
+                <ScalarProperty Name="MonitorId" ColumnName="MonitorId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

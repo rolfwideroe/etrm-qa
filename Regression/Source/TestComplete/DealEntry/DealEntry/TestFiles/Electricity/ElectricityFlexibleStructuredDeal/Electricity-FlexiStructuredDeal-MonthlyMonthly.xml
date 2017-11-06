@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Buy</BuySell>
+      <TransactionName>FlexibleTimeSeries MonthlyMonthly</TransactionName>
+	  <ModelType>Consumption</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>EEX</PriceBasis>
+      <FromDate>01/06/2013</FromDate>
+      <ToDate>31/01/2014</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>TestFormula</IndexFormula>
+    </InstrumentData>
+    <SettlementData>
+      <Currency>NOK</Currency>
+      <CurrencySource>Viz</CurrencySource>
+	  <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Monthly"  EffectiveFrom = "10/06/2013" Visibitily="true" >	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="01/06/2013" Value="2.1" />
+				<TimeSeriesValue StartofPeriod="01/07/2013" Value="2.2" />
+				<TimeSeriesValue StartofPeriod="01/08/2013" Value="2.3" />
+				<TimeSeriesValue StartofPeriod="01/09/2013" Value="2.4" />
+				<TimeSeriesValue StartofPeriod="01/10/2013" Value="2.5" />
+				<TimeSeriesValue StartofPeriod="01/11/2013" Value="2.6" />
+				<TimeSeriesValue StartofPeriod="01/12/2013" Value="2.7" />
+				<TimeSeriesValue StartofPeriod="01/01/2014" Value="2.8" />				
+			</TimeSeriesDetails>
+		</ForecastedVolume>
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Monthly"  EffectiveFrom = "" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="01/06/2013" Value="-1" />
+				<TimeSeriesValue StartofPeriod="01/07/2013" Value="2" />
+				<TimeSeriesValue StartofPeriod="01/08/2013" Value="3" />
+				<TimeSeriesValue StartofPeriod="01/09/2013" Value="4" />
+				<TimeSeriesValue StartofPeriod="01/10/2013" Value="5" />
+				<TimeSeriesValue StartofPeriod="01/11/2013" Value="6" />
+				<TimeSeriesValue StartofPeriod="01/12/2013" Value="7" />
+				<TimeSeriesValue StartofPeriod="01/01/2014" Value="8" />				
+			</TimeSeriesDetails>		
+		</RealizedVolume>
+	  </FlexibleStructuredDealInformation>
+    </SettlementData>
+    <Fees />
+    <DealDetails />
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

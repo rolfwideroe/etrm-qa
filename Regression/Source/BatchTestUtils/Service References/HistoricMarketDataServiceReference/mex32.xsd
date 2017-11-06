@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Elviz.API" elementFormDefault="qualified" targetNamespace="Elviz.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://netvs-qa152a01:8009/HistoricMarketDataService/mex?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:element name="GetHistoricExchangeRates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="baseCurrencyISOCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="crossCurrencyISOCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currencySource" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lastDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="resolution" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="gapHandling" type="tns:GapHandling" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="GapHandling">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AllowGaps" />
+      <xs:enumeration value="ErrorIfGaps" />
+      <xs:enumeration value="FillSmallGapsWithPreviousValue" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GapHandling" nillable="true" type="tns:GapHandling" />
+  <xs:element name="GetHistoricExchangeRatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="GetHistoricExchangeRatesResult" nillable="true" type="q1:ArrayOfKeyValuePairOfdateTimedouble" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

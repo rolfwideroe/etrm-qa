@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Elviz.API" elementFormDefault="qualified" targetNamespace="Elviz.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetCurrencyAccounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BalanceDateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="BalanceDateTo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencyAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCurrencyAccountsResult" nillable="true" type="tns:ArrayOfCurrencyAccountDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfCurrencyAccountDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CurrencyAccountDTO" nillable="true" type="tns:CurrencyAccountDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCurrencyAccountDTO" nillable="true" type="tns:ArrayOfCurrencyAccountDTO" />
+  <xs:complexType name="CurrencyAccountDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BalanceDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CurrencyIsoCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NominalAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="UpdateTimeStampUtc" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CurrencyAccountDTO" nillable="true" type="tns:CurrencyAccountDTO" />
+  <xs:element name="UpdateCurrencyAccountBalances">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="balanceDateFrom" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="currencyAccounts" nillable="true" type="tns:ArrayOfCurrencyAccountDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCurrencyAccountBalancesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMostRecentCurrencyAccountBalances">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMostRecentCurrencyAccountBalancesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMostRecentCurrencyAccountBalancesResult" nillable="true" type="tns:ArrayOfCurrencyAccountDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

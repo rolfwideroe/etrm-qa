@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+	  <TransactionName>str deal weekly 20</TransactionName>
+	  <ModelType>Fixed Volume</ModelType>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Buy</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <PriceBasis>TTF</PriceBasis>
+      <FromDate>21/10/2013</FromDate>
+      <ToDate>30/03/2014</ToDate>
+      <PriceType>Fixed</PriceType>
+    </InstrumentData>
+    <SettlementData>
+      <QuantityUnit>GJ/d</QuantityUnit>
+      <PriceVolumeUnit>NOK/GJ</PriceVolumeUnit>
+      <Currency>NOK</Currency>
+      <CurrencySource>Viz</CurrencySource>
+      <Resolution>Weekly</Resolution>
+	  <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "21/10/2013 " Quantity= "0.589" Price= "0.5" />
+		<QuantitiesAndPrice StartofPeriod = "28/10/2013" Quantity= "5" Price= "1.7999" />
+		<QuantitiesAndPrice StartofPeriod = "03/02/2014" Quantity= "3" Price= "3.25" />	
+		<QuantitiesAndPrice StartofPeriod = "17/03/2014" Quantity= "2" Price= "2.35" />	
+		<QuantitiesAndPrice StartofPeriod = "24/03/2014" Quantity= "1" Price= "1.5" />	
+    </QuantitiesAndPriceSeriesEditor>
+    </SettlementData>
+    <Fees />
+    <DealDetails />
+    <ReferenceData />
+	<EMIR>
+		<TimestampCleared>18/11/2013</TimestampCleared>
+		<TimestampClearedTime>10:53</TimestampClearedTime>
+		<TimestampConfC.party>17/11/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/11/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>Gas str deal</UniqueTradeIdentifier>
+		<DealCompression>Yes</DealCompression>
+		<EMIRStatus>Not EMIR relevant</EMIRStatus>
+	</EMIR>
+	<REMIT>
+		<REMITReporting>Yes</REMITReporting>
+		<BuyerInitiatorAggressor>Initiator</BuyerInitiatorAggressor>
+		<SellerInitiatorAggressor>Aggressor</SellerInitiatorAggressor>
+	</REMIT>
+  </Transaction>
+</DealEntry>

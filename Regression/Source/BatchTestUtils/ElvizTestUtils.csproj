@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{499B3141-DF25-497C-AA4F-4915481CD406}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ElvizTestUtils</RootNamespace>
+    <AssemblyName>ElvizTestUtils</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Bin\ElvizTestUtils\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\ElvizTestUtils\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Pretest|AnyCPU'">
+    <OutputPath>bin\Pretest\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.80.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.80.1\lib\net40-client\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Bin\Prerequisites\NUnit\bin\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssertTools\Analyze NUnitResults.cs" />
+    <Compile Include="AssertTools\ComplexTypeAssert.cs" />
+    <Compile Include="BatchTests\Assertion.cs" />
+    <Compile Include="BatchTests\BatchTestFile.cs" />
+    <Compile Include="AssertTools\Column.cs" />
+    <Compile Include="BatchTests\DbQuery.cs" />
+    <Compile Include="BatchTests\EcmTestUtil.cs" />
+    <Compile Include="BatchTests\ErmTestUtil.cs" />
+    <Compile Include="BatchTests\Query.cs" />
+    <Compile Include="BatchTests\Setup.cs" />
+    <Compile Include="ConfigurationTool.cs" />
+    <Compile Include="CurveTests\CurveTestUtil.cs" />
+    <Compile Include="CurveTests\ExchangeRateTestUtil.cs" />
+    <Compile Include="CurveTests\InterestRateTestCase.cs" />
+    <Compile Include="CurveTests\ExchangeRateTestCase.cs" />
+    <Compile Include="CurveTests\ExpectedCurveValues.cs" />
+    <Compile Include="CurveTests\CurveTestCase.cs" />
+    <Compile Include="CurveTests\CurveInputData.cs" />
+    <Compile Include="CurveTests\ExchangeRateInputData.cs" />
+    <Compile Include="CurveTests\ExpectedCurveValue.cs" />
+    <Compile Include="CurveTests\ExpectedCurveVolatility.cs" />
+    <Compile Include="CurveTests\ExpectedCurveProperties.cs" />
+    <Compile Include="CustomDwhTest\CustomDwhTest.cs" />
+    <Compile Include="DatabaseTools\JobDao.cs" />
+    <Compile Include="DatabaseTools\SystemDao.cs" />
+    <Compile Include="DatabaseTools\WorkspaceDao.cs" />
+    <Compile Include="DealInsertTools.cs" />
+    <Compile Include="ElvizConfiguration.cs" />
+    <Compile Include="ElvizConfigurationTool.cs" />
+    <Compile Include="DatabaseTools\QaDao.cs" />
+    <Compile Include="ElvizRegistyConfigurationTool.cs" />
+    <Compile Include="Excel\BaseExcel.cs" />
+    <Compile Include="Excel\ClosedXmlTool.cs" />
+    <Compile Include="Excel\CompareExcel.cs" />
+    <Compile Include="JobAPI.cs" />
+    <Compile Include="JobTestCase.cs" />
+    <Compile Include="LoadStaticData\LoadStaticData.cs" />
+    <Compile Include="LoadStaticData\PortfolioInsert.cs" />
+    <Compile Include="QaLookUp\CustomAssert.cs" />
+    <Compile Include="QaLookUp\DataRowTool.cs" />
+    <Compile Include="QaLookUp\QaLookUp.cs" />
+    <Compile Include="QaLookUp\QaPriceCurveDtoWrapper.cs" />
+    <Compile Include="QaLookUp\QAReportingDBCompanyDTOLookUp.cs" />
+    <Compile Include="QaLookUp\QAReportingDBLookUp.cs" />
+    <Compile Include="QaLookUp\QAReportingDBPortfolioDTOLookUp.cs" />
+    <Compile Include="QaLookUp\QaTransactionDTO.cs" />
+    <Compile Include="QaLookUp\QaTransactionDtoAssert.cs" />
+    <Compile Include="QaLookUp\Test.cs" />
+    <Compile Include="ReportEngineTests\DataTableHelper.cs" />
+    <Compile Include="ReportEngineTests\ExpectedTimeSeriesArtifact.cs" />
+    <Compile Include="ReportEngineTests\ReportEngineTestHelper.cs" />
+    <Compile Include="ReportingDbTimeSeries\TestReportingDbUtil.cs" />
+    <Compile Include="ReportingDbTimeSeries\ReportingDBTestCase.cs" />
+    <Compile Include="Service References\CurrencyAccountsServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InternalJobService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\QAAppserverServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TestXmlTool.cs" />
+    <Compile Include="ReportEngineTests\ExpectedDataTableArtifact.cs" />
+    <Compile Include="ReportEngineTests\InputData.cs" />
+    <Compile Include="ReportEngineTests\TestCaseReportEngine.cs" />
+    <Compile Include="Service References\CurveServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DealServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HistoricMarketDataServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InternalReportingServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LookUpServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PortfolioManagementServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VolatilityServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TestCasesFileEnumeratorByFolder.cs" />
+    <Compile Include="WCFClientUtil.cs" />
+    <Compile Include="SystemUtils.cs" />
+    <Compile Include="GlobalConstTestSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ElvizInstallationUtility.cs" />
+    <Compile Include="BatchTests\BatchTestFileParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\CurrencyAccountsServiceReference\CurrencyAccountService.wsdl" />
+    <None Include="Service References\CurrencyAccountsServiceReference\ElvizTestUtils.CurrencyAccountsServiceReference.CurrencyAccountDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CurrencyAccountsServiceReference\mex.wsdl" />
+    <None Include="Service References\CurrencyAccountsServiceReference\mex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurrencyAccountsServiceReference\mex1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurveServiceReference\CurveService.wsdl" />
+    <None Include="Service References\CurveServiceReference\ElvizTestUtils.CurveServiceReference.PriceCurveDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CurveServiceReference\mex.wsdl" />
+    <None Include="Service References\CurveServiceReference\mex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurveServiceReference\mex1.wsdl" />
+    <None Include="Service References\CurveServiceReference\mex1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurveServiceReference\mex2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurveServiceReference\mex3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurveServiceReference\mex4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurveServiceReference\mex41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurveServiceReference\mex42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CurveServiceReference\mex43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DealServiceReference\DealService.wsdl" />
+    <None Include="Service References\DealServiceReference\DealService1.wsdl" />
+    <None Include="Service References\DealServiceReference\mex.wsdl" />
+    <None Include="Service References\DealServiceReference\mex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DealServiceReference\mex1.wsdl" />
+    <None Include="Service References\DealServiceReference\mex1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DealServiceReference\mex2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DealServiceReference\mex3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DealServiceReference\mex4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DealServiceReference\mex5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DealServiceReference\mex6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DealServiceReference\mex7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HistoricMarketDataServiceReference\HistoricMarketDataService1.wsdl" />
+    <None Include="Service References\HistoricMarketDataServiceReference\mex1.wsdl" />
+    <None Include="Service References\HistoricMarketDataServiceReference\mex3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HistoricMarketDataServiceReference\mex31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HistoricMarketDataServiceReference\mex32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalJobService\ElvizTestUtils.InternalJobService.Job.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalJobService\ElvizTestUtils.InternalJobService.JobExecutionStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalJobService\ElvizTestUtils.InternalJobService.LogEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalJobService\JobService.wsdl" />
+    <None Include="Service References\InternalJobService\mex.wsdl" />
+    <None Include="Service References\InternalJobService\mex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalJobService\mex1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalJobService\mex2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalReportingServiceReference\ElvizTestUtils.InternalReportingServiceReference.Report.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalReportingServiceReference\ElvizTestUtils.InternalReportingServiceReference.ReportEngineDescription.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalReportingServiceReference\ElvizTestUtils.InternalReportingServiceReference.Setting.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalReportingServiceReference\ElvizTestUtils.InternalReportingServiceReference.SettingsVerificationIssue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalReportingServiceReference\InternalReportingApiService.wsdl" />
+    <None Include="Service References\InternalReportingServiceReference\mex.wsdl" />
+    <None Include="Service References\InternalReportingServiceReference\mex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalReportingServiceReference\mex1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalReportingServiceReference\mex2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalReportingServiceReference\mex3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalReportingServiceReference\mex4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\ElvizTestUtils.LookUpServiceReference.AuditTrailEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LookUpServiceReference\ElvizTestUtils.LookUpServiceReference.Company.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LookUpServiceReference\ElvizTestUtils.LookUpServiceReference.InstrumentCodes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LookUpServiceReference\ElvizTestUtils.LookUpServiceReference.Portfolio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LookUpServiceReference\ElvizTestUtils.LookUpServiceReference.PortfolioAuthorisationDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LookUpServiceReference\ElvizTestUtils.LookUpServiceReference.ProductionFacility.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LookUpServiceReference\ElvizTestUtils.LookUpServiceReference.TransactionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LookUpServiceReference\ElvizTestUtils.LookUpServiceReference.TransactionProductName.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LookUpServiceReference\LookupService11.wsdl" />
+    <None Include="Service References\LookUpServiceReference\LookupService12.wsdl" />
+    <None Include="Service References\LookUpServiceReference\LookupService13.wsdl" />
+    <None Include="Service References\LookUpServiceReference\mex11.wsdl" />
+    <None Include="Service References\LookUpServiceReference\mex12.wsdl" />
+    <None Include="Service References\LookUpServiceReference\mex13.wsdl" />
+    <None Include="Service References\LookUpServiceReference\mex610.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex611.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex612.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex613.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex614.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex615.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex616.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex617.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex618.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex619.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex620.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex621.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex622.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex623.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex624.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex625.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex626.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex66.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex67.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex68.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LookUpServiceReference\mex69.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PortfolioManagementServiceReference\ElvizTestUtils.PortfolioManagementServiceReference.CompanyDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PortfolioManagementServiceReference\ElvizTestUtils.PortfolioManagementServiceReference.PortfolioDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PortfolioManagementServiceReference\mex1.wsdl" />
+    <None Include="Service References\PortfolioManagementServiceReference\mex3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PortfolioManagementServiceReference\mex31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PortfolioManagementServiceReference\mex32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PortfolioManagementServiceReference\mex33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PortfolioManagementServiceReference\PortfolioManagementService1.wsdl" />
+    <None Include="Service References\QAAppserverServiceReference\ElvizTestUtils.QAAppserverServiceReference.QaAppServerServiceElvizDWordRegValues.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\QAAppserverServiceReference\QaAppServerService1.wsdl" />
+    <None Include="Service References\QAAppserverServiceReference\QATestService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QAAppserverServiceReference\QATestService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QAAppserverServiceReference\QATestService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QAAppserverServiceReference\QATestService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QAAppserverServiceReference\QATestService33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VolatilityServiceReference\ElvizTestUtils.VolatilityServiceReference.OptionStripVolatility.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VolatilityServiceReference\mex32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VolatilityServiceReference\VolatilityService1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CurrencyAccountsServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CurveServiceReference\" />
+    <WCFMetadataStorage Include="Service References\DealServiceReference\" />
+    <WCFMetadataStorage Include="Service References\HistoricMarketDataServiceReference\" />
+    <WCFMetadataStorage Include="Service References\InternalJobService\" />
+    <WCFMetadataStorage Include="Service References\InternalReportingServiceReference\" />
+    <WCFMetadataStorage Include="Service References\LookUpServiceReference\" />
+    <WCFMetadataStorage Include="Service References\PortfolioManagementServiceReference\" />
+    <WCFMetadataStorage Include="Service References\QAAppserverServiceReference\" />
+    <WCFMetadataStorage Include="Service References\VolatilityServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LookUpServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LookUpServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LookUpServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurveServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurveServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurveServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DealServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DealServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DealServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HistoricMarketDataServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HistoricMarketDataServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HistoricMarketDataServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PortfolioManagementServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PortfolioManagementServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PortfolioManagementServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VolatilityServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VolatilityServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VolatilityServiceReference\mex1.wsdl" />
+    <None Include="Service References\VolatilityServiceReference\mex3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VolatilityServiceReference\mex31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VolatilityServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LookUpServiceReference\mex.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurveServiceReference\mex1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalReportingServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalReportingServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalReportingServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrencyAccountsServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrencyAccountsServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrencyAccountsServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QAAppserverServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QAAppserverServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QAAppserverServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DealServiceReference\mex.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurrencyAccountsServiceReference\mex.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HistoricMarketDataServiceReference\mex1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalReportingServiceReference\mex.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VolatilityServiceReference\mex1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DealServiceReference\mex1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalJobService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalJobService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalJobService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PortfolioManagementServiceReference\mex1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CurveServiceReference\mex.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalJobService\mex.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\QAAppserverServiceReference\QATestService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LookUpServiceReference\mex2.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

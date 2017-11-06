@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Elcertificate</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+		<TransactionName>StructDeal</TransactionName>
+		<DeliveryType>Physical</DeliveryType>
+		<BuySell>Sell</BuySell>
+    </GeneralData>
+	<Portfolios>
+		<Portfolio>Test Company B</Portfolio>
+		<CounterpartyPortfolio>Nord Pool ASA</CounterpartyPortfolio>
+	</Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>Elcertificate Nasdaq</PriceBasis>
+      <FromDate Month = "July " Year= "2013" >01/07/2013</FromDate>
+	  <ToDate Month = "July" year ="2014">01/07/2014</ToDate>
+	  <PriceType>Fixed</PriceType>
+	</InstrumentData>
+	<SettlementData>
+		<Resolution>Monthly</Resolution>
+		<QuantitiesAndPriceSeriesEditor>
+			<QuantitiesAndPrice StartofPeriod = "01/07/2013 " Quantity= "0.5" Price= "0.5" />
+			<QuantitiesAndPrice StartofPeriod = "01/11/2013" Quantity= "52" Price= "17" />
+			<QuantitiesAndPrice StartofPeriod = "01/06/2014" Quantity= "32" Price= "15" />	
+		</QuantitiesAndPriceSeriesEditor>
+		<Currency>EUR</Currency>
+		<CurrencySource>Nordpool</CurrencySource>
+		<Resolution>Monthly</Resolution>
+    </SettlementData>
+    <Fees />
+<ReferenceData>
+    <QuotaRegion>Norway</QuotaRegion>
+</ReferenceData>
+  </Transaction>
+</DealEntry>

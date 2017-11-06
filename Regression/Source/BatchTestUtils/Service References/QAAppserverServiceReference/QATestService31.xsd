@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/QATestService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/QATestService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://netvs-qa172a02:8009/QATestService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="QaAppServerService.ElvizDWordRegKeys">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UseMembershipAuthentication" />
+      <xs:enumeration value="UseIntegratedSecurity" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="QaAppServerService.ElvizDWordRegKeys" nillable="true" type="tns:QaAppServerService.ElvizDWordRegKeys" />
+  <xs:simpleType name="QaAppServerService.ElvizDWordRegValues">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="On">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Off">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="QaAppServerService.ElvizDWordRegValues" nillable="true" type="tns:QaAppServerService.ElvizDWordRegValues" />
+  <xs:simpleType name="QaAppServerService.ElvizStringRegKeys">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ElvizUserName" />
+      <xs:enumeration value="ElvizPassword" />
+      <xs:enumeration value="VizECM" />
+      <xs:enumeration value="VizPrices" />
+      <xs:enumeration value="Vizsystem" />
+      <xs:enumeration value="VizDatawarehouse" />
+      <xs:enumeration value="ReportingDatabase" />
+      <xs:enumeration value="MembershipServiceURL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="QaAppServerService.ElvizStringRegKeys" nillable="true" type="tns:QaAppServerService.ElvizStringRegKeys" />
+</xs:schema>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<PreTestWeb.Models.ProdEnvRun>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    @Html.ActionLink((string)ViewBag.PreTestName , "Index", "PreTests")
+    / @Html.ActionLink((string)ViewBag.WorkspaceName, "Index", "Workspaces", new { preTestId = (int)ViewBag.PreTestId }, null)
+    / Prod Runs
+</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RunStartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobResult)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.ProdServerLog)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.EtrmVersion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Workspace.WorkspaceName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RunStartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobResult)
+        </td>
+        @*<td>
+            <pre>
+            @Html.DisplayFor(modelItem => item.ProdServerLog)
+            </pre>
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.EtrmVersion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Workspace.WorkspaceName,new {cols=50,rows=50})
+        </td>
+        <td>
+            @Html.ActionLink("View Log", "Log", new { id=item.ProdEnvRunId }) 
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.ProdEnvRunId })*@
+        </td>
+    </tr>
+}
+
+</table>

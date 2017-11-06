@@ -1,0 +1,105 @@
+<TestCase>
+<DealEntry>
+  <Transaction>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Floating Price</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company C</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+	  <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>TestGasFormula</IndexFormula>
+      <PriceBasis>ICE NBP</PriceBasis>
+	  <ReferencePriceSeries>APXGas DAM TTF Hi All day-EUR-Day</ReferencePriceSeries>
+      <Period>CAL-15</Period>     
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>105.44</Quantity>
+      <QuantityUnit>GJ/d</QuantityUnit>
+      <Price>0</Price>
+      <PriceMargin>10.44</PriceMargin>
+      <MarketPriceMultiplicator>0.77</MarketPriceMultiplicator>
+      <PriceVolumeUnit>EUR/GJ</PriceVolumeUnit>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>	  
+	  <MasterAgreement>A-C GasFloatPrice</MasterAgreement>
+	  <SettlementRule>GasFloatingPrice</SettlementRule>
+    </SettlementData>
+    <Fees />
+    <DealDetails>
+		<Status>On hold</Status>
+		<TradeTime>14:50</TradeTime>
+	</DealDetails>
+    <ReferenceData />
+  </Transaction>
+</DealEntry>
+<QaTransactionDTO>
+  <TransactionId>2385</TransactionId>
+  <DealType>Gas-FloatingPrice</DealType>
+  <BuySell>Sell</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company C</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company C</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>CAL-15</InstrumentName>
+    <PriceBasis>ICE NBP</PriceBasis>
+    <FromDate>2015-01-01T00:00:00</FromDate>
+    <ToDate>2015-12-31T00:00:00</ToDate>
+    <TimeZone>CET 06-06</TimeZone>
+    <PriceType>Indexed</PriceType>
+    <ReferencePriceSeries>APXGas DAM TTF Hi All day-EUR-Day</ReferencePriceSeries>
+    <IndexFormula>TestGasFormula</IndexFormula>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>105.44</Quantity>
+    <QuantityUnit>GJd</QuantityUnit>
+    <Price>10.44</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerGJ</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <MarketPriceMultiplicator>0.77</MarketPriceMultiplicator>
+    <MasterAgreement>A-C GasFloatPrice</MasterAgreement>
+    <SettlementRule>GasFloatingPrice</SettlementRule>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Onhold</Status>
+    <TradeDateTimeUtc>2013-06-10T12:50:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ModificationDateTimeUtc>2017-01-25T10:41:41Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>8760</Deliveries>
+    <OriginalQuantity>105.44</OriginalQuantity>
+    <ReferringId>2386</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

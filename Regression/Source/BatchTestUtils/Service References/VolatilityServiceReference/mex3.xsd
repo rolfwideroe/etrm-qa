@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Elviz.API" elementFormDefault="qualified" targetNamespace="Elviz.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://netvs-qa152a01:8009/VolatilityService/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetImplicitVolatilitiesFromSurface">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="options" nillable="true" type="tns:ArrayOfOption" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Option" nillable="true" type="tns:Option" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOption" nillable="true" type="tns:ArrayOfOption" />
+  <xs:complexType name="Option">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OptionExpiry" nillable="true" type="xs:dateTime" />
+      <xs:element name="OptionFromDate" type="xs:dateTime" />
+      <xs:element name="OptionLoadType" nillable="true" type="xs:string" />
+      <xs:element name="OptionToDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PriceBookAppendix" nillable="true" type="xs:string" />
+      <xs:element name="ReferenceAreaName" nillable="true" type="xs:string" />
+      <xs:element name="ReportDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Strike" type="xs:double" />
+      <xs:element name="TemplateName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Option" nillable="true" type="tns:Option" />
+  <xs:element name="GetImplicitVolatilitiesFromSurfaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetImplicitVolatilitiesFromSurfaceResult" nillable="true" type="q1:ArrayOfdouble" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImplicitVolatilitiesForStripFromSurface">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="options" nillable="true" type="tns:OptionStripDescription" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="OptionStripDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExerciseTimeOfDay" type="xs:dateTime" />
+      <xs:element name="OptionLoadType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriceBookAppendix" nillable="true" type="xs:string" />
+      <xs:element name="ReferenceAreaName" nillable="true" type="xs:string" />
+      <xs:element name="ReportDate" type="xs:dateTime" />
+      <xs:element name="Resolution" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Strike" type="xs:double" />
+      <xs:element name="StripFromDate" type="xs:dateTime" />
+      <xs:element name="StripToDate" type="xs:dateTime" />
+      <xs:element name="TemplateName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OptionStripDescription" nillable="true" type="tns:OptionStripDescription" />
+  <xs:element name="GetImplicitVolatilitiesForStripFromSurfaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetImplicitVolatilitiesForStripFromSurfaceResult" nillable="true" type="tns:ArrayOfOptionStripVolatility" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfOptionStripVolatility">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OptionStripVolatility" nillable="true" type="tns:OptionStripVolatility" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOptionStripVolatility" nillable="true" type="tns:ArrayOfOptionStripVolatility" />
+  <xs:complexType name="OptionStripVolatility">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FromDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Volatility" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OptionStripVolatility" nillable="true" type="tns:OptionStripVolatility" />
+</xs:schema>

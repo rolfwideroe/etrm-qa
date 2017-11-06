@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Capacity Spot</InstrumentType>
+    <GeneralData>
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+      <Interconnector>DE.ENBW_DE.EON</Interconnector>
+    </Portfolios>
+    <InstrumentData>
+      <LoadProfile>Base (System)</LoadProfile>
+      <Priority>Firm</Priority>
+      <ExpiryTime>12:00</ExpiryTime>
+      <Expiryoffset>1</Expiryoffset>
+      <Date>27/10/2013</Date>
+    </InstrumentData>
+    <SettlementData>
+	<QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 " Quantity= "0.5" Price= "0.5" />
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 01:00:00" Quantity= "1" Price= "10" />
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 02:00:00" Quantity= "2" Price= "20" />	
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 05:00:00" Quantity= "3" Price= "30" />			
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 22:00:00" Quantity= "4" Price= "32" />	
+		<QuantitiesAndPrice StartofPeriod = "27/10/2013 23:00:00" Quantity= "7" Price= "31" />	
+    </QuantitiesAndPriceSeriesEditor>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+    </SettlementData>
+	<Fees>
+		 <Broker>Test Broker A</Broker>
+		 <BrokerVariable>0.01</BrokerVariable>
+		 <BrokerFixed>1</BrokerFixed>
+		 <BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+		 <ClearingVariable>0.01</ClearingVariable>
+		 <ClearingFixed>1</ClearingFixed>
+		 <ClearingFeeCurrency>NOK</ClearingFeeCurrency>	  	  
+		 <CommissionVariable>0.01</CommissionVariable>
+		 <CommissionFixed>1</CommissionFixed>
+		 <CommissionFeeCurrency>NOK</CommissionFeeCurrency>
+		 <EntryVariable>0.01</EntryVariable>
+		 <EntryFixed>1</EntryFixed>
+		 <EntryFeeCurrency>NOK</EntryFeeCurrency>
+		 <ExitVariable>0.01</ExitVariable>
+		 <ExitFixed>1</ExitFixed>
+		 <ExitFeeCurrency>NOK</ExitFeeCurrency>
+		 <TradingVariable>0.01</TradingVariable>
+		 <TradingFixed>1</TradingFixed>
+		 <TradingFeeCurrency>NOK</TradingFeeCurrency>	
+	</Fees>
+  </Transaction>
+</DealEntry>

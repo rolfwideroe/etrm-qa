@@ -1,0 +1,74 @@
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>87</TransactionId>
+  <DealType>Emission-Forward</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company E</PortfolioName>
+    <PortfolioExternalId>Test Company E</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Counterparty A</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Counterparty A</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>EUADEC-13</InstrumentName>
+    <PriceBasis>EUA</PriceBasis>
+    <FromDate>2013-12-16T00:00:00</FromDate>
+    <ToDate>2013-12-16T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>100</Quantity>
+    <QuantityUnit>Ton</QuantityUnit>
+    <Price>41</Price>
+    <PriceIsoCurrency>NOK</PriceIsoCurrency>
+    <PriceVolumeUnit>PerTon</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-09T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>Test Broker B</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/Ton" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.123" FeeUnit="NOK/Ton" />
+      <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.25" FeeUnit="NOK" />
+      <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/Ton" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/Ton" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>EmissionForwardDistr</ExternalId>
+    <Comment>BulkUpdated</Comment>
+    <ModificationDateTimeUtc>2017-05-03T11:52:53Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>24</Deliveries>
+    <OriginalQuantity>100</OriginalQuantity>
+    <ReferringId>88</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+        <Property Name="EMIRStatus" Value="EMIR risk reducing" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+    <PropertyGroup Name="QA">
+      <Properties>
+        <Property Name="PropertyCustom1" Value="multipleupdate" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>

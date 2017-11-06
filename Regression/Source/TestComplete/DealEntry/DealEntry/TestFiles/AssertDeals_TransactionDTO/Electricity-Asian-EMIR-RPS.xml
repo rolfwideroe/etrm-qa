@@ -1,0 +1,128 @@
+<TestCase><DealEntry>
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Asian</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>Norway 2</PriceBasis>
+	  <ReferencePriceSeries>NO2-Day-EUR</ReferencePriceSeries>
+      <Period>Q1-14</Period>
+      <LoadProfile>Base (System)</LoadProfile>
+      <TimeZone>(UTC+01:00) Central Europe Standard Time</TimeZone>
+      <PutCall>Put</PutCall>
+      <Strike>40</Strike>
+      <SamplingPeriod>Month</SamplingPeriod>
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>6</Quantity>
+      <Price>4.4</Price>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+    </SettlementData>
+    <Fees />
+	<DealDetails>
+		<Trader>Vizard</Trader>
+		<Status>Active</Status>
+		<TradeDate>15/04/2013</TradeDate>
+		<TradeTime>20:24</TradeTime>
+	</DealDetails>
+	<EMIR>
+		<TimestampCleared>18/12/2013</TimestampCleared>
+		<TimestampClearedTime>10:55</TimestampClearedTime>
+		<TimestampConfC.party>17/12/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:56</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/12/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:57</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>Electricity-Asian-EMIR-RPS</UniqueTradeIdentifier>
+		<DealCompression>No</DealCompression>		
+		<EMIRStatus>Not EMIR relevant</EMIRStatus>
+	</EMIR>		
+	<REMIT>
+		<REMITReporting>Yes</REMITReporting>
+		<BuyerInitiatorAggressor>Initiator</BuyerInitiatorAggressor>
+		<SellerInitiatorAggressor>Aggressor</SellerInitiatorAggressor>
+	</REMIT>
+  </Transaction>
+</DealEntry>
+<QaTransactionDTO>
+  <TransactionId>1813</TransactionId>
+  <DealType>Electricity-Asian</DealType>
+  <BuySell>Sell</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company B</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company B</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>ASIP/M Q1-14 40.00</InstrumentName>
+    <PriceBasis>Norway 2</PriceBasis>
+    <FromDate>2014-01-01T00:00:00</FromDate>
+    <ToDate>2014-03-31T00:00:00</ToDate>
+    <PutCall>Put</PutCall>
+    <Strike>40</Strike>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <ReferencePriceSeries>NO2-Day-EUR</ReferencePriceSeries>
+    <SamplingPeriod>Month</SamplingPeriod>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>6</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>4.4</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-04-15T18:24:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ModificationDateTimeUtc>2017-01-26T10:51:55Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>2159</Deliveries>
+    <OriginalQuantity>6</OriginalQuantity>
+    <ReferringId>1814</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="Electricity-Asian-EMIR-RPS" ValueType="System.String" />
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+        <Property Name="TerminationDate" Value="2013-12-20T00:00:00" ValueType="System.DateTime" />
+        <Property Name="EMIRStatus" Value="Not EMIR relevant" ValueType="System.String" />
+        <Property Name="RemitReporting" Value="True" ValueType="System.Boolean" />
+        <Property Name="BuyerInitiatorAggressor" Value="Initiator" ValueType="System.String" />
+        <Property Name="SellerInitiatorAggressor" Value="Aggressor" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+    <TimeStampClearedUtc>2013-12-18T09:55:00Z</TimeStampClearedUtc>
+    <TimeStampConfirmationBrokerUtc>2013-12-18T09:57:00Z</TimeStampConfirmationBrokerUtc>
+    <TimeStampConfirmationCounterPartyUtc>2013-12-17T09:56:00Z</TimeStampConfirmationCounterPartyUtc>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

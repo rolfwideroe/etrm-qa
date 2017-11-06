@@ -1,0 +1,63 @@
+﻿@model PreTestWeb.Models.Workspace
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>
+    @Html.ActionLink(Model.PreTest.Name, "Index", "PreTests") /
+    Delete
+</h2>
+
+<h3>
+    Are you sure you want to delete this workspace? </h3>
+<h3>
+    All assosiated test/prod runs and test results will be deleted.
+
+</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkspaceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkspaceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeOutInSeconds)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeOutInSeconds)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreTest.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreTest.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> 
+        
+        </div>
+    }
+</div>

@@ -1,0 +1,78 @@
+<QaTransactionDTO>
+  <TransactionId>49</TransactionId>
+  <DealType>Electricity-StructuredDeal</DealType>
+  <BuySell>Buy</BuySell>
+  <ContractModelType>Fixed Volume</ContractModelType>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company B</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company B</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>StructuralDealTest01</InstrumentName>
+    <PriceBasis>NordPool System Price</PriceBasis>
+    <FromDate>2013-03-01T00:00:00</FromDate>
+    <ToDate>2013-04-30T00:00:00</ToDate>
+    <LoadProfile>Custom Profile</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+	<ReferencePriceSeries>SP1-EUR-Day</ReferencePriceSeries>	
+    <PriceType>Spot</PriceType>
+	<HistoricContractPrices>SP1-IntraDay-15min</HistoricContractPrices>
+  </InstrumentData>
+  <SettlementData>
+    <QuantityUnit>MW</QuantityUnit>
+    <PriceIsoCurrency>NOK</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <MarketPriceMultiplicator>1</MarketPriceMultiplicator>
+    <Resolution>Month</Resolution>
+    <PriceVolumeTimeSeriesDetails>
+      <PriceVolumeTimeSeriesDetail FromDateTime="2013-03-01T00:00:00" ToDateTime="2013-04-01T00:00:00" Price="1" Volume="1" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2013-04-01T00:00:00" ToDateTime="2013-05-01T00:00:00" Price="1" Volume="1" />
+    </PriceVolumeTimeSeriesDetails>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-10T21:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.123" FeeUnit="EUR" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.123" FeeUnit="EUR" />
+      <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.3" FeeUnit="EUR" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.123" FeeUnit="EUR" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <Comment>Updated 49</Comment>
+    <ModificationDateTimeUtc>2016-06-23T11:55:21Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>1463</Deliveries>
+    <OriginalQuantity>0</OriginalQuantity>
+    <ReferringId>50</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>

@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<MontelApi>
+  <Feed>Montel</Feed>
+  <MontelHost></MontelHost>
+  <MontelPort></MontelPort>
+  <MontelUser>VizDev19</MontelUser>    
+  <MontelPassword>montel</MontelPassword>
+  <UseProxy>False</UseProxy>
+  <ProxyServer></ProxyServer>
+  <ProxyPort></ProxyPort>
+  <ProxyUsername></ProxyUsername>
+  <ProxyPassword></ProxyPassword>
+
+  <UseMgis>false</UseMgis>
+  <MgisServer></MgisServer>
+  <MgisPort>9999</MgisPort>
+  <MgisConnectionTimeout>60</MgisConnectionTimeout>
+  <MgisTcpTimeout>30</MgisTcpTimeout>
+  <MgisPingInterval>10</MgisPingInterval>
+  <NeedsThread>False</NeedsThread>
+  <OwnProcess>False</OwnProcess>
+  <AdapterID>MontelApiAdapter</AdapterID>
+  <AdapterClass>Viz.Priceboard.Server.Adapters.MontelApiAdapter.MontelApiAdapter,Viz.Priceboard.Server.dll</AdapterClass>
+
+  <Details>
+    <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE,LAST" Close="CLOSE,SETTLEMENT,PREVCLOSE" Change="CHG"/>
+
+    <!--PeriodType Number values are maximum possible number-->
+    <Venue Name="NORDPOOL" AdapterTicker="NPE ">
+      <ReferenceArea Name="NPS" Commodity="Electricity" AdapterTicker="ENO" VenueTicker="ENO">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Day" StartPeriod="Next" AdapterTicker="D" VenueTicker="D" Number="7"
+											AdapterCodeRule="dd+mm+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="dd+mm+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Week" StartPeriod="Next" AdapterTicker="W" VenueTicker="W" Number="6"
+											AdapterCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>"
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="M" VenueTicker="M" Number="6"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>"
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="11"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>"
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="5"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+        <Load Name="Peak" AdapterTicker="PL" VenueTicker="PL">
+          <PeriodType Name="Week" StartPeriod="Next" AdapterTicker="W" VenueTicker="W" Number="5"
+											AdapterCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="M" VenueTicker="M" Number="2"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="3"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="1"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="NO1" Commodity="Electricity" AdapterTicker="SYOSL" VenueTicker="SYOSL">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="2"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="3"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="3"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="NO4" Commodity="Electricity" AdapterTicker="SYTRO" VenueTicker="SYTRO">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="2"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="3"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="3"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="NO5" Commodity="Electricity" AdapterTicker="SYBER" VenueTicker="SYBER">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="2"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="3"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="3"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="SE3" Commodity="Electricity" AdapterTicker="SYSTO" VenueTicker="SYSTO">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Week" StartPeriod="Next" AdapterTicker="W" VenueTicker="" Number="5"
+											AdapterCodeRule="&quot;{ww}-{yy}&quot;"
+                      VenueCodeRule="&quot;{ww}-{yy}&quot;"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="4"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="4"
+											AdapterCodeRule="&quot;{q}-{yy}&quot;"
+                      VenueCodeRule="&quot;{q}-{yy}&quot;"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="4"
+											AdapterCodeRule="&quot;-{yy}&quot;"
+                      VenueCodeRule="&quot;-{yy}&quot;"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="SE1" Commodity="Electricity" AdapterTicker="SYLUL" VenueTicker="SYLUL">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Week" StartPeriod="Next" AdapterTicker="W" VenueTicker="" Number="5"
+											AdapterCodeRule="&quot;{ww}-{yy}&quot;"
+                      VenueCodeRule="&quot;{ww}-{yy}&quot;"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="4"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="4"
+											AdapterCodeRule="&quot;{q}-{yy}&quot;"
+                      VenueCodeRule="&quot;{q}-{yy}&quot;"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="4"
+											AdapterCodeRule="&quot;-{yy}&quot;"
+                      VenueCodeRule="&quot;-{yy}&quot;"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="SE2" Commodity="Electricity" AdapterTicker="SYSUN" VenueTicker="SYSUN">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Week" StartPeriod="Next" AdapterTicker="W" VenueTicker="" Number="5"
+											AdapterCodeRule="&quot;{ww}-{yy}&quot;"
+                      VenueCodeRule="&quot;{ww}-{yy}&quot;"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="4"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="4"
+											AdapterCodeRule="&quot;{q}-{yy}&quot;"
+                      VenueCodeRule="&quot;{q}-{yy}&quot;"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="4"
+											AdapterCodeRule="&quot;-{yy}&quot;"
+                      VenueCodeRule="&quot;-{yy}&quot;"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="SE4" Commodity="Electricity" AdapterTicker="SYMAL" VenueTicker="SYMAL">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Week" StartPeriod="Next" AdapterTicker="W" VenueTicker="" Number="5"
+											AdapterCodeRule="&quot;{ww}-{yy}&quot;"
+                      VenueCodeRule="&quot;{ww}-{yy}&quot;"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="4"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="4"
+											AdapterCodeRule="&quot;{q}-{yy}&quot;"
+                      VenueCodeRule="&quot;{q}-{yy}&quot;"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="4"
+											AdapterCodeRule="&quot;-{yy}&quot;"
+                      VenueCodeRule="&quot;-{yy}&quot;"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="FI" Commodity="Electricity" AdapterTicker="SYHEL" VenueTicker="SYHEL">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Week" StartPeriod="Next" AdapterTicker="W" VenueTicker="" Number="5"
+											AdapterCodeRule="&quot;{ww}-{yy}&quot;"
+                      VenueCodeRule="&quot;{ww}-{yy}&quot;"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="4"
+                    AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                    VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="4"
+                      AdapterCodeRule="&quot;{q}-{yy}&quot;"
+                      VenueCodeRule="&quot;{q}-{yy}&quot;"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="4"
+                      AdapterCodeRule="&quot;-{yy}&quot;"
+                      VenueCodeRule="&quot;-{yy}&quot;"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="DK1" Commodity="Electricity" AdapterTicker="SYARH" VenueTicker="SYARH">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="2"
+                    AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                    VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="3"
+                      AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="3"
+                      AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="DK2" Commodity="Electricity" AdapterTicker="SYCPH" VenueTicker="SYCPH">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="2"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="3"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="3"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="EST" Commodity="Electricity" AdapterTicker="SYTAL" VenueTicker="SYTAL">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="2"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="3"
+											AdapterCodeRule="&quot;{q}-{yy}&quot;"
+                      VenueCodeRule="&quot;{q}-{yy}&quot;"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="3"
+											AdapterCodeRule="&quot;-{yy}&quot;"
+                      VenueCodeRule="&quot;-{yy}&quot;"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="DE" Commodity="Electricity" AdapterTicker="EDE" VenueTicker="EDE">
+        <Load Name="Base" AdapterTicker="BL" VenueTicker="BL">
+          <PeriodType Name="Day" StartPeriod="Next" AdapterTicker="D" VenueTicker="D" Number="11"
+                               AdapterCodeRule="&quot;{dd}{mm}-{yy}&quot;"
+                               VenueCodeRule="&quot;{dd}{mm}-{yy}&quot;"/>
+          <PeriodType Name="Week" StartPeriod="Next" AdapterTicker="W" VenueTicker="W"  Number="4"
+											AdapterCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="M" VenueTicker="M" Number="6"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="8"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="5"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+        <Load Name="Peak" AdapterTicker="PL" VenueTicker="PL">
+          <PeriodType Name="Week" StartPeriod="Next" AdapterTicker="W" VenueTicker="W"  Number="4"
+											AdapterCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="M" VenueTicker="M" Number="6"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="8"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="5"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="NL" Commodity="Electricity" AdapterTicker="ENL" VenueTicker="ENL">
+        <Load Name="Base" AdapterTicker="BL" VenueTicker="BL">
+          <PeriodType Name="Week" StartPeriod="Next" AdapterTicker="W" VenueTicker="W"  Number="4"
+											AdapterCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="M" VenueTicker="M" Number="3"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="3"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="2"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+        <Load Name="Peak" AdapterTicker="PL" VenueTicker="PL">
+          <PeriodType Name="Week" StartPeriod="Next" AdapterTicker="W" VenueTicker="W"  Number="4"
+											AdapterCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="M" VenueTicker="M" Number="3"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="3"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="YR" VenueTicker="YR" Number="2"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="EUA" Commodity="Emission" AdapterTicker="EUA" VenueTicker="EUA">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Day" StartPeriod="Current" AdapterTicker="D" VenueTicker="D" Number="1"
+					AdapterCodeRule="dd+mm+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="dd+mm+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=01.12.2011" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=03.12.2012" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=02.12.2013" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=01.12.2014" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+      <ReferenceArea Name="EUA" Commodity="Emission" AdapterTicker="NE" VenueTicker="NE">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="WorkDay" StartPeriod="Current" AdapterTicker="D" VenueTicker="D" Number="5"
+											AdapterCodeRule="&quot;{dd}{mm}-{yy}&quot;"
+                      VenueCodeRule="&quot;{dd}{mm}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2011" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=17.12.2012" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=18.03.2013" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=24.06.2013" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=30.09.2013" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=16.12.2013" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=15.12.2014" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2015" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2016" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=18.12.2017" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=17.12.2018" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=16.12.2019" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2020" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{yy}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=13.12.2021" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{yy}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2022" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{yy}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{yy}&quot;"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="CER" Commodity="Emission" AdapterTicker="CER" VenueTicker="CER">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="CustomPeriod" Properties="Date=01.12.2011" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+											AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=03.12.2012" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+											AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=02.12.2013" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+											AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=01.12.2014" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+											AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+      <ReferenceArea Name="CER" Commodity="Emission" AdapterTicker="NC" VenueTicker="NC">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="WorkDay" StartPeriod="Current" AdapterTicker="D" VenueTicker="D" Number="5"
+											AdapterCodeRule="&quot;{dd}{mm}-{yy}&quot;"
+                      VenueCodeRule="&quot;{dd}{mm}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2011" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=17.12.2012" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=18.03.2013" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=24.06.2013" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=30.09.2013" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=16.12.2013" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=15.12.2014" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2015" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2016" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=18.12.2017" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=17.12.2018" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=16.12.2019" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{y}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{y}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2020" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{yy}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=13.12.2021" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{yy}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2022" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="1"
+					            AdapterCodeRule="&quot;{MMM}{yy}&quot;"
+                      VenueCodeRule="&quot;{Mmm}{yy}&quot;"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="ELC NASDAQ" Commodity="El.certificate" AdapterTicker="ELCEUR" VenueTicker="ELCEUR">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="WorkDay" StartPeriod="Current" AdapterTicker="D" VenueTicker="D" Number="5"
+											AdapterCodeRule="&quot;{dd}{mm}-{yy}&quot;"
+                      VenueCodeRule="&quot;{dd}{mm}-{yy}&quot;">
+          </PeriodType>
+          <PeriodType Name="CustomPeriod" Properties="YearsToNext=1" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="6"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;">
+            <PeriodRule PeriodRuleType="FixedDayInPeriod" RuleModificationType="From" PeriodKind="WorkDay" StartPeriod="Current" DayInPeriod="18" MonthInPeriod="3" DayOffset="0" Name="OnOrBeforeFixedWorkDayInPeriod"/>
+          </PeriodType>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="ELCSEK NASDAQ" Commodity="El.certificate" AdapterTicker="ELCSEK" VenueTicker="ELCSEK">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="WorkDay" StartPeriod="Current" AdapterTicker="D" VenueTicker="D" Number="5"
+											AdapterCodeRule="&quot;{dd}{mm}-{yy}&quot;"
+                      VenueCodeRule="&quot;{dd}{mm}-{yy}&quot;">
+          </PeriodType>
+          <PeriodType Name="CustomPeriod" Properties="YearsToNext=1" StartPeriod="Current" AdapterTicker="" VenueTicker="" Number="6"
+											AdapterCodeRule="&quot;{MMM}-{yy}&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;">
+            <PeriodRule PeriodRuleType="FixedDayInPeriod" RuleModificationType="From" PeriodKind="WorkDay" StartPeriod="Current" DayInPeriod="18" MonthInPeriod="3" DayOffset="0" Name="OnOrBeforeFixedWorkDayInPeriod"/>
+          </PeriodType>
+        </Load>
+      </ReferenceArea>
+
+    </Venue>
+
+    <Venue Name="EEX" AdapterTicker="EEX ">
+      <ReferenceArea Name="DE" Commodity="Electricity" AdapterTicker="F1" VenueTicker="">
+        <Load Name="Base" AdapterTicker="B" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Current" AdapterTicker="M" VenueTicker="" Number="7"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="" Number="7"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=/|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="Y01" VenueTicker="Cal" Number="6"
+											AdapterCodeRule="yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Week" StartPeriod="Current" AdapterTicker="" VenueTicker="W" Number="6"
+                      AdapterCodeRule="&quot;{dm:perioduntil}{mm}{yyyy}&quot;"
+                      VenueCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>"
+
+        </Load>
+        <Load Name="Peak" AdapterTicker="P" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Current" AdapterTicker="M" VenueTicker="" Number="7"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="" Number="7"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=/|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="Y01" VenueTicker="Cal" Number="6"
+											AdapterCodeRule="yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Week" StartPeriod="Current" AdapterTicker="" VenueTicker="W" Number="6"
+                      AdapterCodeRule="&quot;{dm:perioduntil}{mm}{yyyy}&quot;"
+                      VenueCodeRule="ww+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>"
+        </Load>
+      </ReferenceArea>
+      <ReferenceArea Name="FR" Commodity="Electricity" AdapterTicker="F2" VenueTicker="">
+        <Load Name="Base" AdapterTicker="B" VenueTicker="">
+          <!--
+					Month:   [EEX F2BM102009] - Oct 09
+					Quarter: [EEX F2BQ102009] - Q4 09
+					Year:    [EEX F2BY012010] - Cal 10
+					-->
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="M" VenueTicker="" Number="3"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="Mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="" Number="4"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=Q|SeasonSep=|YearSep=|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="Y01" VenueTicker="Cal" Number="3"
+											AdapterCodeRule="yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+        <Load Name="Peak" AdapterTicker="P" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="M" VenueTicker="" Number="3"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="Mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="" Number="4"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=Q|SeasonSep=|YearSep=|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="Y01" VenueTicker="Cal" Number="3"
+											AdapterCodeRule="yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+    </Venue>
+
+    <Venue Name="ENDEX" AdapterTicker="NDX ">
+      <ReferenceArea Name="NL" Commodity="Electricity" AdapterTicker="Dutch " VenueTicker="">
+        <Load Name="Base" AdapterTicker="Baseload" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Current" AdapterTicker="Bal " VenueTicker="BOM " Number="1"
+											AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="6"
+											AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="6"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="Cal" VenueTicker="Cal" Number="5"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+        <Load Name="Peak" AdapterTicker="Peakload" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Current" AdapterTicker="Bal " VenueTicker="BOM " Number="1"
+											AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="6"
+											AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="6"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="Cal" VenueTicker="Cal" Number="5"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="BE" Commodity="Electricity" AdapterTicker="Belgian " VenueTicker="">
+        <Load Name="Base" AdapterTicker="Baseload" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="3"
+											AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="4"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="Cal" VenueTicker="Cal" Number="3"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="TTF" Commodity="Gas" AdapterTicker="TTF Gas " VenueTicker="">
+        <Load Name="Base" AdapterTicker="Baseload" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="3"
+											AdapterCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="Q" Number="4"
+											AdapterCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Season" StartPeriod="Next" AdapterTicker="" VenueTicker="" Number="2"
+											AdapterCodeRule="s[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="s[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="Cal" VenueTicker="Cal" Number="3"
+											AdapterCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+    </Venue>
+
+    <Venue Name="POWERNEXT" AdapterTicker="EEX ">
+      <!--PowerNext data is now delivered by EEX, not PNX-->
+      <ReferenceArea Name="FR" Commodity="Electricity" AdapterTicker="F2" VenueTicker="">
+        <Load Name="Base" AdapterTicker="B" VenueTicker="">
+          <!--
+					Month:   [EEX F2BM102009] - Oct 09
+					Quarter: [EEX F2BQ102009] - Q4 09
+					Year:    [EEX F2BY012010] - Cal 10
+					-->
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="M" VenueTicker="" Number="3"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="Mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="" Number="4"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=Q|SeasonSep=|YearSep=|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="Y01" VenueTicker="Cal" Number="3"
+											AdapterCodeRule="yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+        <Load Name="Peak" AdapterTicker="P" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="M" VenueTicker="" Number="3"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="Mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="Q" VenueTicker="" Number="4"
+											AdapterCodeRule="mm+yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=Q|SeasonSep=|YearSep=|"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="Y01" VenueTicker="Cal" Number="3"
+											AdapterCodeRule="yyyy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+    </Venue>
+
+    <Venue Name="ICE" AdapterTicker="ICE ">
+      <!-- Brent oil -->
+      <ReferenceArea Name="BRN" Commodity="Oil" AdapterTicker="BRN " VenueTicker="">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <!--
+					Month:   [ICE BRN FMG0010!] - Feb 2010
+					Quarter: [ICE BRN FQF0010.H0010] - Q1 10
+					Year:    [ICE BRN FYF0011.Z0011] - Cal 11
+					-->
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="FM" VenueTicker="" Number="72"
+                      AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="Mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="FQ" VenueTicker="Q" Number="17"
+                      AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep= |"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="FY" VenueTicker="CAL " Number="5"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=|"/>
+        </Load>
+      </ReferenceArea>
+
+      <!-- Gas oil -->
+      <ReferenceArea Name="ARA" Commodity="Oil" AdapterTicker="GAS " VenueTicker="">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <!--
+        Month:    [ICE GAS FMU0009!]      - Sep-09
+        Quarter:  [ICE GAS FQN0010.U0010] - Q3-10
+        -->
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="FM" VenueTicker="" Number="36"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="Mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="FQ" VenueTicker="Q" Number="4"
+                      AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <!-- Fuel oil -->
+      <ReferenceArea Name="NYH" Commodity="Oil" AdapterTicker="UHO " VenueTicker="">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <!--
+          Month:    [ICE UHO FMU0009!]      - Sep09
+          Quarter:  [ICE UHO FQV0009.Z0009] - Q409
+          -->
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="FM" VenueTicker="" Number="36"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="Mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="FQ" VenueTicker="" Number="11"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <!-- NBP nat. gas -->
+      <ReferenceArea Name="NBP" Commodity="Gas" AdapterTicker="GWM " VenueTicker="">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <!--
+				Month:    [ICE GWM FMU0009!]      - [Sep09]
+				Quarter:  [ICE GWM FQV0009.Z0009] - [Q4 09]
+				Season:   [ICE GWM FSV0009.H0010] - [Winter09]
+                  [ICE GWM FSJ0010.U0010] - [Summer10]
+				-->
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="FM" VenueTicker="" Number="20"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=_|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="FQ" VenueTicker="Q" Number="15"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Season" StartPeriod="Next" AdapterTicker="FS" VenueTicker="" Number="8"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="s[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <ReferenceArea Name="TTF" Commodity="Gas" AdapterTicker="TFM " VenueTicker="">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="FM" VenueTicker="" Number="73"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{Mmm}-{yy}&quot;"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="FQ" VenueTicker="Q" Number="8"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="&quot;{q}-{yy}&quot;"/>
+          <PeriodType Name="Season" StartPeriod="Next" AdapterTicker="FS" VenueTicker="" Number="9"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="&quot;{Sss}-{yy}&quot;"/>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="FY" VenueTicker="Cal" Number="6"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="&quot;-{yy}&quot;"/>
+        </Load>
+      </ReferenceArea>
+
+      <!-- EUA/CFI emission -->
+      <ReferenceArea Name="EUA" Commodity="Emission" AdapterTicker="ECF " VenueTicker="CFI">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <!--
+        [ICE ECF FMZ0009!] - [CFIDEC-09]
+        -->
+        <!-- &quot; equals " -->
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <!--2008-->
+          <PeriodType Name="CustomPeriod" Properties="Date=15.12.2008" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <!--2009-->
+          <PeriodType Name="CustomPeriod" Properties="Date=30.03.2009" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=29.06.2009" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=28.09.2009" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2009" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <!--2010-->
+          <PeriodType Name="CustomPeriod" Properties="Date=22.03.2010" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=28.06.2010" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=27.09.2010" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=20.12.2010" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <!--2011-->
+          <PeriodType Name="CustomPeriod" Properties="Date=28.03.2011" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=27.06.2011" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=26.09.2011" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2011" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <!--2012-->
+          <PeriodType Name="CustomPeriod" Properties="Date=26.03.2012" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=25.06.2012" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=24.09.2012" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=17.12.2012" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+
+          <PeriodType Name="CustomPeriod" Properties="Date=18.03.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=24.06.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=30.09.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=16.12.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+
+          <PeriodType Name="CustomPeriod" Properties="Date=31.03.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=30.06.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=29.09.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=15.12.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+
+          <PeriodType Name="CustomPeriod" Properties="Date=23.03.2015" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2015" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2016" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=18.12.2017" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=17.12.2018" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=16.12.2019" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2020" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=13.12.2021" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2022" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+
+        </Load>
+      </ReferenceArea>
+
+      <!-- CER emission -->
+      <ReferenceArea Name="CER" Commodity="Emission" AdapterTicker="CER " VenueTicker="CER">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <!--
+        [ICE CER FMZ0010!] - [CERDEC-10]
+        -->
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <!--2008-->
+          <PeriodType Name="CustomPeriod" Properties="Date=15.12.2008" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <!--2009-->
+          <PeriodType Name="CustomPeriod" Properties="Date=30.03.2009" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=29.06.2009" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=28.09.2009" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2009" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <!--2010-->
+          <PeriodType Name="CustomPeriod" Properties="Date=22.03.2010" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=28.06.2010" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=27.09.2010" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=20.12.2010" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <!--2011-->
+          <PeriodType Name="CustomPeriod" Properties="Date=28.03.2011" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=27.06.2011" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=26.09.2011" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2011" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <!--2012-->
+          <PeriodType Name="CustomPeriod" Properties="Date=26.03.2012" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=25.06.2012" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=24.09.2012" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=17.12.2012" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+
+          <PeriodType Name="CustomPeriod" Properties="Date=18.03.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=24.06.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=30.09.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=16.12.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+
+          <PeriodType Name="CustomPeriod" Properties="Date=31.03.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=30.06.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=29.09.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=15.12.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+
+          <PeriodType Name="CustomPeriod" Properties="Date=23.03.2015" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2015" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2016" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=18.12.2017" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=17.12.2018" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=16.12.2019" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2020" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=13.12.2021" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2022" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+
+        </Load>
+      </ReferenceArea>
+
+      <!-- ERU emission -->
+      <ReferenceArea Name="ERU" Commodity="Emission" AdapterTicker="ERU " VenueTicker="ERU">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <!--
+        [ICE ERU FMZ0012!] - [ERUDEC-12]
+        -->
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="CustomPeriod" Properties="Date=17.12.2012" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+
+          <PeriodType Name="CustomPeriod" Properties="Date=18.03.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=24.06.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=30.09.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=16.12.2013" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+
+          <PeriodType Name="CustomPeriod" Properties="Date=31.03.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=30.06.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=29.09.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=15.12.2014" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+
+          <PeriodType Name="CustomPeriod" Properties="Date=23.03.2015" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2015" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2016" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=18.12.2017" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=17.12.2018" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=16.12.2019" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=14.12.2020" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=13.12.2021" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="Date=19.12.2022" StartPeriod="Current" AdapterTicker="FM" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="&quot;{MMM}-{yy}&quot;"/>
+        </Load>
+      </ReferenceArea>
+
+      <!-- Coal API #2 -->
+      <ReferenceArea Name="API #2" Commodity="Coal" AdapterTicker="ATW " VenueTicker="">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <!--
+        Month:    [ICE ATW FMU0009!]      - [Sep09]
+        Quarter:  [ICE ATW FQV0009.Z0009] - [Q409]
+				Season:   [ICE ATW FSV0009.H0010] - [Winter09]
+                  [ICE ATW FSV0010.H0011] - [Summer10]
+        Year:     [ICE ATW FYF0010.Z0010] - [Cal10]
+        -->
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="FM" VenueTicker="" Number="6"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="Mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|">
+            <PeriodRule PeriodRuleType="LastDayInPeriod" RuleModificationType="Both" PeriodKind="Month" StartPeriod="Previous" DayOfWeek="Friday" DayOffset="1"/>
+          </PeriodType>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="FQ" VenueTicker="Q" Number="6"
+                      AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|">
+            <PeriodRule PeriodRuleType="LastDayInPeriod" RuleModificationType="Both" PeriodKind="Month" StartPeriod="Previous" DayOfWeek="Friday" DayOffset="1"/>
+          </PeriodType>
+          <PeriodType Name="Season" StartPeriod="Next" AdapterTicker="FS" VenueTicker="" Number="5"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="s[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|">
+            <PeriodRule PeriodRuleType="LastDayInPeriod" RuleModificationType="Both" PeriodKind="Month" StartPeriod="Previous" DayOfWeek="Friday" DayOffset="1"/>
+          </PeriodType>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="FY" VenueTicker="CAL " Number="3"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|">
+            <PeriodRule PeriodRuleType="LastDayInPeriod" RuleModificationType="Both" PeriodKind="Month" StartPeriod="Previous" DayOfWeek="Friday" DayOffset="1"/>
+          </PeriodType>
+        </Load>
+      </ReferenceArea>
+
+      <!-- Coal API #4 -->
+      <ReferenceArea Name="API #4" Commodity="Coal" AdapterTicker="AFR " VenueTicker="">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <!--
+        Month:    [ICE AFR FMU0009!]      - [Sep09]
+        Quarter:  [ICE AFR FQV0009.Z0009] - [Q409]
+				Season:   [ICE AFR FSV0009.H0010] - [Winter09]
+                  [ICE AFR FSV0010.H0011] - [Summer10]
+        Year:     [ICE AFR FYF0010.Z0010] - [Cal10]
+        -->
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="FM" VenueTicker="" Number="6"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="Mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|">
+            <PeriodRule PeriodRuleType="LastDayInPeriod" RuleModificationType="Both" PeriodKind="Month" StartPeriod="Previous" DayOfWeek="Friday" DayOffset="1"/>
+          </PeriodType>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="FQ" VenueTicker="Q" Number="6"
+                      AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|">
+            <PeriodRule PeriodRuleType="LastDayInPeriod" RuleModificationType="Both" PeriodKind="Month" StartPeriod="Previous" DayOfWeek="Friday" DayOffset="1"/>
+          </PeriodType>
+          <PeriodType Name="Season" StartPeriod="Next" AdapterTicker="FS" VenueTicker="" Number="5"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="s[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|">
+            <PeriodRule PeriodRuleType="LastDayInPeriod" RuleModificationType="Both" PeriodKind="Month" StartPeriod="Previous" DayOfWeek="Friday" DayOffset="1"/>
+          </PeriodType>
+          <PeriodType Name="Year" StartPeriod="Next" AdapterTicker="FY" VenueTicker="CAL " Number="3"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|">
+            <PeriodRule PeriodRuleType="LastDayInPeriod" RuleModificationType="Both" PeriodKind="Month" StartPeriod="Previous" DayOfWeek="Friday" DayOffset="1"/>
+          </PeriodType>
+        </Load>
+      </ReferenceArea>
+
+      <!-- UK -->
+      <ReferenceArea Name="UK" Commodity="Electricity" AdapterTicker="BPM " VenueTicker="">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <!--
+        Month:    [ICE BPM FMZ0009!]      - [Dec09]
+        Quarter:  [ICE BPM FQF0010.H0010] - [Q110]
+				Season:   [ICE BPM FSJ0010.U0010] - [Summer10]
+                  [ICE BPM FSV0010.H0011] - [Winter10]
+        -->
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="FM" VenueTicker="" Number="12"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=_|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="FQ" VenueTicker="Q" Number="6"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Season" StartPeriod="Next" AdapterTicker="FS" VenueTicker="" Number="4"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="s[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+
+      <!-- UK -->
+      <ReferenceArea Name="UK" Commodity="Electricity" AdapterTicker="PPM " VenueTicker="">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <!--
+        Month:    [ICE PPM FMZ0009!]      - [Dec09]
+        Quarter:  [ICE PPM FQF0010.H0010] - [Q110]
+				Season:   [ICE PPM FSJ0010.U0010] - [Summer10]
+                  [ICE PPM FSV0010.H0011] - [Winter10]
+        -->
+        <Load Name="Peak" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Month" StartPeriod="Next" AdapterTicker="FM" VenueTicker="" Number="12"
+											AdapterCodeRule="&quot;{MR}00{yy}!&quot;"
+                      VenueCodeRule="mn[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=_|"/>
+          <PeriodType Name="Quarter" StartPeriod="Next" AdapterTicker="FQ" VenueTicker="Q" Number="6"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="q+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+          <PeriodType Name="Season" StartPeriod="Next" AdapterTicker="FS" VenueTicker="" Number="4"
+											AdapterCodeRule="&quot;{MR:periodstart}00{yy}.{MR:periodend}00{yy}&quot;"
+                      VenueCodeRule="s[3]+yy|DaySep=|WeekSep=|MonthSep=|QuarterSep=|SeasonSep=|YearSep=-|"/>
+        </Load>
+      </ReferenceArea>
+    </Venue>
+
+    <Venue Name="SKM" AdapterTicker="SKM ">
+      <ReferenceArea Name="ElCertificate" Commodity="El.certificate" AdapterTicker="" VenueTicker="">
+        <QuoteTickers Bid="BID" Ask="ASK" Last="LASTPRICE" Close="PREVCLOSE"/>
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Day" StartPeriod="Current" AdapterTicker="Spot" VenueTicker="" Number="1"
+											AdapterCodeRule="&quot;&quot;"
+                      VenueCodeRule="&quot;{dd}{mm}-{yy}&quot;"/>
+          <PeriodType Name="CustomPeriod" Properties="YearsToNext=1" StartPeriod="Current" AdapterTicker="March" VenueTicker="" Number="5"
+											AdapterCodeRule="&quot;-{yy}&quot;"
+                      VenueCodeRule="&quot;{dd}-{Mmm}-{yy}&quot;">
+            <PeriodRule PeriodRuleType="FixedDayInPeriod" RuleModificationType="From" PeriodKind="WorkDay" StartPeriod="Current" DayInPeriod="18" MonthInPeriod="3" DayOffset="0" Name="OnOrBeforeFixedWorkDayInPeriod"/>
+            <PeriodRule PeriodRuleType="FixedDayInPeriod" RuleModificationType="Until" PeriodKind="WorkDay" StartPeriod="Current" DayInPeriod="18" MonthInPeriod="3" DayOffset="1" Name="OnOrBeforeFixedWorkDayInPeriod"/>
+          </PeriodType>
+        </Load>
+      </ReferenceArea>
+    </Venue>
+
+    <Venue Name="SEB" AdapterTicker="SEB ">
+      <ReferenceArea Name="Currency" Commodity="Currency" AdapterTicker="" VenueTicker="">
+        <Load Name="Base" AdapterTicker="" VenueTicker="">
+          <PeriodType Name="Day" StartPeriod="Current" AdapterTicker="USDNOKSPOT" VenueTicker="" Number="1" AdapterCodeRule="&quot;&quot;" VenueCodeRule="&quot;&quot;"/>
+          <PeriodType Name="Day" StartPeriod="Current" AdapterTicker="USDSEKSPOT" VenueTicker="" Number="1" AdapterCodeRule="&quot;&quot;" VenueCodeRule="&quot;&quot;"/>
+          <PeriodType Name="Day" StartPeriod="Current" AdapterTicker="EURUSDSPOT" VenueTicker="" Number="1" AdapterCodeRule="&quot;&quot;" VenueCodeRule="&quot;&quot;"/>
+          <PeriodType Name="Day" StartPeriod="Current" AdapterTicker="DKKEURSPOT" VenueTicker="" Number="1" AdapterCodeRule="&quot;&quot;" VenueCodeRule="&quot;&quot;"/>
+          <PeriodType Name="Day" StartPeriod="Current" AdapterTicker="EURDKKSPOT" VenueTicker="" Number="1" AdapterCodeRule="&quot;&quot;" VenueCodeRule="&quot;&quot;"/>
+          <PeriodType Name="Day" StartPeriod="Current" AdapterTicker="EURGBPSPOT" VenueTicker="" Number="1" AdapterCodeRule="&quot;&quot;" VenueCodeRule="&quot;&quot;"/>
+          <PeriodType Name="Day" StartPeriod="Current" AdapterTicker="GBPEURSPOT" VenueTicker="" Number="1" AdapterCodeRule="&quot;&quot;" VenueCodeRule="&quot;&quot;"/>
+        </Load>
+      </ReferenceArea>
+    </Venue>
+  </Details>
+</MontelApi>

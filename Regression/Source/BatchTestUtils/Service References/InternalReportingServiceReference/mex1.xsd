@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Elviz.API.Internal" elementFormDefault="qualified" targetNamespace="Elviz.API.Internal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://netvs-qa152a01:8009/InternalReportingServiceAPI/mex?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API.ReportingApi" />
+  <xs:import schemaLocation="http://netvs-qa152a01:8009/InternalReportingServiceAPI/mex?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetReportingEngineDescriptions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportingEngineDescriptionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API.ReportingApi" minOccurs="0" name="GetReportingEngineDescriptionsResult" nillable="true" type="q1:ArrayOfReportEngineDescription" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPredefinedSettingsSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reportId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="settingsSetName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPredefinedSettingsSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API.ReportingApi" minOccurs="0" name="GetPredefinedSettingsSetResult" nillable="true" type="q2:ArrayOfSetting" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifySettings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reportId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API.ReportingApi" minOccurs="0" name="reportSettings" nillable="true" type="q3:ArrayOfSetting" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="artifacts" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifySettingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API.ReportingApi" minOccurs="0" name="VerifySettingsResult" nillable="true" type="q5:ArrayOfSettingsVerificationIssue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reportId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API.ReportingApi" minOccurs="0" name="reportSettings" nillable="true" type="q6:ArrayOfSetting" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="artifacts" nillable="true" type="q7:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API.ReportingApi" minOccurs="0" name="RunReportResult" nillable="true" type="q8:Report" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,51 @@
+﻿@model PreTestWeb.Models.Monitor
+
+@{
+    ViewBag.Title = "EditQuery";
+}
+
+<h2>
+    @Html.ActionLink(Model.Workspace.PreTest.Name, "Index", "PreTests")
+    / @Html.ActionLink(Model.Workspace.WorkspaceName, "Index", new {@workspaceId = Model.WorkspaceId})
+    / @Html.ActionLink(Model.MonitorName, "Index", new { @workspaceId = Model.WorkspaceId })
+    / Edit Query
+</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="dl-horizontal">
+
+
+        <hr/>
+        @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+        @Html.HiddenFor(model => model.MonitorId)
+        @Html.HiddenFor(model => model.WorkspaceId)
+        @Html.HiddenFor(model => model.MonitorTypeId)
+        @Html.HiddenFor(model => model.MonitorName)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Query, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Query, new {@class = "form-control", cols = 80, rows = 25})
+                @Html.ValidationMessageFor(model => model.Query, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Tollerance, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Tollerance, new {htmlAttributes = new {@class = "form-control"}})
+                @Html.ValidationMessageFor(model => model.Tollerance, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default"/>
+            </div>
+        </div>
+    </div>
+}
+
+

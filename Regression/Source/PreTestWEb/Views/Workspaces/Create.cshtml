@@ -1,0 +1,70 @@
+﻿@using System.Web.UI.WebControls
+@using PreTestWeb.Managers
+@using PreTestWeb.Models
+@model PreTestWeb.Models.Workspace
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>
+    @Html.ActionLink((string)@ViewBag.PreTestName, "Index", "PreTests") / Setup Workspace 
+</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+  
+        <div class="form-group">
+            @Html.LabelFor(model => model.WorkspaceName, "WorkspaceName", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("WorkspaceName", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.WorkspaceName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReportDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ReportDate ,new { @type = "date" })
+                @Html.ValidationMessageFor(model => model.ReportDate, "", new { @class = "control-label col-md-2" } )
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TimeOutInSeconds, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TimeOutInSeconds, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TimeOutInSeconds, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to Pretest List", "Index", "PreTests")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script>
+    $(document).ready(function () {
+        $('.datetimepicker').datetimepicker({
+            format: 'lll'
+        });
+    });
+</script>

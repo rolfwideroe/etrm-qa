@@ -1,0 +1,71 @@
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>37</TransactionId>
+  <DealType>Electricity-FloatingPrice</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company B</PortfolioName>
+    <PortfolioExternalId>Test Company B</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company C</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company C</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>FLOAT M11-13</InstrumentName>
+    <PriceBasis>NordPool System Price</PriceBasis>
+    <FromDate>2013-11-01T00:00:00</FromDate>
+    <ToDate>2013-11-30T00:00:00</ToDate>
+    <LoadProfile>Peak</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <PriceType>Spot</PriceType>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>32</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>1</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <MarketPriceMultiplicator>1</MarketPriceMultiplicator>
+    <MasterAgreement>B-C GasStrDeal</MasterAgreement>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-09T10:50:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.9" FeeUnit="EUR" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.123" FeeUnit="EUR/MWh" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>ElectricityFloatPriceTradeTo</ExternalId>
+    <Comment>Updated 37</Comment>
+    <ModificationDateTimeUtc>2015-01-02T01:56:04Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>720</Deliveries>
+    <OriginalQuantity>32</OriginalQuantity>
+    <ReferringId>38</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>

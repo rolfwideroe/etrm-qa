@@ -1,0 +1,6 @@
+CREATE DATABASE VizECM_162_Snapshot ON
+( NAME = VizECM_162_Data, FILENAME = 
+'F:\MSSQL\Snapshots\VizECM_162_Snapshot_2016-05-02.ss' )
+AS SNAPSHOT OF VizECM_162;
+GO
+

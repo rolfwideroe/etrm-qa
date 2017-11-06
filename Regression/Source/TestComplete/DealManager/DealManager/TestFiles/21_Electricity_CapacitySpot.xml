@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Update>
+	<TransactionID>21</TransactionID>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Capacity Spot</InstrumentType>
+    <InstrumentData>
+      <ExpiryTime>10:00</ExpiryTime>
+      <Expiryoffset>1</Expiryoffset>
+      <Date>28/10/2013</Date>
+    </InstrumentData>
+    <SettlementData>
+	<QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "28/10/2013 " Quantity= "0.5" Price= "2" />
+		<QuantitiesAndPrice StartofPeriod = "28/10/2013 01:00:00" Quantity= "5" Price= "3" />
+		<QuantitiesAndPrice StartofPeriod = "28/10/2013 02:00:00" Quantity= "1" Price= "22" />	
+		<QuantitiesAndPrice StartofPeriod = "28/10/2013 05:00:00" Quantity= "7" Price= "23" />			
+		<QuantitiesAndPrice StartofPeriod = "28/10/2013 22:00:00" Quantity= "2" Price= "24" />	
+		<QuantitiesAndPrice StartofPeriod = "28/10/2013 23:00:00" Quantity= "3" Price= "25" />	
+    </QuantitiesAndPriceSeriesEditor>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+    </SettlementData>
+    <ReferenceData>
+		<Comment>Electr - CapacitySpot -21</Comment>
+    </ReferenceData>
+	</Update>
+	 <Copy>
+		<Portfolios>
+			<Portfolio>Test Company A</Portfolio>
+		</Portfolios>
+		<SettlementData>
+			<QuantitiesAndPriceSeriesEditor>
+				<QuantitiesAndPrice Price="0.5" Quantity="0.5" StartofPeriod="27/10/2013 "/>
+				<QuantitiesAndPrice Price="10" Quantity="1" StartofPeriod="27/10/2013 04:00:00"/>
+				<QuantitiesAndPrice Price="20" Quantity="2" StartofPeriod="27/10/2013 06:00:00"/>
+				<QuantitiesAndPrice Price="30" Quantity="3" StartofPeriod="27/10/2013 08:00:00"/>
+				<QuantitiesAndPrice Price="32" Quantity="4" StartofPeriod="27/10/2013 16:00:00"/>
+				<QuantitiesAndPrice Price="31" Quantity="7" StartofPeriod="27/10/2013 18:00:00"/>
+			</QuantitiesAndPriceSeriesEditor>
+		</SettlementData>
+	  	<ReferenceData>
+			<Comment>Copied El-Capacity Spot - trans 21</Comment>
+		</ReferenceData>	
+	</Copy>
+</DealEntry>

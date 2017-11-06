@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>	
+	  <TransactionName>StructuralDealTest19</TransactionName>
+	  <ModelType>Fixed Volume</ModelType>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>NordPool System Price</PriceBasis>
+      <FromDate>01/10/2013</FromDate>
+      <ToDate>30/04/2014</ToDate>
+      <LoadProfile>Peak (System)</LoadProfile>
+      <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>TestFormula</IndexFormula>
+    </InstrumentData>
+    <SettlementData>
+      <Price>0</Price>
+      <PriceMargin>0</PriceMargin>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+      <Resolution>Monthly</Resolution>
+	  <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "01/10/2013" QuantityInProfile= "9.885" PriceInProfile= "91" QuantityOutProfile= "5" PriceOutProfile= "19"/>
+		<QuantitiesAndPrice StartofPeriod = "01/12/2013" QuantityInProfile= "10.885" PriceInProfile= "92" QuantityOutProfile= "8" PriceOutProfile= "29"/>
+		<QuantitiesAndPrice StartofPeriod = "01/01/2014" QuantityInProfile= "0.885" PriceInProfile= "93" QuantityOutProfile= "9" PriceOutProfile= "39"/>
+		<QuantitiesAndPrice StartofPeriod = "01/03/2014" QuantityInProfile= "3.885" PriceInProfile= "95" QuantityOutProfile= "0.8" PriceOutProfile= "49"/>
+		<QuantitiesAndPrice StartofPeriod = "01/04/2014" QuantityInProfile= "8.885" PriceInProfile= "99" QuantityOutProfile= "0.36" PriceOutProfile= "9"/>
+	  </QuantitiesAndPriceSeriesEditor>
+    </SettlementData>   
+	<EMIR>		
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>ComplianceUTI for 103-104</UniqueTradeIdentifier>
+		<DealCompression>No</DealCompression>
+		<EMIRStatus>EMIR risk reducing</EMIRStatus>
+	</EMIR>
+  </Transaction>
+</DealEntry>

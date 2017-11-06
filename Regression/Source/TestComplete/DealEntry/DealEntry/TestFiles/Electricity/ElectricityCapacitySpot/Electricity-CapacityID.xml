@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Capacity Spot</InstrumentType>
+    <GeneralData>
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+      <Interconnector>DE.ENBW_DE.EON</Interconnector>
+    </Portfolios>
+    <InstrumentData>
+      <LoadProfile>Peak (System)</LoadProfile>
+      <Priority>Firm</Priority>
+      <ExpiryTime>07:30</ExpiryTime>
+      <Expiryoffset>1</Expiryoffset>
+      <Date>30/03/2014</Date>
+    </InstrumentData>
+    <SettlementData>
+	<QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "30/03/2014 " Quantity= "0.5" Price= "0.5" />
+		<QuantitiesAndPrice StartofPeriod = "30/03/2014 01:00:00" Quantity= "1" Price= "10" />
+		<QuantitiesAndPrice StartofPeriod = "30/03/2014 02:00:00" Quantity= "2" Price= "20" />	
+		<QuantitiesAndPrice StartofPeriod = "30/03/2014 05:00:00" Quantity= "3" Price= "30" />			
+		<QuantitiesAndPrice StartofPeriod = "30/03/2014 22:00:00" Quantity= "4" Price= "32" />	
+		<QuantitiesAndPrice StartofPeriod = "30/03/2014 23:00:00" Quantity= "7" Price= "31" />	
+    </QuantitiesAndPriceSeriesEditor>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>	  
+	  <CapacityId>Test capacity spot ID</CapacityId>
+    </SettlementData>
+    <Fees />
+	<EMIR>
+		<TimestampCleared>18/12/2013</TimestampCleared>
+		<TimestampClearedTime>10:53</TimestampClearedTime>
+		<TimestampConfC.party>17/12/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/12/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>electricity capacity spot</UniqueTradeIdentifier>
+		<DealCompression>No</DealCompression>
+		<EMIRStatus>Not EMIR relevant</EMIRStatus>
+	</EMIR>
+  </Transaction>
+</DealEntry>

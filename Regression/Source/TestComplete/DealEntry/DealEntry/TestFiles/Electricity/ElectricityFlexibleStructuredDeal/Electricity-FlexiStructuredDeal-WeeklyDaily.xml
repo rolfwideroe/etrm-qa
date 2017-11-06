@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Sell</BuySell>
+      <TransactionName>FlexibleTimeSeries-Weekly Daily</TransactionName>
+	  <ModelType>Consumption</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>EEX</PriceBasis>
+      <FromDate>10/06/2013</FromDate>
+      <ToDate>07/07/2013</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Fixed</PriceType>
+      <Expiryoffset>0</Expiryoffset>
+    </InstrumentData>
+    <SettlementData>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+	  <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Weekly" EffectiveFrom = "10/06/2013" Visibitily="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="1" />
+				<TimeSeriesValue StartofPeriod="17/06/2013" Value="2" />
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="3" />
+				<TimeSeriesValue StartofPeriod="01/07/2013" Value="4" />
+			</TimeSeriesDetails>
+		</ForecastedVolume>
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="11.4" />
+				<TimeSeriesValue StartofPeriod="11/06/2013" Value="12.31" />
+				<TimeSeriesValue StartofPeriod="12/06/2013" Value="13.23" />
+				<TimeSeriesValue StartofPeriod="13/06/2013" Value="14.1" />
+			</TimeSeriesDetails>					
+		</RealizedVolume>
+	  </FlexibleStructuredDealInformation>	  
+    </SettlementData>
+    <Fees />
+    <DealDetails />
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Elviz.API" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Elviz.API" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Elviz.API/Imports">
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd0" namespace="Elviz.API" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Viz.Base" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model.Transactions" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Viz.Services.AuditTrailService.ClientLibrary" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILookupService_LookUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:LookUp" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_LookUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LookUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetAllPortfolios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPortfolios" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetAllPortfolios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPortfoliosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetAllCompanies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompanies" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetAllCompanies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompaniesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsByFilterAndTradeDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsByFilterAndTradeDate" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsByFilterAndTradeDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsByFilterAndTradeDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsInFilter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsInFilter" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsInFilter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsInFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_DoesFilterExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoesFilterExist" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_DoesFilterExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoesFilterExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsInFilterForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsInFilterForUser" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsInFilterForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsInFilterForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_DoesFilterExistForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoesFilterExistForUser" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_DoesFilterExistForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoesFilterExistForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetExecutionVenueHolidays_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExecutionVenueHolidays" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetExecutionVenueHolidays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExecutionVenueHolidaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetAuthorisationsForAllPortfolios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorisationsForAllPortfolios" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetAuthorisationsForAllPortfolios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthorisationsForAllPortfoliosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsByIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsByIds" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsByIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetAuditTrailEntries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuditTrailEntries" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetAuditTrailEntries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuditTrailEntriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsInFilterByIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsInFilterByIds" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsInFilterByIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsInFilterByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsByFilterAndReportDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsByFilterAndReportDate" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsByFilterAndReportDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsByFilterAndReportDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsByIdsAndReportDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsByIdsAndReportDate" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionsByIdsAndReportDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionsByIdsAndReportDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetInstrumentCodesByTransactionIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstrumentCodesByTransactionIds" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetInstrumentCodesByTransactionIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstrumentCodesByTransactionIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetInstrumentCodesByTransactionExternalIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstrumentCodesByTransactionExternalIds" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetInstrumentCodesByTransactionExternalIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstrumentCodesByTransactionExternalIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetProductNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNames" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetProductNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetOriginalTransactionsByExternalIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOriginalTransactionsByExternalIds" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetOriginalTransactionsByExternalIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOriginalTransactionsByExternalIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetOriginalTransactionsByUTI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOriginalTransactionsByUTI" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetOriginalTransactionsByUTI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOriginalTransactionsByUTIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetProductionFacilities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductionFacilities" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetProductionFacilities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductionFacilitiesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILookupService">
+    <wsdl:operation name="LookUp">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/LookUp" message="tns:ILookupService_LookUp_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/LookUpResponse" message="tns:ILookupService_LookUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPortfolios">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetAllPortfolios" message="tns:ILookupService_GetAllPortfolios_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetAllPortfoliosResponse" message="tns:ILookupService_GetAllPortfolios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompanies">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetAllCompanies" message="tns:ILookupService_GetAllCompanies_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetAllCompaniesResponse" message="tns:ILookupService_GetAllCompanies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionsByFilterAndTradeDate">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetTransactionsByFilterAndTradeDate" message="tns:ILookupService_GetTransactionsByFilterAndTradeDate_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetTransactionsByFilterAndTradeDateResponse" message="tns:ILookupService_GetTransactionsByFilterAndTradeDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionsInFilter">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetTransactionsInFilter" message="tns:ILookupService_GetTransactionsInFilter_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetTransactionsInFilterResponse" message="tns:ILookupService_GetTransactionsInFilter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoesFilterExist">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/DoesFilterExist" message="tns:ILookupService_DoesFilterExist_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/DoesFilterExistResponse" message="tns:ILookupService_DoesFilterExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionsInFilterForUser">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetTransactionsInFilterForUser" message="tns:ILookupService_GetTransactionsInFilterForUser_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetTransactionsInFilterForUserResponse" message="tns:ILookupService_GetTransactionsInFilterForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoesFilterExistForUser">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/DoesFilterExistForUser" message="tns:ILookupService_DoesFilterExistForUser_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/DoesFilterExistForUserResponse" message="tns:ILookupService_DoesFilterExistForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExecutionVenueHolidays">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetExecutionVenueHolidays" message="tns:ILookupService_GetExecutionVenueHolidays_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetExecutionVenueHolidaysResponse" message="tns:ILookupService_GetExecutionVenueHolidays_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorisationsForAllPortfolios">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetAuthorisationsForAllPortfolios" message="tns:ILookupService_GetAuthorisationsForAllPortfolios_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetAuthorisationsForAllPortfoliosResponse" message="tns:ILookupService_GetAuthorisationsForAllPortfolios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionsByIds">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetTransactionsByIds" message="tns:ILookupService_GetTransactionsByIds_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetTransactionsByIdsResponse" message="tns:ILookupService_GetTransactionsByIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuditTrailEntries">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetAuditTrailEntries" message="tns:ILookupService_GetAuditTrailEntries_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetAuditTrailEntriesResponse" message="tns:ILookupService_GetAuditTrailEntries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionsInFilterByIds">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetTransactionsInFilterByIds" message="tns:ILookupService_GetTransactionsInFilterByIds_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetTransactionsInFilterByIdsResponse" message="tns:ILookupService_GetTransactionsInFilterByIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionsByFilterAndReportDate">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetTransactionsByFilterAndReportDate" message="tns:ILookupService_GetTransactionsByFilterAndReportDate_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetTransactionsByFilterAndReportDateResponse" message="tns:ILookupService_GetTransactionsByFilterAndReportDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionsByIdsAndReportDate">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetTransactionsByIdsAndReportDate" message="tns:ILookupService_GetTransactionsByIdsAndReportDate_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetTransactionsByIdsAndReportDateResponse" message="tns:ILookupService_GetTransactionsByIdsAndReportDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstrumentCodesByTransactionIds">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetInstrumentCodesByTransactionIds" message="tns:ILookupService_GetInstrumentCodesByTransactionIds_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetInstrumentCodesByTransactionIdsResponse" message="tns:ILookupService_GetInstrumentCodesByTransactionIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstrumentCodesByTransactionExternalIds">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetInstrumentCodesByTransactionExternalIds" message="tns:ILookupService_GetInstrumentCodesByTransactionExternalIds_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetInstrumentCodesByTransactionExternalIdsResponse" message="tns:ILookupService_GetInstrumentCodesByTransactionExternalIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductNames">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetProductNames" message="tns:ILookupService_GetProductNames_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetProductNamesResponse" message="tns:ILookupService_GetProductNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOriginalTransactionsByExternalIds">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetOriginalTransactionsByExternalIds" message="tns:ILookupService_GetOriginalTransactionsByExternalIds_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetOriginalTransactionsByExternalIdsResponse" message="tns:ILookupService_GetOriginalTransactionsByExternalIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOriginalTransactionsByUTI">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetOriginalTransactionsByUTI" message="tns:ILookupService_GetOriginalTransactionsByUTI_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetOriginalTransactionsByUTIResponse" message="tns:ILookupService_GetOriginalTransactionsByUTI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductionFacilities">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetProductionFacilities" message="tns:ILookupService_GetProductionFacilities_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetProductionFacilitiesResponse" message="tns:ILookupService_GetProductionFacilities_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

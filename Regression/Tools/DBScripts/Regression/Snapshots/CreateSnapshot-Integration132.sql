@@ -1,0 +1,5 @@
+CREATE DATABASE VizECM_132_Snapshot ON
+( NAME = VizECM_132_Data, FILENAME = 
+'E:\QAREGS\Snapshots\VizECM_Viz132_Snapshot_2013-10-09.ss' )
+AS SNAPSHOT OF VizECM_132;
+GO

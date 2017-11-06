@@ -1,0 +1,71 @@
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>3</TransactionId>
+  <DealType>Currency-European</DealType>
+  <BuySell>Sell</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Currency Counterparty A</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Currency Counterparty A</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>EURP DKKUSD 10-Jun-13 10-JUN-13 3.00</InstrumentName>
+    <FromDate>2013-06-10T00:00:00</FromDate>
+    <ToDate>2013-06-10T00:00:00</ToDate>
+    <PutCall>Put</PutCall>
+    <Strike>3</Strike>
+    <ExpiryDate>2013-06-10T00:00:00</ExpiryDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <BaseIsoCurrency>USD</BaseIsoCurrency>
+    <CrossIsoCurrency>DKK</CrossIsoCurrency>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>31</Quantity>
+    <Price>1.2</Price>
+    <PriceIsoCurrency>DKK</PriceIsoCurrency>
+    <PriceVolumeUnit>None</PriceVolumeUnit>
+    <CurrencySource>ECB</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-07T14:01:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+	<Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>
+	 <Fees>
+      <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.25" FeeUnit="DKK" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <Comment>Updated 3_1</Comment>
+    <ModificationDateTimeUtc>2014-12-30T02:02:11Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>1</Deliveries>
+    <OriginalQuantity>31</OriginalQuantity>
+    <ReferringId>4</ReferringId>
+  </ReferenceData>
+   <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+    <PropertyGroup Name="QA">
+      <Properties>
+        <Property Name="PropertyCustom3" Value="api test SetValueForGroupProperty test" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>

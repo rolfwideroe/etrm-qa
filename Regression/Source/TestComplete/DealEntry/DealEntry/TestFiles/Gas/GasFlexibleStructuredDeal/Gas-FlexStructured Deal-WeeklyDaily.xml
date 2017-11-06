@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Buy</BuySell>
+      <TransactionName>FlexibleTimeSeries Weekly Daily</TransactionName>
+	  <ModelType>Consumption</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company C</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <PriceBasis>Germany NCG</PriceBasis>
+      <FromDate>06/05/2013</FromDate>
+      <ToDate>09/06/2013</ToDate>
+	  <TimeZone>(UTC-05:00) CET 06-06</TimeZone>
+      <PriceType>Fixed</PriceType>
+      <Expiryoffset>0</Expiryoffset>
+    </InstrumentData>
+    <SettlementData>
+     <QuantityUnit>th/d</QuantityUnit>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>	  
+	  <PriceVolumeUnit>EUR/MWh</PriceVolumeUnit>
+      <FlexibleTimeSeries>Yes</FlexibleTimeSeries>
+	  <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Weekly" EffectiveFrom = "10/06/2013" Visibitily="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="06/05/2013" Value="20" />
+				<TimeSeriesValue StartofPeriod="13/05/2013" Value="21" />				
+				<TimeSeriesValue StartofPeriod="20/05/2013" Value="23" />
+				<TimeSeriesValue StartofPeriod="27/05/2013" Value="22" />
+				<TimeSeriesValue StartofPeriod="03/06/2013" Value="26" />
+			</TimeSeriesDetails>	
+		</ForecastedVolume>		
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="06/05/2013" Value="20" />
+				<TimeSeriesValue StartofPeriod="13/05/2013" Value="21" />				
+				<TimeSeriesValue StartofPeriod="20/05/2013" Value="-3" />
+				<TimeSeriesValue StartofPeriod="27/05/2013" Value="22" />
+				<TimeSeriesValue StartofPeriod="03/06/2013" Value="28" />
+			</TimeSeriesDetails>	
+		</RealizedVolume>
+	  </FlexibleStructuredDealInformation>	
+    </SettlementData>
+    <Fees />
+    <DealDetails>
+		<TradeDate>10/06/2013</TradeDate>
+		<TradeTime>05:50</TradeTime>
+	</DealDetails>
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

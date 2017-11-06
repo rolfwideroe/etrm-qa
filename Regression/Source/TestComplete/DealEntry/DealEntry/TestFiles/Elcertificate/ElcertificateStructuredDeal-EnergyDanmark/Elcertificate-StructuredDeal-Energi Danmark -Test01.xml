@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Elcertificate</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Buy</BuySell>
+      <TransactionName>Test</TransactionName>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company C</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>Elcertificate</PriceBasis>
+      <FromDate Month = "July" Year= "2013">01/07/2013</FromDate>
+      <ToDate Month = "July" Year= "2014">01/07/2014</ToDate>
+      <PriceType>End User El-Certificate</PriceType>
+      <Expiryoffset>0</Expiryoffset>
+    </InstrumentData>
+    <SettlementData>
+      <QuantityUnit>ECS</QuantityUnit>
+      <Currency>SEK</Currency>
+      <CurrencySource>Viz</CurrencySource>
+      <Resolution>Monthly</Resolution>
+	  <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "01/07/2013 " Quantity= "1000" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/08/2013" Quantity= "1000" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/09/2013" Quantity= "1000" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/10/2013" Quantity= "1000" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/11/2013" Quantity= "1000" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/12/2013" Quantity= "32" Price= "15" />	
+		<QuantitiesAndPrice StartofPeriod = "01/01/2014" Quantity= "1000" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/02/2014" Quantity= "1000" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/03/2014" Quantity= "1000" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/04/2014" Quantity= "1000" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/05/2014" Quantity= "1000" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/06/2014" Quantity= "1000" Price= "200" />
+		<QuantitiesAndPrice StartofPeriod = "01/07/2014" Quantity= "1000" Price= "200" />
+	  </QuantitiesAndPriceSeriesEditor>
+    </SettlementData>
+      <Fees>
+		 <Broker>Test Broker A</Broker>
+		 <BrokerVariable>0.01</BrokerVariable>
+		 <BrokerFixed>1</BrokerFixed>
+		 <BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+		 <ClearingVariable>0.01</ClearingVariable>
+		 <ClearingFixed>1</ClearingFixed>
+		 <ClearingFeeCurrency>NOK</ClearingFeeCurrency>	  	  
+		 <CommissionVariable>0.01</CommissionVariable>
+		 <CommissionFixed>1</CommissionFixed>
+		 <CommissionFeeCurrency>NOK</CommissionFeeCurrency>
+		 <TradingVariable>0.01</TradingVariable>
+		 <TradingFixed>1</TradingFixed>
+		 <TradingFeeCurrency>NOK</TradingFeeCurrency>	 
+	</Fees>
+    <DealDetails />
+    <ReferenceData>
+      <QuotaRegion>Sweden</QuotaRegion>
+    </ReferenceData>
+	<EMIR>
+		<TimestampCleared>18/12/2013</TimestampCleared>
+		<TimestampClearedTime>10:53</TimestampClearedTime>
+		<TimestampConfC.party>17/12/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/12/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>Elcertificate-StructuredDeal-Energi Danmark</UniqueTradeIdentifier>
+		<DealCompression>Yes</DealCompression>
+		<EMIRStatus>Not EMIR relevant</EMIRStatus>
+	</EMIR>
+  </Transaction>
+</DealEntry>

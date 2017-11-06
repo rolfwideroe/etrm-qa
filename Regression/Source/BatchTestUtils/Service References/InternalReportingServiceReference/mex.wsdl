@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Elviz.API.Internal" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Elviz.API.Internal" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Elviz.API.Internal/Imports">
+      <xsd:import schemaLocation="http://netvs-qa152a01:8009/InternalReportingServiceAPI/mex?xsd=xsd0" namespace="Elviz.API.Internal" />
+      <xsd:import schemaLocation="http://netvs-qa152a01:8009/InternalReportingServiceAPI/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://netvs-qa152a01:8009/InternalReportingServiceAPI/mex?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API.ReportingApi" />
+      <xsd:import schemaLocation="http://netvs-qa152a01:8009/InternalReportingServiceAPI/mex?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://netvs-qa152a01:8009/InternalReportingServiceAPI/mex?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInternalReportingApiService_GetReportingEngineDescriptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportingEngineDescriptions" />
+  </wsdl:message>
+  <wsdl:message name="IInternalReportingApiService_GetReportingEngineDescriptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportingEngineDescriptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalReportingApiService_GetPredefinedSettingsSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPredefinedSettingsSet" />
+  </wsdl:message>
+  <wsdl:message name="IInternalReportingApiService_GetPredefinedSettingsSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPredefinedSettingsSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalReportingApiService_VerifySettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifySettings" />
+  </wsdl:message>
+  <wsdl:message name="IInternalReportingApiService_VerifySettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifySettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalReportingApiService_RunReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:RunReport" />
+  </wsdl:message>
+  <wsdl:message name="IInternalReportingApiService_RunReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RunReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInternalReportingApiService">
+    <wsdl:operation name="GetReportingEngineDescriptions">
+      <wsdl:input wsaw:Action="Elviz.API.Internal/IInternalReportingApiService/GetReportingEngineDescriptions" message="tns:IInternalReportingApiService_GetReportingEngineDescriptions_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API.Internal/IInternalReportingApiService/GetReportingEngineDescriptionsResponse" message="tns:IInternalReportingApiService_GetReportingEngineDescriptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPredefinedSettingsSet">
+      <wsdl:input wsaw:Action="Elviz.API.Internal/IInternalReportingApiService/GetPredefinedSettingsSet" message="tns:IInternalReportingApiService_GetPredefinedSettingsSet_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API.Internal/IInternalReportingApiService/GetPredefinedSettingsSetResponse" message="tns:IInternalReportingApiService_GetPredefinedSettingsSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifySettings">
+      <wsdl:input wsaw:Action="Elviz.API.Internal/IInternalReportingApiService/VerifySettings" message="tns:IInternalReportingApiService_VerifySettings_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API.Internal/IInternalReportingApiService/VerifySettingsResponse" message="tns:IInternalReportingApiService_VerifySettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RunReport">
+      <wsdl:input wsaw:Action="Elviz.API.Internal/IInternalReportingApiService/RunReport" message="tns:IInternalReportingApiService_RunReport_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API.Internal/IInternalReportingApiService/RunReportResponse" message="tns:IInternalReportingApiService_RunReport_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

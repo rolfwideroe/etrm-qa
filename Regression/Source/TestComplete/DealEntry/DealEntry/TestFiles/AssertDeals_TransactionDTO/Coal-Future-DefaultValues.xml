@@ -1,0 +1,93 @@
+<TestCase>
+<DealEntry>
+  <Transaction>
+    <Commodity>Coal</Commodity>
+    <InstrumentType>Future</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Buy</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company B</Portfolio>
+      <CounterpartyPortfolio>Test Company A</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <!--ExecutionVenue>ICE</ExecutionVenue-->
+      <PriceBasis>Coal API #2</PriceBasis>
+      <Period>Sep14</Period>
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>100</Quantity>
+      <QuantityUnit>Ton</QuantityUnit>
+      <Price>10</Price>
+      <!--PriceVolumeUnit>USD/Ton</PriceVolumeUnit>
+      <Currency>USD</Currency--> <!--for testting default currency ELVIZ-12856-->
+      <CurrencySource>Viz</CurrencySource>	 
+    </SettlementData>
+    <Fees />
+    <DealDetails>
+			<TradeTime>08:24</TradeTime>
+	</DealDetails>
+    <ReferenceData />
+  </Transaction>
+</DealEntry>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>2929</TransactionId>
+  <DealType>Coal-Future</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company B</PortfolioName>
+    <PortfolioExternalId>Test Company B</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Company A</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Company A</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>ICE</ExecutionVenue>
+    <InstrumentName>Sep14</InstrumentName>
+    <PriceBasis>Coal API #2</PriceBasis>
+    <FromDate>2014-08-30T00:00:00</FromDate>
+    <ToDate>2014-09-26T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>100</Quantity>
+    <QuantityUnit>Ton</QuantityUnit>
+    <Price>10</Price>
+    <PriceIsoCurrency>USD</PriceIsoCurrency>
+    <PriceVolumeUnit>PerTon</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-10T06:24:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ModificationDateTimeUtc>2017-06-27T11:36:24Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>672</Deliveries>
+    <OriginalQuantity>100</OriginalQuantity>
+    <ReferringId>2930</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

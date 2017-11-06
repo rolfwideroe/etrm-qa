@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+	  <TransactionName>FlexibleTimeSeries Volume Profile</TransactionName>
+	  <ModelType>Retail</ModelType>
+	  <BuySell>Sell</BuySell>      
+      <DeliveryType>Financial</DeliveryType>      
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+	  <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>TestGasFormula</IndexFormula>
+      <PriceBasis>TTF</PriceBasis>
+      <FromDate>01/01/2013</FromDate>
+      <ToDate>31/12/2016</ToDate>
+    </InstrumentData>
+    <SettlementData>
+	  <QuantityUnit>MWh/d</QuantityUnit>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+	  <PriceVolumeUnit>EUR/y(MWh/d)</PriceVolumeUnit>
+	 <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Yearly" EffectiveFrom = "10/06/2013" Visibitily="true" VolumeProfile="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="0" />			
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>YearVolumeProfileLeap</Profile>
+				<FDate>01/01/2013</FDate>
+				<TDate>31/12/2015</TDate>
+				<Unit>MWh</Unit>
+				<Resolution>Quarter</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "01/01/2013" Value="403"/>
+					<Volume StartOfPeriod = "01/04/2013" Value="401"/>
+					<Volume StartOfPeriod = "01/07/2013" Value="403"/>
+					<Volume StartOfPeriod = "01/10/2013" Value="403"/>
+					<Volume StartOfPeriod = "01/01/2014" Value="401"/>
+					<Volume StartOfPeriod = "01/04/2014" Value="403"/>
+					<Volume StartOfPeriod = "01/07/2014" Value="401"/>
+					<Volume StartOfPeriod = "01/10/2014" Value="403"/>
+					<Volume StartOfPeriod = "01/01/2015" Value="401"/>
+					<Volume StartOfPeriod = "01/04/2015" Value="403"/>
+					<Volume StartOfPeriod = "01/07/2015" Value="401"/>
+					<Volume StartOfPeriod = "01/10/2015" Value="403"/>
+				</VolumeAndPrice>
+			</DistributeVolume>
+		</ForecastedVolume>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Yearly" EffectiveFrom = "25/06/2015" Visibitily="true" VolumeProfile="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="25/06/2014" Value="0" />			
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>YearVolumeProfile</Profile>
+				<FDate>01/07/2015</FDate>
+				<TDate>31/12/2016</TDate>
+				<Unit>MWh</Unit>
+				<Resolution>Quarter</Resolution>
+				<VolumeAndPrice>					
+					<Volume StartOfPeriod = "01/07/2015" Value="403"/>
+					<Volume StartOfPeriod = "01/10/2015" Value="403"/>
+					<Volume StartOfPeriod = "01/01/2016" Value="401"/>
+					<Volume StartOfPeriod = "01/04/2016" Value="403"/>
+					<Volume StartOfPeriod = "01/07/2016" Value="401"/>
+					<Volume StartOfPeriod = "01/10/2016" Value="403"/>
+				</VolumeAndPrice>
+			</DistributeVolume>
+		</ForecastedVolume>
+		<ForecastedPrice  GUIName = "Forecasted Price" Resolution= "Yearly" EffectiveFrom = "10/06/2013" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="01/01/2013" Value="3955111.1" />
+				<TimeSeriesValue StartofPeriod="01/01/2014" Value="5456522.1" />
+				<TimeSeriesValue StartofPeriod="01/01/2015" Value="3448855.1" />
+				<TimeSeriesValue StartofPeriod="01/01/2016" Value="4155442.1" />			
+			</TimeSeriesDetails>
+		</ForecastedPrice>
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Yearly" EffectiveFrom = "" Visibitily="true" VolumeProfile="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="24/06/2013" Value="0" />						
+			</TimeSeriesDetails>
+			<DistributeVolume>
+				<Profile>YearVolumeProfile</Profile>
+				<FDate>01/01/2013</FDate>
+				<TDate>31/12/2016</TDate>
+				<Unit>MWh</Unit>
+				<Resolution>Year</Resolution>
+				<VolumeAndPrice>
+					<Volume StartOfPeriod = "01/01/2013" Value="503"/>
+					<Volume StartOfPeriod = "01/01/2014" Value="501"/>
+					<Volume StartOfPeriod = "01/01/2015" Value="502"/>
+					<Volume StartOfPeriod = "01/01/2016" Value="505"/>
+				</VolumeAndPrice>
+			</DistributeVolume>			
+		</RealizedVolume>
+		<RealizedPrice GUIName = "Realized Price" Resolution= "Quarterly" EffectiveFrom = "" Visibitily="true">		
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="01/01/2013" Value="3955111.1" />
+				<TimeSeriesValue StartofPeriod="01/04/2013" Value="3448855.1" />
+				<TimeSeriesValue StartofPeriod="01/07/2013" Value="5456522.1" />
+				<TimeSeriesValue StartofPeriod="01/10/2013" Value="3448855.1" />
+				<TimeSeriesValue StartofPeriod="01/01/2014" Value="4155442.1" />
+				<TimeSeriesValue StartofPeriod="01/04/2014" Value="3348855.1" />
+				<TimeSeriesValue StartofPeriod="01/07/2014" Value="5456522.1" />
+				<TimeSeriesValue StartofPeriod="01/10/2014" Value="3448855.1" />				
+				<TimeSeriesValue StartofPeriod="01/01/2015" Value="3955111.1" />
+				<TimeSeriesValue StartofPeriod="01/04/2015" Value="3755111.1" />
+				<TimeSeriesValue StartofPeriod="01/07/2015" Value="3755111.1" />
+				<TimeSeriesValue StartofPeriod="01/10/2015" Value="3855111.1" />
+				<TimeSeriesValue StartofPeriod="01/01/2016" Value="5456522.1" />
+				<TimeSeriesValue StartofPeriod="01/04/2016" Value="3448855.1" />
+				<TimeSeriesValue StartofPeriod="01/07/2016" Value="4255442.1" />	
+				<TimeSeriesValue StartofPeriod="01/10/2016" Value="4155442.1" />	
+			</TimeSeriesDetails>							
+		</RealizedPrice>
+	  </FlexibleStructuredDealInformation>	
+    </SettlementData>
+    <ReferenceData>
+		<ExternalId>Gas-FSD-YearlyVolumeProfile2Series</ExternalId>		
+	</ReferenceData>
+	<EMIR>
+		<TimestampCleared>18/12/2013</TimestampCleared>
+		<TimestampClearedTime>10:53</TimestampClearedTime>
+		<TimestampConfC.party>17/12/2013</TimestampConfC.party>
+		<TimestampConfC.partyTime>10:54</TimestampConfC.partyTime>
+		<TimestampConfBroker>18/12/2013</TimestampConfBroker>
+		<TimestampConfBrokerTime>10:55</TimestampConfBrokerTime>
+		<TerminationDate>20/12/2013</TerminationDate>
+		<UniqueTradeIdentifier>Gas-FSD-VolumeProfile2Series</UniqueTradeIdentifier>
+		<DealCompression>No</DealCompression>
+		<EMIRStatus>EMIR risk reducing</EMIRStatus>
+	</EMIR>
+  </Transaction>
+</DealEntry>

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Asian</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Financial</DeliveryType>
+      <BuySell>Sell</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+        <ExecutionVenue>[None]</ExecutionVenue>
+        <PriceBasis>Norway 1</PriceBasis>
+        <FromDate>2013-04-01</FromDate>
+        <ToDate>2013-06-30</ToDate>
+		<LoadProfile>Base (System)</LoadProfile>
+		<TimeZone>(UTC+01:00) Central Europe Standard Time</TimeZone>
+        <PutCall>Call</PutCall>
+        <Strike>50</Strike>
+        <SamplingPeriod>Month</SamplingPeriod>
+    </InstrumentData>
+    <SettlementData>
+	  <ProfiledVolume>Yes</ProfiledVolume>
+      <QuantitiesSeriesEditor>
+		<Resolution>Hourly</Resolution>
+		<Quantity StartofPeriod = "01/04/2013 01:00:00" Quantity= "525" />
+		<Quantity StartofPeriod = "01/04/2013 02:00:00" Quantity= "462" />	
+		<Quantity StartofPeriod = "01/04/2013 03:00:00" Quantity= "132" />	
+    </QuantitiesSeriesEditor>
+	  <Price>6.258</Price>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+    </SettlementData>
+    <Fees>
+		 <Broker>Test Broker A</Broker>
+		 <BrokerVariable>0.01</BrokerVariable>
+		 <BrokerFixed>1</BrokerFixed>
+		 <BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+		 <ClearingVariable>0.01</ClearingVariable>
+		 <ClearingFixed>1</ClearingFixed>
+		 <ClearingFeeCurrency>NOK</ClearingFeeCurrency>	  	  
+		 <CommissionVariable>0.01</CommissionVariable>
+		 <CommissionFixed>1</CommissionFixed>
+		 <CommissionFeeCurrency>NOK</CommissionFeeCurrency>
+		 <TradingVariable>0.01</TradingVariable>
+		 <TradingFixed>1</TradingFixed>
+		 <TradingFeeCurrency>NOK</TradingFeeCurrency>	
+	 </Fees>
+    <DealDetails />
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

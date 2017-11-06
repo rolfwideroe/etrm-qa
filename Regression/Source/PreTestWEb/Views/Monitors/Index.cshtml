@@ -1,0 +1,71 @@
+﻿@model IEnumerable<PreTestWeb.Models.Monitor>
+
+@{
+    ViewBag.Title = "Monitors Index Page";
+}
+
+<h2>
+    @Html.ActionLink(Model.FirstOrDefault().Workspace.PreTest.Name, "Index", "PreTests")
+    / @Html.ActionLink(Model.FirstOrDefault().Workspace.WorkspaceName, "Index", "Workspaces", new { preTestId = Model.FirstOrDefault().Workspace.PreTest.PreTestId },null)
+    / Monitors
+</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MonitorName)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Query)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.MonitorType.MonitorTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Workspace.WorkspaceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tollerance)
+        </th>
+        <th>
+            Last Test Result
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonitorName)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Query)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.MonitorType.MonitorTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Workspace.WorkspaceName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tollerance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestResults.LastOrDefault().TestResultStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Export comparison", "ExportComparison", new {id = item.MonitorId}) |
+            @Html.ActionLink("Edit query", "EditQuery", new { id = item.MonitorId })
+
+
+            
+
+
+        </td>
+    </tr>
+}
+
+</table>

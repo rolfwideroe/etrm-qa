@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Buy</BuySell>
+      <TransactionName>FlexibleTimeSeries Monthly Daily</TransactionName>
+	  <ModelType>Retail</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company C</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <PriceBasis>Germany NCG</PriceBasis>
+      <FromDate>01/01/2014</FromDate>
+      <ToDate>31/12/2014</ToDate>
+      <LoadProfile>Base (System)</LoadProfile>
+      <PriceType>Indexed w/margin</PriceType>
+      <IndexFormula>TestGasFormula</IndexFormula>
+    </InstrumentData>
+    <SettlementData>
+	  <QuantityUnit>MWh/d</QuantityUnit>
+      <Currency>NOK</Currency>
+      <CurrencySource>Viz</CurrencySource>	  
+	  <PriceVolumeUnit>NOK/MWh</PriceVolumeUnit>
+      <FlexibleTimeSeries>Yes</FlexibleTimeSeries>
+	  <FlexibleStructuredDealInformation>
+		<ForecastedVolume GUIName = "Forecasted Volume" Resolution= "Monthly" EffectiveFrom = "10/06/2013" Visibitily="true">	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="01/01/2014" Value="2.02" />
+				<TimeSeriesValue StartofPeriod="01/02/2014" Value="2.03" />				
+				<TimeSeriesValue StartofPeriod="01/03/2014" Value="2.04" />
+				<TimeSeriesValue StartofPeriod="01/04/2014" Value="2.05" />
+				<TimeSeriesValue StartofPeriod="01/05/2014" Value="2.06" />
+				<TimeSeriesValue StartofPeriod="01/06/2014" Value="2.07" />
+				<TimeSeriesValue StartofPeriod="01/07/2014" Value="2.08" />				
+				<TimeSeriesValue StartofPeriod="01/08/2014" Value="2.03" />
+				<TimeSeriesValue StartofPeriod="01/09/2014" Value="2.07" />
+				<TimeSeriesValue StartofPeriod="01/10/2014" Value="2.08" />				
+				<TimeSeriesValue StartofPeriod="01/11/2014" Value="2.03" />
+				<TimeSeriesValue StartofPeriod="01/12/2014" Value="2.03" />
+			</TimeSeriesDetails>	
+		</ForecastedVolume>
+		<ForecastedPrice  GUIName = "Forecasted Price" Resolution= "Monthly" EffectiveFrom = "10/06/2013" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="01/01/2014" Value="12" />
+				<TimeSeriesValue StartofPeriod="01/02/2014" Value="13" />				
+				<TimeSeriesValue StartofPeriod="01/03/2014" Value="14" />
+				<TimeSeriesValue StartofPeriod="01/04/2014" Value="15" />
+				<TimeSeriesValue StartofPeriod="01/05/2014" Value="16" />
+				<TimeSeriesValue StartofPeriod="01/06/2014" Value="17" />
+				<TimeSeriesValue StartofPeriod="01/07/2014" Value="18" />				
+				<TimeSeriesValue StartofPeriod="01/08/2014" Value="19" />
+				<TimeSeriesValue StartofPeriod="01/09/2014" Value="20" />
+				<TimeSeriesValue StartofPeriod="01/10/2014" Value="21" />				
+				<TimeSeriesValue StartofPeriod="01/11/2014" Value="22" />
+				<TimeSeriesValue StartofPeriod="01/12/2014" Value="23" />
+			</TimeSeriesDetails>	
+		</ForecastedPrice>
+		<RealizedVolume GUIName = "Realized Volume" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="01/01/2014" Value="4.02" />
+				<TimeSeriesValue StartofPeriod="02/01/2014" Value="5.03" />				
+				<TimeSeriesValue StartofPeriod="03/01/2014" Value="6.04" />
+				<TimeSeriesValue StartofPeriod="04/01/2014" Value="4.05" />
+				<TimeSeriesValue StartofPeriod="05/01/2014" Value="5.06" />
+				<TimeSeriesValue StartofPeriod="06/01/2014" Value="6.07" />
+				<TimeSeriesValue StartofPeriod="07/01/2014" Value="4.08" />				
+				<TimeSeriesValue StartofPeriod="08/01/2014" Value="5.03" />
+				<TimeSeriesValue StartofPeriod="09/01/2014" Value="5.07" />
+				<TimeSeriesValue StartofPeriod="10/01/2014" Value="6.08" />				
+				<TimeSeriesValue StartofPeriod="11/01/2014" Value="4.03" />
+				<TimeSeriesValue StartofPeriod="12/01/2014" Value="5.03" />
+			</TimeSeriesDetails>	
+		</RealizedVolume>
+		<RealizedPrice GUIName = "Realized Price" Resolution= "Daily" EffectiveFrom = "" Visibitily="true">		
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="01/01/2014" Value="2" />
+				<TimeSeriesValue StartofPeriod="02/01/2014" Value="2" />				
+				<TimeSeriesValue StartofPeriod="03/01/2014" Value="2" />
+				<TimeSeriesValue StartofPeriod="04/01/2014" Value="2" />
+				<TimeSeriesValue StartofPeriod="05/01/2014" Value="2" />
+				<TimeSeriesValue StartofPeriod="06/01/2014" Value="2" />
+				<TimeSeriesValue StartofPeriod="07/01/2014" Value="2" />				
+				<TimeSeriesValue StartofPeriod="08/01/2014" Value="2" />
+				<TimeSeriesValue StartofPeriod="09/01/2014" Value="2" />
+				<TimeSeriesValue StartofPeriod="10/01/2014" Value="2" />				
+				<TimeSeriesValue StartofPeriod="11/01/2014" Value="2" />
+				<TimeSeriesValue StartofPeriod="12/01/2014" Value="2" />
+			</TimeSeriesDetails>					
+		</RealizedPrice>
+	  </FlexibleStructuredDealInformation>	
+    </SettlementData>
+    <Fees />
+    <DealDetails />
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

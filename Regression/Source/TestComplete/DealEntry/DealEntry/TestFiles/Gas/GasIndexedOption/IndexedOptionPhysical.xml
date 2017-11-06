@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Indexed Option</InstrumentType>
+    <GeneralData>
+        <BuySell>Sell</BuySell>
+		<DeliveryType>Physical</DeliveryType>
+    </GeneralData>
+   <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+	  <IndexFormula>AxpoIndexedOption</IndexFormula>
+      <PriceBasis>TTF</PriceBasis>
+      <Period>WIN-15</Period>
+      <PutCall>Call</PutCall>
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>5</Quantity>
+      <QuantityUnit>Sm3/d</QuantityUnit>
+      <Price>10</Price>
+      <PriceVolumeUnit>EUR/MWh</PriceVolumeUnit>      
+      <CurrencySource>Viz</CurrencySource>
+    </SettlementData>
+     <Fees>
+	  <Broker>Test Broker A</Broker>
+	  <BrokerVariable>0.01</BrokerVariable>
+	  <BrokerFixed>1</BrokerFixed>
+	  <BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+	  <ClearingVariable>0.01</ClearingVariable>
+	  <ClearingFixed>1</ClearingFixed>
+	  <ClearingFeeCurrency>NOK</ClearingFeeCurrency>	  	  
+	  <CommissionVariable>0.01</CommissionVariable>
+	  <CommissionFixed>1</CommissionFixed>
+	  <CommissionFeeCurrency>NOK</CommissionFeeCurrency>
+	  <TradingVariable>0.01</TradingVariable>
+	  <TradingFixed>1</TradingFixed>
+	  <TradingFeeCurrency>NOK</TradingFeeCurrency>	 
+	 </Fees>
+    <DealDetails />
+    <ReferenceData />
+	<REMIT>
+		<REMITReporting>Yes</REMITReporting>
+		<BuyerInitiatorAggressor>Initiator</BuyerInitiatorAggressor>
+		<SellerInitiatorAggressor>Aggressor</SellerInitiatorAggressor>
+	</REMIT>
+  </Transaction>
+</DealEntry>

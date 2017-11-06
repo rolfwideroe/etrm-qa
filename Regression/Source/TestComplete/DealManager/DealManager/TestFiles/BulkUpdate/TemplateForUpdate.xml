@@ -1,0 +1,45 @@
+<!--
+// Tabs are added to ensure correct sorting of categories, they are evaluated for sorting purposes, but are not rendered.....
+string headerGeneralData = "\t\t\t\t\t\t\t" + Constants.HEADER_GENERAL_DATA;
+string headerGroupPortfolios = "\t\t\t\t\t\t" + Constants.HEADER_GROUP_PORTFOLIOS;
+string headerGroupInstrumentData = "\t\t\t\t\t" + Constants.HEADER_GROUP_INSTRUMENT_DATA;
+string headerGroupSettlementData = "\t\t\t\t" + Constants.HEADER_GROUP_SETTLEMENT_DATA;
+string headerGroupFeesData = "\t\t\t" + Constants.HEADER_GROUP_FEES_DATA;
+string headerGroupDealDetails = "\t\t" + Constants.HEADER_GROUP_DEAL_DETAILS;
+string headerGroupReferenceData = "\t" + Constants.HEADER_GROUP_REFERENCE_DATA;
+string headerEmir = Constants.HEADER_EMIR;
+-->
+<!-- **** !!! Use only single quotes ' -->
+<!--for Broker Fees, Broker should be set, ELVIZ-12132-->
+
+<TestCase>
+<BulkUpdate>	
+	<GeneralData GUIName='General Data'>		
+		<BuySell GUIName="Buy/Sell">Buy</BuySell>
+	</GeneralData>
+    <Portfolios GUIName='Portfolios'>
+		<Portfolio GUIName='Portfolio'>Test Company E</Portfolio>
+		<CounterpartyPortfolio GUIName='Counterparty Portfolio'>Test Counterparty A</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData GUIName='Instrument Data'>
+		<PriceBasis GUIName='Price Basis'>Norway 1</PriceBasis>
+	</InstrumentData>
+	<SettlementData GUIName = 'Settlement Data'>
+      <Currency GUIName = 'Currency'>NOK</Currency>
+    </SettlementData>
+	<Fees GUIName='Fees'> 
+		<ClearingFixed GUIName='Clearing Fixed'>0.25</ClearingFixed>
+	</Fees>
+    <ReferenceData GUIName='Reference Data'>
+		<Comment GUIName='Comment'>BulkUpdated</Comment>
+	</ReferenceData> 
+	<DealGroup GUIName='Deal Group'>
+	</DealGroup>
+	<EMIR GUIName='EMIR'>
+		<EmirStatus GUIName='Emir Status' >EMIR risk reducing</EmirStatus>
+	</EMIR>
+	<QA GUIName='QA'>		
+		<CustomProperty1 GUIName='Custom Property1'>multipleupdate</CustomProperty1>
+	</QA>
+</BulkUpdate>
+</TestCase>

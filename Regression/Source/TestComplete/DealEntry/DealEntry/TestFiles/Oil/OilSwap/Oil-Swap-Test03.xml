@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Oil</Commodity>
+    <InstrumentType>Swap</InstrumentType>
+    <GeneralData>
+      <BuySell>Buy</BuySell>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <IndexFormula>OilTestFormula</IndexFormula>
+      <SwapPriceType>Fixed For Floating</SwapPriceType>
+	  <FromDate Month = "June " Year= "2013" >01/06/2013</FromDate>
+	  <ToDate Month = "December" year ="2014">31/12/2014</ToDate>
+    </InstrumentData>
+    <SettlementData>
+      <QuantityUnit>Bbl</QuantityUnit>
+      <PriceVolumeUnit>EUR/Bbl</PriceVolumeUnit>
+	  	<QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "01/10/2013 " Quantity= "0.5" Price= "0.5" />
+		<QuantitiesAndPrice StartofPeriod = "01/11/2014" Quantity= "52" Price= "17" />
+		<QuantitiesAndPrice StartofPeriod = "01/12/2014" Quantity= "32" Price= "15" />	
+    </QuantitiesAndPriceSeriesEditor>
+      <Currency>EUR</Currency>
+      <CurrencySource>Viz</CurrencySource>
+    </SettlementData>
+   <Fees />    
+    <DealDetails />
+    <ReferenceData />
+  </Transaction>
+</DealEntry>

@@ -1,0 +1,60 @@
+﻿@model IEnumerable<PreTestWeb.Models.TestEnvRun>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    @Html.ActionLink((string) ViewBag.PreTestName , "Index", "PreTests")
+    / @Html.ActionLink((string) ViewBag.WorkspaceName , "Index", "Workspaces", new { preTestId = (int)ViewBag.PreTestId }, null)
+    / Test Runs
+</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RunStartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobResult)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EtrmVersion)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.TestServerJobLog)
+        </th>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.Workspace.WorkspaceName)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RunStartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobResult)
+        <td>
+            @Html.DisplayFor(modelItem => item.EtrmVersion)
+        </td>
+     
+        @*<td>
+            @Html.DisplayFor(modelItem => item.TestServerJobLog)
+        </td>*@
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Workspace.WorkspaceName)
+        </td>*@
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.TestEnvRunId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TestEnvRunId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TestEnvRunId })*@
+            @Html.ActionLink("View Log", "Log", new { id = item.TestEnvRunId }) |
+            @Html.ActionLink("Results", "NavigateToTestResults", new { id=item.TestEnvRunId })
+        </td>
+    </tr>
+}
+
+</table>

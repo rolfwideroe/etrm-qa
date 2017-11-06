@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="data">
+			<Node name="file0">
+				<Prp name="filename" type="S" value="item0.wsdata"/>
+				<Prp name="url" type="S" value="http://BERVS-QA132A02:8009/lookupservice/mex?wsdl"/>
+			</Node>
+			<Node name="file1">
+				<Prp name="filename" type="S" value="item1.wsdata"/>
+				<Prp name="url" type="S" value="http://bervs-qa132a02:8009/LookupService/mex?wsdl=wsdl0"/>
+			</Node>
+			<Node name="file2">
+				<Prp name="filename" type="S" value="item2.wsdata"/>
+				<Prp name="url" type="S" value="http://bervs-qa132a02:8009/LookupService/mex?xsd=xsd0"/>
+			</Node>
+			<Node name="file3">
+				<Prp name="filename" type="S" value="item3.wsdata"/>
+				<Prp name="url" type="S" value="http://bervs-qa132a02:8009/LookupService/mex?xsd=xsd1"/>
+			</Node>
+			<Node name="file4">
+				<Prp name="filename" type="S" value="item4.wsdata"/>
+				<Prp name="url" type="S" value="http://bervs-qa132a02:8009/LookupService/mex?xsd=xsd2"/>
+			</Node>
+			<Node name="file5">
+				<Prp name="filename" type="S" value="item5.wsdata"/>
+				<Prp name="url" type="S" value="http://bervs-qa132a02:8009/LookupService/mex?xsd=xsd3"/>
+			</Node>
+			<Node name="file6">
+				<Prp name="filename" type="S" value="item6.wsdata"/>
+				<Prp name="url" type="S" value="http://bervs-qa132a02:8009/LookupService/mex?xsd=xsd4"/>
+			</Node>
+			<Node name="file7">
+				<Prp name="filename" type="S" value="item7.wsdata"/>
+				<Prp name="url" type="S" value="http://bervs-qa132a02:8009/LookupService/mex?xsd=xsd5"/>
+			</Node>
+			<Node name="typeinfo">
+				<Prp name="active" type="B" value="-1"/>
+				<Prp name="biding" type="S" value="BasicHttpBinding_ILookupService"/>
+				<Prp name="documentation" type="S" value=""/>
+				<Prp name="name" type="S" value="LookupService"/>
+				<Prp name="port" type="S" value="BasicHttpBinding_ILookupService"/>
+				<Prp name="soapversion" type="I" value="0"/>
+				<Prp name="url" type="S" value="http://bervs-qa132a02:8009/LookupService"/>
+				<Prp name="wsdl" type="S" value="http://BERVS-QA132A02:8009/lookupservice/mex?wsdl"/>
+			</Node>
+		</Node>
+		<Node name="settings">
+			<Prp name="settingsversion" type="S" value="9.0"/>
+		</Node>
+		<Prp name="dataid" type="S" value="{2C787F7C-5AE4-4F0B-BDC1-E430CBFCE526}"/>
+		<Prp name="signature" type="S" value="{FDE830DE-DB45-4B3F-9158-5C1FB0B40C28}"/>
+		<Prp name="version" type="S" value="9.0"/>
+	</Node>
+</Nodes>

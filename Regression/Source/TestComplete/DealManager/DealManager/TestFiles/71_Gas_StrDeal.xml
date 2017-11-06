@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Update>  
+	<TransactionID>71</TransactionID>
+    <Commodity>Gas</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <InstrumentData>
+      <PriceBasis>ICE NBP</PriceBasis>
+	  <FromDate  Month="January" Year="2014">01/01/2014</FromDate>
+	  <ToDate Month="December" Year="2014">31/12/2014</ToDate>
+    </InstrumentData>
+    <SettlementData>
+      <QuantityUnit>MWh/d</QuantityUnit>
+      <MarketPriceMultiplicator>1.3</MarketPriceMultiplicator>
+      <Currency>USD</Currency>
+	  <QuantitiesAndPriceSeriesEditor>
+		<QuantitiesAndPrice StartofPeriod = "01/01/2014 " Quantity= "0.5" Price= "0.5" />
+		<QuantitiesAndPrice StartofPeriod = "01/03/2014" Quantity= "3" Price= "3" />	
+		<QuantitiesAndPrice StartofPeriod = "01/10/2014" Quantity= "2" Price= "2" />	
+		<QuantitiesAndPrice StartofPeriod = "01/12/2014" Quantity= "1" Price= "5" />	
+    </QuantitiesAndPriceSeriesEditor>
+    </SettlementData>
+<ReferenceData>
+	<Comment>Updated 71</Comment>
+</ReferenceData>
+</Update>
+<Copy>
+	<ReferenceData>
+		<Comment>Copy of 71</Comment>
+	</ReferenceData>
+</Copy>
+</DealEntry>

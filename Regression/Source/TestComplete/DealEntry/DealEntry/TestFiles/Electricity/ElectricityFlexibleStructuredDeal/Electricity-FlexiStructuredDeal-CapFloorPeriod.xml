@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<DealEntry xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transaction>
+    <Commodity>Electricity</Commodity>
+    <InstrumentType>Structured Deal</InstrumentType>
+    <GeneralData>
+      <DeliveryType>Physical</DeliveryType>
+      <BuySell>Buy</BuySell>
+      <TransactionName>FlexibleTimeSeries Cap/Floor</TransactionName>
+	  <ModelType>Generation</ModelType>
+    </GeneralData>
+    <Portfolios>
+      <Portfolio>Test Company A</Portfolio>
+      <CounterpartyPortfolio>Test Company B</CounterpartyPortfolio>
+    </Portfolios>
+    <InstrumentData>
+	  <PriceType>Cap/Floor</PriceType>
+	  <CapFloorPricingResolution>Hourly</CapFloorPricingResolution>
+      <ExecutionVenue>[None]</ExecutionVenue>
+      <PriceBasis>NordPool System Price</PriceBasis>
+      <FromDate>10/06/2013</FromDate>
+      <ToDate>10/07/2013</ToDate>
+    </InstrumentData>
+    <SettlementData>
+      <Currency>NOK</Currency>
+      <CurrencySource>Viz</CurrencySource>
+	  <FlexibleStructuredDealInformation>
+		<CapPrice GUIName = "Cap Price" Resolution= "Entire Contract Period" EffectiveFrom = "" Visibitily="true" >	
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="10" />				
+			</TimeSeriesDetails>
+		</CapPrice>
+		<FloorPrice GUIName = "Floor Price" Resolution= "Entire Contract Period" EffectiveFrom = "" Visibitily="true" >
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="1" />				
+			</TimeSeriesDetails>			
+		</FloorPrice>
+		<MarginBefore GUIName = "Margin Before Cap/Floor Price" Resolution= "Entire Contract Period" EffectiveFrom = "" Visibitily="true" >
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="0.7" />				
+			</TimeSeriesDetails>			
+		</MarginBefore>
+		<MarginAfter GUIName = "Margin After Cap/Floor Price" Resolution= "Entire Contract Period" EffectiveFrom = "" Visibitily="true" >
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="0.9" />				
+			</TimeSeriesDetails>			
+		</MarginAfter>
+		<MultiplierBefore GUIName = "Multiplier Before Cap/Floor Price" Resolution= "Entire Contract Period" EffectiveFrom = "" Visibitily="true" >
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="0.3" />				
+			</TimeSeriesDetails>			
+		</MultiplierBefore>
+		<MultiplierAfter GUIName = "Multiplier After Cap/Floor Price" Resolution= "Entire Contract Period" EffectiveFrom = "" Visibitily="true" >
+			<TimeSeriesDetails>
+				<TimeSeriesValue StartofPeriod="10/06/2013" Value="0.5" />				
+			</TimeSeriesDetails>			
+		</MultiplierAfter>
+	  </FlexibleStructuredDealInformation>	
+    </SettlementData>   
+    <ReferenceData />
+  </Transaction>
+</DealEntry>
