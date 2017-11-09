@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Gas-Forward</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <CounterpartyPortfolio>API Test CounterParty</CounterpartyPortfolio>
+        <BuySell>Sell</BuySell>
+      </Portfolios>
+      <GasForward>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>TTF</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2014-11-01</FromDate>
+          <ToDate>2014-11-28</ToDate>
+          <Physical>
+            <DeliveryArea AreaName="TTF" />
+			<DeliveryLocation>TTF_StorageLocation</DeliveryLocation>
+          </Physical>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>150000</Quantity>
+          <QuantityUnit>Sm3/d</QuantityUnit>
+          <Price>0.666</Price>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerSm3</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </GasForward>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2014-10-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Gas-Forward-StorageLocation-TTF</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO>
+  <TransactionId>167</TransactionId>
+  <DealType>Gas-Forward</DealType>
+  <BuySell>Sell</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <DeliveryLocation>TTF_StorageLocation</DeliveryLocation>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>01-Nov-14 - 28-Nov-14</InstrumentName>
+    <PriceBasis>TTF</PriceBasis>
+    <FromDate>2014-11-01T00:00:00</FromDate>
+    <ToDate>2014-11-28T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <BalanceArea>TTF</BalanceArea>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>150000</Quantity>
+    <QuantityUnit>Sm3d</QuantityUnit>
+    <Price>0.666</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerSm3</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2014-09-30T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>Gas-Forward-StorageLocation-TTF</ExternalId>
+    <ExternalSource>RegTest</ExternalSource>
+    <ModificationDateTimeUtc>2015-03-23T17:15:57Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>672</Deliveries>
+    <OriginalQuantity>150000</OriginalQuantity>
+    <ReferringId>168</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

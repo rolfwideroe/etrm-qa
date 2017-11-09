@@ -1,0 +1,63 @@
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>There is no index formula defined with the name passed: non existing</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Data/ElvizETRM/Development/Source/Integration/Viz.Integration.Core.DealImport/Files/Schemas/DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-FloatingPrice</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasFloatingPrice>
+			<InstrumentData>				
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE NBP</PriceBasis>
+				<PriceType>Indexed</PriceType>
+				<IndexFormulaName>non existing</IndexFormulaName>				
+				<FromDate>2008-01-01</FromDate>
+				<ToDate>2008-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="NBP"/>
+				</Physical>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>38</Quantity>
+				<QuantityUnit>MWh/d</QuantityUnit>
+				<PriceMargin>0.1</PriceMargin>
+				<MarketPriceMultiplicator>1</MarketPriceMultiplicator>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasFloatingPrice>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2007-12-24T00:00:00Z</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>FailGasFloatingPriceIndexedNonExistingFormula; should pass</Comment>
+			<ExternalId>FailGasFloatingPriceIndexedNonExistingFormula</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

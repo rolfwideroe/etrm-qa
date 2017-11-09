@@ -1,0 +1,416 @@
+<TransactionByUTITestCase>
+	<InsertXml>
+	<![CDATA[ 
+<BulkDealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">	
+<DealInsert>
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Currency-Future</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<Currency-Future>
+			<InstrumentData>
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<BaseCurrency>NOK</BaseCurrency>
+				<CrossCurrency>EUR</CrossCurrency>
+				<DeliveryDate>2010-05-01</DeliveryDate>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>2.0</Quantity>
+				<Price>3.0</Price>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+			</SettlementData>
+		</Currency-Future>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-04-01T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<Paid>false</Paid>
+			<TimeStampClearedUTC>2010-05-20T15:00:00</TimeStampClearedUTC>
+			<TimeStampConfirmationBrokerUTC>2010-05-21T01:00:00</TimeStampConfirmationBrokerUTC>
+			<TimeStampConfirmationCounterPartyUTC>2010-05-22T17:00:00</TimeStampConfirmationCounterPartyUTC>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>OriginalTransactionsByUTI-Currency1</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>OriginalTransactionsByUTI-Currency1</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+		<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="OriginalTransactionsByUTI-Currency1"/>
+				<DateProperty name="TerminationDate" value="2013-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+				<StringProperty name="EMIRStatus" value="EMIR risk reducing"/>
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+<DealInsert>	
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Currency-AverageRateForward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<Currency-AverageRateForward>
+			<InstrumentData>
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<BaseCurrency>NOK</BaseCurrency>
+				<CrossCurrency>EUR</CrossCurrency>
+				<FromDate>2010-06-01</FromDate>
+				<ToDate>2010-07-01</ToDate>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>2.0</Quantity>
+				<Price>3.0</Price>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+			</SettlementData>
+		</Currency-AverageRateForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-05-01T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<Paid>false</Paid>
+			<TimeStampClearedUTC>2013-11-20T15:00:00</TimeStampClearedUTC>
+			<TimeStampConfirmationBrokerUTC>2013-11-21T13:00:00</TimeStampConfirmationBrokerUTC>
+			<TimeStampConfirmationCounterPartyUTC>2013-11-22T17:00:00</TimeStampConfirmationCounterPartyUTC>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>OriginalTransactionsByUTI-Currency2</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>OriginalTransactionsByUTI-Currency2</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+		<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="OriginalTransactionsByUTI-Currency2"/>
+				<DateProperty name="TerminationDate" value="2013-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+				<StringProperty name="EMIRStatus" value="EMIR risk reducing"/>
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Currency-Forward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<Currency-Forward>
+			<InstrumentData>
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<BaseCurrency>NOK</BaseCurrency>
+				<CrossCurrency>EUR</CrossCurrency>
+				<DeliveryDate>2010-05-01</DeliveryDate>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>2.0</Quantity>
+				<Price>3.0</Price>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+			</SettlementData>
+		</Currency-Forward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-04-01T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<Paid>false</Paid>
+			<TimeStampClearedUTC>2010-11-20T15:00:00</TimeStampClearedUTC>
+			<TimeStampConfirmationBrokerUTC>2010-11-21T13:00:00</TimeStampConfirmationBrokerUTC>
+			<TimeStampConfirmationCounterPartyUTC>2010-11-22T17:00:00</TimeStampConfirmationCounterPartyUTC>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>OriginalTransactionsByUTI-Currency3</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>OriginalTransactionsByUTI-Currenc3</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+		<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="OriginalTransactionsByUTI-Currency3"/>
+				<DateProperty name="TerminationDate" value="2013-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+				<StringProperty name="EMIRStatus" value="EMIR risk reducing"/>
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+  </BulkDealInsert>
+	]]>
+	</InsertXml>
+	<ExpectedResult>
+	<QaTransactionDTO>
+  	 <TransactionId>2279</TransactionId>
+	  <DealType>Currency-Future</DealType>
+	  <BuySell>Buy</BuySell>
+	  <DeliveryType>Financial</DeliveryType>
+	  <Portfolios>
+		<PortfolioName>API Test Customer</PortfolioName>
+		<PortfolioExternalId>API Test Customer</PortfolioExternalId>
+		<CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+		<CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+	  </Portfolios>
+	  <InstrumentData>
+		<ExecutionVenue>Nord Pool</ExecutionVenue>
+		<InstrumentName>EURNOK 01-May-10</InstrumentName>
+		<FromDate>2010-05-01T00:00:00</FromDate>
+		<ToDate>2010-05-01T00:00:00</ToDate>
+		<TimeZone>Central Europe Standard Time</TimeZone>
+		<BaseIsoCurrency>NOK</BaseIsoCurrency>
+		<CrossIsoCurrency>EUR</CrossIsoCurrency>
+	  </InstrumentData>
+	  <SettlementData>
+		<Quantity>2</Quantity>
+		<Price>3</Price>
+		<PriceIsoCurrency>EUR</PriceIsoCurrency>
+		<PriceVolumeUnit>None</PriceVolumeUnit>
+		<CurrencySource>Viz</CurrencySource>
+	  </SettlementData>
+	  <DealDetails>
+		<Trader>DealImport</Trader>
+		<Status>Active</Status>
+		<TradeDateTimeUtc>2010-03-31T22:00:00Z</TradeDateTimeUtc>
+	  </DealDetails>
+	  <FeesData>
+		<ClearingType>Electronic</ClearingType>
+	  </FeesData>
+	  <ReferenceData>
+		<ExternalId>OriginalTransactionsByUTI-Currency1</ExternalId>
+		<ExternalSource>XMLFileImport</ExternalSource>
+		<TicketNumber>TicketNumber</TicketNumber>
+		<DealGroups>
+		  <DealGroup Name="DealGroup1" Value="API Test" />
+		</DealGroups>
+		<Comment>OriginalTransactionsByUTI-Currency1</Comment>
+		<ModificationDateTimeUtc>2016-02-25T08:39:47Z</ModificationDateTimeUtc>
+		<RiskValue>0</RiskValue>
+		<Originator>true</Originator>
+		<Deliveries>1</Deliveries>
+		<OriginalQuantity>2</OriginalQuantity>
+		<ReferringId>2280</ReferringId>
+	  </ReferenceData>
+	  <PropertyGroups>
+		<PropertyGroup Name="Compliance">
+		  <Properties>
+			<Property Name="UTI" Value="OriginalTransactionsByUTI-Currency1" ValueType="System.String" />
+			<Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+			<Property Name="TerminationDate" Value="2013-11-20T00:00:00" ValueType="System.DateTime" />
+			<Property Name="EMIRStatus" Value="EMIR risk reducing" ValueType="System.String" />
+		  </Properties>
+		</PropertyGroup>
+		<PropertyGroup Name="Deal Group">
+		  <Properties>
+			<Property Name="GroupField1" Value="API Test" ValueType="System.String" />
+		  </Properties>
+		</PropertyGroup>
+	  </PropertyGroups>
+	  <TransactionWorkFlowDetails>
+		<Authorised>true</Authorised>
+		<Paid>false</Paid>
+		<ConfirmedByBroker>false</ConfirmedByBroker>
+		<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+		<Audited>false</Audited>
+		<TimeStampAuthorised>2016-02-25T09:39:47</TimeStampAuthorised>
+		<TimeStampCounterpartyAuthorised>2016-02-25T09:39:47</TimeStampCounterpartyAuthorised>
+		<TimeStampClearedUtc>2010-05-20T15:00:00Z</TimeStampClearedUtc>
+		<TimeStampConfirmationBrokerUtc>2010-05-21T01:00:00Z</TimeStampConfirmationBrokerUtc>
+		<TimeStampConfirmationCounterPartyUtc>2010-05-22T17:00:00Z</TimeStampConfirmationCounterPartyUtc>
+	  </TransactionWorkFlowDetails>
+	</QaTransactionDTO>	
+	<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	  <TransactionId>2281</TransactionId>
+	  <DealType>Currency-AverageRateForward</DealType>
+	  <BuySell>Buy</BuySell>
+	  <DeliveryType>Financial</DeliveryType>
+	  <Portfolios>
+		<PortfolioName>API Test Customer</PortfolioName>
+		<PortfolioExternalId>API Test Customer</PortfolioExternalId>
+		<CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+		<CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+	  </Portfolios>
+	  <InstrumentData>
+		<ExecutionVenue>Nord Pool</ExecutionVenue>
+		<InstrumentName>EURNOK 010610 - 010710</InstrumentName>
+		<FromDate>2010-06-01T00:00:00</FromDate>
+		<ToDate>2010-07-01T00:00:00</ToDate>
+		<TimeZone>Central Europe Standard Time</TimeZone>
+		<BaseIsoCurrency>NOK</BaseIsoCurrency>
+		<CrossIsoCurrency>EUR</CrossIsoCurrency>
+	  </InstrumentData>
+	  <SettlementData>
+		<Quantity>2</Quantity>
+		<Price>3</Price>
+		<PriceIsoCurrency>EUR</PriceIsoCurrency>
+		<PriceVolumeUnit>None</PriceVolumeUnit>
+		<CurrencySource>Viz</CurrencySource>
+	  </SettlementData>
+	  <DealDetails>
+		<Trader>DealImport</Trader>
+		<Status>Active</Status>
+		<TradeDateTimeUtc>2010-04-30T22:00:00Z</TradeDateTimeUtc>
+	  </DealDetails>
+	  <FeesData>
+		<ClearingType>Electronic</ClearingType>
+	  </FeesData>
+	  <ReferenceData>
+		<ExternalId>OriginalTransactionsByUTI-Currency2</ExternalId>
+		<ExternalSource>XMLFileImport</ExternalSource>
+		<TicketNumber>TicketNumber</TicketNumber>
+		<DealGroups>
+		  <DealGroup Name="DealGroup1" Value="API Test" />
+		</DealGroups>
+		<Comment>OriginalTransactionsByUTI-Currency2</Comment>
+		<ModificationDateTimeUtc>2016-02-25T08:50:58Z</ModificationDateTimeUtc>
+		<RiskValue>0</RiskValue>
+		<Originator>true</Originator>
+		<Deliveries>1</Deliveries>
+		<OriginalQuantity>2</OriginalQuantity>
+		<ReferringId>2282</ReferringId>
+	  </ReferenceData>
+	  <PropertyGroups>
+		<PropertyGroup Name="Compliance">
+		  <Properties>
+			<Property Name="UTI" Value="OriginalTransactionsByUTI-Currency2" ValueType="System.String" />
+			<Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+			<Property Name="TerminationDate" Value="2013-11-20T00:00:00" ValueType="System.DateTime" />
+			<Property Name="EMIRStatus" Value="EMIR risk reducing" ValueType="System.String" />
+		  </Properties>
+		</PropertyGroup>
+		<PropertyGroup Name="Deal Group">
+		  <Properties>
+			<Property Name="GroupField1" Value="API Test" ValueType="System.String" />
+		  </Properties>
+		</PropertyGroup>
+	  </PropertyGroups>
+	  <TransactionWorkFlowDetails>
+		<Authorised>true</Authorised>
+		<Paid>false</Paid>
+		<ConfirmedByBroker>false</ConfirmedByBroker>
+		<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+		<Audited>false</Audited>
+		<TimeStampAuthorised>2016-02-25T09:50:58</TimeStampAuthorised>
+		<TimeStampCounterpartyAuthorised>2016-02-25T09:50:58</TimeStampCounterpartyAuthorised>
+		<TimeStampClearedUtc>2013-11-20T15:00:00Z</TimeStampClearedUtc>
+		<TimeStampConfirmationBrokerUtc>2013-11-21T13:00:00Z</TimeStampConfirmationBrokerUtc>
+		<TimeStampConfirmationCounterPartyUtc>2013-11-22T17:00:00Z</TimeStampConfirmationCounterPartyUtc>
+	  </TransactionWorkFlowDetails>
+	</QaTransactionDTO>	
+	<QaTransactionDTO>
+	  <TransactionId>2283</TransactionId>
+	  <DealType>Currency-CurrencyForward</DealType>
+	  <BuySell>Buy</BuySell>
+	  <DeliveryType>Financial</DeliveryType>
+	  <Portfolios>
+		<PortfolioName>API Test Customer</PortfolioName>
+		<PortfolioExternalId>API Test Customer</PortfolioExternalId>
+		<CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+		<CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+	  </Portfolios>
+	  <InstrumentData>
+		<ExecutionVenue>Nord Pool</ExecutionVenue>
+		<InstrumentName>EURNOK 01-May-10</InstrumentName>
+		<FromDate>2010-05-01T00:00:00</FromDate>
+		<ToDate>2010-05-01T00:00:00</ToDate>
+		<TimeZone>Central Europe Standard Time</TimeZone>
+		<BaseIsoCurrency>NOK</BaseIsoCurrency>
+		<CrossIsoCurrency>EUR</CrossIsoCurrency>
+	  </InstrumentData>
+	  <SettlementData>
+		<Quantity>2</Quantity>
+		<Price>3</Price>
+		<PriceIsoCurrency>EUR</PriceIsoCurrency>
+		<PriceVolumeUnit>None</PriceVolumeUnit>
+		<CurrencySource>Viz</CurrencySource>
+	  </SettlementData>
+	  <DealDetails>
+		<Trader>DealImport</Trader>
+		<Status>Active</Status>
+		<TradeDateTimeUtc>2010-03-31T22:00:00Z</TradeDateTimeUtc>
+	  </DealDetails>
+	  <FeesData>
+		<ClearingType>Electronic</ClearingType>
+	  </FeesData>
+	  <ReferenceData>
+		<ExternalId>OriginalTransactionsByUTI-Currenc3</ExternalId>
+		<ExternalSource>XMLFileImport</ExternalSource>
+		<TicketNumber>TicketNumber</TicketNumber>
+		<DealGroups>
+		  <DealGroup Name="DealGroup1" Value="API Test" />
+		</DealGroups>
+		<Comment>OriginalTransactionsByUTI-Currency3</Comment>
+		<ModificationDateTimeUtc>2016-02-25T08:39:50Z</ModificationDateTimeUtc>
+		<RiskValue>0</RiskValue>
+		<Originator>true</Originator>
+		<Deliveries>1</Deliveries>
+		<OriginalQuantity>2</OriginalQuantity>
+		<ReferringId>2284</ReferringId>
+	  </ReferenceData>
+	  <PropertyGroups>
+		<PropertyGroup Name="Compliance">
+		  <Properties>
+			<Property Name="UTI" Value="OriginalTransactionsByUTI-Currency3" ValueType="System.String" />
+			<Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+			<Property Name="TerminationDate" Value="2013-11-20T00:00:00" ValueType="System.DateTime" />
+			<Property Name="EMIRStatus" Value="EMIR risk reducing" ValueType="System.String" />
+		  </Properties>
+		</PropertyGroup>
+		<PropertyGroup Name="Deal Group">
+		  <Properties>
+			<Property Name="GroupField1" Value="API Test" ValueType="System.String" />
+		  </Properties>
+		</PropertyGroup>
+	  </PropertyGroups>
+	  <TransactionWorkFlowDetails>
+		<Authorised>true</Authorised>
+		<Paid>false</Paid>
+		<ConfirmedByBroker>false</ConfirmedByBroker>
+		<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+		<Audited>false</Audited>
+		<TimeStampAuthorised>2016-02-25T09:39:50</TimeStampAuthorised>
+		<TimeStampCounterpartyAuthorised>2016-02-25T09:39:50</TimeStampCounterpartyAuthorised>
+		<TimeStampClearedUtc>2010-11-20T15:00:00Z</TimeStampClearedUtc>
+		<TimeStampConfirmationBrokerUtc>2010-11-21T13:00:00Z</TimeStampConfirmationBrokerUtc>
+		<TimeStampConfirmationCounterPartyUtc>2010-11-22T17:00:00Z</TimeStampConfirmationCounterPartyUtc>
+	  </TransactionWorkFlowDetails>
+	</QaTransactionDTO>
+    </ExpectedResult>
+</TransactionByUTITestCase>

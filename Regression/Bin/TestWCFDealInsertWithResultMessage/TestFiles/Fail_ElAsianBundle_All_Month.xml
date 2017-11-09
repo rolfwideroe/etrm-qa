@@ -1,0 +1,57 @@
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Not supported with sampling period All and quantity resolution Month</Message>
+<TestData>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-Asian</DealType>
+      <Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityAsian>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2011-11-01</FromDate>
+          <ToDate>2011-11-30</ToDate>
+          <Financial />
+          <PutCall>Call</PutCall>
+          <Strike>30</Strike>
+          <SamplingPeriod>All</SamplingPeriod>
+        </InstrumentData>
+        <SettlementData>
+          <QuantitySeries>
+            <Resolution>Monthly</Resolution>
+            <TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="9.61" />
+          </QuantitySeries>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>3.57</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <ClearingFee>0</ClearingFee>
+          <BrokerTradingFee>0</BrokerTradingFee>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </ElectricityAsian>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fail_ElAsianBundle_All_Month</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+</TestData>
+</TestCase>

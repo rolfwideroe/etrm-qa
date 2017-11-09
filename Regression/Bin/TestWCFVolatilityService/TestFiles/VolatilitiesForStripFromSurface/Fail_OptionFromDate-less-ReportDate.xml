@@ -1,0 +1,25 @@
+<VolatilitySurfaceTestCase>
+	<ExpectedResult>
+		<Result>Failure</Result>
+		<ErrorMessage>Failed to return implicit volatilities for option strip: Value of 'ReportDate' can't be greater than value of 'StripFromDate'</ErrorMessage>
+	</ExpectedResult>
+	<InputData>
+		<ExerciseTimeOfDay>2014-04-01T06:00:00</ExerciseTimeOfDay>
+		<OptionFromDate>2011-11-15</OptionFromDate>
+		<OptionToDate>2012-06-30</OptionToDate>
+		<LoadType>Base</LoadType>
+		<PriceBookAppendix></PriceBookAppendix>
+		<ReferenceAreaName>NPS</ReferenceAreaName>
+		<ReportDate>2011-11-16</ReportDate>
+		<Strike>45</Strike>
+		<Resolution>Hour</Resolution>
+		<TemplateName>NPXSYSALL</TemplateName>
+	</InputData>
+	<ExpectedProperties>
+		<CurveType>MarketPriceCurve</CurveType>
+		<VolumeUnit>MWh</VolumeUnit>
+		<TimeZone>CET</TimeZone>
+	</ExpectedProperties>
+	<ExpectedValues>
+	</ExpectedValues>
+</VolatilitySurfaceTestCase>

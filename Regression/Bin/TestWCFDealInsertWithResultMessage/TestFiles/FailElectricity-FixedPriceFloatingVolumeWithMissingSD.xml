@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+	<TestResult>Failure</TestResult>
+	<Message>No Structured Deal or Gen Con for Volume Reference with external id No Underlying SD exists.</Message>
+	<TestData>
+		<DealInsert>
+			<MetaData>
+				<Timezone>CET</Timezone>
+			</MetaData>
+			<Transaction>
+				<TransactionType>Automatic</TransactionType>
+				<DealType>Electricity-FixedPriceFloatingVolume</DealType>
+				<Portfolios>
+					<Portfolio>API Test Customer</Portfolio>
+					<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+					<BuySell>Buy</BuySell>
+				</Portfolios>
+				<ElectricityFixedPriceFloatingVolume>
+					<InstrumentData>
+						<PriceBasis>NordPool System Price</PriceBasis>
+						<LoadProfile>Base</LoadProfile>
+						<VolumeReferenceExternalId>No Underlying SD</VolumeReferenceExternalId>
+						<FromDate>2014-04-08</FromDate>
+						<ToDate>2014-04-12</ToDate>
+						<Financial />
+					</InstrumentData>
+					<SettlementData>
+						<Quantity>25</Quantity>
+						<QuantityUnit>%</QuantityUnit>
+						<Price>30</Price>
+						<Currency>EUR</Currency>
+						<CurrencySource>Viz</CurrencySource>
+						<Clearing>Electronic</Clearing>
+						<ClearingCurrency>EUR</ClearingCurrency>
+						<BrokerCurrency>EUR</BrokerCurrency>
+					</SettlementData>
+				</ElectricityFixedPriceFloatingVolume>
+				<DealDetails>
+					<Status>Active</Status>
+					<Trader>DealImport</Trader>
+					<TradeDate>2014-01-06T00:00:00</TradeDate>
+				</DealDetails>
+				<ReferenceData>
+					<ExternalId>FailElectricity-FixedPriceFloatingVolumeWithMissingSD</ExternalId>
+					<ExternalSource>XMLFileImport</ExternalSource>
+				</ReferenceData>
+			</Transaction>
+		</DealInsert>
+	</TestData>
+</TestCase>

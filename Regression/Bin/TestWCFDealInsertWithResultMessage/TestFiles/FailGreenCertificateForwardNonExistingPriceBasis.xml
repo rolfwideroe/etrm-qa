@@ -1,0 +1,63 @@
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>No enabled pricebases with name:nopricebasis could be found in the database. Make sure only to include positions which refer to an enabled price basis!</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>GreenCertificate-Forward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GreenCertificateForward>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>nopricebasis</PriceBasis>
+				<FromDate>2013-01-01</FromDate>
+				<ToDate>2013-12-31</ToDate>
+				<TransferDate>2012-08-27</TransferDate>
+				<CertificateType>LECs</CertificateType>
+				<ProductionFacility>Evanger Kraft</ProductionFacility>
+				<EnvironmentLabel>OK Power</EnvironmentLabel>
+				<FromCountry>Angola</FromCountry>
+				<ToCountry>Cyprus</ToCountry>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>40</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GreenCertificateForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2007-12-24T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>GreenCertificateForward; should fail</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailGreenCertificateForward</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

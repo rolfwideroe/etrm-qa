@@ -1,0 +1,25 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-GridPointPricebasis-ActualPL-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-16T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,HI,109,EUR,-152670,monthly,Structured Deal,Special-Cases-GridPointPricebasis-InDelivery,Special-Cases-GridPointPricebasis-InDelivery</record>
+        <record>2011-11-01 00:00:00.000,0,HI,109,EUR,-298312.077398834,monthly,Structured Deal,Special-Cases-GridPointPricebasis-InDelivery,Special-Cases-GridPointPricebasis-InDelivery</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,-345811.199999981,monthly,Structured Deal,Special-Cases-GridPointPricebasis-InDelivery,Special-Cases-GridPointPricebasis-InDelivery</record>
+        <record>2011-01-01 00:00:00.000,0,HI,109,EUR,-444309.6,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PostDelivery,Special-Cases-GridPointPricebasis-PostDelivery</record>
+        <record>2011-02-01 00:00:00.000,0,HI,109,EUR,-366430.5,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PostDelivery,Special-Cases-GridPointPricebasis-PostDelivery</record>
+        <record>2011-03-01 00:00:00.000,0,HI,109,EUR,-395911.4,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PostDelivery,Special-Cases-GridPointPricebasis-PostDelivery</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,-368279.999999757,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PreDelivery,Special-Cases-GridPointPricebasis-PreDelivery</record>
+        <record>2012-02-01 00:00:00.000,0,TR,109,EUR,-347829.358298771,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PreDelivery,Special-Cases-GridPointPricebasis-PreDelivery</record>
+        <record>2012-03-01 00:00:00.000,0,TR,109,EUR,-347560.041701327,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PreDelivery,Special-Cases-GridPointPricebasis-PreDelivery</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

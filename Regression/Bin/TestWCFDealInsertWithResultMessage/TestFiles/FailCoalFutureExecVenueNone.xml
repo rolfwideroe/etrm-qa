@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Execution Venue type of None is not supported for Coal Futures.</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>123456</MessageId>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Coal-Future</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<CoalFuture>
+			<InstrumentData>
+				<Timezone>CET</Timezone>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>Coal API #2</PriceBasis>
+				<FromDate>2015-05-30</FromDate>
+				<ToDate>2015-06-26</ToDate>
+				<Financial/>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>120</Quantity>
+				<QuantityUnit>Ton</QuantityUnit>
+				<Price>20</Price>
+				<Currency>USD</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</CoalFuture>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2014-11-11T12:00:22</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>FailCoalFutureExecVenueNone; should fail exec venue can't be None</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailCoalFutureExecVenueNone</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

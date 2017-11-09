@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+  <MetaData> 
+    <Timezone>CET</Timezone> 
+  </MetaData> 
+  <Transaction> 
+    <TransactionType>Automatic</TransactionType> 
+    <DealType>Elcertificate-Future</DealType> 
+    <Portfolios> 
+      <Portfolio>API Test Customer</Portfolio> 
+      <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio> 
+      <BuySell>Sell</BuySell> 
+    </Portfolios> 
+       <ElcertificateFuture> 
+        <InstrumentData> 
+          <Timezone>CET</Timezone> 
+          <ExecutionVenue>Nord Pool</ExecutionVenue> 
+          <PriceBasis>ElCertificate NASDAQ</PriceBasis> 
+          <SettlementDate>2011-02-16</SettlementDate> 
+          <Physical/> 
+        </InstrumentData> 
+        <SettlementData> 
+          <Quantity>12</Quantity> 
+          <QuantityUnit>ECS</QuantityUnit> 
+          <Price>5</Price> 
+          <Currency>EUR</Currency> 
+          <PriceVolumeUnit>PerECS</PriceVolumeUnit> 
+          <CurrencySource>Viz</CurrencySource> 
+          <Clearing>Electronic</Clearing> 
+          <ClearingCurrency>EUR</ClearingCurrency> 
+          <ClearingFee>0</ClearingFee> 
+          <BrokerTradingFee>0</BrokerTradingFee> 
+          <BrokerCurrency>EUR</BrokerCurrency> 
+          <BrokerFee>0</BrokerFee> 
+          <BrokerFeeCurrency>EUR</BrokerFeeCurrency> 
+          <TradingFee>0</TradingFee> 
+          <TradingFeeCurrency>EUR</TradingFeeCurrency> 
+          <CommissionFee>0</CommissionFee> 
+          <CommissionFeeCurrency>EUR</CommissionFeeCurrency> 
+        </SettlementData> 
+      </ElcertificateFuture> 
+    <DealDetails> 
+      <Status>Active</Status> 
+      <Trader>Vizard</Trader> 
+      <TradeDate>2011-02-14T00:00:00</TradeDate> 
+    </DealDetails> 
+    <ReferenceData> 
+      <GroupFields> 
+        <GroupField1></GroupField1> 
+        <GroupField2></GroupField2> 
+        <GroupField3></GroupField3> 
+      </GroupFields> 
+      <ExternalId>PassElCertificateNasdaqFuture</ExternalId> 
+      <ExternalSource>XMLFileImport</ExternalSource> 
+      <TicketNumber>TicketNumber</TicketNumber> 
+    </ReferenceData> 
+  </Transaction> 
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>177</TransactionId>
+  <DealType>Elcertificate-Future</DealType>
+  <BuySell>Sell</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>ELCEURD1602-11</InstrumentName>
+    <PriceBasis>ElCertificate NASDAQ</PriceBasis>
+    <FromDate>2011-02-16T00:00:00</FromDate>
+    <ToDate>2011-02-16T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>12</Quantity>
+    <QuantityUnit>ECS</QuantityUnit>
+    <Price>5</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerECS</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2011-02-13T23:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassElCertificateNasdaqFuture</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+    <ModificationDateTimeUtc>2014-08-11T14:18:16Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>24</Deliveries>
+    <OriginalQuantity>12</OriginalQuantity>
+    <ReferringId>178</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

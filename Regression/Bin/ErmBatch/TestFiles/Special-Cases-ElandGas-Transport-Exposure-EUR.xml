@@ -1,0 +1,82 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-ElandGas-Transport-Exposure-EUR</workspace>
+    <monitor>Special-Cases-ElandGas-Transport-Exposure-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>Special-Cases,,D1011-11,2011-11-10 00:00:00.000,2011-11-10 00:00:00.000,Electricity Transport,Physical,Base,,,CET,EUR,Special-Cases-ElandGas-Transport-El-0001,France,MWh,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,-300,-174,-126</record>
+        <record>Special-Cases,,D1011-11,2011-11-10 00:00:00.000,2011-11-10 00:00:00.000,Electricity Transport,Physical,Base,,,CET,EUR,Special-Cases-ElandGas-Transport-El-0001,GERMANY,MWh,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,300,174,126</record>
+        <record>Special-Cases,,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,ICE NBP,th,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,8189.13991989608,0,0</record>
+        <record>Special-Cases,,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,ICE NBP,th,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,8189.13991989608,0,0</record>
+        <record>Special-Cases,,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,ICE NBP,th,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,8189.13991989608,0,0</record>
+        <record>Special-Cases,,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,ICE NBP,th,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,8189.13991989608,0,0</record>
+        <record>Special-Cases,,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,ICE NBP,th,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,8189.13991989608,0,0</record>
+        <record>Special-Cases,,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,ICE TTF,MWh,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,-240,0,0</record>
+        <record>Special-Cases,,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,ICE TTF,MWh,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,-240,0,0</record>
+        <record>Special-Cases,,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,ICE TTF,MWh,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,-240,0,0</record>
+        <record>Special-Cases,,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,ICE TTF,MWh,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,-240,0,0</record>
+        <record>Special-Cases,,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,ICE TTF,MWh,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,-240,0,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>France,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,45.592,45.592,45.592</record>
+        <record>France,2011-11-03 00:00:00.000,2011-11-04 00:00:00.000,45.592,45.592,45.592</record>
+        <record>France,2011-11-04 00:00:00.000,2011-11-05 00:00:00.000,45.592,45.592,45.592</record>
+        <record>France,2011-11-05 00:00:00.000,2011-11-06 00:00:00.000,45.592,0,45.592</record>
+        <record>France,2011-11-06 00:00:00.000,2011-11-07 00:00:00.000,45.592,0,45.592</record>
+        <record>France,2011-11-07 00:00:00.000,2011-11-08 00:00:00.000,45.592,45.5920000000001,45.5919999999999</record>
+        <record>France,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,45.592,45.5920000000001,45.5919999999999</record>
+        <record>France,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,45.592,45.5919999999999,45.5920000000001</record>
+        <record>France,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,45.5920000000001,45.5920000000001,45.5920000000001</record>
+        <record>GERMANY,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,49.9332618815151,65.1254309914042,34.7410927716259</record>
+        <record>GERMANY,2011-11-03 00:00:00.000,2011-11-04 00:00:00.000,50.2328760491718,64.8791154143982,35.5866366839454</record>
+        <record>GERMANY,2011-11-04 00:00:00.000,2011-11-05 00:00:00.000,50.5915769333803,64.6654535941874,36.5177002725733</record>
+        <record>GERMANY,2011-11-05 00:00:00.000,2011-11-06 00:00:00.000,53.7213231360382,0,53.7213231360382</record>
+        <record>GERMANY,2011-11-06 00:00:00.000,2011-11-07 00:00:00.000,53.0309619998896,0,53.0309619998896</record>
+        <record>GERMANY,2011-11-07 00:00:00.000,2011-11-08 00:00:00.000,58.6842213131972,74.1344103780734,43.2340322483209</record>
+        <record>GERMANY,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,59.7949776350273,74.6487095946241,44.9412456754306</record>
+        <record>GERMANY,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,57.338989486286,71.0943275682552,43.5836514043167</record>
+        <record>GERMANY,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,47.9803191283937,57.0545644237367,38.9060738330507</record>
+        <record>ICE NBP,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,0.267464829165975,0,0</record>
+        <record>ICE NBP,2011-11-03 00:00:00.000,2011-11-04 00:00:00.000,0.282906535805705,0,0</record>
+        <record>ICE NBP,2011-11-04 00:00:00.000,2011-11-05 00:00:00.000,0.298343813283984,0,0</record>
+        <record>ICE NBP,2011-11-05 00:00:00.000,2011-11-06 00:00:00.000,0.313772541436503,0,0</record>
+        <record>ICE NBP,2011-11-06 00:00:00.000,2011-11-07 00:00:00.000,0.32918732554515,0,0</record>
+        <record>ICE NBP,2011-11-07 00:00:00.000,2011-11-08 00:00:00.000,0.344581495739467,0,0</record>
+        <record>ICE NBP,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,0.359947106986207,0,0</record>
+        <record>ICE NBP,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,0.375274940518147,0,0</record>
+        <record>ICE NBP,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,0.390554503495077,0,0</record>
+        <record>ICE NBP,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,0.405774027886719,0,0</record>
+        <record>ICE NBP,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,0.420920470107221,0,0</record>
+        <record>ICE NBP,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,0.435979510757798,0,0</record>
+        <record>ICE NBP,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,0.450935554274843,0,0</record>
+        <record>ICE NBP,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,0.46577172854127,0,0</record>
+        <record>ICE NBP,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,0.480469884598334,0,0</record>
+        <record>ICE TTF,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,23.2287939424384,0,0</record>
+        <record>ICE TTF,2011-11-03 00:00:00.000,2011-11-04 00:00:00.000,23.2945799648,0,0</record>
+        <record>ICE TTF,2011-11-04 00:00:00.000,2011-11-05 00:00:00.000,23.3603518150982,0,0</record>
+        <record>ICE TTF,2011-11-05 00:00:00.000,2011-11-06 00:00:00.000,23.4260977021759,0,0</record>
+        <record>ICE TTF,2011-11-06 00:00:00.000,2011-11-07 00:00:00.000,23.4918022068282,0,0</record>
+        <record>ICE TTF,2011-11-07 00:00:00.000,2011-11-08 00:00:00.000,23.5574462818015,0,0</record>
+        <record>ICE TTF,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,23.6230072517945,0,0</record>
+        <record>ICE TTF,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,23.6884588134569,0,0</record>
+        <record>ICE TTF,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,23.753771035391,0,0</record>
+        <record>ICE TTF,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,23.81891035815,0,0</record>
+        <record>ICE TTF,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,23.8838395942392,0,0</record>
+        <record>ICE TTF,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,23.948517928116,0,0</record>
+        <record>ICE TTF,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,24.012900916189,0,0</record>
+        <record>ICE TTF,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,24.0769404868187,0,0</record>
+        <record>ICE TTF,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,24.1405849403174,0,0</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

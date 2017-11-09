@@ -1,0 +1,74 @@
+<DbQuery>
+	<Columns>	
+		<Column ColumnName="ExternalIds" ColumnDataType="System.String"/>
+		<Column ColumnName="ExposurePriceBasis" ColumnDataType="System.String"/>
+		<Column ColumnName="ExposureUnit" ColumnDataType="System.String"/>
+		<Column ColumnName="TotalBaseExposure" ColumnDataType="System.Double"/>
+		<Column ColumnName="TotalPeakExposure" ColumnDataType="System.Double"/>
+		<Column ColumnName="TotalOffPeakExposure" ColumnDataType="System.Double"/>
+	</Columns>
+	<SqlQuery>
+	<![CDATA[
+		DECLARE @workspace varchar(255)
+		DECLARE @monitor varchar(255)
+		DECLARE @reportDate varchar(255)
+
+		set @workspace='{workspace}'
+		set @monitor='{monitor}'
+		set @reportDate='{reportdate}'
+
+				declare @mappingTable TABLE (TransIds NVARCHAR(4000),ExtIds VARCHAR(4000))
+		insert into @mappingTable
+		SELECT 
+		c.RMC_TransactionIds,dbo.ufn_TransIdCsvToExtIdCsv(c.RMC_TransactionIds) AS ExtIds
+		  FROM RMC_Contracts c
+
+			WHERE c.RMC_RMR_ID=(
+								SELECT [RMR_ID] FROM [RMR_ReportHeader] 
+								WHERE [RMR_Workspace]=@workspace
+								AND [RMR_FrmName]=@monitor
+								AND [RMR_RpDate]=@reportDate
+								)
+
+	   declare @extIdTable TABLE (TransIds NVARCHAR(4000),ExtIds VARCHAR(4000))
+	
+	   insert into @extIdTable
+	   SELECT m.TransIds,m.ExtIds FROM @mappingTable m GROUP BY m.TransIds,m.ExtIds	
+			
+
+		
+
+
+			SELECT 
+
+			  			   
+			   ext.ExtIds as ExternalIds
+			   
+			   ,e.RMV_PriceBasisName as ExposurePriceBasis
+			   ,e.RMV_Unit as ExposureUnit
+			  ,SUM(e.RMV_Exposure) as TotalBaseExposure
+			  ,SUM(e.RMV_PeakExposure) as TotalPeakExposure
+			  ,SUM(e.RMV_OffPeakExposure) as TotalOffPeakExposure
+
+
+		  FROM RMC_Contracts c
+		  left JOIN @extIdTable ext
+		  ON ext.TransIds=c.RMC_TransactionIds
+		  left JOIN RMV_Values e 
+		  ON c.RMC_ContractId=e.RMV_RMC_ContractId
+
+
+
+			WHERE c.RMC_RMR_ID=(
+								SELECT [RMR_ID] FROM [RMR_ReportHeader] 
+								WHERE [RMR_Workspace]=@workspace
+								AND [RMR_FrmName]=@monitor
+								AND [RMR_RpDate]=@reportDate
+							)
+		 GROUP BY ext.ExtIds,e.RMV_PriceBasisName,e.RMV_Unit
+		 ORDER BY ext.ExtIds,e.RMV_PriceBasisName
+	
+
+	]]>
+	</SqlQuery>
+</DbQuery>

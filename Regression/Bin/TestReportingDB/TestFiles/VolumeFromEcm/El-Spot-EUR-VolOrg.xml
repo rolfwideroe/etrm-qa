@@ -1,0 +1,91 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-Spot-EUR-VolOrg</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1106-10,El-Spot-EUR-0001</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1206-12,El-Spot-EUR-00015</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,-141,monthly,Spot,D1106-10,El-Spot-EUR-0002</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1206-10,El-Spot-EUR-0003</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1206-10,El-Spot-EUR-0004</record>
+        <record>2010-03-01 00:00:00.000,0,HI,167,EUR,129,monthly,Spot,D2803-10,El-Spot-EUR-0005</record>
+        <record>2010-03-01 00:00:00.000,0,HI,167,EUR,129,monthly,Spot,D2803-10,El-Spot-EUR-0006</record>
+        <record>2010-03-01 00:00:00.000,0,HI,167,EUR,-150,monthly,Spot,D2803-10,El-Spot-EUR-0007</record>
+        <record>2010-10-01 00:00:00.000,0,HI,167,EUR,162.6,monthly,Spot,D3110-10,El-Spot-EUR-0008</record>
+        <record>2010-10-01 00:00:00.000,0,HI,167,EUR,-162.6,monthly,Spot,D3110-10,El-Spot-EUR-0009</record>
+        <record>2010-10-01 00:00:00.000,0,HI,167,EUR,-162.6,monthly,Spot,D3110-10,El-Spot-EUR-0010</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1306-10,El-Spot-EUR-0011</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1106-12,El-Spot-EUR-0012</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,-141,monthly,Spot,D1106-12,El-Spot-EUR-0013</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1206-12,El-Spot-EUR-0014</record>
+        <record>2012-03-01 00:00:00.000,0,TR,167,EUR,129,monthly,Spot,D2503-12,El-Spot-EUR-0016</record>
+        <record>2012-03-01 00:00:00.000,0,TR,167,EUR,129,monthly,Spot,D2503-12,El-Spot-EUR-0017</record>
+        <record>2012-03-01 00:00:00.000,0,TR,167,EUR,-150,monthly,Spot,D2503-12,El-Spot-EUR-0018</record>
+        <record>2012-10-01 00:00:00.000,0,TR,167,EUR,162.6,monthly,Spot,D2810-12,El-Spot-EUR-0019</record>
+        <record>2012-10-01 00:00:00.000,0,TR,167,EUR,-162.6,monthly,Spot,D2810-12,El-Spot-EUR-0020</record>
+        <record>2012-10-01 00:00:00.000,0,TR,167,EUR,-162.6,monthly,Spot,D2810-12,El-Spot-EUR-0021</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1306-12,El-Spot-EUR-0022</record>
+        <record>2011-01-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D0101-11,El-Spot-EUR-0023</record>
+        <record>2011-01-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D0101-11,El-Spot-EUR-0024</record>
+        <record>2011-01-01 00:00:00.000,0,HI,167,EUR,-141,monthly,Spot,D0101-11,El-Spot-EUR-0025</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1106-10,El-Spot-EUR-15-0001</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1206-12,El-Spot-EUR-15-00015</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,-141,monthly,Spot,D1106-10,El-Spot-EUR-15-0002</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1206-10,El-Spot-EUR-15-0003</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1206-10,El-Spot-EUR-15-0004</record>
+        <record>2010-03-01 00:00:00.000,0,HI,167,EUR,129,monthly,Spot,D2803-10,El-Spot-EUR-15-0005</record>
+        <record>2010-03-01 00:00:00.000,0,HI,167,EUR,129,monthly,Spot,D2803-10,El-Spot-EUR-15-0006</record>
+        <record>2010-03-01 00:00:00.000,0,HI,167,EUR,-150,monthly,Spot,D2803-10,El-Spot-EUR-15-0007</record>
+        <record>2010-10-01 00:00:00.000,0,HI,167,EUR,162.6,monthly,Spot,D3110-10,El-Spot-EUR-15-0008</record>
+        <record>2010-10-01 00:00:00.000,0,HI,167,EUR,-162.6,monthly,Spot,D3110-10,El-Spot-EUR-15-0009</record>
+        <record>2010-10-01 00:00:00.000,0,HI,167,EUR,-162.6,monthly,Spot,D3110-10,El-Spot-EUR-15-0010</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1306-10,El-Spot-EUR-15-0011</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1106-12,El-Spot-EUR-15-0012</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,-141,monthly,Spot,D1106-12,El-Spot-EUR-15-0013</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1206-12,El-Spot-EUR-15-0014</record>
+        <record>2012-03-01 00:00:00.000,0,TR,167,EUR,129,monthly,Spot,D2503-12,El-Spot-EUR-15-0016</record>
+        <record>2012-03-01 00:00:00.000,0,TR,167,EUR,129,monthly,Spot,D2503-12,El-Spot-EUR-15-0017</record>
+        <record>2012-03-01 00:00:00.000,0,TR,167,EUR,-150,monthly,Spot,D2503-12,El-Spot-EUR-15-0018</record>
+        <record>2012-10-01 00:00:00.000,0,TR,167,EUR,162.6,monthly,Spot,D2810-12,El-Spot-EUR-15-0019</record>
+        <record>2012-10-01 00:00:00.000,0,TR,167,EUR,-162.6,monthly,Spot,D2810-12,El-Spot-EUR-15-0020</record>
+        <record>2012-10-01 00:00:00.000,0,TR,167,EUR,-162.6,monthly,Spot,D2810-12,El-Spot-EUR-15-0021</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1306-12,El-Spot-EUR-15-0022</record>
+        <record>2011-01-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D0101-11,El-Spot-EUR-15-0023</record>
+        <record>2011-01-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D0101-11,El-Spot-EUR-15-0024</record>
+        <record>2011-01-01 00:00:00.000,0,HI,167,EUR,-141,monthly,Spot,D0101-11,El-Spot-EUR-15-0025</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1106-10,El-Spot-EUR-30-0001</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1206-12,El-Spot-EUR-30-00015</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,-141,monthly,Spot,D1106-10,El-Spot-EUR-30-0002</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1206-10,El-Spot-EUR-30-0003</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1206-10,El-Spot-EUR-30-0004</record>
+        <record>2010-03-01 00:00:00.000,0,HI,167,EUR,129,monthly,Spot,D2803-10,El-Spot-EUR-30-0005</record>
+        <record>2010-03-01 00:00:00.000,0,HI,167,EUR,129,monthly,Spot,D2803-10,El-Spot-EUR-30-0006</record>
+        <record>2010-03-01 00:00:00.000,0,HI,167,EUR,-150,monthly,Spot,D2803-10,El-Spot-EUR-30-0007</record>
+        <record>2010-10-01 00:00:00.000,0,HI,167,EUR,162.6,monthly,Spot,D3110-10,El-Spot-EUR-30-0008</record>
+        <record>2010-10-01 00:00:00.000,0,HI,167,EUR,-162.6,monthly,Spot,D3110-10,El-Spot-EUR-30-0009</record>
+        <record>2010-10-01 00:00:00.000,0,HI,167,EUR,-162.6,monthly,Spot,D3110-10,El-Spot-EUR-30-0010</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D1306-10,El-Spot-EUR-30-0011</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1106-12,El-Spot-EUR-30-0012</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,-141,monthly,Spot,D1106-12,El-Spot-EUR-30-0013</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1206-12,El-Spot-EUR-30-0014</record>
+        <record>2012-03-01 00:00:00.000,0,TR,167,EUR,129,monthly,Spot,D2503-12,El-Spot-EUR-30-0016</record>
+        <record>2012-03-01 00:00:00.000,0,TR,167,EUR,129,monthly,Spot,D2503-12,El-Spot-EUR-30-0017</record>
+        <record>2012-03-01 00:00:00.000,0,TR,167,EUR,-150,monthly,Spot,D2503-12,El-Spot-EUR-30-0018</record>
+        <record>2012-10-01 00:00:00.000,0,TR,167,EUR,162.6,monthly,Spot,D2810-12,El-Spot-EUR-30-0019</record>
+        <record>2012-10-01 00:00:00.000,0,TR,167,EUR,-162.6,monthly,Spot,D2810-12,El-Spot-EUR-30-0020</record>
+        <record>2012-10-01 00:00:00.000,0,TR,167,EUR,-162.6,monthly,Spot,D2810-12,El-Spot-EUR-30-0021</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,141,monthly,Spot,D1306-12,El-Spot-EUR-30-0022</record>
+        <record>2011-01-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D0101-11,El-Spot-EUR-30-0023</record>
+        <record>2011-01-01 00:00:00.000,0,HI,167,EUR,141,monthly,Spot,D0101-11,El-Spot-EUR-30-0024</record>
+        <record>2011-01-01 00:00:00.000,0,HI,167,EUR,-141,monthly,Spot,D0101-11,El-Spot-EUR-30-0025</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

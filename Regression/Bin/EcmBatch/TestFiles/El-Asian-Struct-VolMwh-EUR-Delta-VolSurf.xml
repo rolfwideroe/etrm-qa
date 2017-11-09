@@ -1,0 +1,80 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-Asian-Struct-VolMwh-EUR-Delta-VolSurf</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-16T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,1694.028,monthly,Asian,ASIC/A M11-11 30.00,El-Asian-Struct-EUR-0001</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,19.7193323299032,monthly,Asian,ASIC/A M11-11 50.00,El-Asian-Struct-EUR-0002</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,-1673.64593368305,monthly,Asian,ASIP/A M11-11 50.00,El-Asian-Struct-EUR-0004</record>
+        <record>2011-06-01 00:00:00.000,0,HI,107,EUR,3695.78,monthly,Asian,ASIC/A M06-11 30.00,El-Asian-Struct-EUR-0005</record>
+        <record>2011-06-01 00:00:00.000,0,HI,107,EUR,-3695.78,monthly,Asian,ASIP/A M06-11 50.00,El-Asian-Struct-EUR-0008</record>
+        <record>2010-10-01 00:00:00.000,0,HI,107,EUR,3654.63,monthly,Asian,ASIC/M Q4-10 30.00,El-Asian-Struct-EUR-0009</record>
+        <record>2010-11-01 00:00:00.000,0,HI,107,EUR,3496.05,monthly,Asian,ASIC/M Q4-10 30.00,El-Asian-Struct-EUR-0009</record>
+        <record>2010-12-01 00:00:00.000,0,HI,107,EUR,3847.03,monthly,Asian,ASIC/M Q4-10 30.00,El-Asian-Struct-EUR-0009</record>
+        <record>2010-11-01 00:00:00.000,0,HI,107,EUR,3496.05,monthly,Asian,ASIC/M Q4-10 50.00,El-Asian-Struct-EUR-0010</record>
+        <record>2010-12-01 00:00:00.000,0,HI,107,EUR,3847.03,monthly,Asian,ASIC/M Q4-10 50.00,El-Asian-Struct-EUR-0010</record>
+        <record>2010-10-01 00:00:00.000,0,HI,107,EUR,-3654.63,monthly,Asian,ASIP/M Q4-10 50.00,El-Asian-Struct-EUR-0012</record>
+        <record>2012-04-01 00:00:00.000,0,TR,107,EUR,3165.86404515411,monthly,Asian,ASIC/M Q2-12 30.00,El-Asian-Struct-EUR-0013</record>
+        <record>2012-05-01 00:00:00.000,0,TR,107,EUR,3009.02056730195,monthly,Asian,ASIC/M Q2-12 30.00,El-Asian-Struct-EUR-0013</record>
+        <record>2012-06-01 00:00:00.000,0,TR,107,EUR,3091.90284986968,monthly,Asian,ASIC/M Q2-12 30.00,El-Asian-Struct-EUR-0013</record>
+        <record>2012-04-01 00:00:00.000,0,TR,107,EUR,1511.58586384612,monthly,Asian,ASIC/M Q2-12 50.00,El-Asian-Struct-EUR-0014</record>
+        <record>2012-05-01 00:00:00.000,0,TR,107,EUR,1318.49645264453,monthly,Asian,ASIC/M Q2-12 50.00,El-Asian-Struct-EUR-0014</record>
+        <record>2012-06-01 00:00:00.000,0,TR,107,EUR,1492.67249389762,monthly,Asian,ASIC/M Q2-12 50.00,El-Asian-Struct-EUR-0014</record>
+        <record>2012-04-01 00:00:00.000,0,TR,107,EUR,-352.245631894993,monthly,Asian,ASIP/M Q2-12 30.00,El-Asian-Struct-EUR-0015</record>
+        <record>2012-05-01 00:00:00.000,0,TR,107,EUR,-540.940340933875,monthly,Asian,ASIP/M Q2-12 30.00,El-Asian-Struct-EUR-0015</record>
+        <record>2012-06-01 00:00:00.000,0,TR,107,EUR,-555.247173711664,monthly,Asian,ASIP/M Q2-12 30.00,El-Asian-Struct-EUR-0015</record>
+        <record>2012-04-01 00:00:00.000,0,TR,107,EUR,-2006.52381320299,monthly,Asian,ASIP/M Q2-12 50.00,El-Asian-Struct-EUR-0016</record>
+        <record>2012-05-01 00:00:00.000,0,TR,107,EUR,-2231.46445559129,monthly,Asian,ASIP/M Q2-12 50.00,El-Asian-Struct-EUR-0016</record>
+        <record>2012-06-01 00:00:00.000,0,TR,107,EUR,-2154.47752968372,monthly,Asian,ASIP/M Q2-12 50.00,El-Asian-Struct-EUR-0016</record>
+        <record>2011-10-01 00:00:00.000,0,HI,107,EUR,2217.09,monthly,Asian,ASIC/W 14-Oct-11 - 27-Nov-11 30.00,El-Asian-Struct-EUR-0017</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,2839.41995018192,monthly,Asian,ASIC/W 14-Oct-11 - 27-Nov-11 30.00,El-Asian-Struct-EUR-0017</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,166.749889962499,monthly,Asian,ASIC/W 14-Oct-11 - 27-Nov-11 50.00,El-Asian-Struct-EUR-0018</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,-1.99215074710216,monthly,Asian,ASIP/W 14-Oct-11 - 27-Nov-11 30.00,El-Asian-Struct-EUR-0019</record>
+        <record>2011-10-01 00:00:00.000,0,HI,107,EUR,-2217.09,monthly,Asian,ASIP/W 14-Oct-11 - 27-Nov-11 50.00,El-Asian-Struct-EUR-0020</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,-2674.61806842324,monthly,Asian,ASIP/W 14-Oct-11 - 27-Nov-11 50.00,El-Asian-Struct-EUR-0020</record>
+        <record>2011-10-01 00:00:00.000,0,HI,107,EUR,1600.57,monthly,Asian,ASIC/W 17-Oct-11 - 30-Oct-11 30.00,El-Asian-Struct-EUR-0021</record>
+        <record>2011-10-01 00:00:00.000,0,HI,107,EUR,-1600.57,monthly,Asian,ASIP/W 17-Oct-11 - 30-Oct-11 50.00,El-Asian-Struct-EUR-0024</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,1693.36526601295,monthly,Asian,ASIC/A M11-11 30.00,El-Asian-Struct-EUR-0025</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,0.0620331193810895,monthly,Asian,ASIC/A M11-11 50.00,El-Asian-Struct-EUR-0026</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,-1693.30323289357,monthly,Asian,ASIP/A M11-11 50.00,El-Asian-Struct-EUR-0028</record>
+        <record>2011-06-01 00:00:00.000,0,HI,107,EUR,3695.78,monthly,Asian,ASIC/A M06-11 30.00,El-Asian-Struct-EUR-0029</record>
+        <record>2011-06-01 00:00:00.000,0,HI,107,EUR,-3695.78,monthly,Asian,ASIP/A M06-11 50.00,El-Asian-Struct-EUR-0032</record>
+        <record>2010-10-01 00:00:00.000,0,HI,107,EUR,3654.63,monthly,Asian,ASIC/M Q4-10 30.00,El-Asian-Struct-EUR-0033</record>
+        <record>2010-11-01 00:00:00.000,0,HI,107,EUR,3496.05,monthly,Asian,ASIC/M Q4-10 30.00,El-Asian-Struct-EUR-0033</record>
+        <record>2010-12-01 00:00:00.000,0,HI,107,EUR,3847.03,monthly,Asian,ASIC/M Q4-10 30.00,El-Asian-Struct-EUR-0033</record>
+        <record>2010-11-01 00:00:00.000,0,HI,107,EUR,3496.05,monthly,Asian,ASIC/M Q4-10 50.00,El-Asian-Struct-EUR-0034</record>
+        <record>2010-12-01 00:00:00.000,0,HI,107,EUR,3847.03,monthly,Asian,ASIC/M Q4-10 50.00,El-Asian-Struct-EUR-0034</record>
+        <record>2010-10-01 00:00:00.000,0,HI,107,EUR,-3654.63,monthly,Asian,ASIP/M Q4-10 50.00,El-Asian-Struct-EUR-0036</record>
+        <record>2012-04-01 00:00:00.000,0,TR,107,EUR,3437.37309729496,monthly,Asian,ASIC/M Q2-12 30.00,El-Asian-Struct-EUR-0037</record>
+        <record>2012-05-01 00:00:00.000,0,TR,107,EUR,3364.6977318305,monthly,Asian,ASIC/M Q2-12 30.00,El-Asian-Struct-EUR-0037</record>
+        <record>2012-06-01 00:00:00.000,0,TR,107,EUR,3469.38322950083,monthly,Asian,ASIC/M Q2-12 30.00,El-Asian-Struct-EUR-0037</record>
+        <record>2012-04-01 00:00:00.000,0,TR,107,EUR,1062.69100698261,monthly,Asian,ASIC/M Q2-12 50.00,El-Asian-Struct-EUR-0038</record>
+        <record>2012-05-01 00:00:00.000,0,TR,107,EUR,732.068223194683,monthly,Asian,ASIC/M Q2-12 50.00,El-Asian-Struct-EUR-0038</record>
+        <record>2012-06-01 00:00:00.000,0,TR,107,EUR,859.975941355157,monthly,Asian,ASIC/M Q2-12 50.00,El-Asian-Struct-EUR-0038</record>
+        <record>2012-04-01 00:00:00.000,0,TR,107,EUR,-80.7365797541481,monthly,Asian,ASIP/M Q2-12 30.00,El-Asian-Struct-EUR-0039</record>
+        <record>2012-05-01 00:00:00.000,0,TR,107,EUR,-185.263176405319,monthly,Asian,ASIP/M Q2-12 30.00,El-Asian-Struct-EUR-0039</record>
+        <record>2012-06-01 00:00:00.000,0,TR,107,EUR,-177.766794080512,monthly,Asian,ASIP/M Q2-12 30.00,El-Asian-Struct-EUR-0039</record>
+        <record>2012-04-01 00:00:00.000,0,TR,107,EUR,-2455.4186700665,monthly,Asian,ASIP/M Q2-12 50.00,El-Asian-Struct-EUR-0040</record>
+        <record>2012-05-01 00:00:00.000,0,TR,107,EUR,-2817.89268504114,monthly,Asian,ASIP/M Q2-12 50.00,El-Asian-Struct-EUR-0040</record>
+        <record>2012-06-01 00:00:00.000,0,TR,107,EUR,-2787.17408222618,monthly,Asian,ASIP/M Q2-12 50.00,El-Asian-Struct-EUR-0040</record>
+        <record>2011-10-01 00:00:00.000,0,HI,107,EUR,2217.09,monthly,Asian,ASIC/W 14-Oct-11 - 27-Nov-11 30.00,El-Asian-Struct-EUR-0041</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,2841.11060989486,monthly,Asian,ASIC/W 14-Oct-11 - 27-Nov-11 30.00,El-Asian-Struct-EUR-0041</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,36.9757423813334,monthly,Asian,ASIC/W 14-Oct-11 - 27-Nov-11 50.00,El-Asian-Struct-EUR-0042</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,-0.257348490879749,monthly,Asian,ASIP/W 14-Oct-11 - 27-Nov-11 30.00,El-Asian-Struct-EUR-0043</record>
+        <record>2011-10-01 00:00:00.000,0,HI,107,EUR,-2217.09,monthly,Asian,ASIP/W 14-Oct-11 - 27-Nov-11 50.00,El-Asian-Struct-EUR-0044</record>
+        <record>2011-11-01 00:00:00.000,0,HI,107,EUR,-2804.3922160044,monthly,Asian,ASIP/W 14-Oct-11 - 27-Nov-11 50.00,El-Asian-Struct-EUR-0044</record>
+        <record>2011-10-01 00:00:00.000,0,HI,107,EUR,1600.57,monthly,Asian,ASIC/W 17-Oct-11 - 30-Oct-11 30.00,El-Asian-Struct-EUR-0045</record>
+        <record>2011-10-01 00:00:00.000,0,HI,107,EUR,-1600.57,monthly,Asian,ASIP/W 17-Oct-11 - 30-Oct-11 50.00,El-Asian-Struct-EUR-0048</record>
+        <record>2011-06-01 00:00:00.000,0,HI,107,EUR,3695.78,monthly,Asian,ASIC/A M06-11 50.00,El-Asian-Struct-NOK-0001</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,183 @@
+<LookupResult xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MetaData Timestamp="2016-02-26T11:38:39.1712707+01:00">
+    <Action>TransactionLookup</Action>
+    <MessageId>1234</MessageId>
+    <ElvizVersion>2016.1.1.303</ElvizVersion>
+    <ProcessorVersion>1.0.0.0</ProcessorVersion>
+  </MetaData>
+  <Result>Success</Result>
+  <Transactions>
+    <Transaction>
+      <DealType>Electricity-Asian</DealType>
+      <Portfolios>
+        <Portfolio>API Test Counterparty</Portfolio>
+        <PortfolioElvizId>6</PortfolioElvizId>
+        <PortfolioReplicationId>54574938-30af-41ca-adbb-759eb5c4491e</PortfolioReplicationId>
+        <CounterpartyPortfolio>API Test Customer</CounterpartyPortfolio>
+        <CounterpartyPortfolioElvizId>5</CounterpartyPortfolioElvizId>
+        <CounterpartyPortfolioReplicationId>ccd6ce82-c9a0-43c8-a684-cf7a77fa1fcf</CounterpartyPortfolioReplicationId>
+        <BuySell>Sell</BuySell>
+        <CompanyName>API Test Counterparty</CompanyName>
+        <PortfolioName>API Test Counterparty</PortfolioName>
+        <CounterpartyCompanyName>API Test Customer</CounterpartyCompanyName>
+        <CounterpartyPortfolioName>API Test Customer</CounterpartyPortfolioName>
+        <CompanyShortName />
+        <CounterpartyCompanyShortName />
+      </Portfolios>
+      <ElectricityAsian>
+        <InstrumentData>
+          <Timezone>CET</Timezone>
+          <ExecutionVenue>Nord Pool</ExecutionVenue>
+          <PriceBasis>SYARH</PriceBasis>
+          <LoadProfile>SystemBase</LoadProfile>
+          <FromDate>2016-05-01</FromDate>
+          <ToDate>2016-05-31</ToDate>
+          <Financial />
+          <PutCall>Put</PutCall>
+          <Strike>-2</Strike>
+          <SamplingPeriod>Day</SamplingPeriod>
+          <InstrumentName>ASIP/D M05-16 -2.00</InstrumentName>
+          <Deliveries>744</Deliveries>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>2</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>3</Price>
+          <Currency>NOK</Currency>
+          <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+          <CurrencySource>NordPool</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>NOK</ClearingCurrency>
+          <ClearingFee>0</ClearingFee>
+          <BrokerCurrency>NOK</BrokerCurrency>
+          <BrokerFee>0</BrokerFee>
+          <BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+          <TradingFee>0</TradingFee>
+          <TradingFeeCurrency>NOK</TradingFeeCurrency>
+          <CommissionFee>0</CommissionFee>
+          <CommissionFeeCurrency>NOK</CommissionFeeCurrency>
+          <Broker>API Test Broker</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees />
+        </FeesData>
+      </ElectricityAsian>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2015-04-29T02:00:00</TradeDate>
+        <ModificationDate>2016-02-26T09:34:52</ModificationDate>
+        <ConfirmedByBroker>false</ConfirmedByBroker>
+        <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+        <Authorised>false</Authorised>
+        <Audited>false</Audited>
+        <Paid>false</Paid>
+        <DeclareId>0</DeclareId>
+        <ContractSplitId>0</ContractSplitId>
+      </DealDetails>
+      <ReferenceData>
+        <ElvizId>478</ElvizId>
+        <Comment>API test: ElectricityAsianFinancial Spread; should pass</Comment>
+        <DealGroup>API Test</DealGroup>
+        <GroupFields>
+          <GroupField1 xsi:type="xsd:string">API Test</GroupField1>
+        </GroupFields>
+        <ExternalId>PassElectricityAsianSpreadDayFinancial</ExternalId>
+        <ExternalSource>XMLFileImport</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+        <RiskValue xsi:type="xsd:double">0</RiskValue>
+      </ReferenceData>
+      <CustomProperties>
+        <PropertyGroup name="Deal Group">
+          <StringProperty name="GroupField1" value="API Test" />
+        </PropertyGroup>
+      </CustomProperties>
+    </Transaction>
+    <Transaction>
+      <DealType>Electricity-Asian</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <PortfolioElvizId>5</PortfolioElvizId>
+        <PortfolioReplicationId>ccd6ce82-c9a0-43c8-a684-cf7a77fa1fcf</PortfolioReplicationId>
+        <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+        <CounterpartyPortfolioElvizId>6</CounterpartyPortfolioElvizId>
+        <CounterpartyPortfolioReplicationId>54574938-30af-41ca-adbb-759eb5c4491e</CounterpartyPortfolioReplicationId>
+        <BuySell>Buy</BuySell>
+        <CompanyName>API Test Customer</CompanyName>
+        <PortfolioName>API Test Customer</PortfolioName>
+        <CounterpartyCompanyName>API Test Counterparty</CounterpartyCompanyName>
+        <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+        <CompanyShortName />
+        <CounterpartyCompanyShortName />
+      </Portfolios>
+      <ElectricityAsian>
+        <InstrumentData>
+          <Timezone>CET</Timezone>
+          <ExecutionVenue>Nord Pool</ExecutionVenue>
+          <PriceBasis>SYARH</PriceBasis>
+          <LoadProfile>SystemBase</LoadProfile>
+          <FromDate>2016-05-01</FromDate>
+          <ToDate>2016-05-31</ToDate>
+          <Financial />
+          <PutCall>Put</PutCall>
+          <Strike>-2</Strike>
+          <SamplingPeriod>Day</SamplingPeriod>
+          <InstrumentName>ASIP/D M05-16 -2.00</InstrumentName>
+          <Deliveries>744</Deliveries>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>2</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>3</Price>
+          <Currency>NOK</Currency>
+          <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+          <CurrencySource>NordPool</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>NOK</ClearingCurrency>
+          <ClearingFee>0</ClearingFee>
+          <BrokerCurrency>NOK</BrokerCurrency>
+          <BrokerFee>0</BrokerFee>
+          <BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+          <TradingFee>0</TradingFee>
+          <TradingFeeCurrency>NOK</TradingFeeCurrency>
+          <CommissionFee>0</CommissionFee>
+          <CommissionFeeCurrency>NOK</CommissionFeeCurrency>
+          <Broker>API Test Broker</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees />
+        </FeesData>
+      </ElectricityAsian>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2015-04-29T02:00:00</TradeDate>
+        <ModificationDate>2016-02-26T09:34:52</ModificationDate>
+        <ConfirmedByBroker>false</ConfirmedByBroker>
+        <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+        <Authorised>true</Authorised>
+        <Audited>false</Audited>
+        <Paid>false</Paid>
+        <DeclareId>0</DeclareId>
+        <ContractSplitId>0</ContractSplitId>
+      </DealDetails>
+      <ReferenceData>
+        <ElvizId>477</ElvizId>
+        <Comment>API test: ElectricityAsianFinancial Spread; should pass</Comment>
+        <DealGroup>API Test</DealGroup>
+        <GroupFields>
+          <GroupField1 xsi:type="xsd:string">API Test</GroupField1>
+        </GroupFields>
+        <ExternalId>PassElectricityAsianSpreadDayFinancial</ExternalId>
+        <ExternalSource>XMLFileImport</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+        <RiskValue xsi:type="xsd:double">0</RiskValue>
+      </ReferenceData>
+      <CustomProperties>
+        <PropertyGroup name="Deal Group">
+          <StringProperty name="GroupField1" value="API Test" />
+        </PropertyGroup>
+      </CustomProperties>
+    </Transaction>
+  </Transactions>
+</LookupResult>

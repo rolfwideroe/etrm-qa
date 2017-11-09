@@ -1,0 +1,174 @@
+<test type="EcmBatch" name="GenCon-Consuption-Spot-ActualPL-NOK" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>GenCon-Consuption-Spot-ActualPL-NOK</workspace>
+    <monitor>GenCon Monitor</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitorGenCon.xml" />
+      <returns>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-19369478.008279,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0001</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-17992048.6158762,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0001</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-13827922.3333867,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0001</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-6955733.87878524,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0001</record>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-16730607.9774371,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0002</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-17020980.7061075,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0002</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-13373114.9139854,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0002</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-6735603.68932612,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0002</record>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-24295034.4540331,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0003</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-17659360.3581745,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0003</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-12628836.6546064,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0003</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-6121905.09653451,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0003</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2329074.77333764,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0004</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-11371255.4135914,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0004</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-13039595.7354488,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0004</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-12725341.0045852,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0004</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-489143.159663178,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0004</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2352271.40047857,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0005</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-11953238.5359132,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0005</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-13426074.8132269,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0005</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-12990786.8844321,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0005</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-503050.10486069,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0005</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2375869.05280585,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0006</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-11394594.797564,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0006</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-13039595.7354488,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0006</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-12725341.0045852,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0006</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-489143.159663178,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0006</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12268329.1266412,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0007</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-12665113.1656227,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0007</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-11410616.9210011,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0007</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4468297.04867205,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-EUR-0,GenCon-Consuption-Spot-0007</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12305041.9391424,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0008</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-12705900.4763246,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0008</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-11471065.2698411,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0008</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4520321.25717619,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-EUR-0,GenCon-Consuption-Spot-0008</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12268329.1266412,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0009</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-12665113.1656227,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0009</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-11410616.9210011,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0009</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4468297.04867205,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-EUR-0,GenCon-Consuption-Spot-0009</record>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-19382234.738364,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0010</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-18011827.3327346,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0010</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-13856209.3442136,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0010</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-6965619.51936666,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0010</record>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-16743841.3317104,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0011</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-17039498.7725876,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0011</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-13400495.3056379,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0011</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-6745371.08869531,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0011</record>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-24338188.2524833,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0012</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-17678658.0678874,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0012</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-12654903.936414,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0012</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-6131521.37565568,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0012</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2331047.58123092,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0013</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-11370205.284239,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0013</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-13039595.7354488,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0013</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-12725341.0045852,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0013</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-489143.159663178,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0013</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2354236.33610718,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0014</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-11952163.1992966,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0014</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-13426074.8132269,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0014</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-12990786.8844321,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0014</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-503050.10486069,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0014</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2377828.94221522,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0015</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-11393478.0083936,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0015</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-13039595.7354488,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0015</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-12725341.0045852,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0015</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-489143.159663178,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0015</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12268329.1266412,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0016</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-12665113.1656227,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0016</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-11410616.9210011,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0016</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4468297.04867205,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-NOK-0,GenCon-Consuption-Spot-0016</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12305041.9391424,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0017</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-12705900.4763246,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0017</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-11471065.2698411,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0017</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4520321.25717619,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-NOK-0,GenCon-Consuption-Spot-0017</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12268329.1266412,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0018</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-12665113.1656227,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0018</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-11410616.9210011,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0018</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4468297.04867205,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-NOK-0,GenCon-Consuption-Spot-0018</record>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-19919665.6505462,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0019</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-18687058.3868735,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0019</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-14493402.1851823,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0019</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-7271530.54195892,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0019</record>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-17280795.6197043,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0020</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-17715990.4771048,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0020</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-14038594.765781,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0020</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-7051400.3524998,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0020</record>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-24845222.0963003,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0021</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-18354370.1291718,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0021</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-13294316.5064019,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0021</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-6437701.7597082,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0021</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2469820.9511397,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0022</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-12000665.9970776,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0022</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-13714298.3684725,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0022</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-13365657.9491814,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0022</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-513382.554289831,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0022</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2493017.57828063,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0023</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-12582649.1193994,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0023</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-14100777.4462505,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0023</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-13631103.8290283,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0023</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-527289.499487342,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0023</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2516615.23060791,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0024</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-12024005.3810502,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0024</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-13714298.3684725,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0024</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-13365657.9491814,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0024</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-513382.554289831,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0024</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12898952.4319822,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0025</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-13367970.2047749,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0025</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-12093225.894151,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0025</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4746104.73705817,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-EUR-2.33,GenCon-Consuption-Spot-0025</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12935665.2444834,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0026</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-13408757.5154769,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0026</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-12153674.2429911,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0026</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4798128.94556232,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-EUR-2.33,GenCon-Consuption-Spot-0026</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12898952.4319822,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0027</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-13367970.2047749,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0027</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-12093225.894151,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0027</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4746104.73705817,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-EUR-2.33,GenCon-Consuption-Spot-0027</record>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-19450241.520164,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0028</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-18098335.4096346,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0028</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-13940009.8912136,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0028</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-7005948.06806666,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0028</record>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-16811848.1135104,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0029</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-17126006.8494876,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0029</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-13484295.8526379,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0029</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-6785699.63739531,monthly,Consumption,Consuption-Hourly-Post-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0029</record>
+        <record>2010-02-01 00:00:00.000,1,HI,76,NOK,-24406195.0342834,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0030</record>
+        <record>2010-03-01 00:00:00.000,1,HI,76,NOK,-17765166.1447874,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0030</record>
+        <record>2010-04-01 00:00:00.000,1,HI,76,NOK,-12738704.483414,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0030</record>
+        <record>2010-05-01 00:00:00.000,1,HI,76,NOK,-6171849.92435567,monthly,Consumption,Consuption-Hourly-Post-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0030</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2349373.89333092,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0031</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-11451429.8563719,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0031</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-13126558.4754948,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0031</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-12807769.7188643,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0031</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-492261.493827744,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0031</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2372562.64820718,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0032</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-12033387.7714295,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0032</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-13513037.5532728,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0032</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-13073215.5987111,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0032</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-506168.439025256,monthly,Consumption,Consuption-Hourly-In-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0032</record>
+        <record>2011-10-01 00:00:00.000,1,HI,76,NOK,-2396155.25431522,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0033</record>
+        <record>2011-11-01 00:00:00.000,1,TR,76,NOK,-11474702.5805264,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0033</record>
+        <record>2011-12-01 00:00:00.000,1,TR,76,NOK,-13126558.4754948,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0033</record>
+        <record>2012-01-01 00:00:00.000,1,TR,76,NOK,-12807769.7188643,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0033</record>
+        <record>2012-02-01 00:00:00.000,1,TR,76,NOK,-492261.493827744,monthly,Consumption,Consuption-Hourly-In-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0033</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12347006.8599134,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0034</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-12752701.4483447,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0034</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-11495577.9763639,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0034</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4502844.69177305,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-NO1-NOK-2.33,GenCon-Consuption-Spot-0034</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12383719.6724146,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0035</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-12793488.7590467,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0035</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-11556026.3252039,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0035</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4554868.90027719,monthly,Consumption,Consuption-Hourly-Pre-Delivery-System-System-NOK-2.33,GenCon-Consuption-Spot-0035</record>
+        <record>2014-04-01 00:00:00.000,1,TR,76,NOK,-12347006.8599134,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0036</record>
+        <record>2014-05-01 00:00:00.000,1,TR,76,NOK,-12752701.4483447,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0036</record>
+        <record>2014-06-01 00:00:00.000,1,TR,76,NOK,-11495577.9763639,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0036</record>
+        <record>2014-07-01 00:00:00.000,1,TR,76,NOK,-4502844.69177305,monthly,Consumption,Consuption-Hourly-Pre-Delivery-Norway 1-Barsebekk-NOK-2.33,GenCon-Consuption-Spot-0036</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

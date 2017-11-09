@@ -1,0 +1,79 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>zMonth-Oil-Future-ICE-USD-Exposure-EUR</workspace>
+    <monitor>zMonth-Oil-Future-ICE-USD-Exposure-EUR</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>Oil-Future-ICE-USD,Oil,Dec-11,2011-12-01 00:00:00.000,2011-12-31 00:00:00.000,Future,Financial,Base,BrentOil,ICE,CET,USD,Oil-Future-ICE-USD-0004;Oil-Future-ICE-USD-0010;Oil-Future-ICE-USD-0028,BrentOil,bbl,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,500000,0,0</record>
+        <record>Oil-Future-ICE-USD,Oil,Mar-12,2012-03-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Financial,Base,BrentOil,ICE,CET,USD,Oil-Future-ICE-USD-0005;Oil-Future-ICE-USD-0011;Oil-Future-ICE-USD-0029,BrentOil,bbl,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,500000,0,0</record>
+        <record>Oil-Future-ICE-USD,Oil,Dec-13,2013-12-01 00:00:00.000,2013-12-31 00:00:00.000,Future,Financial,Base,BrentOil,ICE,CET,USD,Oil-Future-ICE-USD-0006;Oil-Future-ICE-USD-0012;Oil-Future-ICE-USD-0030,BrentOil,bbl,2013-12-01 00:00:00.000,2014-01-01 00:00:00.000,500000,0,0</record>
+        <record>Oil-Future-ICE-USD,Oil,Dec-11,2011-12-01 00:00:00.000,2011-12-31 00:00:00.000,Future,Physical,Base,GasOil,ICE,CET,USD,Oil-Future-ICE-USD-0016;Oil-Future-ICE-USD-0022;Oil-Future-ICE-USD-0034,GasOil,ton,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,500000,0,0</record>
+        <record>Oil-Future-ICE-USD,Oil,Mar-12,2012-03-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Physical,Base,GasOil,ICE,CET,USD,Oil-Future-ICE-USD-0017;Oil-Future-ICE-USD-0023;Oil-Future-ICE-USD-0035,GasOil,ton,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,500000,0,0</record>
+        <record>Oil-Future-ICE-USD,Oil,Dec-13,2013-12-01 00:00:00.000,2013-12-31 00:00:00.000,Future,Physical,Base,GasOil,ICE,CET,USD,Oil-Future-ICE-USD-0018;Oil-Future-ICE-USD-0024;Oil-Future-ICE-USD-0036,GasOil,ton,2013-12-01 00:00:00.000,2014-01-01 00:00:00.000,500000,0,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>BrentOil,2011-11-14 00:00:00.000,2011-12-01 00:00:00.000,83.7000968010512,0,0</record>
+        <record>BrentOil,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,82.0919384179449,0,0</record>
+        <record>BrentOil,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,81.7186203128914,0,0</record>
+        <record>BrentOil,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,81.4114163260777,0,0</record>
+        <record>BrentOil,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,81.1493940980598,0,0</record>
+        <record>BrentOil,2012-04-01 00:00:00.000,2012-05-01 00:00:00.000,80.971556051274,0,0</record>
+        <record>BrentOil,2012-05-01 00:00:00.000,2012-06-01 00:00:00.000,80.8248926664177,0,0</record>
+        <record>BrentOil,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,80.6718840036459,0,0</record>
+        <record>BrentOil,2012-07-01 00:00:00.000,2012-08-01 00:00:00.000,80.5189594988842,0,0</record>
+        <record>BrentOil,2012-08-01 00:00:00.000,2012-09-01 00:00:00.000,80.3217781852509,0,0</record>
+        <record>BrentOil,2012-09-01 00:00:00.000,2012-10-01 00:00:00.000,80.0466071757115,0,0</record>
+        <record>BrentOil,2012-10-01 00:00:00.000,2012-11-01 00:00:00.000,79.7888190985574,0,0</record>
+        <record>BrentOil,2012-11-01 00:00:00.000,2012-12-01 00:00:00.000,79.5387587999926,0,0</record>
+        <record>BrentOil,2012-12-01 00:00:00.000,2013-01-01 00:00:00.000,79.2500182513881,0,0</record>
+        <record>BrentOil,2013-01-01 00:00:00.000,2013-02-01 00:00:00.000,78.982772095837,0,0</record>
+        <record>BrentOil,2013-02-01 00:00:00.000,2013-03-01 00:00:00.000,78.6685849325404,0,0</record>
+        <record>BrentOil,2013-03-01 00:00:00.000,2013-04-01 00:00:00.000,78.3328069482653,0,0</record>
+        <record>BrentOil,2013-04-01 00:00:00.000,2013-05-01 00:00:00.000,77.9992487660671,0,0</record>
+        <record>BrentOil,2013-05-01 00:00:00.000,2013-06-01 00:00:00.000,77.6605039777009,0,0</record>
+        <record>BrentOil,2013-06-01 00:00:00.000,2013-07-01 00:00:00.000,77.3103266580541,0,0</record>
+        <record>BrentOil,2013-07-01 00:00:00.000,2013-08-01 00:00:00.000,76.957434684492,0,0</record>
+        <record>BrentOil,2013-08-01 00:00:00.000,2013-09-01 00:00:00.000,76.6033969502716,0,0</record>
+        <record>BrentOil,2013-09-01 00:00:00.000,2013-10-01 00:00:00.000,76.2494375989436,0,0</record>
+        <record>BrentOil,2013-10-01 00:00:00.000,2013-11-01 00:00:00.000,75.904807410952,0,0</record>
+        <record>BrentOil,2013-11-01 00:00:00.000,2013-12-01 00:00:00.000,75.5638536107247,0,0</record>
+        <record>BrentOil,2013-12-01 00:00:00.000,2014-01-01 00:00:00.000,75.2279636783657,0,0</record>
+        <record>GasOil,2011-11-14 00:00:00.000,2011-12-01 00:00:00.000,0,0,0</record>
+        <record>GasOil,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,733.134055448228,0,0</record>
+        <record>GasOil,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,725.171976626058,0,0</record>
+        <record>GasOil,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,719.157451250733,0,0</record>
+        <record>GasOil,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,714.250015130778,0,0</record>
+        <record>GasOil,2012-04-01 00:00:00.000,2012-05-01 00:00:00.000,710.47055455035,0,0</record>
+        <record>GasOil,2012-05-01 00:00:00.000,2012-06-01 00:00:00.000,707.807343235579,0,0</record>
+        <record>GasOil,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,707.363415561441,0,0</record>
+        <record>GasOil,2012-07-01 00:00:00.000,2012-08-01 00:00:00.000,708.213936359434,0,0</record>
+        <record>GasOil,2012-08-01 00:00:00.000,2012-09-01 00:00:00.000,709.069336355599,0,0</record>
+        <record>GasOil,2012-09-01 00:00:00.000,2012-10-01 00:00:00.000,708.784525271323,0,0</record>
+        <record>GasOil,2012-10-01 00:00:00.000,2012-11-01 00:00:00.000,707.350312200074,0,0</record>
+        <record>GasOil,2012-11-01 00:00:00.000,2012-12-01 00:00:00.000,705.669409058337,0,0</record>
+        <record>GasOil,2012-12-01 00:00:00.000,2013-01-01 00:00:00.000,704.465199668044,0,0</record>
+        <record>GasOil,2013-01-01 00:00:00.000,2013-02-01 00:00:00.000,703.189969453012,0,0</record>
+        <record>GasOil,2013-02-01 00:00:00.000,2013-03-01 00:00:00.000,700.900655305572,0,0</record>
+        <record>GasOil,2013-03-01 00:00:00.000,2013-04-01 00:00:00.000,697.438136170312,0,0</record>
+        <record>GasOil,2013-04-01 00:00:00.000,2013-05-01 00:00:00.000,693.743318336101,0,0</record>
+        <record>GasOil,2013-05-01 00:00:00.000,2013-06-01 00:00:00.000,690.187675235901,0,0</record>
+        <record>GasOil,2013-06-01 00:00:00.000,2013-07-01 00:00:00.000,686.967661913549,0,0</record>
+        <record>GasOil,2013-07-01 00:00:00.000,2013-08-01 00:00:00.000,684.837955412902,0,0</record>
+        <record>GasOil,2013-08-01 00:00:00.000,2013-09-01 00:00:00.000,682.698331039398,0,0</record>
+        <record>GasOil,2013-09-01 00:00:00.000,2013-10-01 00:00:00.000,680.373880329502,0,0</record>
+        <record>GasOil,2013-10-01 00:00:00.000,2013-11-01 00:00:00.000,678.066593821185,0,0</record>
+        <record>GasOil,2013-11-01 00:00:00.000,2013-12-01 00:00:00.000,675.792433420408,0,0</record>
+        <record>GasOil,2013-12-01 00:00:00.000,2014-01-01 00:00:00.000,673.56393931531,0,0</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

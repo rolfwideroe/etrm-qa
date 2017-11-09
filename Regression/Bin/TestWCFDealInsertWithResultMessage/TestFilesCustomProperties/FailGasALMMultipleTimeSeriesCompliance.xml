@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (http://www.altova.com) by Jan Møhr (Viz Risk Management as) -->
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>The message does not conform to the deal insert xml schema. 
+(1)	The element 'ALM' has invalid child element 'CustomProperties'.
+</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Schemas\DealInsert.xsd">
+	<MetaData>
+		<MessageId>API ALM Test Multiple Time Series</MessageId>
+	</MetaData>
+	<ALM>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+		</Portfolios>
+		<GasALM>
+			<Name>API Gas ALM Test Multiple Time Series</Name>
+			<ActivationDate>2010-01-01</ActivationDate>
+			<ContractType>Consumption</ContractType>
+			<Status>Active</Status>
+			<Currency>EUR</Currency>
+			<CurrencySource>Viz</CurrencySource>
+			<Timezone>CET</Timezone>
+			<PriceCurve>
+				<TemplateName>ALMGas</TemplateName>
+				<AreaName>TTF</AreaName>
+			</PriceCurve>
+			<BalanceArea AreaName="GUD"/>
+		</GasALM>
+		<ForecastPriceTimeSeries>
+			<PriceTimeSeriesDetail>
+				<FromDate>2010-01-01T00:00:00</FromDate>
+				<ToDate>2010-02-01T00:00:00</ToDate>
+				<Price>15</Price>
+			</PriceTimeSeriesDetail>
+			<PriceTimeSeriesDetail>
+				<FromDate>2010-02-01T00:00:00</FromDate>
+				<ToDate>2010-03-01T00:00:00</ToDate>
+				<Price>35</Price>
+			</PriceTimeSeriesDetail>
+		</ForecastPriceTimeSeries>
+		<ForecastVolumeTimeSeries>
+			<VolumeTimeSeriesDetail>
+				<FromDate>2010-01-01T00:00:00</FromDate>
+				<ToDate>2010-02-01T00:00:00</ToDate>
+				<Volume>20</Volume>
+			</VolumeTimeSeriesDetail>
+			<VolumeTimeSeriesDetail>
+				<FromDate>2010-02-01T00:00:00</FromDate>
+				<ToDate>2010-03-01T00:00:00</ToDate>
+				<Volume>40</Volume>
+			</VolumeTimeSeriesDetail>
+		</ForecastVolumeTimeSeries>
+		<RealizedPriceTimeSeries>
+			<PriceTimeSeriesDetail>
+				<FromDate>2010-01-01T00:00:00</FromDate>
+				<ToDate>2010-02-01T00:00:00</ToDate>
+				<Price>16</Price>
+			</PriceTimeSeriesDetail>
+		</RealizedPriceTimeSeries>
+		<RealizedVolumeTimeSeries>
+			<VolumeTimeSeriesDetail>
+				<FromDate>2010-01-01T00:00:00</FromDate>
+				<ToDate>2010-02-01T00:00:00</ToDate>
+				<Volume>21</Volume>
+			</VolumeTimeSeriesDetail>
+		</RealizedVolumeTimeSeries>
+		<ReferenceData>
+			<ExternalSource>API Import</ExternalSource>
+			<ExternalId>Fail Compliance -API gas ALM Test Multiple Time Series</ExternalId>
+		</ReferenceData>		
+		<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="FailElectricityALMHourlyCompliance"/>
+				<DateProperty name="TerminationDate" value="2013-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+			</PropertyGroup>
+		</CustomProperties>
+	</ALM>
+</DealInsert>
+</TestData>
+</TestCase>

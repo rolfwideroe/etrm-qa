@@ -1,0 +1,205 @@
+<LookupResult xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MetaData Timestamp="2016-02-26T11:33:58.8464051+01:00">
+    <Action>TransactionLookup</Action>
+    <MessageId>1234</MessageId>
+    <ElvizVersion>2016.1.1.303</ElvizVersion>
+    <ProcessorVersion>1.0.0.0</ProcessorVersion>
+  </MetaData>
+  <Result>Success</Result>
+  <Transactions>
+    <Transaction>
+      <DealType>Gas-FloatingPrice</DealType>
+      <Portfolios>
+        <Portfolio>API Test Counterparty</Portfolio>
+        <PortfolioElvizId>6</PortfolioElvizId>
+        <PortfolioReplicationId>54574938-30af-41ca-adbb-759eb5c4491e</PortfolioReplicationId>
+        <CounterpartyPortfolio>API Test Customer</CounterpartyPortfolio>
+        <CounterpartyPortfolioElvizId>5</CounterpartyPortfolioElvizId>
+        <CounterpartyPortfolioReplicationId>ccd6ce82-c9a0-43c8-a684-cf7a77fa1fcf</CounterpartyPortfolioReplicationId>
+        <BuySell>Sell</BuySell>
+        <CompanyName>API Test Counterparty</CompanyName>
+        <PortfolioName>API Test Counterparty</PortfolioName>
+        <CounterpartyCompanyName>API Test Customer</CounterpartyCompanyName>
+        <CounterpartyPortfolioName>API Test Customer</CounterpartyPortfolioName>
+        <CompanyShortName />
+        <CounterpartyCompanyShortName />
+      </Portfolios>
+      <GasFloatingPrice>
+        <InstrumentData>
+          <Timezone>CET-6</Timezone>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>ICE NBP</PriceBasis>
+          <PriceType>Indexed</PriceType>
+          <IndexFormulaName>AxpoIndexedOption</IndexFormulaName>
+          <FromDate>2008-01-01</FromDate>
+          <ToDate>2008-12-31</ToDate>
+          <Physical />
+          <InstrumentName>CAL-08</InstrumentName>
+          <Deliveries>8784</Deliveries>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>38</Quantity>
+          <QuantityUnit>MWh/d</QuantityUnit>
+          <PriceMargin>0.1</PriceMargin>
+          <MarketPriceMultiplicator>1</MarketPriceMultiplicator>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <ClearingFee>0</ClearingFee>
+          <BrokerTradingFee>0</BrokerTradingFee>
+          <BrokerCurrency>EUR</BrokerCurrency>
+          <BrokerFee>0</BrokerFee>
+          <BrokerFeeCurrency>EUR</BrokerFeeCurrency>
+          <TradingFee>0</TradingFee>
+          <TradingFeeCurrency>EUR</TradingFeeCurrency>
+          <CommissionFee>0</CommissionFee>
+          <CommissionFeeCurrency>EUR</CommissionFeeCurrency>
+        </SettlementData>
+        <FeesData>
+          <Fees />
+        </FeesData>
+      </GasFloatingPrice>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2007-12-23T23:00:00</TradeDate>
+        <ModificationDate>2016-02-26T09:25:43</ModificationDate>
+        <ConfirmedByBroker>false</ConfirmedByBroker>
+        <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+        <Authorised>false</Authorised>
+        <Audited>false</Audited>
+        <Paid>false</Paid>
+        <DeclareId>0</DeclareId>
+        <ContractSplitId>0</ContractSplitId>
+        <TimeStampClearedUTC>2013-11-20T15:00:00Z</TimeStampClearedUTC>
+        <TimeStampConfirmationBrokerUTC>2013-11-21T13:00:00Z</TimeStampConfirmationBrokerUTC>
+        <TimeStampConfirmationCounterPartyUTC>2013-11-22T17:00:00Z</TimeStampConfirmationCounterPartyUTC>
+      </DealDetails>
+      <ReferenceData>
+        <ElvizId>280</ElvizId>
+        <Comment>PassGasFloatingPriceIndexed; should pass</Comment>
+        <DealGroup>API Test</DealGroup>
+        <GroupFields>
+          <GroupField1 xsi:type="xsd:string">API Test</GroupField1>
+        </GroupFields>
+        <ExternalId>PassGasFloatingPriceIndexedCompliance</ExternalId>
+        <ExternalSource>XMLFileImport</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+        <RiskValue xsi:type="xsd:double">0</RiskValue>
+      </ReferenceData>
+      <CustomProperties>
+        <PropertyGroup name="Compliance">
+          <StringProperty name="UTI" value="PassGasFloatingPriceIndexedCompliance" />
+          <StringProperty name="EMIRStatus" value="EMIR speculative" />
+          <BooleanProperty name="DealCompression" value="false" />
+          <DateProperty name="TerminationDate" value="2013-11-20" />
+          <StringProperty name="BuyerInitiatorAggressor" value="Aggressor" />
+          <StringProperty name="SellerInitiatorAggressor" value="Sleeve" />
+          <BooleanProperty name="RemitReporting" value="true" />
+        </PropertyGroup>
+        <PropertyGroup name="Deal Group">
+          <StringProperty name="GroupField1" value="API Test" />
+        </PropertyGroup>
+      </CustomProperties>
+    </Transaction>
+    <Transaction>
+      <DealType>Gas-FloatingPrice</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <PortfolioElvizId>5</PortfolioElvizId>
+        <PortfolioReplicationId>ccd6ce82-c9a0-43c8-a684-cf7a77fa1fcf</PortfolioReplicationId>
+        <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+        <CounterpartyPortfolioElvizId>6</CounterpartyPortfolioElvizId>
+        <CounterpartyPortfolioReplicationId>54574938-30af-41ca-adbb-759eb5c4491e</CounterpartyPortfolioReplicationId>
+        <BuySell>Buy</BuySell>
+        <CompanyName>API Test Customer</CompanyName>
+        <PortfolioName>API Test Customer</PortfolioName>
+        <CounterpartyCompanyName>API Test Counterparty</CounterpartyCompanyName>
+        <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+        <CompanyShortName />
+        <CounterpartyCompanyShortName />
+      </Portfolios>
+      <GasFloatingPrice>
+        <InstrumentData>
+          <Timezone>CET-6</Timezone>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>ICE NBP</PriceBasis>
+          <PriceType>Indexed</PriceType>
+          <IndexFormulaName>AxpoIndexedOption</IndexFormulaName>
+          <FromDate>2008-01-01</FromDate>
+          <ToDate>2008-12-31</ToDate>
+          <Physical />
+          <InstrumentName>CAL-08</InstrumentName>
+          <Deliveries>8784</Deliveries>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>38</Quantity>
+          <QuantityUnit>MWh/d</QuantityUnit>
+          <PriceMargin>0.1</PriceMargin>
+          <MarketPriceMultiplicator>1</MarketPriceMultiplicator>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <ClearingFee>0</ClearingFee>
+          <BrokerTradingFee>0</BrokerTradingFee>
+          <BrokerCurrency>EUR</BrokerCurrency>
+          <BrokerFee>0</BrokerFee>
+          <BrokerFeeCurrency>EUR</BrokerFeeCurrency>
+          <TradingFee>0</TradingFee>
+          <TradingFeeCurrency>EUR</TradingFeeCurrency>
+          <CommissionFee>0</CommissionFee>
+          <CommissionFeeCurrency>EUR</CommissionFeeCurrency>
+        </SettlementData>
+        <FeesData>
+          <Fees />
+        </FeesData>
+      </GasFloatingPrice>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2007-12-23T23:00:00</TradeDate>
+        <ModificationDate>2016-02-26T09:25:43</ModificationDate>
+        <ConfirmedByBroker>false</ConfirmedByBroker>
+        <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+        <Authorised>false</Authorised>
+        <Audited>false</Audited>
+        <Paid>false</Paid>
+        <DeclareId>0</DeclareId>
+        <ContractSplitId>0</ContractSplitId>
+        <TimeStampClearedUTC>2013-11-20T15:00:00Z</TimeStampClearedUTC>
+        <TimeStampConfirmationBrokerUTC>2013-11-21T13:00:00Z</TimeStampConfirmationBrokerUTC>
+        <TimeStampConfirmationCounterPartyUTC>2013-11-22T17:00:00Z</TimeStampConfirmationCounterPartyUTC>
+      </DealDetails>
+      <ReferenceData>
+        <ElvizId>279</ElvizId>
+        <Comment>PassGasFloatingPriceIndexed; should pass</Comment>
+        <DealGroup>API Test</DealGroup>
+        <GroupFields>
+          <GroupField1 xsi:type="xsd:string">API Test</GroupField1>
+        </GroupFields>
+        <ExternalId>PassGasFloatingPriceIndexedCompliance</ExternalId>
+        <ExternalSource>XMLFileImport</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+        <RiskValue xsi:type="xsd:double">0</RiskValue>
+      </ReferenceData>
+      <CustomProperties>
+        <PropertyGroup name="Compliance">
+          <StringProperty name="UTI" value="PassGasFloatingPriceIndexedCompliance" />
+          <StringProperty name="EMIRStatus" value="EMIR speculative" />
+          <BooleanProperty name="DealCompression" value="false" />
+          <DateProperty name="TerminationDate" value="2013-11-20" />
+          <StringProperty name="BuyerInitiatorAggressor" value="Aggressor" />
+          <StringProperty name="SellerInitiatorAggressor" value="Sleeve" />
+          <BooleanProperty name="RemitReporting" value="true" />
+        </PropertyGroup>
+        <PropertyGroup name="Deal Group">
+          <StringProperty name="GroupField1" value="API Test" />
+        </PropertyGroup>
+      </CustomProperties>
+    </Transaction>
+  </Transactions>
+</LookupResult>

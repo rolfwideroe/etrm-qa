@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../../Source/Integration/Viz.Integration.Core.DealImport/Files/Schemas/DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Currency-CashFlow</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<PaidReceived>Paid</PaidReceived>
+		</Portfolios>
+		<CurrencyCashFlow>
+			<InstrumentData>
+				<Timezone>CET</Timezone>
+				<TransactionName>PassCurrency-CashFlowDaily</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<CashFlowPeriods Resolution="Monthly">
+					<TimeSeriesDetail FromDate="2015-01-01" Value="1" />
+					<TimeSeriesDetail FromDate="2015-02-01" Value="2" />
+					<TimeSeriesDetail FromDate="2015-03-01" Value="3" />
+				</CashFlowPeriods>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>ICAP</Broker>
+			</SettlementData>
+			<FeesData>
+				<Fees>
+					<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="10" />
+					<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="20" />
+					<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="30" />
+					<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="40" FeeUnit="EUR"/>
+				</Fees>
+			</FeesData>
+		</CurrencyCashFlow>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>Vizard</Trader>
+			<TradeDate>2011-02-14T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<GroupFields>
+				<GroupField1/>
+				<GroupField2/>
+				<GroupField3/>
+			</GroupFields>
+			<ExternalId>PassCurrencyCashFlowDailyMonthlyFees</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>159</TransactionId>
+  <DealType>Currency-CashFlow</DealType>
+  <PaidReceived>Paid</PaidReceived>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>PassCurrency-CashFlowDaily</InstrumentName>
+    <FromDate>2015-01-01T00:00:00</FromDate>
+    <ToDate>2015-03-01T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <BaseIsoCurrency>EUR</BaseIsoCurrency>
+    <CrossIsoCurrency>EUR</CrossIsoCurrency>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>6</Quantity>
+    <Price>0</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>None</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2011-02-13T23:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+	<Broker>ICAP</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+		<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="10" FeeUnit="EUR"/>
+		<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="20" FeeUnit="EUR" />
+		<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="30" FeeUnit="EUR" />
+		<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="40" FeeUnit="EUR" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassCurrencyCashFlowDailyMonthlyFees</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+    <ModificationDateTimeUtc>2014-11-11T08:15:43Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>1</Deliveries>
+    <OriginalQuantity>6</OriginalQuantity>
+    <ReferringId>160</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

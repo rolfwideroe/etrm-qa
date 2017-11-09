@@ -1,0 +1,42 @@
+<test type="EcmBatch" name="ElCert-Forward-OTC-ActualCF-EUR" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>ElCert-Forward-OTC-ActualCF-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2007-03-01 00:00:00.000,0,HI,69,EUR,-777456.840562582,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0001</record>
+        <record>2007-03-01 00:00:00.000,0,HI,69,EUR,-885235.248592379,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0002</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,EUR,-807599.843145892,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0003</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,EUR,-912098.87939167,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0004</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,EUR,-796202.087715626,monthly,Forward,ECS011111,ElCert-Forward-OTC-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,EUR,-930678.821267528,monthly,Forward,ECS011111,ElCert-Forward-OTC-0006</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,EUR,-793601.777679871,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0007</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,EUR,-925701.715618248,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0008</record>
+        <record>2007-03-01 00:00:00.000,0,HI,69,EUR,959188.792611961,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0009</record>
+        <record>2007-03-01 00:00:00.000,0,HI,69,EUR,1092160.59975811,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0010</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,EUR,996377.776932509,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0011</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,EUR,1125303.65316915,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0012</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,EUR,982315.775417759,monthly,Forward,ECS011111,ElCert-Forward-OTC-0013</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,EUR,1148226.69028824,monthly,Forward,ECS011111,ElCert-Forward-OTC-0014</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,EUR,979107.638176588,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0015</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,EUR,1142086.17713129,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0016</record>
+        <record>2007-03-01 00:00:00.000,0,HI,69,EUR,-1428618.06341014,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0017</record>
+        <record>2007-03-01 00:00:00.000,0,HI,69,EUR,-1626666.58845178,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0018</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,EUR,-1484007.42488874,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0019</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,EUR,-1676029.93083472,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0020</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,EUR,-1463063.4464703,monthly,Forward,ECS011111,ElCert-Forward-OTC-0021</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,EUR,-1710171.55670523,monthly,Forward,ECS011111,ElCert-Forward-OTC-0022</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,EUR,-1458285.23925193,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0023</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,EUR,-1701025.86184079,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0024</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

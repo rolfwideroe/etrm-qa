@@ -1,0 +1,112 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>GreeksOnATimelineReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-16T00:00:00" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseEndDate" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="PosCalcMethod" IsNotSet="false" XmlEncodedValue="NPVWA" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="TimeResolution" IsNotSet="false" XmlEncodedValue="Month" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="El-Asian-Prof-EUR" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedTimeSeriesArtifacts>
+      <ExpectedTimeSeriesArtifact ArtifactId="greeksOnATimeline" Columns="GroupBy,Greek,ReferenceArea,TimeZone,From,Until,Value" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Double">
+        <TimeSeriesProperties>
+          <Property Name="GroupBy" DataType="System.String" />
+          <Property Name="Greek" DataType="System.String" />
+          <Property Name="ReferenceArea" DataType="System.String" />
+        </TimeSeriesProperties>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,-1986.43140748428</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,3326.19502272441</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,6046.94492911681</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,8885.92990029216</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,7730.80444966248</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,14878.3979229531</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,14232.3166429161</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,17523.3268439774</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,8327.42499430671</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,12924.3042684167</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,7938.68516610412</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,9790.14440641055</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,10037.8387003313</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,14481.6337096792</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,-5.91199823656037</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,4.47069223484463</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,8.12761415203872</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,12.7671406613393</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,10.4048512108513</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,20.6644415596571</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,19.1294578533819</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,24.3379539499687</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,11.1927755299821</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,17.3713767048612</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,11.0259516195891</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,13.1411334314236</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,13.941442639349</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,19.4645614377408</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,405.224782101531</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,565.122202128327</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,444.48081566725</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,283.345259664299</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,198.055838682612</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,374.960146651083</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,379.152888799448</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,532.578008757463</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,288.55436745929</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,311.333780414241</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,131.352877081945</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,63.4236522138163</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,48.0396130445032</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,66.4456432318751</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,1.20602613720694</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0.759572852323021</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0.597420451165659</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0.407105258138361</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0.26656236700217</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0.520777981459837</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0.50961409784872</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0.739691678829809</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,0.387841891746357</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,0.418459382277206</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,0.182434551502702</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,0.085132419078948</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,0.0667216847840322</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,0.0893086602578966</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,-1797.58808870898</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,-2158.88455998493</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,-897.476574727799</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,-685.920988307995</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,-500.536286367824</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,-932.839776390967</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,-965.31420621055</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,-1434.57907681052</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,-543.493920096371</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,-740.508830188645</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,-359.814148591425</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,-234.12433347446</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,-149.047657890349</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,-200.37692503586</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,305.368659512895</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,1289.6793530665</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,2676.033329158</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,2822.87129523206</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,2679.34476295169</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,5499.00262990978</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,6161.80772732354</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,8999.24114801723</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,4492.40218376698</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,6860.51437516529</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,3756.30598957682</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,3049.71262812111</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,2496.54947229643</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,3652.48683665833</ExpectedRecord>
+      </ExpectedTimeSeriesArtifact>
+    </ExpectedTimeSeriesArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

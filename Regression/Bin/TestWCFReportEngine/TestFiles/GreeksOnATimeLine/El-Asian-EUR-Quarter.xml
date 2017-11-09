@@ -1,0 +1,88 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>GreeksOnATimelineReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-16T00:00:00" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseEndDate" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="PosCalcMethod" IsNotSet="false" XmlEncodedValue="NPVWA" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="TimeResolution" IsNotSet="false" XmlEncodedValue="Quarter" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="El-Asian-EUR" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedTimeSeriesArtifacts>
+      <ExpectedTimeSeriesArtifact ArtifactId="greeksOnATimeline" Columns="GroupBy,Greek,ReferenceArea,TimeZone,From,Until,Value" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Double">
+        <TimeSeriesProperties>
+          <Property Name="GroupBy" DataType="System.String" />
+          <Property Name="Greek" DataType="System.String" />
+          <Property Name="ReferenceArea" DataType="System.String" />
+        </TimeSeriesProperties>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,-3179.72302692937</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,25751.1836677229</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,342.487131445683</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,797.977398267098</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,21531.2358747733</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,-15112.5621101036</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,5703.6745235688</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,-18702.0974286618</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,-9224.85631671037</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,-76.643563234401</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,-2.94418798789757</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,11.796236219754</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,0.156816452127126</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,0.361402807186193</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,9.74705109767922</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,-13.9931130649107</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,2.61276890681118</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,-8.56323142337997</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,-4.17792405648114</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,-0.0346960449227685</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,6074.91465645043</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,4211.72349561546</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,8541.81886333052</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,4026.80077759441</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,3567.95131095505</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,5201.94920318269</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,6260.39587226376</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,12513.1931855352</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,5976.51329794873</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,5650.39716928223</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,5.62492097819485</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,1.92932821604006</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,3.91108922313669</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,1.82373223622935</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,1.61518846127436</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,4.81661963257656</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,2.8677947193146</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,5.72948405931097</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,2.7067542110275</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,2.55789822058951</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,-9803.13368830454</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,-4473.06737254801</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,-6149.24043937784</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,-2017.84474074598</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,-1722.67827306242</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,-3101.94055332254</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,-1703.23495190722</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,-2152.87303845454</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,-700.764097925275</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,-607.60403022675</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,7103.58661546395</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,21844.0525894971</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,50290.0860498411</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,28489.0725319273</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,32223.0470078339</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2011-11-17T00:00:00,2012-01-01T00:00:00,3822.98442157406</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2012-01-01T00:00:00,2012-04-01T00:00:00,15879.0986453323</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2012-04-01T00:00:00,2012-07-01T00:00:00,35868.6160227405</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2012-07-01T00:00:00,2012-10-01T00:00:00,20376.9052429207</ExpectedRecord>
+        <ExpectedRecord>Electricity-Asian-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2012-10-01T00:00:00,2013-01-01T00:00:00,23279.9616933721</ExpectedRecord>
+      </ExpectedTimeSeriesArtifact>
+    </ExpectedTimeSeriesArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

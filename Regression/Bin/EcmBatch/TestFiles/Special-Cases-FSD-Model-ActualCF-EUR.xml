@@ -1,0 +1,27 @@
+<test type="EcmBatch" name="Special-Cases-FSD-Model-ActualCF-EUR" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>Special-Cases-FSD-Model-ActualCF-EUR</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<reportdate>2011-11-01</reportdate>
+		<tollerance>0.00000001</tollerance>
+		<executeElvizBatch>True</executeElvizBatch>				
+	</setup>
+	<assert>
+		<datawarehouse>
+		<query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+				<record>2011-01-01 00:00:00.000,0,HI,109,EUR,490060.8,monthly,Structured Deal,Special-Cases-FSD-Model-FinancialRetail,Special-Cases-FSD-Model-FinancialRetail</record>
+				<record>2011-02-01 00:00:00.000,0,HI,109,EUR,402816,monthly,Structured Deal,Special-Cases-FSD-Model-FinancialRetail,Special-Cases-FSD-Model-FinancialRetail</record>
+				<record>2011-03-01 00:00:00.000,0,HI,109,EUR,440777.3,monthly,Structured Deal,Special-Cases-FSD-Model-FinancialRetail,Special-Cases-FSD-Model-FinancialRetail</record>
+				<record>2012-01-01 00:00:00.000,0,TR,109,EUR,-74400,monthly,Structured Deal,Special-Cases-FSD-Model-Generation,Special-Cases-FSD-Model-Generation</record>
+				<record>2012-02-01 00:00:00.000,0,TR,109,EUR,-69600,monthly,Structured Deal,Special-Cases-FSD-Model-Generation,Special-Cases-FSD-Model-Generation</record>
+				<record>2012-03-01 00:00:00.000,0,TR,109,EUR,-74300,monthly,Structured Deal,Special-Cases-FSD-Model-Generation,Special-Cases-FSD-Model-Generation</record>
+				<record>2011-10-01 00:00:00.000,0,HI,109,EUR,268226.9,monthly,Structured Deal,Special-Cases-FSD-Model-Retail,Special-Cases-FSD-Model-Retail</record>
+				<record>2011-11-01 00:00:00.000,0,TR,109,EUR,375351.599740547,monthly,Structured Deal,Special-Cases-FSD-Model-Retail,Special-Cases-FSD-Model-Retail</record>
+				<record>2011-12-01 00:00:00.000,0,TR,109,EUR,409646.399999976,monthly,Structured Deal,Special-Cases-FSD-Model-Retail,Special-Cases-FSD-Model-Retail</record>
+			</returns>
+		</datawarehouse>		
+	</assert>
+</test>

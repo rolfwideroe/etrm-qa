@@ -1,0 +1,58 @@
+<DbQuery>
+  <Columns>
+    <Column ColumnName="ExternalId" ColumnDataType="System.String"/>
+    <Column ColumnName="FromDateTime" ColumnDataType="System.DateTime"/>
+    <Column ColumnName="FromDateTimeUTC" ColumnDataType="System.DateTime"/>
+    <Column ColumnName="Resolution" ColumnDataType="System.String"/>
+    <Column ColumnName="LoadHours" ColumnDataType="System.Double"/>
+    <Column ColumnName="TimeSeriesTimeZone" ColumnDataType="System.String"/>
+    <Column ColumnName="LoadType" ColumnDataType="System.String"/>
+    <Column ColumnName="ValueType" ColumnDataType="System.String"/>
+    <Column ColumnName="GreekPricebasis" ColumnDataType="System.String"/>
+    <Column ColumnName="ReportCurrency" ColumnDataType="System.String"/>
+    <Column ColumnName="ValueUnit" ColumnDataType="System.String"/>
+    <Column ColumnName="Value" ColumnDataType="System.Double"/>
+  </Columns>
+  <SqlQuery>
+	<![CDATA[
+
+DECLARE @reportDate DATE
+set @reportDate='{reportDate}'
+
+DECLARE @jobExecutionId INT
+set @jobExecutionId='{jobExecutionId}'
+
+SELECT c.ExternalId
+		,t.FromDateTime
+		,t.FromDateTimeUTC
+		,t.Resolution
+		,t.LoadHours
+		,t.TimeSeriesTimeZone
+		,t.LoadType
+		,t.ValueType
+		,convert(varchar(25),NULL) as GreekPricebasis
+		,r.ReportCurrency
+    ,t.ValueUnit
+  	,t.Value
+   
+  FROM ReportsView r
+  INNER JOIN [TimeSeriesByContractsView] t on t.ReportId=r.ReportId
+  INNER JOIN ContractExportsView c on c.ContractExportId=t.ContractExportId
+ 
+  WHERE r.JobExecutionId=@jobExecutionId
+  AND r.ReportDate=@reportDate
+  ORDER BY
+   ExternalId
+ ,Resolution
+ ,ValueType
+ ,LoadType
+ ,GreekPricebasis
+ ,ValueUnit
+ ,FromDateTimeUTC
+ ,FromDateTime
+
+	]]>
+  </SqlQuery>
+</DbQuery>
+
+			

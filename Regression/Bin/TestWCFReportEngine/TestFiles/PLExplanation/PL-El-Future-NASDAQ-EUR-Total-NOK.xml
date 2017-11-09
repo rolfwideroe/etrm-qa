@@ -1,0 +1,54 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="PL-Explanation-El-Future-NASDAQ" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="NOK" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0001,D0311-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0002,D0711-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0003;PL-Explanation-El-Future-NASDAQ-0008,D1111-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,13837.8601926133,9436.59118404132,9436.59118404132,18931.9227970078,18931.9227970078,18931.9227970078,18931.9227970078,18931.9227970078,18931.9227970078</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0004;PL-Explanation-El-Future-NASDAQ-0005,W46-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,107653.440527772,100328.62578225,71076.19648746,-6526.05657577513,-6526.05657577513,-6526.05657577513,-6526.05657577513,-6526.05657577513,-6526.05657577513</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0006;PL-Explanation-El-Future-NASDAQ-0007,W47-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,221224.313318183,131992.423590822,131992.423590822,60632.9760868058,60632.9760868058,60632.9760868058,60632.9760868058,60632.9760868058,60632.9760868058</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0009,D1511-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,0,0,0,12622.4775340788,12622.4775340788,12622.4775340788,12622.4775340788,12622.4775340788,12622.4775340788</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0010,W49-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,0,0,0,82472.6556281936,82472.6556281936,82472.6556281936,82472.6556281936,82472.6556281936,82472.6556281936</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0011,W45-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,40612.0620860318,30858.1974228399,30858.1974228399,30858.1974228399,30858.1974228399,30858.1974228399,30858.1974228399,30858.1974228399,30858.1974228399</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0001,D0311-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0002,D0711-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0003;PL-Explanation-El-Future-NASDAQ-0008,D1111-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0004;PL-Explanation-El-Future-NASDAQ-0005,W46-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,0,20592.6151392501,-8659.81415553982,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0006;PL-Explanation-El-Future-NASDAQ-0007,W47-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0009,D1511-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0010,W49-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0011,W45-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,3024.47846700596,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0001,D0311-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902,6331.09947406902</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0002,D0711-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926,9115.52502531926</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0003;PL-Explanation-El-Future-NASDAQ-0008,D1111-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,13837.8601926133,9436.59118404132,9436.59118404132,18931.9227970078,18931.9227970078,18931.9227970078,18931.9227970078,18931.9227970078,18931.9227970078</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0004;PL-Explanation-El-Future-NASDAQ-0005,W46-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,107653.440527772,79736.0106429998,79736.0106429998,-6526.05657577513,-6526.05657577513,-6526.05657577513,-6526.05657577513,-6526.05657577513,-6526.05657577513</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0006;PL-Explanation-El-Future-NASDAQ-0007,W47-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,221224.313318183,131992.423590822,131992.423590822,60632.9760868058,60632.9760868058,60632.9760868058,60632.9760868058,60632.9760868058,60632.9760868058</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0009,D1511-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,0,0,0,12622.4775340788,12622.4775340788,12622.4775340788,12622.4775340788,12622.4775340788,12622.4775340788</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0010,W49-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,0,0,0,82472.6556281936,82472.6556281936,82472.6556281936,82472.6556281936,82472.6556281936,82472.6556281936</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-NASDAQ-0011,W45-11,NordPool System Price,Future,PL-Explanation-El-Future-NASDAQ,37587.5836190259,30858.1974228399,30858.1974228399,30858.1974228399,30858.1974228399,30858.1974228399,30858.1974228399,30858.1974228399,30858.1974228399</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

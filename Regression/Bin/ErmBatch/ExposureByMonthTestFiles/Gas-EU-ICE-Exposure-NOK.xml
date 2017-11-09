@@ -1,0 +1,46 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>zMonth-Gas-EU-ICE-Exposure-NOK</workspace>
+    <monitor>zMonth-Gas-EU-ICE-Exposure-NOK</monitor>
+    <reportdate>2011-10-27T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURC Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European,Physical,Base,ICE TTF,ICE,CET 06-06,EUR,Gas-European-EUR-0007;Gas-European-EUR-0008;Gas-European-EUR-0009,ICE TTF,MWh,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,11.0222905280502,0,0</record>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURP Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European,Physical,Base,ICE TTF,ICE,CET 06-06,EUR,Gas-European-EUR-0010;Gas-European-EUR-0011;Gas-European-EUR-0012,ICE TTF,MWh,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,-7099.31296498993,0,0</record>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURP Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European,Physical,Base,ICE NBP,ICE,CET 06-06,GBP,Gas-European-EUR-0019,ICE NBP,th,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,-1439986.72090558,0,0</record>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURC Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European,Physical,Base,ICE TTF,ICE,CET 06-06,EUR,Gas-European-EUR-0035;Gas-European-EUR-0036;Gas-European-EUR-0037,ICE TTF,MWh,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,4.95501038230289,0,0</record>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURP Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European,Physical,Base,ICE TTF,ICE,CET 06-06,EUR,Gas-European-EUR-0038;Gas-European-EUR-0039;Gas-European-EUR-0040,ICE TTF,MWh,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,-7110.36802209172,0,0</record>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURP Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European,Physical,Base,ICE NBP,ICE,CET 06-06,GBP,Gas-European-EUR-0047,ICE NBP,th,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,-1143205.70208393,0,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>ICE NBP,2011-10-28 00:00:00.000,2011-11-01 00:00:00.000,0.941270730077845,0,0</record>
+        <record>ICE NBP,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,5.51809331903633,0,0</record>
+        <record>ICE NBP,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,5.96036105504573,0,0</record>
+        <record>ICE NBP,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,6.23376057828535,0,0</record>
+        <record>ICE NBP,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,6.21660144145862,0,0</record>
+        <record>ICE NBP,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,6.00509943419698,0,0</record>
+        <record>ICE NBP,2012-04-01 00:00:00.000,2012-05-01 00:00:00.000,5.75950979882205,0,0</record>
+        <record>ICE NBP,2012-05-01 00:00:00.000,2012-06-01 00:00:00.000,5.567476126114,0,0</record>
+        <record>ICE NBP,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,5.37083904789817,0,0</record>
+        <record>ICE TTF,2011-10-28 00:00:00.000,2011-11-01 00:00:00.000,184.868568341458,0,0</record>
+        <record>ICE TTF,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,190.470874117149,0,0</record>
+        <record>ICE TTF,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,199.650349059384,0,0</record>
+        <record>ICE TTF,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,203.371261760627,0,0</record>
+        <record>ICE TTF,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,202.542634748034,0,0</record>
+        <record>ICE TTF,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,200.947937658691,0,0</record>
+        <record>ICE TTF,2012-04-01 00:00:00.000,2012-05-01 00:00:00.000,196.805396468561,0,0</record>
+        <record>ICE TTF,2012-05-01 00:00:00.000,2012-06-01 00:00:00.000,194.352877878134,0,0</record>
+        <record>ICE TTF,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,193.982248671133,0,0</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

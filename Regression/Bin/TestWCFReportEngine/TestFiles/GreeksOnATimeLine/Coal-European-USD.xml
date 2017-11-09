@@ -1,0 +1,60 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>GreeksOnATimelineReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-01T00:00:00" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="USD" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseEndDate" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="PosCalcMethod" IsNotSet="false" XmlEncodedValue="NPVWA" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="TimeResolution" IsNotSet="false" XmlEncodedValue="Month" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Coal-EU-ICE-USD" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedTimeSeriesArtifacts>
+      <ExpectedTimeSeriesArtifact ArtifactId="greeksOnATimeline" Columns="GroupBy,Greek,ReferenceArea,TimeZone,From,Until,Value" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Double">
+        <TimeSeriesProperties>
+          <Property Name="GroupBy" DataType="System.String" />
+          <Property Name="Greek" DataType="System.String" />
+          <Property Name="ReferenceArea" DataType="System.String" />
+        </TimeSeriesProperties>
+        <ExpectedRecord>Coal-EU-ICE-USD,Delta (Curve Unit),Coal API #2,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Delta (Curve Unit),Coal API #2,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Delta (Curve Unit),Coal API #2,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Delta (Curve Unit),Coal API #2,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,-0.0682081710850868</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Delta (Curve Unit),Coal API #2,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,-0.408680625084812</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Delta (Curve Unit),Coal API #2,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Delta (Curve Unit),Coal API #2,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Delta (Curve Unit),Coal API #2,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Gamma (Curve Unit),Coal API #2,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Gamma (Curve Unit),Coal API #2,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Gamma (Curve Unit),Coal API #2,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Gamma (Curve Unit),Coal API #2,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0.0222324179706845</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Gamma (Curve Unit),Coal API #2,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0.133209237674352</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Gamma (Curve Unit),Coal API #2,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Gamma (Curve Unit),Coal API #2,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Gamma (Curve Unit),Coal API #2,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Theta (USD/day),Coal API #2,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Theta (USD/day),Coal API #2,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Theta (USD/day),Coal API #2,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Theta (USD/day),Coal API #2,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,-0.109150056826331</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Theta (USD/day),Coal API #2,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,-0.653990757151099</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Theta (USD/day),Coal API #2,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Theta (USD/day),Coal API #2,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Theta (USD/day),Coal API #2,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Vega (USD/Vol(%)),Coal API #2,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Vega (USD/Vol(%)),Coal API #2,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Vega (USD/Vol(%)),Coal API #2,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Vega (USD/Vol(%)),Coal API #2,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0.326120948389801</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Vega (USD/Vol(%)),Coal API #2,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,1.95400801576889</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Vega (USD/Vol(%)),Coal API #2,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Vega (USD/Vol(%)),Coal API #2,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD,Vega (USD/Vol(%)),Coal API #2,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0</ExpectedRecord>
+      </ExpectedTimeSeriesArtifact>
+    </ExpectedTimeSeriesArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+	<DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Coal-European</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <CoalEuropean>
+        <InstrumentData>
+          <ExecutionVenue>ICE</ExecutionVenue>
+          <PriceBasis>Coal API #2</PriceBasis>
+          <FromDate>2011-08-27</FromDate>
+          <ToDate>2011-09-30</ToDate>
+          <Financial />
+          <PutCall>Put</PutCall>
+          <Strike>130</Strike>
+          <ExpiryDate>2011-08-02</ExpiryDate>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>5</Quantity>
+          <QuantityUnit>Ton</QuantityUnit>
+          <Price>3.66</Price>
+          <Currency>USD</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>USD</ClearingCurrency>
+          <BrokerCurrency>USD</BrokerCurrency>
+        </SettlementData>
+      </CoalEuropean>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-04T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Coal-EU-ICE-USD-0006</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>1839</TransactionId>
+  <DealType>Coal-European</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>ICE</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>ICE</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>ICE</ExecutionVenue>
+    <InstrumentName>EURP Sep11 02-AUG-11 130.00</InstrumentName>
+    <PriceBasis>Coal API #2</PriceBasis>
+    <FromDate>2011-08-27T00:00:00</FromDate>
+    <ToDate>2011-09-30T00:00:00</ToDate>
+    <PutCall>Put</PutCall>
+    <Strike>130</Strike>
+    <ExpiryDate>2011-08-02T00:00:00</ExpiryDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <UnderlyingExecutionVenue>ICE</UnderlyingExecutionVenue>
+    <UnderlyingDeliveryType>Financial</UnderlyingDeliveryType>
+    <UnderlyingInstrumentType>Future</UnderlyingInstrumentType>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>5</Quantity>
+    <QuantityUnit>Ton</QuantityUnit>
+    <Price>3.66</Price>
+    <PriceIsoCurrency>USD</PriceIsoCurrency>
+    <PriceVolumeUnit>PerTon</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2010-01-03T23:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>Coal-EU-ICE-USD-0006</ExternalId>
+    <ExternalSource>RegTest</ExternalSource>
+    <ModificationDateTimeUtc>2016-06-15T12:24:40Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>840</Deliveries>
+    <OriginalQuantity>5</OriginalQuantity>
+    <ReferringId>1840</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

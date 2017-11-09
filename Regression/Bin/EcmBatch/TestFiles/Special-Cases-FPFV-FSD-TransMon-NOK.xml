@@ -1,0 +1,22 @@
+<test type="EcmBatch" name="Special-Cases-ZeroVolume-CFMon-ActualCF-EUR" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FPFV-FSD-TransMon-NOK</workspace>
+    <monitor>Special-Cases-FPFV-FSD-TransMon-NOK</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\TransactionMonitor.xml" />
+      <returns>
+        <record>NOK,Special-Cases-FPFV-FSD,2010-01-06 00:00:00.000,2010-01-06 00:00:00.000,Electricity,%,Special-Cases,109,Counterparty-Special-Cases,110,RegCustomerCompany,RegCounterpartyCompany,NULL,NULL,EEX,CET,EUR,Viz,NULL,NULL,DealImport,DealImport,NULL,Active,NULL,NULL,NULL,NULL,NULL,0,0,Special-Cases-FPFV-FSD-Day-EEX,RegTest,NULL,NULL,0,Buy,0,0,EUR,0,EUR,30,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,D0111-11,Fixed Price Floating Volume,Financial,Base,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,24,NULL,NULL,0,NULL,0,NULL,0,0,0,0,NULL,NULL,25,0,0,0,0,0,0,0,30,25,0,0,0,0,NULL,Vizard,NULL,NULL,NULL,NULL,NULL,NULL,NULL,MWh,0,0,0,0,NULL,NULL</record>
+        <record>NOK,Special-Cases-FPFV-FSD,2010-01-06 00:00:00.000,2010-01-06 00:00:00.000,Electricity,%,Special-Cases,109,Counterparty-Special-Cases,110,RegCustomerCompany,RegCounterpartyCompany,NULL,NULL,EEX,CET,EUR,Viz,NULL,NULL,DealImport,DealImport,NULL,Active,NULL,NULL,NULL,NULL,NULL,0,0,Special-Cases-FPFV-FSD-Hour-EEX,RegTest,NULL,NULL,0,Buy,0,0,EUR,0,EUR,30,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,D0111-11,Fixed Price Floating Volume,Financial,Base,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,24,NULL,NULL,0,NULL,0,NULL,0,0,0,0,NULL,NULL,25,0,0,0,0,0,0,0,30,25,0,0,0,0,NULL,Vizard,NULL,NULL,NULL,NULL,NULL,NULL,NULL,MWh,0,0,0,0,NULL,NULL</record>
+        <record>NOK,Special-Cases-FPFV-FSD,2010-01-06 00:00:00.000,2010-01-06 00:00:00.000,Electricity,%,Special-Cases,109,Counterparty-Special-Cases,110,RegCustomerCompany,RegCounterpartyCompany,NULL,NULL,EEX,CET,EUR,Viz,NULL,NULL,DealImport,DealImport,NULL,Active,NULL,NULL,NULL,NULL,NULL,0,0,Special-Cases-FPFV-FSD-Hour-Q411-EEX,RegTest,NULL,NULL,0,Buy,0,0,EUR,0,EUR,30,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,Q4-11,Fixed Price Floating Volume,Financial,Base,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,2209,NULL,NULL,0,NULL,0,NULL,0,0,0,0,NULL,NULL,25,0,0,0,0,0,0,0,30,25,436.941299775992,1440,4432376.57744453,4432376.57744453,ECS Curve,Vizard,NULL,NULL,NULL,NULL,NULL,NULL,NULL,MWh,0,0,0,0,NULL,NULL</record>
+        <record>NOK,Special-Cases-FPFV-FSD,2010-01-06 00:00:00.000,2010-01-06 00:00:00.000,Electricity,%,Special-Cases,109,Counterparty-Special-Cases,110,RegCustomerCompany,RegCounterpartyCompany,NULL,NULL,EEX,CET,EUR,Viz,NULL,NULL,DealImport,DealImport,NULL,Active,NULL,NULL,NULL,NULL,NULL,0,0,Special-Cases-FPFV-FSD-Month-Day-EEX,RegTest,NULL,NULL,0,Buy,0,0,EUR,0,EUR,30,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,NULL,D0111-11,Fixed Price Floating Volume,Financial,Base,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,24,NULL,NULL,0,NULL,0,NULL,0,0,0,0,NULL,NULL,25,0,0,0,0,0,0,0,30,25,0,0,0,0,NULL,Vizard,NULL,NULL,NULL,NULL,NULL,NULL,NULL,MWh,0,0,0,0,NULL,NULL</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

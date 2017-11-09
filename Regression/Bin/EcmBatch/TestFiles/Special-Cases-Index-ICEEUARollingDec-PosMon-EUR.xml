@@ -1,0 +1,19 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>SpecialCases-Index-ICEEUARollingDec-PosMon-EUR</workspace>
+    <monitor>SpecialCases-Index-ICEEUARollingDec-PosMon-EUR</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Floating Price,FLOAT 01-Jan-11 - 31-Dec-15 - Base,,,,2011-01-01 00:00:00.000,2015-12-31 00:00:00.000,Active,0,2639000.41996864,12322117.5214248,14961117.9413935,16206262.338264,12322117.5214248,2639000.41996864,12322117.5214248,14961117.9413935,41.3150684931507,361920,0,10,0,0,76320,36192,10,NULL,0,0,0,0,0,0,10.7320535390118,-3884144.81683917,44.7785763104111,0,0,SpecialCases-Index-ICEEUARollingDec-0001</record>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,Y2010,Y2010 - Base,,CET,EUR,Viz,Electricity,,Floating Price,FLOAT YR-10 - Base,,,,2010-01-01 00:00:00.000,2010-12-31 00:00:00.000,Expired,0,3381206.7,0,3381206.7,0,0,3381206.7,0,3381206.7,0,0,0,10,0,0,87600,8760,10,NULL,0,0,0,0,0,0,14.4606609589041,-1266753.9,0,0,0,SpecialCases-Index-ICEEUARollingDec-0002</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

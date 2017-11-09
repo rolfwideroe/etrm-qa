@@ -1,0 +1,29 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-Future-EEX-Spain-EUR-PosMon-EUR</workspace>
+    <monitor>El-Future-EEX-Spain-EUR-PosMon-EUR</monitor>
+    <reportdate>2015-10-12T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,M10-15,M10-15 - Base,ECS Curve,CET,EUR,Viz,Electricity,EEX,Future,Oct-2015 - Base,,,,2015-10-01 00:00:00.000,2015-10-31 00:00:00.000,Active,7450,110930.5,0,110930.5,223975.7,0,110930.5,0,110930.5,0.521689497716895,4570,0,10,0,0,2880,457,10,NULL,0,0,0,0,0,0,35.12,-160498.4,49.01,0,0,El-Future-EEX-Spain-EUR-0001;El-Future-EEX-Spain-EUR-0002;El-Future-EEX-Spain-EUR-0003</record>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,M03-15,M03-15 - Base,,CET,EUR,Viz,Electricity,EEX,Future,Mar-2015 - Base,,,,2015-03-01 00:00:00.000,2015-03-31 00:00:00.000,Expired,7430,66944.2999999998,0,66944.2999999998,0,0,66944.2999999998,0,66944.2999999998,0,0,0,10,0,0,7430,743,10,NULL,0,0,0,0,0,0,35.12,-260941.6,0,0,0,El-Future-EEX-Spain-EUR-0004;El-Future-EEX-Spain-EUR-0005;El-Future-EEX-Spain-EUR-0006</record>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,M12-15,M12-15 - Base,ECS Curve,CET,EUR,Viz,Electricity,EEX,Future,Dec-2015 - Base,,,,2015-12-01 00:00:00.000,2015-12-31 00:00:00.000,Active,0,96199.2000000002,0,96199.2000000002,342612,0,96199.2000000002,0,96199.2000000002,0.849315068493151,7440,0,10,0,0,0,744,10,NULL,0,0,0,0,0,0,33.12,-246412.8,46.05,0,0,El-Future-EEX-Spain-EUR-0007;El-Future-EEX-Spain-EUR-0008;El-Future-EEX-Spain-EUR-0009</record>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,Q2-15,Q2-15 - Base,,CET,EUR,Viz,Electricity,EEX,Future,2/15 - Base,,,,2015-04-01 00:00:00.000,2015-06-30 00:00:00.000,Expired,21840,229975.200000003,0,229975.200000003,0,0,229975.200000003,0,229975.200000003,0,0,0,10,0,0,21840,2184,10,NULL,0,0,0,0,0,0,35.12,-767020.8,0,0,0,El-Future-EEX-Spain-EUR-0010;El-Future-EEX-Spain-EUR-0011;El-Future-EEX-Spain-EUR-0012</record>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,Q4-15,Q4-15 - Base,ECS Curve,CET,EUR,Viz,Electricity,EEX,Future,4/15 - Base,,,,2015-10-01 00:00:00.000,2015-12-31 00:00:00.000,Active,22090,299982.199999988,0,299982.199999988,0,0,299982.199999988,0,299982.199999988,2.19292237442922,19210,0,10,0,0,2880,1921,10,NULL,0,0,0,0,0,0,35.12,-674655.2,0,0,0,El-Future-EEX-Spain-EUR-0013;El-Future-EEX-Spain-EUR-0014;El-Future-EEX-Spain-EUR-0015</record>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,Y2016,Y2016 - Base,ECS Curve,CET,EUR,Viz,Electricity,EEX,Future,Cal-16 - Base,,,,2016-01-01 00:00:00.000,2016-12-31 00:00:00.000,Active,87840,1147190.39999998,0,1147190.39999998,4144291.2,0,1147190.39999998,0,1147190.39999998,10.027397260274,87840,0,10,0,0,0,8784,10,NULL,0,0,0,0,0,0,35.12,-3084940.8,47.18,0,0,El-Future-EEX-Spain-EUR-0016;El-Future-EEX-Spain-EUR-0017;El-Future-EEX-Spain-EUR-0018</record>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,W41-15,W41-15 - Base,,CET,EUR,Viz,Electricity,EEX,Future,W41-15 - Base,,,,2015-10-05 00:00:00.000,2015-10-11 00:00:00.000,Expired,1680,27383.9999999999,0,27383.9999999999,0,0,27383.9999999999,0,27383.9999999999,0,0,0,10,0,0,1680,168,10,NULL,0,0,0,0,0,0,35.12,-59001.6,0,0,0,El-Future-EEX-Spain-EUR-0019;El-Future-EEX-Spain-EUR-0020;El-Future-EEX-Spain-EUR-0021</record>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,W40-15,W40-15 - Base,,CET,EUR,Viz,Electricity,EEX,Future,W40-15 - Base,,,,2015-09-28 00:00:00.000,2015-10-04 00:00:00.000,Expired,1680,30206.4000000001,0,30206.4000000001,0,0,30206.4000000001,0,30206.4000000001,0,0,0,10,0,0,1680,168,10,NULL,0,0,0,0,0,0,35.12,-59001.6,0,0,0,El-Future-EEX-Spain-EUR-0022;El-Future-EEX-Spain-EUR-0023;El-Future-EEX-Spain-EUR-0024</record>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,W43-15,W43-15 - Base,ECS Curve,CET,EUR,Viz,Electricity,EEX,Future,W43-15 - Base,,,,2015-10-19 00:00:00.000,2015-10-25 00:00:00.000,Active,1690,23457.2,0,23457.2,81120,0,23457.2,0,23457.2,0.192922374429224,1690,0,10,0,0,0,169,10,NULL,0,0,0,0,0,0,35.12,-59352.8,48,0,0,El-Future-EEX-Spain-EUR-0025;El-Future-EEX-Spain-EUR-0026;El-Future-EEX-Spain-EUR-0027</record>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,Other Period,Other Period - Base,,CET,EUR,Viz,Electricity,EEX,Future,WE41/15 - Base,,,,2015-10-10 00:00:00.000,2015-10-11 00:00:00.000,Expired,480,6561.59999999999,0,6561.59999999999,0,0,6561.59999999999,0,6561.59999999999,0,0,0,10,0,0,480,48,10,NULL,0,0,0,0,0,0,35.12,-16857.6,0,0,0,El-Future-EEX-Spain-EUR-0028;El-Future-EEX-Spain-EUR-0029;El-Future-EEX-Spain-EUR-0030</record>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,Other Period,Other Period - Base,,CET,EUR,Viz,Electricity,EEX,Future,WE40/15 - Base,,,,2015-10-03 00:00:00.000,2015-10-04 00:00:00.000,Expired,480,4752,0,4752,0,0,4752,0,4752,0,0,0,10,0,0,480,48,10,NULL,0,0,0,0,0,0,35.12,-16857.6,0,0,0,El-Future-EEX-Spain-EUR-0031;El-Future-EEX-Spain-EUR-0032;El-Future-EEX-Spain-EUR-0033</record>
+        <record>0169 El-Future-EEX-Spain-EUR,Base,Financial,EEX Spain,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,EEX,Future,WE42/15 - Base,,,,2015-10-17 00:00:00.000,2015-10-18 00:00:00.000,Active,480,5582.4,0,5582.4,21960,0,5582.4,0,5582.4,0.0547945205479452,480,0,10,0,0,0,48,10,NULL,0,0,0,0,0,0,35.12,-16857.6,45.75,0,0,El-Future-EEX-Spain-EUR-0034;El-Future-EEX-Spain-EUR-0035;El-Future-EEX-Spain-EUR-0036</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

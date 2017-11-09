@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>ElCert-Forward-OTC-CurrExposure-EUR</workspace>
+    <monitor>ElCert-Forward-OTC-CurrExposure-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-07,2007-03-16 00:00:00.000,2007-03-16 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,SEK,ElCert-Forward-OTC-0001;ElCert-Forward-OTC-0009;ElCert-Forward-OTC-0017,SEK,2011-11-02 00:00:00.000,17599999.9999201</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-07,2007-03-16 00:00:00.000,2007-03-16 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,NOK,ElCert-Forward-OTC-0002;ElCert-Forward-OTC-0010;ElCert-Forward-OTC-0018,SEK,2011-11-02 00:00:00.000,17599999.9999201</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-11,2011-03-18 00:00:00.000,2011-03-18 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,SEK,ElCert-Forward-OTC-0003;ElCert-Forward-OTC-0011;ElCert-Forward-OTC-0019,SEK,2011-11-02 00:00:00.000,17599999.9999201</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-11,2011-03-18 00:00:00.000,2011-03-18 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,NOK,ElCert-Forward-OTC-0004;ElCert-Forward-OTC-0012;ElCert-Forward-OTC-0020,SEK,2011-11-02 00:00:00.000,17599999.9999201</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS011111,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,SEK,ElCert-Forward-OTC-0005;ElCert-Forward-OTC-0013;ElCert-Forward-OTC-0021,SEK,2011-11-02 00:00:00.000,17599999.9999201</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS011111,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,NOK,ElCert-Forward-OTC-0006;ElCert-Forward-OTC-0014;ElCert-Forward-OTC-0022,SEK,2011-11-02 00:00:00.000,17599999.9999201</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-12,2012-03-16 00:00:00.000,2012-03-16 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,SEK,ElCert-Forward-OTC-0007;ElCert-Forward-OTC-0015;ElCert-Forward-OTC-0023,SEK,2012-03-16 00:00:00.000,6238999.82620393</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-12,2012-03-16 00:00:00.000,2012-03-16 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,NOK,ElCert-Forward-OTC-0008;ElCert-Forward-OTC-0016;ElCert-Forward-OTC-0024,NOK,2012-03-16 00:00:00.000,-11561000</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-12,2012-03-16 00:00:00.000,2012-03-16 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,NOK,ElCert-Forward-OTC-0008;ElCert-Forward-OTC-0016;ElCert-Forward-OTC-0024,SEK,2012-03-16 00:00:00.000,17799999.8262039</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

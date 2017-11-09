@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xsi:noNamespaceSchemaLocation="DealInsert.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Forward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityForward>
+			<InstrumentData>
+				<!--<Timezone>CET</Timezone>-->
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<LoadProfile>SystemBase</LoadProfile>
+				<FromDate>2010-05-01</FromDate>
+				<ToDate>2010-06-01</ToDate>
+				<Financial/>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>2.0</Quantity>
+				<QuantityUnit/>
+				<Price>3.0</Price>
+				<Currency>NOK</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>NordPool</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>NOK</ClearingCurrency>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+		</ElectricityForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-04-01T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<!--<Audited>true</Audited>-->
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>API test: ElectricityForward Financial, Metadata.Timezone CET-6</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>ElectricityForwardFinancialMetadataTimezone CET-6</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO>
+  <TransactionId>155</TransactionId>
+  <DealType>Electricity-Forward</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>01-May-10 - 01-Jun-10</InstrumentName>
+    <PriceBasis>NordPool System Price</PriceBasis>
+    <FromDate>2010-05-01T00:00:00</FromDate>
+    <ToDate>2010-06-01T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>CET 06-06</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>2</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>3</Price>
+    <PriceIsoCurrency>NOK</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>NordPool</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2010-03-31T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+ <FeesData>
+    <Broker>API Test Broker</Broker>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>ElectricityForwardFinancialMetadataTimezone CET-6</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>API test: ElectricityForward Financial, Metadata.Timezone CET-6</Comment>
+    <ModificationDateTimeUtc>2014-10-21T08:07:50Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>768</Deliveries>
+    <OriginalQuantity>2</OriginalQuantity>
+    <ReferringId>156</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>true</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+    <TimeStampAuthorised>2014-10-21T10:07:50</TimeStampAuthorised>
+    <TimeStampCounterpartyAuthorised>2014-10-21T10:07:50</TimeStampCounterpartyAuthorised>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

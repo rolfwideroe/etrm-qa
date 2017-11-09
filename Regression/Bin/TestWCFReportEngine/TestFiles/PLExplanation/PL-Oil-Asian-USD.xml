@@ -1,0 +1,75 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-01T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Oil-Asian-USD" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="USD" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Oil-Asian-USD-0001,ASIC/A Nov-11 130.00,BrentOil,Asian,Oil-Asian-USD,-17306.856361557,-17901.8536346535,-17597.2168469665,-17597.2168469665,-17597.2168469665,-17871.9219893707,-17871.9182189253,-17871.9182189253,-17871.9182189253</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0002,ASIP/A Nov-11 130.00,BrentOil,Asian,Oil-Asian-USD,86.3729369407155,84.9572475403209,75.4883950061574,75.4883950061574,75.4883950061574,75.2136898637533,75.2145135179761,75.2145135179761,75.2145135179761</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0003,ASIC/A Nov-11 80.00,BrentOil,Asian,Oil-Asian-USD,127.981603020218,128.802542315,138.575860079892,138.575860079892,138.575860079892,138.575769039798,138.577150777486,138.577150777486,138.577150777486</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0004,ASIP/A Nov-11 80.00,BrentOil,Asian,Oil-Asian-USD,-18.2898893628346,-18.2997202402195,-18.2998917971776,-18.2998917971776,-18.2998917971776,-18.2999828372718,-18.2999828371207,-18.2999828371207,-18.2999828371207</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0005,ASIC/A Sep-11 130.00,BrentOil,Asian,Oil-Asian-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0006,ASIP/A Sep-11 130.00,BrentOil,Asian,Oil-Asian-USD,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0007,ASIC/A Sep-11 80.00,BrentOil,Asian,Oil-Asian-USD,136.004545454545,136.004545454545,136.004545454545,136.004545454545,136.004545454545,136.004545454545,136.004545454545,136.004545454545,136.004545454545</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0008,ASIP/A Sep-11 80.00,BrentOil,Asian,Oil-Asian-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0009,ASIC/A Mar-12 130.00,BrentOil,Asian,Oil-Asian-USD,-8.31436118326987,-8.88508753604591,-3.74007274515667,-3.74007274515667,-3.74007274515667,-3.30553258264775,-3.30561527945798,-3.30561527945798,-3.30561527945798</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0010,ASIP/A Mar-12 130.00,BrentOil,Asian,Oil-Asian-USD,107.168183582774,106.608143564394,87.706619526879,87.706619526879,87.706619526879,88.1411596893878,88.1405726499059,88.1405726499059,88.1405726499059</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0011,ASIC/A Mar-12 80.00,BrentOil,Asian,Oil-Asian-USD,118.610604862859,118.373132135253,141.330496238226,141.330496238226,141.330496238226,141.438975772722,141.43809478753,141.43809478753,141.43809478753</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0012,ASIP/A Mar-12 80.00,BrentOil,Asian,Oil-Asian-USD,-15.3291932808077,-15.5790603098618,-16.6682350352934,-16.6682350352934,-16.6682350352934,-16.5597555007975,-16.5597650985154,-16.5597650985154,-16.5597650985154</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0013;Oil-Asian-USD-0014,ASIC/A May-11 130.00,BrentOil,Asian,Oil-Asian-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0015;Oil-Asian-USD-0016,ASIC/A Jun-12 130.00,BrentOil,Asian,Oil-Asian-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0017,ASIC/A Nov-11 5.00,BrentOil,Asian,Oil-Asian-USD,502898.420911041,503744.30815051,513517.79747236,513517.79747236,513517.79747236,513517.79747236,513522.481641869,513522.481641869,513522.481641869</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Oil-Asian-USD-0001,ASIC/A Nov-11 130.00,BrentOil,Asian,Oil-Asian-USD,993.143638442977,398.146365346454,702.783153033523,702.783153033523,702.783153033523,428.078010629329,428.081781074723,428.081781074723,428.081781074723</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0002,ASIP/A Nov-11 130.00,BrentOil,Asian,Oil-Asian-USD,104.672936940715,103.257247540321,93.7883950061574,93.7883950061574,93.7883950061574,93.5136898637533,93.5145135179761,93.5145135179761,93.5145135179761</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0003,ASIC/A Nov-11 80.00,BrentOil,Asian,Oil-Asian-USD,146.281603020218,147.102542315,156.875860079892,156.875860079892,156.875860079892,156.875769039798,156.877150777486,156.877150777486,156.877150777486</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0004,ASIP/A Nov-11 80.00,BrentOil,Asian,Oil-Asian-USD,0.0101106371653899,0.0002797597804569,0.000108202822409937,0.000108202822409937,0.000108202822409937,1.71627281838668E-05,1.71628793505416E-05,1.71628793505416E-05,1.71628793505416E-05</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0005,ASIC/A Sep-11 130.00,BrentOil,Asian,Oil-Asian-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0006,ASIP/A Sep-11 130.00,BrentOil,Asian,Oil-Asian-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0007,ASIC/A Sep-11 80.00,BrentOil,Asian,Oil-Asian-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0008,ASIP/A Sep-11 80.00,BrentOil,Asian,Oil-Asian-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0009,ASIC/A Mar-12 130.00,BrentOil,Asian,Oil-Asian-USD,9.98563881673013,9.41491246395409,14.5599272548433,14.5599272548433,14.5599272548433,14.9944674173522,14.994384720542,14.994384720542,14.994384720542</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0010,ASIP/A Mar-12 130.00,BrentOil,Asian,Oil-Asian-USD,125.468183582774,124.908143564394,106.006619526879,106.006619526879,106.006619526879,106.441159689388,106.440572649906,106.440572649906,106.440572649906</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0011,ASIC/A Mar-12 80.00,BrentOil,Asian,Oil-Asian-USD,136.910604862859,136.673132135253,159.630496238226,159.630496238226,159.630496238226,159.738975772722,159.73809478753,159.73809478753,159.73809478753</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0012,ASIP/A Mar-12 80.00,BrentOil,Asian,Oil-Asian-USD,2.97080671919233,2.72093969013819,1.63176496470656,1.63176496470656,1.63176496470656,1.74024449920254,1.74023490148459,1.74023490148459,1.74023490148459</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0013;Oil-Asian-USD-0014,ASIC/A May-11 130.00,BrentOil,Asian,Oil-Asian-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0015;Oil-Asian-USD-0016,ASIC/A Jun-12 130.00,BrentOil,Asian,Oil-Asian-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0017,ASIC/A Nov-11 5.00,BrentOil,Asian,Oil-Asian-USD,521198.420911041,522044.30815051,531817.79747236,531817.79747236,531817.79747236,531817.79747236,531822.481641869,531822.481641869,531822.481641869</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Oil-Asian-USD-0001,ASIC/A Nov-11 130.00,BrentOil,Asian,Oil-Asian-USD,-18300,-18300,-18300,-18300,-18300,-18300,-18300,-18300,-18300</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0002,ASIP/A Nov-11 130.00,BrentOil,Asian,Oil-Asian-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0003,ASIC/A Nov-11 80.00,BrentOil,Asian,Oil-Asian-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0004,ASIP/A Nov-11 80.00,BrentOil,Asian,Oil-Asian-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0005,ASIC/A Sep-11 130.00,BrentOil,Asian,Oil-Asian-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0006,ASIP/A Sep-11 130.00,BrentOil,Asian,Oil-Asian-USD,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546,77.3954545454546</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0007,ASIC/A Sep-11 80.00,BrentOil,Asian,Oil-Asian-USD,136.004545454545,136.004545454545,136.004545454545,136.004545454545,136.004545454545,136.004545454545,136.004545454545,136.004545454545,136.004545454545</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0008,ASIP/A Sep-11 80.00,BrentOil,Asian,Oil-Asian-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0009,ASIC/A Mar-12 130.00,BrentOil,Asian,Oil-Asian-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0010,ASIP/A Mar-12 130.00,BrentOil,Asian,Oil-Asian-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0011,ASIC/A Mar-12 80.00,BrentOil,Asian,Oil-Asian-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0012,ASIP/A Mar-12 80.00,BrentOil,Asian,Oil-Asian-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0013;Oil-Asian-USD-0014,ASIC/A May-11 130.00,BrentOil,Asian,Oil-Asian-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0015;Oil-Asian-USD-0016,ASIC/A Jun-12 130.00,BrentOil,Asian,Oil-Asian-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-Asian-USD-0017,ASIC/A Nov-11 5.00,BrentOil,Asian,Oil-Asian-USD,-18300,-18300,-18300,-18300,-18300,-18300,-18300,-18300,-18300</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

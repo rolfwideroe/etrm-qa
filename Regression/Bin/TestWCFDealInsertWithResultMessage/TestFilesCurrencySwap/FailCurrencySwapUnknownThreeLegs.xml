@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Exception</TestResult>
+<Message>Failed to import deal: Failed to insert swaps. Details: Inconsistent amount of Currency Swap Legs: 3. Leg1 ExternalId: PassCurrency-Swap-Leg1
+</Message>
+<TestData>
+  <BulkDealInsert xsi:noNamespaceSchemaLocation="DealInsert.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <DealInsert>
+    	<MetaData>
+    		<MessageId>MessageId</MessageId>
+    		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+    		<Timezone>CET</Timezone>
+    	</MetaData>
+    	<Transaction>
+    		<TransactionType>Automatic</TransactionType>
+    		<DealType>Currency-Forward</DealType>
+    		<Portfolios>
+    			<Portfolio>API Test Customer</Portfolio>
+    			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+    			<BuySell>Buy</BuySell>
+    		</Portfolios>
+    		<Currency-Forward>
+    			<InstrumentData>
+    				<ExecutionVenue>Nord Pool</ExecutionVenue>
+    				<BaseCurrency>NOK</BaseCurrency>
+    				<CrossCurrency>EUR</CrossCurrency>
+    				<DeliveryDate>2010-05-01</DeliveryDate>
+  				  <CompanionTradeExternalId>Wrong-External-ID</CompanionTradeExternalId>
+    			</InstrumentData>
+    			<SettlementData>
+    				<Quantity>2.0</Quantity>
+    				<Price>3.0</Price>
+    				<CurrencySource>Viz</CurrencySource>
+    				<Clearing>Electronic</Clearing>
+    			</SettlementData>
+    		</Currency-Forward>
+    		<DealDetails>
+    			<Status>Active</Status>
+    			<Trader>DealImport</Trader>
+    			<TradeDate>2010-04-01T00:00:00</TradeDate>
+    			<ConfirmedByBroker>false</ConfirmedByBroker>
+    			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    			<Authorised>true</Authorised>
+    			<Paid>false</Paid>
+    		</DealDetails>
+    		<ReferenceData>
+    			<Comment>API test: CurrencyForward, should pass</Comment>
+    			<DealGroup>API Test</DealGroup>
+    			<ExternalId>PassCurrency-Swap-Leg1</ExternalId>
+    			<ExternalSource>XMLFileImport</ExternalSource>
+    			<TicketNumber>TicketNumber</TicketNumber>
+    		</ReferenceData>
+    	</Transaction>
+    </DealInsert>
+    <DealInsert>
+    	<MetaData>
+    		<MessageId>MessageId</MessageId>
+    		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+    		<Timezone>CET</Timezone>
+    	</MetaData>
+    	<Transaction>
+    		<TransactionType>Automatic</TransactionType>
+    		<DealType>Currency-Forward</DealType>
+    		<Portfolios>
+    			<Portfolio>API Test Customer</Portfolio>
+    			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+    			<BuySell>Sell</BuySell>
+    		</Portfolios>
+    		<Currency-Forward>
+    			<InstrumentData>
+    				<ExecutionVenue>Nord Pool</ExecutionVenue>
+    				<BaseCurrency>NOK</BaseCurrency>
+    				<CrossCurrency>EUR</CrossCurrency>
+    				<DeliveryDate>2010-05-10</DeliveryDate>
+  				  <CompanionTradeExternalId>PassCurrency-Swap-Leg1</CompanionTradeExternalId>
+    			</InstrumentData>
+    			<SettlementData>
+    				<Quantity>2.0</Quantity>
+    				<Price>3.0</Price>
+    				<CurrencySource>Viz</CurrencySource>
+    				<Clearing>Electronic</Clearing>
+    			</SettlementData>
+    		</Currency-Forward>
+    		<DealDetails>
+    			<Status>Active</Status>
+    			<Trader>DealImport</Trader>
+    			<TradeDate>2010-04-01T00:00:00</TradeDate>
+    			<ConfirmedByBroker>false</ConfirmedByBroker>
+    			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    			<Authorised>true</Authorised>
+    			<Paid>false</Paid>
+    		</DealDetails>
+    		<ReferenceData>
+    			<Comment>API test: CurrencyForward, should pass</Comment>
+    			<DealGroup>API Test</DealGroup>
+    			<ExternalId>PassCurrency-Swap-Leg2</ExternalId>
+    			<ExternalSource>XMLFileImport</ExternalSource>
+    			<TicketNumber>TicketNumber</TicketNumber>
+    		</ReferenceData>
+    	</Transaction>
+    </DealInsert>
+    <DealInsert>
+    	<MetaData>
+    		<MessageId>MessageId</MessageId>
+    		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+    		<Timezone>CET</Timezone>
+    	</MetaData>
+    	<Transaction>
+    		<TransactionType>Automatic</TransactionType>
+    		<DealType>Currency-Forward</DealType>
+    		<Portfolios>
+    			<Portfolio>API Test Customer</Portfolio>
+    			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+    			<BuySell>Sell</BuySell>
+    		</Portfolios>
+    		<Currency-Forward>
+    			<InstrumentData>
+    				<ExecutionVenue>Nord Pool</ExecutionVenue>
+    				<BaseCurrency>NOK</BaseCurrency>
+    				<CrossCurrency>EUR</CrossCurrency>
+    				<DeliveryDate>2010-05-10</DeliveryDate>
+  				  <CompanionTradeExternalId>PassCurrency-Swap-Leg1</CompanionTradeExternalId>
+    			</InstrumentData>
+    			<SettlementData>
+    				<Quantity>2.0</Quantity>
+    				<Price>3.0</Price>
+    				<CurrencySource>Viz</CurrencySource>
+    				<Clearing>Electronic</Clearing>
+    			</SettlementData>
+    		</Currency-Forward>
+    		<DealDetails>
+    			<Status>Active</Status>
+    			<Trader>DealImport</Trader>
+    			<TradeDate>2010-04-01T00:00:00</TradeDate>
+    			<ConfirmedByBroker>false</ConfirmedByBroker>
+    			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    			<Authorised>true</Authorised>
+    			<Paid>false</Paid>
+    		</DealDetails>
+    		<ReferenceData>
+    			<Comment>API test: CurrencyForward, should pass</Comment>
+    			<DealGroup>API Test</DealGroup>
+    			<ExternalId>PassCurrency-Swap-Leg2</ExternalId>
+    			<ExternalSource>XMLFileImport</ExternalSource>
+    			<TicketNumber>TicketNumber</TicketNumber>
+    		</ReferenceData>
+    	</Transaction>
+    </DealInsert>
+  </BulkDealInsert>
+</TestData>
+<AssertQaBulkTransactionDTO>False</AssertQaBulkTransactionDTO>
+</TestCase>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../../Source/Integration/Viz.Integration.Core.DealImport/Files/Schemas/DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Currency-CashFlow</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<PaidReceived>Paid</PaidReceived>
+		</Portfolios>
+		<CurrencyCashFlow>
+			<InstrumentData>
+				<Timezone>CET</Timezone>
+				<TransactionName>PassCurrency-CashFlowMonthly5th</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<CashFlowPeriods Resolution="Monthly">
+					<TimeSeriesDetail FromDate="2015-01-05" Value="1" />
+					<TimeSeriesDetail FromDate="2015-02-05" Value="2" />
+					<TimeSeriesDetail FromDate="2015-03-05" Value="3" />
+					<TimeSeriesDetail FromDate="2015-04-05" Value="4" />
+					<TimeSeriesDetail FromDate="2015-05-05" Value="5" />
+					<TimeSeriesDetail FromDate="2015-06-05" Value="6" />
+					<TimeSeriesDetail FromDate="2015-07-05" Value="7" />
+					<TimeSeriesDetail FromDate="2015-08-05" Value="8" />
+					<TimeSeriesDetail FromDate="2015-09-05" Value="9" />
+					<TimeSeriesDetail FromDate="2015-10-05" Value="10" />
+					<TimeSeriesDetail FromDate="2015-11-05" Value="11" />
+					<TimeSeriesDetail FromDate="2015-12-05" Value="12" />
+					<TimeSeriesDetail FromDate="2016-01-05" Value="13" />
+					<TimeSeriesDetail FromDate="2016-02-05" Value="14" />
+				</CashFlowPeriods>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>				
+			</SettlementData>
+		</CurrencyCashFlow>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>Vizard</Trader>
+			<TradeDate>2011-02-14T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<GroupFields>
+				<GroupField1/>
+				<GroupField2/>
+				<GroupField3/>
+			</GroupFields>
+			<ExternalId>PassCurrencyCashFlowDailyMonthly5th</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>165</TransactionId>
+  <DealType>Currency-CashFlow</DealType>
+  <PaidReceived>Paid</PaidReceived>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>PassCurrency-CashFlowMonthly5th</InstrumentName>
+    <FromDate>2015-01-05T00:00:00</FromDate>
+    <ToDate>2016-02-05T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <BaseIsoCurrency>EUR</BaseIsoCurrency>
+    <CrossIsoCurrency>EUR</CrossIsoCurrency>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>105</Quantity>
+    <Price>0</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>None</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>Vizard</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2011-02-13T23:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+	<ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassCurrencyCashFlowDailyMonthly5th</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+    <ModificationDateTimeUtc>2014-11-11T08:34:18Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>1</Deliveries>
+    <OriginalQuantity>105</OriginalQuantity>
+    <ReferringId>166</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-FTR-EUR-CFMon-ActualPL-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-09-01 00:00:00.000,0,PR,201,EUR,-25473600,monthly,FTR Option,SEMYR-11/12 - Premium,El-FTR-Option-001</record>
+        <record>2011-10-01 00:00:00.000,0,HI,201,EUR,51221.8210328954,monthly,FTR Option,SEMYR-11/12 - Settlement,El-FTR-Option-001</record>
+        <record>2011-09-01 00:00:00.000,0,PR,201,EUR,-6549000,monthly,FTR Option,Q1-12 - Premium,El-FTR-Option-002</record>
+        <record>2012-01-01 00:00:00.000,0,TR,201,EUR,84814.5272859929,monthly,FTR Option,Q1-12 - Settlement,El-FTR-Option-002</record>
+        <record>2012-02-01 00:00:00.000,0,TR,201,EUR,81579.1846073986,monthly,FTR Option,Q1-12 - Settlement,El-FTR-Option-002</record>
+        <record>2012-03-01 00:00:00.000,0,TR,201,EUR,75874.0685038493,monthly,FTR Option,Q1-12 - Settlement,El-FTR-Option-002</record>
+        <record>2011-09-01 00:00:00.000,0,PR,201,EUR,-27230400,monthly,FTR Option,CALYR-12 - Premium,El-FTR-Option-003</record>
+        <record>2011-09-01 00:00:00.000,0,PR,201,EUR,-171350,monthly,FTR Option,M10-11 - Premium,El-FTR-Option-004</record>
+        <record>2011-10-01 00:00:00.000,0,HI,201,EUR,33336.687872436,monthly,FTR Option,M10-11 - Settlement,El-FTR-Option-004</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

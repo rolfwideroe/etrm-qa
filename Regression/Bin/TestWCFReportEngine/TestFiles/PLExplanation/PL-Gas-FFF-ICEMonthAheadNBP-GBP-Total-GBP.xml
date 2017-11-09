@@ -1,0 +1,48 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Gas-FFF-ICEMonthAheadNBP-GBP" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="GBP" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0001,SWAP Mar-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0002,SWAP Dec-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,8192.19837114193,8087.08047114194,7650.88257114195,7650.88257114195,7650.88257114195,7650.88257114195,7650.88257114195,7650.88257114195,7650.88257114195</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0003,SWAP May-12,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,6979.74299811182,6979.74299811182,6627.83719811192,6627.83719811192,6627.83719811192,6627.83719811192,6627.83719811192,6627.83719811192,6627.83719811192</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0004,SWAP SUM-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,23812.736697812,23812.736697812,23812.736697812,23812.736697812,23812.736697812,23812.736697812,23812.736697812,23812.736697812,23812.736697812</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0005,SWAP WIN-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,34675.3371156863,34636.5576656863,31911.5210156863,31911.5210156863,31911.5210156863,31911.5210156863,31911.5210156863,31911.5210156863,31911.5210156863</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0006,SWAP 01-Jun-12 - 30-Nov-12,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,31989.6843935473,31989.6843935473,30917.8898935464,30917.8898935464,30917.8898935464,30917.8898935464,30917.8898935464,30917.8898935464,30917.8898935464</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0001,SWAP Mar-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0002,SWAP Dec-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,8192.19837114193,8087.08047114194,7650.88257114195,7650.88257114195,7650.88257114195,7650.88257114195,7650.88257114195,7650.88257114195,7650.88257114195</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0003,SWAP May-12,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,6979.74299811182,6979.74299811182,6627.83719811192,6627.83719811192,6627.83719811192,6627.83719811192,6627.83719811192,6627.83719811192,6627.83719811192</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0004,SWAP SUM-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0005,SWAP WIN-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,25894.2720465121,25508.6217631953,22783.5851131953,22783.5851131953,22783.5851131953,22783.5851131953,22783.5851131953,22783.5851131953,22783.5851131953</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0006,SWAP 01-Jun-12 - 30-Nov-12,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,31989.6843935473,31989.6843935473,30917.8898935464,30917.8898935464,30917.8898935464,30917.8898935464,30917.8898935464,30917.8898935464,30917.8898935464</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0001,SWAP Mar-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669,1498.47458904669</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0002,SWAP Dec-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0003,SWAP May-12,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0004,SWAP SUM-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,23812.736697812,23812.736697812,23812.736697812,23812.736697812,23812.736697812,23812.736697812,23812.736697812,23812.736697812,23812.736697812</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0005,SWAP WIN-11,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,8781.06506917426,9127.93590249099,9127.93590249099,9127.93590249099,9127.93590249099,9127.93590249099,9127.93590249099,9127.93590249099,9127.93590249099</ExpectedRecord>
+        <ExpectedRecord>Gas-FFF-ICEMonthAheadNBP-GBP-0006,SWAP 01-Jun-12 - 30-Nov-12,,Swap,Gas-FFF-ICEMonthAheadNBP-GBP,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

@@ -1,0 +1,33 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-AvgRateFuture-NASDAQ-SPAN</workspace>
+    <monitor>El-AvgRateFuture-NASDAQ-SPAN</monitor>
+    <reportdate>2015-11-25T00:00:00</reportdate>
+    <Tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\SpanContractData.xml" />
+      <returns>
+        <record>M11-15,El-AvgRateFuture-NASDAQ,NordPool System Price,2015-11-01 00:00:00.000,2015-12-01 00:00:00.000,Base,720,0,25.38,EUR,0</record>
+        <record>Q1-16,El-AvgRateFuture-NASDAQ,NordPool System Price,2016-01-01 00:00:00.000,2016-04-01 00:00:00.000,Base,2183,0,23.32,EUR,0</record>
+        <record>YR-16,El-AvgRateFuture-NASDAQ,NordPool System Price,2016-01-01 00:00:00.000,2017-01-01 00:00:00.000,Base,8784,0,20.24,EUR,0</record>
+        <record>M11-15,El-AvgRateFuture-NASDAQ,SYHEL,2015-11-01 00:00:00.000,2015-12-01 00:00:00.000,Base,720,0,25.38,EUR,0</record>
+        <record>Q1-16,El-AvgRateFuture-NASDAQ,SYHEL,2016-01-01 00:00:00.000,2016-04-01 00:00:00.000,Base,2183,0,11.25,EUR,0</record>
+        <record>YR-16,El-AvgRateFuture-NASDAQ,SYHEL,2016-01-01 00:00:00.000,2017-01-01 00:00:00.000,Base,8784,0,10.75,EUR,0</record>
+        <record>M11-15,El-AvgRateFuture-NASDAQ,SYSTO,2015-11-01 00:00:00.000,2015-12-01 00:00:00.000,Base,720,0,25.38,EUR,0</record>
+        <record>Q1-16,El-AvgRateFuture-NASDAQ,SYSTO,2016-01-01 00:00:00.000,2016-04-01 00:00:00.000,Base,2183,0,1.95,EUR,0</record>
+        <record>YR-16,El-AvgRateFuture-NASDAQ,SYSTO,2016-01-01 00:00:00.000,2017-01-01 00:00:00.000,Base,8784,0,2.37,EUR,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\SpanMarketData.xml" />
+      <returns>
+        <record>HESY  ,0,-232873.2,-232873.2</record>
+        <record>SYDE  ,0,-3146730.7,-3146730.7</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

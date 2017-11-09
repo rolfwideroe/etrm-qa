@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Oil-Future-ICE-USD-CurrExposure-NOK</workspace>
+    <monitor>Oil-Future-ICE-USD-CurrExposure-NOK</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposureTotal.xml" />
+      <returns>
+        <record>Oil-Future-ICE-USD-0003;Oil-Future-ICE-USD-0009;Oil-Future-ICE-USD-0027,NULL,NULL</record>
+        <record>Oil-Future-ICE-USD-0004;Oil-Future-ICE-USD-0010;Oil-Future-ICE-USD-0028,NULL,NULL</record>
+        <record>Oil-Future-ICE-USD-0005;Oil-Future-ICE-USD-0011;Oil-Future-ICE-USD-0029,NULL,NULL</record>
+        <record>Oil-Future-ICE-USD-0006;Oil-Future-ICE-USD-0012;Oil-Future-ICE-USD-0030,NULL,NULL</record>
+        <record>Oil-Future-ICE-USD-0015;Oil-Future-ICE-USD-0021;Oil-Future-ICE-USD-0033,NULL,NULL</record>
+        <record>Oil-Future-ICE-USD-0016;Oil-Future-ICE-USD-0022;Oil-Future-ICE-USD-0034,NULL,NULL</record>
+        <record>Oil-Future-ICE-USD-0017;Oil-Future-ICE-USD-0023;Oil-Future-ICE-USD-0035,NULL,NULL</record>
+        <record>Oil-Future-ICE-USD-0018;Oil-Future-ICE-USD-0024;Oil-Future-ICE-USD-0036,NULL,NULL</record>
+        <record>Oil-Future-ICE-USD-0041;Oil-Future-ICE-USD-0042,NULL,NULL</record>
+        <record>Oil-Future-ICE-USD-0043;Oil-Future-ICE-USD-0044,NULL,NULL</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,136 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>GreeksOnATimelineReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-10-27T00:00:00" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseEndDate" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="PosCalcMethod" IsNotSet="false" XmlEncodedValue="NPVWA" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="TimeResolution" IsNotSet="false" XmlEncodedValue="Month" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Gas-EU-ICE-TTF-EUR" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedTimeSeriesArtifacts>
+      <ExpectedTimeSeriesArtifact ArtifactId="greeksOnATimeline" Columns="GroupBy,Greek,ReferenceArea,TimeZone,From,Until,Value" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Double">
+        <TimeSeriesProperties>
+          <Property Name="GroupBy" DataType="System.String" />
+          <Property Name="Greek" DataType="System.String" />
+          <Property Name="ReferenceArea" DataType="System.String" />
+        </TimeSeriesProperties>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE NBP,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE NBP,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE NBP,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE NBP,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE NBP,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE NBP,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE NBP,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE NBP,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE NBP,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,-2583192.4229895</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,-14193.7036861713</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE NBP,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE NBP,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE NBP,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE NBP,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE NBP,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE NBP,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE NBP,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE NBP,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE NBP,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,-3587.76725415209</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE TTF,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE TTF,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Delta (MW),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,-19.7134773419046</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE NBP,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE NBP,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE NBP,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE NBP,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE NBP,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE NBP,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE NBP,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE NBP,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE NBP,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,485249.690130192</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,28.937795200813</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE NBP,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE NBP,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE NBP,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE NBP,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE NBP,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE NBP,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE NBP,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE NBP,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE NBP,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,673.957902958599</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE TTF,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE TTF,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,0.0401913822233514</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE NBP,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE NBP,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE NBP,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE NBP,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE NBP,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE NBP,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE NBP,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE NBP,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE NBP,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,-1658.53932310694</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE TTF,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE TTF,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Theta (EUR/day),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,12.7965488109916</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE NBP,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE NBP,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE NBP,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE NBP,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE NBP,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE NBP,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE NBP,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE NBP,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE NBP,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,28730.8568873268</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE TTF,CET 06-06,2011-10-28T00:00:00,2011-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE TTF,CET 06-06,2011-11-01T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-EU-ICE-TTF-EUR,Vega (EUR/Vol(%)),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,27.0493248272282</ExpectedRecord>
+      </ExpectedTimeSeriesArtifact>
+    </ExpectedTimeSeriesArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

@@ -1,0 +1,43 @@
+<test type="EcmBatch" name="Gas-StructFlex-CapFloor-EUR-ActualPL-EUR" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-StructFlex-CapFloor-EUR-ActualPL-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,-387236.5744,monthly,Structured Deal,Gas-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2,Gas-StructFlex-FV-CapFloor-EUR-0002</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,-1551833.60878351,monthly,Structured Deal,Gas-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2,Gas-StructFlex-FV-CapFloor-EUR-0002</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,-2542694.4,monthly,Structured Deal,Gas-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2,Gas-StructFlex-FV-CapFloor-EUR-0002</record>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,-255018.5866,monthly,Structured Deal,Gas-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50,Gas-StructFlex-FV-CapFloor-EUR-0003</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,-781639.972551544,monthly,Structured Deal,Gas-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50,Gas-StructFlex-FV-CapFloor-EUR-0003</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,-892800,monthly,Structured Deal,Gas-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50,Gas-StructFlex-FV-CapFloor-EUR-0003</record>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,-255018.5866,monthly,Structured Deal,Gas-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice,Gas-StructFlex-FV-CapFloor-EUR-0004</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,-781639.972551544,monthly,Structured Deal,Gas-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice,Gas-StructFlex-FV-CapFloor-EUR-0004</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,-892800,monthly,Structured Deal,Gas-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice,Gas-StructFlex-FV-CapFloor-EUR-0004</record>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,-1034974.3464,monthly,Structured Deal,Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice,Gas-StructFlex-FV-CapFloor-EUR-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,-157279.886275772,monthly,Structured Deal,Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice,Gas-StructFlex-FV-CapFloor-EUR-0005</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,-764832,monthly,Structured Deal,Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice,Gas-StructFlex-FV-CapFloor-EUR-0005</record>
+        <record>2011-01-01 00:00:00.000,0,HI,161,EUR,27690.72,monthly,Structured Deal,Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,Gas-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-03-01 00:00:00.000,0,HI,161,EUR,126703.58,monthly,Structured Deal,Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,Gas-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-04-01 00:00:00.000,0,HI,161,EUR,38696.6399999999,monthly,Structured Deal,Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,Gas-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-05-01 00:00:00.000,0,HI,161,EUR,19826.88,monthly,Structured Deal,Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,Gas-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-06-01 00:00:00.000,0,HI,161,EUR,5846.87999999999,monthly,Structured Deal,Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,Gas-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-08-01 00:00:00.000,0,HI,161,EUR,12982.56,monthly,Structured Deal,Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,Gas-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-09-01 00:00:00.000,0,HI,161,EUR,160023.36,monthly,Structured Deal,Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,Gas-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,73085.18,monthly,Structured Deal,Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,Gas-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,78880.1137242281,monthly,Structured Deal,Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,Gas-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,193440,monthly,Structured Deal,Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,Gas-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,-1034974.3464,monthly,Structured Deal,Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice,Gas-StructFlex-FV-CapFloor-EUR-0007</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,-157279.886275772,monthly,Structured Deal,Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice,Gas-StructFlex-FV-CapFloor-EUR-0007</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,-764832,monthly,Structured Deal,Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice,Gas-StructFlex-FV-CapFloor-EUR-0007</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

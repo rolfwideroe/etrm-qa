@@ -1,0 +1,35 @@
+<CurveTestCase>
+	<InputData>
+		<FromDate>2012-01-01</FromDate>
+		<ToDate>2014-12-31</ToDate>
+		<LoadType>Peak</LoadType>
+		<PriceBookAppendix></PriceBookAppendix>
+		<ReferenceAreaName>NPS</ReferenceAreaName>
+		<ReportCurrencyIsoCode>EUR</ReportCurrencyIsoCode>
+		<ReportDate>2011-11-01</ReportDate>
+		<Resolution>Year</Resolution>
+		<TemplateName>NPXSYSALL</TemplateName>
+	</InputData>
+	<ExpectedValues>
+		<ExpectedCurveVolatility>
+			<WinterShort>1.3</WinterShort>
+			<WinterMedium>0.6</WinterMedium>
+			<WinterLong>0.1</WinterLong>
+			<WinterNumberOfYearsBetweenShortAndMedium>0.5</WinterNumberOfYearsBetweenShortAndMedium>
+			<SummerShort>1.3</SummerShort>
+			<SummerMedium>0.6</SummerMedium>
+			<SummerLong>0.1</SummerLong>		
+			<SummerNumberOfYearsBetweenShortAndMedium>0.5</SummerNumberOfYearsBetweenShortAndMedium>		
+		</ExpectedCurveVolatility>
+		<ExpectedProperties>
+			<CurveType>MarketPriceCurve</CurveType>
+			<VolumeUnit>MWh</VolumeUnit>
+			<TimeZone>CET</TimeZone>
+		</ExpectedProperties>
+		<ExpectedCurveValues>
+			<ExpectedCurveValue Date="2012-01-01T00:00:00" Value="47.9999999999999"/>
+			<ExpectedCurveValue Date="2013-01-01T00:00:00" Value="44.0631132406625"/>
+			<ExpectedCurveValue Date="2014-01-01T00:00:00" Value="45.3651452309929"/>
+		</ExpectedCurveValues>
+	</ExpectedValues>
+</CurveTestCase>

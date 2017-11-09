@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>IndexedOption</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<IndexedOption>
+			<InstrumentData>
+				<IndexFormulaName>AxpoIndexedOption</IndexFormulaName>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>TTF</PriceBasis>
+				<FromDate>2012-10-01</FromDate>
+				<ToDate>2012-12-31</ToDate>
+				<Financial/>
+				<PutCall>Call</PutCall> 
+				<ExpiryDate>2012-09-25</ExpiryDate>       
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>38</Quantity>
+				<QuantityUnit>Sm3/d</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>		
+				<Clearing>Electronic</Clearing>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+			<FeesData>
+				<Fees>
+					<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.25" FeeUnit="EUR/MWh"/>
+				</Fees>
+			</FeesData>
+		</IndexedOption>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2012-08-27T15:12:53Z</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>IndexedOptionFinancial; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>IndexedOptionFinancialFees</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>699</TransactionId>
+  <DealType>Gas-IndexedOption</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>Indexed Option C Q4-12</InstrumentName>
+    <PriceBasis>TTF</PriceBasis>
+    <FromDate>2012-10-01T00:00:00</FromDate>
+    <ToDate>2012-12-31T00:00:00</ToDate>
+    <PutCall>Call</PutCall>
+    <TimeZone>CET 06-06</TimeZone>
+    <IndexFormula>AxpoIndexedOption</IndexFormula>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>38</Quantity>
+    <QuantityUnit>Sm3d</QuantityUnit>
+    <Price>28</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2012-08-27T15:12:53Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>API Test Broker</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.25" FeeUnit="EUR/MWh"/>
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>IndexedOptionFinancialFees</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+    <DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test"/>
+    </DealGroups>
+    <Comment>IndexedOptionFinancial; should pass</Comment>
+    <ModificationDateTimeUtc>2014-12-23T13:51:13Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>2209</Deliveries>
+    <OriginalQuantity>38</OriginalQuantity>
+    <ReferringId>700</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

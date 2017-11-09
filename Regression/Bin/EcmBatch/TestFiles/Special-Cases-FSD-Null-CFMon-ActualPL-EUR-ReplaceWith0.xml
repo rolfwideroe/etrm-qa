@@ -1,0 +1,52 @@
+<test type="EcmBatch" name="Special-Cases-FSD-Null-CFMon-ActualPL-EUR" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FSD-Null-CFMon-ActualPL-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-07</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+    <missingRealizedDataStrategy>ReplaceWith0</missingRealizedDataStrategy>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,-9400.8,monthly,Structured Deal,Special-Cases-FSD-Null-Consumption-Elec1,Special-Cases-FSD-Null-Consumption-Elec1</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,-335246.39999998,monthly,Structured Deal,Special-Cases-FSD-Null-Consumption-Elec1,Special-Cases-FSD-Null-Consumption-Elec1</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,-344695.199999757,monthly,Structured Deal,Special-Cases-FSD-Null-Consumption-Elec1,Special-Cases-FSD-Null-Consumption-Elec1</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,-4169.34,monthly,Structured Deal,Special-Cases-FSD-Null-Consumption-Gas1,Special-Cases-FSD-Null-Consumption-Gas1</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,-190464,monthly,Structured Deal,Special-Cases-FSD-Null-Consumption-Gas1,Special-Cases-FSD-Null-Consumption-Gas1</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,-194407.199999999,monthly,Structured Deal,Special-Cases-FSD-Null-Consumption-Gas1,Special-Cases-FSD-Null-Consumption-Gas1</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,EUR,9447.15,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,1042.025,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,50387.4000000003,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,53321.9155183625,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,50387.4000000003,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily-RV-All</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,53321.9155183625,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily-RV-All</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,7238.4,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Elec1,Special-Cases-FSD-Null-Generation-Elec1</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,346406.4,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Elec1,Special-Cases-FSD-Null-Generation-Elec1</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,279595.2,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Elec1,Special-Cases-FSD-Null-Generation-Elec1</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,2369.34,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Gas1,Special-Cases-FSD-Null-Generation-Gas1</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,190464,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Gas1,Special-Cases-FSD-Null-Generation-Gas1</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,120007.199999999,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Gas1,Special-Cases-FSD-Null-Generation-Gas1</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,-2400,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec1,Special-Cases-FSD-Null-Retail-Elec1</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,-74400,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec1,Special-Cases-FSD-Null-Retail-Elec1</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,EUR,-9025,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec2,Special-Cases-FSD-Null-Retail-Elec2</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,-2400,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec2,Special-Cases-FSD-Null-Retail-Elec2</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,-74400,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec2,Special-Cases-FSD-Null-Retail-Elec2</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,-74400,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec3,Special-Cases-FSD-Null-Retail-Elec3</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,2369.34,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas1,Special-Cases-FSD-Null-Retail-Gas1</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,190464,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas1,Special-Cases-FSD-Null-Retail-Gas1</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,120007.199999999,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas1,Special-Cases-FSD-Null-Retail-Gas1</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,EUR,31615.416,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas2,Special-Cases-FSD-Null-Retail-Gas2</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,2369.34,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas2,Special-Cases-FSD-Null-Retail-Gas2</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,190464,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas2,Special-Cases-FSD-Null-Retail-Gas2</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,120007.199999999,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas2,Special-Cases-FSD-Null-Retail-Gas2</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,190464,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas3,Special-Cases-FSD-Null-Retail-Gas3</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,EUR,120007.199999999,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas3,Special-Cases-FSD-Null-Retail-Gas3</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

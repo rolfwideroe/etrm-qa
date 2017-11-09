@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Currency-Future-PosMon-EUR</workspace>
+    <monitor>Currency-Future-PosMon-EUR</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0163 Currency-Future,,Financial,,Other Period,Other Period - ,ECS Curve,CET,GBP,Viz,Currency,CME,Future,GBPEUR 14-Nov-11,,,,2011-11-14 00:00:00.000,2011-11-14 00:00:00.000,Expired,88843.0090329166,66201.9006553983,-1693.98558557709,64507.9150698212,1000000,-1693.98558557709,66201.9006553983,-1693.98558557709,64507.9150698212,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,1.02433509396638,0,1,0,0,Currency-Future-EUR-GBP-OnDelivery-0001;Currency-Future-EUR-GBP-OnDelivery-0002;Currency-Future-EUR-GBP-OnDelivery-0003</record>
+        <record>0163 Currency-Future,,Financial,,Other Period,Other Period - ,,CET,GBP,Viz,Currency,CME,Future,GBPEUR 17-Oct-11,,,,2011-10-17 00:00:00.000,2011-10-17 00:00:00.000,Expired,87149.3970429068,87149.3970429068,0,87149.3970429068,0,0,87149.3970429068,0,87149.3970429068,0,0,0,0,0,0,0,0,0,NULL,0,0,0,0,0,0,0,0,0,0,0,Currency-Future-EUR-GBP-PostDelivery-0001;Currency-Future-EUR-GBP-PostDelivery-0002</record>
+        <record>0163 Currency-Future,,Financial,,Other Period,Other Period - ,ECS Curve,CET,GBP,Viz,Currency,CME,Future,GBPEUR 19-Mar-12,,,,2012-03-19 00:00:00.000,2012-03-19 00:00:00.000,Active,88682.9844641632,-28182.6807782471,-5157.88814972481,-33340.5689279719,1255157.88814973,-5157.88814972481,-28182.6807782471,0,-28182.6807782471,0,0,0,1250000,0,0,0,0,1250000,NULL,0,0,0,0,0,0,1.09425191864944,-1367814.8983118,1.00412631051978,0,0,Currency-Future-EUR-GBP-PreDelivery-0001;Currency-Future-EUR-GBP-PreDelivery-0002;Currency-Future-EUR-GBP-PreDelivery-0003</record>
+        <record>0163 Currency-Future,,Financial,,Other Period,Other Period - ,ECS Curve,CET,USD,Viz,Currency,CME,Future,USDEUR 14-Nov-11,,,,2011-11-14 00:00:00.000,2011-11-14 00:00:00.000,Expired,12056.6681681963,-33133.0639183355,-1383.73767644912,-34516.8015947846,1250000,-1383.73767644912,-33133.0639183355,-1383.73767644912,-34516.8015947846,0,0,0,1250000,0,0,0,0,1250000,NULL,0,0,0,0,0,0,1.02552387709151,0,1,0,0,Currency-Future-EUR-USD-OnDelivery-0001;Currency-Future-EUR-USD-OnDelivery-0002;Currency-Future-EUR-USD-OnDelivery-0003</record>
+        <record>0163 Currency-Future,,Financial,,Other Period,Other Period - ,,CET,USD,Viz,Currency,CME,Future,USDEUR 17-Oct-11,,,,2011-10-17 00:00:00.000,2011-10-17 00:00:00.000,Expired,12056.6681681963,-17906.7345565654,0,-17906.7345565654,0,0,-17906.7345565654,0,-17906.7345565654,0,0,0,1250000,0,0,0,0,1250000,NULL,0,0,0,0,0,0,1.02552387709151,-1281904.84636439,0,0,0,Currency-Future-EUR-USD-PostDelivery-0001;Currency-Future-EUR-USD-PostDelivery-0002;Currency-Future-EUR-USD-PostDelivery-0003</record>
+        <record>0163 Currency-Future,,Financial,,Other Period,Other Period - ,ECS Curve,CET,USD,Viz,Currency,CME,Future,USDEUR 19-Mar-12,,,,2012-03-19 00:00:00.000,2012-03-19 00:00:00.000,Active,12227.7710092002,12227.7710092002,0,12227.7710092002,0,0,12227.7710092002,0,12227.7710092002,0,0,0,0,0,0,0,0,0,NULL,0,0,0,0,0,0,0,0,1.00524421177514,0,0,Currency-Future-EUR-USD-PreDelivery-0001;Currency-Future-EUR-USD-PreDelivery-0002</record>
+        <record>0163 Currency-Future,,Financial,,Other Period,Other Period - ,ECS Curve,CET,NOK,Viz,Currency,CME,Future,NOKUSD 14-Nov-11,,,,2011-11-14 00:00:00.000,2011-11-14 00:00:00.000,Expired,128517.388910793,128517.388910793,0,128517.388910793,0,0,128517.388910793,0,128517.388910793,0,0,0,0,0,0,0,0,0,NULL,0,0,0,0,0,0,0,0,0.733282808477709,0,0,Currency-Future-USD-NOK-OnDelivery-0001;Currency-Future-USD-NOK-OnDelivery-0002</record>
+        <record>0163 Currency-Future,,Financial,,Other Period,Other Period - ,,CET,NOK,Viz,Currency,CME,Future,NOKUSD 17-Oct-11,,,,2011-10-17 00:00:00.000,2011-10-17 00:00:00.000,Expired,129260.506901761,-180939.002827871,0,-180939.002827871,0,0,-180939.002827871,0,-180939.002827871,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,1.03408405521409,-1034084.05521409,0,0,0,Currency-Future-USD-NOK-PostDelivery-0001;Currency-Future-USD-NOK-PostDelivery-0002;Currency-Future-USD-NOK-PostDelivery-0003</record>
+        <record>0163 Currency-Future,,Financial,,Other Period,Other Period - ,ECS Curve,CET,NOK,Viz,Currency,CME,Future,NOKUSD 19-Mar-12,,,,2012-03-19 00:00:00.000,2012-03-19 00:00:00.000,Active,129066.613293288,-169082.005704108,6276.18472935294,-162805.820974755,729411.909368375,6276.18472935294,-169082.005704108,0,-169082.005704108,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,1.0325329063463,-1032532.9063463,0.729411909368375,0,0,Currency-Future-USD-NOK-PreDelivery-0001;Currency-Future-USD-NOK-PreDelivery-0002;Currency-Future-USD-NOK-PreDelivery-0003</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,289 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FXOutright-Exposure-NOK</workspace>
+    <monitor>Special-Cases-FXOutright-Exposure-NOK</monitor>
+    <reportdate>2011-11-07T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="EnableFxOutright" Value="True" />
+    </ElvizConfigurations>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,100.229083751782,0,100.229083751782</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,100.229083751782,0,100.229083751782</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,100.229083751782,0,100.229083751782</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,100.229083751782,0,100.229083751782</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-22 00:00:00.000,2011-11-23 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-23 00:00:00.000,2011-11-24 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-24 00:00:00.000,2011-11-25 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-25 00:00:00.000,2011-11-26 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-26 00:00:00.000,2011-11-27 00:00:00.000,100.229083751782,0,100.229083751782</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-27 00:00:00.000,2011-11-28 00:00:00.000,100.229083751782,0,100.229083751782</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-28 00:00:00.000,2011-11-29 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-29 00:00:00.000,2011-11-30 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Electricity,ASIC/A M11-11 335.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian,Financial,Base,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Asian-NOK-0001,NordPool System Price,MWh,2011-11-30 00:00:00.000,2011-12-01 00:00:00.000,100.229083751782,50.1145418758909,50.1145418758909</record>
+        <record>Special-Cases,Elcertificate,ECS Mar-12,2012-03-16 00:00:00.000,2012-03-16 00:00:00.000,Forward,Physical,,Elcertificate,None,CET,SEK,Special-Cases-FXOutright-ElCert-Forward-OTC-0001,Elcertificate,ECS,2012-03-16 00:00:00.000,2012-03-17 00:00:00.000,50000,0,50000</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,240,0,240</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,240,0,240</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,240,0,240</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,240,0,240</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-22 00:00:00.000,2011-11-23 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-23 00:00:00.000,2011-11-24 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-24 00:00:00.000,2011-11-25 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-25 00:00:00.000,2011-11-26 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-26 00:00:00.000,2011-11-27 00:00:00.000,240,0,240</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-27 00:00:00.000,2011-11-28 00:00:00.000,240,0,240</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-28 00:00:00.000,2011-11-29 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-29 00:00:00.000,2011-11-30 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,None,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,NordPool System Price,MWh,2011-11-30 00:00:00.000,2011-12-01 00:00:00.000,240,120,120</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-22 00:00:00.000,2011-11-23 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-23 00:00:00.000,2011-11-24 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-24 00:00:00.000,2011-11-25 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-25 00:00:00.000,2011-11-26 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-28 00:00:00.000,2011-11-29 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-29 00:00:00.000,2011-11-30 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,None,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,NordPool System Price,MWh,2011-11-30 00:00:00.000,2011-12-01 00:00:00.000,120,120,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-22 00:00:00.000,2011-11-23 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-23 00:00:00.000,2011-11-24 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-24 00:00:00.000,2011-11-25 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-25 00:00:00.000,2011-11-26 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-26 00:00:00.000,2011-11-27 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-27 00:00:00.000,2011-11-28 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-28 00:00:00.000,2011-11-29 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-29 00:00:00.000,2011-11-30 00:00:00.000,500,0,0</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,None,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,ICE TTF,MWh,2011-11-30 00:00:00.000,2011-12-01 00:00:00.000,500,0,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>Elcertificate,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,170.871287771419,0,170.871287771419</record>
+        <record>Elcertificate,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,171.049901772541,0,171.049901772541</record>
+        <record>Elcertificate,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,171.23018582301,0,171.23018582301</record>
+        <record>Elcertificate,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,171.413082179933,0,171.413082179933</record>
+        <record>Elcertificate,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,171.599548758318,0,171.599548758318</record>
+        <record>Elcertificate,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,171.790554867887,0,171.790554867887</record>
+        <record>Elcertificate,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,171.987070139484,0,171.987070139484</record>
+        <record>Elcertificate,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,172.189642289659,0,172.189642289659</record>
+        <record>Elcertificate,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,172.39753302444,0,172.39753302444</record>
+        <record>Elcertificate,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,172.60956523099,0,172.60956523099</record>
+        <record>Elcertificate,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,172.824544154942,0,172.824544154942</record>
+        <record>Elcertificate,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,173.041268910059,0,173.041268910059</record>
+        <record>Elcertificate,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,173.258536511613,0,173.258536511613</record>
+        <record>Elcertificate,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,173.475148293112,0,173.475148293112</record>
+        <record>Elcertificate,2011-11-22 00:00:00.000,2011-11-23 00:00:00.000,173.690234177684,0,173.690234177684</record>
+        <record>Elcertificate,2011-11-23 00:00:00.000,2011-11-24 00:00:00.000,173.903916515329,0,173.903916515329</record>
+        <record>Elcertificate,2011-11-24 00:00:00.000,2011-11-25 00:00:00.000,174.116643458175,0,174.116643458175</record>
+        <record>Elcertificate,2011-11-25 00:00:00.000,2011-11-26 00:00:00.000,174.328865158106,0,174.328865158106</record>
+        <record>Elcertificate,2011-11-26 00:00:00.000,2011-11-27 00:00:00.000,174.541029887703,0,174.541029887703</record>
+        <record>Elcertificate,2011-11-27 00:00:00.000,2011-11-28 00:00:00.000,174.753584422152,0,174.753584422152</record>
+        <record>Elcertificate,2011-11-28 00:00:00.000,2011-11-29 00:00:00.000,174.966973136401,0,174.966973136401</record>
+        <record>Elcertificate,2011-11-29 00:00:00.000,2011-11-30 00:00:00.000,175.181546380668,0,175.181546380668</record>
+        <record>Elcertificate,2011-11-30 00:00:00.000,2011-12-01 00:00:00.000,175.397372196402,0,175.397372196402</record>
+        <record>Elcertificate,2011-12-01 00:00:00.000,2011-12-02 00:00:00.000,175.61442542772,0,175.61442542772</record>
+        <record>Elcertificate,2011-12-02 00:00:00.000,2011-12-03 00:00:00.000,175.83267973647,0,175.83267973647</record>
+        <record>Elcertificate,2011-12-03 00:00:00.000,2011-12-04 00:00:00.000,176.052108885619,0,176.052108885619</record>
+        <record>Elcertificate,2011-12-04 00:00:00.000,2011-12-05 00:00:00.000,176.272686793119,0,176.272686793119</record>
+        <record>Elcertificate,2011-12-05 00:00:00.000,2011-12-06 00:00:00.000,176.494387582042,0,176.494387582042</record>
+        <record>Elcertificate,2011-12-06 00:00:00.000,2011-12-07 00:00:00.000,176.717185627146,0,176.717185627146</record>
+        <record>Elcertificate,2011-12-07 00:00:00.000,2011-12-08 00:00:00.000,176.941055536359,0,176.941055536359</record>
+        <record>Elcertificate,2011-12-08 00:00:00.000,2011-12-09 00:00:00.000,177.165967595439,0,177.165967595439</record>
+        <record>Elcertificate,2011-12-09 00:00:00.000,2011-12-10 00:00:00.000,177.391878571296,0,177.391878571296</record>
+        <record>Elcertificate,2011-12-10 00:00:00.000,2011-12-11 00:00:00.000,177.618741450095,0,177.618741450095</record>
+        <record>Elcertificate,2011-12-11 00:00:00.000,2011-12-12 00:00:00.000,177.846510003971,0,177.846510003971</record>
+        <record>Elcertificate,2011-12-12 00:00:00.000,2011-12-13 00:00:00.000,178.075138759581,0,178.075138759581</record>
+        <record>Elcertificate,2011-12-13 00:00:00.000,2011-12-14 00:00:00.000,178.304582910812,0,178.304582910812</record>
+        <record>Elcertificate,2011-12-14 00:00:00.000,2011-12-15 00:00:00.000,178.534798237071,0,178.534798237071</record>
+        <record>Elcertificate,2011-12-15 00:00:00.000,2011-12-16 00:00:00.000,178.765741026835,0,178.765741026835</record>
+        <record>Elcertificate,2011-12-16 00:00:00.000,2011-12-17 00:00:00.000,178.9973680062,0,178.9973680062</record>
+        <record>Elcertificate,2011-12-17 00:00:00.000,2011-12-18 00:00:00.000,179.229636272229,0,179.229636272229</record>
+        <record>Elcertificate,2011-12-18 00:00:00.000,2011-12-19 00:00:00.000,179.462503230861,0,179.462503230861</record>
+        <record>Elcertificate,2011-12-19 00:00:00.000,2011-12-20 00:00:00.000,179.695926539247,0,179.695926539247</record>
+        <record>Elcertificate,2011-12-20 00:00:00.000,2011-12-21 00:00:00.000,179.929864052307,0,179.929864052307</record>
+        <record>Elcertificate,2011-12-21 00:00:00.000,2011-12-22 00:00:00.000,180.164273773484,0,180.164273773484</record>
+        <record>Elcertificate,2011-12-22 00:00:00.000,2011-12-23 00:00:00.000,180.399113809464,0,180.399113809464</record>
+        <record>Elcertificate,2011-12-23 00:00:00.000,2011-12-24 00:00:00.000,180.634342328878,0,180.634342328878</record>
+        <record>Elcertificate,2011-12-24 00:00:00.000,2011-12-25 00:00:00.000,180.869917524891,0,180.869917524891</record>
+        <record>Elcertificate,2011-12-25 00:00:00.000,2011-12-26 00:00:00.000,181.105797581541,0,181.105797581541</record>
+        <record>Elcertificate,2011-12-26 00:00:00.000,2011-12-27 00:00:00.000,181.341940643956,0,181.341940643956</record>
+        <record>Elcertificate,2011-12-27 00:00:00.000,2011-12-28 00:00:00.000,181.578304792249,0,181.578304792249</record>
+        <record>Elcertificate,2011-12-28 00:00:00.000,2011-12-29 00:00:00.000,181.814848019186,0,181.814848019186</record>
+        <record>Elcertificate,2011-12-29 00:00:00.000,2011-12-30 00:00:00.000,182.051528211542,0,182.051528211542</record>
+        <record>Elcertificate,2011-12-30 00:00:00.000,2011-12-31 00:00:00.000,182.288303135242,0,182.288303135242</record>
+        <record>Elcertificate,2011-12-31 00:00:00.000,2012-01-01 00:00:00.000,182.525130424165,0,182.525130424165</record>
+        <record>Elcertificate,2012-01-01 00:00:00.000,2012-01-02 00:00:00.000,182.761967572736,0,182.761967572736</record>
+        <record>Elcertificate,2012-01-02 00:00:00.000,2012-01-03 00:00:00.000,182.99877193224,0,182.99877193224</record>
+        <record>Elcertificate,2012-01-03 00:00:00.000,2012-01-04 00:00:00.000,183.235500710959,0,183.235500710959</record>
+        <record>Elcertificate,2012-01-04 00:00:00.000,2012-01-05 00:00:00.000,183.472110977987,0,183.472110977987</record>
+        <record>Elcertificate,2012-01-05 00:00:00.000,2012-01-06 00:00:00.000,183.708559670994,0,183.708559670994</record>
+        <record>Elcertificate,2012-01-06 00:00:00.000,2012-01-07 00:00:00.000,183.944803607696,0,183.944803607696</record>
+        <record>Elcertificate,2012-01-07 00:00:00.000,2012-01-08 00:00:00.000,184.180799638907,0,184.180799638907</record>
+        <record>Elcertificate,2012-01-08 00:00:00.000,2012-01-09 00:00:00.000,184.416515005523,0,184.416515005523</record>
+        <record>Elcertificate,2012-01-09 00:00:00.000,2012-01-10 00:00:00.000,184.651948628691,0,184.651948628691</record>
+        <record>Elcertificate,2012-01-10 00:00:00.000,2012-01-11 00:00:00.000,184.887109960044,0,184.887109960044</record>
+        <record>Elcertificate,2012-01-11 00:00:00.000,2012-01-12 00:00:00.000,185.122008652639,0,185.122008652639</record>
+        <record>Elcertificate,2012-01-12 00:00:00.000,2012-01-13 00:00:00.000,185.356654417807,0,185.356654417807</record>
+        <record>Elcertificate,2012-01-13 00:00:00.000,2012-01-14 00:00:00.000,185.591057019923,0,185.591057019923</record>
+        <record>Elcertificate,2012-01-14 00:00:00.000,2012-01-15 00:00:00.000,185.825226271364,0,185.825226271364</record>
+        <record>Elcertificate,2012-01-15 00:00:00.000,2012-01-16 00:00:00.000,186.059172027726,0,186.059172027726</record>
+        <record>Elcertificate,2012-01-16 00:00:00.000,2012-01-17 00:00:00.000,186.292904183218,0,186.292904183218</record>
+        <record>Elcertificate,2012-01-17 00:00:00.000,2012-01-18 00:00:00.000,186.526432666286,0,186.526432666286</record>
+        <record>Elcertificate,2012-01-18 00:00:00.000,2012-01-19 00:00:00.000,186.759767435466,0,186.759767435466</record>
+        <record>Elcertificate,2012-01-19 00:00:00.000,2012-01-20 00:00:00.000,186.992918475455,0,186.992918475455</record>
+        <record>Elcertificate,2012-01-20 00:00:00.000,2012-01-21 00:00:00.000,187.225895793398,0,187.225895793398</record>
+        <record>Elcertificate,2012-01-21 00:00:00.000,2012-01-22 00:00:00.000,187.458709415411,0,187.458709415411</record>
+        <record>Elcertificate,2012-01-22 00:00:00.000,2012-01-23 00:00:00.000,187.691369383341,0,187.691369383341</record>
+        <record>Elcertificate,2012-01-23 00:00:00.000,2012-01-24 00:00:00.000,187.92388575174,0,187.92388575174</record>
+        <record>Elcertificate,2012-01-24 00:00:00.000,2012-01-25 00:00:00.000,188.156268585044,0,188.156268585044</record>
+        <record>Elcertificate,2012-01-25 00:00:00.000,2012-01-26 00:00:00.000,188.388527955067,0,188.388527955067</record>
+        <record>Elcertificate,2012-01-26 00:00:00.000,2012-01-27 00:00:00.000,188.620673938589,0,188.620673938589</record>
+        <record>Elcertificate,2012-01-27 00:00:00.000,2012-01-28 00:00:00.000,188.852716615314,0,188.852716615314</record>
+        <record>Elcertificate,2012-01-28 00:00:00.000,2012-01-29 00:00:00.000,189.084666065966,0,189.084666065966</record>
+        <record>Elcertificate,2012-01-29 00:00:00.000,2012-01-30 00:00:00.000,189.31653237061,0,189.31653237061</record>
+        <record>Elcertificate,2012-01-30 00:00:00.000,2012-01-31 00:00:00.000,189.548325607298,0,189.548325607298</record>
+        <record>Elcertificate,2012-01-31 00:00:00.000,2012-02-01 00:00:00.000,189.780055850791,0,189.780055850791</record>
+        <record>Elcertificate,2012-02-01 00:00:00.000,2012-02-02 00:00:00.000,190.011733171621,0,190.011733171621</record>
+        <record>Elcertificate,2012-02-02 00:00:00.000,2012-02-03 00:00:00.000,190.243367635377,0,190.243367635377</record>
+        <record>Elcertificate,2012-02-03 00:00:00.000,2012-02-04 00:00:00.000,190.474969302111,0,190.474969302111</record>
+        <record>Elcertificate,2012-02-04 00:00:00.000,2012-02-05 00:00:00.000,190.706548226073,0,190.706548226073</record>
+        <record>Elcertificate,2012-02-05 00:00:00.000,2012-02-06 00:00:00.000,190.938114455622,0,190.938114455622</record>
+        <record>Elcertificate,2012-02-06 00:00:00.000,2012-02-07 00:00:00.000,191.16967803336,0,191.16967803336</record>
+        <record>Elcertificate,2012-02-07 00:00:00.000,2012-02-08 00:00:00.000,191.401248968704,0,191.401248968704</record>
+        <record>Elcertificate,2012-02-08 00:00:00.000,2012-02-09 00:00:00.000,191.632835156637,0,191.632835156637</record>
+        <record>Elcertificate,2012-02-09 00:00:00.000,2012-02-10 00:00:00.000,191.864438106162,0,191.864438106162</record>
+        <record>Elcertificate,2012-02-10 00:00:00.000,2012-02-11 00:00:00.000,192.096057219587,0,192.096057219587</record>
+        <record>Elcertificate,2012-02-11 00:00:00.000,2012-02-12 00:00:00.000,192.327691875112,0,192.327691875112</record>
+        <record>Elcertificate,2012-02-12 00:00:00.000,2012-02-13 00:00:00.000,192.559341454447,0,192.559341454447</record>
+        <record>Elcertificate,2012-02-13 00:00:00.000,2012-02-14 00:00:00.000,192.791005342861,0,192.791005342861</record>
+        <record>Elcertificate,2012-02-14 00:00:00.000,2012-02-15 00:00:00.000,193.022682929,0,193.022682929</record>
+        <record>Elcertificate,2012-02-15 00:00:00.000,2012-02-16 00:00:00.000,193.25437360485,0,193.25437360485</record>
+        <record>Elcertificate,2012-02-16 00:00:00.000,2012-02-17 00:00:00.000,193.486076765685,0,193.486076765685</record>
+        <record>Elcertificate,2012-02-17 00:00:00.000,2012-02-18 00:00:00.000,193.717791809983,0,193.717791809983</record>
+        <record>Elcertificate,2012-02-18 00:00:00.000,2012-02-19 00:00:00.000,193.949518139354,0,193.949518139354</record>
+        <record>Elcertificate,2012-02-19 00:00:00.000,2012-02-20 00:00:00.000,194.181255158457,0,194.181255158457</record>
+        <record>Elcertificate,2012-02-20 00:00:00.000,2012-02-21 00:00:00.000,194.413002275,0,194.413002275</record>
+        <record>Elcertificate,2012-02-21 00:00:00.000,2012-02-22 00:00:00.000,194.644758899584,0,194.644758899584</record>
+        <record>Elcertificate,2012-02-22 00:00:00.000,2012-02-23 00:00:00.000,194.876524445734,0,194.876524445734</record>
+        <record>Elcertificate,2012-02-23 00:00:00.000,2012-02-24 00:00:00.000,195.108298329767,0,195.108298329767</record>
+        <record>Elcertificate,2012-02-24 00:00:00.000,2012-02-25 00:00:00.000,195.340079970753,0,195.340079970753</record>
+        <record>Elcertificate,2012-02-25 00:00:00.000,2012-02-26 00:00:00.000,195.571868790503,0,195.571868790503</record>
+        <record>Elcertificate,2012-02-26 00:00:00.000,2012-02-27 00:00:00.000,195.803664213443,0,195.803664213443</record>
+        <record>Elcertificate,2012-02-27 00:00:00.000,2012-02-28 00:00:00.000,196.035465666605,0,196.035465666605</record>
+        <record>Elcertificate,2012-02-28 00:00:00.000,2012-02-29 00:00:00.000,196.267272579566,0,196.267272579566</record>
+        <record>Elcertificate,2012-02-29 00:00:00.000,2012-03-01 00:00:00.000,196.499084384365,0,196.499084384365</record>
+        <record>Elcertificate,2012-03-01 00:00:00.000,2012-03-02 00:00:00.000,196.730900515521,0,196.730900515521</record>
+        <record>Elcertificate,2012-03-02 00:00:00.000,2012-03-03 00:00:00.000,196.962720409884,0,196.962720409884</record>
+        <record>Elcertificate,2012-03-03 00:00:00.000,2012-03-04 00:00:00.000,197.194543506704,0,197.194543506704</record>
+        <record>Elcertificate,2012-03-04 00:00:00.000,2012-03-05 00:00:00.000,197.426369247478,0,197.426369247478</record>
+        <record>Elcertificate,2012-03-05 00:00:00.000,2012-03-06 00:00:00.000,197.658197075973,0,197.658197075973</record>
+        <record>Elcertificate,2012-03-06 00:00:00.000,2012-03-07 00:00:00.000,197.890026438144,0,197.890026438144</record>
+        <record>Elcertificate,2012-03-07 00:00:00.000,2012-03-08 00:00:00.000,198.121856773881,0,198.121856773881</record>
+        <record>Elcertificate,2012-03-08 00:00:00.000,2012-03-09 00:00:00.000,198.353686899348,0,198.353686899348</record>
+        <record>Elcertificate,2012-03-09 00:00:00.000,2012-03-10 00:00:00.000,198.585513735572,0,198.585513735572</record>
+        <record>Elcertificate,2012-03-10 00:00:00.000,2012-03-11 00:00:00.000,198.817333571477,0,198.817333571477</record>
+        <record>Elcertificate,2012-03-11 00:00:00.000,2012-03-12 00:00:00.000,199.049142680532,0,199.049142680532</record>
+        <record>Elcertificate,2012-03-12 00:00:00.000,2012-03-13 00:00:00.000,199.280937328906,0,199.280937328906</record>
+        <record>Elcertificate,2012-03-13 00:00:00.000,2012-03-14 00:00:00.000,199.512713775494,0,199.512713775494</record>
+        <record>Elcertificate,2012-03-14 00:00:00.000,2012-03-15 00:00:00.000,199.744468271917,0,199.744468271917</record>
+        <record>Elcertificate,2012-03-15 00:00:00.000,2012-03-16 00:00:00.000,199.976197062496,0,199.976197062496</record>
+        <record>Elcertificate,2012-03-16 00:00:00.000,2012-03-17 00:00:00.000,200.207896384265,0,200.207896384265</record>
+        <record>ICE TTF,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,180.121657043795,0,0</record>
+        <record>ICE TTF,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,181.012401314084,0,0</record>
+        <record>ICE TTF,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,181.914499190198,0,0</record>
+        <record>ICE TTF,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,182.832474379447,0,0</record>
+        <record>ICE TTF,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,183.770862615393,0,0</record>
+        <record>ICE TTF,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,184.734165908582,0,0</record>
+        <record>ICE TTF,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,185.726662521104,0,0</record>
+        <record>ICE TTF,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,186.749239448035,0,0</record>
+        <record>ICE TTF,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,187.797004488662,0,0</record>
+        <record>ICE TTF,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,188.863901115672,0,0</record>
+        <record>ICE TTF,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,189.943780039369,0,0</record>
+        <record>ICE TTF,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,191.030456503282,0,0</record>
+        <record>ICE TTF,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,192.117748541816,0,0</record>
+        <record>ICE TTF,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,193.199557229422,0,0</record>
+        <record>ICE TTF,2011-11-22 00:00:00.000,2011-11-23 00:00:00.000,194.27127159084,0,0</record>
+        <record>ICE TTF,2011-11-23 00:00:00.000,2011-11-24 00:00:00.000,195.330762394742,0,0</record>
+        <record>ICE TTF,2011-11-24 00:00:00.000,2011-11-25 00:00:00.000,196.376244798818,0,0</record>
+        <record>ICE TTF,2011-11-25 00:00:00.000,2011-11-26 00:00:00.000,197.405819942973,0,0</record>
+        <record>ICE TTF,2011-11-26 00:00:00.000,2011-11-27 00:00:00.000,198.4174765912,0,0</record>
+        <record>ICE TTF,2011-11-27 00:00:00.000,2011-11-28 00:00:00.000,199.409093305307,0,0</record>
+        <record>ICE TTF,2011-11-28 00:00:00.000,2011-11-29 00:00:00.000,200.378441394292,0,0</record>
+        <record>ICE TTF,2011-11-29 00:00:00.000,2011-11-30 00:00:00.000,201.323212947905,0,0</record>
+        <record>ICE TTF,2011-11-30 00:00:00.000,2011-12-01 00:00:00.000,202.241056918459,0,0</record>
+        <record>NordPool System Price,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,347.563338481436,380.396500537382,314.73017642549</record>
+        <record>NordPool System Price,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,366.731027332755,393.351066237794,340.110988427715</record>
+        <record>NordPool System Price,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,367.690201145826,406.035140754265,329.345261537387</record>
+        <record>NordPool System Price,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,372.010603213603,418.167910098862,325.853296328343</record>
+        <record>NordPool System Price,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,349.992585870973,0,349.992585870973</record>
+        <record>NordPool System Price,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,350.493844469791,0,350.493844469791</record>
+        <record>NordPool System Price,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,409.162077320859,455.190908222898,363.13324641882</record>
+        <record>NordPool System Price,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,410.665759824106,456.801680617094,364.529839031119</record>
+        <record>NordPool System Price,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,414.894978010274,459.397303165768,370.392652854779</record>
+        <record>NordPool System Price,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,406.67805381297,442.996108110555,370.359999515386</record>
+        <record>NordPool System Price,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,397.286189794017,431.659194916537,362.913184671497</record>
+        <record>NordPool System Price,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,375.740931380138,0,375.740931380138</record>
+        <record>NordPool System Price,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,369.00043801479,0,369.00043801479</record>
+        <record>NordPool System Price,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,415.297654493585,451.892046823139,378.703262164032</record>
+        <record>NordPool System Price,2011-11-22 00:00:00.000,2011-11-23 00:00:00.000,416.793198234641,453.476916396472,380.10948007281</record>
+        <record>NordPool System Price,2011-11-23 00:00:00.000,2011-11-24 00:00:00.000,420.480101512848,455.704259848511,385.255943177184</record>
+        <record>NordPool System Price,2011-11-24 00:00:00.000,2011-11-25 00:00:00.000,414.367588808119,443.307466334109,385.427711282129</record>
+        <record>NordPool System Price,2011-11-25 00:00:00.000,2011-11-26 00:00:00.000,407.062332307601,434.608643117046,379.516021498156</record>
+        <record>NordPool System Price,2011-11-26 00:00:00.000,2011-11-27 00:00:00.000,390.083818333225,0,390.083818333225</record>
+        <record>NordPool System Price,2011-11-27 00:00:00.000,2011-11-28 00:00:00.000,384.604770237713,0,384.604770237713</record>
+        <record>NordPool System Price,2011-11-28 00:00:00.000,2011-11-29 00:00:00.000,397.994917526337,447.577372239323,348.412462813351</record>
+        <record>NordPool System Price,2011-11-29 00:00:00.000,2011-11-30 00:00:00.000,399.304002947378,449.008137060048,349.599868834707</record>
+        <record>NordPool System Price,2011-11-30 00:00:00.000,2011-12-01 00:00:00.000,402.671249267713,451.07771487728,354.264783658147</record>
+        <record>NordPool System Price,2011-12-01 00:00:00.000,2011-12-02 00:00:00.000,419.865626892063,446.67578119819,393.055472585936</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

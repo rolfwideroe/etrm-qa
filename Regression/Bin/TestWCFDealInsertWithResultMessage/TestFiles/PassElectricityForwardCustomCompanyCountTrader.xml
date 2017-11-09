@@ -1,0 +1,187 @@
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert IgnoreAuthorisations='true' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Forward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>Test Currency Counterparty A</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityForward>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<ReferencePriceSeries>NO1-EUR-15 Min</ReferencePriceSeries>
+				<LoadProfile>Base Week</LoadProfile>
+				<FromDate>2008-01-01</FromDate>
+				<ToDate>2008-12-31</ToDate>
+				<Financial/>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>40</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>-28</Price>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</ElectricityForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<CounterpartyTrader>Random value</CounterpartyTrader>
+			<TradeDate>2007-12-24T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>PassElectricityForwardCustomCompanyCountTrader</Comment>
+			<ExternalId>PassElectricityForwardCustomCompanyCountTrader</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+			<CustomCompanyId>CustomCompanyId</CustomCompanyId>
+			<CustomCompanyName>CustomCompanyName</CustomCompanyName>
+		</ReferenceData>		
+		<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="PassElectricityForwardCustomCompanyCountTrader"/>
+				<DateProperty name="TerminationDate" value="2013-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+				<StringProperty name="BuyerInitiatorAggressor" value="Aggressor"/>
+				<StringProperty name="SellerInitiatorAggressor" value="Sleeve"/>
+				<BooleanProperty name="RemitReporting" value="1"/>
+			</PropertyGroup>
+			<PropertyGroup name="Deal Group">
+				<StringProperty name="GroupField1" value="API Test"/>
+				<StringProperty name="GroupField2" value="DealGroupOne"/>
+				<StringProperty name="GroupField3" value="DealGroupTwo"/>
+			</PropertyGroup>
+			<PropertyGroup name="QA">
+				<StringProperty name="PropertyCustom1" value="Custom Property 1"/>
+				<StringProperty name="PropertyCustom2" value="Custom Property 2"/>
+				<StringProperty name="PropertyCustom3" value="Custom Property 3"/>
+			</PropertyGroup>
+			<PropertyGroup name="TestCustomer">
+				<StringProperty name="PropertyCustom4" value="Custom Property 4"/>
+				<StringProperty name="PropertyCustom5" value="Custom Property 5"/>
+				<StringProperty name="PropertyCustom6" value="Custom Property 6"/>
+				<StringProperty name="PropertyCustom7" value="Custom Property 7"/>
+				<StringProperty name="PropertyCustom8" value="Custom Property 8"/>
+				<StringProperty name="PropertyCustom9" value="Custom Property 9"/>
+				<StringProperty name="PropertyCustom10" value="Custom Property 10"/>
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>273</TransactionId>
+  <DealType>Electricity-Forward</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>Test Currency Counterparty A</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>Test Currency Counterparty A</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+	<ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>FWYR-08</InstrumentName>
+    <PriceBasis>NordPool System Price</PriceBasis>
+    <FromDate>2008-01-01T00:00:00</FromDate>
+    <ToDate>2008-12-31T00:00:00</ToDate>
+    <LoadProfile>Base Week</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+	<ReferencePriceSeries>NO1-EUR-15 Min</ReferencePriceSeries>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>40</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>-28</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+	<CounterpartyTrader>Random value</CounterpartyTrader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2007-12-23T23:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassElectricityForwardCustomCompanyCountTrader</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>PassElectricityForwardCustomCompanyCountTrader</Comment>
+    <ModificationDateTimeUtc>2014-08-12T11:00:22Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>8784</Deliveries>
+    <OriginalQuantity>40</OriginalQuantity>
+    <ReferringId>274</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>	
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="PassElectricityForwardCustomCompanyCountTrader" ValueType="System.String" />
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+        <Property Name="TerminationDate" Value="2013-11-20T00:00:00" ValueType="System.DateTime" />   <Property Name="RemitReporting" Value="True" ValueType="System.Boolean" />
+        <Property Name="BuyerInitiatorAggressor" Value="Aggressor" ValueType="System.String" />
+        <Property Name="SellerInitiatorAggressor" Value="Sleeve" ValueType="System.String" />
+      </Properties>	  
+    </PropertyGroup>
+	 <PropertyGroup Name="Deal Group">
+      <Properties>
+        <Property Name="GroupField1" Value="API Test" ValueType="System.String" />
+        <Property Name="GroupField2" Value="DealGroupOne" ValueType="System.String" />
+        <Property Name="GroupField3" Value="DealGroupTwo" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+	 <PropertyGroup Name="QA">
+      <Properties>
+        <Property Name="PropertyCustom1" Value="Custom Property 1" ValueType="System.String" />
+        <Property Name="PropertyCustom2" Value="Custom Property 2" ValueType="System.String" />
+        <Property Name="PropertyCustom3" Value="Custom Property 3" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+    <PropertyGroup Name="TestCustomer">
+      <Properties>
+        <Property Name="PropertyCustom4" Value="Custom Property 4" ValueType="System.String" />
+        <Property Name="PropertyCustom5" Value="Custom Property 5" ValueType="System.String" />
+        <Property Name="PropertyCustom6" Value="Custom Property 6" ValueType="System.String" />
+        <Property Name="PropertyCustom7" Value="Custom Property 7" ValueType="System.String" />
+        <Property Name="PropertyCustom8" Value="Custom Property 8" ValueType="System.String" />
+        <Property Name="PropertyCustom9" Value="Custom Property 9" ValueType="System.String" />
+        <Property Name="PropertyCustom10" Value="Custom Property 10" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>	
+  	</PropertyGroups>	
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

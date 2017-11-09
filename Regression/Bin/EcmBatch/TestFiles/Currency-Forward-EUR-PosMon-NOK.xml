@@ -1,0 +1,29 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Currency-Forward-PosMon-NOK</workspace>
+    <monitor>Currency-Forward-PosMon-NOK</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <Tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,,CET,USD,Viz,Currency,,Currency Forward,USDEUR 01-Jun-11,,,,2011-06-01 00:00:00.000,2011-06-01 00:00:00.000,Expired,0,-13337.3742265441,0,-13337.3742265441,0,0,-13337.3742265441,0,-13337.3742265441,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,7.75223924055099,-7752239.24055099,0,0,0,Currency-Forward-0001</record>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,,CET,USD,Viz,Currency,,Currency Forward,USDEUR 01-Nov-11,,,,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Expired,0,-434359.879417051,0,-434359.879417051,0,0,-434359.879417051,0,-434359.879417051,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,8.17978164606095,-8179781.64606095,0,0,0,Currency-Forward-0002</record>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,ECS Curve,CET,USD,Viz,Currency,,Currency Forward,USDEUR 31-May-12,,,,2012-05-31 00:00:00.000,2012-05-31 00:00:00.000,Active,0,0,-493395.547973556,-493395.547973556,7811728.01659933,-493395.547973556,0,-493395.547973556,-493395.547973556,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,8.30512356457288,-8305123.56457288,7.81172801659933,0,0,Currency-Forward-0003</record>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,,CET,EUR,Viz,Currency,,Currency Forward,EURUSD 01-Jun-11,,,,2011-06-01 00:00:00.000,2011-06-01 00:00:00.000,Expired,0,-628570.387631009,0,-628570.387631009,0,0,-628570.387631009,0,-628570.387631009,0,0,0,-1000000,0,0,0,0,-1000000,NULL,0,0,0,0,0,0,4.73852961275046,4738529.61275046,0,0,0,Currency-Forward-0004</record>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,,CET,EUR,Viz,Currency,,Currency Forward,EURUSD 01-Nov-11,,,,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Expired,0,-920578.256480112,0,-920578.256480112,0,0,-920578.256480112,0,-920578.256480112,0,0,0,-1000000,0,0,0,0,-1000000,NULL,0,0,0,0,0,0,4.74252174771606,4742521.74771606,0,0,0,Currency-Forward-0005</record>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,ECS Curve,CET,EUR,Viz,Currency,,Currency Forward,EURUSD 31-May-12,,,,2012-05-31 00:00:00.000,2012-05-31 00:00:00.000,Active,0,0,-966756.784074339,-966756.784074339,-5749877.84863811,-966756.784074339,0,-966756.784074339,-966756.784074339,0,0,0,-1000000,0,0,0,0,-1000000,NULL,0,0,0,0,0,0,4.78312106456377,4783121.06456377,5.74987784863811,0,0,Currency-Forward-0006</record>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,,CET,DKK,Viz,Currency,,Currency Forward,DKKUSD 01-Jun-11,,,,2011-06-01 00:00:00.000,2011-06-01 00:00:00.000,Expired,0,-1011949.22611844,0,-1011949.22611844,0,0,-1011949.22611844,0,-1011949.22611844,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,6.37904922649991,-6379049.22649991,0,0,0,Currency-Forward-0007</record>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,,CET,DKK,Viz,Currency,,Currency Forward,DKKUSD 01-Nov-11,,,,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Expired,0,-733527.981601355,0,-733527.981601355,0,0,-733527.981601355,0,-733527.981601355,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,6.39662798579752,-6396627.98579752,0,0,0,Currency-Forward-0008</record>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,ECS Curve,CET,DKK,Viz,Currency,,Currency Forward,DKKUSD 31-May-12,,,,2012-05-31 00:00:00.000,2012-05-31 00:00:00.000,Active,0,0,-708486.493486052,-708486.493486052,5749877.84863811,-708486.493486052,0,-708486.493486052,-708486.493486052,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,6.45836434212416,-6458364.34212416,5.74987784863811,0,0,Currency-Forward-0009</record>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,,CET,USD,Viz,Currency,,Currency Forward,USDDKK 01-Jun-11,,,,2011-06-01 00:00:00.000,2011-06-01 00:00:00.000,Expired,0,-191074.911209824,0,-191074.911209824,0,0,-191074.911209824,0,-191074.911209824,0,0,0,-1000000,0,0,0,0,-1000000,NULL,0,0,0,0,0,0,0.846928380060196,846928.380060196,0,0,0,Currency-Forward-0010</record>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,,CET,USD,Viz,Currency,,Currency Forward,USDDKK 01-Nov-11,,,,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Expired,0,-147226.538448986,0,-147226.538448986,0,0,-147226.538448986,0,-147226.538448986,0,0,0,-1000000,0,0,0,0,-1000000,NULL,0,0,0,0,0,0,0.893637180662156,893637.180662156,0,0,0,Currency-Forward-0011</record>
+        <record>0039 Currency-Forward,,Financial,,Other Period,Other Period - ,ECS Curve,CET,USD,Viz,Currency,,Currency Forward,USDDKK 31-May-12,,,,2012-05-31 00:00:00.000,2012-05-31 00:00:00.000,Active,0,0,-143578.777091636,-143578.777091636,-1050909.50160673,-143578.777091636,0,-143578.777091636,-143578.777091636,0,0,0,-1000000,0,0,0,0,-1000000,NULL,0,0,0,0,0,0,0.907330724515094,907330.724515094,1.05090950160673,0,0,Currency-Forward-0012</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

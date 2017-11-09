@@ -1,0 +1,23 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-Struct-EPAD-EUR-PosMon-EUR</workspace>
+    <monitor>El-Struct-EPAD-EUR-PosMon-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0189 Electricity-Struct-EPAD-EUR,Base,Financial,SYOSL,Other Period,Other Period - Base,,CET,EUR,Viz,Electricity,,Structured Deal,Electricity-Struct-EPAD-EUR-Base-SYOSL-Daily-Post-Delivery - Base,,,,2010-06-13 00:00:00.000,2010-09-20 00:00:00.000,Expired,0,-601016.112,0,-601016.112,0,0,-601016.112,0,-601016.112,0,0,0,48.868,0,0,117283.2,2400,48.868,NULL,0,0,0,0,0,0,5.31748019153639,-623651.0928,0,0,0,El-Struct-EPAD-EUR-0001</record>
+        <record>0189 Electricity-Struct-EPAD-EUR,Base,Physical,SYCPH,Other Period,Other Period - Base,,CET,EUR,Viz,Electricity,,Structured Deal,Electricity-Struct-EPAD-EUR-Base-SYCPH-Daily-Post-Delivery - Base,,,,2010-06-13 00:00:00.000,2010-09-20 00:00:00.000,Expired,0,-357702.7704,0,-357702.7704,0,0,-623651.0928,0,-623651.0928,0,0,0,48.868,0,0,117283.2,2400,48.868,NULL,0,0,0,0,0,0,5.31748019153639,-623651.0928,0,0,0,El-Struct-EPAD-EUR-0002</record>
+        <record>0189 Electricity-Struct-EPAD-EUR,Peak Profile,Financial,Norway 1,Other Period,Other Period - Peak Profile,,CET,EUR,Viz,Electricity,,Structured Deal,Electricity-Struct-EPAD-EUR-Peak-Norway1-Financial-Daily-Post-Delivery - Peak Profile,,,,2010-06-13 00:00:00.000,2010-09-20 00:00:00.000,Expired,0,-2243462.538,0,-2243462.538,0,0,-2243462.538,0,-2243462.538,0,0,0,36.3393,0,0,87214.32,2400,36.3393,NULL,0,0,0,0,0,0,69.5565335188074,-6066325.7724,0,0,0,El-Struct-EPAD-EUR-0003</record>
+        <record>0189 Electricity-Struct-EPAD-EUR,Base,Financial,Sweden 4,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Electricity-Struct-EPAD-EUR-Base-Sweden4-Financial-Weekly-In-Delivery - Base,,,,2011-10-03 00:00:00.000,2011-12-25 00:00:00.000,Active,0,694149.1102,2737109.22471016,3431258.33491016,3247635.33831016,2737109.22471016,694149.1102,2737109.22471016,3431258.33491016,6.80627397260274,59622.96,0,45.9587010411502,0,0,33075.74,1296,45.9587010411502,NULL,0,0,0,0,0,0,8.56257578624073,-510526.1136,54.4695422419511,0,0,El-Struct-Fixed-EUR-0201</record>
+        <record>0189 Electricity-Struct-EPAD-EUR,Base,Financial,SYMAL,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Electricity-Struct-EPAD-EUR-Base-SYMAL-Financial-Monthly-In-Delivery - Base,,,,2011-10-01 00:00:00.000,2012-12-31 00:00:00.000,Active,0,-3692692.9556,7656697.59090118,3964004.63530118,46493410.0386012,7656697.59090118,-3692692.9556,7656697.59090118,3964004.63530118,566.612934931507,4963529.31,0,499.626843445829,0,0,528868.58,10224,499.626843445829,NULL,0,0,0,0,0,0,7.82441485123415,-38836712.4477,9.36700624391018,0,0,El-Struct-Fixed-EUR-0202</record>
+        <record>0189 Electricity-Struct-EPAD-EUR,Base,Physical,Norway 1,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Electricity-Struct-EPAD-EUR-Base-Norway1-Physical-Hourly-Pre-Delivery - Base,,,,2014-04-04 00:00:00.000,2014-07-12 00:00:00.000,Active,0,0,4466029.61045975,4466029.61045975,5084844.71185975,4466029.61045975,0,-618815.1014,-618815.1014,14.0011643835616,122650.2,0,51.10425,0,0,0,2400,51.10425,NULL,0,0,0,0,0,0,5.04536561212293,-618815.1014,41.4581037116918,0,0,El-Struct-Fixed-EUR-0301</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

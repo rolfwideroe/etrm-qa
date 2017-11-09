@@ -1,0 +1,23 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-AsianDandQ-PosMon-EUR</workspace>
+    <monitor>Special-Cases-AsianDandQ-PosMon-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,W47-11,W47-11 - Base,ECS Curve,CET,EUR,NordPool,Electricity,,Asian,ASIC/D W47-11 30.00 - Base,,,,2011-11-21 00:00:00.000,2011-11-27 00:00:00.000,Active,0,-25200,27319.9498825869,2119.94988258692,27319.9498825869,27319.9498825869,-25200,27319.9498825869,2119.94988258692,0,0,0,10,0,0,0,168,0,NULL,30,0,0,0,0,0,15,-25200,16.2618749301113,0,0,Special-Cases-AsianDandQ-EUR-0001</record>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,Y2011,Y2011 - Base,ECS Curve,CET,EUR,NordPool,Electricity,,Asian,ASIC/Q YR-11 30.00 - Base,,,,2011-01-01 00:00:00.000,2011-12-31 00:00:00.000,Active,0,86133.2999999982,211794.46257592,297927.762575918,211794.46257592,211794.46257592,86133.2999999982,211794.46257592,297927.762575918,0,0,0,10,0,0,0,8760,0,NULL,30,0,0,0,0,0,15,-1314000,9.58779821529742,0,0,Special-Cases-AsianDandQ-EUR-0002</record>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,W47-11,W47-11 - Base,ECS Curve,CET,EUR,NordPool,Electricity,,Asian,ASIC/D W47-11 30.00 - Base,,,,2011-11-21 00:00:00.000,2011-11-27 00:00:00.000,Active,0,-32760,34979.5951496308,2219.59514963077,34979.5951496308,34979.5951496308,-32760,34979.5951496308,2219.59514963077,0,0,0,13,0,0,0,168,0,NULL,30,0,0,0,0,0,15,-32760,16.0162981454353,0,0,Special-Cases-AsianDandQ-EUR-0003</record>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,Other Period,Other Period - Base,ECS Curve,CET,EUR,NordPool,Electricity,,Asian,ASIC/Q 01-Jan-12 - 30-Jun-12 30.00 - Base,,,,2012-01-01 00:00:00.000,2012-06-30 00:00:00.000,Active,0,-818820,775871.260772512,-42948.7392274882,775871.260772512,775871.260772512,-818820,775871.260772512,-42948.7392274882,0,0,0,12.5001144950767,0,0,0,4367,0,NULL,30,0,0,0,0,0,15,-818820,14.2132201357901,0,0,Special-Cases-AsianDandQ-EUR-0004</record>
+        <record>0109 Special-Cases,Peak,Financial,NordPool System Price,W47-11,W47-11 - Peak,ECS Curve,CET,EUR,NordPool,Electricity,,Asian,ASIC/D W47-11 30.00 - Peak,,,,2011-11-21 00:00:00.000,2011-11-27 00:00:00.000,Active,0,-9000,12979.2652438788,3979.26524387884,12979.2652438788,12979.2652438788,-9000,12979.2652438788,3979.26524387884,0,0,0,10,0,0,0,60,0,NULL,30,0,0,0,0,0,15,-9000,21.6321087397981,0,0,Special-Cases-AsianDandQ-EUR-0005</record>
+        <record>0109 Special-Cases,Peak,Financial,NordPool System Price,Y2011,Y2011 - Peak,ECS Curve,CET,EUR,NordPool,Electricity,,Asian,ASIC/Q YR-11 30.00 - Peak,,,,2011-01-01 00:00:00.000,2011-12-31 00:00:00.000,Active,0,109030.399999999,120438.724647179,229469.124647178,120438.724647179,120438.724647179,109030.399999999,120438.724647179,229469.124647178,0,0,0,10,0,0,0,3120,0,NULL,30,0,0,0,0,0,15,-468000,15.4408621342537,0,0,Special-Cases-AsianDandQ-EUR-0006</record>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,Q4-11,Q4-11 - Base,ECS Curve,CET,EUR,NordPool,Electricity,,Asian,ASIC/D Q4-11 30.00 - Base,,,,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Active,22090,22090,0,22090,0,0,22090,0,22090,0,0,0,0,0,0,0,2209,0,NULL,30,0,0,0,0,0,0,0,15.7601015887406,0,0,Special-Cases-AsianDandQ-EUR-0007;Special-Cases-AsianDandQ-EUR-0008</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,67 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>zMonth-Gas-Future-Endex-TTF-EUR-Exposure-EUR</workspace>
+    <monitor>zMonth-Gas-Future-Endex-TTF-EUR-Exposure-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0002;Gas-Future-Endex-TTF-EUR-0005;Gas-Future-Endex-TTF-EUR-0008,Endex TTF,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,36000,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Dec-11,2011-12-01 00:00:00.000,2011-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0003;Gas-Future-Endex-TTF-EUR-0006;Gas-Future-Endex-TTF-EUR-0009,Endex TTF,MWh,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Win-11,2011-10-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0011;Gas-Future-Endex-TTF-EUR-0017;Gas-Future-Endex-TTF-EUR-0023,Endex TTF,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,36000,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Win-11,2011-10-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0011;Gas-Future-Endex-TTF-EUR-0017;Gas-Future-Endex-TTF-EUR-0023,Endex TTF,MWh,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Win-11,2011-10-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0011;Gas-Future-Endex-TTF-EUR-0017;Gas-Future-Endex-TTF-EUR-0023,Endex TTF,MWh,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Win-11,2011-10-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0011;Gas-Future-Endex-TTF-EUR-0017;Gas-Future-Endex-TTF-EUR-0023,Endex TTF,MWh,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,34800,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Win-11,2011-10-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0011;Gas-Future-Endex-TTF-EUR-0017;Gas-Future-Endex-TTF-EUR-0023,Endex TTF,MWh,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,37150,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Sum-12,2012-04-01 00:00:00.000,2012-09-30 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0012;Gas-Future-Endex-TTF-EUR-0018;Gas-Future-Endex-TTF-EUR-0024,Endex TTF,MWh,2012-04-01 00:00:00.000,2012-05-01 00:00:00.000,36000,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Sum-12,2012-04-01 00:00:00.000,2012-09-30 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0012;Gas-Future-Endex-TTF-EUR-0018;Gas-Future-Endex-TTF-EUR-0024,Endex TTF,MWh,2012-05-01 00:00:00.000,2012-06-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Sum-12,2012-04-01 00:00:00.000,2012-09-30 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0012;Gas-Future-Endex-TTF-EUR-0018;Gas-Future-Endex-TTF-EUR-0024,Endex TTF,MWh,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,36000,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Sum-12,2012-04-01 00:00:00.000,2012-09-30 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0012;Gas-Future-Endex-TTF-EUR-0018;Gas-Future-Endex-TTF-EUR-0024,Endex TTF,MWh,2012-07-01 00:00:00.000,2012-08-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Sum-12,2012-04-01 00:00:00.000,2012-09-30 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0012;Gas-Future-Endex-TTF-EUR-0018;Gas-Future-Endex-TTF-EUR-0024,Endex TTF,MWh,2012-08-01 00:00:00.000,2012-09-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Sum-12,2012-04-01 00:00:00.000,2012-09-30 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0012;Gas-Future-Endex-TTF-EUR-0018;Gas-Future-Endex-TTF-EUR-0024,Endex TTF,MWh,2012-09-01 00:00:00.000,2012-10-01 00:00:00.000,36000,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Q4-11,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0014;Gas-Future-Endex-TTF-EUR-0020;Gas-Future-Endex-TTF-EUR-0026,Endex TTF,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,36000,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Q4-11,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0014;Gas-Future-Endex-TTF-EUR-0020;Gas-Future-Endex-TTF-EUR-0026,Endex TTF,MWh,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Q1-12,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0015;Gas-Future-Endex-TTF-EUR-0021;Gas-Future-Endex-TTF-EUR-0027,Endex TTF,MWh,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Q1-12,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0015;Gas-Future-Endex-TTF-EUR-0021;Gas-Future-Endex-TTF-EUR-0027,Endex TTF,MWh,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,34800,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Q1-12,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0015;Gas-Future-Endex-TTF-EUR-0021;Gas-Future-Endex-TTF-EUR-0027,Endex TTF,MWh,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,37150,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-11,2011-01-01 00:00:00.000,2011-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0029;Gas-Future-Endex-TTF-EUR-0032;Gas-Future-Endex-TTF-EUR-0035,Endex TTF,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,36000,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-11,2011-01-01 00:00:00.000,2011-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0029;Gas-Future-Endex-TTF-EUR-0032;Gas-Future-Endex-TTF-EUR-0035,Endex TTF,MWh,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,34800,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,37150,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-04-01 00:00:00.000,2012-05-01 00:00:00.000,36000,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-05-01 00:00:00.000,2012-06-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,36000,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-07-01 00:00:00.000,2012-08-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-08-01 00:00:00.000,2012-09-01 00:00:00.000,37200,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-09-01 00:00:00.000,2012-10-01 00:00:00.000,36000,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-10-01 00:00:00.000,2012-11-01 00:00:00.000,37250,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-11-01 00:00:00.000,2012-12-01 00:00:00.000,36000,0,0</record>
+        <record>Gas-Future-Endex-TTF-EUR,Gas,Cal-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Future,Physical,Base,Endex TTF,Endex,CET 06-06,EUR,Gas-Future-Endex-TTF-EUR-0030;Gas-Future-Endex-TTF-EUR-0033;Gas-Future-Endex-TTF-EUR-0036,Endex TTF,MWh,2012-12-01 00:00:00.000,2013-01-01 00:00:00.000,37200,0,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>Endex TTF,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,24.0333582729248,0,0</record>
+        <record>Endex TTF,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,25.5000000000001,0,0</record>
+        <record>Endex TTF,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,26.122,0,0</record>
+        <record>Endex TTF,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,26.131,0,0</record>
+        <record>Endex TTF,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,25.7551224764466,0,0</record>
+        <record>Endex TTF,2012-04-01 00:00:00.000,2012-05-01 00:00:00.000,25.2372967972789,0,0</record>
+        <record>Endex TTF,2012-05-01 00:00:00.000,2012-06-01 00:00:00.000,24.7644961181368,0,0</record>
+        <record>Endex TTF,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,24.3963572139794,0,0</record>
+        <record>Endex TTF,2012-07-01 00:00:00.000,2012-08-01 00:00:00.000,24.2077475379481,0,0</record>
+        <record>Endex TTF,2012-08-01 00:00:00.000,2012-09-01 00:00:00.000,24.4131929693376,0,0</record>
+        <record>Endex TTF,2012-09-01 00:00:00.000,2012-10-01 00:00:00.000,25.1431614758049,0,0</record>
+        <record>Endex TTF,2012-10-01 00:00:00.000,2012-11-01 00:00:00.000,26.3332326168351,0,0</record>
+        <record>Endex TTF,2012-11-01 00:00:00.000,2012-12-01 00:00:00.000,27.321003686095,0,0</record>
+        <record>Endex TTF,2012-12-01 00:00:00.000,2013-01-01 00:00:00.000,27.8766049011686,0,0</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

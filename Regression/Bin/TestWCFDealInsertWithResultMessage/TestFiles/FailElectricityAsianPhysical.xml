@@ -1,0 +1,70 @@
+<TestCase>
+<TestResult>Failure</TestResult><Message>The message does not conform to the deal insert xml schema. 
+(1)	The element 'InstrumentData' has invalid child element 'Physical'. List of possible elements expected: 'Financial'.
+</Message>
+  <TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Asian</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityAsian>
+			<InstrumentData>
+				<Timezone>CET</Timezone>
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<LoadProfile>SystemBase</LoadProfile>
+				<FromDate>2010-06-01</FromDate>
+				<ToDate>2010-06-30</ToDate>
+				<Physical>
+					<DeliveryArea AreaCode="" AreaName="RWE"/>
+					<!--DeliveryLocation>Test GridPoint</DeliveryLocation-->
+				</Physical>
+				<PutCall>Put</PutCall>
+				<Strike>1.0</Strike>
+				<SamplingPeriod>All</SamplingPeriod>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>2.0</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>3.0</Price>
+				<Currency>NOK</Currency>
+				<CurrencySource>NordPool</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>NOK</ClearingCurrency>
+				<ClearingFee>4.0</ClearingFee>
+				<BrokerTradingFee>5.0</BrokerTradingFee>
+				<BrokerCurrency>NOK</BrokerCurrency>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+		</ElectricityAsian>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-05-01T00:00:00Z</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<!--<Audited>true</Audited>-->
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>API test: ElectricityAsian Physical; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassElectricityAsianPhysical</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

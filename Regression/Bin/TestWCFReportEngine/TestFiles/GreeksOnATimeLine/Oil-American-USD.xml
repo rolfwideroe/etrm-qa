@@ -1,0 +1,80 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>GreeksOnATimelineReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="USD" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseEndDate" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="PosCalcMethod" IsNotSet="false" XmlEncodedValue="NPVWA" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="TimeResolution" IsNotSet="false" XmlEncodedValue="Month" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Oil-American-USD" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedTimeSeriesArtifacts>
+      <ExpectedTimeSeriesArtifact ArtifactId="greeksOnATimeline" Columns="GroupBy,Greek,ReferenceArea,TimeZone,From,Until,Value" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Double">
+        <TimeSeriesProperties>
+          <Property Name="GroupBy" DataType="System.String" />
+          <Property Name="Greek" DataType="System.String" />
+          <Property Name="ReferenceArea" DataType="System.String" />
+        </TimeSeriesProperties>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,4.14343104226363</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),WTI,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),WTI,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),WTI,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),WTI,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Delta (Curve Unit),WTI,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0.0418012853385529</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0.0611333340237866</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),WTI,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),WTI,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),WTI,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),WTI,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Gamma (Curve Unit),WTI,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0.0101040804029623</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),BrentOil,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),BrentOil,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),BrentOil,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),BrentOil,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),BrentOil,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,-4.73382555937188</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),BrentOil,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),BrentOil,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),BrentOil,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),WTI,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),WTI,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),WTI,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),WTI,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Theta (USD/day),WTI,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,-0.00823025865829653</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),BrentOil,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),BrentOil,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),BrentOil,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),BrentOil,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),BrentOil,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,3.13829026726536</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),BrentOil,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),BrentOil,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),BrentOil,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),WTI,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),WTI,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),WTI,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),WTI,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Oil-American-USD,Vega (USD/Vol(%)),WTI,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0.0516573714083414</ExpectedRecord>
+      </ExpectedTimeSeriesArtifact>
+    </ExpectedTimeSeriesArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

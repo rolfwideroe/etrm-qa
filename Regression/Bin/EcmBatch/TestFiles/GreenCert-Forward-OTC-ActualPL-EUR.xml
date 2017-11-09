@@ -1,0 +1,164 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>GreenCert-Forward-OTC-ActualPL-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-9811200,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0001</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1051200,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0001</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-10415640,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0002</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1077480,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0002</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,11037600,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0003</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-1103760,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0003</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-9811200,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0004</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1051200,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0004</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-10415640,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0005</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1077480,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,11037600,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0006</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-1103760,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0006</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-9838080,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0007</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2810880,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0007</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-10444176,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0008</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2881152,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0008</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,11067840,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0009</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-2951424,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0009</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-9838080,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0010</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2810880,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0010</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-10444176,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0011</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2881152,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0011</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,11067840,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0012</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-2951424,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0012</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,9933840,daily,Forward,GoO EU YR-10,GreenCert-Forward-EUR-0013</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,8116416,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0014</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,937440,daily,Forward,GoO EU M01-10,GreenCert-Forward-EUR-0015</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-93744,daily,Forward,GoO EU M01-10,GreenCert-Forward-EUR-0015</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,937440,daily,Forward,GoO EU M01-12,GreenCert-Forward-EUR-0016</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-249984,daily,Forward,GoO EU M01-12,GreenCert-Forward-EUR-0016</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,937440,daily,Forward,GoO EU M01-10,GreenCert-Forward-EUR-0017</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-93744,daily,Forward,GoO EU M01-10,GreenCert-Forward-EUR-0017</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,937440,daily,Forward,GoO EU M01-12,GreenCert-Forward-EUR-0018</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-249984,daily,Forward,GoO EU M01-12,GreenCert-Forward-EUR-0018</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,843696,daily,Forward,GoO EU M01-10,GreenCert-Forward-EUR-0019</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,687456,daily,Forward,GoO EU M01-12,GreenCert-Forward-EUR-0020</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-9811200,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0021</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1021608.25699634,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0021</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-10415640,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0022</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1047148.46342125,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0022</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,11037600,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0023</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-1072688.66984616,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0023</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-9811200,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0024</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1021608.25699634,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0024</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-10415640,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0025</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1047148.46342125,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0025</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,11037600,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0026</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-1072688.66984616,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0026</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-9838080,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0027</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2868340.11443794,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0027</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-10444176,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0028</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2940048.61729889,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0028</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,11067840,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0029</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-3011757.12015984,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0029</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-9838080,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0030</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2868340.11443794,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0030</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-10444176,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0031</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2940048.61729889,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0031</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,11067840,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0032</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-3011757.12015984,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0032</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,9963750.24709979,daily,Forward,LECs YR-10,GreenCert-Forward-EUR-0033</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,8052822.94035033,daily,Forward,LECs YR-12,GreenCert-Forward-EUR-0034</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,937440,daily,Forward,LECs M01-10,GreenCert-Forward-EUR-0035</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-36442.0260440886,daily,Forward,LECs M01-10,GreenCert-Forward-EUR-0035</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,937440,daily,Forward,LECs M01-12,GreenCert-Forward-EUR-0036</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-255094.18230862,daily,Forward,LECs M01-12,GreenCert-Forward-EUR-0036</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,937440,daily,Forward,LECs M01-10,GreenCert-Forward-EUR-0037</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-36442.0260440886,daily,Forward,LECs M01-10,GreenCert-Forward-EUR-0037</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,937440,daily,Forward,LECs M01-12,GreenCert-Forward-EUR-0038</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-255094.18230862,daily,Forward,LECs M01-12,GreenCert-Forward-EUR-0038</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,900958.528942568,daily,Forward,LECs M01-10,GreenCert-Forward-EUR-0039</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,682069.702597979,daily,Forward,LECs M01-12,GreenCert-Forward-EUR-0040</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-10444176,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0047</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2521008,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0047</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-10444176,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0048</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,6482592,daily,Forward,GoO EU YR-12,GreenCert-Forward-EUR-0048</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-1254842.78487255,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0001</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1051162.85292469,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0001</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-1332150.06358345,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0002</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1077441.9242478,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0002</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,1411698.13298162,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0003</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-1103720.99557092,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0003</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-1266709.58607477,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0004</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1051162.85292469,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0004</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-1344747.94450259,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0005</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1077441.9242478,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,1425048.28433412,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0006</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-1103720.99557092,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0006</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-1258280.71031056,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0007</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2810780.66973834,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0007</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-1335799.78978505,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0008</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2881050.1864818,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0008</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,1415565.79909938,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0009</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-2951319.70322526,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0009</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-1270180.02329689,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0010</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2810780.66973834,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0010</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-1348432.18544643,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0011</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2881050.1864818,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0011</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,1428952.526209,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0012</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-2951319.70322526,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0012</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,317961.910810551,daily,Forward,GoO EU YR-10,GreenCert-Forward-NOK-0013</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,-1525806.96066668,daily,Forward,GoO EU YR-12,GreenCert-Forward-NOK-0014</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,119897.649650494,daily,Forward,GoO EU M01-10,GreenCert-Forward-NOK-0015</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-93740.6872950645,daily,Forward,GoO EU M01-10,GreenCert-Forward-NOK-0015</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,119897.649650494,daily,Forward,GoO EU M01-12,GreenCert-Forward-NOK-0016</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-249975.166120172,daily,Forward,GoO EU M01-12,GreenCert-Forward-NOK-0016</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,121031.498121528,daily,Forward,GoO EU M01-10,GreenCert-Forward-NOK-0017</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-93740.6872950645,daily,Forward,GoO EU M01-10,GreenCert-Forward-NOK-0017</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,121031.498121528,daily,Forward,GoO EU M01-12,GreenCert-Forward-NOK-0018</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-249975.166120172,daily,Forward,GoO EU M01-12,GreenCert-Forward-NOK-0018</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,27004.9842058276,daily,Forward,GoO EU M01-10,GreenCert-Forward-NOK-0019</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,-129235.015794172,daily,Forward,GoO EU M01-12,GreenCert-Forward-NOK-0020</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-1254842.78487255,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0021</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1021572.15562756,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0021</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-1332150.06358345,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0022</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1047111.45951825,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0022</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,1411698.13298162,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0023</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-1072650.76340894,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0023</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-1266709.58607477,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0024</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1021572.15562756,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0024</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-1344747.94450259,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0025</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,1047111.45951825,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0025</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,1425048.28433412,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0026</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-1072650.76340894,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0026</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-1258280.71031056,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0027</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2868238.75366335,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0027</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,-1335799.78978505,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0028</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2939944.72250493,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0028</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,1415565.79909938,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0029</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-3011650.69134651,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0029</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-1270180.02329689,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0030</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2868238.75366335,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0030</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,-1348432.18544643,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0031</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,2939944.72250493,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0031</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,1428952.526209,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0032</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-3011650.69134651,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0032</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,347872.157910345,daily,Forward,LECs YR-10,GreenCert-Forward-NOK-0033</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,-1589400.02031635,daily,Forward,LECs YR-12,GreenCert-Forward-NOK-0034</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,119897.649650494,daily,Forward,LECs M01-10,GreenCert-Forward-NOK-0035</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-36440.7382637556,daily,Forward,LECs M01-10,GreenCert-Forward-NOK-0035</record>
+        <record>2011-01-01 00:00:00.000,0,HI,170,EUR,119897.649650494,daily,Forward,LECs M01-12,GreenCert-Forward-NOK-0036</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-255085.167846289,daily,Forward,LECs M01-12,GreenCert-Forward-NOK-0036</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,121031.498121528,daily,Forward,LECs M01-10,GreenCert-Forward-NOK-0037</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-36440.7382637556,daily,Forward,LECs M01-10,GreenCert-Forward-NOK-0037</record>
+        <record>2011-11-01 00:00:00.000,0,TR,170,EUR,121031.498121528,daily,Forward,LECs M01-12,GreenCert-Forward-NOK-0038</record>
+        <record>2011-11-02 00:00:00.000,0,TR,170,EUR,-255085.167846289,daily,Forward,LECs M01-12,GreenCert-Forward-NOK-0038</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,84267.513148396,daily,Forward,LECs M01-10,GreenCert-Forward-NOK-0039</record>
+        <record>2012-01-01 00:00:00.000,0,TR,170,EUR,-134621.313196194,daily,Forward,LECs M01-12,GreenCert-Forward-NOK-0040</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

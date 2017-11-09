@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-AsianSpreadNOK-CurrExposure-SEK-Delt</workspace>
+    <monitor>Special-Cases-AsianSpreadNOK-CurrExposure-SEK-Delt</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>Special-Cases,Electricity,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,2011-10-30 00:00:00.000,2011-11-02 00:00:00.000,Asian call,Financial,Base,SYOSL,,CET,NOK,Special-Cases-AsianSpreadNOK-0001,NOK,2011-11-02 00:00:00.000,-468.613539209417</record>
+        <record>Special-Cases,Electricity,ASIC/Q YR-11 0.00,2011-01-01 00:00:00.000,2011-12-31 00:00:00.000,Asian call,Financial,Base,SYOSL,,CET,NOK,Special-Cases-AsianSpreadNOK-0002,NOK,2011-12-31 00:00:00.000,-123047.162645141</record>
+        <record>Special-Cases,Electricity,ASIC/M Q4-11 15.00,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Asian call,Financial,Base,SYOSL,,CET,NOK,Special-Cases-AsianSpreadNOK-0003,NOK,2011-11-30 00:00:00.000,-59659.5705119049</record>
+        <record>Special-Cases,Electricity,ASIC/M Q4-11 15.00,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Asian call,Financial,Base,SYOSL,,CET,NOK,Special-Cases-AsianSpreadNOK-0003,NOK,2011-12-31 00:00:00.000,-81435.77803917</record>
+        <record>Special-Cases,Electricity,ASIC/A YR-11 0.00,2011-01-01 00:00:00.000,2011-12-31 00:00:00.000,Asian call,Financial,Base,SYOSL,,CET,NOK,Special-Cases-AsianSpreadNOK-0004,NOK,2011-12-31 00:00:00.000,-155520.819611249</record>
+        <record>Special-Cases,Electricity,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,2011-10-30 00:00:00.000,2011-11-02 00:00:00.000,Asian call,Financial,Base,EEX-France,,CET,NOK,Special-Cases-AsianSpreadNOK-0005,NOK,2011-11-02 00:00:00.000,11666.924397681</record>
+        <record>Special-Cases,Electricity,ASIC/Q YR-11 0.00,2011-01-01 00:00:00.000,2011-12-31 00:00:00.000,Asian call,Financial,Base,EEX-France,,CET,NOK,Special-Cases-AsianSpreadNOK-0006,NOK,2011-12-31 00:00:00.000,1129777.69665059</record>
+        <record>Special-Cases,Electricity,ASIC/M Q4-11 15.00,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Asian call,Financial,Base,EEX-France,,CET,NOK,Special-Cases-AsianSpreadNOK-0007,NOK,2011-11-30 00:00:00.000,415265.607099818</record>
+        <record>Special-Cases,Electricity,ASIC/M Q4-11 15.00,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Asian call,Financial,Base,EEX-France,,CET,NOK,Special-Cases-AsianSpreadNOK-0007,NOK,2011-12-31 00:00:00.000,492726.325995059</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

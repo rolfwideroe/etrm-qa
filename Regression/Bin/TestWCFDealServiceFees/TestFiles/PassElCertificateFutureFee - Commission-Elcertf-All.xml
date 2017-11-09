@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<TestCase>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+  <MetaData> 
+    <Timezone>CET</Timezone> 
+  </MetaData> 
+  <Transaction> 
+    <TransactionType>Automatic</TransactionType> 
+    <DealType>Elcertificate-Future</DealType> 
+    <Portfolios> 
+      <Portfolio>Test Company A</Portfolio> 
+      <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio> 
+      <BuySell>Sell</BuySell> 
+    </Portfolios> 
+       <ElcertificateFuture> 
+        <InstrumentData> 
+          <Timezone>CET</Timezone> 
+          <ExecutionVenue>Nord Pool</ExecutionVenue> 
+          <PriceBasis>ElCertificate NASDAQ</PriceBasis> 
+          <SettlementDate>2013-06-14</SettlementDate> 
+          <Physical/> 
+        </InstrumentData> 
+        <SettlementData> 
+          <Quantity>12</Quantity> 
+          <QuantityUnit>ECS</QuantityUnit> 
+          <Price>5</Price> 
+          <Currency>EUR</Currency> 
+          <PriceVolumeUnit>PerECS</PriceVolumeUnit> 
+          <CurrencySource>Viz</CurrencySource> 
+          <Clearing>Electronic</Clearing> 
+          <ClearingCurrency>EUR</ClearingCurrency> 
+          <ClearingFee>0.512</ClearingFee> 
+          <BrokerCurrency>EUR</BrokerCurrency> 
+          <BrokerFee>0.312</BrokerFee> 
+          <BrokerFeeCurrency>EUR</BrokerFeeCurrency> 
+          <TradingFee>0.212</TradingFee> 
+          <TradingFeeCurrency>USD</TradingFeeCurrency> 		  
+		  <Broker>Test Broker A</Broker>
+        </SettlementData> 
+      </ElcertificateFuture>
+    <DealDetails> 
+      <Status>Active</Status> 
+      <Trader>Vizard</Trader> 
+      <TradeDate>2013-06-10T00:00:00</TradeDate>
+    </DealDetails> 
+    <ReferenceData> 
+      <GroupFields> 
+        <GroupField1></GroupField1> 
+        <GroupField2></GroupField2> 
+        <GroupField3></GroupField3> 
+      </GroupFields> 
+      <ExternalId>PassElCertificateFutureFee - Commission-Elcertf-All</ExternalId> 
+      <ExternalSource>XMLFileImport</ExternalSource> 
+      <TicketNumber>TicketNumber</TicketNumber> 
+    </ReferenceData> 
+  </Transaction> 
+</DealInsert>
+<ExpectedValues>
+	<ClearingCurrency>EUR</ClearingCurrency>
+	<ClearingFee>0.512</ClearingFee>
+	<BrokerFee>0.312</BrokerFee>
+	<BrokerCurrency>EUR</BrokerCurrency>
+	<TradingFee>0.212</TradingFee>
+	<TradingFeeCurrency>USD</TradingFeeCurrency>
+	<CommissionFee>1.21</CommissionFee>
+	<CommissionFeeCurrency>EUR</CommissionFeeCurrency>
+	<EntryFee>0</EntryFee>
+	<EntryFeeCurrency>EUR</EntryFeeCurrency>
+	<ExitFee>0</ExitFee>
+	<ExitFeeCurrency>EUR</ExitFeeCurrency>
+</ExpectedValues>
+</TestCase>

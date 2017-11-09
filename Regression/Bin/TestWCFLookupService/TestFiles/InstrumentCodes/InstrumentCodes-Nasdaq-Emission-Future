@@ -1,0 +1,54 @@
+<InstrumentCodesTestCase>
+	<InsertXml>
+	<![CDATA[ 
+<DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Emission-Future</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <EmissionFuture>
+        <InstrumentData>
+          <ExecutionVenue>Nord Pool</ExecutionVenue>
+          <PriceBasis>EUA</PriceBasis>
+          <SettlementDate>2015-12-14</SettlementDate>
+		  <PublishingPeriodType>Quarter</PublishingPeriodType>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>500000</Quantity>
+          <QuantityUnit>Ton</QuantityUnit>
+          <Price>11.66</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </EmissionFuture>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-08-02T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Emission-Future-EUA NASDAQ-0001</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+	]]>
+	</InsertXml>
+	<ExpectedResult>
+		<ExpectedTransaction ExternalId="Emission-Future-EUA NASDAQ-0001">
+			<ExpectedCodes>
+				<ExpectedCode CodeType="ISIN" Code="NONK00190367"/>
+			</ExpectedCodes>
+		</ExpectedTransaction>
+	</ExpectedResult>
+</InstrumentCodesTestCase>

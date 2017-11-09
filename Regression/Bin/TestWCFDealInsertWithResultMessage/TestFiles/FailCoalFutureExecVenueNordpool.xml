@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>No configurable future defined for:TradeDate 11/11/2016 12:00:22 PM , Commodity Coal , Execution Venue Nord Pool and PricebasisCoal API #2</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>123456</MessageId>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Coal-Future</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<CoalFuture>
+			<InstrumentData>
+				<Timezone>CET</Timezone>
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<PriceBasis>Coal API #2</PriceBasis>
+				<FromDate>2015-05-30</FromDate>
+				<ToDate>2015-06-26</ToDate>
+				<Financial/>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>120</Quantity>
+				<QuantityUnit>Ton</QuantityUnit>
+				<Price>20</Price>
+				<Currency>USD</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</CoalFuture>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2016-11-11T12:00:22</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>FailCoalFutureExecVenueNordpool; should fail as no Coal Futures are set up on NordPool</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailCoalFutureExecVenueNordpool</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

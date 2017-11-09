@@ -1,0 +1,51 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Oil-FFF-ICEBrentOilFLFSwap-USD" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0001,SWAP Oct-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0002,SWAP Nov-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,18934.6517482119,18914.1733567078,18661.399675736,18661.399675736,18661.399675736,18661.399675736,18661.399675736,18825.0058981825,18825.0058981825</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0003,SWAP Dec-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,36634.708920152,36634.708920152,35726.5059673152,35726.5059673152,35726.5059673152,35726.5059673152,35726.5059673152,36039.5584039987,36039.5584039987</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0004,SWAP Feb-12,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,-886.906291340158,-886.906291340158,-1619.83579592216,-1619.83579592216,-1619.83579592216,-1619.83579592216,-1619.83579592216,-1633.97543169103,-1633.97543169103</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0005,SWAP Jan-11 - Mar-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0006,SWAP Oct-11 - Feb-12,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,1305.27464230566,1285.38432858948,-393.240187949537,-393.240187949537,-393.240187949537,-393.240187949537,-393.240187949537,-321.02821880117,-321.02821880117</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0007,SWAP Jan-12 - Dec-12,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,-72222.0961665934,-72222.0961665934,-75802.95196787,-75802.95196787,-75802.95196787,-75802.95196787,-75802.95196787,-76462.6351898371,-76462.6351898371</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0001,SWAP Oct-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0002,SWAP Nov-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,18934.6517482119,18914.1733567078,18661.399675736,18661.399675736,18661.399675736,18661.399675736,18661.399675736,18825.0058981825,18825.0058981825</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0003,SWAP Dec-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,36634.708920152,36634.708920152,35726.5059673152,35726.5059673152,35726.5059673152,35726.5059673152,35726.5059673152,36039.5584039987,36039.5584039987</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0004,SWAP Feb-12,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,-886.906291340158,-886.906291340158,-1619.83579592216,-1619.83579592216,-1619.83579592216,-1619.83579592216,-1619.83579592216,-1633.97543169103,-1633.97543169103</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0005,SWAP Jan-11 - Mar-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0006,SWAP Oct-11 - Feb-12,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,9939.32629909899,9919.43598538281,8240.81146884379,8240.81146884379,8240.81146884379,8240.81146884379,8240.81146884379,8313.02343799216,8313.02343799216</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0007,SWAP Jan-12 - Dec-12,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,-72222.0961665934,-72222.0961665934,-75802.95196787,-75802.95196787,-75802.95196787,-75802.95196787,-75802.95196787,-76462.6351898371,-76462.6351898371</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0001,SWAP Oct-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407,-47794.9011350407</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0002,SWAP Nov-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0003,SWAP Dec-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0004,SWAP Feb-12,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0005,SWAP Jan-11 - Mar-11,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249,59902.9343597249</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0006,SWAP Oct-11 - Feb-12,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,-8634.05165679333,-8634.05165679333,-8634.05165679333,-8634.05165679333,-8634.05165679333,-8634.05165679333,-8634.05165679333,-8634.05165679333,-8634.05165679333</ExpectedRecord>
+        <ExpectedRecord>Oil-FFF-ICEBrentOilFLFSwap-USD-0007,SWAP Jan-12 - Dec-12,,Swap,Oil-FFF-ICEBrentOilFLFSwap-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

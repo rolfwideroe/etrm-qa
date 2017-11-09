@@ -1,0 +1,646 @@
+<test type="EcmBatch" name="Special-Cases-FSD-All-ActualCF-EUR-Aggr" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FSD-All-ActualCF-EUR-Aggr</workspace>
+    <monitor>Special-Cases-FSD-All-ActualCF-EUR-Aggr</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitorAggregatedStructDeals.xml" />
+      <returns>
+        <record>2010-01-01 00:00:00.000,0,HI,80,EUR,-21221742.006,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,80,EUR,-18963435.0474,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,80,EUR,-27736482.8403,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,80,EUR,-24660164.0412,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,80,EUR,-25093508.0067,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,80,EUR,-18905307.4845,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,80,EUR,-25229257.6175999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,80,EUR,-17642315.4057,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,80,EUR,-14399012.6766,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,80,EUR,-23678965.3662,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,80,EUR,-17620901.7615001,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,80,EUR,-19101856.8806999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,80,EUR,3913334.60040007,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,80,EUR,4982751.63089999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,80,EUR,5861086.36649999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,80,EUR,6377491.16909997,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,80,EUR,5747492.17619994,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,80,EUR,4054825.04129999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,80,EUR,3259191.67559996,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,80,EUR,4373338.09320002,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,80,EUR,5570615.13300001,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,80,EUR,4552718.67000003,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,80,EUR,9283186.31197534,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,80,EUR,10012491.4721818,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,80,EUR,8051912.56867808,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,80,EUR,9012966.40504179,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,80,EUR,9639040.40096956,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,80,EUR,6228427.28355472,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,80,EUR,6427737.13363417,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,80,EUR,6745213.34511586,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,80,EUR,6476576.00120329,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,80,EUR,6602519.56916598,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,80,EUR,6580455.46636999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,80,EUR,3276212.09604397,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,80,EUR,5012565.41827333,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,80,EUR,-1048788.57677209,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,80,EUR,-32261420.5695,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,80,EUR,-27944063.9892,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,80,EUR,-38174547.5469,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,80,EUR,-35345386.5084,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,80,EUR,-35664805.2474,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,80,EUR,-30487385.3535,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,80,EUR,-37653057.3266999,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,80,EUR,-27527590.3725,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,80,EUR,-25747850.5983,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,80,EUR,-36384322.6863,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,80,EUR,-29472612.6555001,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,80,EUR,-33086869.9748999,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,80,EUR,-10546325.64,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,80,EUR,-10862032.0788,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,80,EUR,-10854900.3897,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,80,EUR,-7483590.80730003,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,80,EUR,-9847959.72300003,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,80,EUR,-15081524.208,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,80,EUR,-10799272.5606,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,80,EUR,-11157532.1802,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,80,EUR,-11323961.0919,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,80,EUR,-9486351.48329997,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,80,EUR,-11061196.6296,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,80,EUR,-11088184.474,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,80,EUR,-12766308.8444,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,80,EUR,-10643311.6706,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,80,EUR,-10994243.1756,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,80,EUR,-11518401.379,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,80,EUR,-11355790.058,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,80,EUR,-11117753.2668,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,80,EUR,-11218259.1088,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,80,EUR,-11570612.3286,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,80,EUR,-10831977.8978001,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,80,EUR,-28301054.8102001,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,80,EUR,-27020033.5596,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,80,EUR,-23663702.9068,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,86,EUR,-523068.76986,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,86,EUR,-456592.358696,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,86,EUR,-638028.197704,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,86,EUR,-581370.284832,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,86,EUR,-580896.6966,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,86,EUR,-477570.215708,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,86,EUR,-604161.352476002,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,86,EUR,-428967.911868001,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,86,EUR,-396628.596196,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,86,EUR,-588510.504844,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,86,EUR,-463356.319244001,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,86,EUR,-515217.128412,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,86,EUR,-87623.3620600002,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,86,EUR,-87764.9776520006,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,86,EUR,-81109.4923319998,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,86,EUR,-35382.036688,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,86,EUR,-78989.3470920001,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,86,EUR,-138388.741524,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,86,EUR,-92368.8235759998,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,86,EUR,-91118.9973000002,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,86,EUR,-86225.7656079992,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,86,EUR,-77253.6478840019,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,86,EUR,7167.61155781756,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,86,EUR,11543.7756339264,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,86,EUR,8927.58604361071,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,86,EUR,5734.70530109584,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,86,EUR,5480.86889842798,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,86,EUR,2699.01289044028,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,86,EUR,2460.22117434339,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,86,EUR,1348.75640292079,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,86,EUR,9818.44698439044,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,86,EUR,4343.82577162544,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,86,EUR,526.967702700129,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,86,EUR,-364249.503323221,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,86,EUR,-150982.375734518,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,86,EUR,-107901.179799447,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,86,EUR,-560075.51,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,86,EUR,-485945.1068,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,86,EUR,-672656.1248,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,86,EUR,-619631.3776,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,86,EUR,-625251.6924,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,86,EUR,-529003.2536,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,86,EUR,-660926.220800002,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,86,EUR,-473220.645600001,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,86,EUR,-442759.7456,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,86,EUR,-636726.0536,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,86,EUR,-512254.985200001,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,86,EUR,-577728.1008,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,86,EUR,-189162.144,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,86,EUR,-195704.333200001,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,86,EUR,-195647.8932,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,86,EUR,-132631.2628,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,86,EUR,-176126.8612,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,86,EUR,-273082.5808,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,86,EUR,-193913.312,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,86,EUR,-200461.1928,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,86,EUR,-203675.072399999,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,86,EUR,-169593.480400002,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,86,EUR,-29917.2497013491,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,86,EUR,-24721.2894995737,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,86,EUR,-20439.5540022788,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,86,EUR,-22902.8247006645,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,86,EUR,-28038.6028014433,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,86,EUR,-25323.5633006916,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,86,EUR,-24666.9822992664,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,86,EUR,-30092.7782999762,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,86,EUR,-18182.8286004589,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,86,EUR,-32201.9328982053,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,86,EUR,-25369.8172011673,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,86,EUR,-474506.522716484,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,86,EUR,-260728.230408642,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,86,EUR,-152713.30931123,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,88,EUR,-1395364.5603,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,88,EUR,-1208544.3936,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,88,EUR,-1651256.4258,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,88,EUR,-1528731.3051,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,88,EUR,-1542567.4956,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,88,EUR,-1318717.7109,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,88,EUR,-1628596.8882,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,88,EUR,-1190661.6249,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,88,EUR,-1113647.9805,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,88,EUR,-1573642.6344,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,88,EUR,-1274799.20130001,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,88,EUR,-1430986.86,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,88,EUR,-456179.654699998,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,88,EUR,-470077.3116,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,88,EUR,-469545.2604,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,88,EUR,-323507.597400001,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,88,EUR,-425960.327700001,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,88,EUR,-652241.821499999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,88,EUR,-466814.5758,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,88,EUR,-482767.064099999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,88,EUR,-489981.647699998,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,88,EUR,-410341.660199999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,88,EUR,-1470788.8075,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,88,EUR,-1494560.6388,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,88,EUR,-1560049.1814,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,88,EUR,-1560274.4014,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,88,EUR,-1448175.6534,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,88,EUR,-1413827.0042,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,88,EUR,-1554240.737,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,88,EUR,-1588392.90219999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,88,EUR,-1554254.8584,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,88,EUR,-1596643.21679999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,88,EUR,-1546759.97320001,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,88,EUR,-5816131.6732,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,88,EUR,-6945198.07079999,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,88,EUR,-4454197.9942,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,88,EUR,-12435043.1238,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,88,EUR,-10189173.3354,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,88,EUR,-12089321.1324,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,88,EUR,-12213953.7723,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,88,EUR,-12113864.7363,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,88,EUR,-12900795.5799,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,88,EUR,-14052396.5973,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,88,EUR,-11075936.5917,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,88,EUR,-12462485.9022,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,88,EUR,-14278999.9545,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,88,EUR,-13126510.0953,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,88,EUR,-15415999.9542,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,88,EUR,-14915839.8951,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,88,EUR,-16314861.0213,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,88,EUR,-17185532.0166,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,88,EUR,-14184589.5738,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,88,EUR,-16021412.2269,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,88,EUR,-19788591.0708,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,88,EUR,-14525278.812,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,88,EUR,-16013637.3375,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,88,EUR,-17384557.8726,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,88,EUR,-14449411.8135,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,88,EUR,-21815171.7490753,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,88,EUR,-22595236.5849818,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,88,EUR,-22378270.5944781,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,88,EUR,-21216552.4770418,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,88,EUR,-22081459.2299696,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,88,EUR,-19160655.6667547,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,88,EUR,-19337767.928634,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,88,EUR,-19451359.5141159,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,88,EUR,-19249089.9684033,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,88,EUR,-19769775.114566,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,88,EUR,-18959193.3373702,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,88,EUR,-37393398.5794442,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,88,EUR,-38977797.0486731,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,88,EUR,-27069112.3242282,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,89,EUR,-41743379.6646927,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,89,EUR,-38477829.3563375,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,89,EUR,-60197933.601981,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,89,EUR,-58658525.8419076,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,89,EUR,-63079584.6286925,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,89,EUR,-58876733.2593764,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,89,EUR,-58705493.0481592,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,89,EUR,-53061587.3757162,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,89,EUR,-39413541.2342281,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,89,EUR,-39750458.5396031,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,89,EUR,-40911679.8774946,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,89,EUR,-38565335.1943286,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,89,EUR,-6026299.68665072,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,89,EUR,-6853988.5749296,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,89,EUR,-6636848.42641012,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,89,EUR,-7988293.57174764,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,89,EUR,-8407911.5875062,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,89,EUR,-13473059.2972905,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,89,EUR,-12623534.5655765,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,89,EUR,-12418246.9205048,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,89,EUR,-11214954.5825072,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,89,EUR,-9677417.38855386,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,89,EUR,-11375028.3860861,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,89,EUR,-10825893.82311,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,89,EUR,-9344472.06404391,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,89,EUR,-8579267.56504752,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,89,EUR,-10895965.7819995,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,89,EUR,-11542461.105471,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,89,EUR,-12475623.4361395,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,89,EUR,-11302170.115576,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,89,EUR,-11684564.194306,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,89,EUR,-12496807.4464214,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,89,EUR,-11135163.4527502,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,89,EUR,-17755649.5472643,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,89,EUR,-14310894.2917432,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,89,EUR,-9077157.67954724,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,89,EUR,-104380911.220769,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,89,EUR,-88594374.3222721,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,89,EUR,-121439049.40635,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,89,EUR,-121354545.364027,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,89,EUR,-124638343.136717,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,89,EUR,-126288756.489781,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,89,EUR,-131624494.952133,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,89,EUR,-106330877.777932,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,89,EUR,-102633109.579839,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,89,EUR,-110971736.926947,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,89,EUR,-108907303.089367,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,89,EUR,-118611396.155751,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,89,EUR,-19698443.5644127,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,89,EUR,-21823702.8726523,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,89,EUR,-22451587.9079497,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,89,EUR,-20998058.8403258,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,89,EUR,-23073047.9589899,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,89,EUR,-31350695.1234148,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,89,EUR,-25647430.4918775,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,89,EUR,-26864943.0689327,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,89,EUR,-27019426.3350668,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,89,EUR,-22796552.7718836,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,89,EUR,-30485819.8022231,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,89,EUR,-30687458.4340721,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,89,EUR,-28988898.4613492,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,89,EUR,-27137581.0590617,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,89,EUR,-30302220.5569543,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,89,EUR,-28148293.4321368,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,89,EUR,-29079428.5942466,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,89,EUR,-28033537.0007683,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,89,EUR,-28238857.5291209,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,89,EUR,-29476204.4009,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,89,EUR,-27440931.3740117,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,89,EUR,-47492370.6488001,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,89,EUR,-44561895.7203597,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,89,EUR,-30470442.1312884,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,92,EUR,-282817873.768302,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,92,EUR,-246851057.701575,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,92,EUR,-344507824.767969,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,92,EUR,-314325524.368701,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,92,EUR,-313805297.414348,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,92,EUR,-257678577.771291,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,92,EUR,-325964254.38642,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,92,EUR,-231513758.2053,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,92,EUR,-213871840.190225,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,92,EUR,-318728268.267326,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,92,EUR,-249944964.959143,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,92,EUR,-277403720.723451,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,92,EUR,-4006394.589546,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,92,EUR,-4136696.46839696,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,92,EUR,-3619525.66588803,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,92,EUR,-1220606.33907601,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,92,EUR,-3506446.98218674,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,92,EUR,-6736770.64145707,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,92,EUR,-4317754.91877927,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,92,EUR,-4226172.5905829,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,92,EUR,-3920741.96427906,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,92,EUR,-3457615.31544571,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,92,EUR,-867153.18069558,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,92,EUR,-2565316.49982654,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,92,EUR,-1789857.16379761,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,92,EUR,-2661272.87715194,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,92,EUR,-2252259.54991015,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,92,EUR,-1520318.53833582,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,92,EUR,-3340870.22326319,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,92,EUR,-1340235.50713772,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,92,EUR,-2443360.66821664,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,92,EUR,-2155549.63984022,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,92,EUR,-3533129.66385391,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,92,EUR,-18392522.3287444,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,92,EUR,-24827625.217094,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,92,EUR,-11150960.1942955,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,92,EUR,-304457875.2351,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,92,EUR,-264087046.2924,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,92,EUR,-364483582.6392,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,92,EUR,-336472401.114,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,92,EUR,-339534544.976999,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,92,EUR,-287571351.3975,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,92,EUR,-358856397.607499,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,92,EUR,-257507389.0125,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,92,EUR,-240930217.503899,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,92,EUR,-347004350.929799,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,92,EUR,-278412717.545101,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,92,EUR,-313846496.3133,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,92,EUR,-10546325.64,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,92,EUR,-10862032.0788,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,92,EUR,-10870982.9883,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,92,EUR,-7483590.80730003,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,92,EUR,-9847959.72299972,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,92,EUR,-15081524.2080001,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,92,EUR,-10799272.5606003,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,92,EUR,-11157532.1801999,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,92,EUR,-11323961.0919001,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,92,EUR,-9506059.22879969,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,92,EUR,-11665925.2297,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,92,EUR,-11489879.8616,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,92,EUR,-11211165.825,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,92,EUR,-9686958.87559999,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,92,EUR,-11654400.3936,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,92,EUR,-11284108.4142,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,92,EUR,-11686772.0602,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,92,EUR,-10566715.4374,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,92,EUR,-11062225.2236,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,92,EUR,-11903712.6524,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,92,EUR,-11589660.6968,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,92,EUR,-32472119.757,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,92,EUR,-27141975.4046,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,92,EUR,-20378191.3152,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,93,EUR,-523068.769857965,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,93,EUR,-456592.358688568,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,93,EUR,-638028.197700631,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,93,EUR,-581370.284844763,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,93,EUR,-580896.696598728,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,93,EUR,-477570.215704659,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,93,EUR,-604161.352480978,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,93,EUR,-428967.911866075,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,93,EUR,-396628.596194564,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,93,EUR,-588510.504846407,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,93,EUR,-463356.319241116,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,93,EUR,-515217.128410513,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,93,EUR,-87623.3620600751,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,93,EUR,-87764.9776628828,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,93,EUR,-81109.4923317581,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,93,EUR,-35382.0366924783,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,93,EUR,-78989.3470904842,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,93,EUR,-138388.741522247,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,93,EUR,-92368.8235678445,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,93,EUR,-91118.9972987081,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,93,EUR,-86225.7656203828,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,93,EUR,-77253.6478797048,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,93,EUR,7167.6115560763,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,93,EUR,11543.7756339264,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,93,EUR,8927.58604361071,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,93,EUR,5734.70530109583,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,93,EUR,5480.868898428,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,93,EUR,2699.01289044036,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,93,EUR,2460.22117434338,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,93,EUR,1348.75640292074,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,93,EUR,9818.44698439037,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,93,EUR,4343.82577162544,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,93,EUR,526.967702700159,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,93,EUR,-364249.503323221,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,93,EUR,-150982.375734518,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,93,EUR,-107901.179799447,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,93,EUR,-560075.509997966,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,93,EUR,-485945.106792568,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,93,EUR,-672656.12479663,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,93,EUR,-619631.377612763,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,93,EUR,-625251.692398728,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,93,EUR,-529003.253596659,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,93,EUR,-660926.220804978,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,93,EUR,-473220.645598075,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,93,EUR,-442759.745598564,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,93,EUR,-636726.053602407,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,93,EUR,-512254.985197116,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,93,EUR,-577728.100798513,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,93,EUR,-189162.144000075,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,93,EUR,-195704.333210883,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,93,EUR,-195647.893199758,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,93,EUR,-132631.262804478,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,93,EUR,-176126.861198484,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,93,EUR,-273082.580798247,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,93,EUR,-193913.311991844,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,93,EUR,-200461.192798708,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,93,EUR,-203675.072412383,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,93,EUR,-169593.480395705,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,93,EUR,-29917.2497030903,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,93,EUR,-24721.2894995737,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,93,EUR,-20439.5540022788,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,93,EUR,-22902.8247006645,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,93,EUR,-28038.6028014433,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,93,EUR,-25323.5633006915,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,93,EUR,-24666.9822992664,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,93,EUR,-30092.7782999762,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,93,EUR,-18182.828600459,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,93,EUR,-32201.9328982053,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,93,EUR,-25369.8172011672,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,93,EUR,-474506.522716484,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,93,EUR,-260728.230408642,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,93,EUR,-152713.30931123,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,98,EUR,-77472.636388756,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,98,EUR,-65246.4299965799,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,98,EUR,-95350.4283750605,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,98,EUR,-93095.1261709873,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,98,EUR,-89714.2153117625,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,98,EUR,-85709.9123858571,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,98,EUR,-95072.9998661235,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,98,EUR,-77637.6230935827,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,98,EUR,-73409.0735721308,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,98,EUR,-84599.6871909081,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,98,EUR,-78588.0723988106,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,98,EUR,-77273.65461907,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,98,EUR,-105169.742967299,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,98,EUR,-129021.32220563,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,98,EUR,-131518.564570994,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,98,EUR,-126070.722232035,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,98,EUR,-136846.804850723,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,98,EUR,-195379.543461173,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,98,EUR,-154888.936162343,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,98,EUR,-163614.602749798,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,98,EUR,-154673.379430268,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,98,EUR,-129068.318071474,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,98,EUR,-44998.6644240271,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,98,EUR,-41031.2722895044,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,98,EUR,-32017.2381550211,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,98,EUR,-31235.8606291014,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,98,EUR,-37209.8399974258,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,98,EUR,-32356.3689324854,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,98,EUR,-31545.7419648569,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,98,EUR,-35964.0112396119,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,98,EUR,-33108.8882499217,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,98,EUR,-41487.7344460225,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,98,EUR,-29590.0187729366,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,98,EUR,-113076.251764175,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,98,EUR,-118278.373592255,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,98,EUR,-43405.8837504606,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,98,EUR,-94362.0610796308,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,98,EUR,-78569.6755226884,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,98,EUR,-110552.63866235,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,98,EUR,-110129.733312749,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,98,EUR,-109990.108548041,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,98,EUR,-109558.479837236,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,98,EUR,-121519.042316846,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,98,EUR,-98041.9761902026,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,98,EUR,-94877.2119296604,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,98,EUR,-107057.749695031,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,98,EUR,-101393.150278399,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,98,EUR,-107175.882896463,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,98,EUR,-153130.580205346,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,98,EUR,-179333.882779348,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,98,EUR,-185081.209452083,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,98,EUR,-170936.661197388,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,98,EUR,-181325.805590245,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,98,EUR,-256891.332729016,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,98,EUR,-200942.987825614,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,98,EUR,-213304.230162786,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,98,EUR,-208836.902618496,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,98,EUR,-171380.417569652,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,98,EUR,-62173.0860866598,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,98,EUR,-57952.5180241596,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,98,EUR,-45759.7279224006,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,98,EUR,-44633.7801923391,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,98,EUR,-52867.9053140939,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,98,EUR,-45410.238978456,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,98,EUR,-44171.810194612,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,98,EUR,-50611.4983629273,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,98,EUR,-46125.1963791413,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,98,EUR,-58522.2692138105,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,98,EUR,-41667.1497952716,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,98,EUR,-164961.196176164,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,98,EUR,-170111.547610449,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,98,EUR,-64633.0246751868,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,103,EUR,-5095.66614256648,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,103,EUR,-4583.55532130043,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,103,EUR,-5920.16927431267,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,103,EUR,-5402.82310122688,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,103,EUR,-5754.19757226038,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,103,EUR,-4614.51719083665,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,103,EUR,-6016.01899488675,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,103,EUR,-4286.11926143013,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,103,EUR,-4117.24212299846,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,103,EUR,-5785.34381638288,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,103,EUR,-4264.24740100455,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,103,EUR,-5109.61036807906,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,103,EUR,496.979995538921,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,103,EUR,470.136980469551,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,103,EUR,697.17455995398,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,103,EUR,1095.89865288599,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,103,EUR,749.722787363541,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,103,EUR,114.120932194884,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,103,EUR,756.815256945809,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,103,EUR,962.683655299941,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,103,EUR,225.554859344582,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,103,EUR,30.5479334385733,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,103,EUR,315.91788665351,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,103,EUR,803.511540377086,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,103,EUR,662.665990069504,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,103,EUR,612.373157538502,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,103,EUR,682.571719330319,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,103,EUR,527.895757619803,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,103,EUR,491.816324449859,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,103,EUR,514.962561754438,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,103,EUR,594.239185050185,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,103,EUR,674.397804165162,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,103,EUR,453.547930461446,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,103,EUR,-2395.46480341498,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,103,EUR,196.386529088051,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,103,EUR,-426.963607940247,monthly,Structured Deal,Financial Retail deal(s)</record>
+        <record>2010-01-01 00:00:00.000,0,HI,103,EUR,-6531.88029291684,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-02-01 00:00:00.000,0,HI,103,EUR,-5667.33451092387,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-03-01 00:00:00.000,0,HI,103,EUR,-7844.85164418442,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-04-01 00:00:00.000,0,HI,103,EUR,-7226.4505623864,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-05-01 00:00:00.000,0,HI,103,EUR,-7291.99748030486,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,103,EUR,-6169.50012165097,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-07-01 00:00:00.000,0,HI,103,EUR,-7708.05164595669,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-08-01 00:00:00.000,0,HI,103,EUR,-5518.93548995925,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-09-01 00:00:00.000,0,HI,103,EUR,-5163.68526233455,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,103,EUR,-7425.81721078386,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-11-01 00:00:00.000,0,HI,103,EUR,-5974.1734516767,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2010-12-01 00:00:00.000,0,HI,103,EUR,-6737.75362232815,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,103,EUR,-2206.10338873681,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,103,EUR,-2282.4016662816,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,103,EUR,-2281.74343481609,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,103,EUR,-1546.81202130762,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,103,EUR,-2054.07941105223,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-06-01 00:00:00.000,0,HI,103,EUR,-3184.82543160366,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-07-01 00:00:00.000,0,HI,103,EUR,-2261.5138826317,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,103,EUR,-2337.87853845801,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,103,EUR,-2375.36040732787,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,103,EUR,-1977.88386146709,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,103,EUR,-348.97690007499,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,103,EUR,-288.541868537529,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,103,EUR,-238.676551199984,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,103,EUR,-267.539559165812,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,103,EUR,-327.662021118767,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,103,EUR,-296.032274302768,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-05-01 00:00:00.000,0,TR,103,EUR,-288.445788406763,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,103,EUR,-351.975544943204,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-07-01 00:00:00.000,0,TR,103,EUR,-212.713002569043,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-08-01 00:00:00.000,0,TR,103,EUR,-376.767748170892,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-09-01 00:00:00.000,0,TR,103,EUR,-296.859193397726,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,103,EUR,-5552.66374797237,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-11-01 00:00:00.000,0,TR,103,EUR,-3051.13451599114,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2012-12-01 00:00:00.000,0,TR,103,EUR,-1787.11794403259,monthly,Structured Deal,Physical Retail deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,-2606018.56,monthly,Structured Deal,Physical El-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,-10173845.1611732,monthly,Structured Deal,Physical El-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,-16236528.8781322,monthly,Structured Deal,Physical El-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,-10438974.24,monthly,Structured Deal,Physical El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,-4979629.15552036,monthly,Structured Deal,Physical El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,-6770400,monthly,Structured Deal,Physical El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,-10208593.92,monthly,Structured Deal,Physical El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,-4589549.70863669,monthly,Structured Deal,Physical El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,-7032036.25935365,monthly,Structured Deal,Physical El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice</record>
+        <record>2011-01-01 00:00:00.000,0,HI,153,EUR,-7450512,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-02-01 00:00:00.000,0,HI,153,EUR,-6834960,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-03-01 00:00:00.000,0,HI,153,EUR,-8093828,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-04-01 00:00:00.000,0,HI,153,EUR,-7424208,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-05-01 00:00:00.000,0,HI,153,EUR,-8273616,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-06-01 00:00:00.000,0,HI,153,EUR,-7497504,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-07-01 00:00:00.000,0,HI,153,EUR,-6904080,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-08-01 00:00:00.000,0,HI,153,EUR,-7209696,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-09-01 00:00:00.000,0,HI,153,EUR,-7568448,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,-7683200,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,-4054337.85411114,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,-4179020.23275087,monthly,Structured Deal,Physical El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,-2548423.48,monthly,Structured Deal,Physical El-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,-9812360.03776163,monthly,Structured Deal,Physical El-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,-15516111.2384943,monthly,Structured Deal,Physical El-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,-2658584.32,monthly,Structured Deal,Physical El-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,-10837285.4399998,monthly,Structured Deal,Physical El-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,-17534324.1600001,monthly,Structured Deal,Physical El-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2</record>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,-1092632.8816,monthly,Structured Deal,Physical Gas-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,-4209120,monthly,Structured Deal,Physical Gas-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,-6606720,monthly,Structured Deal,Physical Gas-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50</record>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,-4385431.5264,monthly,Structured Deal,Physical Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,-1933560,monthly,Structured Deal,Physical Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,-2669472.0000001,monthly,Structured Deal,Physical Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice</record>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,-4385431.5264,monthly,Structured Deal,Physical Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,-1933560,monthly,Structured Deal,Physical Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,-2669472.0000001,monthly,Structured Deal,Physical Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice</record>
+        <record>2011-01-01 00:00:00.000,0,HI,161,EUR,-3354032.64,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-02-01 00:00:00.000,0,HI,161,EUR,-2919484.8,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-03-01 00:00:00.000,0,HI,161,EUR,-3410360,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-04-01 00:00:00.000,0,HI,161,EUR,-3247102.56,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-05-01 00:00:00.000,0,HI,161,EUR,-3376632,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-06-01 00:00:00.000,0,HI,161,EUR,-3267481.44,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-07-01 00:00:00.000,0,HI,161,EUR,-3210983.52,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-08-01 00:00:00.000,0,HI,161,EUR,-3198694.08,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-09-01 00:00:00.000,0,HI,161,EUR,-3182514.72,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,-3277372,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,-1697400,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,-1711200,monthly,Structured Deal,Physical Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</record>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,-1092632.8816,monthly,Structured Deal,Physical Gas-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,-4209120,monthly,Structured Deal,Physical Gas-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,-6606720,monthly,Structured Deal,Physical Gas-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice</record>
+        <record>2011-10-01 00:00:00.000,0,HI,161,EUR,-1224850.8694,monthly,Structured Deal,Physical Gas-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2</record>
+        <record>2011-11-01 00:00:00.000,0,TR,161,EUR,-4979313.63623199,monthly,Structured Deal,Physical Gas-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2</record>
+        <record>2011-12-01 00:00:00.000,0,TR,161,EUR,-8256614.4000003,monthly,Structured Deal,Physical Gas-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

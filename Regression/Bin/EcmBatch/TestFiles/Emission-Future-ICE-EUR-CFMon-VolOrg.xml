@@ -1,0 +1,58 @@
+<test type="EcmBatch" name="Emission-Future-ICE-EUR-CFMon-VolORg" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>Emission-Future-ICE-EUR-CFMon-VolOrg</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<reportdate>2011-11-01</reportdate>
+    <tollerance>0.00000001</tollerance>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+	<assert>
+		<datawarehouse>
+		<query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+				<record>2011-11-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUA DAILY 011111,Emission-Future-ICE-EUR-0001</record>
+				<record>2010-12-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,EUADEC-10,Emission-Future-ICE-EUR-0002</record>
+				<record>2011-12-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUADEC-11,Emission-Future-ICE-EUR-0003</record>
+				<record>2012-12-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUADEC-12,Emission-Future-ICE-EUR-0004</record>
+				<record>2011-03-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,EUAMAR-11,Emission-Future-ICE-EUR-0005</record>
+				<record>2012-03-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUAMAR-12,Emission-Future-ICE-EUR-0006</record>
+				<record>2011-06-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,EUAJUN-11,Emission-Future-ICE-EUR-0007</record>
+				<record>2012-06-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUAJUN-12,Emission-Future-ICE-EUR-0008</record>
+				<record>2011-09-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,EUASEP-11,Emission-Future-ICE-EUR-0009</record>
+				<record>2012-09-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUASEP-12,Emission-Future-ICE-EUR-0010</record>
+				<record>2011-11-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUA DAILY 011111,Emission-Future-ICE-EUR-0011</record>
+				<record>2010-12-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,EUADEC-10,Emission-Future-ICE-EUR-0012</record>
+				<record>2011-12-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUADEC-11,Emission-Future-ICE-EUR-0013</record>
+				<record>2012-12-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUADEC-12,Emission-Future-ICE-EUR-0014</record>
+				<record>2011-03-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,EUAMAR-11,Emission-Future-ICE-EUR-0015</record>
+				<record>2012-03-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUAMAR-12,Emission-Future-ICE-EUR-0016</record>
+				<record>2011-06-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,EUAJUN-11,Emission-Future-ICE-EUR-0017</record>
+				<record>2012-06-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUAJUN-12,Emission-Future-ICE-EUR-0018</record>
+				<record>2011-09-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,EUASEP-11,Emission-Future-ICE-EUR-0019</record>
+				<record>2012-09-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,EUASEP-12,Emission-Future-ICE-EUR-0020</record>
+				<record>2011-11-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CER DAILY 011111,Emission-Future-ICE-EUR-0021</record>
+				<record>2010-12-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,CERDEC-10,Emission-Future-ICE-EUR-0022</record>
+				<record>2011-12-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CERDEC-11,Emission-Future-ICE-EUR-0023</record>
+				<record>2012-12-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CERDEC-12,Emission-Future-ICE-EUR-0024</record>
+				<record>2011-03-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,CERMAR-11,Emission-Future-ICE-EUR-0025</record>
+				<record>2012-03-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CERMAR-12,Emission-Future-ICE-EUR-0026</record>
+				<record>2011-06-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,CERJUN-11,Emission-Future-ICE-EUR-0027</record>
+				<record>2012-06-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CERJUN-12,Emission-Future-ICE-EUR-0028</record>
+				<record>2011-09-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,CERSEP-11,Emission-Future-ICE-EUR-0029</record>
+				<record>2012-09-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CERSEP-12,Emission-Future-ICE-EUR-0030</record>
+				<record>2011-11-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CER DAILY 011111,Emission-Future-ICE-EUR-0031</record>
+				<record>2010-12-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,CERDEC-10,Emission-Future-ICE-EUR-0032</record>
+				<record>2011-12-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CERDEC-11,Emission-Future-ICE-EUR-0033</record>
+				<record>2012-12-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CERDEC-12,Emission-Future-ICE-EUR-0034</record>
+				<record>2011-03-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,CERMAR-11,Emission-Future-ICE-EUR-0035</record>
+				<record>2012-03-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CERMAR-12,Emission-Future-ICE-EUR-0036</record>
+				<record>2011-06-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,CERJUN-11,Emission-Future-ICE-EUR-0037</record>
+				<record>2012-06-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CERJUN-12,Emission-Future-ICE-EUR-0038</record>
+				<record>2011-09-01 00:00:00.000,0,HI,36,EUR,500000,monthly,Future,CERSEP-11,Emission-Future-ICE-EUR-0039</record>
+				<record>2012-09-01 00:00:00.000,0,TR,36,EUR,500000,monthly,Future,CERSEP-12,Emission-Future-ICE-EUR-0040</record>
+			</returns>
+		</datawarehouse>		
+	</assert>
+</test>

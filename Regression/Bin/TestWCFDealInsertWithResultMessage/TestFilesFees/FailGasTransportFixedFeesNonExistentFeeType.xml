@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+	<TestResult>Failure</TestResult>
+	<Message>The message does not conform to the deal insert xml schema. 
+(1)	The 'FeeType' attribute is invalid - The value 'Strange' is invalid according to its datatype 'FeeType' - The Enumeration constraint failed.
+</Message>
+	<TestData>
+		<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+			<MetaData>
+				<Timezone>CET-6</Timezone>
+			</MetaData>
+			<Transaction>
+				<TransactionType>Automatic</TransactionType>
+				<DealType>Gas-Transport</DealType>
+				<Portfolios>
+					<Portfolio>API Test Customer</Portfolio>
+					<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+					<BuySell>Buy</BuySell>
+				</Portfolios>
+				<GasTransport>
+					<InstrumentData>
+						<FromDate>2008-10-09</FromDate>
+						<ToDate>2008-10-10</ToDate>
+						<Physical>
+							<Interconnector>
+								<OriginBalanceArea AreaName="NCG"/>
+								<DestinationBalanceArea AreaName="PEG_N"/>
+							</Interconnector>
+						</Physical>
+					</InstrumentData>
+					<SettlementData>
+						<TransportQuantityInformation>
+							<TimeSeriesDetail From="2008-10-09T00:00:00" Price="20" Volume="40" Until="2008-10-10T00:00:00"/>
+							<TimeSeriesDetail From="2008-10-10T00:00:00" Price="20" Volume="35" Until="2008-10-11T00:00:00"/>
+						</TransportQuantityInformation>
+						<QuantityUnit>MW</QuantityUnit>
+						<Currency>EUR</Currency>
+						<CurrencySource>Viz</CurrencySource>
+					</SettlementData>
+					<FeesData>
+						<Fees>
+							<Fee FeeType="Strange" FeeValueType="Variable" FeeValue="0.1" FeeUnit="EUR/MWh"/>
+							<Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="1" FeeUnit="EUR"/>
+							<Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+						</Fees>
+					</FeesData>
+				</GasTransport>
+				<DealDetails>
+					<Status>Active</Status>
+					<Trader>DealImport</Trader>
+					<TradeDate>2008-10-09T12:12:13Z</TradeDate>
+				</DealDetails>
+				<ReferenceData>
+					<Comment>GasTransport; should pass</Comment>
+					<DealGroup>API Test</DealGroup>
+					<ExternalId>PassGasTransportFixedFees</ExternalId>
+					<ExternalSource>XMLFileImport</ExternalSource>
+					<TicketNumber>TicketNumber</TicketNumber>
+				</ReferenceData>
+			</Transaction>
+		</DealInsert>
+	</TestData>
+</TestCase>

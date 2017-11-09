@@ -1,0 +1,23 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-EU-ICE-CurrExposure-NOK-MtM</workspace>
+    <monitor>Gas-EU-ICE-CurrExposure-NOK-MtM</monitor>
+    <reportdate>2011-10-27T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURC Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European call,Physical,Base,ICE TTF,ICE,CET 06-06,EUR,Gas-European-EUR-0007;Gas-European-EUR-0008;Gas-European-EUR-0009,EUR,2011-10-28 00:00:00.000,14.4</record>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURP Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Physical,Base,ICE TTF,ICE,CET 06-06,EUR,Gas-European-EUR-0010;Gas-European-EUR-0011;Gas-European-EUR-0012,EUR,2011-10-28 00:00:00.000,142200</record>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURP Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Physical,Base,ICE NBP,ICE,CET 06-06,GBP,Gas-European-EUR-0019,GBP,2011-10-28 00:00:00.000,75000</record>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURC Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European call,Physical,Base,ICE TTF,ICE,CET 06-06,EUR,Gas-European-EUR-0035;Gas-European-EUR-0036;Gas-European-EUR-0037,EUR,2011-10-28 00:00:00.000,14.4</record>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURP Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Physical,Base,ICE TTF,ICE,CET 06-06,EUR,Gas-European-EUR-0038;Gas-European-EUR-0039;Gas-European-EUR-0040,EUR,2011-10-28 00:00:00.000,142200</record>
+        <record>Gas-EU-ICE-TTF-EUR,Gas,EURP Jun12 25-MAY-12 45.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Physical,Base,ICE NBP,ICE,CET 06-06,GBP,Gas-European-EUR-0047,GBP,2011-10-28 00:00:00.000,75000</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

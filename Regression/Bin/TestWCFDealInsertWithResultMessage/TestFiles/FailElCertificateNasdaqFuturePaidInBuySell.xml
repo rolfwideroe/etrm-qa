@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>The message does not conform to the deal insert xml schema. 
+(1)	The 'BuySell' element is invalid - The value 'Paid' is invalid according to its datatype 'BuySellType' - The Enumeration constraint failed.
+</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+  <MetaData> 
+    <Timezone>CET</Timezone> 
+  </MetaData> 
+  <Transaction> 
+    <TransactionType>Automatic</TransactionType> 
+    <DealType>Elcertificate-Future</DealType> 
+    <Portfolios> 
+      <Portfolio>API Test Customer</Portfolio> 
+      <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio> 
+      <BuySell>Paid</BuySell> 
+    </Portfolios> 
+       <ElcertificateFuture> 
+        <InstrumentData> 
+          <Timezone>CET</Timezone> 
+          <ExecutionVenue>Nord Pool</ExecutionVenue> 
+          <PriceBasis>ElCertificate NASDAQ</PriceBasis> 
+          <SettlementDate>2011-02-16</SettlementDate> 
+          <Physical/> 
+        </InstrumentData> 
+        <SettlementData> 
+          <Quantity>12</Quantity> 
+          <QuantityUnit>ECS</QuantityUnit> 
+          <Price>5</Price> 
+          <Currency>EUR</Currency> 
+          <PriceVolumeUnit>PerECS</PriceVolumeUnit> 
+          <CurrencySource>Viz</CurrencySource> 
+          <Clearing>Electronic</Clearing> 
+          <ClearingCurrency>EUR</ClearingCurrency> 
+          <ClearingFee>0</ClearingFee> 
+          <BrokerTradingFee>0</BrokerTradingFee> 
+          <BrokerCurrency>EUR</BrokerCurrency> 
+          <BrokerFee>0</BrokerFee> 
+          <BrokerFeeCurrency>EUR</BrokerFeeCurrency> 
+          <TradingFee>0</TradingFee> 
+          <TradingFeeCurrency>EUR</TradingFeeCurrency> 
+          <CommissionFee>0</CommissionFee> 
+          <CommissionFeeCurrency>EUR</CommissionFeeCurrency> 
+        </SettlementData> 
+      </ElcertificateFuture> 
+    <DealDetails> 
+      <Status>Active</Status> 
+      <Trader>Vizard</Trader> 
+      <TradeDate>2011-02-14T00:00:00</TradeDate> 
+    </DealDetails> 
+    <ReferenceData> 
+      <GroupFields> 
+        <GroupField1></GroupField1> 
+        <GroupField2></GroupField2> 
+        <GroupField3></GroupField3> 
+      </GroupFields> 
+      <ExternalId>FailElCertificateNasdaqFuturePaid</ExternalId> 
+      <ExternalSource>XMLFileImport</ExternalSource> 
+      <TicketNumber>TicketNumber</TicketNumber> 
+    </ReferenceData> 
+  </Transaction> 
+</DealInsert>
+</TestData>
+</TestCase>

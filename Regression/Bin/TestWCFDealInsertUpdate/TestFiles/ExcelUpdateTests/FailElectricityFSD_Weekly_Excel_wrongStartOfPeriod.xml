@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DealInsertUpdateTestCase>
+	<InsertXml>
+	 <![CDATA[ 
+	<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+		<MetaData>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Electricity-StructuredDeal</DealType>
+			<Portfolios>
+				<Portfolio>API Test Customer</Portfolio>
+				<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<ElectricityStructuredDeal>
+				<InstrumentData>
+					<ExecutionVenue>None</ExecutionVenue>
+					<PriceBasis>NordPool System Price</PriceBasis>
+					<PriceType>Fixed</PriceType>
+					<FromDate>2014-04-07</FromDate>
+					<ToDate>2014-06-29</ToDate>
+					<Physical>
+						<DeliveryArea AreaName="ENBW" />
+					</Physical>
+					<TransactionName>Transaction Name FSD weekly</TransactionName>
+				</InstrumentData>
+				<SettlementData>				
+					<FlexibleStructuredDealInformation>
+						<TimeSeries>		
+							<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+							<Resolution>Weekly</Resolution>
+							<TimeZone>CET</TimeZone>				
+								<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-14T00:00:00" Value="1" />
+								<TimeSeriesDetail FromDateTime="2014-04-14T00:00:00" ToDateTime="2014-04-21T00:00:00" Value="2" />
+								<TimeSeriesDetail FromDateTime="2014-04-21T00:00:00" ToDateTime="2014-04-28T00:00:00" Value="3" />
+								<TimeSeriesDetail FromDateTime="2014-04-28T00:00:00" ToDateTime="2014-05-05T00:00:00" Value="4" />
+								<TimeSeriesDetail FromDateTime="2014-05-05T00:00:00" ToDateTime="2014-05-12T00:00:00" Value="5" />
+								<TimeSeriesDetail FromDateTime="2014-05-12T00:00:00" ToDateTime="2014-05-19T00:00:00" Value="6" />
+								<TimeSeriesDetail FromDateTime="2014-05-19T00:00:00" ToDateTime="2014-05-26T00:00:00" Value="7" />
+								<TimeSeriesDetail FromDateTime="2014-05-26T00:00:00" ToDateTime="2014-06-02T00:00:00" Value="8" />
+								<TimeSeriesDetail FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="10" />
+								<TimeSeriesDetail FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="11" />
+								<TimeSeriesDetail FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="12" />
+						</TimeSeries>					
+						<TimeSeries>
+							<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+							<Resolution>Weekly</Resolution>
+							<TimeZone>CET</TimeZone>				
+								<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-14T00:00:00" Value="1" />
+								<TimeSeriesDetail FromDateTime="2014-04-14T00:00:00" ToDateTime="2014-04-21T00:00:00" Value="2" />
+								<TimeSeriesDetail FromDateTime="2014-04-21T00:00:00" ToDateTime="2014-04-28T00:00:00" Value="3" />
+								<TimeSeriesDetail FromDateTime="2014-04-28T00:00:00" ToDateTime="2014-05-05T00:00:00" Value="4" />
+								<TimeSeriesDetail FromDateTime="2014-05-05T00:00:00" ToDateTime="2014-05-12T00:00:00" Value="5" />
+								<TimeSeriesDetail FromDateTime="2014-05-12T00:00:00" ToDateTime="2014-05-19T00:00:00" Value="6" />
+								<TimeSeriesDetail FromDateTime="2014-05-19T00:00:00" ToDateTime="2014-05-26T00:00:00" Value="7" />
+								<TimeSeriesDetail FromDateTime="2014-05-26T00:00:00" ToDateTime="2014-06-02T00:00:00" Value="8" />
+								<TimeSeriesDetail FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="10" />
+								<TimeSeriesDetail FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="11" />
+								<TimeSeriesDetail FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="12" />
+						</TimeSeries>
+						<TimeSeries>
+							<TimeSeriesType>RealizedVolume</TimeSeriesType>
+							<Resolution>Weekly</Resolution>
+							<TimeZone>CET</TimeZone>					
+								<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-14T00:00:00" Value="1" />
+								<TimeSeriesDetail FromDateTime="2014-04-14T00:00:00" ToDateTime="2014-04-21T00:00:00" Value="2" />
+								<TimeSeriesDetail FromDateTime="2014-04-21T00:00:00" ToDateTime="2014-04-28T00:00:00" Value="3" />
+								<TimeSeriesDetail FromDateTime="2014-04-28T00:00:00" ToDateTime="2014-05-05T00:00:00" Value="4" />
+								<TimeSeriesDetail FromDateTime="2014-05-05T00:00:00" ToDateTime="2014-05-12T00:00:00" Value="5" />
+								<TimeSeriesDetail FromDateTime="2014-05-12T00:00:00" ToDateTime="2014-05-19T00:00:00" Value="6" />
+								<TimeSeriesDetail FromDateTime="2014-05-19T00:00:00" ToDateTime="2014-05-26T00:00:00" Value="7" />
+								<TimeSeriesDetail FromDateTime="2014-05-26T00:00:00" ToDateTime="2014-06-02T00:00:00" Value="8" />
+								<TimeSeriesDetail FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="10" />
+								<TimeSeriesDetail FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="11" />
+								<TimeSeriesDetail FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="12" />
+						</TimeSeries>
+						<TimeSeries>
+							<TimeSeriesType>RealizedPrice</TimeSeriesType>
+							<Resolution>Weekly</Resolution>
+							<TimeZone>CET</TimeZone>					
+								<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-14T00:00:00" Value="1" />
+								<TimeSeriesDetail FromDateTime="2014-04-14T00:00:00" ToDateTime="2014-04-21T00:00:00" Value="2" />
+								<TimeSeriesDetail FromDateTime="2014-04-21T00:00:00" ToDateTime="2014-04-28T00:00:00" Value="3" />
+								<TimeSeriesDetail FromDateTime="2014-04-28T00:00:00" ToDateTime="2014-05-05T00:00:00" Value="4" />
+								<TimeSeriesDetail FromDateTime="2014-05-05T00:00:00" ToDateTime="2014-05-12T00:00:00" Value="5" />
+								<TimeSeriesDetail FromDateTime="2014-05-12T00:00:00" ToDateTime="2014-05-19T00:00:00" Value="6" />
+								<TimeSeriesDetail FromDateTime="2014-05-19T00:00:00" ToDateTime="2014-05-26T00:00:00" Value="7" />
+								<TimeSeriesDetail FromDateTime="2014-05-26T00:00:00" ToDateTime="2014-06-02T00:00:00" Value="8" />
+								<TimeSeriesDetail FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="10" />
+								<TimeSeriesDetail FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="11" />
+								<TimeSeriesDetail FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="12" />
+						</TimeSeries>
+					</FlexibleStructuredDealInformation>
+					<QuantityUnit>MW</QuantityUnit>
+					<Currency>EUR</Currency>
+					<CurrencySource>Viz</CurrencySource>
+					<Clearing>Electronic</Clearing>
+					<ClearingCurrency>EUR</ClearingCurrency>
+					<ClearingFee>0</ClearingFee>
+					<BrokerTradingFee>0</BrokerTradingFee>
+					<BrokerCurrency>EUR</BrokerCurrency>
+					</SettlementData>
+			</ElectricityStructuredDeal>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2008-09-10T21:22:23</TradeDate>
+			</DealDetails>
+			<ReferenceData>			
+				<Comment>ElectricityStructuredDealWeekly; should pass</Comment>
+				<DealGroup>API Test</DealGroup>
+				<ExternalId>Fail Electricity FSD Insert-Update Excel</ExternalId>
+				<ExternalSource>XMLFileImport</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+	]]>
+	</InsertXml>
+	<UpdateExcel>
+		<FileName>FailElectricityFSD_Weekly_Excel_wrongStartOfPeriod.xlsx</FileName>
+	</UpdateExcel>
+			<ExpectedResult ExpectedType="ErrorMessage">
+		    <ErrorMessage>Failed to Import partial updates from file: Failed to import deal: Inserting time series values with data not aligned to time sequence is not supported. Data at time interval UTC 04/08/2014 22:00:00 is not aligned with resolution or date range. Time series type name is Forecasted Volume</ErrorMessage>
+	</ExpectedResult>
+</DealInsertUpdateTestCase>

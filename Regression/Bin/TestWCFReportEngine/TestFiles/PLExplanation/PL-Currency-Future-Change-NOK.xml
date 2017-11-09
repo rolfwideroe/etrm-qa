@@ -1,0 +1,57 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Currency-Future" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="NOK" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Change" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Currency-Future-EUR-GBP-OnDelivery-0001;Currency-Future-EUR-GBP-OnDelivery-0002;Currency-Future-EUR-GBP-OnDelivery-0003,GBPEUR 14-Nov-11,,Future,Currency-Future,674215.188627884,0,0,-160310.893047638,0,0,0,-13417.4081581756,500486.88742207</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-GBP-PostDelivery-0001;Currency-Future-EUR-GBP-PostDelivery-0002,GBPEUR 17-Oct-11,,Future,Currency-Future,674215.188627884,0,0,0,0,0,0,0,674215.188627884</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-GBP-PreDelivery-0001;Currency-Future-EUR-GBP-PreDelivery-0002;Currency-Future-EUR-GBP-PreDelivery-0003,GBPEUR 19-Mar-12,,Future,Currency-Future,-240695.401045549,-800.1148287002,0,0,0,0,0,-16513.6866492536,-258009.202523503</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-USD-OnDelivery-0001;Currency-Future-EUR-USD-OnDelivery-0002;Currency-Future-EUR-USD-OnDelivery-0003,USDEUR 14-Nov-11,,Future,Currency-Future,-180134.93664585,-4410.01652093418,0,0,0,0,0,-84562.1158620901,-269107.069028874</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-USD-PostDelivery-0001;Currency-Future-EUR-USD-PostDelivery-0002;Currency-Future-EUR-USD-PostDelivery-0003,USDEUR 17-Oct-11,,Future,Currency-Future,-138536.335744836,0,0,0,0,0,0,0,-138536.335744836</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-USD-PreDelivery-0001;Currency-Future-EUR-USD-PreDelivery-0002,USDEUR 19-Mar-12,,Future,Currency-Future,95144.875824452,0,0,0,0,0,0,0,95144.875824452</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-USD-NOK-OnDelivery-0001;Currency-Future-USD-NOK-OnDelivery-0002,NOKUSD 14-Nov-11,,Future,Currency-Future,1000000,0,0,0,0,0,0,0,1000000</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-USD-NOK-PostDelivery-0001;Currency-Future-USD-NOK-PostDelivery-0002;Currency-Future-USD-NOK-PostDelivery-0003,NOKUSD 17-Oct-11,,Future,Currency-Future,-1399798.25246714,0,0,0,0,0,0,0,-1399798.25246714</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-USD-NOK-PreDelivery-0001;Currency-Future-USD-NOK-PreDelivery-0002;Currency-Future-USD-NOK-PreDelivery-0003,NOKUSD 19-Mar-12,,Future,Currency-Future,-1463433.61460744,0,0,123200.000000001,0,0,0,79192.9072251869,-1261040.70738226</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Currency-Future-EUR-GBP-OnDelivery-0001;Currency-Future-EUR-GBP-OnDelivery-0002;Currency-Future-EUR-GBP-OnDelivery-0003,GBPEUR 14-Nov-11,,Future,Currency-Future,0,0,0,274.562475658953,0,0,0,-13417.4081581756,-13142.8456825167</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-GBP-PostDelivery-0001;Currency-Future-EUR-GBP-PostDelivery-0002,GBPEUR 17-Oct-11,,Future,Currency-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-GBP-PreDelivery-0001;Currency-Future-EUR-GBP-PreDelivery-0002;Currency-Future-EUR-GBP-PreDelivery-0003,GBPEUR 19-Mar-12,,Future,Currency-Future,-41832.1010912117,18110.1084892228,0,0,0,0,0,-16513.6866492536,-40235.6792512424</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-USD-OnDelivery-0001;Currency-Future-EUR-USD-OnDelivery-0002;Currency-Future-EUR-USD-OnDelivery-0003,USDEUR 14-Nov-11,,Future,Currency-Future,-11699.4969422631,85525.8362419736,0,0,0,0,0,-84562.1158620901,-10735.7765623797</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-USD-PostDelivery-0001;Currency-Future-EUR-USD-PostDelivery-0002;Currency-Future-EUR-USD-PostDelivery-0003,USDEUR 17-Oct-11,,Future,Currency-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-USD-PreDelivery-0001;Currency-Future-EUR-USD-PreDelivery-0002,USDEUR 19-Mar-12,,Future,Currency-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-USD-NOK-OnDelivery-0001;Currency-Future-USD-NOK-OnDelivery-0002,NOKUSD 14-Nov-11,,Future,Currency-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-USD-NOK-PostDelivery-0001;Currency-Future-USD-NOK-PostDelivery-0002;Currency-Future-USD-NOK-PostDelivery-0003,NOKUSD 17-Oct-11,,Future,Currency-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-USD-NOK-PreDelivery-0001;Currency-Future-USD-NOK-PreDelivery-0002;Currency-Future-USD-NOK-PreDelivery-0003,NOKUSD 19-Mar-12,,Future,Currency-Future,51766.3853925569,-82000,0,0,0,0,0,79192.9072251869,48959.2926177438</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Currency-Future-EUR-GBP-OnDelivery-0001;Currency-Future-EUR-GBP-OnDelivery-0002;Currency-Future-EUR-GBP-OnDelivery-0003,GBPEUR 14-Nov-11,,Future,Currency-Future,674215.188627884,0,0,-160585.455523297,0,0,0,0,513629.733104587</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-GBP-PostDelivery-0001;Currency-Future-EUR-GBP-PostDelivery-0002,GBPEUR 17-Oct-11,,Future,Currency-Future,674215.188627884,0,0,0,0,0,0,0,674215.188627884</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-GBP-PreDelivery-0001;Currency-Future-EUR-GBP-PreDelivery-0002;Currency-Future-EUR-GBP-PreDelivery-0003,GBPEUR 19-Mar-12,,Future,Currency-Future,-198863.299954338,-18910.223317923,0,0,0,0,0,0,-217773.523272261</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-USD-OnDelivery-0001;Currency-Future-EUR-USD-OnDelivery-0002;Currency-Future-EUR-USD-OnDelivery-0003,USDEUR 14-Nov-11,,Future,Currency-Future,-168435.439703587,-89935.8527629077,0,0,0,0,0,0,-258371.292466494</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-USD-PostDelivery-0001;Currency-Future-EUR-USD-PostDelivery-0002;Currency-Future-EUR-USD-PostDelivery-0003,USDEUR 17-Oct-11,,Future,Currency-Future,-138536.335744836,0,0,0,0,0,0,0,-138536.335744836</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-EUR-USD-PreDelivery-0001;Currency-Future-EUR-USD-PreDelivery-0002,USDEUR 19-Mar-12,,Future,Currency-Future,95144.875824452,0,0,0,0,0,0,0,95144.875824452</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-USD-NOK-OnDelivery-0001;Currency-Future-USD-NOK-OnDelivery-0002,NOKUSD 14-Nov-11,,Future,Currency-Future,1000000,0,0,0,0,0,0,0,1000000</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-USD-NOK-PostDelivery-0001;Currency-Future-USD-NOK-PostDelivery-0002;Currency-Future-USD-NOK-PostDelivery-0003,NOKUSD 17-Oct-11,,Future,Currency-Future,-1399798.25246714,0,0,0,0,0,0,0,-1399798.25246714</ExpectedRecord>
+        <ExpectedRecord>Currency-Future-USD-NOK-PreDelivery-0001;Currency-Future-USD-NOK-PreDelivery-0002;Currency-Future-USD-NOK-PreDelivery-0003,NOKUSD 19-Mar-12,,Future,Currency-Future,-1515200,82000,0,123200.000000001,0,0,0,0,-1310000</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

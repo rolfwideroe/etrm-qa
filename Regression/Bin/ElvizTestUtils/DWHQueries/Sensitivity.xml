@@ -1,0 +1,86 @@
+<DbQuery>
+	<Columns>
+		<Column ColumnName="Portfolio" ColumnDataType="System.String"/>
+		<Column ColumnName="Commodity" ColumnDataType="System.String"/>
+		<Column ColumnName="Instrument" ColumnDataType="System.String"/>
+		<Column ColumnName="FromDate" ColumnDataType="System.DateTime"/>
+		<Column ColumnName="ToDate" ColumnDataType="System.DateTime"/>
+		<Column ColumnName="InstrumentType" ColumnDataType="System.String"/>
+		<Column ColumnName="DeliveryType" ColumnDataType="System.String"/>
+		<Column ColumnName="LoadType" ColumnDataType="System.String"/>
+		<Column ColumnName="PositionPriceBasis" ColumnDataType="System.String"/>
+		<Column ColumnName="ExecutionVenue" ColumnDataType="System.String"/>
+		<Column ColumnName="PositonTimeZone" ColumnDataType="System.String"/>
+		<Column ColumnName="PositionCurrency" ColumnDataType="System.String"/>
+		<Column ColumnName="ExternalIds" ColumnDataType="System.String"/>
+		<Column ColumnName="Monitor" ColumnDataType="System.String"/>
+		<Column ColumnName="Step" ColumnDataType="System.Int32"/>
+		<Column ColumnName="MtM" ColumnDataType="System.Double"/>
+		<Column ColumnName="PL" ColumnDataType="System.Double"/>
+	</Columns>
+	<SqlQuery>
+	<![CDATA[
+		DECLARE @workSpace VARCHAR(255)
+		DECLARE @reportDate DATE
+
+		SET @workSpace='{workspace}'
+		SET @reportDate='{reportdate}'
+
+		declare @mappingTable TABLE (TransIds NVARCHAR(4000),ExtIds VARCHAR(4000))
+		insert into @mappingTable
+		SELECT 
+		c.RSC_TransactionIds,dbo.ufn_TransIdCsvToExtIdCsv(c.RSC_TransactionIds) AS ExtIds
+		  FROM RSC_Contracts c
+
+					WHERE c.RSC_RSR_ID in(
+						SELECT RSR_ID FROM RSR_ReportHeader
+						WHERE RSR_Workspace=@workspace
+						AND RSR_RpDate=@reportDate
+					)
+
+	   declare @extIdTable TABLE (TransIds NVARCHAR(4000),ExtIds VARCHAR(4000))
+	
+	   insert into @extIdTable
+	   SELECT m.TransIds,m.ExtIds FROM @mappingTable m GROUP BY m.TransIds,m.ExtIds	
+
+
+		SELECT 
+		
+			    c.RSC_PortfolioName as Portfolio
+			   ,c.RSC_Commodity as Commodity
+			   ,c.RSC_Instrument as Instrument
+			   ,c.RSC_InstPerFrom as FromDate
+			   ,c.RSC_InstPerTo as ToDate
+			   ,c.RSC_InstType as InstrumentType
+			   ,c.RSC_DelType as DeliveryType
+			  ,c.RSC_LoadType as LoadType
+			  ,c.RSC_Pricebasis as PositionPriceBasis
+			  ,c.RSC_Executionvenue as ExecutionVenue
+			  ,c.RSC_TimeZone as PositonTimeZone
+			  ,c.RSC_Currency as PositionCurrency
+			  
+			  ,ext.ExtIds as ExternalIds
+			  
+			  ,r.RSR_FrmName as Monitor
+
+			  ,v.RSV_Dim1 as Step
+			  ,v.RSV_MarketValue as MtM
+			  ,v.RSV_ProfitLoss as PL
+		
+		
+		FROM RSC_Contracts c
+
+		left join RSV_Values v ON c.RSC_ContractId=v.RSV_RSC_ContractId
+		join RSR_ReportHeader r on r.RSR_ID=c.RSC_RSR_ID
+	    left JOIN @extIdTable ext ON ext.TransIds=c.RSC_TransactionIds
+		WHERE c.RSC_RSR_ID in(
+						SELECT RSR_ID FROM RSR_ReportHeader
+						WHERE RSR_Workspace=@workspace
+						AND RSR_RpDate=@reportDate
+					)
+
+		AND v.RSV_Dim2=0
+		ORDER BY Monitor,ExtIds,Instrument,Step
+	]]>
+	</SqlQuery>
+</DbQuery>

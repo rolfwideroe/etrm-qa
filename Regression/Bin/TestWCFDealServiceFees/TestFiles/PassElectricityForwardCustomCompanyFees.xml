@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+	<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+		<MetaData>
+			<MessageId>MessageId</MessageId>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Electricity-Forward</DealType>
+			<Portfolios>
+				<Portfolio>Test Company A</Portfolio>
+				<CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<ElectricityForward>
+				<InstrumentData>
+					<ExecutionVenue>None</ExecutionVenue>
+					<PriceBasis>SYOSL</PriceBasis>
+					<LoadProfile>Base Week</LoadProfile>
+					<FromDate>2008-01-01</FromDate>
+					<ToDate>2008-12-31</ToDate>
+					<Financial />
+				</InstrumentData>
+				<SettlementData>
+					<Quantity>40</Quantity>
+					<QuantityUnit>MW</QuantityUnit>
+					<Price>-28</Price>
+					<Currency>EUR</Currency>
+					<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+					<CurrencySource>Viz</CurrencySource>
+					<Clearing>Electronic</Clearing>
+
+
+
+
+
+
+
+
+					<Broker>Test Broker B</Broker>
+				</SettlementData>
+				<FeesData>
+					<Fees>
+						<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.587894123456"
+							FeeUnit="EUR/MWh" />
+						<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.01"
+							FeeUnit="USD/MWh" />
+						<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.57"
+							FeeUnit="NOK/MWh" />
+						<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.0087"
+							FeeUnit="EUR/MWh" />
+					</Fees>
+				</FeesData>
+			</ElectricityForward>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2007-12-24T00:00:00</TradeDate>
+				<ConfirmedByBroker>false</ConfirmedByBroker>
+				<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+				<Authorised>false</Authorised>
+				<Paid>false</Paid>
+			</DealDetails>
+			<ReferenceData>
+				<Comment>ElectricityForward; should pass</Comment>
+				<DealGroup>API Test</DealGroup>
+				<ExternalId>PassElectricityForward-CustomCompanyFees</ExternalId>
+				<ExternalSource>XMLFileImport</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+				<CustomCompanyId>CustomCompanyId</CustomCompanyId>
+				<CustomCompanyName>CustomCompanyName</CustomCompanyName>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+	<ExpectedValues>
+		<BrokerFee>0.01</BrokerFee>
+		<BrokerCurrency>USD</BrokerCurrency>
+		<ClearingFee>0.587894123456</ClearingFee>
+		<ClearingCurrency>EUR</ClearingCurrency>
+		<CommissionFee>0.0087</CommissionFee>
+		<CommissionFeeCurrency>EUR</CommissionFeeCurrency>
+		<TradingFee>0.57</TradingFee>
+		<TradingFeeCurrency>NOK</TradingFeeCurrency>
+		<EntryFee>0</EntryFee>
+		<EntryFeeCurrency>EUR</EntryFeeCurrency>
+		<ExitFee>0</ExitFee>
+		<ExitFeeCurrency>EUR</ExitFeeCurrency>
+		<Fees>
+			<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.587894123456"
+				FeeUnit="EUR/MWh" />
+			<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.01"
+				FeeUnit="USD/MWh" />
+			<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.57"
+				FeeUnit="NOK/MWh" />
+			<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.0087"
+				FeeUnit="EUR/MWh" />
+		</Fees>
+	</ExpectedValues>
+</TestCase>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+	<TestResult>Success</TestResult>
+	<TestData>
+		<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+			<MetaData>
+				<Timezone>CET</Timezone>
+			</MetaData>
+			<Transaction>
+				<TransactionType>Automatic</TransactionType>
+				<DealType>Electricity-StructuredDeal</DealType>
+				<Portfolios>
+					<Portfolio>API Test Customer</Portfolio>
+					<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+					<BuySell>Buy</BuySell>
+				</Portfolios>
+				<ElectricityStructuredDeal>
+					<InstrumentData>
+						<ExecutionVenue>None</ExecutionVenue>
+						<PriceBasis>NordPool System Price</PriceBasis>
+						<PriceType>Fixed</PriceType>
+						<FromDate>2014-04-07</FromDate>
+						<ToDate>2014-04-09</ToDate>
+						<Physical>
+							<DeliveryArea AreaName="ENBW" />
+						</Physical>
+						<TransactionName>Transaction Name FSD Daily</TransactionName>
+					</InstrumentData>
+					<SettlementData>				
+						<FlexibleStructuredDealInformation>
+							<ModelType>Retail</ModelType>
+							<TimeSeries>
+								<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+								<Resolution>Daily</Resolution>
+								<TimeZone>CET</TimeZone>				
+								<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							</TimeSeries>					
+							<TimeSeries>
+								<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+								<Resolution>Daily</Resolution>
+								<TimeZone>CET</TimeZone>					
+								<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							</TimeSeries>
+							<TimeSeries>
+								<TimeSeriesType>RealizedVolume</TimeSeriesType>
+								<Resolution>Daily</Resolution>
+								<TimeZone>CET</TimeZone>				
+								<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							</TimeSeries>
+							<TimeSeries>
+								<TimeSeriesType>RealizedPrice</TimeSeriesType>
+								<Resolution>Daily</Resolution>
+								<TimeZone>CET</TimeZone>				
+								<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							</TimeSeries>
+						</FlexibleStructuredDealInformation>
+						<QuantityUnit>MW</QuantityUnit>
+						<Currency>EUR</Currency>
+						<CurrencySource>Viz</CurrencySource>
+						<Clearing>Electronic</Clearing>
+						<Broker>API Test Broker</Broker>
+					</SettlementData>
+					<FeesData>
+						<Fees>
+							<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.5" FeeUnit="EUR"/>
+							<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.2" FeeUnit="EUR"/>
+							<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="EUR"/>
+							<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.01" FeeUnit="EUR"/>
+						</Fees>
+					</FeesData>
+				</ElectricityStructuredDeal>
+				<DealDetails>
+					<Status>Active</Status>
+					<Trader>DealImport</Trader>
+					<TradeDate>2008-09-10T21:22:23</TradeDate>
+				</DealDetails>
+				<ReferenceData>			
+					<Comment>ElectricityStructuredDealDaily; should pass</Comment>
+					<ExternalId>PassElectricityFlexibleStructuredDealDailyFixedFees</ExternalId>
+					<ExternalSource>XMLFileImport</ExternalSource>
+					<TicketNumber>TicketNumber</TicketNumber>
+				</ReferenceData>
+			</Transaction>
+		</DealInsert>
+	</TestData>
+	<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+	<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<TransactionId>147</TransactionId>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<BuySell>Buy</BuySell>
+		<ContractModelType>Retail</ContractModelType>
+		<DeliveryType>Physical</DeliveryType>
+		<Portfolios>
+			<PortfolioName>API Test Customer</PortfolioName>
+			<PortfolioExternalId>API Test Customer</PortfolioExternalId>
+			<CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+			<CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+		</Portfolios>
+		<InstrumentData>
+			<ExecutionVenue>None</ExecutionVenue>
+			<InstrumentName>Transaction Name FSD Daily</InstrumentName>
+			<PriceBasis>NordPool System Price</PriceBasis>
+			<FromDate>2014-04-07T00:00:00</FromDate>
+			<ToDate>2014-04-09T00:00:00</ToDate>
+			<LoadProfile>Base</LoadProfile>
+			<TimeZone>Central Europe Standard Time</TimeZone>
+			<PriceType>Fixed</PriceType>
+			<BalanceArea>ENBW</BalanceArea>
+		</InstrumentData>
+		<SettlementData>
+			<Quantity>0.333333333333333</Quantity>
+			<QuantityUnit>MW</QuantityUnit>
+			<Price>1</Price>
+			<PriceIsoCurrency>EUR</PriceIsoCurrency>
+			<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+			<CurrencySource>Viz</CurrencySource>
+			<TimeSeriesSet>
+				<TimeSeries>
+					<TimeSeries>
+						<Resolution>Day</Resolution>
+						<TimeSeriesTypeName>Forecasted Price</TimeSeriesTypeName>
+						<TimezoneName>Central Europe Standard Time</TimezoneName>
+						<TimeSeriesValues>
+							<TimeSeriesValue FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							<TimeSeriesValue FromDateTime="2014-04-08T00:00:00" ToDateTime="2014-04-09T00:00:00" />
+							<TimeSeriesValue FromDateTime="2014-04-09T00:00:00" ToDateTime="2014-04-10T00:00:00" />
+						</TimeSeriesValues>
+					</TimeSeries>
+					<TimeSeries>
+						<Resolution>Day</Resolution>
+						<TimeSeriesTypeName>Forecasted Volume</TimeSeriesTypeName>
+						<TimezoneName>Central Europe Standard Time</TimezoneName>
+						<TimeSeriesValues>
+							<TimeSeriesValue FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							<TimeSeriesValue FromDateTime="2014-04-08T00:00:00" ToDateTime="2014-04-09T00:00:00" />
+							<TimeSeriesValue FromDateTime="2014-04-09T00:00:00" ToDateTime="2014-04-10T00:00:00" />
+						</TimeSeriesValues>
+					</TimeSeries>
+					<TimeSeries>
+						<Resolution>Day</Resolution>
+						<TimeSeriesTypeName>Realized Price</TimeSeriesTypeName>
+						<TimezoneName>Central Europe Standard Time</TimezoneName>
+						<TimeSeriesValues>
+							<TimeSeriesValue FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							<TimeSeriesValue FromDateTime="2014-04-08T00:00:00" ToDateTime="2014-04-09T00:00:00" />
+							<TimeSeriesValue FromDateTime="2014-04-09T00:00:00" ToDateTime="2014-04-10T00:00:00" />
+						</TimeSeriesValues>
+					</TimeSeries>
+					<TimeSeries>
+						<Resolution>Day</Resolution>
+						<TimeSeriesTypeName>Realized Volume</TimeSeriesTypeName>
+						<TimezoneName>Central Europe Standard Time</TimezoneName>
+						<TimeSeriesValues>
+							<TimeSeriesValue FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							<TimeSeriesValue FromDateTime="2014-04-08T00:00:00" ToDateTime="2014-04-09T00:00:00" />
+							<TimeSeriesValue FromDateTime="2014-04-09T00:00:00" ToDateTime="2014-04-10T00:00:00" />
+						</TimeSeriesValues>
+					</TimeSeries>
+				</TimeSeries>
+			</TimeSeriesSet>
+		</SettlementData>
+		<DealDetails>
+			<Trader>DealImport</Trader>
+			<Status>Active</Status>
+			<TradeDateTimeUtc>2008-09-10T19:22:23Z</TradeDateTimeUtc>
+		</DealDetails>
+		<FeesData>
+			<Broker>API Test Broker</Broker>
+			<ClearingType>Electronic</ClearingType>
+			<Fees>
+				<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.5" FeeUnit="EUR"/>
+				<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.2" FeeUnit="EUR"/>
+				<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="EUR"/>
+				<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.01" FeeUnit="EUR"/>
+			</Fees>
+		</FeesData>
+		<ReferenceData>
+			<ExternalId>PassElectricityFlexibleStructuredDealDailyFixedFees</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+			<Comment>ElectricityStructuredDealDaily; should pass</Comment>
+			<ModificationDateTimeUtc>2015-02-25T08:03:00Z</ModificationDateTimeUtc>
+			<RiskValue>0</RiskValue>
+			<Originator>true</Originator>
+			<Deliveries>72</Deliveries>
+			<OriginalQuantity>0</OriginalQuantity>
+			<ReferringId>148</ReferringId>
+		</ReferenceData>
+		<TransactionWorkFlowDetails>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Audited>false</Audited>
+		</TransactionWorkFlowDetails>
+	</QaTransactionDTO>
+</TestCase>

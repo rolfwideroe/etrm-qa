@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>To date cannot be before from date</Message>
+<TestData>
+<DealInsert>
+<MetaData>
+<MessageId>CZM9YMSN4A20160429ICAP00000000000004573365</MessageId>
+<Timezone>CET</Timezone></MetaData>
+<Transaction>
+	<TransactionType>Insert</TransactionType>
+	<DealType>Electricity-Forward</DealType>
+	<Portfolios>
+		<Portfolio>API Test Customer</Portfolio>
+		<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+		<BuySell>Buy</BuySell>
+	</Portfolios>
+	<ElectricityForward>
+		<InstrumentData>
+			<ExecutionVenue>None</ExecutionVenue>
+			<PriceBasis>OMIP</PriceBasis>
+			<LoadProfile>Base</LoadProfile>
+			<FromDate>2016-06-30</FromDate>
+			<ToDate>2016-06-01</ToDate>
+			<Financial/>
+		</InstrumentData>
+		<SettlementData>
+			<Quantity>25.0</Quantity>
+			<QuantityUnit>MW</QuantityUnit>
+			<Price>18.0</Price><Currency>EUR</Currency>
+			<CurrencySource>Viz</CurrencySource>
+			<Clearing>Broker</Clearing>
+			<ClearingCurrency>EUR</ClearingCurrency>
+			<BrokerTradingFee>0.0050</BrokerTradingFee>
+			<BrokerCurrency>EUR</BrokerCurrency>
+			<BrokerFee>0.0050</BrokerFee>
+			<Broker>Test Broker A</Broker>
+		</SettlementData>
+	</ElectricityForward>
+	<DealDetails>
+		<Status>Active</Status>
+		<Trader>Vizard</Trader>
+		<TradeDate>2016-04-29T13:23:54+02:00</TradeDate>
+	</DealDetails>
+	<ReferenceData>
+		<ExternalId>Example from axpo</ExternalId>
+		<ExternalSource>20298</ExternalSource>
+	</ReferenceData>
+	<CustomProperties>
+		<PropertyGroup name="Compliance">
+			<StringProperty value="CZM9YMSN4A20160429ICAP000000000000045733" name="UTI"/>
+		</PropertyGroup>
+	</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>false</AssertQaTransactionDTO>
+</TestCase>

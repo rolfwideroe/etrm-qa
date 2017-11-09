@@ -1,0 +1,207 @@
+<LookupResult xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MetaData Timestamp="2016-06-20T10:15:29.9376198+02:00">
+    <Action>TransactionLookup</Action>
+    <MessageId>1234</MessageId>
+    <ElvizVersion>2016.2.1.58</ElvizVersion>
+    <ProcessorVersion>1.0.0.0</ProcessorVersion>
+  </MetaData>
+  <Result>Success</Result>
+  <Transactions>
+    <Transaction>
+      <DealType>Oil-Asian</DealType>
+      <Portfolios>
+        <Portfolio>API Test Counterparty</Portfolio>
+        <PortfolioElvizId>6</PortfolioElvizId>
+        <PortfolioReplicationId>54574938-30af-41ca-adbb-759eb5c4491e</PortfolioReplicationId>
+        <CounterpartyPortfolio>API Test Customer</CounterpartyPortfolio>
+        <CounterpartyPortfolioElvizId>5</CounterpartyPortfolioElvizId>
+        <CounterpartyPortfolioReplicationId>ccd6ce82-c9a0-43c8-a684-cf7a77fa1fcf</CounterpartyPortfolioReplicationId>
+        <BuySell>Sell</BuySell>
+        <CompanyName>API Test Counterparty</CompanyName>
+        <PortfolioName>API Test Counterparty</PortfolioName>
+        <CounterpartyCompanyName>API Test Customer</CounterpartyCompanyName>
+        <CounterpartyPortfolioName>API Test Customer</CounterpartyPortfolioName>
+        <CompanyShortName />
+        <CounterpartyCompanyShortName />
+      </Portfolios>
+      <OilFuture>
+        <InstrumentData>
+          <Timezone>CET</Timezone>
+          <ExecutionVenue>ICE</ExecutionVenue>
+          <PriceBasis>BrentOil</PriceBasis>
+          <LoadProfile>SystemBase</LoadProfile>
+          <FromDate>2011-04-01</FromDate>
+          <ToDate>2011-04-30</ToDate>
+          <InstrumentName>ASIP/A Apr-11 1.00</InstrumentName>
+          <Deliveries>720</Deliveries>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>38</Quantity>
+          <QuantityUnit>Bbl</QuantityUnit>
+          <Price>28</Price>
+          <Currency>USD</Currency>
+          <PriceVolumeUnit>PerBbl</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>USD</ClearingCurrency>
+          <ClearingFee>123</ClearingFee>
+          <BrokerTradingFee>123</BrokerTradingFee>
+          <BrokerCurrency>USD</BrokerCurrency>
+          <BrokerFee>123</BrokerFee>
+          <BrokerFeeCurrency>USD</BrokerFeeCurrency>
+          <TradingFee>4</TradingFee>
+          <TradingFeeCurrency>USD</TradingFeeCurrency>
+          <CommissionFee>0.01</CommissionFee>
+          <CommissionFeeCurrency>USD</CommissionFeeCurrency>
+          <Broker>API Test Broker</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="123" FeeUnit="USD/Bbl" />
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.5" FeeUnit="USD" />
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="123" FeeUnit="USD/Bbl" />
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="USD" />
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" FeeUnit="USD/Bbl" />
+            <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="USD" />
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="4" FeeUnit="USD/Bbl" />
+            <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.2" FeeUnit="USD" />
+          </Fees>
+        </FeesData>
+      </OilFuture>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2011-04-15T00:00:00</TradeDate>
+        <ModificationDate>2016-06-20T00:51:43</ModificationDate>
+        <ConfirmedByBroker>false</ConfirmedByBroker>
+        <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+        <Authorised>false</Authorised>
+        <Audited>false</Audited>
+        <Paid>false</Paid>
+        <DeclareId>0</DeclareId>
+        <ContractSplitId>0</ContractSplitId>
+      </DealDetails>
+      <ReferenceData>
+        <ElvizId>1336</ElvizId>
+        <Comment>Comment</Comment>
+        <DealGroup>OilAsian</DealGroup>
+        <GroupFields>
+          <GroupField1 xsi:type="xsd:string">OilAsian</GroupField1>
+          <GroupField2 xsi:type="xsd:string">DealGroupOne</GroupField2>
+        </GroupFields>
+        <ExternalId>PassOilAsian</ExternalId>
+        <ExternalSource>XMLFileImport</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+        <RiskValue xsi:type="xsd:double">0</RiskValue>
+      </ReferenceData>
+      <CustomProperties>
+        <PropertyGroup name="Compliance">
+          <StringProperty name="UTI" value="PassOilAsian" />
+          <DateProperty name="TerminationDate" value="2013-11-20" />
+        </PropertyGroup>
+        <PropertyGroup name="Deal Group">
+          <StringProperty name="GroupField1" value="OilAsian" />
+          <StringProperty name="GroupField2" value="DealGroupOne" />
+        </PropertyGroup>
+      </CustomProperties>
+    </Transaction>
+    <Transaction>
+      <DealType>Oil-Asian</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <PortfolioElvizId>5</PortfolioElvizId>
+        <PortfolioReplicationId>ccd6ce82-c9a0-43c8-a684-cf7a77fa1fcf</PortfolioReplicationId>
+        <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+        <CounterpartyPortfolioElvizId>6</CounterpartyPortfolioElvizId>
+        <CounterpartyPortfolioReplicationId>54574938-30af-41ca-adbb-759eb5c4491e</CounterpartyPortfolioReplicationId>
+        <BuySell>Buy</BuySell>
+        <CompanyName>API Test Customer</CompanyName>
+        <PortfolioName>API Test Customer</PortfolioName>
+        <CounterpartyCompanyName>API Test Counterparty</CounterpartyCompanyName>
+        <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+        <CompanyShortName />
+        <CounterpartyCompanyShortName />
+      </Portfolios>
+      <OilFuture>
+        <InstrumentData>
+          <Timezone>CET</Timezone>
+          <ExecutionVenue>ICE</ExecutionVenue>
+          <PriceBasis>BrentOil</PriceBasis>
+          <LoadProfile>SystemBase</LoadProfile>
+          <FromDate>2011-04-01</FromDate>
+          <ToDate>2011-04-30</ToDate>
+          <InstrumentName>ASIP/A Apr-11 1.00</InstrumentName>
+          <Deliveries>720</Deliveries>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>38</Quantity>
+          <QuantityUnit>Bbl</QuantityUnit>
+          <Price>28</Price>
+          <Currency>USD</Currency>
+          <PriceVolumeUnit>PerBbl</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>USD</ClearingCurrency>
+          <ClearingFee>123</ClearingFee>
+          <BrokerTradingFee>123</BrokerTradingFee>
+          <BrokerCurrency>USD</BrokerCurrency>
+          <BrokerFee>123</BrokerFee>
+          <BrokerFeeCurrency>USD</BrokerFeeCurrency>
+          <TradingFee>4</TradingFee>
+          <TradingFeeCurrency>USD</TradingFeeCurrency>
+          <CommissionFee>0.01</CommissionFee>
+          <CommissionFeeCurrency>USD</CommissionFeeCurrency>
+          <Broker>API Test Broker</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="123" FeeUnit="USD/Bbl" />
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.5" FeeUnit="USD" />
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="123" FeeUnit="USD/Bbl" />
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="USD" />
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" FeeUnit="USD/Bbl" />
+            <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="USD" />
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="4" FeeUnit="USD/Bbl" />
+            <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.2" FeeUnit="USD" />
+          </Fees>
+        </FeesData>
+      </OilFuture>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2011-04-15T00:00:00</TradeDate>
+        <ModificationDate>2016-06-20T00:51:43</ModificationDate>
+        <ConfirmedByBroker>false</ConfirmedByBroker>
+        <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+        <Authorised>false</Authorised>
+        <Audited>false</Audited>
+        <Paid>false</Paid>
+        <DeclareId>0</DeclareId>
+        <ContractSplitId>0</ContractSplitId>
+      </DealDetails>
+      <ReferenceData>
+        <ElvizId>1335</ElvizId>
+        <Comment>Comment</Comment>
+        <DealGroup>OilAsian</DealGroup>
+        <GroupFields>
+          <GroupField1 xsi:type="xsd:string">OilAsian</GroupField1>
+          <GroupField2 xsi:type="xsd:string">DealGroupOne</GroupField2>
+        </GroupFields>
+        <ExternalId>PassOilAsian</ExternalId>
+        <ExternalSource>XMLFileImport</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+        <RiskValue xsi:type="xsd:double">0</RiskValue>
+      </ReferenceData>
+      <CustomProperties>
+        <PropertyGroup name="Compliance">
+          <StringProperty name="UTI" value="PassOilAsian" />
+          <DateProperty name="TerminationDate" value="2013-11-20" />
+        </PropertyGroup>
+        <PropertyGroup name="Deal Group">
+          <StringProperty name="GroupField1" value="OilAsian" />
+          <StringProperty name="GroupField2" value="DealGroupOne" />
+        </PropertyGroup>
+      </CustomProperties>
+    </Transaction>
+  </Transactions>
+</LookupResult>

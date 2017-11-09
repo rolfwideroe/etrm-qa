@@ -1,0 +1,29 @@
+﻿<TestCaseReportEngine xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<InputData>
+		<ReportId>NasdaqClearingReport</ReportId>
+		<Settings>
+			<Setting SettingId="SettlementDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00"/>
+			<Setting SettingId="FilterName" IsNotSet="false" XmlEncodedValue="El-Forward-NASDAQ"/>
+			<Setting SettingId="SEKEURRateNegative" IsNotSet="false" XmlEncodedValue="8.943213" />
+			<Setting SettingId="SEKEURRate" IsNotSet="false" XmlEncodedValue="9.943213" />
+		</Settings>
+	</InputData>
+	<ExpectedValues>
+		<ExpectedDataTableArtifacts>
+			<ExpectedDataTableArtifact 
+		ArtifactId="CDELC"
+		Columns="PortfolioName,CompanyName,ExecutionVenueName,InstrumentName,Load,InstrumentType,Quantity,RemainingHours,SpotPrice,LastClose,SpotRefSettlement,ExpiryMarketSettlement,SettlementFromDelivery,SettlementDate,DeliveryDate,Currency,ProductName,PricebasisName,FromDate,UntilDate,Commodity,ErrorMessage"
+		ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.String,System.Double,System.Int32,System.Double,System.Double,System.Double,System.Double,System.Double,System.DateTime,System.DateTime,System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String">
+				<ExpectedRecord>El-Forward-NASDAQ,RegCustomerCompany,NordPool,M11-11,Peak,Forward,10,144,47.1,51.5,-528,1380,852,2011-11-14T00:00:00,2011-11-14T00:00:00,EUR,ENOPLMNOV-11,NordPool System Price,2011-11-01T00:00:00,2011-12-01T00:00:00,Electricity,NULL</ExpectedRecord>
+				<ExpectedRecord>El-Forward-NASDAQ,RegCustomerCompany,NordPool,M11-11,Base,Forward,10,384,44.8,45.5,-168.000000000001,1320,1152,2011-11-14T00:00:00,2011-11-14T00:00:00,EUR,ENOMNOV-11,NordPool System Price,2011-11-01T00:00:00,2011-12-01T00:00:00,Electricity,NULL</ExpectedRecord>
+				<ExpectedRecord>El-Forward-NASDAQ,RegCustomerCompany,NordPool,M11-11,Base,Forward,10,384,-1.27999999999999,-1.75,112.800000000001,900,1012.8,2011-11-14T00:00:00,2011-11-14T00:00:00,EUR,SYOSLNOV-11,SYOSL,2011-11-01T00:00:00,2011-12-01T00:00:00,Electricity,NULL</ExpectedRecord>
+				<ExpectedRecord>El-Forward-NASDAQ,RegCustomerCompany,NordPool,M11-11,Peak,Forward,10,144,47.1,51.5,-528,1380,852,2011-11-14T00:00:00,2011-11-14T00:00:00,EUR,ENOPLMNOV-11,NordPool System Price,2011-11-01T00:00:00,2011-12-01T00:00:00,Electricity,NULL</ExpectedRecord>
+				<ExpectedRecord>El-Forward-NASDAQ,RegCustomerCompany,NordPool,M11-11,Base,Forward,10,384,44.8,45.5,-168.000000000001,1320,1152,2011-11-14T00:00:00,2011-11-14T00:00:00,EUR,ENOMNOV-11,NordPool System Price,2011-11-01T00:00:00,2011-12-01T00:00:00,Electricity,NULL</ExpectedRecord>
+				<ExpectedRecord>El-Forward-NASDAQ,RegCustomerCompany,NordPool,M11-11,Base,Forward,10,384,-1.27999999999999,-1.75,112.800000000001,900,1012.8,2011-11-14T00:00:00,2011-11-14T00:00:00,EUR,SYOSLNOV-11,SYOSL,2011-11-01T00:00:00,2011-12-01T00:00:00,Electricity,NULL</ExpectedRecord>
+				<ExpectedRecord>El-Forward-NASDAQ,RegCustomerCompany,NordPool,M11-11,Peak,Forward,10,144,47.1,51.5,-528,1380,852,2011-11-14T00:00:00,2011-11-14T00:00:00,EUR,ENOPLMNOV-11,NordPool System Price,2011-11-01T00:00:00,2011-12-01T00:00:00,Electricity,NULL</ExpectedRecord>
+				<ExpectedRecord>El-Forward-NASDAQ,RegCustomerCompany,NordPool,M11-11,Base,Forward,10,384,44.8,45.5,-168.000000000001,1320,1152,2011-11-14T00:00:00,2011-11-14T00:00:00,EUR,ENOMNOV-11,NordPool System Price,2011-11-01T00:00:00,2011-12-01T00:00:00,Electricity,NULL</ExpectedRecord>
+				<ExpectedRecord>El-Forward-NASDAQ,RegCustomerCompany,NordPool,M11-11,Base,Forward,10,384,-1.27999999999999,-1.75,112.800000000001,900,1012.8,2011-11-14T00:00:00,2011-11-14T00:00:00,EUR,SYOSLNOV-11,SYOSL,2011-11-01T00:00:00,2011-12-01T00:00:00,Electricity,NULL</ExpectedRecord>
+			</ExpectedDataTableArtifact>
+		</ExpectedDataTableArtifacts>
+	</ExpectedValues>
+</TestCaseReportEngine>

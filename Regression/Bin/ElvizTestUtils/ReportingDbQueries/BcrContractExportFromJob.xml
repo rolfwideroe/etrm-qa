@@ -1,0 +1,36 @@
+<DbQuery>
+  <Columns>
+    <Column ColumnName="DealType" ColumnDataType="System.String"/>
+    <Column ColumnName="SourceSystem" ColumnDataType="System.String"/>
+    <Column ColumnName="Dealer" ColumnDataType="System.String"/>
+    <Column ColumnName="Counterparty" ColumnDataType="System.String"/>
+    <Column ColumnName="TradingEntity" ColumnDataType="System.String"/>
+    <Column ColumnName="DealtDate" ColumnDataType="System.DateTime"/>
+    <Column ColumnName="ValueDate" ColumnDataType="System.DateTime"/>
+    <Column ColumnName="MaturityDate" ColumnDataType="System.DateTime"/>
+    <Column ColumnName="InvoiceDate" ColumnDataType="System.DateTime"/>
+    <Column ColumnName="SettlementDate" ColumnDataType="System.DateTime"/>
+    <Column ColumnName="BuySellFlag" ColumnDataType="System.Byte"/>
+    <Column ColumnName="Commodity" ColumnDataType="System.String"/>
+    <Column ColumnName="Volume" ColumnDataType="System.Double"/>
+    <Column ColumnName="Unit" ColumnDataType="System.String"/>
+    <Column ColumnName="NotionalAmount" ColumnDataType="System.Double"/>
+    <Column ColumnName="NotionalAmountCurrency" ColumnDataType="System.String"/>
+    <Column ColumnName="MTM" ColumnDataType="System.Double"/>
+    <Column ColumnName="MTMCurrency" ColumnDataType="System.String"/>
+    <Column ColumnName="Book" ColumnDataType="System.String"/>
+    <Column ColumnName="ContractPrice" ColumnDataType="System.Double"/>
+    <Column ColumnName="MarketPrice" ColumnDataType="System.Double"/>
+    <Column ColumnName="Region" ColumnDataType="System.String"/>
+    <Column ColumnName="DeliveredButNotSettled" ColumnDataType="System.Double"/>
+  </Columns>
+  <SqlQuery>
+	<![CDATA[
+
+  SELECT DealType,SourceSystem,Dealer,Counterparty,TradingEntity,DealtDate,ValueDate,MaturityDate,InvoiceDate,SettlementDate,BuySellFlag,Commodity,Volume,Unit,NotionalAmount,NotionalAmountCurrency,MTM,MTMCurrency,Book,ContractPrice,MarketPrice,Region,DeliveredButNotSettled FROM ETRM_Deal
+
+	]]>
+  </SqlQuery>
+</DbQuery>
+
+			

@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Oil-Asian-USD-CurrExposure-NOK-Mtm</workspace>
+    <monitor>Oil-Asian-USD-CurrExposure-Nok-Mtm</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>Oil-Asian-USD,Oil,ASIC/A Nov-11 130.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian call,Financial,Base,BrentOil,ICE,CET,USD,Oil-Asian-USD-0001,USD,2011-11-15 00:00:00.000,5000</record>
+        <record>Oil-Asian-USD,Oil,ASIP/A Nov-11 130.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian put,Financial,Base,BrentOil,ICE,CET,USD,Oil-Asian-USD-0002,USD,2011-11-15 00:00:00.000,100</record>
+        <record>Oil-Asian-USD,Oil,ASIC/A Nov-11 80.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian call,Financial,Base,BrentOil,ICE,CET,USD,Oil-Asian-USD-0003,USD,2011-11-15 00:00:00.000,195</record>
+        <record>Oil-Asian-USD,Oil,ASIP/A Nov-11 80.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian put,Financial,Base,BrentOil,ICE,CET,USD,Oil-Asian-USD-0004,USD,2011-11-15 00:00:00.000,2</record>
+        <record>Oil-Asian-USD,Oil,ASIC/A Mar-12 130.00,2012-03-01 00:00:00.000,2012-03-31 00:00:00.000,Asian call,Financial,Base,BrentOil,ICE,CET,USD,Oil-Asian-USD-0009,USD,2011-11-15 00:00:00.000,7.5</record>
+        <record>Oil-Asian-USD,Oil,ASIP/A Mar-12 130.00,2012-03-01 00:00:00.000,2012-03-31 00:00:00.000,Asian put,Financial,Base,BrentOil,ICE,CET,USD,Oil-Asian-USD-0010,USD,2011-11-15 00:00:00.000,120</record>
+        <record>Oil-Asian-USD,Oil,ASIC/A Mar-12 80.00,2012-03-01 00:00:00.000,2012-03-31 00:00:00.000,Asian call,Financial,Base,BrentOil,ICE,CET,USD,Oil-Asian-USD-0011,USD,2011-11-15 00:00:00.000,205</record>
+        <record>Oil-Asian-USD,Oil,ASIP/A Mar-12 80.00,2012-03-01 00:00:00.000,2012-03-31 00:00:00.000,Asian put,Financial,Base,BrentOil,ICE,CET,USD,Oil-Asian-USD-0012,USD,2011-11-15 00:00:00.000,1.5</record>
+        <record>Oil-Asian-USD,Oil,ASIC/A Nov-11 5.00,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Asian call,Financial,Base,BrentOil,ICE,CET,USD,Oil-Asian-USD-0017,USD,2011-11-15 00:00:00.000,541024.284344799</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,22 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Coal-EU-ICE-USD-VolOrg-EUR-Delta-VolSurf</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2012-03-01 00:00:00.000,0,TR,180,EUR,1.25481631857843,monthly,European,EURC Mar12 31-JAN-12 130.00,Coal-EU-ICE-USD-0009</record>
+        <record>2012-03-01 00:00:00.000,0,TR,180,EUR,-4.88225735834911,monthly,European,EURP Mar12 31-JAN-12 130.00,Coal-EU-ICE-USD-0010</record>
+        <record>2012-03-01 00:00:00.000,0,TR,180,EUR,4.16577757380179,monthly,European,EURC Mar12 31-JAN-12 80.00,Coal-EU-ICE-USD-0011</record>
+        <record>2012-03-01 00:00:00.000,0,TR,180,EUR,-1.01522533020078,monthly,European,EURP Mar12 31-JAN-12 80.00,Coal-EU-ICE-USD-0012</record>
+        <record>2012-06-01 00:00:00.000,0,TR,180,EUR,-2.33775251834097,monthly,European,EURC Jun12 02-MAY-12 130.00,Coal-EU-ICE-USD-0015</record>
+        <record>2012-06-01 00:00:00.000,0,TR,180,EUR,2.33775251834097,monthly,European,EURC Jun12 02-MAY-12 130.00,Coal-EU-ICE-USD-0016</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

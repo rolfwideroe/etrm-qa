@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-ReserveCapacity-EUR-PosMon-NOK</workspace>
+    <monitor>El-ReserveCapacity-EUR-PosMon-NOK</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0174 El-ReserveCapacity-EUR,00-04,Physical,Reserve Capacity,Other Period,Other Period - 00-04,,CET,EUR,Viz,Electricity,,Reserve Capacity,ReserveCapacity-Quarterly-Pre-Delivery-00-04-Tertiary-Day-Ahead - 00-04,,,,2011-10-10 00:00:00.000,2011-10-10 00:00:00.000,Expired,0,123187.353332438,0,123187.353332438,0,0,123187.353332438,0,123187.353332438,0,0,0,10,0,0,40,4,10,NULL,0,0,0,0,0,0,30.9750516091229,309.750516091229,0,0,0,El-ReserveCapacity-EEX-0001</record>
+        <record>0174 El-ReserveCapacity-EUR,00-04,Physical,Reserve Capacity,Other Period,Other Period - 00-04,,CET,EUR,Viz,Electricity,,Reserve Capacity,ReserveCapacity-Quarterly-In-Delivery-00-04-Tertiary-Day-Ahead - 00-04,,,,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Expired,0,128747.414005083,0,128747.414005083,0,0,128747.414005083,0,128747.414005083,0,0,0,-12,0,0,-40,4,-12,NULL,0,0,0,0,0,0,40.2691291216938,483.229549460325,0,0,0,El-ReserveCapacity-EEX-0002</record>
+        <record>0174 El-ReserveCapacity-EUR,00-04,Physical,Reserve Capacity,Other Period,Other Period - 00-04,ECS Curve,CET,EUR,Viz,Electricity,,Reserve Capacity,ReserveCapacity-Quarterly-Post-Delivery-00-04-Tertiary-Day-Ahead - 00-04,,,,2011-11-21 00:00:00.000,2011-11-21 00:00:00.000,Active,0,344.372907362848,0,344.372907362848,0,0,344.372907362848,0,344.372907362848,0.00228310502283105,20,0,7,0,0,0,4,7,NULL,0,0,0,0,0,0,49.196129623264,344.372907362848,0,0,0,El-ReserveCapacity-EEX-0003</record>
+        <record>0174 El-ReserveCapacity-EUR,German Offpeak W,Physical,Reserve Capacity,W43-11,W43-11 - German Offpeak W,,CET,EUR,Viz,Electricity,,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Offpeak-Secondary - German Offpeak W,,,,2011-10-24 00:00:00.000,2011-10-30 00:00:00.000,Expired,0,1760691.69738728,0,1760691.69738728,0,0,1760691.69738728,0,1760691.69738728,0,0,0,24,0,0,540,109,24,NULL,0,0,0,0,0,0,69.4322261233238,1666.37342695977,0,0,0,El-ReserveCapacity-EEX-0004</record>
+        <record>0174 El-ReserveCapacity-EUR,German Offpeak W,Physical,Reserve Capacity,W44-11,W44-11 - German Offpeak W,ECS Curve,CET,EUR,Viz,Electricity,,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Offpeak-Secondary - German Offpeak W,,,,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Active,0,393669.459804447,0,393669.459804447,0,0,393669.459804447,0,393669.459804447,0.0479452054794521,420,0,8,0,0,120,84,8,NULL,0,0,0,0,0,0,69.4322261233238,555.45780898659,0,0,0,El-ReserveCapacity-EEX-0005</record>
+        <record>0174 El-ReserveCapacity-EUR,German Offpeak W,Physical,Reserve Capacity,W45-11,W45-11 - German Offpeak W,ECS Curve,CET,EUR,Viz,Electricity,,Reserve Capacity,ReserveCapacity-Weekly-Post-Delivery-Offpeak-Secondary - German Offpeak W,,,,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Active,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,NULL,0,0,0,0,0,0,0,0,0,0,0,El-ReserveCapacity-EEX-0006</record>
+        <record>0174 El-ReserveCapacity-EUR,Peak Profile,Physical,Reserve Capacity,W43-11,W43-11 - Peak Profile,,CET,EUR,Viz,Electricity,,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Peak-Secondary - Peak Profile,,,,2011-10-24 00:00:00.000,2011-10-30 00:00:00.000,Expired,0,981368.264644738,0,981368.264644738,0,0,981368.264644738,0,981368.264644738,0,0,0,24,0,0,300,60,24,NULL,0,0,0,0,0,0,150.735878985394,3617.66109564945,0,0,0,El-ReserveCapacity-EEX-0007</record>
+        <record>0174 El-ReserveCapacity-EUR,Peak Profile,Physical,Reserve Capacity,W44-11,W44-11 - Peak Profile,ECS Curve,CET,EUR,Viz,Electricity,,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Peak-Secondary - Peak Profile,,,,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Active,0,394319.889027343,0,394319.889027343,0,0,394319.889027343,0,394319.889027343,0.0205479452054795,180,0,8,0,0,120,36,8,NULL,0,0,0,0,0,0,150.735878985394,1205.88703188315,0,0,0,El-ReserveCapacity-EEX-0008</record>
+        <record>0174 El-ReserveCapacity-EUR,Peak Profile,Physical,Reserve Capacity,W45-11,W45-11 - Peak Profile,ECS Curve,CET,EUR,Viz,Electricity,,Reserve Capacity,ReserveCapacity-Weekly-Post-Delivery-Peak-Secondary - Peak Profile,,,,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Active,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,NULL,0,0,0,0,0,0,0,0,0,0,0,El-ReserveCapacity-EEX-0009</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

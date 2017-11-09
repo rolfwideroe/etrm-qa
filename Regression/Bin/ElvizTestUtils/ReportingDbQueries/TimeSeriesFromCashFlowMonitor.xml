@@ -1,0 +1,87 @@
+<DbQuery>
+  <Columns>
+    <Column ColumnName="CashFlowDate" ColumnDataType="System.DateTime"/>
+    <Column ColumnName="ContractType" ColumnDataType="System.Int32"/>
+    <Column ColumnName="ValueType" ColumnDataType="System.String"/>
+    <Column ColumnName="PortfolioId" ColumnDataType="System.Int32"/>
+    <Column ColumnName="Currency" ColumnDataType="System.String"/>
+    <Column ColumnName="CashFlowValue" ColumnDataType="System.Double"/>
+    <Column ColumnName="Resolution" ColumnDataType="System.String"/>
+    <Column ColumnName="InstrumentType" ColumnDataType="System.String"/>
+    <Column ColumnName="InstrumentName" ColumnDataType="System.String"/>
+    <Column ColumnName="ExternalId" ColumnDataType="System.String"/>
+  </Columns>
+  <SqlQuery>
+	<![CDATA[
+
+
+DECLARE @alias VARCHAR(255)
+Set @alias='{alias}'
+
+DECLARE @reportDate DATE
+set @reportDate='{reportDate}'
+
+DECLARE @jobExecutionId INT
+set @jobExecutionId='{jobExecutionId}'
+
+
+select 
+
+tsVal.FromDateTime as CashFlowDate
+,0 as ContractType
+,Case 
+WHEN tsVal.FromDateTime>=@reportDate THEN 'TR'
+ELSE 'HI'
+End as ValueType
+,c.[PortfolioExportId] as PortfolioId
+,case 
+when cvGroups.ReportCurrency is Null then c.Currency 
+	else cvGroups.ReportCurrency END As [Currency]
+, tsVal.[Value] as CashFlowValue
+--, ts.Resolution as Resolution
+, CASE
+  WHEN tsGroups.Resolution='Month' THEN 'monthly'
+  WHEN tsGroups.Resolution='Day' THEN 'daily'
+  ELSE 'Update script' 
+  END
+  as Resolution 
+, c.InstrumentType as InstrumentType
+, CASE c.InstrumentType 
+	WHEN 'Structured Deal' THEN c.UserSpecifiedDealName
+  WHEN 'Reserve Capacity' THEN c.UserSpecifiedDealName
+  WHEN 'Storage' THEN c.UserSpecifiedDealName
+	ELSE c.InstrumentName
+	END
+		as InstrumentName
+,c.ExternalId as ExternalId
+
+
+from TimeSeries ts
+join TimeSeriesGroups tsGroups
+on ts.TimeSeriesGroupId = tsGroups.TimeSeriesGroupId
+
+join ContractValuesGroups cvGroups
+on cvGroups.ContractValuesGroupId = tsGroups.ContractValuesGroupId
+
+join ContractExports c
+on c.ContractExportId=ts.ContractExportId
+
+join TimeSeriesValues tsVal 
+on ts.TimeSeriesId=tsVal.TimeSeriesId
+ -- WHERE tsSets.ReportDate=@reportDate
+ -- AND tsSets.FilterName=@filter
+  AND tsVal.[Value]<>0
+  AND tsGroups.ContractValuesGroupId = (
+                SELECT s.ContractValuesGroupId FROM ContractValuesGroups s
+								WHERE s.[JobDescription]=@alias
+								AND s.ReportDate=@reportDate
+								And s.JobExecutionId=@jobExecutionId	
+								)
+
+
+order by ExternalId,CashFlowDate,ContractType,ValueType,PortfolioId,Currency,Resolution,InstrumentName
+	]]>
+  </SqlQuery>
+</DbQuery>
+
+			

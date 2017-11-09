@@ -1,0 +1,21 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-FTR-EUR-PosMon-EUR</workspace>
+    <monitor>El-FTR-EUR-PosMon-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0201 Electricity-FTR-EUR,Base,Financial,I-SEM GB (FTR)-I-SEM IE (FTR),Y2011,Y2011 - Base,ECS Curve,CET,EUR,Viz,Electricity,,FTR Option,SEMYR-11/12 - Base,,,,2011-10-01 00:00:00.000,2012-09-30 00:00:00.000,Active,0,-196907041.307183,0,-196907041.307183,0,0,-196907041.307183,0,-196907041.307183,0,0,0,100,0,0,0,7991,100,NULL,0,0,0,0,0,0,0,-197303775.914738,0,0,0,El-FTR-Option-001</record>
+        <record>0201 Electricity-FTR-EUR,Base,Financial,I-SEM IE (FTR)-I-SEM GB (FTR),Q1-12,Q1-12 - Base,ECS Curve,CET,EUR,Viz,Electricity,,FTR Option,Q1-12 - Base,,,,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Active,0,-50724767.14975,1884173.00277717,-48840594.1469728,1884173.00277717,1884173.00277717,-50724767.14975,1884173.00277717,-48840594.1469728,0,0,0,100,0,0,0,2183,100,NULL,0,0,0,0,0,0,0,-50724767.14975,8.6311177406192,0,0,El-FTR-Option-002</record>
+        <record>0201 Electricity-FTR-EUR,Base,Financial,I-SEM GB (FTR)-I-SEM IE (FTR),Y2012,Y2012 - Base,ECS Curve,CET,EUR,Viz,Electricity,,FTR Option,CALYR-12 - Base,,,,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Active,0,-210910932.874459,0,-210910932.874459,0,0,-210910932.874459,0,-210910932.874459,0,0,0,100,0,0,0,8784,100,NULL,0,0,0,0,0,0,0,-210910932.874459,0,0,0,El-FTR-Option-003</record>
+        <record>0201 Electricity-FTR-EUR,Base,Financial,I-SEM IE (FTR)-I-SEM GB (FTR),M10-11,M10-11 - Base,,CET,EUR,Viz,Electricity,,FTR Option,M10-11 - Base,,,,2011-10-01 00:00:00.000,2011-10-31 00:00:00.000,Expired,0,-1068971.31183946,0,-1068971.31183946,0,0,-1068971.31183946,0,-1068971.31183946,0,0,0,100,0,0,0,0,100,NULL,0,0,0,0,0,0,0,-1327178.01971444,0,0,0,El-FTR-Option-004</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,34 @@
+<CurveTestCase>
+	<InputData>
+		<FromDate>2011-12-01</FromDate>
+		<ToDate>2012-12-31</ToDate>
+		<LoadType>Base</LoadType>
+		<PriceBookAppendix></PriceBookAppendix>
+		<ReferenceAreaName>NBP</ReferenceAreaName>
+		<ReportCurrencyIsoCode>GBP</ReportCurrencyIsoCode>
+		<ReportDate>2011-11-01</ReportDate>
+		<Resolution>Year</Resolution>
+		<TemplateName>GasNBP</TemplateName>
+	</InputData>
+	<ExpectedValues>
+		<ExpectedCurveVolatility>
+			<WinterShort>0.9</WinterShort>
+			<WinterMedium>0.17</WinterMedium>
+			<WinterLong>0.1</WinterLong>
+			<WinterNumberOfYearsBetweenShortAndMedium>0.5</WinterNumberOfYearsBetweenShortAndMedium>
+			<SummerShort>0.90</SummerShort>
+			<SummerMedium>0.17</SummerMedium>
+			<SummerLong>0.1</SummerLong>		
+			<SummerNumberOfYearsBetweenShortAndMedium>0.5</SummerNumberOfYearsBetweenShortAndMedium>		
+		</ExpectedCurveVolatility>
+		<ExpectedProperties>
+			<CurveType>MarketPriceCurve</CurveType>
+			<VolumeUnit>th</VolumeUnit>
+			<TimeZone>CET 06-06</TimeZone>
+		</ExpectedProperties>
+		<ExpectedCurveValues>
+			<ExpectedCurveValue Date="2011-12-01T00:00:00" Value="66.1000000000003"/>
+			<ExpectedCurveValue Date="2012-01-01T00:00:00" Value="64.4505840163936"/>
+		</ExpectedCurveValues>
+	</ExpectedValues>
+</CurveTestCase>

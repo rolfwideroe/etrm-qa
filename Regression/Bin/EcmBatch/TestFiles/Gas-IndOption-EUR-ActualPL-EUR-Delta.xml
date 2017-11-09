@@ -1,0 +1,49 @@
+<test type="EcmBatch" name="Gas-IndOption-EUR-ActualPL-EUR-Delta" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-IndOption-EUR-ActualPL-EUR-Delta</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="CurrencySource" Value="ECB" />
+    </ElvizConfigurations>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-09-01 00:00:00.000,0,PR,116,EUR,-2459520,monthly,Indexed Option,Indexed Option C GAS-11 - Premium,Gas-IndexedOption-001</record>
+        <record>2011-11-01 00:00:00.000,0,HI,116,EUR,-194.713923715147,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+        <record>2011-12-01 00:00:00.000,0,TR,116,EUR,-3627.96103439061,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+        <record>2012-01-01 00:00:00.000,0,TR,116,EUR,-6852.0937730567,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+        <record>2012-02-01 00:00:00.000,0,TR,116,EUR,-7385.78375801538,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+        <record>2012-03-01 00:00:00.000,0,TR,116,EUR,-8209.06024033069,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+        <record>2012-04-01 00:00:00.000,0,TR,116,EUR,-8132.64262976588,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+        <record>2012-05-01 00:00:00.000,0,TR,116,EUR,-8736.72972610718,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+        <record>2012-06-01 00:00:00.000,0,TR,116,EUR,-9007.11823227906,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+        <record>2012-07-01 00:00:00.000,0,TR,116,EUR,-9040.91706827933,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+        <record>2012-08-01 00:00:00.000,0,TR,116,EUR,-9630.10729317821,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+        <record>2012-09-01 00:00:00.000,0,TR,116,EUR,-9721.02846258253,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+        <record>2011-09-01 00:00:00.000,0,PR,116,EUR,132480,monthly,Indexed Option,Indexed Option C Q4-12 - Premium,Gas-IndexedOption-002</record>
+        <record>2012-10-01 00:00:00.000,0,TR,116,EUR,-65762.0309370649,monthly,Indexed Option,Indexed Option C Q4-12 - Settlement,Gas-IndexedOption-002</record>
+        <record>2012-11-01 00:00:00.000,0,TR,116,EUR,-68834.4385977119,monthly,Indexed Option,Indexed Option C Q4-12 - Settlement,Gas-IndexedOption-002</record>
+        <record>2012-12-01 00:00:00.000,0,TR,116,EUR,-75706.3342362671,monthly,Indexed Option,Indexed Option C Q4-12 - Settlement,Gas-IndexedOption-002</record>
+        <record>2011-09-01 00:00:00.000,0,PR,116,EUR,-2459520,monthly,Indexed Option,Indexed Option P GAS-11 - Premium,Gas-IndexedOption-003</record>
+        <record>2011-11-01 00:00:00.000,0,HI,116,EUR,-24829.8775366856,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+        <record>2011-12-01 00:00:00.000,0,TR,116,EUR,-47658.6338256498,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+        <record>2012-01-01 00:00:00.000,0,TR,116,EUR,-33961.8932885179,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+        <record>2012-02-01 00:00:00.000,0,TR,116,EUR,-30787.2177127551,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+        <record>2012-03-01 00:00:00.000,0,TR,116,EUR,-36072.4666038345,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+        <record>2012-04-01 00:00:00.000,0,TR,116,EUR,-33685.0469260333,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+        <record>2012-05-01 00:00:00.000,0,TR,116,EUR,-36617.9996060806,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+        <record>2012-06-01 00:00:00.000,0,TR,116,EUR,-33670.7958263311,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+        <record>2012-07-01 00:00:00.000,0,TR,116,EUR,-38082.9184375771,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+        <record>2012-08-01 00:00:00.000,0,TR,116,EUR,-35868.851818376,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+        <record>2012-09-01 00:00:00.000,0,TR,116,EUR,-32732.1630199174,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

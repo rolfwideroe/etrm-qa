@@ -1,0 +1,30 @@
+<test type="EcmBatch" name="Special-Cases-FSD-Model-MWh" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>Special-Cases-FSD-Model-MWh</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<reportdate>2011-11-01</reportdate>
+		<tollerance>0.00000001</tollerance>
+		<executeElvizBatch>True</executeElvizBatch>				
+	</setup>
+	<assert>
+		<datawarehouse>
+		<query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+				<record>2011-01-01 00:00:00.000,0,HI,109,EUR,-7440,monthly,Structured Deal,Special-Cases-FSD-Model-Consumption,Special-Cases-FSD-Model-Consumption</record>
+				<record>2011-02-01 00:00:00.000,0,HI,109,EUR,-6720,monthly,Structured Deal,Special-Cases-FSD-Model-Consumption,Special-Cases-FSD-Model-Consumption</record>
+				<record>2011-03-01 00:00:00.000,0,HI,109,EUR,-7430,monthly,Structured Deal,Special-Cases-FSD-Model-Consumption,Special-Cases-FSD-Model-Consumption</record>
+				<record>2011-01-01 00:00:00.000,0,HI,109,EUR,7440,monthly,Structured Deal,Special-Cases-FSD-Model-FinancialRetail,Special-Cases-FSD-Model-FinancialRetail</record>
+				<record>2011-02-01 00:00:00.000,0,HI,109,EUR,6720,monthly,Structured Deal,Special-Cases-FSD-Model-FinancialRetail,Special-Cases-FSD-Model-FinancialRetail</record>
+				<record>2011-03-01 00:00:00.000,0,HI,109,EUR,7430,monthly,Structured Deal,Special-Cases-FSD-Model-FinancialRetail,Special-Cases-FSD-Model-FinancialRetail</record>
+				<record>2012-01-01 00:00:00.000,0,TR,109,EUR,7440,monthly,Structured Deal,Special-Cases-FSD-Model-Generation,Special-Cases-FSD-Model-Generation</record>
+				<record>2012-02-01 00:00:00.000,0,TR,109,EUR,6960,monthly,Structured Deal,Special-Cases-FSD-Model-Generation,Special-Cases-FSD-Model-Generation</record>
+				<record>2012-03-01 00:00:00.000,0,TR,109,EUR,7430,monthly,Structured Deal,Special-Cases-FSD-Model-Generation,Special-Cases-FSD-Model-Generation</record>
+				<record>2011-10-01 00:00:00.000,0,HI,109,EUR,-7450,monthly,Structured Deal,Special-Cases-FSD-Model-Retail,Special-Cases-FSD-Model-Retail</record>
+				<record>2011-11-01 00:00:00.000,0,TR,109,EUR,-7200,monthly,Structured Deal,Special-Cases-FSD-Model-Retail,Special-Cases-FSD-Model-Retail</record>
+				<record>2011-12-01 00:00:00.000,0,TR,109,EUR,-7440,monthly,Structured Deal,Special-Cases-FSD-Model-Retail,Special-Cases-FSD-Model-Retail</record>
+			</returns>
+		</datawarehouse>		
+	</assert>
+</test>

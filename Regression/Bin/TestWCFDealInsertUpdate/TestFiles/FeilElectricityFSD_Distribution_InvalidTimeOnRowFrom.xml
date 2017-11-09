@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DealInsertUpdateTestCase>
+<InsertXml>
+<![CDATA[ 
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2014-04-07</FromDate>
+				<ToDate>2014-04-13</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="ENBW" />
+				</Physical>
+				<TransactionName>ElectricityFlexibleDistribution InsertUpdate</TransactionName>
+			</InstrumentData>
+			<SettlementData>				
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>				
+					</TimeSeries>					
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>					
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>				
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>				
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2008-09-10T21:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>ElectricityFlexibleDistribution; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>ElectricityFlexibleDistribution InsertUpdate5</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+]]>
+</InsertXml>
+<UpdateXml>
+<![CDATA[ 
+		<DealInsert>
+		<MetaData>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<TransactionPart>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>
+						<ProfileDistribution>
+							<VolumeUnit>MWh</VolumeUnit>
+							<ProfileDetail FromDateTime="2014-04-07T00:01:00" ToDateTime="2014-04-11T00:00:00" Volume="365" Profile= "Base"/> 
+							<ProfileDetail FromDateTime="2014-04-11T00:00:00" ToDateTime="2014-04-14T00:00:00" Volume="365" Profile= "Base"/> 
+						</ProfileDistribution> 
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+			</SettlementData>
+			<ReferenceData>
+				<ExternalId>ElectricityFlexibleDistribution InsertUpdate5</ExternalId>
+			</ReferenceData>
+		</TransactionPart>
+	</DealInsert>
+	]]>
+	</UpdateXml>
+	<ExpectedResult ExpectedType="ErrorMessage">
+		    <ErrorMessage>Inserting time series distribution with within hour dates is is not supported. From date with UTC 04/06/2014 22:01:00 date has within hour time portion. Time series type name is Forecasted Volume
+			</ErrorMessage>
+	</ExpectedResult>
+</DealInsertUpdateTestCase>

@@ -1,0 +1,65 @@
+﻿<!--?xml version="1.0" encoding="utf-8"?>
+<PriceFeed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <param Venue="ICE" Couterparty="ICE" Commodity="Oil" RefArea="BRN" TimeZone="(UTC-05:00) CET 06-06" Feed="APITestOil" IsExchange="true" IsOption="false" IsSwap="false" Currency="USD" />
+  <price LoadType="Base" Ticker="JUN15" From="2015-06-01T00:00:00" To="2015-06-30T00:00:00" PeriodType="Month">
+    <Bid>27.81</Bid>
+    <Ask>27.95</Ask>
+    <Last>27.91</Last>
+    <Close>27.89</Close>
+  </price>
+  <price LoadType="Base" Ticker="Q3 18" From="2015-07-01T00:00:00" To="2015-09-30T00:00:00" PeriodType="Quarter">
+    <Bid>24.15</Bid>
+    <Ask>24.8</Ask>
+    <Last>24.5</Last>
+    <Close>24.3</Close>
+  </price>
+  <price LoadType="Base" Ticker="CAL 17" From="2017-01-01T00:00:00" To="2017-12-31T00:00:00" PeriodType="Year">
+    <Bid>23.57</Bid>
+    <Ask>23.62</Ask>
+    <Last>23.52</Last>
+    <Close>23.59</Close>
+  </price>
+</PriceFeed-->
+<LiveCurveSchedulingTestCase>
+  <Venue>ICE</Venue>
+  <Couterparty>ICE</Couterparty>
+  <Commodity>Oil</Commodity>
+  <RefArea>BRN</RefArea>
+  <TimeZone>(UTC+01:00) Central Europe Standard Time</TimeZone>
+  <Feed>APITestOil</Feed>
+  <IsOption>false</IsOption>
+  <IsSwap>false</IsSwap>  
+  <Currency>USD</Currency>
+  <LivePrices>
+    <LivePrice>
+      <ReportDateOffSet>5</ReportDateOffSet>
+      <TickerRule>{MMMyy}</TickerRule>
+      <PeriodType>Month</PeriodType>
+      <LoadType>Base</LoadType>
+      <Bid>24.15</Bid>
+	  <Ask>24.8</Ask>
+      <Last>24.5</Last>
+      <Close>24.3</Close>
+    </LivePrice>
+	<LivePrice>
+      <ReportDateOffSet>3</ReportDateOffSet>
+      <TickerRule>{q yy}</TickerRule>
+      <PeriodType>Quarter</PeriodType>
+      <LoadType>Base</LoadType>
+	  <Bid>25.15</Bid>
+	  <Ask>25.8</Ask>
+      <Last>25.5</Last>
+      <Close>25.3</Close>
+    </LivePrice>
+	<LivePrice>
+      <ReportDateOffSet>2</ReportDateOffSet>
+      <TickerRule>CAL {yy}</TickerRule>
+      <PeriodType>Year</PeriodType>
+      <LoadType>Base</LoadType>
+      <Bid>23.57</Bid>
+	  <Ask>23.62</Ask>
+	  <Last>23.52</Last>
+	  <Close>23.59</Close>
+    </LivePrice>
+  </LivePrices>
+</LiveCurveSchedulingTestCase>

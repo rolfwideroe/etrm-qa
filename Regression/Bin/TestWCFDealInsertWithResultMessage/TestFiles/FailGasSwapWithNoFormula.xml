@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Index Formula should be set for Gas Swap</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+  <MetaData/>
+  <Transaction>
+    <TransactionType>Automatic</TransactionType>
+    <DealType>Gas-Swap</DealType>
+    <Portfolios>
+      <Portfolio>API Test Customer</Portfolio>
+      <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+      <BuySell>Buy</BuySell>
+    </Portfolios>
+    <GasSwap>
+      <InstrumentData>
+        <Timezone>CET</Timezone>
+        <ExecutionVenue>ICE</ExecutionVenue>
+        <PriceType>FixedForFloating</PriceType>
+        <IndexFormulaName></IndexFormulaName>		
+        <FromDate>2010-11-01</FromDate>
+        <ToDate>2010-12-31</ToDate>
+      </InstrumentData>
+      <SettlementData>
+        <PriceVolumeTimeSeries>
+          <TimeSeriesDetail FromDateTime="2010-11-01T00:00:00" Price="10" Volume="1" ToDateTime="2010-12-01T00:00:00"/>
+          <TimeSeriesDetail FromDateTime="2010-12-01T00:00:00" Price="11" Volume="2" ToDateTime="2011-01-01T00:00:00"/>
+        </PriceVolumeTimeSeries>
+        <QuantityUnit>GJ/d</QuantityUnit>
+        <Currency>USD</Currency>
+        <PriceVolumeUnit>PerGJ</PriceVolumeUnit>
+        <CurrencySource>Viz</CurrencySource>
+        <Clearing>Voice</Clearing>
+        <ClearingCurrency>EUR</ClearingCurrency>
+        <BrokerCurrency>EUR</BrokerCurrency>
+      </SettlementData>
+    </GasSwap>
+    <DealDetails>
+      <Status>Active</Status>
+      <Trader>DealImport</Trader>
+      <TradeDate>2010-01-21T09:10:11</TradeDate>
+    </DealDetails>
+    <ReferenceData>
+      <Comment>FailGasSwapNoFormula; should pass</Comment>
+      <DealGroup>API Test</DealGroup>
+      <ExternalId>FailGasSwapNoFormula</ExternalId>
+      <ExternalSource>XMLFileImport</ExternalSource>
+      <TicketNumber>TicketNumber</TicketNumber>
+    </ReferenceData>
+  </Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

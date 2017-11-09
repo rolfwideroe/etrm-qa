@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Transport</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityTransport>
+			<InstrumentData>
+				<FromDate>2008-10-28</FromDate>
+				<ToDate>2008-10-28</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="RWE"/>
+						<DestinationBalanceArea AreaName="EON"/>
+					</Interconnector>
+				</Physical>
+			</InstrumentData>
+			<SettlementData>
+				<TransportQuantityInformation>
+					<TimeSeriesDetail From="2008-10-28T00:00:00" Price="26" Volume="1" Until="2008-10-28T01:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T01:00:00" Price="26" Volume="2" Until="2008-10-28T02:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T02:00:00" Price="26" Volume="3" Until="2008-10-28T03:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T03:00:00" Price="26" Volume="4" Until="2008-10-28T04:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T04:00:00" Price="26" Volume="5" Until="2008-10-28T05:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T05:00:00" Price="26" Volume="6" Until="2008-10-28T06:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T06:00:00" Price="26" Volume="7" Until="2008-10-28T07:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T07:00:00" Price="26" Volume="8" Until="2008-10-28T08:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T08:00:00" Price="26" Volume="9" Until="2008-10-28T09:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T09:00:00" Price="26" Volume="10" Until="2008-10-28T10:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T10:00:00" Price="26" Volume="11" Until="2008-10-28T11:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T11:00:00" Price="26" Volume="12" Until="2008-10-28T12:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T12:00:00" Price="26" Volume="13" Until="2008-10-28T13:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T13:00:00" Price="26" Volume="14" Until="2008-10-28T14:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T14:00:00" Price="26" Volume="15" Until="2008-10-28T15:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T15:00:00" Price="26" Volume="16" Until="2008-10-28T16:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T16:00:00" Price="26" Volume="17" Until="2008-10-28T17:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T17:00:00" Price="26" Volume="18" Until="2008-10-28T18:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T18:00:00" Price="26" Volume="19" Until="2008-10-28T19:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T19:00:00" Price="26" Volume="20" Until="2008-10-28T20:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T20:00:00" Price="26" Volume="21" Until="2008-10-28T21:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T21:00:00" Price="26" Volume="22" Until="2008-10-28T22:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T22:00:00" Price="26" Volume="23" Until="2008-10-28T23:00:00"/>
+					<TimeSeriesDetail From="2008-10-28T23:00:00" Price="26" Volume="24" Until="2008-10-29T00:00:00"/>
+				</TransportQuantityInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+			</SettlementData>
+		</ElectricityTransport>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2008-10-28T09:10:11</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>ElectricityTransport; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassElectricityTransport</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TransactionId>177</TransactionId>
+  <DealType>Electricity-Transport</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>D2810-08</InstrumentName>
+    <FromDate>2008-10-28T00:00:00</FromDate>
+    <ToDate>2008-10-28T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <Interconnector>DE.RWE_DE.EON</Interconnector>
+  </InstrumentData>
+  <SettlementData>
+    <QuantityUnit>MW</QuantityUnit>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <Resolution>Hour</Resolution>
+    <PriceVolumeTimeSeriesDetails>
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T00:00:00" ToDateTime="2008-10-28T01:00:00" Price="26" Volume="1" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T01:00:00" ToDateTime="2008-10-28T02:00:00" Price="26" Volume="2" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T02:00:00" ToDateTime="2008-10-28T03:00:00" Price="26" Volume="3" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T03:00:00" ToDateTime="2008-10-28T04:00:00" Price="26" Volume="4" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T04:00:00" ToDateTime="2008-10-28T05:00:00" Price="26" Volume="5" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T05:00:00" ToDateTime="2008-10-28T06:00:00" Price="26" Volume="6" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T06:00:00" ToDateTime="2008-10-28T07:00:00" Price="26" Volume="7" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T07:00:00" ToDateTime="2008-10-28T08:00:00" Price="26" Volume="8" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T08:00:00" ToDateTime="2008-10-28T09:00:00" Price="26" Volume="9" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T09:00:00" ToDateTime="2008-10-28T10:00:00" Price="26" Volume="10" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T10:00:00" ToDateTime="2008-10-28T11:00:00" Price="26" Volume="11" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T11:00:00" ToDateTime="2008-10-28T12:00:00" Price="26" Volume="12" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T12:00:00" ToDateTime="2008-10-28T13:00:00" Price="26" Volume="13" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T13:00:00" ToDateTime="2008-10-28T14:00:00" Price="26" Volume="14" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T14:00:00" ToDateTime="2008-10-28T15:00:00" Price="26" Volume="15" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T15:00:00" ToDateTime="2008-10-28T16:00:00" Price="26" Volume="16" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T16:00:00" ToDateTime="2008-10-28T17:00:00" Price="26" Volume="17" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T17:00:00" ToDateTime="2008-10-28T18:00:00" Price="26" Volume="18" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T18:00:00" ToDateTime="2008-10-28T19:00:00" Price="26" Volume="19" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T19:00:00" ToDateTime="2008-10-28T20:00:00" Price="26" Volume="20" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T20:00:00" ToDateTime="2008-10-28T21:00:00" Price="26" Volume="21" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T21:00:00" ToDateTime="2008-10-28T22:00:00" Price="26" Volume="22" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T22:00:00" ToDateTime="2008-10-28T23:00:00" Price="26" Volume="23" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-28T23:00:00" ToDateTime="2008-10-29T00:00:00" Price="26" Volume="24" />
+    </PriceVolumeTimeSeriesDetails>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2008-10-28T08:10:11Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassElectricityTransport</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+    <DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>ElectricityTransport; should pass</Comment>
+    <ModificationDateTimeUtc>2015-08-05T09:38:01Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>24</Deliveries>
+    <OriginalQuantity>0</OriginalQuantity>
+    <ReferringId>178</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

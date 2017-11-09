@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+	<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+		<MetaData>
+			<MessageId>MessageId</MessageId>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Electricity-Forward</DealType>
+			<Portfolios>
+				<Portfolio>Test Company B</Portfolio>
+				<CounterpartyPortfolio>Test CounterParty A</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<ElectricityForward>
+				<InstrumentData>
+					<ExecutionVenue>Nord Pool</ExecutionVenue>
+					<PriceBasis>Norway 2</PriceBasis>
+					<LoadProfile>Base</LoadProfile>
+					<FromDate>2014-12-01</FromDate>
+					<ToDate>2014-12-31</ToDate>
+					<Financial />
+				</InstrumentData>
+				<SettlementData>
+					<Quantity>40</Quantity>
+					<QuantityUnit>MW</QuantityUnit>
+					<Price>28</Price>
+					<Currency>EUR</Currency>
+					<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+					<CurrencySource>Viz</CurrencySource>
+					<Clearing>Electronic</Clearing>
+
+
+					<Broker>Test Broker A</Broker>
+				</SettlementData>
+				<FeesData>
+					<Fees>
+						<Fee FeeType="Broker" FeeValueType="Variable" FeeUnit="EUR/MWh" />
+						<Fee FeeType="Commission" FeeValueType="Variable" FeeUnit="EUR/MWh" />
+					</Fees>
+				</FeesData>
+			</ElectricityForward>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2013-06-10T00:00:00</TradeDate>
+				<ConfirmedByBroker>false</ConfirmedByBroker>
+				<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+				<Authorised>false</Authorised>
+				<Paid>false</Paid>
+			</DealDetails>
+			<ReferenceData>
+				<ExternalId>PassElectricityForward-Fee-Commission-All-AllFees
+				</ExternalId>
+				<ExternalSource>XMLFileImport</ExternalSource>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+	<ExpectedValues>
+		<ClearingCurrency>EUR</ClearingCurrency>
+		<ClearingFee>0</ClearingFee>
+		<BrokerFee>0.33</BrokerFee>
+		<BrokerCurrency>EUR</BrokerCurrency>
+		<TradingFee>0</TradingFee>
+		<TradingFeeCurrency>EUR</TradingFeeCurrency>
+		<CommissionFee>0.14</CommissionFee>
+		<CommissionFeeCurrency>EUR</CommissionFeeCurrency>
+		<EntryFee>0</EntryFee>
+		<EntryFeeCurrency>EUR</EntryFeeCurrency>
+		<ExitFee>0</ExitFee>
+		<ExitFeeCurrency>EUR</ExitFeeCurrency>
+		<Fees>
+			<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.33"
+				FeeUnit="EUR/MWh" />
+			<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.14"
+				FeeUnit="EUR/MWh" />
+		</Fees>
+	</ExpectedValues>
+</TestCase>

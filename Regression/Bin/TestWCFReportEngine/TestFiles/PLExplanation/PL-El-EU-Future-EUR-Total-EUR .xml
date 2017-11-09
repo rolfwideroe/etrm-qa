@@ -1,0 +1,72 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="PL-Explanation-El-EU-Future" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0001;PL-Explanation-El-EU-Future-0006,EURP Q1-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,32462.0772156757,32558.4854650221,32067.5019151098,-6908.8,-6908.8,-6908.8,-6908.8,-6908.8,-6908.8</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0002,EURP M12-11 17-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,-13615.1999999984,-13615.1999999984,-13615.1999999793,-13615.1999999793,-13615.1999999793,-13615.1999999793</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0003,EURP W46-11 09-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0004,EURP W45-11 04-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0005,EURP W44-11 15-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0007,EURP YR-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,-132511.640477617,-132903.918313311,-130104.49358219,-130104.49358219,-130104.49358219,-130000.630558608,-129981.094000115,-129981.094000115,-129981.094000115</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0008,EURP M11-11 20-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-13176,-13176,-13176,-13176,-13176,-13176,-13176,-13176,-13176</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0009;PL-Explanation-El-EU-Future-0014,EURC Q1-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,-113418.91941251,-113361.349030422,-108487.81829356,-6908.8,-6908.8,-6908.8,-6908.8,-6908.8,-6908.8</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0010,EURC M12-11 17-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,31541.8005824042,31541.8005824042,31541.8005824233,31542.3359828794,31542.3359828794,31542.3359828794</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0011,EURC W46-11 09-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0012,EURC W45-11 04-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0013,EURC W44-11 15-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0015,EURC YR-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,318319.273575479,318047.020359859,297448.047329632,297448.047329632,297448.047329632,297551.910353214,297847.053319598,297847.053319598,297847.053319598</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0016,EURC M11-11 20-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-13176,-13176,-13176,-13176,-13176,-13176,-13176,-13176,-13176</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0001;PL-Explanation-El-EU-Future-0006,EURP Q1-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,-6076.0727843243,-5979.66453497787,-6470.64808489018,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0002,EURP M12-11 17-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,1.63741072841433E-09,1.63741072841433E-09,2.06834802041316E-08,2.06837254362017E-08,2.06837254362017E-08,2.06837254362017E-08</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0003,EURP W46-11 09-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0004,EURP W45-11 04-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0005,EURP W44-11 15-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0007,EURP YR-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,27796.3595223831,27404.0816866893,30203.5064178095,30203.5064178095,30203.5064178095,30307.3694413921,30326.9059998851,30326.9059998851,30326.9059998851</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0008,EURP M11-11 20-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0009;PL-Explanation-El-EU-Future-0014,EURC Q1-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,-151957.06941251,-151899.499030422,-147025.96829356,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0010,EURC M12-11 17-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,45157.0005824042,45157.0005824042,45157.0005824233,45157.5359828794,45157.5359828794,45157.5359828794</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0011,EURC W46-11 09-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0012,EURC W45-11 04-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0013,EURC W44-11 15-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0015,EURC YR-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,478627.273575479,478355.020359859,457756.047329632,457756.047329632,457756.047329632,457859.910353214,458155.053319598,458155.053319598,458155.053319598</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0016,EURC M11-11 20-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0001;PL-Explanation-El-EU-Future-0006,EURP Q1-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,38538.15,38538.15,38538.15,-6908.8,-6908.8,-6908.8,-6908.8,-6908.8,-6908.8</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0002,EURP M12-11 17-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,-13615.2,-13615.2,-13615.2,-13615.2,-13615.2,-13615.2</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0003,EURP W46-11 09-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0004,EURP W45-11 04-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0005,EURP W44-11 15-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0007,EURP YR-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,-160308,-160308,-160308,-160308,-160308,-160308,-160308,-160308,-160308</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0008,EURP M11-11 20-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-13176,-13176,-13176,-13176,-13176,-13176,-13176,-13176,-13176</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0009;PL-Explanation-El-EU-Future-0014,EURC Q1-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,38538.15,38538.15,38538.15,-6908.8,-6908.8,-6908.8,-6908.8,-6908.8,-6908.8</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0010,EURC M12-11 17-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,-13615.2,-13615.2,-13615.2,-13615.2,-13615.2,-13615.2</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0011,EURC W46-11 09-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,0,0,0,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0012,EURC W45-11 04-NOV-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4,-3074.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0013,EURC W44-11 15-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4,-3536.4</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0015,EURC YR-14 19-DEC-13 45.00,EEX,European,PL-Explanation-El-EU-Future,-160308,-160308,-160308,-160308,-160308,-160308,-160308,-160308,-160308</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Future-0016,EURC M11-11 20-OCT-11 45.00,EEX,European,PL-Explanation-El-EU-Future,-13176,-13176,-13176,-13176,-13176,-13176,-13176,-13176,-13176</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

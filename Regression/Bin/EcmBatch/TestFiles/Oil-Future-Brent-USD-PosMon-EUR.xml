@@ -1,0 +1,20 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Oil-Future-Brent-USD-PosMon-EUR</workspace>
+    <monitor>Oil-Future-Brent-USD-PosMon-EUR</monitor>
+    <reportdate>2017-03-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0191 Oil-Future-Brent-USD,Base,Financial,BrentOil,M01-17,M01-17,,CET,USD,Viz,Oil,ICE,Future,Jan-17,,,,2017-01-01 00:00:00.000,2017-01-31 00:00:00.000,Expired,472963.066314152,472963.066314152,0,472963.066314152,0,0,472963.066314152,0,472963.066314152,0,0,0,0,0,0,0,0,0,NULL,0,0,0,0,0,0,0,0,0,0,0,Oil-Future-Brent-USD-2017-0001;Oil-Future-Brent-USD-2017-0004</record>
+        <record>0191 Oil-Future-Brent-USD,Base,Financial,BrentOil,M04-17,M04-17,ECS Curve,CET,USD,Viz,Oil,ICE,Future,Apr-17,,,,2017-04-01 00:00:00.000,2017-04-30 00:00:00.000,Active,471513.511219664,-20748132.2806149,0,-20748132.2806149,0,0,-20748132.2806149,0,-20748132.2806149,0,0,0,500000,0,0,0,0,500000,NULL,0,0,0,0,0,0,94.9251000787427,-47462550.0393714,0,0,0,Oil-Future-Brent-USD-2017-0002;Oil-Future-Brent-USD-2017-0005;Oil-Future-Brent-USD-2017-0007</record>
+        <record>0191 Oil-Future-Brent-USD,Base,Financial,BrentOil,M12-17,M12-17,ECS Curve,CET,USD,Viz,Oil,ICE,Future,Dec-17,,,,2017-12-01 00:00:00.000,2017-12-31 00:00:00.000,Active,471920.71731949,-20242874.9757276,0,-20242874.9757276,26528402.8753425,0,-20242874.9757276,0,-20242874.9757276,0,0,0,500000,0,0,0,0,500000,NULL,0,0,0,0,0,0,95.0070788107598,-47503539.4053799,53.0568057506851,0,0,Oil-Future-Brent-USD-2017-0003;Oil-Future-Brent-USD-2017-0006;Oil-Future-Brent-USD-2017-0008</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

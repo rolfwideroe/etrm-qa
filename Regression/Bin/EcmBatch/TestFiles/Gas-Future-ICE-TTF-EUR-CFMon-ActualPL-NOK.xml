@@ -1,0 +1,216 @@
+<test type="EcmBatch" name="Gas-Future-ICE-TTF-EUR-CFMon-ActualPL-NOK" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-Future-ICE-TTF-EUR-CFMon-ActualPL-NOK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-10374795.080289,monthly,Future,Oct11,Gas-Future-ICE-TTF-EUR-0001</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-571113.999767749,monthly,Future,Oct11,Gas-Future-ICE-TTF-EUR-0001</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-9401060.09545023,monthly,Future,Nov11,Gas-Future-ICE-TTF-EUR-0002</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-599789.319314773,monthly,Future,Nov11,Gas-Future-ICE-TTF-EUR-0002</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-130651.795834721,monthly,Future,Nov11,Gas-Future-ICE-TTF-EUR-0002</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-9409045.78768505,monthly,Future,Dec11,Gas-Future-ICE-TTF-EUR-0003</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-596240.234704215,monthly,Future,Dec11,Gas-Future-ICE-TTF-EUR-0003</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-28812.9689719153,monthly,Future,Dec11,Gas-Future-ICE-TTF-EUR-0003</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,13420594.5634743,monthly,Future,Oct11,Gas-Future-ICE-TTF-EUR-0004</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,571113.999767749,monthly,Future,Oct11,Gas-Future-ICE-TTF-EUR-0004</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,12342119.984021,monthly,Future,Nov11,Gas-Future-ICE-TTF-EUR-0005</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,599789.319314773,monthly,Future,Nov11,Gas-Future-ICE-TTF-EUR-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,130651.795834721,monthly,Future,Nov11,Gas-Future-ICE-TTF-EUR-0005</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,12446488.06943,monthly,Future,Dec11,Gas-Future-ICE-TTF-EUR-0006</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,596240.234704215,monthly,Future,Dec11,Gas-Future-ICE-TTF-EUR-0006</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,28812.9689719153,monthly,Future,Dec11,Gas-Future-ICE-TTF-EUR-0006</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-5954662.87969876,monthly,Future,Oct11,Gas-Future-ICE-TTF-EUR-0007</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-571113.999767749,monthly,Future,Oct11,Gas-Future-ICE-TTF-EUR-0007</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-5115264.38502866,monthly,Future,Nov11,Gas-Future-ICE-TTF-EUR-0008</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-599789.319314773,monthly,Future,Nov11,Gas-Future-ICE-TTF-EUR-0008</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-130651.795834721,monthly,Future,Nov11,Gas-Future-ICE-TTF-EUR-0008</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-4975482.11243133,monthly,Future,Dec11,Gas-Future-ICE-TTF-EUR-0009</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-596240.234704215,monthly,Future,Dec11,Gas-Future-ICE-TTF-EUR-0009</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-28812.9689719153,monthly,Future,Dec11,Gas-Future-ICE-TTF-EUR-0009</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-61199762.6279131,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0010</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-487861.847920118,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0010</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,-504902.321833118,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0010</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-514549.107243824,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0010</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,-862542.172368812,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0010</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,-862606.195827714,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0010</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-377218.418731898,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0010</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-54979449.3768454,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-1708460.67675254,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,876280.491359455,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-2143948.98216358,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,1274271.07000618,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,2967750.99447114,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-2496727.21699766,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-1453794.81474618,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-952212.489615885,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2011-12-01 00:00:00.000,0,TR,64,NOK,-549784.766544198,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2012-01-01 00:00:00.000,0,TR,64,NOK,-397339.191897729,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2012-02-01 00:00:00.000,0,TR,64,NOK,-377575.408655174,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2012-03-01 00:00:00.000,0,TR,64,NOK,-516400.667170919,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0011</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-57831006.2941221,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0012</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-858221.40136747,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0012</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,878466.008074123,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0012</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-1591307.12286483,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0012</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,1502718.19197909,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0012</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,367321.603960712,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0012</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-1265249.11723052,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0012</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-1922506.39062139,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0012</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-267040.455332936,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0012</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-29847653.65186,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0013</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-1222925.31638506,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0013</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,539.711988327545,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0013</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-1313643.82907435,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0013</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,-319621.602442522,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0013</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,-318876.042340289,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0013</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,143186.783970726,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0013</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-27918943.9323974,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0014</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-755957.478721604,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0014</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,356003.627844626,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0014</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-1137084.96982568,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0014</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,335885.090936582,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0014</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,1757363.17449212,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0014</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-1637487.82686032,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0014</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-1205892.96883734,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0014</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-712857.964908164,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0014</record>
+        <record>2011-12-01 00:00:00.000,0,TR,64,NOK,-302150.648101225,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0014</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-27064484.384143,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0015</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-951285.31611528,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0015</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,520129.900672553,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0015</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-1006702.73238159,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0015</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,933094.112554562,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0015</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,1214362.00798199,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0015</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-1397741.91689759,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0015</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-1411002.13516304,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0015</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-70169.2612238235,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0015</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,79060527.387576,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0016</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,487861.847920118,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0016</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,504902.321833118,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0016</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,514549.107243824,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0016</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,862542.172368812,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0016</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,862606.195827714,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0016</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,377218.418731898,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0016</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,72816010.4771449,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,1708460.67675254,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,-876280.491359455,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,2143948.98216358,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,-1274271.07000618,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,-2967750.99447114,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,2496727.21699766,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,1453794.81474618,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,952212.489615885,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2011-12-01 00:00:00.000,0,TR,64,NOK,549784.766544198,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2012-01-01 00:00:00.000,0,TR,64,NOK,397339.191897729,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2012-02-01 00:00:00.000,0,TR,64,NOK,377575.408655174,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2012-03-01 00:00:00.000,0,TR,64,NOK,516400.667170919,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0017</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,75676135.4229656,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0018</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,858221.40136747,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0018</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,-878466.008074123,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0018</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,1591307.12286483,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0018</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,-1502718.19197909,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0018</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,-367321.603960712,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0018</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,1265249.11723052,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0018</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,1922506.39062139,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0018</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,267040.455332936,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0018</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,38826622.5246301,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0019</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,1222925.31638506,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0019</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,-539.711988327545,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0019</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,1313643.82907435,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0019</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,319621.602442522,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0019</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,318876.042340289,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0019</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-143186.783970726,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0019</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,36891500.2894374,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0020</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,755957.478721604,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0020</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,-356003.627844626,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0020</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,1137084.96982568,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0020</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,-335885.090936582,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0020</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,-1757363.17449212,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0020</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,1637487.82686032,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0020</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,1205892.96883734,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0020</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,712857.964908164,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0020</record>
+        <record>2011-12-01 00:00:00.000,0,TR,64,NOK,302150.648101225,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0020</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,35928508.065494,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0021</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,951285.31611528,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0021</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,-520129.900672553,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0021</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,1006702.73238159,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0021</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,-933094.112554562,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0021</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,-1214362.00798199,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0021</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,1397741.91689759,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0021</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,1411002.13516304,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0021</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,70169.2612238235,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0021</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-35094740.4368251,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0022</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-487861.847920118,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0022</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,-504902.321833118,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0022</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-514549.107243824,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0022</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,-862542.172368812,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0022</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,-862606.195827714,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0022</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-377218.418731898,monthly,Future,Summer11,Gas-Future-ICE-TTF-EUR-0022</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-28745158.427238,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-1708460.67675254,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,876280.491359455,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-2143948.98216358,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,1274271.07000618,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,2967750.99447114,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-2496727.21699766,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-1453794.81474618,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-952212.489615885,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2011-12-01 00:00:00.000,0,TR,64,NOK,-549784.766544198,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2012-01-01 00:00:00.000,0,TR,64,NOK,-397339.191897729,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2012-02-01 00:00:00.000,0,TR,64,NOK,-377575.408655174,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2012-03-01 00:00:00.000,0,TR,64,NOK,-516400.667170919,monthly,Future,Winter11,Gas-Future-ICE-TTF-EUR-0023</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-31697316.6400707,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0024</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-858221.40136747,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0024</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,878466.008074123,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0024</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-1591307.12286483,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0024</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,1502718.19197909,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0024</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,367321.603960712,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0024</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-1265249.11723052,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0024</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-1922506.39062139,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0024</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-267040.455332936,monthly,Future,Summer12,Gas-Future-ICE-TTF-EUR-0024</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-16720842.218079,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0025</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-1222925.31638506,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0025</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,539.711988327545,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0025</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-1313643.82907435,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0025</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,-319621.602442522,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0025</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,-318876.042340289,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0025</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,143186.783970726,monthly,Future,Q3-11,Gas-Future-ICE-TTF-EUR-0025</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-14732261.2788864,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0026</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-755957.478721604,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0026</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,356003.627844626,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0026</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-1137084.96982568,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0026</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,335885.090936582,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0026</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,1757363.17449212,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0026</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-1637487.82686032,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0026</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-1205892.96883734,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0026</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-712857.964908164,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0026</record>
+        <record>2011-12-01 00:00:00.000,0,TR,64,NOK,-302150.648101225,monthly,Future,Q4-11,Gas-Future-ICE-TTF-EUR-0026</record>
+        <record>2011-03-01 00:00:00.000,0,HI,64,NOK,-14016982.5331714,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0027</record>
+        <record>2011-04-01 00:00:00.000,0,HI,64,NOK,-951285.31611528,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0027</record>
+        <record>2011-05-01 00:00:00.000,0,HI,64,NOK,520129.900672553,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0027</record>
+        <record>2011-06-01 00:00:00.000,0,HI,64,NOK,-1006702.73238159,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0027</record>
+        <record>2011-07-01 00:00:00.000,0,HI,64,NOK,933094.112554562,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0027</record>
+        <record>2011-08-01 00:00:00.000,0,HI,64,NOK,1214362.00798199,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0027</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-1397741.91689759,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0027</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-1411002.13516304,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0027</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-70169.2612238235,monthly,Future,Q1-12,Gas-Future-ICE-TTF-EUR-0027</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-114043851.918174,monthly,Future,Cal 12,Gas-Future-ICE-TTF-EUR-0028</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-3898973.8656168,monthly,Future,Cal 12,Gas-Future-ICE-TTF-EUR-0028</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-401411.130309391,monthly,Future,Cal 12,Gas-Future-ICE-TTF-EUR-0028</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,149918117.795224,monthly,Future,Cal 12,Gas-Future-ICE-TTF-EUR-0029</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,3898973.8656168,monthly,Future,Cal 12,Gas-Future-ICE-TTF-EUR-0029</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,401411.130309391,monthly,Future,Cal 12,Gas-Future-ICE-TTF-EUR-0029</record>
+        <record>2011-09-01 00:00:00.000,0,HI,64,NOK,-61733958.1387949,monthly,Future,Cal 12,Gas-Future-ICE-TTF-EUR-0030</record>
+        <record>2011-10-01 00:00:00.000,0,HI,64,NOK,-3898973.8656168,monthly,Future,Cal 12,Gas-Future-ICE-TTF-EUR-0030</record>
+        <record>2011-11-01 00:00:00.000,0,TR,64,NOK,-401411.130309391,monthly,Future,Cal 12,Gas-Future-ICE-TTF-EUR-0030</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

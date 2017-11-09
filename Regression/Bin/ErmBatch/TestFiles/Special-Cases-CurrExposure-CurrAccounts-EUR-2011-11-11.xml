@@ -1,0 +1,25 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-CurrExposure-CurrAccounts-EUR</workspace>
+    <monitor>Special-Cases-CurrExposure-CurrAccounts-EUR</monitor>
+    <reportdate>2011-11-11T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>Currency-Forward,Currency,USDEUR 31-May-12,2012-05-31 00:00:00.000,2012-05-31 00:00:00.000,Currency forward,Financial,Base,N/A,,CET,USD,Currency-Forward-0003,USD,2012-05-31 00:00:00.000,-1444400</record>
+        <record>Currency-Forward,Currency,EURUSD 31-May-12,2012-05-31 00:00:00.000,2012-05-31 00:00:00.000,Currency forward,Financial,Base,N/A,,CET,EUR,Currency-Forward-0006,USD,2012-05-31 00:00:00.000,-1000000</record>
+        <record>Currency-Forward,Currency,DKKUSD 31-May-12,2012-05-31 00:00:00.000,2012-05-31 00:00:00.000,Currency forward,Financial,Base,N/A,,CET,DKK,Currency-Forward-0009,DKK,2012-05-31 00:00:00.000,-6145500</record>
+        <record>Currency-Forward,Currency,DKKUSD 31-May-12,2012-05-31 00:00:00.000,2012-05-31 00:00:00.000,Currency forward,Financial,Base,N/A,,CET,DKK,Currency-Forward-0009,USD,2012-05-31 00:00:00.000,1000000</record>
+        <record>Currency account EUR,Currency,Currency account EUR,2011-11-12 00:00:00.000,2011-11-12 00:00:00.000,Currency forward,Financial,Base,N/A,,CET,EUR,Currency-Forward-0012,EUR,2011-11-12 00:00:00.000,123</record>
+        <record>Currency account NOK,Currency,Currency account NOK,2011-11-12 00:00:00.000,2011-11-12 00:00:00.000,Currency forward,Financial,Base,N/A,,CET,NOK,Currency-Forward-0012,NOK,2011-11-12 00:00:00.000,-4444444.444</record>
+        <record>Currency account USD,Currency,Currency account USD,2011-11-12 00:00:00.000,2011-11-12 00:00:00.000,Currency forward,Financial,Base,N/A,,CET,USD,Currency-Forward-0012,USD,2011-11-12 00:00:00.000,-3333333.333</record>
+        <record>Currency-Forward,Currency,USDDKK 31-May-12,2012-05-31 00:00:00.000,2012-05-31 00:00:00.000,Currency forward,Financial,Base,N/A,,CET,USD,Currency-Forward-0012,DKK,2012-05-31 00:00:00.000,-1000000</record>
+        <record>Currency-Forward,Currency,USDDKK 31-May-12,2012-05-31 00:00:00.000,2012-05-31 00:00:00.000,Currency forward,Financial,Base,N/A,,CET,USD,Currency-Forward-0012,USD,2012-05-31 00:00:00.000,157800</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

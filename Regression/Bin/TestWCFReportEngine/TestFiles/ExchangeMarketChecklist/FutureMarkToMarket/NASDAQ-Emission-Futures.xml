@@ -1,0 +1,38 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>NasdaqClearingReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="SettlementDate" IsNotSet="false" XmlEncodedValue="2011-11-01T00:00:00" />
+      <Setting SettingId="FilterName" IsNotSet="false" XmlEncodedValue="Emission-Future-NP-EUR" />
+      <Setting SettingId="SEKEURRateNegative" IsNotSet="false" XmlEncodedValue="8.943213" />
+      <Setting SettingId="SEKEURRate" IsNotSet="false" XmlEncodedValue="9.943213" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="-1" ArtifactId="FUTM2M" Columns="PortfolioName,CompanyName,ExecutionVenueName,InstrumentName,Load,BeginOrEndBalance,Quantity,MarketPrice,BookPrice,MarketValue,SettlementDate,Currency,ProductName,PricebasisName,FromDate,UntilDate,InstrumentType,Commodity,SummaryRow,ErrorMessage" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.DateTime,System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.Boolean,System.String">
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NEDEC1,NULL,1000,NULL,9.91,10.19,-279999.999999999,2011-11-01T00:00:00,EUR,NEDEC1,EUA NASDAQ,2011-12-19T00:00:00,2011-12-20T00:00:00,Future,Emission,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NEDEC1,NULL,1000,0,NULL,NULL,-279999.999999999,2011-11-01T00:00:00,EUR,NEDEC1,EUA NASDAQ,2011-12-19T00:00:00,2011-12-20T00:00:00,Future,Emission,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NEDEC2,NULL,1000,NULL,10.4,10.64,-240000,2011-11-01T00:00:00,EUR,NEDEC2,EUA NASDAQ,2012-12-17T00:00:00,2012-12-18T00:00:00,Future,Emission,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NEDEC2,NULL,1000,0,NULL,NULL,-240000,2011-11-01T00:00:00,EUR,NEDEC2,EUA NASDAQ,2012-12-17T00:00:00,2012-12-18T00:00:00,Future,Emission,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NEMAR2,NULL,1000,NULL,10.4,10.64,-240000,2011-11-01T00:00:00,EUR,NEMAR2,EUA NASDAQ,2012-03-26T00:00:00,2012-03-27T00:00:00,Future,Emission,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NEMAR2,NULL,1000,0,NULL,NULL,-240000,2011-11-01T00:00:00,EUR,NEMAR2,EUA NASDAQ,2012-03-26T00:00:00,2012-03-27T00:00:00,Future,Emission,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NEJUN2,NULL,1000,NULL,10.4,10.64,-240000,2011-11-01T00:00:00,EUR,NEJUN2,EUA NASDAQ,2012-06-25T00:00:00,2012-06-26T00:00:00,Future,Emission,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NEJUN2,NULL,1000,0,NULL,NULL,-240000,2011-11-01T00:00:00,EUR,NEJUN2,EUA NASDAQ,2012-06-25T00:00:00,2012-06-26T00:00:00,Future,Emission,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NESEP2,NULL,1000,NULL,10.4,10.64,-240000,2011-11-01T00:00:00,EUR,NESEP2,EUA NASDAQ,2012-09-24T00:00:00,2012-09-25T00:00:00,Future,Emission,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NESEP2,NULL,1000,0,NULL,NULL,-240000,2011-11-01T00:00:00,EUR,NESEP2,EUA NASDAQ,2012-09-24T00:00:00,2012-09-25T00:00:00,Future,Emission,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NCDEC1,NULL,1000,NULL,6.7,6.87,-170000,2011-11-01T00:00:00,EUR,NCDEC1,CER NASDAQ,2011-12-19T00:00:00,2011-12-20T00:00:00,Future,Emission,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NCDEC1,NULL,1000,0,NULL,NULL,-170000,2011-11-01T00:00:00,EUR,NCDEC1,CER NASDAQ,2011-12-19T00:00:00,2011-12-20T00:00:00,Future,Emission,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NCDEC2,NULL,1000,NULL,6.79,6.92,-130000,2011-11-01T00:00:00,EUR,NCDEC2,CER NASDAQ,2012-12-17T00:00:00,2012-12-18T00:00:00,Future,Emission,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NCDEC2,NULL,1000,0,NULL,NULL,-130000,2011-11-01T00:00:00,EUR,NCDEC2,CER NASDAQ,2012-12-17T00:00:00,2012-12-18T00:00:00,Future,Emission,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NCMAR2,NULL,1000,NULL,6.79,6.92,-130000,2011-11-01T00:00:00,EUR,NCMAR2,CER NASDAQ,2012-03-26T00:00:00,2012-03-27T00:00:00,Future,Emission,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NCMAR2,NULL,1000,0,NULL,NULL,-130000,2011-11-01T00:00:00,EUR,NCMAR2,CER NASDAQ,2012-03-26T00:00:00,2012-03-27T00:00:00,Future,Emission,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NCJUN2,NULL,1000,NULL,6.79,6.92,-130000,2011-11-01T00:00:00,EUR,NCJUN2,CER NASDAQ,2012-06-25T00:00:00,2012-06-26T00:00:00,Future,Emission,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NCJUN2,NULL,1000,0,NULL,NULL,-130000,2011-11-01T00:00:00,EUR,NCJUN2,CER NASDAQ,2012-06-25T00:00:00,2012-06-26T00:00:00,Future,Emission,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NCSEP2,NULL,1000,NULL,6.79,6.92,-130000,2011-11-01T00:00:00,EUR,NCSEP2,CER NASDAQ,2012-09-24T00:00:00,2012-09-25T00:00:00,Future,Emission,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Emission-Future-NP-EUR,RegCustomerCompany,NordPool,NCSEP2,NULL,1000,0,NULL,NULL,-130000,2011-11-01T00:00:00,EUR,NCSEP2,CER NASDAQ,2012-09-24T00:00:00,2012-09-25T00:00:00,Future,Emission,True,NULL</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

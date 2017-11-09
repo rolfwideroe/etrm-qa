@@ -1,0 +1,66 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-12-29T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Gas-Storage-TTF-Mix" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Gas-Storage-GetNegativeStorage,Transaction For Negative Storage,ICE TTF,StructuredDeal,StorageCustomerTTF,0,0,0,-21697.3008225724,-21697.3008225724,-21697.3008225724,-21697.3008225724,-21697.3008225724,-21697.3008225724</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix1,Gas-Storage-TTF-Mix,ICE TTF,Storage,StorageCustomerTTF,-249916.814200001,-815978.745358414,-839921.825409011,-643638.259840449,-643638.259840449,-643638.259840449,-643638.259840449,-643638.259840449,-643638.259840449</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Floating-MWhd-0001,Mar-11,ICE TTF,FloatingPrice,StorageCustomerTTF,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Floating-MWhd-0002,Mar-11,ICE TTF,FloatingPrice,StorageCustomerTTF,151064.767902913,151064.767902913,151064.767902913,151064.767902913,151064.767902913,151064.767902913,151064.767902913,151064.767902913,151064.767902913</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Floating-MWhd-0003,Mar-11,ICE TTF,FloatingPrice,StorageCustomerTTF,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Future-0001;Gas-Storage-TTF-Mix-Future-0002;Gas-Storage-TTF-Mix-Future-0003,Jan-11,Endex TTF,Future,StorageCustomerTTF,-828569.16,-828569.16,-828569.16,-828569.16,-828569.16,-828569.16,-828569.16,-828569.16,-828569.16</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Fwd-Sm3-0001;Gas-Storage-TTF-Mix-Fwd-Sm3-0002;Gas-Storage-TTF-Mix-Fwd-Sm3-0003,Feb-11,ICE TTF,Forward,StorageCustomerTTF,2298268.72725,2298268.72725,2298268.72725,2298268.72725,2298268.72725,2298268.72725,2298268.72725,2298268.72725,2298268.72725</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,ICE TTF,StructuredDeal,StorageCustomerTTF,368877.141,368877.141,368877.141,368877.141,368877.141,368877.141,368877.141,368877.141,368877.141</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,ICE TTF,StructuredDeal,StorageCustomerTTF,-737754.282,-737754.282,-737754.282,-737754.282,-737754.282,-737754.282,-737754.282,-737754.282,-737754.282</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001,ICE TTF,StructuredDeal,StorageCustomerTTF,40786.1486455642,-98793.3599999999,-98793.3599999999,-98793.3599999999,-98793.3599999999,-98793.3599999999,-98793.3599999999,-98793.3599999999,-98793.3599999999</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Transport-0001,01-Apr-11 - 15-Apr-11,,Transport,StorageCustomerTTF,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Transport-0002,16-Apr-11 - 30-Apr-11,,Transport,StorageCustomerTTF,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Gas-Storage-GetNegativeStorage,Transaction For Negative Storage,ICE TTF,StructuredDeal,StorageCustomerTTF,0,0,0,489.210677427568,489.210677427568,489.210677427568,489.210677427568,489.210677427568,489.210677427568</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix1,Gas-Storage-TTF-Mix,ICE TTF,Storage,StorageCustomerTTF,7186.37194270343,11605.2172032522,-12337.8628473441,0.100000000001081,0.100000000001081,0.100000000001081,0.100000000001081,0.100000000001081,0.100000000001081</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Floating-MWhd-0001,Mar-11,ICE TTF,FloatingPrice,StorageCustomerTTF,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Floating-MWhd-0002,Mar-11,ICE TTF,FloatingPrice,StorageCustomerTTF,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Floating-MWhd-0003,Mar-11,ICE TTF,FloatingPrice,StorageCustomerTTF,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Future-0001;Gas-Storage-TTF-Mix-Future-0002;Gas-Storage-TTF-Mix-Future-0003,Jan-11,Endex TTF,Future,StorageCustomerTTF,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Fwd-Sm3-0001;Gas-Storage-TTF-Mix-Fwd-Sm3-0002;Gas-Storage-TTF-Mix-Fwd-Sm3-0003,Feb-11,ICE TTF,Forward,StorageCustomerTTF,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,ICE TTF,StructuredDeal,StorageCustomerTTF,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,ICE TTF,StructuredDeal,StorageCustomerTTF,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001,ICE TTF,StructuredDeal,StorageCustomerTTF,48808.5164455642,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Transport-0001,01-Apr-11 - 15-Apr-11,,Transport,StorageCustomerTTF,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Transport-0002,16-Apr-11 - 30-Apr-11,,Transport,StorageCustomerTTF,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Gas-Storage-GetNegativeStorage,Transaction For Negative Storage,ICE TTF,StructuredDeal,StorageCustomerTTF,0,0,0,-22186.5115,-22186.5115,-22186.5115,-22186.5115,-22186.5115,-22186.5115</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix1,Gas-Storage-TTF-Mix,ICE TTF,Storage,StorageCustomerTTF,-257103.186142705,-827583.962561667,-827583.962561667,-643638.359840449,-643638.359840449,-643638.359840449,-643638.359840449,-643638.359840449,-643638.359840449</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Floating-MWhd-0001,Mar-11,ICE TTF,FloatingPrice,StorageCustomerTTF,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913,-154164.767902913</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Floating-MWhd-0002,Mar-11,ICE TTF,FloatingPrice,StorageCustomerTTF,151064.767902913,151064.767902913,151064.767902913,151064.767902913,151064.767902913,151064.767902913,151064.767902913,151064.767902913,151064.767902913</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Floating-MWhd-0003,Mar-11,ICE TTF,FloatingPrice,StorageCustomerTTF,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913,-151064.767902913</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Future-0001;Gas-Storage-TTF-Mix-Future-0002;Gas-Storage-TTF-Mix-Future-0003,Jan-11,Endex TTF,Future,StorageCustomerTTF,-828569.16,-828569.16,-828569.16,-828569.16,-828569.16,-828569.16,-828569.16,-828569.16,-828569.16</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Fwd-Sm3-0001;Gas-Storage-TTF-Mix-Fwd-Sm3-0002;Gas-Storage-TTF-Mix-Fwd-Sm3-0003,Feb-11,ICE TTF,Forward,StorageCustomerTTF,2298268.72725,2298268.72725,2298268.72725,2298268.72725,2298268.72725,2298268.72725,2298268.72725,2298268.72725,2298268.72725</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,ICE TTF,StructuredDeal,StorageCustomerTTF,368877.141,368877.141,368877.141,368877.141,368877.141,368877.141,368877.141,368877.141,368877.141</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,ICE TTF,StructuredDeal,StorageCustomerTTF,-737754.282,-737754.282,-737754.282,-737754.282,-737754.282,-737754.282,-737754.282,-737754.282,-737754.282</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001,ICE TTF,StructuredDeal,StorageCustomerTTF,-8022.3678,-98793.3599999999,-98793.3599999999,-98793.3599999999,-98793.3599999999,-98793.3599999999,-98793.3599999999,-98793.3599999999,-98793.3599999999</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Transport-0001,01-Apr-11 - 15-Apr-11,,Transport,StorageCustomerTTF,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443,2047.1924220443</ExpectedRecord>
+        <ExpectedRecord>Gas-Storage-TTF-Mix-Transport-0002,16-Apr-11 - 30-Apr-11,,Transport,StorageCustomerTTF,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387,54788.2808429387</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

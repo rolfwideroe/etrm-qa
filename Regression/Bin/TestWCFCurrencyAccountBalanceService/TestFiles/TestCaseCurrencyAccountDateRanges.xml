@@ -1,0 +1,75 @@
+<CurrencyAccountTestCase>
+<InputData>
+	<CurrencyAccountInserts>
+		<Insert InsertBalanceDate="2014-01-12">
+			<CurrencyAccounts>
+				<CurrencyAccount CurrencyIsoCode="DKK" BalanceDate="0001-01-01" NominalAmount="40" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+        <CurrencyAccount CurrencyIsoCode="GBP" BalanceDate="0001-01-01" NominalAmount="20" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+			</CurrencyAccounts>
+		</Insert>
+		<Insert InsertBalanceDate="2014-04-01">
+			<CurrencyAccounts>
+				<CurrencyAccount CurrencyIsoCode="DKK" BalanceDate="0001-01-01" NominalAmount="60" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+        <CurrencyAccount CurrencyIsoCode="GBP" BalanceDate="0001-01-01" NominalAmount="30" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+			</CurrencyAccounts>
+		</Insert>
+	</CurrencyAccountInserts>
+		<!--If GetAccountTpe is Latest then we do not pass a date range otherwise we need a date range to retrieve the correct currencyAccountsInserts-->
+</InputData>	
+<ExpectedResults>		 <!---UpdatedBy is irrelevant for API import, always uses the default API username, thats Create is BLANK, whilst Read is DealImport the default API username-->
+  <ExpectedResult Description="Test that former accounts are retrived correctly">
+    <GetMethod>
+      <MostRecent>false</MostRecent>
+      <DateRangeCriteria>
+        <BalanceDateFrom>2014-01-11</BalanceDateFrom>
+        <BalanceDateTo>2014-01-12</BalanceDateTo>
+      </DateRangeCriteria>
+    </GetMethod>
+    <CurrencyAccounts>
+      <CurrencyAccount CurrencyIsoCode="DKK" BalanceDate="2014-01-12" NominalAmount="40" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+      <CurrencyAccount CurrencyIsoCode="GBP" BalanceDate="2014-01-12" NominalAmount="20" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+	  </CurrencyAccounts>
+  </ExpectedResult>
+  <ExpectedResult Description="Test that later accounts are retrived correctly">
+    <GetMethod>
+      <MostRecent>false</MostRecent>
+      <DateRangeCriteria>
+        <BalanceDateFrom>2014-01-13</BalanceDateFrom>
+        <BalanceDateTo>2014-04-01</BalanceDateTo>
+      </DateRangeCriteria>
+    </GetMethod>
+    <CurrencyAccounts>
+      <CurrencyAccount CurrencyIsoCode="DKK" BalanceDate="2014-04-01" NominalAmount="60" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+      <CurrencyAccount CurrencyIsoCode="GBP" BalanceDate="2014-04-01" NominalAmount="30" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+    </CurrencyAccounts>
+  </ExpectedResult>
+  <ExpectedResult Description="Test that accounts are retrived correctly with mulitpple balance dates">
+    <GetMethod>
+      <MostRecent>false</MostRecent>
+      <DateRangeCriteria>
+        <BalanceDateFrom>2014-01-12</BalanceDateFrom>
+        <BalanceDateTo>2014-04-01</BalanceDateTo>
+      </DateRangeCriteria>
+    </GetMethod>
+    <CurrencyAccounts>
+      <CurrencyAccount CurrencyIsoCode="DKK" BalanceDate="2014-01-12" NominalAmount="40" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+      <CurrencyAccount CurrencyIsoCode="DKK" BalanceDate="2014-04-01" NominalAmount="60" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+      <CurrencyAccount CurrencyIsoCode="GBP" BalanceDate="2014-01-12" NominalAmount="20" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+      <CurrencyAccount CurrencyIsoCode="GBP" BalanceDate="2014-04-01" NominalAmount="30" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+    </CurrencyAccounts>
+  </ExpectedResult>
+  <ExpectedResult Description="Test Excact From To dates">
+    <GetMethod>
+      <MostRecent>false</MostRecent>
+      <DateRangeCriteria>
+        <BalanceDateFrom>2014-04-01</BalanceDateFrom>
+        <BalanceDateTo>2014-04-01</BalanceDateTo>
+      </DateRangeCriteria>
+    </GetMethod>
+    <CurrencyAccounts>
+      <CurrencyAccount CurrencyIsoCode="DKK" BalanceDate="2014-04-01" NominalAmount="60" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+      <CurrencyAccount CurrencyIsoCode="GBP" BalanceDate="2014-04-01" NominalAmount="30" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+    </CurrencyAccounts>
+  </ExpectedResult>
+</ExpectedResults>
+</CurrencyAccountTestCase>

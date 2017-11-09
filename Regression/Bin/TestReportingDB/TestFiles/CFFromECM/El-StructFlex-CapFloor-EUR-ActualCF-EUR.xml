@@ -1,0 +1,48 @@
+<test type="EcmBatch" name="El-StructFlex-CapFloor-EUR-ActualCF-EUR" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-StructFlex-CapFloor-EUR-MWh</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,37250,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price,El-StructFlex-FV-CapFloor-EUR-0001</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,141600,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price,El-StructFlex-FV-CapFloor-EUR-0001</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,223200,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price,El-StructFlex-FV-CapFloor-EUR-0001</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,37250,monthly,Structured Deal,El-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2,El-StructFlex-FV-CapFloor-EUR-0002</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,141600,monthly,Structured Deal,El-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2,El-StructFlex-FV-CapFloor-EUR-0002</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,223200,monthly,Structured Deal,El-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2,El-StructFlex-FV-CapFloor-EUR-0002</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,37250,monthly,Structured Deal,El-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50,El-StructFlex-FV-CapFloor-EUR-0003</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,141600,monthly,Structured Deal,El-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50,El-StructFlex-FV-CapFloor-EUR-0003</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,223200,monthly,Structured Deal,El-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50,El-StructFlex-FV-CapFloor-EUR-0003</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,37250,monthly,Structured Deal,El-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice,El-StructFlex-FV-CapFloor-EUR-0004</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,141600,monthly,Structured Deal,El-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice,El-StructFlex-FV-CapFloor-EUR-0004</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,223200,monthly,Structured Deal,El-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice,El-StructFlex-FV-CapFloor-EUR-0004</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,149000,monthly,Structured Deal,El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice,El-StructFlex-FV-CapFloor-EUR-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,74400,monthly,Structured Deal,El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice,El-StructFlex-FV-CapFloor-EUR-0005</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,74400,monthly,Structured Deal,El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice,El-StructFlex-FV-CapFloor-EUR-0005</record>
+        <record>2011-01-01 00:00:00.000,0,HI,153,EUR,148800,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-02-01 00:00:00.000,0,HI,153,EUR,134400,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-03-01 00:00:00.000,0,HI,153,EUR,148600,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-04-01 00:00:00.000,0,HI,153,EUR,144000,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-05-01 00:00:00.000,0,HI,153,EUR,148800,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-06-01 00:00:00.000,0,HI,153,EUR,144000,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-07-01 00:00:00.000,0,HI,153,EUR,148800,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-08-01 00:00:00.000,0,HI,153,EUR,148800,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-09-01 00:00:00.000,0,HI,153,EUR,144000,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,149000,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,74400,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,74400,monthly,Structured Deal,El-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60,El-StructFlex-FV-CapFloor-EUR-0006</record>
+        <record>2011-10-01 00:00:00.000,0,HI,153,EUR,149000,monthly,Structured Deal,El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice,El-StructFlex-FV-CapFloor-EUR-0007</record>
+        <record>2011-11-01 00:00:00.000,0,TR,153,EUR,74400,monthly,Structured Deal,El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice,El-StructFlex-FV-CapFloor-EUR-0007</record>
+        <record>2011-12-01 00:00:00.000,0,TR,153,EUR,74400,monthly,Structured Deal,El-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice,El-StructFlex-FV-CapFloor-EUR-0007</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

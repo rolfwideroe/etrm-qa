@@ -1,0 +1,219 @@
+<LookupResult xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MetaData Timestamp="2016-02-26T09:37:28.3339699+01:00">
+    <Action>TransactionLookup</Action>
+    <MessageId>1234</MessageId>
+    <ElvizVersion>2016.1.1.303</ElvizVersion>
+    <ProcessorVersion>1.0.0.0</ProcessorVersion>
+  </MetaData>
+  <Result>Success</Result>
+  <Transactions>
+    <Transaction>
+      <DealType>Gas-European</DealType>
+      <Portfolios>
+        <Portfolio>ICE</Portfolio>
+        <PortfolioElvizId>9</PortfolioElvizId>
+        <PortfolioReplicationId>f54ffd2e-5201-433c-9a37-074b87539521</PortfolioReplicationId>
+        <CounterpartyPortfolio>API Test Customer</CounterpartyPortfolio>
+        <CounterpartyPortfolioElvizId>5</CounterpartyPortfolioElvizId>
+        <CounterpartyPortfolioReplicationId>ccd6ce82-c9a0-43c8-a684-cf7a77fa1fcf</CounterpartyPortfolioReplicationId>
+        <BuySell>Sell</BuySell>
+        <CompanyName>ICE</CompanyName>
+        <PortfolioName>ICE</PortfolioName>
+        <CounterpartyCompanyName>API Test Customer</CounterpartyCompanyName>
+        <CounterpartyPortfolioName>API Test Customer</CounterpartyPortfolioName>
+        <CompanyShortName />
+        <CounterpartyCompanyShortName />
+      </Portfolios>
+      <GasEuropean>
+        <InstrumentData>
+          <Timezone>CET-6</Timezone>
+          <ExecutionVenue>ICE</ExecutionVenue>
+          <PriceBasis>ICE TTF</PriceBasis>
+          <FromDate>2014-11-01</FromDate>
+          <ToDate>2014-11-30</ToDate>
+          <Physical />
+          <PutCall>Call</PutCall>
+          <Strike>45</Strike>
+          <ExpiryDate>2014-10-27</ExpiryDate>
+          <InstrumentName>EURC Nov14 27-OCT-14 45.00</InstrumentName>
+          <Deliveries>720</Deliveries>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>5</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>3.66</Price>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <ClearingFee>123</ClearingFee>
+          <BrokerTradingFee>123</BrokerTradingFee>
+          <BrokerCurrency>EUR</BrokerCurrency>
+          <BrokerFee>123</BrokerFee>
+          <BrokerFeeCurrency>EUR</BrokerFeeCurrency>
+          <TradingFee>4</TradingFee>
+          <TradingFeeCurrency>NOK</TradingFeeCurrency>
+          <CommissionFee>0.01</CommissionFee>
+          <CommissionFeeCurrency>DKK</CommissionFeeCurrency>
+          <Broker>API Test Broker</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="123" FeeUnit="EUR/MWh" />
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.5" FeeUnit="EUR" />
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="123" FeeUnit="EUR/MWh" />
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="EUR" />
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" FeeUnit="DKK/MWh" />
+            <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="DKK" />
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="4" FeeUnit="NOK/MWh" />
+            <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.2" FeeUnit="NOK" />
+          </Fees>
+        </FeesData>
+      </GasEuropean>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2013-06-10T00:00:00</TradeDate>
+        <ModificationDate>2016-02-26T00:47:09</ModificationDate>
+        <ConfirmedByBroker>false</ConfirmedByBroker>
+        <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+        <Authorised>false</Authorised>
+        <Audited>false</Audited>
+        <Paid>false</Paid>
+        <DeclareId>0</DeclareId>
+        <ContractSplitId>0</ContractSplitId>
+      </DealDetails>
+      <ReferenceData>
+        <ElvizId>750</ElvizId>
+        <Comment>GasEuropean; should pass</Comment>
+        <DealGroup>API Test</DealGroup>
+        <GroupFields>
+          <GroupField1 xsi:type="xsd:string">API Test</GroupField1>
+        </GroupFields>
+        <ExternalId>Gas-European-EUR-0001</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+        <RiskValue xsi:type="xsd:double">0</RiskValue>
+      </ReferenceData>
+      <CustomProperties>
+        <PropertyGroup name="Compliance">
+          <StringProperty name="UTI" value="PassGasEuropeanCompliance" />
+          <StringProperty name="EMIRStatus" value="EMIR risk reducing" />
+          <BooleanProperty name="DealCompression" value="false" />
+          <DateProperty name="TerminationDate" value="2013-11-20" />
+          <StringProperty name="BuyerInitiatorAggressor" value="Aggressor" />
+          <StringProperty name="SellerInitiatorAggressor" value="Initiator" />
+          <BooleanProperty name="RemitReporting" value="true" />
+        </PropertyGroup>
+        <PropertyGroup name="Deal Group">
+          <StringProperty name="GroupField1" value="API Test" />
+        </PropertyGroup>
+      </CustomProperties>
+    </Transaction>
+    <Transaction>
+      <DealType>Gas-European</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <PortfolioElvizId>5</PortfolioElvizId>
+        <PortfolioReplicationId>ccd6ce82-c9a0-43c8-a684-cf7a77fa1fcf</PortfolioReplicationId>
+        <CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+        <CounterpartyPortfolioElvizId>9</CounterpartyPortfolioElvizId>
+        <CounterpartyPortfolioReplicationId>f54ffd2e-5201-433c-9a37-074b87539521</CounterpartyPortfolioReplicationId>
+        <BuySell>Buy</BuySell>
+        <CompanyName>API Test Customer</CompanyName>
+        <PortfolioName>API Test Customer</PortfolioName>
+        <CounterpartyCompanyName>ICE</CounterpartyCompanyName>
+        <CounterpartyPortfolioName>ICE</CounterpartyPortfolioName>
+        <CompanyShortName />
+        <CounterpartyCompanyShortName />
+      </Portfolios>
+      <GasEuropean>
+        <InstrumentData>
+          <Timezone>CET-6</Timezone>
+          <ExecutionVenue>ICE</ExecutionVenue>
+          <PriceBasis>ICE TTF</PriceBasis>
+          <FromDate>2014-11-01</FromDate>
+          <ToDate>2014-11-30</ToDate>
+          <Physical />
+          <PutCall>Call</PutCall>
+          <Strike>45</Strike>
+          <ExpiryDate>2014-10-27</ExpiryDate>
+          <InstrumentName>EURC Nov14 27-OCT-14 45.00</InstrumentName>
+          <Deliveries>720</Deliveries>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>5</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>3.66</Price>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <ClearingFee>123</ClearingFee>
+          <BrokerTradingFee>123</BrokerTradingFee>
+          <BrokerCurrency>EUR</BrokerCurrency>
+          <BrokerFee>123</BrokerFee>
+          <BrokerFeeCurrency>EUR</BrokerFeeCurrency>
+          <TradingFee>4</TradingFee>
+          <TradingFeeCurrency>NOK</TradingFeeCurrency>
+          <CommissionFee>0.01</CommissionFee>
+          <CommissionFeeCurrency>DKK</CommissionFeeCurrency>
+          <Broker>API Test Broker</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="123" FeeUnit="EUR/MWh" />
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.5" FeeUnit="EUR" />
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="123" FeeUnit="EUR/MWh" />
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="EUR" />
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" FeeUnit="DKK/MWh" />
+            <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="DKK" />
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="4" FeeUnit="NOK/MWh" />
+            <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.2" FeeUnit="NOK" />
+          </Fees>
+        </FeesData>
+      </GasEuropean>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2013-06-10T00:00:00</TradeDate>
+        <ModificationDate>2016-02-26T00:47:09</ModificationDate>
+        <ConfirmedByBroker>false</ConfirmedByBroker>
+        <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+        <Authorised>false</Authorised>
+        <Audited>false</Audited>
+        <Paid>false</Paid>
+        <DeclareId>0</DeclareId>
+        <ContractSplitId>0</ContractSplitId>
+      </DealDetails>
+      <ReferenceData>
+        <ElvizId>749</ElvizId>
+        <Comment>GasEuropean; should pass</Comment>
+        <DealGroup>API Test</DealGroup>
+        <GroupFields>
+          <GroupField1 xsi:type="xsd:string">API Test</GroupField1>
+        </GroupFields>
+        <ExternalId>Gas-European-EUR-0001</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+        <RiskValue xsi:type="xsd:double">0</RiskValue>
+      </ReferenceData>
+      <CustomProperties>
+        <PropertyGroup name="Compliance">
+          <StringProperty name="UTI" value="PassGasEuropeanCompliance" />
+          <StringProperty name="EMIRStatus" value="EMIR risk reducing" />
+          <BooleanProperty name="DealCompression" value="false" />
+          <DateProperty name="TerminationDate" value="2013-11-20" />
+          <StringProperty name="BuyerInitiatorAggressor" value="Aggressor" />
+          <StringProperty name="SellerInitiatorAggressor" value="Initiator" />
+          <BooleanProperty name="RemitReporting" value="true" />
+        </PropertyGroup>
+        <PropertyGroup name="Deal Group">
+          <StringProperty name="GroupField1" value="API Test" />
+        </PropertyGroup>
+      </CustomProperties>
+    </Transaction>
+  </Transactions>
+</LookupResult>

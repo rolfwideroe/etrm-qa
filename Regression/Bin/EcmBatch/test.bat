@@ -1,0 +1,1 @@
+..\Prerequisites\NUnit\bin\nunit-console.exe TestEcmBatch.dll /exclude:DwhExportOnly

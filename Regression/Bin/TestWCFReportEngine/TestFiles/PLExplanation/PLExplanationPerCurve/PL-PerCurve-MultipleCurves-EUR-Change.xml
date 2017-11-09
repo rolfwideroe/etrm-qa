@@ -1,0 +1,75 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-01T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="PL-Explanation-MultipleCurves" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Change" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate,MarketPrice" />
+      <Setting SettingId="ReportPerCurve" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="CurveEvaluationOrder" IsNotSet="false" XmlEncodedValue="EEX,France,NordPool System Price,BrentOil,SYOSL" />
+      <Setting SettingId="ReportPerCurrency" IsNotSet="false" XmlEncodedValue="false" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net MarketPrice,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Capacity-0001,M10-12,France,Capacity,PL-Explanation-MultipleCurves,859208.283489843,-1080.11722024879,0,0,977.186841006158,727.422053234768,0,-426035.377641154,433797.39752268</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-AvgRateForward-0001,USDEUR 011111 - 301111,,AverageRateForward,PL-Explanation-MultipleCurves,-56513.5841483055,1360.63341727213,0,0,0,0,5633.48058742122,0,-49519.4701436121</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-CurrencyEuropean-0001,EURC USDEUR 01-May-12 01-MAY-12 1.10,,European,PL-Explanation-MultipleCurves,6668.57331960602,1226.05226291015,0,0,0,485.139070734673,5154.19749738229,0,13533.9621506331</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-Forward-0001,DKKUSD 01-Jun-12,,CurrencyForward,PL-Explanation-MultipleCurves,-90677.8812488118,0,0,0,0,0,-5128.40713012265,0,-95806.2883789345</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-Future-0001,GBPEUR 14-Nov-11,,Future,PL-Explanation-MultipleCurves,-7766.13646299415,-23.9527788732667,0,0,0,0,1550.69884107029,0,-6239.39040079713</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-El-FSD-Indexed-0001,PL-Explanation-MultipleCurves-El-FSD-Indexed-0001,NordPool System Price,StructuredDeal,PL-Explanation-MultipleCurves,4821052621.9878,-689138.024161339,0,0,0,0,-5093897.97282124,41816972.6608677,4857086558.65169</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CalcPriceBasis-0001,FWYR-12,EEX-France,Forward,PL-Explanation-MultipleCurves,-956956.619999996,0,0,0,0,0,0,774164.659999996,-182791.96</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CalcPriceBasis-0002,FWYR-12,EEX-France,Forward,PL-Explanation-MultipleCurves,-733452.960000004,0,0,0,0,0,0,627071.400000003,-106381.560000001</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CFDArea-0001,FWYR-11,SYOSL,Forward,PL-Explanation-MultipleCurves,-94002.9039121482,-2029.67799021155,0,0,0,0,0,-2623.53392069032,-98656.11582305</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-TotalArea-0001,FWYR-12,Norway 1,Forward,PL-Explanation-MultipleCurves,-3934182.2,0,0,0,0,0,0,-268019.199999999,-4202201.4</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered MarketPrice,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Capacity-0001,M10-12,France,Capacity,PL-Explanation-MultipleCurves,1030558.28348984,-1080.11722024879,0,0,977.186841006158,727.422053234768,0,-426035.377641154,605147.39752268</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-AvgRateForward-0001,USDEUR 011111 - 301111,,AverageRateForward,PL-Explanation-MultipleCurves,-56513.5841483055,1360.63341727213,0,0,0,0,5633.48058742122,0,-49519.4701436121</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-CurrencyEuropean-0001,EURC USDEUR 01-May-12 01-MAY-12 1.10,,European,PL-Explanation-MultipleCurves,189457.199130296,77.2728689755313,0,0,0,485.139070734673,5154.19749738229,0,195173.808567388</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-Forward-0001,DKKUSD 01-Jun-12,,CurrencyForward,PL-Explanation-MultipleCurves,-90677.8812488118,0,0,0,0,0,-5128.40713012265,0,-95806.2883789345</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-Future-0001,GBPEUR 14-Nov-11,,Future,PL-Explanation-MultipleCurves,-2378.21507971757,-1458.11877410603,0,0,0,0,1550.69884107029,0,-2285.63501275331</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-El-FSD-Indexed-0001,PL-Explanation-MultipleCurves-El-FSD-Indexed-0001,NordPool System Price,StructuredDeal,PL-Explanation-MultipleCurves,731433606.976893,-67847693.5228218,0,0,0,0,-4590822.80051374,43169488.338789,702164578.992347</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CalcPriceBasis-0001,FWYR-12,EEX-France,Forward,PL-Explanation-MultipleCurves,-956956.619999996,0,0,0,0,0,0,774164.659999996,-182791.96</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CalcPriceBasis-0002,FWYR-12,EEX-France,Forward,PL-Explanation-MultipleCurves,-733452.960000004,0,0,0,0,0,0,627071.400000003,-106381.560000001</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CFDArea-0001,FWYR-11,SYOSL,Forward,PL-Explanation-MultipleCurves,-1826.00391214812,-851.277990211544,0,0,0,0,0,-2623.53392069032,-5300.81582304998</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-TotalArea-0001,FWYR-12,Norway 1,Forward,PL-Explanation-MultipleCurves,-3934182.2,0,0,0,0,0,0,-268019.199999999,-4202201.4</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered MarketPrice,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Capacity-0001,M10-12,France,Capacity,PL-Explanation-MultipleCurves,-171350,0,0,0,0,0,0,0,-171350</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-AvgRateForward-0001,USDEUR 011111 - 301111,,AverageRateForward,PL-Explanation-MultipleCurves,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-CurrencyEuropean-0001,EURC USDEUR 01-May-12 01-MAY-12 1.10,,European,PL-Explanation-MultipleCurves,-182788.62581069,1148.77939393462,0,0,0,0,0,0,-181639.846416755</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-Forward-0001,DKKUSD 01-Jun-12,,CurrencyForward,PL-Explanation-MultipleCurves,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-Future-0001,GBPEUR 14-Nov-11,,Future,PL-Explanation-MultipleCurves,-5387.92138327658,1434.16599523276,0,0,0,0,0,0,-3953.75538804382</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-El-FSD-Indexed-0001,PL-Explanation-MultipleCurves-El-FSD-Indexed-0001,NordPool System Price,StructuredDeal,PL-Explanation-MultipleCurves,4089619015.01091,67158555.4986601,0,0,0,0,-503075.172307491,-1352515.6779213,4154921979.65934</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CalcPriceBasis-0001,FWYR-12,EEX-France,Forward,PL-Explanation-MultipleCurves,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CalcPriceBasis-0002,FWYR-12,EEX-France,Forward,PL-Explanation-MultipleCurves,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CFDArea-0001,FWYR-11,SYOSL,Forward,PL-Explanation-MultipleCurves,-92176.9,-1178.40000000001,0,0,0,0,0,0,-93355.3</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-TotalArea-0001,FWYR-12,Norway 1,Forward,PL-Explanation-MultipleCurves,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="perCurveProfitLossExplanation" Columns="Per curve TransactionIds,Per curve Name,Per curve Price Area,Per curve Instrument Type,Per curve Portfolio,Per curve Before price curve changes,Per curve EEX,Per curve France,Per curve NordPool System Price,Per curve BrentOil,Per curve SYOSL,Per curve After price curve changes" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Capacity-0001,M10-12,France,Capacity,PL-Explanation-MultipleCurves,859832.775163835,72982.2447404,-499017.622381554,0,0,0,433797.39752268</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-AvgRateForward-0001,USDEUR 011111 - 301111,,AverageRateForward,PL-Explanation-MultipleCurves,-49519.4701436121,0,0,0,0,0,-49519.4701436121</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-CurrencyEuropean-0001,EURC USDEUR 01-May-12 01-MAY-12 1.10,,European,PL-Explanation-MultipleCurves,13533.9621506331,0,0,0,0,0,13533.9621506331</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-Forward-0001,DKKUSD 01-Jun-12,,CurrencyForward,PL-Explanation-MultipleCurves,-95806.2883789345,0,0,0,0,0,-95806.2883789345</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Currency-Future-0001,GBPEUR 14-Nov-11,,Future,PL-Explanation-MultipleCurves,-6239.39040079713,0,0,0,0,0,-6239.39040079713</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-El-FSD-Indexed-0001,PL-Explanation-MultipleCurves-El-FSD-Indexed-0001,NordPool System Price,StructuredDeal,PL-Explanation-MultipleCurves,4815269585.99082,-28969977.6000023,0,42404079.5163212,28382870.7445488,0,4857086558.65169</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CalcPriceBasis-0001,FWYR-12,EEX-France,Forward,PL-Explanation-MultipleCurves,-956956.619999996,-122919.500000003,897084.159999999,0,0,0,-182791.96</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CalcPriceBasis-0002,FWYR-12,EEX-France,Forward,PL-Explanation-MultipleCurves,-733452.960000004,-47091.6000000004,674163.000000003,0,0,0,-106381.560000001</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-CFDArea-0001,FWYR-11,SYOSL,Forward,PL-Explanation-MultipleCurves,-96032.5819023597,0,0,0,0,-2623.53392069032,-98656.11582305</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-MultipleCurves-Forward-TotalArea-0001,FWYR-12,Norway 1,Forward,PL-Explanation-MultipleCurves,-3934182.2,0,0,-263627.199999995,0,-4392.00000000373,-4202201.4</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

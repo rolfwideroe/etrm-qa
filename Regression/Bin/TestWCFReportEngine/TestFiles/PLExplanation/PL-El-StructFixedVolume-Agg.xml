@@ -1,0 +1,39 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="PL-Explanation-El-StructFixedVolume" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Struct-0001,Structured deal(s),NordPool System Price,StructuredDeal,PL-Explanation-El-StructFixedVolume,1252651.83277522,1239547.76557522,1142077.85378629,1142077.85378629,1142077.85378629,1142077.85378629,1142077.85378629,1142077.85378629,1142077.85378629</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Struct-0002,Structured deal(s),NordPool System Price,StructuredDeal,PL-Explanation-El-StructFixedVolume,-637973.232513623,-648726.388956497,-700596.414211597,-700596.414211597,-700596.414211597,-700596.414211597,-700596.414211597,-700596.414211597,-700596.414211597</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Struct-0003;PL-Explanation-El-Struct-0004,Structured deal(s),NordPool System Price,StructuredDeal,PL-Explanation-El-StructFixedVolume,-409929.912000001,-409929.912000001,-409929.912,-819859.824000001,-819859.824000001,-819859.824000001,-819859.824000001,-819859.824000001,-819859.824000001</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Struct-0001,Structured deal(s),NordPool System Price,StructuredDeal,PL-Explanation-El-StructFixedVolume,1059556.75357522,804594.639975216,707124.72818629,707124.72818629,707124.72818629,707124.72818629,707124.72818629,707124.72818629,707124.72818629</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Struct-0002,Structured deal(s),NordPool System Price,StructuredDeal,PL-Explanation-El-StructFixedVolume,-435468.135913623,-282761.727956497,-334631.753211597,-334631.753211597,-334631.753211597,-334631.753211597,-334631.753211597,-334631.753211597,-334631.753211597</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Struct-0003;PL-Explanation-El-Struct-0004,Structured deal(s),NordPool System Price,StructuredDeal,PL-Explanation-El-StructFixedVolume,-409929.912000001,-409929.912000001,-409929.912,-819859.824000001,-819859.824000001,-819859.824000001,-819859.824000001,-819859.824000001,-819859.824000001</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Struct-0001,Structured deal(s),NordPool System Price,StructuredDeal,PL-Explanation-El-StructFixedVolume,193095.0792,434953.1256,434953.1256,434953.1256,434953.1256,434953.1256,434953.1256,434953.1256,434953.1256</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Struct-0002,Structured deal(s),NordPool System Price,StructuredDeal,PL-Explanation-El-StructFixedVolume,-202505.0966,-365964.661,-365964.661,-365964.661,-365964.661,-365964.661,-365964.661,-365964.661,-365964.661</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Struct-0003;PL-Explanation-El-Struct-0004,Structured deal(s),NordPool System Price,StructuredDeal,PL-Explanation-El-StructFixedVolume,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>Endex TTF</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2014-06-09</FromDate>
+				<ToDate>2014-07-06</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Gas Flexible Strcut Deal Weekly-Daily</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<ModelType>Retail</ModelType>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>						
+						<Resolution>Weekly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="1" />
+						<TimeSeriesDetail FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="2" />
+						<TimeSeriesDetail FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="3" />
+						<TimeSeriesDetail FromDateTime="2014-06-30T00:00:00" ToDateTime="2014-07-07T00:00:00" Value="4" />						
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Weekly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="1" />
+						<TimeSeriesDetail FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="2" />
+						<TimeSeriesDetail FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="3" />
+						<TimeSeriesDetail FromDateTime="2014-06-30T00:00:00" ToDateTime="2014-07-07T00:00:00" Value="4" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+							<TimeSeriesDetail FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-10T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-10T00:00:00" ToDateTime="2014-06-11T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-06-11T00:00:00" ToDateTime="2014-06-12T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-06-12T00:00:00" ToDateTime="2014-06-13T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-06-13T00:00:00" ToDateTime="2014-06-14T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-14T00:00:00" ToDateTime="2014-06-15T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-06-15T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-17T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-06-17T00:00:00" ToDateTime="2014-06-18T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-18T00:00:00" ToDateTime="2014-06-19T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-06-19T00:00:00" ToDateTime="2014-06-20T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-06-20T00:00:00" ToDateTime="2014-06-21T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-06-21T00:00:00" ToDateTime="2014-06-22T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-22T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-24T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-06-24T00:00:00" ToDateTime="2014-06-25T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-06-25T00:00:00" ToDateTime="2014-06-26T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-26T00:00:00" ToDateTime="2014-06-27T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-06-27T00:00:00" ToDateTime="2014-06-28T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-06-28T00:00:00" ToDateTime="2014-06-29T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-06-29T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-30T00:00:00" ToDateTime="2014-07-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-07-01T00:00:00" ToDateTime="2014-07-02T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-07-02T00:00:00" ToDateTime="2014-07-03T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-07-03T00:00:00" ToDateTime="2014-07-04T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-07-04T00:00:00" ToDateTime="2014-07-05T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-07-05T00:00:00" ToDateTime="2014-07-06T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-07-06T00:00:00" ToDateTime="2014-07-07T00:00:00" Value="4" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+							<TimeSeriesDetail FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-10T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-10T00:00:00" ToDateTime="2014-06-11T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-06-11T00:00:00" ToDateTime="2014-06-12T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-06-12T00:00:00" ToDateTime="2014-06-13T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-06-13T00:00:00" ToDateTime="2014-06-14T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-14T00:00:00" ToDateTime="2014-06-15T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-06-15T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-17T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-06-17T00:00:00" ToDateTime="2014-06-18T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-18T00:00:00" ToDateTime="2014-06-19T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-06-19T00:00:00" ToDateTime="2014-06-20T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-06-20T00:00:00" ToDateTime="2014-06-21T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-06-21T00:00:00" ToDateTime="2014-06-22T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-22T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-24T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-06-24T00:00:00" ToDateTime="2014-06-25T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-06-25T00:00:00" ToDateTime="2014-06-26T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-26T00:00:00" ToDateTime="2014-06-27T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-06-27T00:00:00" ToDateTime="2014-06-28T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-06-28T00:00:00" ToDateTime="2014-06-29T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-06-29T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-06-30T00:00:00" ToDateTime="2014-07-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-07-01T00:00:00" ToDateTime="2014-07-02T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-07-02T00:00:00" ToDateTime="2014-07-03T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-07-03T00:00:00" ToDateTime="2014-07-04T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-07-04T00:00:00" ToDateTime="2014-07-05T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-07-05T00:00:00" ToDateTime="2014-07-06T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-07-06T00:00:00" ToDateTime="2014-07-07T00:00:00" Value="4" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>th/d</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2014-06-01T21:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>GasFlexibleStructuredDealHourly; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassGasFlexibleStructuredDealWeeklyForecastDailyRealized</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>421</TransactionId>
+  <DealType>Gas-StructuredDeal</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <ContractModelType>Retail</ContractModelType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+	<ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>Gas Flexible Strcut Deal Weekly-Daily</InstrumentName>
+    <PriceBasis>Endex TTF</PriceBasis>
+    <FromDate>2014-06-09T00:00:00</FromDate>
+    <ToDate>2014-07-06T00:00:00</ToDate>
+    <TimeZone>CET 06-06</TimeZone>
+    <PriceType>Fixed</PriceType>
+    <BalanceArea>TTF</BalanceArea>
+  </InstrumentData>
+  <SettlementData>
+    <QuantityUnit>thd</QuantityUnit>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <TimeSeriesSet>
+      <TimeSeries>
+        <TimeSeries>
+          <Resolution>Week</Resolution>
+          <TimeSeriesTypeName>Forecasted Price</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-30T00:00:00" ToDateTime="2014-07-07T00:00:00" Value="4" />
+          </TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>Week</Resolution>
+          <TimeSeriesTypeName>Forecasted Volume</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-30T00:00:00" ToDateTime="2014-07-07T00:00:00" Value="4" />
+          </TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>Day</Resolution>
+          <TimeSeriesTypeName>Realized Price</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-10T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-10T00:00:00" ToDateTime="2014-06-11T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-11T00:00:00" ToDateTime="2014-06-12T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-12T00:00:00" ToDateTime="2014-06-13T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-06-13T00:00:00" ToDateTime="2014-06-14T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-14T00:00:00" ToDateTime="2014-06-15T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-15T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-17T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-06-17T00:00:00" ToDateTime="2014-06-18T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-18T00:00:00" ToDateTime="2014-06-19T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-19T00:00:00" ToDateTime="2014-06-20T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-20T00:00:00" ToDateTime="2014-06-21T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-06-21T00:00:00" ToDateTime="2014-06-22T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-22T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-24T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-24T00:00:00" ToDateTime="2014-06-25T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-06-25T00:00:00" ToDateTime="2014-06-26T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-26T00:00:00" ToDateTime="2014-06-27T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-27T00:00:00" ToDateTime="2014-06-28T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-28T00:00:00" ToDateTime="2014-06-29T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-06-29T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-30T00:00:00" ToDateTime="2014-07-01T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-07-01T00:00:00" ToDateTime="2014-07-02T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-07-02T00:00:00" ToDateTime="2014-07-03T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-07-03T00:00:00" ToDateTime="2014-07-04T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-07-04T00:00:00" ToDateTime="2014-07-05T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-07-05T00:00:00" ToDateTime="2014-07-06T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-07-06T00:00:00" ToDateTime="2014-07-07T00:00:00" Value="4" />
+          </TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>Day</Resolution>
+          <TimeSeriesTypeName>Realized Volume</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2014-06-09T00:00:00" ToDateTime="2014-06-10T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-10T00:00:00" ToDateTime="2014-06-11T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-11T00:00:00" ToDateTime="2014-06-12T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-12T00:00:00" ToDateTime="2014-06-13T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-06-13T00:00:00" ToDateTime="2014-06-14T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-14T00:00:00" ToDateTime="2014-06-15T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-15T00:00:00" ToDateTime="2014-06-16T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-16T00:00:00" ToDateTime="2014-06-17T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-06-17T00:00:00" ToDateTime="2014-06-18T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-18T00:00:00" ToDateTime="2014-06-19T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-19T00:00:00" ToDateTime="2014-06-20T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-20T00:00:00" ToDateTime="2014-06-21T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-06-21T00:00:00" ToDateTime="2014-06-22T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-22T00:00:00" ToDateTime="2014-06-23T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-23T00:00:00" ToDateTime="2014-06-24T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-24T00:00:00" ToDateTime="2014-06-25T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-06-25T00:00:00" ToDateTime="2014-06-26T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-26T00:00:00" ToDateTime="2014-06-27T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-06-27T00:00:00" ToDateTime="2014-06-28T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-06-28T00:00:00" ToDateTime="2014-06-29T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-06-29T00:00:00" ToDateTime="2014-06-30T00:00:00" Value="1" />
+            <TimeSeriesValue FromDateTime="2014-06-30T00:00:00" ToDateTime="2014-07-01T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-07-01T00:00:00" ToDateTime="2014-07-02T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-07-02T00:00:00" ToDateTime="2014-07-03T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-07-03T00:00:00" ToDateTime="2014-07-04T00:00:00" Value="2" />
+            <TimeSeriesValue FromDateTime="2014-07-04T00:00:00" ToDateTime="2014-07-05T00:00:00" Value="3" />
+            <TimeSeriesValue FromDateTime="2014-07-05T00:00:00" ToDateTime="2014-07-06T00:00:00" Value="4" />
+            <TimeSeriesValue FromDateTime="2014-07-06T00:00:00" ToDateTime="2014-07-07T00:00:00" Value="4" />
+          </TimeSeriesValues>
+        </TimeSeries>
+      </TimeSeries>
+    </TimeSeriesSet>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2014-06-01T19:22:23Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassGasFlexibleStructuredDealWeeklyForecastDailyRealized</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>GasFlexibleStructuredDealHourly; should pass</Comment>
+    <ModificationDateTimeUtc>2014-07-31T08:38:46Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>672</Deliveries>
+    <ReferringId>422</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

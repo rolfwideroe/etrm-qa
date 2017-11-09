@@ -1,0 +1,40 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>GreeksOnATimelineReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-01T00:00:00" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseEndDate" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="PosCalcMethod" IsNotSet="false" XmlEncodedValue="NPVWA" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="TimeResolution" IsNotSet="false" XmlEncodedValue="Year" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="El-Asian-Prof-EUR" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedTimeSeriesArtifacts>
+      <ExpectedTimeSeriesArtifact ArtifactId="greeksOnATimeline" Columns="GroupBy,Greek,ReferenceArea,TimeZone,From,Until,Value" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Double">
+        <TimeSeriesProperties>
+          <Property Name="GroupBy" DataType="System.String" />
+          <Property Name="Greek" DataType="System.String" />
+          <Property Name="ReferenceArea" DataType="System.String" />
+        </TimeSeriesProperties>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2011-11-02T00:00:00,2012-01-01T00:00:00,4678.87650865091</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2013-01-01T00:00:00,177427.199726422</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2011-11-02T00:00:00,2012-01-01T00:00:00,3.24921979767424</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2013-01-01T00:00:00,20.1989070726801</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2011-11-02T00:00:00,2012-01-01T00:00:00,2530.06456979144</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2013-01-01T00:00:00,4415.43682052754</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2011-11-02T00:00:00,2012-01-01T00:00:00,1.75698928457739</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2013-01-01T00:00:00,0.502668126198491</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2011-11-02T00:00:00,2012-01-01T00:00:00,-1547.99828172472</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Theta (EUR/day),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2013-01-01T00:00:00,-1359.38238008303</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2011-11-02T00:00:00,2012-01-01T00:00:00,2458.79806202248</ExpectedRecord>
+        <ExpectedRecord>El-Asian-Prof-EUR,Vega (EUR/Vol(%)),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2013-01-01T00:00:00,25740.4583019293</ExpectedRecord>
+      </ExpectedTimeSeriesArtifact>
+    </ExpectedTimeSeriesArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>
