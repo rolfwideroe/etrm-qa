@@ -1,0 +1,45 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="PL-Explanation-Currency-Forward" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="USD" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0001,USDEUR 01-Jun-11,,CurrencyForward,PL-Explanation-Currency-Forward,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0002,USDEUR 09-Nov-11,,CurrencyForward,PL-Explanation-Currency-Forward,43049.9856383924,18639.9762153602,18639.9762153602,18639.9762153602,18639.9762153602,18639.9762153602,18639.9762153602,18639.9762153602,18639.9762153602</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0003,USDEUR 31-May-12,,CurrencyForward,PL-Explanation-Currency-Forward,-187311.519402822,-187311.519402822,-187311.519402822,-187311.519402822,-187311.519402822,-187311.519402822,-187311.519402822,-199114.618211588,-199114.618211588</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0004,EURUSD 16-Nov-11,,CurrencyForward,PL-Explanation-Currency-Forward,0,0,0,-157394.92599943,-157394.92599943,-157394.92599943,-157394.92599943,-164767.713906283,-164767.713906283</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0005;PL-Explanation-Currency-Forward-0006,EURUSD 31-May-12,,CurrencyForward,PL-Explanation-Currency-Forward,253516.364986179,253516.364986179,253516.364986179,136818.848059718,136818.848059718,136818.848059718,136818.848059718,135638.538178841,135638.538178841</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0001,USDEUR 01-Jun-11,,CurrencyForward,PL-Explanation-Currency-Forward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0002,USDEUR 09-Nov-11,,CurrencyForward,PL-Explanation-Currency-Forward,43049.9856383924,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0003,USDEUR 31-May-12,,CurrencyForward,PL-Explanation-Currency-Forward,-187311.519402822,-187311.519402822,-187311.519402822,-187311.519402822,-187311.519402822,-187311.519402822,-187311.519402822,-199114.618211588,-199114.618211588</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0004,EURUSD 16-Nov-11,,CurrencyForward,PL-Explanation-Currency-Forward,0,0,0,-157394.92599943,-157394.92599943,-157394.92599943,-157394.92599943,-164767.713906283,-164767.713906283</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0005;PL-Explanation-Currency-Forward-0006,EURUSD 31-May-12,,CurrencyForward,PL-Explanation-Currency-Forward,253516.364986179,253516.364986179,253516.364986179,136818.848059718,136818.848059718,136818.848059718,136818.848059718,135638.538178841,135638.538178841</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0001,USDEUR 01-Jun-11,,CurrencyForward,PL-Explanation-Currency-Forward,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995,-2485.02435683995</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0002,USDEUR 09-Nov-11,,CurrencyForward,PL-Explanation-Currency-Forward,0,18639.9762153602,18639.9762153602,18639.9762153602,18639.9762153602,18639.9762153602,18639.9762153602,18639.9762153602,18639.9762153602</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0003,USDEUR 31-May-12,,CurrencyForward,PL-Explanation-Currency-Forward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0004,EURUSD 16-Nov-11,,CurrencyForward,PL-Explanation-Currency-Forward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Currency-Forward-0005;PL-Explanation-Currency-Forward-0006,EURUSD 31-May-12,,CurrencyForward,PL-Explanation-Currency-Forward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

@@ -1,0 +1,18 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Oil-American-USD-CurrExposure-NOK-Mtm</workspace>
+    <monitor>Oil-American-USD-CurrExposure-Nok-Mtm</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>Oil-American-USD,Oil,AMEC Mar-12 31-JAN-12 130.00,2012-03-01 00:00:00.000,2012-03-31 00:00:00.000,American call,Financial,Base,WTI,ICE,CET,USD,Oil-American-USD-0017,USD,2012-01-31 00:00:00.000,0.151366795125584</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

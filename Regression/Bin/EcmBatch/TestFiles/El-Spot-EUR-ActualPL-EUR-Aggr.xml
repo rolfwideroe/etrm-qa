@@ -1,0 +1,23 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-Spot-EUR-ActualPL-EUR-Aggr</workspace>
+    <monitor>El-Spot-EUR-ActualPL-EUR-Aggr</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitorAggregatedStructDeals.xml" />
+      <returns>
+        <record>2010-03-01 00:00:00.000,0,HI,167,EUR,-4963.32,monthly,Spot,Physical Spot deal(s)</record>
+        <record>2010-06-01 00:00:00.000,0,HI,167,EUR,-16980.09,monthly,Spot,Physical Spot deal(s)</record>
+        <record>2010-10-01 00:00:00.000,0,HI,167,EUR,-128.501999999999,monthly,Spot,Physical Spot deal(s)</record>
+        <record>2011-01-01 00:00:00.000,0,HI,167,EUR,-10432.59,monthly,Spot,Physical Spot deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,167,EUR,6103.24483950413,monthly,Spot,Physical Spot deal(s)</record>
+        <record>2012-06-01 00:00:00.000,0,TR,167,EUR,10837.4033001523,monthly,Spot,Physical Spot deal(s)</record>
+        <record>2012-10-01 00:00:00.000,0,TR,167,EUR,-3982.27036418435,monthly,Spot,Physical Spot deal(s)</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

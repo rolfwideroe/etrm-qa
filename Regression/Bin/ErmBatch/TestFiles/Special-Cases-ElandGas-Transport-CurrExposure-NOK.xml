@@ -1,0 +1,30 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-ElandGas-Transport-CurrExposure-NOK</workspace>
+    <monitor>Special-Cases-ElandGas-Transport-CurrExposure-NOK</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>Special-Cases,Currency,D1011-11,2011-11-10 00:00:00.000,2011-11-10 00:00:00.000,Electricity Transport,Physical,Base,,,CET,EUR,Special-Cases-ElandGas-Transport-El-0001,EUR,2011-11-10 00:00:00.000,-6238.86620577281</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,EUR,2011-11-11 00:00:00.000,-2238.09689670106</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,EUR,2011-11-12 00:00:00.000,-2892.32883030215</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,EUR,2011-11-13 00:00:00.000,-2787.97713378795</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,EUR,2011-11-14 00:00:00.000,-2684.34410711241</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,EUR,2011-11-15 00:00:00.000,-2581.5500087999</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,EUR,2011-11-16 00:00:00.000,-629.436437055941</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,GBP,2011-11-11 00:00:00.000,62.3263006908532</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,GBP,2011-11-12 00:00:00.000,85.829823329316</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,GBP,2011-11-13 00:00:00.000,88.9315564678845</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,GBP,2011-11-14 00:00:00.000,92.0127823616006</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,GBP,2011-11-15 00:00:00.000,95.0700941284723</record>
+        <record>Special-Cases,Currency,11-Nov-11 - 15-Nov-11,2011-11-11 00:00:00.000,2011-11-15 00:00:00.000,Gas transport,Physical,Base,,,CET 06-06,EUR,Special-Cases-ElandGas-Transport-Gas-0001,GBP,2011-11-16 00:00:00.000,24.2420794640701</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

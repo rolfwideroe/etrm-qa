@@ -1,0 +1,19 @@
+<test type="EcmBatch" name="Gas-Forward-RoundedAverage-MW-EUR-CFMon-ActualPL-EUR" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-Forward-RoundedAverage-EUR-CFMon-ActualPL-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-05-01 00:00:00.000,0,HI,195,EUR,95455.2,monthly,Forward,May-11,Gas-Forward-RoundedAverage-EUR-0001</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

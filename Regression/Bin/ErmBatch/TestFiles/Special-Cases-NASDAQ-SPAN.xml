@@ -1,0 +1,32 @@
+<test type="ErmBatch" name="Special-Cases-NASDAQ-SPAN" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-NASDAQ-SPAN</workspace>
+    <monitor>Special-Cases-NASDAQ-SPAN</monitor>
+    <reportdate>2015-11-25T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\SpanContractData.xml" />
+      <returns>
+        <record>FWYR-16,Special-Cases,NordPool System Price,2016-01-01 00:00:00.000,2017-01-01 00:00:00.000,Base,8784,0,20.27,EUR,0</record>
+        <record>M12-15,Special-Cases,NordPool System Price,2015-12-01 00:00:00.000,2016-01-01 00:00:00.000,Base,744,0,23.25,EUR,7440</record>
+        <record>Q1-16,Special-Cases,NordPool System Price,2016-01-01 00:00:00.000,2016-04-01 00:00:00.000,Base,2183,0,23.32,EUR,0</record>
+        <record>Q2-16,Special-Cases,NordPool System Price,2016-04-01 00:00:00.000,2016-07-01 00:00:00.000,Base,2184,0,18.35,EUR,0</record>
+        <record>Q3-16,Special-Cases,NordPool System Price,2016-07-01 00:00:00.000,2016-10-01 00:00:00.000,Base,2208,0,17.05,EUR,0</record>
+        <record>Q4-16,Special-Cases,NordPool System Price,2016-10-01 00:00:00.000,2017-01-01 00:00:00.000,Base,2209,0,22.4,EUR,0</record>
+        <record>RNP : FWYR-16,Special-Cases,NordPool System Price,2016-01-01 00:00:00.000,2017-01-01 00:00:00.000,Base,8784,10,0,EUR,877797.2</record>
+        <record>W48-15,Special-Cases,NordPool System Price,2015-11-23 00:00:00.000,2015-11-30 00:00:00.000,Base,168,0,26.55,EUR,0</record>
+        <record>M11-15,Special-Cases,SYOSL,2015-11-01 00:00:00.000,2015-12-01 00:00:00.000,Base,720,10,-0.93,EUR,-62040</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\SpanMarketData.xml" />
+      <returns>
+        <record>OSSY  ,-62040,-5436,-67476</record>
+        <record>SYDE  ,885237.199999999,-19704,865533.199999999</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

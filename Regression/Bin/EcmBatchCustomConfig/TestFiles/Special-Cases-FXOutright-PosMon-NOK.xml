@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FXOutright-PosMon-NOK</workspace>
+    <monitor>Special-Cases-FXOutright-PosMon-NOK</monitor>
+    <reportdate>2011-11-07T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="EnableFxOutright" Value="True" />
+    </ElvizConfigurations>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0109 Special-Cases,,Financial,,Other Period,Other Period - ,ECS Curve,CET,USD,Viz,Currency,,Currency Forward,USDEUR 07-Dec-11,,,,2011-12-07 00:00:00.000,2011-12-07 00:00:00.000,Active,0,0,-440437.916580306,-440437.916580306,8110372.84570984,-440437.916580306,0,-440437.916580306,-440437.916580306,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,8.55081076229015,-8550810.76229015,8.11037284570984,0,0,Special-Cases-FXOutright-Currency-Forward-0001</record>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,M11-11,M11-11 - Base,ECS Curve,CET,NOK,NordPool,Electricity,,Asian,ASIC/A M11-11 335.00 - Base,,,,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Active,0,-8388,149699.02361639,141311.02361639,149699.02361639,149699.02361639,-8388,149699.02361639,141311.02361639,0,0,0,5,0,0,0,720,3.20176239762637,NULL,335,0.00326999424175454,-0.233576229664729,18.5044810105945,-2.62030254427471,0.640352479525274,2.33,-8388,41.5830621156639,390.638572239734,0.588497607659871,Special-Cases-FXOutright-El-Asian-NOK-0001</record>
+        <record>0109 Special-Cases,,Physical,Elcertificate,Other Period,Other Period - ,ECS Curve,CET,SEK,Viz,Elcertificate,,Forward,ECS Mar-12,,,,2012-03-16 00:00:00.000,2012-03-16 00:00:00.000,Active,0,0,3911727.58444578,3911727.58444578,10010394.8192131,3911727.58444578,0,-6098667.23476732,-6098667.23476732,0,0,0,50000,0,0,0,1,50000,NULL,0,0,0,0,0,0,121.973344695346,-6098667.23476732,200.207896384262,0,0,Special-Cases-FXOutright-ElCert-Forward-OTC-0001</record>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,M11-11,M11-11 - Base,ECS Curve,CET,EUR,Viz,Electricity,,Forward,M11-11 - Base,,,,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Active,0,-134723.775392002,-48219.6406645789,-182943.416056581,2156324.91876333,-48219.6406645789,-134723.775392002,-48219.6406645789,-182943.416056581,0.63013698630137,5520,0,10,0,0,1680,552,10,NULL,0,0,0,0,0,0,399.374014389115,-2204544.55942791,390.638572239734,0,0,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>0109 Special-Cases,Peak,Financial,NordPool System Price,M11-11,M11-11 - Peak,ECS Curve,CET,NOK,Viz,Electricity,,Forward,M11-11 - Peak,,,,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Active,0,20811.6,279708.699794455,300520.299794456,891708.699794456,279708.699794455,20811.6,279708.699794455,300520.299794456,0.232876712328767,2040,0,10,0,0,600,204,10,NULL,0,0,0,0,0,0,300,-612000,437.11210774238,0,0,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>0109 Special-Cases,Base,Financial,ICE TTF,M11-11,M11-11,ECS Curve,CET 06-06,EUR,Viz,Gas,,Forward,Nov-11,,,,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Active,0,-989823.410244418,-3329121.73911832,-4318945.14936274,2219316.39995624,-3329121.73911832,-989823.410244418,-3329121.73911832,-4318945.14936274,0,0,0,500,0,0,3375,558,500,NULL,0,0,0,0,0,0,477.285001210715,-5548438.13907456,190.908937630644,0,0,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

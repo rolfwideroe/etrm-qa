@@ -1,0 +1,56 @@
+<InstrumentCodesTestCase>
+	<InsertXml>
+	<![CDATA[ 
+<DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-Future</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityFuture>
+        <InstrumentData>
+          <ExecutionVenue>EEX</ExecutionVenue>
+          <PriceBasis>EEX</PriceBasis>
+          <LoadProfile>Peak</LoadProfile>
+          <FromDate>2015-12-01</FromDate>
+          <ToDate>2015-12-31</ToDate>
+          <Financial />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>5</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>33.12</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </ElectricityFuture>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2015-11-17T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>El-Future-EEX-Month-Peak</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+	]]>
+	</InsertXml>
+	<ExpectedResult>
+		<ExpectedTransaction ExternalId="El-Future-EEX-Month-Peak">
+			<ExpectedCodes>
+				<ExpectedCode CodeType="ISIN" Code="DE0006606031"/>
+			</ExpectedCodes>
+		</ExpectedTransaction>
+	</ExpectedResult>
+</InstrumentCodesTestCase>

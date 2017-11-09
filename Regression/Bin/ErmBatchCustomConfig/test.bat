@@ -1,0 +1,1 @@
+..\Prerequisites\NUnit\bin\nunit-console.exe TestErmCustomConfig.dll /exclude:ERM_New,DwhExportOnly

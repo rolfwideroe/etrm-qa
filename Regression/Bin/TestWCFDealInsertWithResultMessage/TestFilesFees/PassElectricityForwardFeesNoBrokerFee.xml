@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+	<TestResult>Success</TestResult>
+	<TestData>
+		<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+			<MetaData>
+				<MessageId>MessageId</MessageId>
+				<Timezone>CET</Timezone>
+			</MetaData>
+			<Transaction>
+				<TransactionType>Automatic</TransactionType>
+				<DealType>Electricity-Forward</DealType>
+				<Portfolios>
+					<Portfolio>API Test Customer</Portfolio>
+					<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+					<BuySell>Buy</BuySell>
+				</Portfolios>
+				<ElectricityForward>
+					<InstrumentData>
+						<ExecutionVenue>None</ExecutionVenue>
+						<PriceBasis>NordPool System Price</PriceBasis>
+						<LoadProfile>Base Week</LoadProfile>
+						<FromDate>2008-01-01</FromDate>
+						<ToDate>2008-01-01</ToDate>
+						<Financial/>
+					</InstrumentData>
+					<SettlementData>
+						<Quantity>40</Quantity>
+						<QuantityUnit>MW</QuantityUnit>
+						<Price>28</Price>
+						<Currency>NOK</Currency>
+						<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+						<CurrencySource>Viz</CurrencySource>
+						<Clearing>Electronic</Clearing>
+					</SettlementData>
+					<FeesData>
+						<Fees>
+							<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.3" FeeUnit="NOK/MWh"  />
+							<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.3" FeeUnit="NOK" />
+							<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.1" FeeUnit="NOK/MWh" />
+							<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="NOK" />
+							<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" FeeUnit="NOK/MWh"  />
+							<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.01" FeeUnit="NOK" />
+						</Fees>
+					</FeesData>
+				</ElectricityForward>
+				<DealDetails>
+					<Status>Active</Status>
+					<Trader>DealImport</Trader>
+					<TradeDate>2007-12-24T00:00:00</TradeDate>
+					<ConfirmedByBroker>false</ConfirmedByBroker>
+					<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+					<Authorised>false</Authorised>
+					<Paid>false</Paid>
+				</DealDetails>
+				<ReferenceData>			
+					<Comment>ElectricityForward with Broker Fee Profile; should pass</Comment>
+					<DealGroup>API Test</DealGroup>
+					<ExternalId>PassElectricityForwardFeesNoBrokerFee</ExternalId>
+					<ExternalSource>XMLFileImport</ExternalSource>
+					<TicketNumber>TicketNumber</TicketNumber>
+				</ReferenceData>
+			</Transaction>
+		</DealInsert>
+	</TestData>
+	<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+	<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<TransactionId>269</TransactionId>
+		<DealType>Electricity-Forward</DealType>
+		<BuySell>Buy</BuySell>
+		<DeliveryType>Financial</DeliveryType>
+		<Portfolios>
+			<PortfolioName>API Test Customer</PortfolioName>
+			<PortfolioExternalId>API Test Customer</PortfolioExternalId>
+			<CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+			<CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+		</Portfolios>
+		<InstrumentData>
+			<ExecutionVenue>None</ExecutionVenue>
+			<InstrumentName>D0101-08</InstrumentName>
+			<PriceBasis>NordPool System Price</PriceBasis>
+			<FromDate>2008-01-01T00:00:00</FromDate>
+			<ToDate>2008-01-01T00:00:00</ToDate>
+			<LoadProfile>Base Week</LoadProfile>
+			<TimeZone>Central Europe Standard Time</TimeZone>
+		</InstrumentData>
+		<SettlementData>
+			<Quantity>40</Quantity>
+			<QuantityUnit>MW</QuantityUnit>
+			<Price>28</Price>
+			<PriceIsoCurrency>NOK</PriceIsoCurrency>
+			<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+			<CurrencySource>Viz</CurrencySource>
+		</SettlementData>
+		<DealDetails>
+			<Trader>DealImport</Trader>
+			<Status>Active</Status>
+			<TradeDateTimeUtc>2007-12-23T23:00:00Z</TradeDateTimeUtc>
+		</DealDetails>
+		<FeesData>
+			<ClearingType>Electronic</ClearingType>
+			<Fees>				
+				<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.3" FeeUnit="NOK/MWh"  />
+				<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.3" FeeUnit="NOK" />
+				<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.1" FeeUnit="NOK/MWh" />
+				<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="NOK" />
+				<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" FeeUnit="NOK/MWh"  />
+				<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.01" FeeUnit="NOK" />
+			</Fees>
+		</FeesData>
+		<ReferenceData>
+			<ExternalId>PassElectricityForwardFeesNoBrokerFee</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+			<DealGroups>
+				<DealGroup Name="DealGroup1" Value="API Test"/>
+			</DealGroups>
+			<Comment>ElectricityForward with Broker Fee Profile; should pass</Comment>
+			<ModificationDateTimeUtc>2014-08-12T10:59:21Z</ModificationDateTimeUtc>
+			<RiskValue>0</RiskValue>
+			<Originator>true</Originator>
+			<Deliveries>24</Deliveries>
+			<OriginalQuantity>40</OriginalQuantity>
+			<ReferringId>270</ReferringId>
+		</ReferenceData>
+		<TransactionWorkFlowDetails>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Audited>false</Audited>
+		</TransactionWorkFlowDetails>
+	</QaTransactionDTO>
+</TestCase>

@@ -1,0 +1,46 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Oil-Asian-USD-CFMon-ActualCF-USD-Delta</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18300,daily,Asian,ASIC/A Nov-11 130.00 - Premium,Oil-Asian-USD-0001</record>
+        <record>2011-11-30 00:00:00.000,0,TR,181,USD,-12720.2738310394,daily,Asian,ASIC/A Nov-11 130.00 - Settlement,Oil-Asian-USD-0001</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIP/A Nov-11 130.00 - Premium,Oil-Asian-USD-0002</record>
+        <record>2011-11-30 00:00:00.000,0,TR,181,USD,57.4248142774041,daily,Asian,ASIP/A Nov-11 130.00 - Settlement,Oil-Asian-USD-0002</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIC/A Nov-11 80.00 - Premium,Oil-Asian-USD-0003</record>
+        <record>2011-11-30 00:00:00.000,0,TR,181,USD,156.170568359033,daily,Asian,ASIC/A Nov-11 80.00 - Settlement,Oil-Asian-USD-0003</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIP/A Nov-11 80.00 - Premium,Oil-Asian-USD-0004</record>
+        <record>2011-11-30 00:00:00.000,0,TR,181,USD,-5.25872770189979,daily,Asian,ASIP/A Nov-11 80.00 - Settlement,Oil-Asian-USD-0004</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIC/A Sep-11 130.00 - Premium,Oil-Asian-USD-0005</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIP/A Sep-11 130.00 - Premium,Oil-Asian-USD-0006</record>
+        <record>2011-09-30 00:00:00.000,0,HI,181,USD,95.6954545454546,daily,Asian,ASIP/A Sep-11 130.00 - Settlement,Oil-Asian-USD-0006</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIC/A Sep-11 80.00 - Premium,Oil-Asian-USD-0007</record>
+        <record>2011-09-30 00:00:00.000,0,HI,181,USD,154.304545454545,daily,Asian,ASIC/A Sep-11 80.00 - Settlement,Oil-Asian-USD-0007</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIP/A Sep-11 80.00 - Premium,Oil-Asian-USD-0008</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIC/A Mar-12 130.00 - Premium,Oil-Asian-USD-0009</record>
+        <record>2012-03-31 00:00:00.000,0,TR,181,USD,-16.8190834756932,daily,Asian,ASIC/A Mar-12 130.00 - Settlement,Oil-Asian-USD-0009</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIP/A Mar-12 130.00 - Premium,Oil-Asian-USD-0010</record>
+        <record>2012-03-31 00:00:00.000,0,TR,181,USD,69.5805255445097,daily,Asian,ASIP/A Mar-12 130.00 - Settlement,Oil-Asian-USD-0010</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIC/A Mar-12 80.00 - Premium,Oil-Asian-USD-0011</record>
+        <record>2012-03-31 00:00:00.000,0,TR,181,USD,120.534748693747,daily,Asian,ASIC/A Mar-12 80.00 - Settlement,Oil-Asian-USD-0011</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIP/A Mar-12 80.00 - Premium,Oil-Asian-USD-0012</record>
+        <record>2012-03-31 00:00:00.000,0,TR,181,USD,-5.22893101038429,daily,Asian,ASIP/A Mar-12 80.00 - Settlement,Oil-Asian-USD-0012</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIC/A May-11 130.00 - Premium,Oil-Asian-USD-0013</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,18.3,daily,Asian,ASIC/A May-11 130.00 - Premium,Oil-Asian-USD-0014</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,18.3,daily,Asian,ASIC/A Jun-12 130.00 - Premium,Oil-Asian-USD-0015</record>
+        <record>2012-06-30 00:00:00.000,0,TR,181,USD,33.9227994107723,daily,Asian,ASIC/A Jun-12 130.00 - Settlement,Oil-Asian-USD-0015</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18.3,daily,Asian,ASIC/A Jun-12 130.00 - Premium,Oil-Asian-USD-0016</record>
+        <record>2012-06-30 00:00:00.000,0,TR,181,USD,-33.9227994107723,daily,Asian,ASIC/A Jun-12 130.00 - Settlement,Oil-Asian-USD-0016</record>
+        <record>2010-01-04 00:00:00.000,0,PR,181,USD,-18300,daily,Asian,ASIC/A Nov-11 5.00 - Premium,Oil-Asian-USD-0017</record>
+        <record>2011-11-30 00:00:00.000,0,TR,181,USD,558152.224225032,daily,Asian,ASIC/A Nov-11 5.00 - Settlement,Oil-Asian-USD-0017</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

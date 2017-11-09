@@ -1,0 +1,651 @@
+<test type="EcmBatch" name="Gas-Floating-Index-Mwhd-EUR-ActualPL-NOK" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-Floating-Index-Mwhd-EUR-ActualPL-NOK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="CurrencySource" Value="ECB" />
+    </ElvizConfigurations>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1691748.61726113,monthly,Floating Price,Sep-11,Gas-Floating-Index-Mwhd-EUR-0001</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1325083.86574344,monthly,Floating Price,Sep-11,Gas-Floating-Index-Mwhd-EUR-0002</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2542366.58901864,monthly,Floating Price,Sep-11,Gas-Floating-Index-Mwhd-EUR-0007</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2033932.17554136,monthly,Floating Price,Sep-11,Gas-Floating-Index-Mwhd-EUR-0008</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1678160.17457764,monthly,Floating Price,Nov-11,Gas-Floating-Index-Mwhd-EUR-0009</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1311454.01521254,monthly,Floating Price,Nov-11,Gas-Floating-Index-Mwhd-EUR-0010</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2597543.31137464,monthly,Floating Price,Nov-11,Gas-Floating-Index-Mwhd-EUR-0015</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2077606.62921004,monthly,Floating Price,Nov-11,Gas-Floating-Index-Mwhd-EUR-0016</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1772345.38944604,monthly,Floating Price,Dec-11,Gas-Floating-Index-Mwhd-EUR-0017</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1383079.58401943,monthly,Floating Price,Dec-11,Gas-Floating-Index-Mwhd-EUR-0018</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2643296.18829068,monthly,Floating Price,Dec-11,Gas-Floating-Index-Mwhd-EUR-0023</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2108871.91638997,monthly,Floating Price,Dec-11,Gas-Floating-Index-Mwhd-EUR-0024</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1814336.94628973,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0025</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1866501.12168228,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0025</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1837036.11704022,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0025</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1427855.76800728,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0026</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1473673.44360023,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0026</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1448980.53051518,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0026</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2700500.02414045,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0031</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2886773.55079,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0031</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2695396.21646391,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0031</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2166324.99954955,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0032</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2323900.46785667,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0032</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2164280.61336826,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0032</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1785554.89872341,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0033</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1678160.17457764,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0033</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1772345.38944604,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0033</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1402959.45095284,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0034</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1311454.01521254,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0034</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1383079.58401943,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0034</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2623838.0997,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0039</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2597543.31137464,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0039</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2643296.18829068,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0039</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2101528.7851,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0040</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2077606.62921004,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0040</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2108871.91638997,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0040</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1769760.28670418,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0041</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1679153.7667599,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0041</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1792669.75772788,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0041</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1377580.01554845,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0042</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1308156.82455979,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0042</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1398163.82999936,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0042</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2613596.17077422,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0047</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-2436817.19529744,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0047</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2609905.22786485,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0047</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2080776.58560682,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0048</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1939543.01500774,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0048</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2079193.38844683,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0048</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-1648086.87154318,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0049</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-1832714.78762457,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0049</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1814336.94628973,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0049</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1866501.12168228,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0049</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1837036.11704022,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0049</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1691748.61726113,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0049</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-1289258.80395098,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0050</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-1439888.37504048,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0050</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1427855.76800728,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0050</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1473673.44360023,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0050</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1448980.53051518,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0050</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1325083.86574344,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0050</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-2951211.22955842,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0055</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-2812590.69658364,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0055</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2700500.02414045,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0055</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2886773.55079,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0055</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2695396.21646391,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0055</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2542366.58901864,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0055</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-2375195.76896368,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0056</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-2256451.63250636,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0056</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2166324.99954955,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0056</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2323900.46785667,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0056</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2164280.61336826,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0056</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2033932.17554136,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0056</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1785554.89872341,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0057</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1678160.17457764,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0057</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1772345.38944604,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0057</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1769760.28670418,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0057</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1679153.7667599,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0057</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1792669.75772788,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0057</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1402959.45095284,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0058</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1311454.01521254,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0058</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1383079.58401943,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0058</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1377580.01554845,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0058</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1308156.82455979,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0058</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1398163.82999936,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0058</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2623838.0997,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0063</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2597543.31137464,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0063</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2643296.18829068,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0063</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2613596.17077422,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0063</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-2436817.19529744,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0063</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2609905.22786485,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0063</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2101528.7851,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0064</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2077606.62921004,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0064</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2108871.91638997,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0064</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2080776.58560682,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0064</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1939543.01500774,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0064</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2079193.38844683,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0064</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-1728290.81744776,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0065</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-1787245.6067163,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0065</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1721579.00202865,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0065</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-1789910.53735594,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0065</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-1781702.10226249,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0065</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1715755.34987851,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0065</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-1347532.85967995,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0066</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-1394552.40873976,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0066</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1342042.88326659,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0066</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-1398057.84282027,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0066</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-1390139.75107493,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0066</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1337192.44262763,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0066</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-2519570.35468836,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0071</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-2605036.09176516,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0071</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-2509248.09629511,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0071</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-2597287.40001018,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0071</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-2581460.3079594,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0071</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-2482242.23382605,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0071</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-2006932.47404712,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0072</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-2076044.47961381,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0072</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1998433.7951553,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0072</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-2070871.89503214,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0072</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-2056604.92248902,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0072</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1975931.51258391,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0072</record>
+        <record>2010-01-01 00:00:00.000,0,HI,79,NOK,-1221538.02177299,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-02-01 00:00:00.000,0,HI,79,NOK,-1138628.87139701,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-03-01 00:00:00.000,0,HI,79,NOK,-1329722.1217287,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-04-01 00:00:00.000,0,HI,79,NOK,-1306331.96465014,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-05-01 00:00:00.000,0,HI,79,NOK,-1361963.542237,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-06-01 00:00:00.000,0,HI,79,NOK,-1332828.23018078,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-07-01 00:00:00.000,0,HI,79,NOK,-1410290.99983274,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1389014.03915158,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1298803.3492441,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-10-01 00:00:00.000,0,HI,79,NOK,-1353930.63383797,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-11-01 00:00:00.000,0,HI,79,NOK,-1315559.2859427,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-12-01 00:00:00.000,0,HI,79,NOK,-1231253.49685939,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0073</record>
+        <record>2010-01-01 00:00:00.000,0,HI,79,NOK,-962711.824114993,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-02-01 00:00:00.000,0,HI,79,NOK,-900312.348863346,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-03-01 00:00:00.000,0,HI,79,NOK,-1063958.48856391,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-04-01 00:00:00.000,0,HI,79,NOK,-1040724.01462961,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-05-01 00:00:00.000,0,HI,79,NOK,-1073240.41971116,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-06-01 00:00:00.000,0,HI,79,NOK,-1041219.30812731,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-07-01 00:00:00.000,0,HI,79,NOK,-1098983.86121228,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1089049.90754299,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1012593.13768425,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-10-01 00:00:00.000,0,HI,79,NOK,-1054947.16617581,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-11-01 00:00:00.000,0,HI,79,NOK,-1022903.10502725,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-12-01 00:00:00.000,0,HI,79,NOK,-932879.398029491,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0074</record>
+        <record>2010-01-01 00:00:00.000,0,HI,79,NOK,-2016835.055235,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-02-01 00:00:00.000,0,HI,79,NOK,-1745715.338295,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-03-01 00:00:00.000,0,HI,79,NOK,-2126942.12681826,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-04-01 00:00:00.000,0,HI,79,NOK,-2164789.211975,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-05-01 00:00:00.000,0,HI,79,NOK,-1897559.269172,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-06-01 00:00:00.000,0,HI,79,NOK,-1736146.98412364,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-07-01 00:00:00.000,0,HI,79,NOK,-1790619.39576455,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1867007.4977,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1817085.62157591,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-10-01 00:00:00.000,0,HI,79,NOK,-2080347.05820786,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-11-01 00:00:00.000,0,HI,79,NOK,-2087369.96518636,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-12-01 00:00:00.000,0,HI,79,NOK,-2148688.21450857,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0079</record>
+        <record>2010-01-01 00:00:00.000,0,HI,79,NOK,-1625459.352,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2010-02-01 00:00:00.000,0,HI,79,NOK,-1406217.737945,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2010-03-01 00:00:00.000,0,HI,79,NOK,-1728308.49280522,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2010-04-01 00:00:00.000,0,HI,79,NOK,-1756105.054067,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2010-05-01 00:00:00.000,0,HI,79,NOK,-1519570.192157,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2010-06-01 00:00:00.000,0,HI,79,NOK,-1377318.26974636,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2010-07-01 00:00:00.000,0,HI,79,NOK,-1415924.19115545,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1487377.78966667,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1444495.03129409,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2010-10-01 00:00:00.000,0,HI,79,NOK,-1660294.18648405,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2010-11-01 00:00:00.000,0,HI,79,NOK,-1666078.67106364,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2010-12-01 00:00:00.000,0,HI,79,NOK,-1697408.32940381,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0080</record>
+        <record>2011-01-01 00:00:00.000,0,HI,79,NOK,-1346898.89306595,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-02-01 00:00:00.000,0,HI,79,NOK,-1344135.48732192,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-03-01 00:00:00.000,0,HI,79,NOK,-1565508.72907656,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-1648086.87154318,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-1832714.78762457,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1814336.94628973,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1866501.12168228,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1837036.11704022,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1691748.61726113,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1785554.89872341,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1678160.17457764,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1772345.38944604,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0081</record>
+        <record>2011-01-01 00:00:00.000,0,HI,79,NOK,-1035580.62888996,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-02-01 00:00:00.000,0,HI,79,NOK,-1045421.93502327,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-03-01 00:00:00.000,0,HI,79,NOK,-1213309.6526388,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-1289258.80395098,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-1439888.37504048,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1427855.76800728,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1473673.44360023,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1448980.53051518,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1325083.86574344,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1402959.45095284,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1311454.01521254,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1383079.58401943,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0082</record>
+        <record>2011-01-01 00:00:00.000,0,HI,79,NOK,-2299972.52158143,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-02-01 00:00:00.000,0,HI,79,NOK,-2284253.92738,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-03-01 00:00:00.000,0,HI,79,NOK,-2793130.79752826,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-2951211.22955842,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-2812590.69658364,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2700500.02414045,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2886773.55079,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2695396.21646391,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2542366.58901864,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2623838.0997,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2597543.31137464,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2643296.18829068,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0087</record>
+        <record>2011-01-01 00:00:00.000,0,HI,79,NOK,-1829808.65265286,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2011-02-01 00:00:00.000,0,HI,79,NOK,-1828853.968405,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2011-03-01 00:00:00.000,0,HI,79,NOK,-2236328.04301522,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-2375195.76896368,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-2256451.63250636,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2166324.99954955,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2323900.46785667,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2164280.61336826,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2033932.17554136,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2101528.7851,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2077606.62921004,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2108871.91638997,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0088</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1769760.28670418,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1679153.7667599,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1792669.75772788,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-1728290.81744776,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-1787245.6067163,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1721579.00202865,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-1789910.53735594,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-1781702.10226249,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1715755.34987851,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-10-01 00:00:00.000,0,TR,79,NOK,-1720874.52796076,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-11-01 00:00:00.000,0,TR,79,NOK,-1642878.2697148,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-12-01 00:00:00.000,0,TR,79,NOK,-1676321.19180481,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0089</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1377580.01554845,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1308156.82455979,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1398163.82999936,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-1347532.85967995,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-1394552.40873976,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1342042.88326659,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-1398057.84282027,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-1390139.75107493,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1337192.44262763,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-10-01 00:00:00.000,0,TR,79,NOK,-1330271.03527588,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-11-01 00:00:00.000,0,TR,79,NOK,-1265596.63939487,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-12-01 00:00:00.000,0,TR,79,NOK,-1287290.76840959,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0090</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2613596.17077422,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-2436817.19529744,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2609905.22786485,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-2519570.35468836,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-2605036.09176516,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-2509248.09629511,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-2597287.40001018,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-2581460.3079594,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-2482242.23382605,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-10-01 00:00:00.000,0,TR,79,NOK,-2507954.78817926,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-11-01 00:00:00.000,0,TR,79,NOK,-2399595.08327754,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-12-01 00:00:00.000,0,TR,79,NOK,-2453955.59267772,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0095</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2080776.58560682,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1939543.01500774,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2079193.38844683,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-2006932.47404712,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-2076044.47961381,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1998433.7951553,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-2070871.89503214,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-2056604.92248902,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1975931.51258391,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2012-10-01 00:00:00.000,0,TR,79,NOK,-1986171.25212463,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2012-11-01 00:00:00.000,0,TR,79,NOK,-1896193.98403049,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2012-12-01 00:00:00.000,0,TR,79,NOK,-1935319.43580367,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0096</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1210539.48797426,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0097</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1038286.23286095,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0097</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-949076.984506051,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0098</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-809573.183431622,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0098</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1627180.523165,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0103</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1452450.06833045,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0103</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1296277.847165,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0104</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1154709.71298955,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0104</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1244093.65235084,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0105</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1678160.17457764,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0105</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-688318.539430669,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0105</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-973693.449195697,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0106</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1311454.01521254,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0106</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-537702.201650146,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0106</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1836552.21182,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0111</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2597543.31137464,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0111</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1025310.43001103,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0111</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1467408.91542,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0112</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2077606.62921004,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0112</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-818528.777133784,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0112</record>
+        <record>2013-03-01 00:00:00.000,0,TR,79,NOK,-1562842.8841187,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0113</record>
+        <record>2013-04-01 00:00:00.000,0,TR,79,NOK,-1647316.02660284,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0113</record>
+        <record>2013-05-01 00:00:00.000,0,TR,79,NOK,-1706685.65256106,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0113</record>
+        <record>2013-06-01 00:00:00.000,0,TR,79,NOK,-1657405.43067486,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0113</record>
+        <record>2013-07-01 00:00:00.000,0,TR,79,NOK,-1701027.04543974,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0113</record>
+        <record>2013-08-01 00:00:00.000,0,TR,79,NOK,-1683560.32084195,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0113</record>
+        <record>2013-09-01 00:00:00.000,0,TR,79,NOK,-1621205.04223533,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0113</record>
+        <record>2013-10-01 00:00:00.000,0,TR,79,NOK,-1591444.30438413,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0113</record>
+        <record>2013-03-01 00:00:00.000,0,TR,79,NOK,-1201404.67772457,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0114</record>
+        <record>2013-04-01 00:00:00.000,0,TR,79,NOK,-1274427.24992297,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0114</record>
+        <record>2013-05-01 00:00:00.000,0,TR,79,NOK,-1322505.21746111,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0114</record>
+        <record>2013-06-01 00:00:00.000,0,TR,79,NOK,-1286757.38611043,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0114</record>
+        <record>2013-07-01 00:00:00.000,0,TR,79,NOK,-1319225.02820029,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0114</record>
+        <record>2013-08-01 00:00:00.000,0,TR,79,NOK,-1302984.18816988,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0114</record>
+        <record>2013-09-01 00:00:00.000,0,TR,79,NOK,-1254125.60861744,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0114</record>
+        <record>2013-10-01 00:00:00.000,0,TR,79,NOK,-1225601.38082494,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0114</record>
+        <record>2013-03-01 00:00:00.000,0,TR,79,NOK,-2275446.61692732,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0119</record>
+        <record>2013-04-01 00:00:00.000,0,TR,79,NOK,-2379921.31810038,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0119</record>
+        <record>2013-05-01 00:00:00.000,0,TR,79,NOK,-2460559.16164178,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0119</record>
+        <record>2013-06-01 00:00:00.000,0,TR,79,NOK,-2382353.40755938,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0119</record>
+        <record>2013-07-01 00:00:00.000,0,TR,79,NOK,-2447779.52430865,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0119</record>
+        <record>2013-08-01 00:00:00.000,0,TR,79,NOK,-2426839.52411456,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0119</record>
+        <record>2013-09-01 00:00:00.000,0,TR,79,NOK,-2337376.77826031,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0119</record>
+        <record>2013-10-01 00:00:00.000,0,TR,79,NOK,-2305541.23620899,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0119</record>
+        <record>2013-03-01 00:00:00.000,0,TR,79,NOK,-1795241.12173175,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0120</record>
+        <record>2013-04-01 00:00:00.000,0,TR,79,NOK,-1884931.65950425,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0120</record>
+        <record>2013-05-01 00:00:00.000,0,TR,79,NOK,-1950733.14169504,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0120</record>
+        <record>2013-06-01 00:00:00.000,0,TR,79,NOK,-1890880.70018086,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0120</record>
+        <record>2013-07-01 00:00:00.000,0,TR,79,NOK,-1941518.76059104,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0120</record>
+        <record>2013-08-01 00:00:00.000,0,TR,79,NOK,-1922383.52423039,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0120</record>
+        <record>2013-09-01 00:00:00.000,0,TR,79,NOK,-1850935.38863826,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0120</record>
+        <record>2013-10-01 00:00:00.000,0,TR,79,NOK,-1820682.15734566,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0120</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1691748.61726113,monthly,Floating Price,Sep-11,Gas-Floating-Index-Mwhd-EUR-0121</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1325083.86574344,monthly,Floating Price,Sep-11,Gas-Floating-Index-Mwhd-EUR-0122</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2542366.58901864,monthly,Floating Price,Sep-11,Gas-Floating-Index-Mwhd-EUR-0127</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2033932.17554136,monthly,Floating Price,Sep-11,Gas-Floating-Index-Mwhd-EUR-0128</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1678160.17457764,monthly,Floating Price,Nov-11,Gas-Floating-Index-Mwhd-EUR-0129</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1311454.01521254,monthly,Floating Price,Nov-11,Gas-Floating-Index-Mwhd-EUR-0130</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2597543.31137464,monthly,Floating Price,Nov-11,Gas-Floating-Index-Mwhd-EUR-0135</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2077606.62921004,monthly,Floating Price,Nov-11,Gas-Floating-Index-Mwhd-EUR-0136</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1772345.38944604,monthly,Floating Price,Dec-11,Gas-Floating-Index-Mwhd-EUR-0137</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1383079.58401943,monthly,Floating Price,Dec-11,Gas-Floating-Index-Mwhd-EUR-0138</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2643296.18829068,monthly,Floating Price,Dec-11,Gas-Floating-Index-Mwhd-EUR-0143</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2108871.91638997,monthly,Floating Price,Dec-11,Gas-Floating-Index-Mwhd-EUR-0144</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1814336.94628973,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0145</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1866501.12168228,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0145</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1837036.11704022,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0145</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1427855.76800728,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0146</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1473673.44360023,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0146</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1448980.53051518,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0146</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2700500.02414045,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0151</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2886773.55079,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0151</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2695396.21646391,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0151</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2166324.99954955,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0152</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2323900.46785667,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0152</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2164280.61336826,monthly,Floating Price,01-Jun-11 - 31-Aug-11,Gas-Floating-Index-Mwhd-EUR-0152</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1785554.89872341,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0153</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1678160.17457764,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0153</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1772345.38944604,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0153</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1402959.45095284,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0154</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1311454.01521254,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0154</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1383079.58401943,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0154</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2623838.0997,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0159</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2597543.31137464,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0159</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2643296.18829068,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0159</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2101528.7851,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0160</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2077606.62921004,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0160</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2108871.91638997,monthly,Floating Price,Q4-11,Gas-Floating-Index-Mwhd-EUR-0160</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1769760.28670418,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0161</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1679153.7667599,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0161</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1792669.75772788,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0161</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1377580.01554845,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0162</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1308156.82455979,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0162</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1398163.82999936,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0162</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2613596.17077422,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0167</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-2436817.19529744,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0167</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2609905.22786485,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0167</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2080776.58560682,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0168</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1939543.01500774,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0168</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2079193.38844683,monthly,Floating Price,Q1-12,Gas-Floating-Index-Mwhd-EUR-0168</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-1648086.87154318,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0169</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-1832714.78762457,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0169</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1814336.94628973,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0169</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1866501.12168228,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0169</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1837036.11704022,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0169</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1691748.61726113,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0169</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-1289258.80395098,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0170</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-1439888.37504048,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0170</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1427855.76800728,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0170</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1473673.44360023,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0170</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1448980.53051518,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0170</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1325083.86574344,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0170</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-2951211.22955842,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0175</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-2812590.69658364,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0175</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2700500.02414045,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0175</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2886773.55079,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0175</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2695396.21646391,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0175</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2542366.58901864,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0175</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-2375195.76896368,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0176</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-2256451.63250636,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0176</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2166324.99954955,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0176</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2323900.46785667,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0176</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2164280.61336826,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0176</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2033932.17554136,monthly,Floating Price,SUM-11,Gas-Floating-Index-Mwhd-EUR-0176</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1785554.89872341,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0177</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1678160.17457764,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0177</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1772345.38944604,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0177</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1769760.28670418,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0177</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1679153.7667599,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0177</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1792669.75772788,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0177</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1402959.45095284,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0178</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1311454.01521254,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0178</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1383079.58401943,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0178</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1377580.01554845,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0178</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1308156.82455979,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0178</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1398163.82999936,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0178</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2623838.0997,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0183</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2597543.31137464,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0183</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2643296.18829068,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0183</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2613596.17077422,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0183</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-2436817.19529744,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0183</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2609905.22786485,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0183</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2101528.7851,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0184</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2077606.62921004,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0184</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2108871.91638997,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0184</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2080776.58560682,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0184</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1939543.01500774,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0184</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2079193.38844683,monthly,Floating Price,WIN-11,Gas-Floating-Index-Mwhd-EUR-0184</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-1728290.81744776,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0185</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-1787245.6067163,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0185</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1721579.00202865,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0185</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-1789910.53735594,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0185</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-1781702.10226249,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0185</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1715755.34987851,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0185</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-1347532.85967995,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0186</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-1394552.40873976,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0186</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1342042.88326659,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0186</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-1398057.84282027,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0186</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-1390139.75107493,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0186</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1337192.44262763,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0186</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-2519570.35468836,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0191</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-2605036.09176516,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0191</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-2509248.09629511,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0191</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-2597287.40001018,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0191</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-2581460.3079594,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0191</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-2482242.23382605,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0191</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-2006932.47404712,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0192</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-2076044.47961381,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0192</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1998433.7951553,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0192</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-2070871.89503214,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0192</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-2056604.92248902,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0192</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1975931.51258391,monthly,Floating Price,SUM-12,Gas-Floating-Index-Mwhd-EUR-0192</record>
+        <record>2010-01-01 00:00:00.000,0,HI,79,NOK,-1221538.02177299,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-02-01 00:00:00.000,0,HI,79,NOK,-1138628.87139701,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-03-01 00:00:00.000,0,HI,79,NOK,-1329722.1217287,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-04-01 00:00:00.000,0,HI,79,NOK,-1306331.96465014,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-05-01 00:00:00.000,0,HI,79,NOK,-1361963.542237,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-06-01 00:00:00.000,0,HI,79,NOK,-1332828.23018078,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-07-01 00:00:00.000,0,HI,79,NOK,-1410290.99983274,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1389014.03915158,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1298803.3492441,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-10-01 00:00:00.000,0,HI,79,NOK,-1353930.63383797,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-11-01 00:00:00.000,0,HI,79,NOK,-1315559.2859427,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-12-01 00:00:00.000,0,HI,79,NOK,-1231253.49685939,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0193</record>
+        <record>2010-01-01 00:00:00.000,0,HI,79,NOK,-962711.824114993,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-02-01 00:00:00.000,0,HI,79,NOK,-900312.348863346,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-03-01 00:00:00.000,0,HI,79,NOK,-1063958.48856391,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-04-01 00:00:00.000,0,HI,79,NOK,-1040724.01462961,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-05-01 00:00:00.000,0,HI,79,NOK,-1073240.41971116,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-06-01 00:00:00.000,0,HI,79,NOK,-1041219.30812731,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-07-01 00:00:00.000,0,HI,79,NOK,-1098983.86121228,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1089049.90754299,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1012593.13768425,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-10-01 00:00:00.000,0,HI,79,NOK,-1054947.16617581,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-11-01 00:00:00.000,0,HI,79,NOK,-1022903.10502725,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-12-01 00:00:00.000,0,HI,79,NOK,-932879.398029491,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0194</record>
+        <record>2010-01-01 00:00:00.000,0,HI,79,NOK,-2016835.055235,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-02-01 00:00:00.000,0,HI,79,NOK,-1745715.338295,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-03-01 00:00:00.000,0,HI,79,NOK,-2126942.12681826,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-04-01 00:00:00.000,0,HI,79,NOK,-2164789.211975,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-05-01 00:00:00.000,0,HI,79,NOK,-1897559.269172,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-06-01 00:00:00.000,0,HI,79,NOK,-1736146.98412364,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-07-01 00:00:00.000,0,HI,79,NOK,-1790619.39576455,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1867007.4977,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1817085.62157591,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-10-01 00:00:00.000,0,HI,79,NOK,-2080347.05820786,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-11-01 00:00:00.000,0,HI,79,NOK,-2087369.96518636,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-12-01 00:00:00.000,0,HI,79,NOK,-2148688.21450857,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0199</record>
+        <record>2010-01-01 00:00:00.000,0,HI,79,NOK,-1625459.352,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2010-02-01 00:00:00.000,0,HI,79,NOK,-1406217.737945,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2010-03-01 00:00:00.000,0,HI,79,NOK,-1728308.49280522,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2010-04-01 00:00:00.000,0,HI,79,NOK,-1756105.054067,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2010-05-01 00:00:00.000,0,HI,79,NOK,-1519570.192157,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2010-06-01 00:00:00.000,0,HI,79,NOK,-1377318.26974636,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2010-07-01 00:00:00.000,0,HI,79,NOK,-1415924.19115545,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1487377.78966667,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1444495.03129409,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2010-10-01 00:00:00.000,0,HI,79,NOK,-1660294.18648405,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2010-11-01 00:00:00.000,0,HI,79,NOK,-1666078.67106364,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2010-12-01 00:00:00.000,0,HI,79,NOK,-1697408.32940381,monthly,Floating Price,CAL-10,Gas-Floating-Index-Mwhd-EUR-0200</record>
+        <record>2011-01-01 00:00:00.000,0,HI,79,NOK,-1346898.89306595,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-02-01 00:00:00.000,0,HI,79,NOK,-1344135.48732192,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-03-01 00:00:00.000,0,HI,79,NOK,-1565508.72907656,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-1648086.87154318,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-1832714.78762457,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1814336.94628973,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1866501.12168228,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1837036.11704022,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1691748.61726113,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1785554.89872341,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1678160.17457764,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1772345.38944604,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0201</record>
+        <record>2011-01-01 00:00:00.000,0,HI,79,NOK,-1035580.62888996,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-02-01 00:00:00.000,0,HI,79,NOK,-1045421.93502327,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-03-01 00:00:00.000,0,HI,79,NOK,-1213309.6526388,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-1289258.80395098,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-1439888.37504048,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-1427855.76800728,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-1473673.44360023,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-1448980.53051518,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-1325083.86574344,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1402959.45095284,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1311454.01521254,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1383079.58401943,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0202</record>
+        <record>2011-01-01 00:00:00.000,0,HI,79,NOK,-2299972.52158143,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-02-01 00:00:00.000,0,HI,79,NOK,-2284253.92738,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-03-01 00:00:00.000,0,HI,79,NOK,-2793130.79752826,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-2951211.22955842,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-2812590.69658364,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2700500.02414045,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2886773.55079,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2695396.21646391,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2542366.58901864,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2623838.0997,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2597543.31137464,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2643296.18829068,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0207</record>
+        <record>2011-01-01 00:00:00.000,0,HI,79,NOK,-1829808.65265286,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2011-02-01 00:00:00.000,0,HI,79,NOK,-1828853.968405,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2011-03-01 00:00:00.000,0,HI,79,NOK,-2236328.04301522,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2011-04-01 00:00:00.000,0,HI,79,NOK,-2375195.76896368,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2011-05-01 00:00:00.000,0,HI,79,NOK,-2256451.63250636,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2011-06-01 00:00:00.000,0,HI,79,NOK,-2166324.99954955,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2011-07-01 00:00:00.000,0,HI,79,NOK,-2323900.46785667,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2011-08-01 00:00:00.000,0,HI,79,NOK,-2164280.61336826,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2011-09-01 00:00:00.000,0,HI,79,NOK,-2033932.17554136,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-2101528.7851,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2077606.62921004,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-2108871.91638997,monthly,Floating Price,CAL-11,Gas-Floating-Index-Mwhd-EUR-0208</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1769760.28670418,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1679153.7667599,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1792669.75772788,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-1728290.81744776,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-1787245.6067163,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1721579.00202865,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-1789910.53735594,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-1781702.10226249,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1715755.34987851,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-10-01 00:00:00.000,0,TR,79,NOK,-1720874.52796076,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-11-01 00:00:00.000,0,TR,79,NOK,-1642878.2697148,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-12-01 00:00:00.000,0,TR,79,NOK,-1676321.19180481,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0209</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-1377580.01554845,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1308156.82455979,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-1398163.82999936,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-1347532.85967995,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-1394552.40873976,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1342042.88326659,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-1398057.84282027,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-1390139.75107493,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1337192.44262763,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-10-01 00:00:00.000,0,TR,79,NOK,-1330271.03527588,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-11-01 00:00:00.000,0,TR,79,NOK,-1265596.63939487,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-12-01 00:00:00.000,0,TR,79,NOK,-1287290.76840959,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0210</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2613596.17077422,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-2436817.19529744,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2609905.22786485,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-2519570.35468836,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-2605036.09176516,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-2509248.09629511,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-2597287.40001018,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-2581460.3079594,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-2482242.23382605,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-10-01 00:00:00.000,0,TR,79,NOK,-2507954.78817926,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-11-01 00:00:00.000,0,TR,79,NOK,-2399595.08327754,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-12-01 00:00:00.000,0,TR,79,NOK,-2453955.59267772,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0215</record>
+        <record>2012-01-01 00:00:00.000,0,TR,79,NOK,-2080776.58560682,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2012-02-01 00:00:00.000,0,TR,79,NOK,-1939543.01500774,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2012-03-01 00:00:00.000,0,TR,79,NOK,-2079193.38844683,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2012-04-01 00:00:00.000,0,TR,79,NOK,-2006932.47404712,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2012-05-01 00:00:00.000,0,TR,79,NOK,-2076044.47961381,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2012-06-01 00:00:00.000,0,TR,79,NOK,-1998433.7951553,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2012-07-01 00:00:00.000,0,TR,79,NOK,-2070871.89503214,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2012-08-01 00:00:00.000,0,TR,79,NOK,-2056604.92248902,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2012-09-01 00:00:00.000,0,TR,79,NOK,-1975931.51258391,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2012-10-01 00:00:00.000,0,TR,79,NOK,-1986171.25212463,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2012-11-01 00:00:00.000,0,TR,79,NOK,-1896193.98403049,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2012-12-01 00:00:00.000,0,TR,79,NOK,-1935319.43580367,monthly,Floating Price,CAL-12,Gas-Floating-Index-Mwhd-EUR-0216</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1210539.48797426,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0217</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1038286.23286095,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0217</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-949076.984506051,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0218</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-809573.183431622,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0218</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1627180.523165,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0223</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1452450.06833045,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0223</record>
+        <record>2010-08-01 00:00:00.000,0,HI,79,NOK,-1296277.847165,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0224</record>
+        <record>2010-09-01 00:00:00.000,0,HI,79,NOK,-1154709.71298955,monthly,Floating Price,05-Aug-10 - 24-Sep-10,Gas-Floating-Index-Mwhd-EUR-0224</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1244093.65235084,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0225</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1678160.17457764,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0225</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-688318.539430669,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0225</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-973693.449195697,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0226</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-1311454.01521254,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0226</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-537702.201650146,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0226</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1836552.21182,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0231</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2597543.31137464,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0231</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-1025310.43001103,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0231</record>
+        <record>2011-10-01 00:00:00.000,0,HI,79,NOK,-1467408.91542,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0232</record>
+        <record>2011-11-01 00:00:00.000,0,HI,79,NOK,-2077606.62921004,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0232</record>
+        <record>2011-12-01 00:00:00.000,0,TR,79,NOK,-818528.777133784,monthly,Floating Price,10-Oct-11 - 12-Dec-11,Gas-Floating-Index-Mwhd-EUR-0232</record>
+        <record>2013-03-01 00:00:00.000,0,TR,79,NOK,-1562842.8841187,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0233</record>
+        <record>2013-04-01 00:00:00.000,0,TR,79,NOK,-1647316.02660284,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0233</record>
+        <record>2013-05-01 00:00:00.000,0,TR,79,NOK,-1706685.65256106,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0233</record>
+        <record>2013-06-01 00:00:00.000,0,TR,79,NOK,-1657405.43067486,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0233</record>
+        <record>2013-07-01 00:00:00.000,0,TR,79,NOK,-1701027.04543974,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0233</record>
+        <record>2013-08-01 00:00:00.000,0,TR,79,NOK,-1683560.32084195,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0233</record>
+        <record>2013-09-01 00:00:00.000,0,TR,79,NOK,-1621205.04223533,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0233</record>
+        <record>2013-10-01 00:00:00.000,0,TR,79,NOK,-1591444.30438413,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0233</record>
+        <record>2013-03-01 00:00:00.000,0,TR,79,NOK,-1201404.67772457,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0234</record>
+        <record>2013-04-01 00:00:00.000,0,TR,79,NOK,-1274427.24992297,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0234</record>
+        <record>2013-05-01 00:00:00.000,0,TR,79,NOK,-1322505.21746111,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0234</record>
+        <record>2013-06-01 00:00:00.000,0,TR,79,NOK,-1286757.38611043,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0234</record>
+        <record>2013-07-01 00:00:00.000,0,TR,79,NOK,-1319225.02820029,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0234</record>
+        <record>2013-08-01 00:00:00.000,0,TR,79,NOK,-1302984.18816988,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0234</record>
+        <record>2013-09-01 00:00:00.000,0,TR,79,NOK,-1254125.60861744,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0234</record>
+        <record>2013-10-01 00:00:00.000,0,TR,79,NOK,-1225601.38082494,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0234</record>
+        <record>2013-03-01 00:00:00.000,0,TR,79,NOK,-2275446.61692732,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0239</record>
+        <record>2013-04-01 00:00:00.000,0,TR,79,NOK,-2379921.31810038,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0239</record>
+        <record>2013-05-01 00:00:00.000,0,TR,79,NOK,-2460559.16164178,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0239</record>
+        <record>2013-06-01 00:00:00.000,0,TR,79,NOK,-2382353.40755938,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0239</record>
+        <record>2013-07-01 00:00:00.000,0,TR,79,NOK,-2447779.52430865,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0239</record>
+        <record>2013-08-01 00:00:00.000,0,TR,79,NOK,-2426839.52411456,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0239</record>
+        <record>2013-09-01 00:00:00.000,0,TR,79,NOK,-2337376.77826031,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0239</record>
+        <record>2013-10-01 00:00:00.000,0,TR,79,NOK,-2305541.23620899,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0239</record>
+        <record>2013-03-01 00:00:00.000,0,TR,79,NOK,-1795241.12173175,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0240</record>
+        <record>2013-04-01 00:00:00.000,0,TR,79,NOK,-1884931.65950425,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0240</record>
+        <record>2013-05-01 00:00:00.000,0,TR,79,NOK,-1950733.14169504,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0240</record>
+        <record>2013-06-01 00:00:00.000,0,TR,79,NOK,-1890880.70018086,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0240</record>
+        <record>2013-07-01 00:00:00.000,0,TR,79,NOK,-1941518.76059104,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0240</record>
+        <record>2013-08-01 00:00:00.000,0,TR,79,NOK,-1922383.52423039,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0240</record>
+        <record>2013-09-01 00:00:00.000,0,TR,79,NOK,-1850935.38863826,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0240</record>
+        <record>2013-10-01 00:00:00.000,0,TR,79,NOK,-1820682.15734566,monthly,Floating Price,03-Mar-13 - 30-Oct-13,Gas-Floating-Index-Mwhd-EUR-0240</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

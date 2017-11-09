@@ -1,0 +1,34 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>zMonth-El-Future-NordPool-EUR-Exposure-EUR</workspace>
+    <monitor>zMonth-El-Future-NordPool-EUR-Exposure-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0111-11,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Future,Financial,Base,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0004;El-Future-EUR-0010,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0211-11,2011-11-02 00:00:00.000,2011-11-02 00:00:00.000,Future,Financial,Base,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0005;El-Future-EUR-0011,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0311-11,2011-11-03 00:00:00.000,2011-11-03 00:00:00.000,Future,Financial,Base,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0006;El-Future-EUR-0012,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0411-11,2011-11-04 00:00:00.000,2011-11-04 00:00:00.000,Future,Financial,Base,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0007;El-Future-EUR-0013,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0511-11,2011-11-05 00:00:00.000,2011-11-05 00:00:00.000,Future,Financial,Base,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0008;El-Future-EUR-0014,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,240,0,240</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0611-11,2011-11-06 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Base,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0009;El-Future-EUR-0015,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,240,0,240</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Base,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0017;El-Future-EUR-0021,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,1440,480,960</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Base,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0018;El-Future-EUR-0022,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,1680,600,1080</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Base,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0019;El-Future-EUR-0023,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,1680,600,1080</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Peak,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0025;El-Future-EUR-0029,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,480,480,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Peak,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0026;El-Future-EUR-0030,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,600,600,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Peak,NordPool System Price,NordPool,CET,EUR,El-Future-EUR-0027;El-Future-EUR-0031,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,600,600,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>NordPool System Price,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,44.3615549761768,50.0306243169906,41.0794621999161</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

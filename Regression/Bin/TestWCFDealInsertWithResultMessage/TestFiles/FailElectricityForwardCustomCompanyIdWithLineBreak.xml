@@ -1,0 +1,61 @@
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Field 'CustomCompanyId' contains more than one line. Make it single line value.</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Forward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityForward>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>SYOSL</PriceBasis>
+				<LoadProfile>Base Week</LoadProfile>
+				<FromDate>2008-01-01</FromDate>
+				<ToDate>2008-12-31</ToDate>
+				<Financial/>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>40</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>-28</Price>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</ElectricityForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2007-12-24T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>FailElectricityForwardCustomCompanyIdWithLineBreak</Comment>
+			<ExternalId>FailElectricityForwardCustomCompanyIdWithLineBreak</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+			<CustomCompanyId>CustomCompanyId string 
+			with new line</CustomCompanyId>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

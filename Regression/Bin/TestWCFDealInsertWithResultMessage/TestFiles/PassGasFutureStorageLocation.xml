@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET-6</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Gas-Future</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <GasFuture>
+        <InstrumentData>
+          <ExecutionVenue>ICE</ExecutionVenue>
+          <PriceBasis>TTF</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2014-11-01</FromDate>
+          <ToDate>2014-11-30</ToDate>
+          <Physical>
+			<DeliveryArea AreaName="TTF"/>
+			<DeliveryLocation>TTF_StorageLocation</DeliveryLocation>			
+		  </Physical>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>50</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>40</Price>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </GasFuture>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2014-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Gas-Future-StorageLocation-TTF</ExternalId>
+        <ExternalSource>XMLFileImport</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO>
+  <TransactionId>165</TransactionId>
+  <DealType>Gas-Future</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <DeliveryLocation>TTF_StorageLocation</DeliveryLocation>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>ICE</ExecutionVenue>
+    <InstrumentName>Nov14</InstrumentName>
+    <PriceBasis>TTF</PriceBasis>
+    <FromDate>2014-11-01T00:00:00</FromDate>
+    <ToDate>2014-11-30T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>CET 06-06</TimeZone>
+    <BalanceArea>TTF</BalanceArea>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>50</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>40</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-12-31T23:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>Gas-Future-StorageLocation-TTF</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <ModificationDateTimeUtc>2015-03-23T17:09:26Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>720</Deliveries>
+    <OriginalQuantity>50</OriginalQuantity>
+    <ReferringId>166</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

@@ -1,0 +1,52 @@
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-FixedPriceFloatingVolume</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityFixedPriceFloatingVolume>
+        <InstrumentData>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <VolumeReferenceExternalId>Fee-Test-El-FlexStruct-Versioned</VolumeReferenceExternalId>
+          <FromDate>2011-02-07</FromDate>
+          <ToDate>2011-02-07</ToDate>
+          <Financial />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>25</Quantity>
+          <QuantityUnit>%</QuantityUnit>
+          <Price>30</Price>
+          <Currency>EUR</Currency>
+		      <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+          </Fees>
+        </FeesData>
+      </ElectricityFixedPriceFloatingVolume>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-06T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-El-FixedPriceFloatingVolume-FSD</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>

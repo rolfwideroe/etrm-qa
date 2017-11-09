@@ -1,0 +1,67 @@
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Forward</DealType>
+		<Portfolios>
+			<Portfolio>Test Company A</Portfolio>
+			<CounterpartyPortfolio>Test Counterparty A</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityForward>
+			<InstrumentData>
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<PriceBasis>Norway 1</PriceBasis>
+				<LoadProfile>Base</LoadProfile>
+				<FromDate>2013-12-01</FromDate>
+				<ToDate>2013-12-31</ToDate>
+				<Financial/>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>40</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				<Broker>Test Broker A</Broker>
+			</SettlementData>
+		</ElectricityForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2013-06-10T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>			
+			<ExternalId>PassElectricityForward-Fee-Commission-All-Portfolio</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<ExpectedValues>
+	<ClearingCurrency>EUR</ClearingCurrency>
+	<ClearingFee>0</ClearingFee>
+	<BrokerFee>0.37</BrokerFee>
+	<BrokerCurrency>EUR</BrokerCurrency>
+	<TradingFee>0</TradingFee>
+	<TradingFeeCurrency>EUR</TradingFeeCurrency>
+	<CommissionFee>0.21</CommissionFee>
+	<CommissionFeeCurrency>EUR</CommissionFeeCurrency>
+	<EntryFee>0</EntryFee>
+	<EntryFeeCurrency>EUR</EntryFeeCurrency>
+	<ExitFee>0</ExitFee>
+	<ExitFeeCurrency>EUR</ExitFeeCurrency>
+</ExpectedValues>
+</TestCase>

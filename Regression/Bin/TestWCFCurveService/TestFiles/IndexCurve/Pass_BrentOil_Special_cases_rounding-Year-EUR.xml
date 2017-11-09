@@ -1,0 +1,41 @@
+<CurveTestCase>
+	<InputData>
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="CurrencySource" Value="ECB"/>
+    </ElvizConfigurations>
+		<FromDate>2010-01-01</FromDate>
+		<ToDate>2015-12-31</ToDate>
+		<LoadType>Base</LoadType>
+		<PriceBookAppendix></PriceBookAppendix>
+		<ReferenceAreaName>Index</ReferenceAreaName>
+		<ReportCurrencyIsoCode>EUR</ReportCurrencyIsoCode>
+		<ReportDate>2011-11-01</ReportDate>
+		<Resolution>Year</Resolution>
+		<TemplateName>BrentOil_Special_cases_rounding</TemplateName>
+	</InputData>
+	<ExpectedValues>
+		<ExpectedCurveVolatility>
+			<WinterShort>0.9</WinterShort>
+			<WinterMedium>0.17</WinterMedium>
+			<WinterLong>0.1</WinterLong>
+			<WinterNumberOfYearsBetweenShortAndMedium>0.5</WinterNumberOfYearsBetweenShortAndMedium>
+			<SummerShort>0.90</SummerShort>
+			<SummerMedium>0.17</SummerMedium>
+			<SummerLong>0.1</SummerLong>		
+			<SummerNumberOfYearsBetweenShortAndMedium>0.5</SummerNumberOfYearsBetweenShortAndMedium>		
+		</ExpectedCurveVolatility>
+		<ExpectedProperties>
+			<CurveType>IndexPriceCurve</CurveType>
+			<VolumeUnit>bbl</VolumeUnit>
+			<TimeZone>CET</TimeZone>
+		</ExpectedProperties>
+		<ExpectedCurveValues>
+				<ExpectedCurveValue Date="2010-01-01T00:00:00" Value="20.935744328630143"/>
+				<ExpectedCurveValue Date="2011-01-01T00:00:00" Value="26.2319401951473"/>
+				<ExpectedCurveValue Date="2012-01-01T00:00:00" Value="28.707059066276134"/>
+				<ExpectedCurveValue Date="2013-01-01T00:00:00" Value="27.665875729763641"/>
+				<ExpectedCurveValue Date="2014-01-01T00:00:00" Value="26.707299531374382"/>
+				<ExpectedCurveValue Date="2015-01-01T00:00:00" Value="26.021362870105708"/>
+		</ExpectedCurveValues>
+	</ExpectedValues>
+</CurveTestCase>

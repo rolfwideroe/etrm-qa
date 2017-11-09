@@ -1,0 +1,95 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Oil-American-USD-CFMon-ActualPL-USD-MtM</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-09-22 00:00:00.000,0,HI,182,USD,16.7,daily,American,AMEC Nov-11 30-SEP-11 130.00,Oil-American-USD-0001</record>
+        <record>2011-09-23 00:00:00.000,0,HI,182,USD,10,daily,American,AMEC Nov-11 30-SEP-11 130.00,Oil-American-USD-0001</record>
+        <record>2011-09-26 00:00:00.000,0,HI,182,USD,-5,daily,American,AMEC Nov-11 30-SEP-11 130.00,Oil-American-USD-0001</record>
+        <record>2011-09-27 00:00:00.000,0,HI,182,USD,-10,daily,American,AMEC Nov-11 30-SEP-11 130.00,Oil-American-USD-0001</record>
+        <record>2011-09-28 00:00:00.000,0,HI,182,USD,-10,daily,American,AMEC Nov-11 30-SEP-11 130.00,Oil-American-USD-0001</record>
+        <record>2011-09-29 00:00:00.000,0,HI,182,USD,-10,daily,American,AMEC Nov-11 30-SEP-11 130.00,Oil-American-USD-0001</record>
+        <record>2011-09-30 00:00:00.000,0,HI,182,USD,15,daily,American,AMEC Nov-11 30-SEP-11 130.00,Oil-American-USD-0001</record>
+        <record>2011-09-22 00:00:00.000,0,HI,182,USD,261.7,daily,American,AMEP Nov-11 30-SEP-11 130.00,Oil-American-USD-0002</record>
+        <record>2011-09-23 00:00:00.000,0,HI,182,USD,5,daily,American,AMEP Nov-11 30-SEP-11 130.00,Oil-American-USD-0002</record>
+        <record>2011-09-26 00:00:00.000,0,HI,182,USD,5,daily,American,AMEP Nov-11 30-SEP-11 130.00,Oil-American-USD-0002</record>
+        <record>2011-09-27 00:00:00.000,0,HI,182,USD,-30,daily,American,AMEP Nov-11 30-SEP-11 130.00,Oil-American-USD-0002</record>
+        <record>2011-09-28 00:00:00.000,0,HI,182,USD,5,daily,American,AMEP Nov-11 30-SEP-11 130.00,Oil-American-USD-0002</record>
+        <record>2011-09-29 00:00:00.000,0,HI,182,USD,5,daily,American,AMEP Nov-11 30-SEP-11 130.00,Oil-American-USD-0002</record>
+        <record>2011-09-30 00:00:00.000,0,HI,182,USD,5,daily,American,AMEP Nov-11 30-SEP-11 130.00,Oil-American-USD-0002</record>
+        <record>2011-09-22 00:00:00.000,0,HI,182,USD,431.7,daily,American,AMEC Nov-11 30-SEP-11 80.00,Oil-American-USD-0003</record>
+        <record>2011-09-23 00:00:00.000,0,HI,182,USD,40,daily,American,AMEC Nov-11 30-SEP-11 80.00,Oil-American-USD-0003</record>
+        <record>2011-09-26 00:00:00.000,0,HI,182,USD,-20,daily,American,AMEC Nov-11 30-SEP-11 80.00,Oil-American-USD-0003</record>
+        <record>2011-09-28 00:00:00.000,0,HI,182,USD,5,daily,American,AMEC Nov-11 30-SEP-11 80.00,Oil-American-USD-0003</record>
+        <record>2011-09-29 00:00:00.000,0,HI,182,USD,-10,daily,American,AMEC Nov-11 30-SEP-11 80.00,Oil-American-USD-0003</record>
+        <record>2011-09-30 00:00:00.000,0,HI,182,USD,-5,daily,American,AMEC Nov-11 30-SEP-11 80.00,Oil-American-USD-0003</record>
+        <record>2011-09-22 00:00:00.000,0,HI,182,USD,16.7,daily,American,AMEP Nov-11 30-SEP-11 80.00,Oil-American-USD-0004</record>
+        <record>2011-09-23 00:00:00.000,0,HI,182,USD,-10,daily,American,AMEP Nov-11 30-SEP-11 80.00,Oil-American-USD-0004</record>
+        <record>2011-09-27 00:00:00.000,0,HI,182,USD,-5,daily,American,AMEP Nov-11 30-SEP-11 80.00,Oil-American-USD-0004</record>
+        <record>2011-09-28 00:00:00.000,0,HI,182,USD,-10,daily,American,AMEP Nov-11 30-SEP-11 80.00,Oil-American-USD-0004</record>
+        <record>2011-09-29 00:00:00.000,0,HI,182,USD,-5,daily,American,AMEP Nov-11 30-SEP-11 80.00,Oil-American-USD-0004</record>
+        <record>2011-09-30 00:00:00.000,0,HI,182,USD,10,daily,American,AMEP Nov-11 30-SEP-11 80.00,Oil-American-USD-0004</record>
+        <record>2011-07-29 00:00:00.000,0,HI,182,USD,111.7,daily,American,AMEC Sep-11 02-AUG-11 130.00,Oil-American-USD-0005</record>
+        <record>2011-08-01 00:00:00.000,0,HI,182,USD,-25,daily,American,AMEC Sep-11 02-AUG-11 130.00,Oil-American-USD-0005</record>
+        <record>2011-08-02 00:00:00.000,0,HI,182,USD,30,daily,American,AMEC Sep-11 02-AUG-11 130.00,Oil-American-USD-0005</record>
+        <record>2011-07-29 00:00:00.000,0,HI,182,USD,376.7,daily,American,AMEP Sep-11 02-AUG-11 130.00,Oil-American-USD-0006</record>
+        <record>2011-08-01 00:00:00.000,0,HI,182,USD,-15,daily,American,AMEP Sep-11 02-AUG-11 130.00,Oil-American-USD-0006</record>
+        <record>2011-08-02 00:00:00.000,0,HI,182,USD,5,daily,American,AMEP Sep-11 02-AUG-11 130.00,Oil-American-USD-0006</record>
+        <record>2011-07-29 00:00:00.000,0,HI,182,USD,241.7,daily,American,AMEC Sep-11 02-AUG-11 80.00,Oil-American-USD-0007</record>
+        <record>2011-08-01 00:00:00.000,0,HI,182,USD,10,daily,American,AMEC Sep-11 02-AUG-11 80.00,Oil-American-USD-0007</record>
+        <record>2011-08-02 00:00:00.000,0,HI,182,USD,5,daily,American,AMEC Sep-11 02-AUG-11 80.00,Oil-American-USD-0007</record>
+        <record>2011-07-29 00:00:00.000,0,HI,182,USD,-3.3,daily,American,AMEP Sep-11 02-AUG-11 80.00,Oil-American-USD-0008</record>
+        <record>2011-08-01 00:00:00.000,0,HI,182,USD,-5,daily,American,AMEP Sep-11 02-AUG-11 80.00,Oil-American-USD-0008</record>
+        <record>2011-08-02 00:00:00.000,0,HI,182,USD,10,daily,American,AMEP Sep-11 02-AUG-11 80.00,Oil-American-USD-0008</record>
+        <record>2011-11-09 00:00:00.000,0,HI,182,USD,81.7,daily,American,AMEC Mar-12 31-JAN-12 130.00,Oil-American-USD-0009</record>
+        <record>2011-11-10 00:00:00.000,0,HI,182,USD,5,daily,American,AMEC Mar-12 31-JAN-12 130.00,Oil-American-USD-0009</record>
+        <record>2011-11-11 00:00:00.000,0,HI,182,USD,5,daily,American,AMEC Mar-12 31-JAN-12 130.00,Oil-American-USD-0009</record>
+        <record>2011-11-14 00:00:00.000,0,TR,182,USD,15,daily,American,AMEC Mar-12 31-JAN-12 130.00,Oil-American-USD-0009</record>
+        <record>2012-03-31 00:00:00.000,0,TR,182,USD,-54.5081603432907,daily,American,AMEC Mar-12 31-JAN-12 130.00,Oil-American-USD-0009</record>
+        <record>2011-11-09 00:00:00.000,0,HI,182,USD,181.7,daily,American,AMEP Mar-12 31-JAN-12 130.00,Oil-American-USD-0010</record>
+        <record>2011-11-10 00:00:00.000,0,HI,182,USD,5,daily,American,AMEP Mar-12 31-JAN-12 130.00,Oil-American-USD-0010</record>
+        <record>2011-11-11 00:00:00.000,0,HI,182,USD,5,daily,American,AMEP Mar-12 31-JAN-12 130.00,Oil-American-USD-0010</record>
+        <record>2011-11-14 00:00:00.000,0,TR,182,USD,15,daily,American,AMEP Mar-12 31-JAN-12 130.00,Oil-American-USD-0010</record>
+        <record>2012-03-31 00:00:00.000,0,TR,182,USD,43.5530861805541,daily,American,AMEP Mar-12 31-JAN-12 130.00,Oil-American-USD-0010</record>
+        <record>2011-11-09 00:00:00.000,0,HI,182,USD,381.7,daily,American,AMEC Mar-12 31-JAN-12 80.00,Oil-American-USD-0011</record>
+        <record>2011-11-10 00:00:00.000,0,HI,182,USD,5,daily,American,AMEC Mar-12 31-JAN-12 80.00,Oil-American-USD-0011</record>
+        <record>2011-11-11 00:00:00.000,0,HI,182,USD,5,daily,American,AMEC Mar-12 31-JAN-12 80.00,Oil-American-USD-0011</record>
+        <record>2011-11-14 00:00:00.000,0,TR,182,USD,15,daily,American,AMEC Mar-12 31-JAN-12 80.00,Oil-American-USD-0011</record>
+        <record>2012-03-31 00:00:00.000,0,TR,182,USD,135.443971042715,daily,American,AMEC Mar-12 31-JAN-12 80.00,Oil-American-USD-0011</record>
+        <record>2011-11-09 00:00:00.000,0,HI,182,USD,131.7,daily,American,AMEP Mar-12 31-JAN-12 80.00,Oil-American-USD-0012</record>
+        <record>2011-11-10 00:00:00.000,0,HI,182,USD,5,daily,American,AMEP Mar-12 31-JAN-12 80.00,Oil-American-USD-0012</record>
+        <record>2011-11-11 00:00:00.000,0,HI,182,USD,5,daily,American,AMEP Mar-12 31-JAN-12 80.00,Oil-American-USD-0012</record>
+        <record>2011-11-14 00:00:00.000,0,TR,182,USD,15,daily,American,AMEP Mar-12 31-JAN-12 80.00,Oil-American-USD-0012</record>
+        <record>2012-03-31 00:00:00.000,0,TR,182,USD,-26.6930813033389,daily,American,AMEP Mar-12 31-JAN-12 80.00,Oil-American-USD-0012</record>
+        <record>2011-03-29 00:00:00.000,0,HI,182,USD,311.7,daily,American,AMEC May-11 01-APR-11 130.00,Oil-American-USD-0013</record>
+        <record>2011-03-30 00:00:00.000,0,HI,182,USD,5,daily,American,AMEC May-11 01-APR-11 130.00,Oil-American-USD-0013</record>
+        <record>2011-03-31 00:00:00.000,0,HI,182,USD,-15,daily,American,AMEC May-11 01-APR-11 130.00,Oil-American-USD-0013</record>
+        <record>2011-04-01 00:00:00.000,0,HI,182,USD,-10,daily,American,AMEC May-11 01-APR-11 130.00,Oil-American-USD-0013</record>
+        <record>2011-03-29 00:00:00.000,0,HI,182,USD,-311.7,daily,American,AMEC May-11 01-APR-11 130.00,Oil-American-USD-0014</record>
+        <record>2011-03-30 00:00:00.000,0,HI,182,USD,-5,daily,American,AMEC May-11 01-APR-11 130.00,Oil-American-USD-0014</record>
+        <record>2011-03-31 00:00:00.000,0,HI,182,USD,15,daily,American,AMEC May-11 01-APR-11 130.00,Oil-American-USD-0014</record>
+        <record>2011-04-01 00:00:00.000,0,HI,182,USD,10,daily,American,AMEC May-11 01-APR-11 130.00,Oil-American-USD-0014</record>
+        <record>2011-11-09 00:00:00.000,0,HI,182,USD,-146.7,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0015</record>
+        <record>2011-11-10 00:00:00.000,0,HI,182,USD,-5,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0015</record>
+        <record>2011-11-11 00:00:00.000,0,HI,182,USD,-5,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0015</record>
+        <record>2011-11-14 00:00:00.000,0,TR,182,USD,-10,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0015</record>
+        <record>2012-06-30 00:00:00.000,0,TR,182,USD,65.2436414206752,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0015</record>
+        <record>2011-11-09 00:00:00.000,0,HI,182,USD,146.7,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0016</record>
+        <record>2011-11-10 00:00:00.000,0,HI,182,USD,5,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0016</record>
+        <record>2011-11-11 00:00:00.000,0,HI,182,USD,5,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0016</record>
+        <record>2011-11-14 00:00:00.000,0,TR,182,USD,10,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0016</record>
+        <record>2012-06-30 00:00:00.000,0,TR,182,USD,-65.2436414206752,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0016</record>
+        <record>2011-11-09 00:00:00.000,0,PR,182,USD,-18.3,daily,American,AMEC Mar-12 31-JAN-12 130.00 - Premium,Oil-American-USD-0017</record>
+        <record>2012-03-31 00:00:00.000,0,TR,182,USD,-1.33602240594639,daily,American,AMEC Mar-12 31-JAN-12 130.00 - Settlement,Oil-American-USD-0017</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

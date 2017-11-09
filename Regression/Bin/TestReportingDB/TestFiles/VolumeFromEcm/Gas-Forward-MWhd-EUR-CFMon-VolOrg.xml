@@ -1,0 +1,450 @@
+<test type="EcmBatch" name="Gas-Forward-MWhd-EUR-CFMon-VolOrg" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>Gas-Forward-MWhd-EUR-CFMon-VolOrg</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<reportdate>2011-11-01</reportdate>		
+		<tollerance>0.0001</tollerance>
+		<executeElvizBatch>True</executeElvizBatch>		
+	</setup>
+	<assert>
+		<datawarehouse>
+		<query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+				<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,Sep-11,Gas-Forward-MWhd-EUR-0001</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,Nov-11,Gas-Forward-MWhd-EUR-0002</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Dec-11,Gas-Forward-MWhd-EUR-0003</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0004</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0004</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0004</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0004</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0005</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0005</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0005</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0006</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0006</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0006</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0007</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0007</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0007</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0007</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0007</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0007</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0008</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0008</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0008</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0008</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0008</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0008</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0009</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0009</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0009</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0009</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0009</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0009</record>
+<record>2010-01-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2010-02-01 00:00:00.000,0,HI,54,EUR,14000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2010-03-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2010-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2010-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2010-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2010-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2010-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2010-11-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2010-12-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0010</record>
+<record>2011-01-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2011-02-01 00:00:00.000,0,HI,54,EUR,14000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2011-03-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0011</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2012-10-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2012-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2012-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0012</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,13500,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0013</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,12000,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0013</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,11000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0014</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0014</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,6000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0014</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,Sep-11,Gas-Forward-MWhd-EUR-0016</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,Nov-11,Gas-Forward-MWhd-EUR-0017</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Dec-11,Gas-Forward-MWhd-EUR-0018</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0019</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0019</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0019</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0019</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0020</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0020</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0020</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0021</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0021</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0021</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0022</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0022</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0022</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0022</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0022</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0022</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0023</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0023</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0023</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0023</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0023</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0023</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0024</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0024</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0024</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0024</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0024</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0024</record>
+<record>2010-01-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2010-02-01 00:00:00.000,0,HI,54,EUR,14000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2010-03-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2010-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2010-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2010-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2010-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2010-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2010-11-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2010-12-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0025</record>
+<record>2011-01-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2011-02-01 00:00:00.000,0,HI,54,EUR,14000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2011-03-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0026</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2012-10-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2012-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2012-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0027</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,13500,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0028</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,12000,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0028</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,11000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0029</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0029</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,6000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0029</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,Sep-11,Gas-Forward-MWhd-EUR-0031</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,Nov-11,Gas-Forward-MWhd-EUR-0032</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,Dec-11,Gas-Forward-MWhd-EUR-0033</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0034</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0034</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0034</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0034</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0035</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0035</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0035</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0036</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,-14500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0036</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0036</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0037</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0037</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0037</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0037</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0037</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0037</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0038</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0038</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0038</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0038</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,-14500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0038</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0038</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0039</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0039</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0039</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0039</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0039</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0039</record>
+<record>2010-01-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2010-02-01 00:00:00.000,0,HI,54,EUR,-14000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2010-03-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2010-04-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2010-05-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2010-06-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2010-07-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2010-10-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2010-11-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2010-12-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0040</record>
+<record>2011-01-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2011-02-01 00:00:00.000,0,HI,54,EUR,-14000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2011-03-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0041</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,-14500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2012-10-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2012-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2012-12-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0042</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,-13500,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0043</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,-12000,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0043</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,-11000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0044</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0044</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,-6000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0044</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,Sep-11,Gas-Forward-MWhd-EUR-0046</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,Nov-11,Gas-Forward-MWhd-EUR-0047</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,Dec-11,Gas-Forward-MWhd-EUR-0048</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0049</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0049</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0049</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0049</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0050</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0050</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0050</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0051</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,-14500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0051</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0051</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0052</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0052</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0052</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0052</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0052</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0052</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0053</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0053</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0053</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0053</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,-14500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0053</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0053</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0054</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0054</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0054</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0054</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0054</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0054</record>
+<record>2010-01-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2010-02-01 00:00:00.000,0,HI,54,EUR,-14000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2010-03-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2010-04-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2010-05-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2010-06-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2010-07-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2010-10-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2010-11-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2010-12-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0055</record>
+<record>2011-01-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2011-02-01 00:00:00.000,0,HI,54,EUR,-14000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2011-03-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,-15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0056</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,-14500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2012-10-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2012-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2012-12-01 00:00:00.000,0,TR,54,EUR,-15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0057</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,-13500,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0058</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,-12000,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0058</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,-11000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0059</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,-15000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0059</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,-6000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0059</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,Sep-11,Gas-Forward-MWhd-EUR-0061</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,Nov-11,Gas-Forward-MWhd-EUR-0062</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Dec-11,Gas-Forward-MWhd-EUR-0063</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0064</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0064</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0064</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0064</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0065</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0065</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0065</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0066</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0066</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0066</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0067</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0067</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0067</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0067</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0067</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0067</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0068</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0068</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0068</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0068</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0068</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0068</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0069</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0069</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0069</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0069</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0069</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0069</record>
+<record>2010-01-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2010-02-01 00:00:00.000,0,HI,54,EUR,14000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2010-03-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2010-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2010-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2010-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2010-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2010-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2010-11-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2010-12-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0070</record>
+<record>2011-01-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2011-02-01 00:00:00.000,0,HI,54,EUR,14000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2011-03-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0071</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2012-10-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2012-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2012-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0072</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,13500,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0073</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,12000,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0073</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,11000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0074</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0074</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,6000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0074</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,Sep-11,Gas-Forward-MWhd-EUR-0076</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,Nov-11,Gas-Forward-MWhd-EUR-0077</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Dec-11,Gas-Forward-MWhd-EUR-0078</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0079</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0079</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0079</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-MWhd-EUR-0079</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0080</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0080</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q4-11,Gas-Forward-MWhd-EUR-0080</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0081</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0081</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,Q1-12,Gas-Forward-MWhd-EUR-0081</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0082</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0082</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0082</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0082</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0082</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,SUM-11,Gas-Forward-MWhd-EUR-0082</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0083</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0083</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0083</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0083</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0083</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,WIN-11,Gas-Forward-MWhd-EUR-0083</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0084</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0084</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0084</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0084</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0084</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,SUM-12,Gas-Forward-MWhd-EUR-0084</record>
+<record>2010-01-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2010-02-01 00:00:00.000,0,HI,54,EUR,14000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2010-03-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2010-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2010-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2010-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2010-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2010-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2010-11-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2010-12-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-10,Gas-Forward-MWhd-EUR-0085</record>
+<record>2011-01-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2011-02-01 00:00:00.000,0,HI,54,EUR,14000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2011-03-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2011-04-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2011-05-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2011-06-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2011-07-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2011-08-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2011-09-01 00:00:00.000,0,HI,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-11,Gas-Forward-MWhd-EUR-0086</record>
+<record>2012-01-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2012-02-01 00:00:00.000,0,TR,54,EUR,14500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2012-03-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2012-04-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2012-05-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2012-06-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2012-07-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2012-08-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2012-09-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2012-10-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2012-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2012-12-01 00:00:00.000,0,TR,54,EUR,15500,monthly,Forward,CAL-12,Gas-Forward-MWhd-EUR-0087</record>
+<record>2010-08-01 00:00:00.000,0,HI,54,EUR,13500,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0088</record>
+<record>2010-09-01 00:00:00.000,0,HI,54,EUR,12000,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-MWhd-EUR-0088</record>
+<record>2011-10-01 00:00:00.000,0,HI,54,EUR,11000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0089</record>
+<record>2011-11-01 00:00:00.000,0,TR,54,EUR,15000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0089</record>
+<record>2011-12-01 00:00:00.000,0,TR,54,EUR,6000,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-MWhd-EUR-0089</record>
+			</returns>
+		</datawarehouse>		
+	</assert>
+</test>

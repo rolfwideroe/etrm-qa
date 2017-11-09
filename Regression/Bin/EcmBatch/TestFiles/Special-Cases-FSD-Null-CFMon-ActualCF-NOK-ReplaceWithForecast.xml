@@ -1,0 +1,53 @@
+<test type="EcmBatch" name="Special-Cases-FSD-Null-CFMon-ActualCF-NOK" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FSD-Null-CFMon-ActualCF-NOK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-07</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+    <missingRealizedDataStrategy>ReplaceWithForecast</missingRealizedDataStrategy>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,229668.861914731,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,NOK,8070.92311638711,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,NOK,390922.735916482,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,414210.780722935,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,73383.702746382,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily-RV-All</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,NOK,390922.735916482,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily-RV-All</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,414210.780722935,monthly,Fixed Price Floating Volume,02-Oct-11 - 30-Jan-12,Special-Cases-FSD-Null-FPFV-Daily-RV-All</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,312462.329125291,monthly,Fixed Price Floating Volume,M10-11,Special-Cases-FSD-Null-FPFV-Month</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,-577859.780673274,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Elec1,Special-Cases-FSD-Null-Generation-Elec1</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,NOK,-18589.0122399454,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Elec1,Special-Cases-FSD-Null-Generation-Elec1</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,-577954.832557282,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Elec1,Special-Cases-FSD-Null-Generation-Elec1</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,-577859.780673274,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Gas1,Special-Cases-FSD-Null-Generation-Gas1</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,NOK,-13941.759179959,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Gas1,Special-Cases-FSD-Null-Generation-Gas1</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,-577954.832557282,monthly,Structured Deal,Special-Cases-FSD-Null-Generation-Gas1,Special-Cases-FSD-Null-Generation-Gas1</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,-2074172.56576696,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec1,Special-Cases-FSD-Null-Retail-Elec1</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,NOK,-91402.1731838113,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec1,Special-Cases-FSD-Null-Retail-Elec1</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,NOK,-2601023.81220203,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec1,Special-Cases-FSD-Null-Retail-Elec1</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,-3255637.14966907,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec1,Special-Cases-FSD-Null-Retail-Elec1</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,-1503205.08558422,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec2,Special-Cases-FSD-Null-Retail-Elec2</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,NOK,-91402.1731838113,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec2,Special-Cases-FSD-Null-Retail-Elec2</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,NOK,-2601023.81220203,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec2,Special-Cases-FSD-Null-Retail-Elec2</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,-3255637.14966907,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec2,Special-Cases-FSD-Null-Retail-Elec2</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,-396457.393120215,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec3,Special-Cases-FSD-Null-Retail-Elec3</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,NOK,-2601023.81220203,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec3,Special-Cases-FSD-Null-Retail-Elec3</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,-3255637.14966907,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec3,Special-Cases-FSD-Null-Retail-Elec3</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,-2221479.97634551,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Elec4,Special-Cases-FSD-Null-Retail-Elec4</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,-577859.780673274,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas1,Special-Cases-FSD-Null-Retail-Gas1</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,NOK,-13941.759179959,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas1,Special-Cases-FSD-Null-Retail-Gas1</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,-577954.832557282,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas1,Special-Cases-FSD-Null-Retail-Gas1</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,-349444.200681286,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas2,Special-Cases-FSD-Null-Retail-Gas2</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,NOK,-13941.759179959,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas2,Special-Cases-FSD-Null-Retail-Gas2</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,-577954.832557282,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas2,Special-Cases-FSD-Null-Retail-Gas2</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,-33741.2370280726,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas3,Special-Cases-FSD-Null-Retail-Gas3</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,-577954.832557282,monthly,Structured Deal,Special-Cases-FSD-Null-Retail-Gas3,Special-Cases-FSD-Null-Retail-Gas3</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

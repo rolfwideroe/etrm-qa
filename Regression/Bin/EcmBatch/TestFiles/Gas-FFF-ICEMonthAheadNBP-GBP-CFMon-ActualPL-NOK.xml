@@ -1,0 +1,39 @@
+<test type="EcmBatch" name="Gas-FFF-ICEMonthAheadNBP-GBP-CFMon-ActualPL-NOK" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-FFF-ICEMonthAheadNBP-GBP-CFMon-ActualPL-NOK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-03-01 00:00:00.000,0,HI,42,NOK,13544.2922707309,monthly,Swap,SWAP Mar-11,Gas-FFF-ICEMonthAheadNBP-GBP-0001</record>
+        <record>2011-12-01 00:00:00.000,0,TR,42,NOK,72679.715744063,monthly,Swap,SWAP Dec-11,Gas-FFF-ICEMonthAheadNBP-GBP-0002</record>
+        <record>2012-05-01 00:00:00.000,0,TR,42,NOK,60549.4103076806,monthly,Swap,SWAP May-12,Gas-FFF-ICEMonthAheadNBP-GBP-0003</record>
+        <record>2011-04-01 00:00:00.000,0,HI,42,NOK,50756.2474209967,monthly,Swap,SWAP SUM-11,Gas-FFF-ICEMonthAheadNBP-GBP-0004</record>
+        <record>2011-05-01 00:00:00.000,0,HI,42,NOK,16208.0618920314,monthly,Swap,SWAP SUM-11,Gas-FFF-ICEMonthAheadNBP-GBP-0004</record>
+        <record>2011-06-01 00:00:00.000,0,HI,42,NOK,3397.24782319462,monthly,Swap,SWAP SUM-11,Gas-FFF-ICEMonthAheadNBP-GBP-0004</record>
+        <record>2011-07-01 00:00:00.000,0,HI,42,NOK,5546.47434019415,monthly,Swap,SWAP SUM-11,Gas-FFF-ICEMonthAheadNBP-GBP-0004</record>
+        <record>2011-08-01 00:00:00.000,0,HI,42,NOK,92888.0457128326,monthly,Swap,SWAP SUM-11,Gas-FFF-ICEMonthAheadNBP-GBP-0004</record>
+        <record>2011-09-01 00:00:00.000,0,HI,42,NOK,42493.0560588164,monthly,Swap,SWAP SUM-11,Gas-FFF-ICEMonthAheadNBP-GBP-0004</record>
+        <record>2011-10-01 00:00:00.000,0,HI,42,NOK,75123.7455791789,monthly,Swap,SWAP WIN-11,Gas-FFF-ICEMonthAheadNBP-GBP-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,42,NOK,13437.7736763842,monthly,Swap,SWAP WIN-11,Gas-FFF-ICEMonthAheadNBP-GBP-0005</record>
+        <record>2011-12-01 00:00:00.000,0,TR,42,NOK,17051.7026203937,monthly,Swap,SWAP WIN-11,Gas-FFF-ICEMonthAheadNBP-GBP-0005</record>
+        <record>2012-01-01 00:00:00.000,0,TR,42,NOK,56378.5562473324,monthly,Swap,SWAP WIN-11,Gas-FFF-ICEMonthAheadNBP-GBP-0005</record>
+        <record>2012-02-01 00:00:00.000,0,TR,42,NOK,58243.5936676628,monthly,Swap,SWAP WIN-11,Gas-FFF-ICEMonthAheadNBP-GBP-0005</record>
+        <record>2012-03-01 00:00:00.000,0,TR,42,NOK,85550.8426098434,monthly,Swap,SWAP WIN-11,Gas-FFF-ICEMonthAheadNBP-GBP-0005</record>
+        <record>2012-06-01 00:00:00.000,0,TR,42,NOK,13224.3473812209,monthly,Swap,SWAP 01-Jun-12 - 30-Nov-12,Gas-FFF-ICEMonthAheadNBP-GBP-0006</record>
+        <record>2012-07-01 00:00:00.000,0,TR,42,NOK,22698.7339954696,monthly,Swap,SWAP 01-Jun-12 - 30-Nov-12,Gas-FFF-ICEMonthAheadNBP-GBP-0006</record>
+        <record>2012-08-01 00:00:00.000,0,TR,42,NOK,18327.9981792708,monthly,Swap,SWAP 01-Jun-12 - 30-Nov-12,Gas-FFF-ICEMonthAheadNBP-GBP-0006</record>
+        <record>2012-09-01 00:00:00.000,0,TR,42,NOK,9055.63576728153,monthly,Swap,SWAP 01-Jun-12 - 30-Nov-12,Gas-FFF-ICEMonthAheadNBP-GBP-0006</record>
+        <record>2012-10-01 00:00:00.000,0,TR,42,NOK,141163.298080343,monthly,Swap,SWAP 01-Jun-12 - 30-Nov-12,Gas-FFF-ICEMonthAheadNBP-GBP-0006</record>
+        <record>2012-11-01 00:00:00.000,0,TR,42,NOK,76039.3233759299,monthly,Swap,SWAP 01-Jun-12 - 30-Nov-12,Gas-FFF-ICEMonthAheadNBP-GBP-0006</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

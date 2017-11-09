@@ -1,0 +1,72 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>GreeksOnATimelineReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-01T00:00:00" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseEndDate" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="PosCalcMethod" IsNotSet="false" XmlEncodedValue="NPVWA" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="TimeResolution" IsNotSet="false" XmlEncodedValue="Month" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Special-Cases-AsianSpreadNOK" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedTimeSeriesArtifacts>
+      <ExpectedTimeSeriesArtifact ArtifactId="greeksOnATimeline" Columns="GroupBy,Greek,ReferenceArea,TimeZone,From,Until,Value" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Double">
+        <TimeSeriesProperties>
+          <Property Name="GroupBy" DataType="System.String" />
+          <Property Name="Greek" DataType="System.String" />
+          <Property Name="ReferenceArea" DataType="System.String" />
+        </TimeSeriesProperties>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),France,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,-13316.4318122567</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),France,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,-13464.1072864952</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),GERMANY,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,13477.6054258054</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),GERMANY,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,13773.8892730113</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,1092.81062742994</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,1481.31515172523</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,6242.13651888006</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,7730.26011499489</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),France,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,-19.1328043279551</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),France,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,-18.0969183958268</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),GERMANY,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,19.3643756117894</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),GERMANY,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,18.5132920336173</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),NordPool System Price,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,1.57013021182463</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,1.99101498887799</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),SYOSL,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,8.96858695241388</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),SYOSL,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,10.3901345631652</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),France,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,54.6196924725943</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),France,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,50.7303473303485</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),GERMANY,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,76.7596712118272</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),GERMANY,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,69.2383868757436</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,1304.92319468563</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,1381.43975962161</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,1681.73942031539</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,1775.58904764415</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),France,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,0.078476569644532</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),France,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0.068185950712834</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),GERMANY,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,0.110286883925039</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),GERMANY,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0.0930623479512683</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),NordPool System Price,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,1.87488964753683</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,1.85677387045915</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),Norway 1,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,2.41629227056809</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),Norway 1,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,2.38654441887655</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),EEX-France,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,-96.7464655662079</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),EEX-France,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,-119.027746230554</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),SYOSL,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,-582.335789923098</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),SYOSL,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,-542.489209444401</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),France,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,117.364845893138</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),France,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,206.658485291384</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),GERMANY,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,127.916856892594</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),GERMANY,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,231.219001533296</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,817.272212444721</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,1066.73280044867</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,199.635237645298</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,229.813791564993</ExpectedRecord>
+      </ExpectedTimeSeriesArtifact>
+    </ExpectedTimeSeriesArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

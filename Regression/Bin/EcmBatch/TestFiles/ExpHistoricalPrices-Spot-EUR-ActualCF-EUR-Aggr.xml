@@ -1,0 +1,19 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>ExpHistoricalPrices-Spot-EUR-ActualCF-EUR-Aggr</workspace>
+    <monitor>ExpHistoricalPrices-Spot-EUR-ActualCF-EUR-Aggr</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <Tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitorAggregatedStructDeals.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,HI,177,EUR,-25499.998725,monthly,Spot,Physical Spot deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,EUR,-35851.0041821382,monthly,Spot,Physical Spot deal(s)</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

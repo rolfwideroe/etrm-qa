@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Storage transactions can only be associated with storage Location types</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-Storage</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStorage>
+			<InstrumentData>
+				<PriceBasis>TTF</PriceBasis>
+				<FromDate>2015-01-01</FromDate>
+				<ToDate>2015-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+					<DeliveryLocation>TTF_DeliveryLocation</DeliveryLocation>
+				</Physical>
+				<TransactionName>GasStorageWithDeliveryLocationFail</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>VolumeMeasurement</TimeSeriesType>						
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<Version>
+							<Comment>Initial Load</Comment>
+						</Version>
+							<TimeSeriesDetail FromDateTime="2015-01-01T00:00:00" Value="24" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MWh/d</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+			</SettlementData>
+		</GasStorage>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2013-09-30T21:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>GasStorageWithDeliveryLocation; should fail</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailGasStorageWithDeliveryLocation</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

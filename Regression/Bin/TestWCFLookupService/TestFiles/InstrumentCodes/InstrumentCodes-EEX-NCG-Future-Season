@@ -1,0 +1,56 @@
+<InstrumentCodesTestCase>
+	<InsertXml>
+	<![CDATA[ 
+<DealInsert>
+    <MetaData>
+      <Timezone>CET 06-06</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Gas-Future</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <GasFuture>
+        <InstrumentData>
+          <ExecutionVenue>EEX</ExecutionVenue>
+          <PriceBasis>Germany NCG</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2016-04-01</FromDate>
+          <ToDate>2016-09-30</ToDate>
+          <Physical />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>5</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>33.12</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </GasFuture>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2015-11-17T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Gas-Future-EEX-NCG-Season</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+	]]>
+	</InsertXml>
+	<ExpectedResult>
+		<ExpectedTransaction ExternalId="Gas-Future-EEX-NCG-Season">
+			<ExpectedCodes>
+				<ExpectedCode CodeType="ISIN" Code="DE000A0G9FX0"/>
+			</ExpectedCodes>
+		</ExpectedTransaction>
+	</ExpectedResult>
+</InstrumentCodesTestCase>

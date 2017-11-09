@@ -1,0 +1,20 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FSD-Model-PosMon-EUR</workspace>
+    <monitor>Special-Cases-FSD-Model-PosMon-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0109 Special-Cases,Base,Physical,Barsebekk,Q1-11,Q1-11 - Base,,CET,EUR,Viz,Electricity,,Structured Deal,Special-Cases-FSD-Model-Consumption - Base,,,,2011-01-01 00:00:00.000,2011-03-31 00:00:00.000,Expired,0,-1422551.5,0,-1422551.5,0,0,0,0,0,0,0,0,-10,0,0,-21590,2159,-10,NULL,0,0,0,0,0,0,0,0,0,0,0,Special-Cases-FSD-Model-Consumption</record>
+        <record>0109 Special-Cases,Base,Financial,Norway 1,Q1-11,Q1-11 - Base,,CET,EUR,Viz,Electricity,,Structured Deal,Special-Cases-FSD-Model-FinancialRetail - Base,,,,2011-01-01 00:00:00.000,2011-03-31 00:00:00.000,Expired,0,1333654.1,0,1333654.1,0,0,1333654.1,0,1333654.1,0,0,0,10,0,0,21590,2159,10,NULL,0,0,0,0,0,0,6,-129540,0,0,0,Special-Cases-FSD-Model-FinancialRetail</record>
+        <record>0109 Special-Cases,Base,Physical,NordPool System Price,Q1-12,Q1-12 - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Special-Cases-FSD-Model-Generation - Base,,,,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Active,0,0,803476.199999999,803476.199999999,1021776.2,803476.199999999,0,-218300,-218300,2.49200913242009,21830,0,10,0,0,0,2183,10,NULL,0,0,0,0,0,0,10,-218300,46.8060558863948,0,0,Special-Cases-FSD-Model-Generation</record>
+        <record>0109 Special-Cases,Base,Physical,Norway 1,Q4-11,Q4-11 - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Special-Cases-FSD-Model-Retail - Base,,,,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Active,0,76900,144000,220900,-629197.199740301,144000,280027.7,773197.199740301,1053224.8997403,-1.64383561643836,-14400,0,-10,0,0,-7690,1440,-10,NULL,0,0,0,0,0,0,53.6942499819654,773197.199740301,43.6942499819653,0,0,Special-Cases-FSD-Model-Retail</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

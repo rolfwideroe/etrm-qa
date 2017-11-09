@@ -1,0 +1,20 @@
+<test type="EcmBatch" name="Special-Cases-ZeroVolume-CFMon-ActualCF-EUR" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>Special-Cases-ZeroVolume-CFMon-ActualCF-EUR</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<reportdate>2011-11-01</reportdate>
+		<tollerance>0.0000001</tollerance>
+		<executeElvizBatch>True</executeElvizBatch>			
+	</setup>
+	<assert>
+		<datawarehouse>
+			<query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+				<record>2011-10-01 00:00:00.000,0,HI,109,EUR,-745,monthly,Structured Deal,Special-Cases-ZeroVolume-ElectricityStructuredDeal-DummyDeal,Special-Cases-ZeroVolume-ElectricityStructuredDeal-DummyDeal</record>
+				<record>2011-11-01 00:00:00.000,0,TR,109,EUR,-720,monthly,Structured Deal,Special-Cases-ZeroVolume-ElectricityStructuredDeal-DummyDeal,Special-Cases-ZeroVolume-ElectricityStructuredDeal-DummyDeal</record>			
+			</returns>
+		</datawarehouse>		
+	</assert>
+</test>

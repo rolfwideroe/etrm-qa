@@ -1,0 +1,54 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="ElCert-Forward-OTC" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>ElCert-Forward-OTC-0001;ElCert-Forward-OTC-0009;ElCert-Forward-OTC-0017,ECS Mar-07,Elcertificate,Forward,ElCert-Forward-OTC,965487.20846152,969278.546572671,947581.967563908,947581.967563908,947581.967563908,947581.967563908,947581.967563908,947581.967563908,947581.967563908</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0002;ElCert-Forward-OTC-0010;ElCert-Forward-OTC-0018,ECS Mar-07,Elcertificate,Forward,ElCert-Forward-OTC,792632.082536226,796423.420647376,774726.841638614,774726.841638614,774726.841638614,774726.841638614,774726.841638614,774726.841638614,774726.841638614</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0003;ElCert-Forward-OTC-0011;ElCert-Forward-OTC-0019,ECS Mar-11,Elcertificate,Forward,ElCert-Forward-OTC,917143.828720152,920935.166831302,899238.58782254,899238.58782254,899238.58782254,899238.58782254,899238.58782254,899238.58782254,899238.58782254</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0004;ElCert-Forward-OTC-0012;ElCert-Forward-OTC-0020,ECS Mar-11,Elcertificate,Forward,ElCert-Forward-OTC,749548.162765038,753339.500876189,731642.921867426,731642.921867426,731642.921867426,731642.921867426,731642.921867426,731642.921867426,731642.921867426</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0005;ElCert-Forward-OTC-0013;ElCert-Forward-OTC-0021,ECS011111,Elcertificate,Forward,ElCert-Forward-OTC,935423.561054107,939214.899165257,917518.320156495,917518.320156495,917518.320156495,917518.320156495,917518.320156495,917518.320156495,917518.320156495</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0006;ElCert-Forward-OTC-0014;ElCert-Forward-OTC-0022,ECS011111,Elcertificate,Forward,ElCert-Forward-OTC,719749.632137751,723540.970248902,701844.391240139,701844.391240139,701844.391240139,701844.391240139,701844.391240139,701844.391240139,701844.391240139</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0007;ElCert-Forward-OTC-0015;ElCert-Forward-OTC-0023,ECS Mar-12,Elcertificate,Forward,ElCert-Forward-OTC,1334029.1020699,1334029.1020699,2032372.44287673,2032372.44287673,2032372.44287673,2032372.44287673,2032372.44287673,2015904.97879971,2015904.97879971</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0008;ElCert-Forward-OTC-0016;ElCert-Forward-OTC-0024,ECS Mar-12,Elcertificate,Forward,ElCert-Forward-OTC,1118204.79018185,1118204.79018185,1816548.13098868,1816548.13098868,1816548.13098868,1816548.13098868,1816548.13098868,1797535.92982386,1797535.92982386</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>ElCert-Forward-OTC-0001;ElCert-Forward-OTC-0009;ElCert-Forward-OTC-0017,ECS Mar-07,Elcertificate,Forward,ElCert-Forward-OTC,2212373.31982228,2216164.65793343,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0002;ElCert-Forward-OTC-0010;ElCert-Forward-OTC-0018,ECS Mar-07,Elcertificate,Forward,ElCert-Forward-OTC,2212373.31982228,2216164.65793343,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0003;ElCert-Forward-OTC-0011;ElCert-Forward-OTC-0019,ECS Mar-11,Elcertificate,Forward,ElCert-Forward-OTC,2212373.31982228,2216164.65793343,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0004;ElCert-Forward-OTC-0012;ElCert-Forward-OTC-0020,ECS Mar-11,Elcertificate,Forward,ElCert-Forward-OTC,2212373.31982228,2216164.65793343,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0005;ElCert-Forward-OTC-0013;ElCert-Forward-OTC-0021,ECS011111,Elcertificate,Forward,ElCert-Forward-OTC,2212373.31982228,2216164.65793343,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0006;ElCert-Forward-OTC-0014;ElCert-Forward-OTC-0022,ECS011111,Elcertificate,Forward,ElCert-Forward-OTC,2212373.31982228,2216164.65793343,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466,2194468.07892466</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0007;ElCert-Forward-OTC-0015;ElCert-Forward-OTC-0023,ECS Mar-12,Elcertificate,Forward,ElCert-Forward-OTC,1334029.1020699,1334029.1020699,2032372.44287673,2032372.44287673,2032372.44287673,2032372.44287673,2032372.44287673,2015904.97879971,2015904.97879971</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0008;ElCert-Forward-OTC-0016;ElCert-Forward-OTC-0024,ECS Mar-12,Elcertificate,Forward,ElCert-Forward-OTC,1118204.79018185,1118204.79018185,1816548.13098868,1816548.13098868,1816548.13098868,1816548.13098868,1816548.13098868,1797535.92982386,1797535.92982386</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>ElCert-Forward-OTC-0001;ElCert-Forward-OTC-0009;ElCert-Forward-OTC-0017,ECS Mar-07,Elcertificate,Forward,ElCert-Forward-OTC,-1246886.11136076,-1246886.11136076,-1246886.11136076,-1246886.11136076,-1246886.11136076,-1246886.11136076,-1246886.11136076,-1246886.11136076,-1246886.11136076</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0002;ElCert-Forward-OTC-0010;ElCert-Forward-OTC-0018,ECS Mar-07,Elcertificate,Forward,ElCert-Forward-OTC,-1419741.23728605,-1419741.23728605,-1419741.23728605,-1419741.23728605,-1419741.23728605,-1419741.23728605,-1419741.23728605,-1419741.23728605,-1419741.23728605</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0003;ElCert-Forward-OTC-0011;ElCert-Forward-OTC-0019,ECS Mar-11,Elcertificate,Forward,ElCert-Forward-OTC,-1295229.49110212,-1295229.49110212,-1295229.49110212,-1295229.49110212,-1295229.49110212,-1295229.49110212,-1295229.49110212,-1295229.49110212,-1295229.49110212</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0004;ElCert-Forward-OTC-0012;ElCert-Forward-OTC-0020,ECS Mar-11,Elcertificate,Forward,ElCert-Forward-OTC,-1462825.15705724,-1462825.15705724,-1462825.15705724,-1462825.15705724,-1462825.15705724,-1462825.15705724,-1462825.15705724,-1462825.15705724,-1462825.15705724</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0005;ElCert-Forward-OTC-0013;ElCert-Forward-OTC-0021,ECS011111,Elcertificate,Forward,ElCert-Forward-OTC,-1276949.75876817,-1276949.75876817,-1276949.75876817,-1276949.75876817,-1276949.75876817,-1276949.75876817,-1276949.75876817,-1276949.75876817,-1276949.75876817</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0006;ElCert-Forward-OTC-0014;ElCert-Forward-OTC-0022,ECS011111,Elcertificate,Forward,ElCert-Forward-OTC,-1492623.68768453,-1492623.68768453,-1492623.68768453,-1492623.68768453,-1492623.68768453,-1492623.68768453,-1492623.68768453,-1492623.68768453,-1492623.68768453</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0007;ElCert-Forward-OTC-0015;ElCert-Forward-OTC-0023,ECS Mar-12,Elcertificate,Forward,ElCert-Forward-OTC,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>ElCert-Forward-OTC-0008;ElCert-Forward-OTC-0016;ElCert-Forward-OTC-0024,ECS Mar-12,Elcertificate,Forward,ElCert-Forward-OTC,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

@@ -1,0 +1,145 @@
+<TestCase>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Forward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityForward>
+			<InstrumentData>				
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<PriceBasis>EEX</PriceBasis>
+				<LoadProfile>SystemBase</LoadProfile>
+				<FromDate>2016-05-01</FromDate>
+				<ToDate>2016-05-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName='RTE' />
+				</Physical>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>2.0</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>3.0</Price>
+				<Currency>NOK</Currency>
+				<CurrencySource>NordPool</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+		</ElectricityForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2016-04-01T00:00:00Z</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<!--<Audited>true</Audited>-->
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>API test: ElectricityForwardFinancial Spread; should pass</Comment>		
+      <GroupFields>
+        <GroupField1>API Test</GroupField1>
+        <GroupField2>REMIT</GroupField2>
+      </GroupFields>
+			<ExternalId>PassElectricityForwardFinancial3</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+		<CustomProperties>
+			<PropertyGroup name='Compliance'>
+				<BooleanProperty name='RemitReporting' value='true' />	
+				<StringProperty name='UTI' value='TestUti3' />
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<RegulatoryReporting>
+<REMITTable1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xmlns="http://www.acer.europa.eu/REMIT/REMITTable1_V2.xsd">
+  <reportingEntityID>
+    <ace>T1241247G.EU</ace>
+  </reportingEntityID>
+  <contractList>
+    <contract>
+      <contractId>13YEU_EL_OP_Jul_15</contractId>
+      <contractName>M05-16</contractName>
+      <contractType>FW</contractType>
+      <energyCommodity>EL</energyCommodity>
+      <fixingIndex>
+        <indexName>EEX System</indexName>
+        <indexValue>0</indexValue>
+      </fixingIndex>
+      <settlementMethod>P</settlementMethod>
+      <organisedMarketPlaceIdentifier>
+        <ace>B0000116N.NO</ace>
+      </organisedMarketPlaceIdentifier>
+      <contractTradingHours>
+        <startTime>08:00:00.0000000+01:00</startTime>
+        <endTime>16:00:00.0000000+01:00</endTime>
+      </contractTradingHours>
+	  <deliveryPointOrZone>10YFR-RTE------C</deliveryPointOrZone>
+      <deliveryStartDate>2016-05-01</deliveryStartDate>
+      <deliveryEndDate>2016-05-31</deliveryEndDate>
+      <duration>M</duration>
+      <loadType>BL</loadType>
+      <deliveryProfile>
+        <loadDeliveryStartTime>00:00:00.0000000+01:00</loadDeliveryStartTime>
+        <loadDeliveryEndTime>00:00:00.0000000+01:00</loadDeliveryEndTime>
+      </deliveryProfile>
+    </contract>
+  </contractList>
+  <TradeList>
+    <TradeReport>
+      <RecordSeqNumber>1</RecordSeqNumber>
+      <idOfMarketParticipant>
+		<ace>ACER12345.EU</ace>
+	  </idOfMarketParticipant>      <traderID>
+        <traderIdForOrganisedMarket>DealImportNasdaq</traderIdForOrganisedMarket>
+      </traderID>
+      <beneficiaryIdentification>
+		<ace>ACER12345.EU</ace>
+	  </beneficiaryIdentification>
+      <tradingCapacity>A</tradingCapacity>
+      <buySellIndicator>B</buySellIndicator>
+      <contractInfo>
+        <contractId>13YEU_EL_OP_Jul_15</contractId>
+      </contractInfo>
+      <organisedMarketPlaceIdentifier>
+        <ace>B0000116N.NO</ace>
+      </organisedMarketPlaceIdentifier>
+      <transactionTime>2016-04-01T00:00:00Z</transactionTime>
+      <uniqueTransactionIdentifier>
+        <uniqueTransactionIdentifier>TestUti3</uniqueTransactionIdentifier>
+      </uniqueTransactionIdentifier>
+      <priceDetails>
+        <price>3</price>
+        <priceCurrency>NOK</priceCurrency>
+      </priceDetails>
+      <notionalAmountDetails>
+        <notionalAmount>4464</notionalAmount>
+        <notionalCurrency>NOK</notionalCurrency>
+      </notionalAmountDetails>
+      <quantity>
+        <value>2</value>
+        <unit>MW</unit>
+      </quantity>
+      <totalNotionalContractQuantity>
+        <value>1488</value>
+        <unit>MWh</unit>
+      </totalNotionalContractQuantity>
+      <actionType>M</actionType>
+    </TradeReport>
+  </TradeList>
+</REMITTable1>
+</RegulatoryReporting>
+</TestCase>

@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>zMonth-Special-Cases-ZeroVolume-Exposure-NOK</workspace>
+    <monitor>zMonth-Special-Cases-ZeroVolume-Exposure-NOK</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>Special-Cases,Electricity,Special-Cases-ZeroVolume-ElectricityStructuredDeal-DummyDeal,2011-10-01 00:00:00.000,2011-11-30 00:00:00.000,StructuredDeal,Physical,Base,NordPool System Price,None,CET,EUR,Special-Cases-ZeroVolume-ElectricityStructuredDeal-DummyDeal,NordPool System Price,MWh,2011-11-02 00:00:00.000,2011-12-01 00:00:00.000,696,252,444</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>GERMANY,2011-11-02 00:00:00.000,2011-12-01 00:00:00.000,431.61066230438,540.903885916979,369.579373226959</record>
+        <record>ICE NBP,2011-11-02 00:00:00.000,2011-12-01 00:00:00.000,3.67679170617347,0,0</record>
+        <record>ICE TTF,2011-11-02 00:00:00.000,2011-12-01 00:00:00.000,186.939168851056,0,0</record>
+        <record>NordPool System Price,2011-11-02 00:00:00.000,2011-12-01 00:00:00.000,344.888418073872,390.45418206826,319.026768239219</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

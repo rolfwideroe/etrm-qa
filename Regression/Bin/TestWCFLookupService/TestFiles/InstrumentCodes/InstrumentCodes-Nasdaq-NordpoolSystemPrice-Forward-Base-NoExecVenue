@@ -1,0 +1,57 @@
+<InstrumentCodesTestCase>
+	<TestExecutionVenue>Nord Pool</TestExecutionVenue>
+	<InsertXml>
+	<![CDATA[ 
+	  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-Forward</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityForward>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2016-01-01</FromDate>
+          <ToDate>2016-01-31</ToDate>
+          <Financial />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>5</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>40</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </ElectricityForward>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2011-09-28T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>El-Forward-NASDAQ-0001-NoExecutionVenue</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+	]]>
+    </InsertXml>
+    <ExpectedResult>
+      <ExpectedTransaction ExternalId="El-Forward-NASDAQ-0001-NoExecutionVenue">
+			<ExpectedCodes>
+				<ExpectedCode CodeType="ISIN" Code="NONK00337497"/>
+			</ExpectedCodes>
+		</ExpectedTransaction>
+	</ExpectedResult>
+</InstrumentCodesTestCase>

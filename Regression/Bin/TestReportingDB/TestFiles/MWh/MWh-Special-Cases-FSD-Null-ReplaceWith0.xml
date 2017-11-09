@@ -1,0 +1,786 @@
+<ReportingDBTestCase>
+  <InputData>
+    <JobName>MWh-Special-Cases-FSD-Null</JobName>
+    <ReportDate>2011-11-01T00:00:00</ReportDate>
+    <MissingRealizedDataStrategy>ReplaceWith0</MissingRealizedDataStrategy>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTable>
+      <ExpectedRecord>Special-Cases-FSD-Null-Consumption-Elec1,2011-11-01 00:00:00.000,2011-10-31 23:00:00.000,Month,720,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,-240</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Consumption-Elec1,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,744,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,-7440</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Consumption-Gas1,2011-11-01 00:00:00.000,2011-11-01 05:00:00.000,Month,720,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,-180</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Consumption-Gas1,2011-12-01 00:00:00.000,2011-12-01 05:00:00.000,Month,744,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,-7440</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 00:00:00.000,2011-10-29 22:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 00:15:00.000,2011-10-29 22:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 00:30:00.000,2011-10-29 22:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.312500000000057</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 00:45:00.000,2011-10-29 22:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 01:00:00.000,2011-10-29 23:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 01:15:00.000,2011-10-29 23:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 01:30:00.000,2011-10-29 23:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 01:45:00.000,2011-10-29 23:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.312500000000114</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:00:00.000,2011-10-30 00:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:15:00.000,2011-10-30 00:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:30:00.000,2011-10-30 00:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:45:00.000,2011-10-30 00:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:00:00.000,2011-10-30 01:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:15:00.000,2011-10-30 01:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:30:00.000,2011-10-30 01:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:45:00.000,2011-10-30 01:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 03:00:00.000,2011-10-30 02:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 03:15:00.000,2011-10-30 02:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 03:30:00.000,2011-10-30 02:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.312500000000057</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 03:45:00.000,2011-10-30 02:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 04:00:00.000,2011-10-30 03:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 04:15:00.000,2011-10-30 03:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 04:30:00.000,2011-10-30 03:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.312500000000057</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 04:45:00.000,2011-10-30 03:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 05:00:00.000,2011-10-30 04:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 05:15:00.000,2011-10-30 04:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 05:30:00.000,2011-10-30 04:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 05:45:00.000,2011-10-30 04:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 06:00:00.000,2011-10-30 05:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 06:15:00.000,2011-10-30 05:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 06:30:00.000,2011-10-30 05:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 06:45:00.000,2011-10-30 05:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.312500000000057</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 07:00:00.000,2011-10-30 06:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 07:15:00.000,2011-10-30 06:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 07:30:00.000,2011-10-30 06:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 07:45:00.000,2011-10-30 06:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 08:00:00.000,2011-10-30 07:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 08:15:00.000,2011-10-30 07:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 08:30:00.000,2011-10-30 07:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 08:45:00.000,2011-10-30 07:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 09:00:00.000,2011-10-30 08:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 09:15:00.000,2011-10-30 08:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 09:30:00.000,2011-10-30 08:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 09:45:00.000,2011-10-30 08:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 10:00:00.000,2011-10-30 09:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 10:15:00.000,2011-10-30 09:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 10:30:00.000,2011-10-30 09:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 10:45:00.000,2011-10-30 09:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 11:00:00.000,2011-10-30 10:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 11:15:00.000,2011-10-30 10:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 11:30:00.000,2011-10-30 10:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 11:45:00.000,2011-10-30 10:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 12:00:00.000,2011-10-30 11:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 12:15:00.000,2011-10-30 11:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 12:30:00.000,2011-10-30 11:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 12:45:00.000,2011-10-30 11:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 13:00:00.000,2011-10-30 12:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 13:15:00.000,2011-10-30 12:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 13:30:00.000,2011-10-30 12:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 13:45:00.000,2011-10-30 12:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 14:00:00.000,2011-10-30 13:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 14:15:00.000,2011-10-30 13:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 14:30:00.000,2011-10-30 13:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 14:45:00.000,2011-10-30 13:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 15:00:00.000,2011-10-30 14:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 15:15:00.000,2011-10-30 14:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 15:30:00.000,2011-10-30 14:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 15:45:00.000,2011-10-30 14:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 16:00:00.000,2011-10-30 15:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 16:15:00.000,2011-10-30 15:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 16:30:00.000,2011-10-30 15:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 16:45:00.000,2011-10-30 15:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 17:00:00.000,2011-10-30 16:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 17:15:00.000,2011-10-30 16:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 17:30:00.000,2011-10-30 16:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 17:45:00.000,2011-10-30 16:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 18:00:00.000,2011-10-30 17:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 18:15:00.000,2011-10-30 17:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 18:30:00.000,2011-10-30 17:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 18:45:00.000,2011-10-30 17:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 19:00:00.000,2011-10-30 18:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 19:15:00.000,2011-10-30 18:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 19:30:00.000,2011-10-30 18:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 19:45:00.000,2011-10-30 18:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 20:00:00.000,2011-10-30 19:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 20:15:00.000,2011-10-30 19:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 20:30:00.000,2011-10-30 19:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 20:45:00.000,2011-10-30 19:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 21:00:00.000,2011-10-30 20:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 21:15:00.000,2011-10-30 20:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 21:30:00.000,2011-10-30 20:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 21:45:00.000,2011-10-30 20:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 22:00:00.000,2011-10-30 21:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 22:15:00.000,2011-10-30 21:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 22:30:00.000,2011-10-30 21:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 22:45:00.000,2011-10-30 21:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 23:00:00.000,2011-10-30 22:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 23:15:00.000,2011-10-30 22:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 23:30:00.000,2011-10-30 22:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 23:45:00.000,2011-10-30 22:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 00:00:00.000,2011-10-29 22:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 00:15:00.000,2011-10-29 22:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 00:30:00.000,2011-10-29 22:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.312500000000057</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 00:45:00.000,2011-10-29 22:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 01:00:00.000,2011-10-29 23:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 01:15:00.000,2011-10-29 23:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 01:30:00.000,2011-10-29 23:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 01:45:00.000,2011-10-29 23:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.312500000000114</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:00:00.000,2011-10-30 00:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:15:00.000,2011-10-30 00:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:30:00.000,2011-10-30 00:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:45:00.000,2011-10-30 00:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:00:00.000,2011-10-30 01:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:15:00.000,2011-10-30 01:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:30:00.000,2011-10-30 01:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:45:00.000,2011-10-30 01:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 03:00:00.000,2011-10-30 02:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 03:15:00.000,2011-10-30 02:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 03:30:00.000,2011-10-30 02:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.312500000000057</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 03:45:00.000,2011-10-30 02:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 04:00:00.000,2011-10-30 03:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 04:15:00.000,2011-10-30 03:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 04:30:00.000,2011-10-30 03:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.312500000000057</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 04:45:00.000,2011-10-30 03:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 05:00:00.000,2011-10-30 04:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 05:15:00.000,2011-10-30 04:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 05:30:00.000,2011-10-30 04:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 05:45:00.000,2011-10-30 04:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 06:00:00.000,2011-10-30 05:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 06:15:00.000,2011-10-30 05:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 06:30:00.000,2011-10-30 05:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.312499999999943</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 06:45:00.000,2011-10-30 05:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.312500000000057</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 07:00:00.000,2011-10-30 06:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 07:15:00.000,2011-10-30 06:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 07:30:00.000,2011-10-30 06:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 07:45:00.000,2011-10-30 06:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 08:00:00.000,2011-10-30 07:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 08:15:00.000,2011-10-30 07:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 08:30:00.000,2011-10-30 07:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 08:45:00.000,2011-10-30 07:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 09:00:00.000,2011-10-30 08:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 09:15:00.000,2011-10-30 08:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 09:30:00.000,2011-10-30 08:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 09:45:00.000,2011-10-30 08:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 10:00:00.000,2011-10-30 09:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 10:15:00.000,2011-10-30 09:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 10:30:00.000,2011-10-30 09:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 10:45:00.000,2011-10-30 09:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 11:00:00.000,2011-10-30 10:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 11:15:00.000,2011-10-30 10:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 11:30:00.000,2011-10-30 10:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 11:45:00.000,2011-10-30 10:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 12:00:00.000,2011-10-30 11:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 12:15:00.000,2011-10-30 11:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 12:30:00.000,2011-10-30 11:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 12:45:00.000,2011-10-30 11:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 13:00:00.000,2011-10-30 12:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 13:15:00.000,2011-10-30 12:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 13:30:00.000,2011-10-30 12:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 13:45:00.000,2011-10-30 12:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 14:00:00.000,2011-10-30 13:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 14:15:00.000,2011-10-30 13:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 14:30:00.000,2011-10-30 13:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 14:45:00.000,2011-10-30 13:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 15:00:00.000,2011-10-30 14:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 15:15:00.000,2011-10-30 14:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 15:30:00.000,2011-10-30 14:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 15:45:00.000,2011-10-30 14:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 16:00:00.000,2011-10-30 15:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 16:15:00.000,2011-10-30 15:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 16:30:00.000,2011-10-30 15:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 16:45:00.000,2011-10-30 15:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 17:00:00.000,2011-10-30 16:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 17:15:00.000,2011-10-30 16:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 17:30:00.000,2011-10-30 16:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 17:45:00.000,2011-10-30 16:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 18:00:00.000,2011-10-30 17:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 18:15:00.000,2011-10-30 17:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 18:30:00.000,2011-10-30 17:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 18:45:00.000,2011-10-30 17:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 19:00:00.000,2011-10-30 18:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 19:15:00.000,2011-10-30 18:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 19:30:00.000,2011-10-30 18:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 19:45:00.000,2011-10-30 18:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 20:00:00.000,2011-10-30 19:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 20:15:00.000,2011-10-30 19:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 20:30:00.000,2011-10-30 19:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 20:45:00.000,2011-10-30 19:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 21:00:00.000,2011-10-30 20:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 21:15:00.000,2011-10-30 20:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 21:30:00.000,2011-10-30 20:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 21:45:00.000,2011-10-30 20:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 22:00:00.000,2011-10-30 21:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 22:15:00.000,2011-10-30 21:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 22:30:00.000,2011-10-30 21:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 22:45:00.000,2011-10-30 21:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 23:00:00.000,2011-10-30 22:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 23:15:00.000,2011-10-30 22:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 23:30:00.000,2011-10-30 22:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 23:45:00.000,2011-10-30 22:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.3125</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 00:00:00.000,2011-10-29 22:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 01:00:00.000,2011-10-29 23:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25000000000006</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:00:00.000,2011-10-30 00:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.24999999999994</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:00:00.000,2011-10-30 01:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 03:00:00.000,2011-10-30 02:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 04:00:00.000,2011-10-30 03:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 05:00:00.000,2011-10-30 04:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 06:00:00.000,2011-10-30 05:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 07:00:00.000,2011-10-30 06:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 08:00:00.000,2011-10-30 07:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 09:00:00.000,2011-10-30 08:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 10:00:00.000,2011-10-30 09:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 11:00:00.000,2011-10-30 10:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 12:00:00.000,2011-10-30 11:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 13:00:00.000,2011-10-30 12:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 14:00:00.000,2011-10-30 13:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 15:00:00.000,2011-10-30 14:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 16:00:00.000,2011-10-30 15:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 17:00:00.000,2011-10-30 16:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 18:00:00.000,2011-10-30 17:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 19:00:00.000,2011-10-30 18:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 20:00:00.000,2011-10-30 19:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 21:00:00.000,2011-10-30 20:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 22:00:00.000,2011-10-30 21:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 23:00:00.000,2011-10-30 22:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 00:00:00.000,2011-10-29 22:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 01:00:00.000,2011-10-29 23:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25000000000006</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:00:00.000,2011-10-30 00:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.24999999999994</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 02:00:00.000,2011-10-30 01:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 03:00:00.000,2011-10-30 02:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 04:00:00.000,2011-10-30 03:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 05:00:00.000,2011-10-30 04:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 06:00:00.000,2011-10-30 05:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 07:00:00.000,2011-10-30 06:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 08:00:00.000,2011-10-30 07:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 09:00:00.000,2011-10-30 08:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 10:00:00.000,2011-10-30 09:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 11:00:00.000,2011-10-30 10:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 12:00:00.000,2011-10-30 11:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 13:00:00.000,2011-10-30 12:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 14:00:00.000,2011-10-30 13:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 15:00:00.000,2011-10-30 14:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 16:00:00.000,2011-10-30 15:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 17:00:00.000,2011-10-30 16:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 18:00:00.000,2011-10-30 17:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 19:00:00.000,2011-10-30 18:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 20:00:00.000,2011-10-30 19:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 21:00:00.000,2011-10-30 20:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 22:00:00.000,2011-10-30 21:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-30 23:00:00.000,2011-10-30 22:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-01 00:00:00.000,2011-09-30 22:00:00.000,Month,745,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,451.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-11-01 00:00:00.000,2011-10-31 23:00:00.000,Month,720,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,60</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,744,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1860</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-01 00:00:00.000,2011-09-30 22:00:00.000,Month,493,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,301.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-11-01 00:00:00.000,2011-10-31 23:00:00.000,Month,456,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,30</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,480,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1200</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-10-01 00:00:00.000,2011-09-30 22:00:00.000,Month,252,Central Europe Standard Time,Peak,Volume in MWh,NULL,NULL,MWh,150</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-11-01 00:00:00.000,2011-10-31 23:00:00.000,Month,264,Central Europe Standard Time,Peak,Volume in MWh,NULL,NULL,MWh,30</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,264,Central Europe Standard Time,Peak,Volume in MWh,NULL,NULL,MWh,660</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily-RV-All,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,744,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1860</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily-RV-All,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,480,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1200</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-FPFV-Daily-RV-All,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,264,Central Europe Standard Time,Peak,Volume in MWh,NULL,NULL,MWh,660</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Generation-Elec1,2011-11-01 00:00:00.000,2011-10-31 23:00:00.000,Month,720,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,240</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Generation-Elec1,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,744,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,7440</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Generation-Elec1,2011-11-01 00:00:00.000,2011-10-31 23:00:00.000,Month,456,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,120</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Generation-Elec1,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,480,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,4800</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Generation-Elec1,2011-11-01 00:00:00.000,2011-10-31 23:00:00.000,Month,264,Central Europe Standard Time,Peak,Volume in MWh,NULL,NULL,MWh,120</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Generation-Elec1,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,264,Central Europe Standard Time,Peak,Volume in MWh,NULL,NULL,MWh,2640</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Generation-Gas1,2011-11-01 00:00:00.000,2011-11-01 05:00:00.000,Month,720,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,180</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Generation-Gas1,2011-12-01 00:00:00.000,2011-12-01 05:00:00.000,Month,744,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,7440</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec1,2011-11-01 00:00:00.000,2011-10-31 23:00:00.000,Month,720,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,240</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec1,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,744,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,7440</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 00:00:00.000,2011-10-29 22:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 00:15:00.000,2011-10-29 22:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 00:30:00.000,2011-10-29 22:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 00:45:00.000,2011-10-29 22:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 01:00:00.000,2011-10-29 23:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 01:15:00.000,2011-10-29 23:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 01:30:00.000,2011-10-29 23:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 01:45:00.000,2011-10-29 23:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 02:00:00.000,2011-10-30 00:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 02:15:00.000,2011-10-30 00:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 02:30:00.000,2011-10-30 00:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 02:45:00.000,2011-10-30 00:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 02:00:00.000,2011-10-30 01:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 02:15:00.000,2011-10-30 01:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 02:30:00.000,2011-10-30 01:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 02:45:00.000,2011-10-30 01:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 03:00:00.000,2011-10-30 02:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 03:15:00.000,2011-10-30 02:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 03:30:00.000,2011-10-30 02:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 03:45:00.000,2011-10-30 02:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 04:00:00.000,2011-10-30 03:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 04:15:00.000,2011-10-30 03:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 04:30:00.000,2011-10-30 03:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 04:45:00.000,2011-10-30 03:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 05:00:00.000,2011-10-30 04:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 05:15:00.000,2011-10-30 04:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 05:30:00.000,2011-10-30 04:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 05:45:00.000,2011-10-30 04:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 06:00:00.000,2011-10-30 05:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 06:15:00.000,2011-10-30 05:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 06:30:00.000,2011-10-30 05:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 06:45:00.000,2011-10-30 05:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 07:00:00.000,2011-10-30 06:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 07:15:00.000,2011-10-30 06:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 07:30:00.000,2011-10-30 06:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 07:45:00.000,2011-10-30 06:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 08:00:00.000,2011-10-30 07:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 08:15:00.000,2011-10-30 07:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 08:30:00.000,2011-10-30 07:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 08:45:00.000,2011-10-30 07:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 09:00:00.000,2011-10-30 08:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 09:15:00.000,2011-10-30 08:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 09:30:00.000,2011-10-30 08:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 09:45:00.000,2011-10-30 08:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 10:00:00.000,2011-10-30 09:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 10:15:00.000,2011-10-30 09:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 10:30:00.000,2011-10-30 09:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 10:45:00.000,2011-10-30 09:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 11:00:00.000,2011-10-30 10:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 11:15:00.000,2011-10-30 10:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 11:30:00.000,2011-10-30 10:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 11:45:00.000,2011-10-30 10:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 12:00:00.000,2011-10-30 11:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 12:15:00.000,2011-10-30 11:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 12:30:00.000,2011-10-30 11:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 12:45:00.000,2011-10-30 11:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 13:00:00.000,2011-10-30 12:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 13:15:00.000,2011-10-30 12:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 13:30:00.000,2011-10-30 12:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 13:45:00.000,2011-10-30 12:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 14:00:00.000,2011-10-30 13:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 14:15:00.000,2011-10-30 13:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 14:30:00.000,2011-10-30 13:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 14:45:00.000,2011-10-30 13:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 15:00:00.000,2011-10-30 14:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 15:15:00.000,2011-10-30 14:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 15:30:00.000,2011-10-30 14:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 15:45:00.000,2011-10-30 14:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 16:00:00.000,2011-10-30 15:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 16:15:00.000,2011-10-30 15:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 16:30:00.000,2011-10-30 15:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 16:45:00.000,2011-10-30 15:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 17:00:00.000,2011-10-30 16:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 17:15:00.000,2011-10-30 16:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 17:30:00.000,2011-10-30 16:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 17:45:00.000,2011-10-30 16:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 18:00:00.000,2011-10-30 17:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 18:15:00.000,2011-10-30 17:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 18:30:00.000,2011-10-30 17:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 18:45:00.000,2011-10-30 17:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 19:00:00.000,2011-10-30 18:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 19:15:00.000,2011-10-30 18:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 19:30:00.000,2011-10-30 18:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 19:45:00.000,2011-10-30 18:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 20:00:00.000,2011-10-30 19:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 20:15:00.000,2011-10-30 19:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 20:30:00.000,2011-10-30 19:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 20:45:00.000,2011-10-30 19:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 21:00:00.000,2011-10-30 20:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 21:15:00.000,2011-10-30 20:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 21:30:00.000,2011-10-30 20:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 21:45:00.000,2011-10-30 20:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 22:00:00.000,2011-10-30 21:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 22:15:00.000,2011-10-30 21:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 22:30:00.000,2011-10-30 21:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 22:45:00.000,2011-10-30 21:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 23:00:00.000,2011-10-30 22:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 23:15:00.000,2011-10-30 22:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 23:30:00.000,2011-10-30 22:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 23:45:00.000,2011-10-30 22:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 00:00:00.000,2011-10-29 22:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 01:00:00.000,2011-10-29 23:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 02:00:00.000,2011-10-30 00:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 02:00:00.000,2011-10-30 01:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 03:00:00.000,2011-10-30 02:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 04:00:00.000,2011-10-30 03:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 05:00:00.000,2011-10-30 04:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 06:00:00.000,2011-10-30 05:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 07:00:00.000,2011-10-30 06:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 08:00:00.000,2011-10-30 07:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 09:00:00.000,2011-10-30 08:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 10:00:00.000,2011-10-30 09:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 11:00:00.000,2011-10-30 10:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 12:00:00.000,2011-10-30 11:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 13:00:00.000,2011-10-30 12:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 14:00:00.000,2011-10-30 13:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 15:00:00.000,2011-10-30 14:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 16:00:00.000,2011-10-30 15:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 17:00:00.000,2011-10-30 16:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 18:00:00.000,2011-10-30 17:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 19:00:00.000,2011-10-30 18:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 20:00:00.000,2011-10-30 19:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 21:00:00.000,2011-10-30 20:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 22:00:00.000,2011-10-30 21:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-30 23:00:00.000,2011-10-30 22:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-10-01 00:00:00.000,2011-09-30 22:00:00.000,Month,745,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1805</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-11-01 00:00:00.000,2011-10-31 23:00:00.000,Month,720,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,240</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec2,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,744,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,7440</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec3,2011-12-01 00:00:00.000,2011-11-30 23:00:00.000,Month,744,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,7440</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 00:00:00.000,2011-10-29 22:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 00:15:00.000,2011-10-29 22:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 00:30:00.000,2011-10-29 22:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,0.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 00:45:00.000,2011-10-29 22:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 01:00:00.000,2011-10-29 23:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 01:15:00.000,2011-10-29 23:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 01:30:00.000,2011-10-29 23:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 01:45:00.000,2011-10-29 23:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,2</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:00:00.000,2011-10-30 00:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,2.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:30:00.000,2011-10-30 00:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,2.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:00:00.000,2011-10-30 01:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,2.3</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:45:00.000,2011-10-30 01:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,3.05</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 03:00:00.000,2011-10-30 02:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,3.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 03:15:00.000,2011-10-30 02:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,3.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 03:30:00.000,2011-10-30 02:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,3.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 03:45:00.000,2011-10-30 02:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,4</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 04:00:00.000,2011-10-30 03:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,4.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 04:15:00.000,2011-10-30 03:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,4.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 04:30:00.000,2011-10-30 03:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,4.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 04:45:00.000,2011-10-30 03:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 05:00:00.000,2011-10-30 04:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 05:15:00.000,2011-10-30 04:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 05:30:00.000,2011-10-30 04:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5.74999999999999</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 05:45:00.000,2011-10-30 04:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,6</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 06:00:00.000,2011-10-30 05:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,6.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 06:15:00.000,2011-10-30 05:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,6.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 06:30:00.000,2011-10-30 05:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,6.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 06:45:00.000,2011-10-30 05:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,7</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 07:00:00.000,2011-10-30 06:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,7.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 07:15:00.000,2011-10-30 06:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,7.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 07:30:00.000,2011-10-30 06:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,7.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 07:45:00.000,2011-10-30 06:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,8</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 08:00:00.000,2011-10-30 07:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,8.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 08:15:00.000,2011-10-30 07:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,8.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 08:30:00.000,2011-10-30 07:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,8.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 08:45:00.000,2011-10-30 07:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,9</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 09:00:00.000,2011-10-30 08:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,9.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 09:15:00.000,2011-10-30 08:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,9.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 09:30:00.000,2011-10-30 08:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,9.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 09:45:00.000,2011-10-30 08:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,10</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 10:00:00.000,2011-10-30 09:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,10.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 10:15:00.000,2011-10-30 09:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,10.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 10:30:00.000,2011-10-30 09:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,10.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 10:45:00.000,2011-10-30 09:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,11</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 11:00:00.000,2011-10-30 10:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,11.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 11:15:00.000,2011-10-30 10:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,11.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 11:30:00.000,2011-10-30 10:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,11.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 11:45:00.000,2011-10-30 10:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,12</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 12:00:00.000,2011-10-30 11:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,12.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 12:15:00.000,2011-10-30 11:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,12.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 12:30:00.000,2011-10-30 11:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,12.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 12:45:00.000,2011-10-30 11:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,13</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 13:00:00.000,2011-10-30 12:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,13.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 13:15:00.000,2011-10-30 12:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,13.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 13:30:00.000,2011-10-30 12:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,13.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 13:45:00.000,2011-10-30 12:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,14</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 14:00:00.000,2011-10-30 13:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,14.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 14:15:00.000,2011-10-30 13:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,14.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 14:30:00.000,2011-10-30 13:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,14.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 14:45:00.000,2011-10-30 13:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,15</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 15:00:00.000,2011-10-30 14:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,15.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 15:15:00.000,2011-10-30 14:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,15.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 15:30:00.000,2011-10-30 14:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,15.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 15:45:00.000,2011-10-30 14:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,16</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 16:00:00.000,2011-10-30 15:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,16.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 16:15:00.000,2011-10-30 15:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,16.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 16:30:00.000,2011-10-30 15:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,16.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 16:45:00.000,2011-10-30 15:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,17</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 17:00:00.000,2011-10-30 16:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,17.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 17:15:00.000,2011-10-30 16:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,17.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 17:30:00.000,2011-10-30 16:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,17.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 17:45:00.000,2011-10-30 16:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,18</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 18:00:00.000,2011-10-30 17:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,18.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 18:15:00.000,2011-10-30 17:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,18.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 18:30:00.000,2011-10-30 17:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,18.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 18:45:00.000,2011-10-30 17:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,19</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 19:00:00.000,2011-10-30 18:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,19.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 19:15:00.000,2011-10-30 18:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,19.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 19:30:00.000,2011-10-30 18:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,19.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 19:45:00.000,2011-10-30 18:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,20</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 20:00:00.000,2011-10-30 19:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,20.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 20:15:00.000,2011-10-30 19:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,20.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 20:30:00.000,2011-10-30 19:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,20.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 20:45:00.000,2011-10-30 19:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,21</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 21:00:00.000,2011-10-30 20:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,21.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 21:15:00.000,2011-10-30 20:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,21.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 21:30:00.000,2011-10-30 20:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,21.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 21:45:00.000,2011-10-30 20:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,22</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 22:00:00.000,2011-10-30 21:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,22.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 22:15:00.000,2011-10-30 21:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,22.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 22:30:00.000,2011-10-30 21:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,22.7499999999999</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 22:45:00.000,2011-10-30 21:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,23</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 23:00:00.000,2011-10-30 22:00:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,23.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 23:15:00.000,2011-10-30 22:15:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,23.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 23:30:00.000,2011-10-30 22:30:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,23.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 23:45:00.000,2011-10-30 22:45:00.000,15 min,0.25,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,24</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 00:00:00.000,2011-10-29 22:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 00:15:00.000,2011-10-29 22:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 00:30:00.000,2011-10-29 22:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,0.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 00:45:00.000,2011-10-29 22:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 01:00:00.000,2011-10-29 23:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 01:15:00.000,2011-10-29 23:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 01:30:00.000,2011-10-29 23:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 01:45:00.000,2011-10-29 23:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,2</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:00:00.000,2011-10-30 00:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,2.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:30:00.000,2011-10-30 00:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,2.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:00:00.000,2011-10-30 01:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,2.3</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:45:00.000,2011-10-30 01:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,3.05</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 03:00:00.000,2011-10-30 02:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,3.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 03:15:00.000,2011-10-30 02:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,3.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 03:30:00.000,2011-10-30 02:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,3.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 03:45:00.000,2011-10-30 02:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,4</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 04:00:00.000,2011-10-30 03:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,4.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 04:15:00.000,2011-10-30 03:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,4.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 04:30:00.000,2011-10-30 03:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,4.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 04:45:00.000,2011-10-30 03:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 05:00:00.000,2011-10-30 04:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,5.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 05:15:00.000,2011-10-30 04:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,5.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 05:30:00.000,2011-10-30 04:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,5.74999999999999</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 05:45:00.000,2011-10-30 04:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,6</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 06:00:00.000,2011-10-30 05:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,6.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 06:15:00.000,2011-10-30 05:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,6.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 06:30:00.000,2011-10-30 05:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,6.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 06:45:00.000,2011-10-30 05:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,7</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 07:00:00.000,2011-10-30 06:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,7.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 07:15:00.000,2011-10-30 06:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,7.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 07:30:00.000,2011-10-30 06:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,7.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 07:45:00.000,2011-10-30 06:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,8</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 08:00:00.000,2011-10-30 07:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,8.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 08:15:00.000,2011-10-30 07:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,8.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 08:30:00.000,2011-10-30 07:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,8.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 08:45:00.000,2011-10-30 07:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,9</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 09:00:00.000,2011-10-30 08:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,9.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 09:15:00.000,2011-10-30 08:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,9.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 09:30:00.000,2011-10-30 08:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,9.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 09:45:00.000,2011-10-30 08:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,10</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 10:00:00.000,2011-10-30 09:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,10.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 10:15:00.000,2011-10-30 09:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,10.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 10:30:00.000,2011-10-30 09:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,10.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 10:45:00.000,2011-10-30 09:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,11</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 11:00:00.000,2011-10-30 10:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,11.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 11:15:00.000,2011-10-30 10:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,11.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 11:30:00.000,2011-10-30 10:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,11.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 11:45:00.000,2011-10-30 10:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,12</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 12:00:00.000,2011-10-30 11:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,12.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 12:15:00.000,2011-10-30 11:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,12.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 12:30:00.000,2011-10-30 11:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,12.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 12:45:00.000,2011-10-30 11:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,13</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 13:00:00.000,2011-10-30 12:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,13.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 13:15:00.000,2011-10-30 12:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,13.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 13:30:00.000,2011-10-30 12:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,13.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 13:45:00.000,2011-10-30 12:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,14</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 14:00:00.000,2011-10-30 13:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,14.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 14:15:00.000,2011-10-30 13:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,14.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 14:30:00.000,2011-10-30 13:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,14.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 14:45:00.000,2011-10-30 13:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,15</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 15:00:00.000,2011-10-30 14:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,15.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 15:15:00.000,2011-10-30 14:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,15.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 15:30:00.000,2011-10-30 14:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,15.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 15:45:00.000,2011-10-30 14:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,16</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 16:00:00.000,2011-10-30 15:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,16.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 16:15:00.000,2011-10-30 15:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,16.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 16:30:00.000,2011-10-30 15:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,16.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 16:45:00.000,2011-10-30 15:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,17</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 17:00:00.000,2011-10-30 16:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,17.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 17:15:00.000,2011-10-30 16:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,17.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 17:30:00.000,2011-10-30 16:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,17.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 17:45:00.000,2011-10-30 16:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,18</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 18:00:00.000,2011-10-30 17:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,18.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 18:15:00.000,2011-10-30 17:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,18.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 18:30:00.000,2011-10-30 17:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,18.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 18:45:00.000,2011-10-30 17:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,19</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 19:00:00.000,2011-10-30 18:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,19.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 19:15:00.000,2011-10-30 18:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,19.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 19:30:00.000,2011-10-30 18:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,19.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 19:45:00.000,2011-10-30 18:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,20</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 20:00:00.000,2011-10-30 19:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,20.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 20:15:00.000,2011-10-30 19:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,20.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 20:30:00.000,2011-10-30 19:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,20.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 20:45:00.000,2011-10-30 19:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,21</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 21:00:00.000,2011-10-30 20:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,21.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 21:15:00.000,2011-10-30 20:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,21.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 21:30:00.000,2011-10-30 20:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,21.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 21:45:00.000,2011-10-30 20:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,22</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 22:00:00.000,2011-10-30 21:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,22.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 22:15:00.000,2011-10-30 21:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,22.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 22:30:00.000,2011-10-30 21:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,22.7499999999999</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 22:45:00.000,2011-10-30 21:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,23</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 23:00:00.000,2011-10-30 22:00:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,23.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 23:15:00.000,2011-10-30 22:15:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,23.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 23:30:00.000,2011-10-30 22:30:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,23.75</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 23:45:00.000,2011-10-30 22:45:00.000,15 min,0.25,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,24</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 00:00:00.000,2011-10-29 22:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,2.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 01:00:00.000,2011-10-29 23:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,6.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:00:00.000,2011-10-30 00:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:00:00.000,2011-10-30 01:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,5.35</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 03:00:00.000,2011-10-30 02:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,14.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 04:00:00.000,2011-10-30 03:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,18.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 05:00:00.000,2011-10-30 04:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,22.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 06:00:00.000,2011-10-30 05:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,26.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 07:00:00.000,2011-10-30 06:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,30.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 08:00:00.000,2011-10-30 07:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,34.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 09:00:00.000,2011-10-30 08:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,38.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 10:00:00.000,2011-10-30 09:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,42.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 11:00:00.000,2011-10-30 10:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,46.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 12:00:00.000,2011-10-30 11:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,50.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 13:00:00.000,2011-10-30 12:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,54.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 14:00:00.000,2011-10-30 13:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,58.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 15:00:00.000,2011-10-30 14:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,62.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 16:00:00.000,2011-10-30 15:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,66.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 17:00:00.000,2011-10-30 16:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,70.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 18:00:00.000,2011-10-30 17:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,74.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 19:00:00.000,2011-10-30 18:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,78.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 20:00:00.000,2011-10-30 19:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,82.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 21:00:00.000,2011-10-30 20:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,86.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 22:00:00.000,2011-10-30 21:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,90.4999999999999</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 23:00:00.000,2011-10-30 22:00:00.000,Hour,1,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,94.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 00:00:00.000,2011-10-29 22:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,2.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 01:00:00.000,2011-10-29 23:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,6.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:00:00.000,2011-10-30 00:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 02:00:00.000,2011-10-30 01:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,5.35</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 03:00:00.000,2011-10-30 02:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,14.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 04:00:00.000,2011-10-30 03:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,18.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 05:00:00.000,2011-10-30 04:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,22.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 06:00:00.000,2011-10-30 05:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,26.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 07:00:00.000,2011-10-30 06:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,30.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 08:00:00.000,2011-10-30 07:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,34.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 09:00:00.000,2011-10-30 08:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,38.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 10:00:00.000,2011-10-30 09:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,42.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 11:00:00.000,2011-10-30 10:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,46.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 12:00:00.000,2011-10-30 11:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,50.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 13:00:00.000,2011-10-30 12:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,54.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 14:00:00.000,2011-10-30 13:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,58.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 15:00:00.000,2011-10-30 14:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,62.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 16:00:00.000,2011-10-30 15:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,66.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 17:00:00.000,2011-10-30 16:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,70.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 18:00:00.000,2011-10-30 17:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,74.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 19:00:00.000,2011-10-30 18:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,78.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 20:00:00.000,2011-10-30 19:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,82.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 21:00:00.000,2011-10-30 20:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,86.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 22:00:00.000,2011-10-30 21:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,90.4999999999999</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-30 23:00:00.000,2011-10-30 22:00:00.000,Hour,1,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,94.5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-01 00:00:00.000,2011-09-30 22:00:00.000,Month,745,Central Europe Standard Time,Base,Volume in MWh,NULL,NULL,MWh,1163.85</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Elec4,2011-10-01 00:00:00.000,2011-09-30 22:00:00.000,Month,493,Central Europe Standard Time,OffPeak,Volume in MWh,NULL,NULL,MWh,1163.85</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas1,2011-11-01 00:00:00.000,2011-11-01 05:00:00.000,Month,720,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,180</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas1,2011-12-01 00:00:00.000,2011-12-01 05:00:00.000,Month,744,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,7440</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 00:00:00.000,2011-10-30 05:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 00:15:00.000,2011-10-30 05:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 00:30:00.000,2011-10-30 05:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 00:45:00.000,2011-10-30 05:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 01:00:00.000,2011-10-30 06:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 01:15:00.000,2011-10-30 06:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 01:30:00.000,2011-10-30 06:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 01:45:00.000,2011-10-30 06:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 02:00:00.000,2011-10-30 07:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 02:15:00.000,2011-10-30 07:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 02:30:00.000,2011-10-30 07:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 02:45:00.000,2011-10-30 07:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 03:00:00.000,2011-10-30 08:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 03:15:00.000,2011-10-30 08:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 03:30:00.000,2011-10-30 08:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 03:45:00.000,2011-10-30 08:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 04:00:00.000,2011-10-30 09:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 04:15:00.000,2011-10-30 09:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 04:30:00.000,2011-10-30 09:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 04:45:00.000,2011-10-30 09:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 05:00:00.000,2011-10-30 10:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 05:15:00.000,2011-10-30 10:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 05:30:00.000,2011-10-30 10:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 05:45:00.000,2011-10-30 10:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 06:00:00.000,2011-10-30 11:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 06:15:00.000,2011-10-30 11:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 06:30:00.000,2011-10-30 11:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 06:45:00.000,2011-10-30 11:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 07:00:00.000,2011-10-30 12:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 07:15:00.000,2011-10-30 12:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 07:30:00.000,2011-10-30 12:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 07:45:00.000,2011-10-30 12:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 08:00:00.000,2011-10-30 13:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 08:15:00.000,2011-10-30 13:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 08:30:00.000,2011-10-30 13:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 08:45:00.000,2011-10-30 13:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 09:00:00.000,2011-10-30 14:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 09:15:00.000,2011-10-30 14:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 09:30:00.000,2011-10-30 14:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 09:45:00.000,2011-10-30 14:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 10:00:00.000,2011-10-30 15:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 10:15:00.000,2011-10-30 15:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 10:30:00.000,2011-10-30 15:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 10:45:00.000,2011-10-30 15:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 11:00:00.000,2011-10-30 16:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 11:15:00.000,2011-10-30 16:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 11:30:00.000,2011-10-30 16:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 11:45:00.000,2011-10-30 16:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 12:00:00.000,2011-10-30 17:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 12:15:00.000,2011-10-30 17:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 12:30:00.000,2011-10-30 17:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 12:45:00.000,2011-10-30 17:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 13:00:00.000,2011-10-30 18:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 13:15:00.000,2011-10-30 18:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 13:30:00.000,2011-10-30 18:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 13:45:00.000,2011-10-30 18:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 14:00:00.000,2011-10-30 19:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 14:15:00.000,2011-10-30 19:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 14:30:00.000,2011-10-30 19:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 14:45:00.000,2011-10-30 19:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 15:00:00.000,2011-10-30 20:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 15:15:00.000,2011-10-30 20:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 15:30:00.000,2011-10-30 20:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 15:45:00.000,2011-10-30 20:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 16:00:00.000,2011-10-30 21:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 16:15:00.000,2011-10-30 21:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 16:30:00.000,2011-10-30 21:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 16:45:00.000,2011-10-30 21:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 17:00:00.000,2011-10-30 22:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 17:15:00.000,2011-10-30 22:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 17:30:00.000,2011-10-30 22:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 17:45:00.000,2011-10-30 22:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 18:00:00.000,2011-10-30 23:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 18:15:00.000,2011-10-30 23:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 18:30:00.000,2011-10-30 23:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 18:45:00.000,2011-10-30 23:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 19:00:00.000,2011-10-31 00:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 19:15:00.000,2011-10-31 00:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 19:30:00.000,2011-10-31 00:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 19:45:00.000,2011-10-31 00:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 20:00:00.000,2011-10-31 01:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 20:15:00.000,2011-10-31 01:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 20:30:00.000,2011-10-31 01:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 20:45:00.000,2011-10-31 01:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 21:00:00.000,2011-10-31 02:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 21:15:00.000,2011-10-31 02:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 21:30:00.000,2011-10-31 02:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 21:45:00.000,2011-10-31 02:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 22:00:00.000,2011-10-31 03:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 22:15:00.000,2011-10-31 03:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 22:30:00.000,2011-10-31 03:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 22:45:00.000,2011-10-31 03:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 23:00:00.000,2011-10-31 04:00:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 23:15:00.000,2011-10-31 04:15:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 23:30:00.000,2011-10-31 04:30:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 23:45:00.000,2011-10-31 04:45:00.000,15 min,0.25,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1.25</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 00:00:00.000,2011-10-30 05:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 01:00:00.000,2011-10-30 06:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 02:00:00.000,2011-10-30 07:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 03:00:00.000,2011-10-30 08:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 04:00:00.000,2011-10-30 09:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 05:00:00.000,2011-10-30 10:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 06:00:00.000,2011-10-30 11:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 07:00:00.000,2011-10-30 12:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 08:00:00.000,2011-10-30 13:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 09:00:00.000,2011-10-30 14:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 10:00:00.000,2011-10-30 15:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 11:00:00.000,2011-10-30 16:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 12:00:00.000,2011-10-30 17:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 13:00:00.000,2011-10-30 18:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 14:00:00.000,2011-10-30 19:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 15:00:00.000,2011-10-30 20:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 16:00:00.000,2011-10-30 21:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 17:00:00.000,2011-10-30 22:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 18:00:00.000,2011-10-30 23:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 19:00:00.000,2011-10-31 00:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 20:00:00.000,2011-10-31 01:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 21:00:00.000,2011-10-31 02:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 22:00:00.000,2011-10-31 03:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-30 23:00:00.000,2011-10-31 04:00:00.000,Hour,1,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,5</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-10-01 00:00:00.000,2011-10-01 04:00:00.000,Month,745,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,1800</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-11-01 00:00:00.000,2011-11-01 05:00:00.000,Month,720,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,180</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas2,2011-12-01 00:00:00.000,2011-12-01 05:00:00.000,Month,744,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,7440</ExpectedRecord>
+      <ExpectedRecord>Special-Cases-FSD-Null-Retail-Gas3,2011-12-01 00:00:00.000,2011-12-01 05:00:00.000,Month,744,CET 06-06,Base,Volume in MWh,NULL,NULL,MWh,7440</ExpectedRecord>
+    </ExpectedDataTable>
+  </ExpectedValues>
+</ReportingDBTestCase>

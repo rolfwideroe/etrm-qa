@@ -1,0 +1,21 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>MutablePosMon</workspace>
+    <monitor>MutablePosMon</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <extId>Mutable-Missing-Forecast-Prices-1;Mutable-Missing-Forecast-Prices-2</extId>
+    <aggregateStructuredDeals>-1</aggregateStructuredDeals>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0197 MutableTests,Base,Physical,EEX,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Retail deal(s) - Base,,,,2013-01-01 00:00:00.000,2013-01-02 00:00:00.000,Active,0,0,17969.9239326957,17969.9239326957,32369.9239326957,17969.9239326957,0,-14400,-14400,0.0547945205479452,480,0,10,0,0,0,48,10,NULL,0,0,0,0,0,0,30,-14400,67.4373415264495,0,0,Mutable-Missing-Forecast-Prices-1;Mutable-Missing-Forecast-Prices-2</record>
+        <record>0200 Counterparty-MutableTests,Base,Physical,EEX,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Retail deal(s) - Base,,,,2013-01-01 00:00:00.000,2013-01-02 00:00:00.000,Active,0,0,-17969.9239326957,-17969.9239326957,-32369.9239326957,-17969.9239326957,0,14400,14400,-0.0547945205479452,-480,0,-10,0,0,0,48,-10,NULL,0,0,0,0,0,0,30,14400,67.4373415264495,0,0,Mutable-Missing-Forecast-Prices-1;Mutable-Missing-Forecast-Prices-2</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

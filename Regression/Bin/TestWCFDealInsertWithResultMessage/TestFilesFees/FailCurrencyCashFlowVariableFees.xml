@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestCase>
+	<TestResult>Failure</TestResult>
+	<Message>Cash Flow transaction does not support fee value type Variable</Message>
+	<TestData>
+		<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../../Source/Integration/Viz.Integration.Core.DealImport/Files/Schemas/DealInsert.xsd">
+			<MetaData>
+				<Timezone>CET</Timezone>
+			</MetaData>
+			<Transaction>
+				<TransactionType>Automatic</TransactionType>
+				<DealType>Currency-CashFlow</DealType>
+				<Portfolios>
+					<Portfolio>API Test Customer</Portfolio>
+					<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+					<PaidReceived>Paid</PaidReceived>
+				</Portfolios>
+				<CurrencyCashFlow>
+					<InstrumentData>
+						<Timezone>CET</Timezone>
+						<TransactionName>PassCurrency-CashFlowDaily</TransactionName>
+					</InstrumentData>
+					<SettlementData>
+						<CashFlowPeriods Resolution="Monthly">
+							<TimeSeriesDetail FromDate="2015-01-01" Value="1" />
+							<TimeSeriesDetail FromDate="2015-02-01" Value="2" />
+							<TimeSeriesDetail FromDate="2015-03-01" Value="3" />
+						</CashFlowPeriods>
+						<Currency>EUR</Currency>
+						<CurrencySource>Viz</CurrencySource>
+						<Clearing>Electronic</Clearing>
+						<Broker>ICAP</Broker>
+					</SettlementData>
+					<FeesData>
+						<Fees>
+							<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.5" />
+							<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.2" />
+							<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.1" />
+							<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" />
+						</Fees>
+					</FeesData>
+				</CurrencyCashFlow>
+				<DealDetails>
+					<Status>Active</Status>
+					<Trader>Vizard</Trader>
+					<TradeDate>2011-02-14T00:00:00</TradeDate>
+				</DealDetails>
+				<ReferenceData>
+					<GroupFields>
+						<GroupField1/>
+						<GroupField2/>
+						<GroupField3/>
+					</GroupFields>
+					<ExternalId>FailCurrencyCashFlowVariableFees</ExternalId>
+					<ExternalSource>XMLFileImport</ExternalSource>
+					<TicketNumber>TicketNumber</TicketNumber>
+				</ReferenceData>
+			</Transaction>
+		</DealInsert>
+	</TestData>
+</TestCase>

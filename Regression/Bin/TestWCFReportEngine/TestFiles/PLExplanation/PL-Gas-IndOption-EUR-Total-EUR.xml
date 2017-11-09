@@ -1,0 +1,39 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Gas-IndOption-EUR" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Gas-IndexedOption-001,Indexed Option C GAS-11,ICE TTF,IndexedOption,Gas-IndexedOption-EUR,-2405847.09403448,-2407465.93599985,-2420228.90204918,-2420228.90204918,-2420228.90204918,-2420201.13229484,-2420194.0378013,-2422831.17911052,-2422831.17911052</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-002,Indexed Option C Q4-12,ICE TTF,IndexedOption,Gas-IndexedOption-EUR,-98499.8030875674,-98522.2192830827,-88959.0165462412,-88959.0165462412,-88959.0165462412,-88959.393932952,-89019.4077298372,-85923.8409245802,-85923.8409245802</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-003,Indexed Option P GAS-11,ICE TTF,IndexedOption,Gas-IndexedOption-EUR,-2010208.51106381,-2023541.50638279,-1976004.1247101,-1976004.1247101,-1976004.1247101,-1975976.35495576,-1975899.23013283,-1958595.90394936,-1958595.90394936</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Gas-IndexedOption-001,Indexed Option C GAS-11,ICE TTF,IndexedOption,Gas-IndexedOption-EUR,53672.9059655157,52054.0640001542,39291.0979508171,39291.0979508171,39291.0979508171,39318.8677051568,39325.9621986972,36688.8208894787,36688.8208894787</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-002,Indexed Option C Q4-12,ICE TTF,IndexedOption,Gas-IndexedOption-EUR,-230979.803087567,-231002.219283083,-221439.016546241,-221439.016546241,-221439.016546241,-221439.393932952,-221499.407729837,-218403.84092458,-218403.84092458</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-003,Indexed Option P GAS-11,ICE TTF,IndexedOption,Gas-IndexedOption-EUR,449311.488936194,435978.49361721,483515.875289899,483515.875289899,483515.875289899,483543.645044239,483620.769867167,500924.096050637,500924.096050637</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Gas-IndexedOption-001,Indexed Option C GAS-11,ICE TTF,IndexedOption,Gas-IndexedOption-EUR,-2459520,-2459520,-2459520,-2459520,-2459520,-2459520,-2459520,-2459520,-2459520</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-002,Indexed Option C Q4-12,ICE TTF,IndexedOption,Gas-IndexedOption-EUR,132480,132480,132480,132480,132480,132480,132480,132480,132480</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-003,Indexed Option P GAS-11,ICE TTF,IndexedOption,Gas-IndexedOption-EUR,-2459520,-2459520,-2459520,-2459520,-2459520,-2459520,-2459520,-2459520,-2459520</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

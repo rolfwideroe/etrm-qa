@@ -1,0 +1,450 @@
+<test type="EcmBatch" name="Gas-Forward-THD-GBP-CFMon-ActualPL-NOK" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-Forward-THD-GBP-CFMon-ActualPL-NOK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,-2027545.63307427,monthly,Forward,Sep-11,Gas-Forward-THD-GBP-0001</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-2795280.93068493,monthly,Forward,Nov-11,Gas-Forward-THD-GBP-0002</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,763861.969004375,monthly,Forward,Dec-11,Gas-Forward-THD-GBP-0003</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,-1279543.80696152,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0004</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,-290855.136420436,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0004</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,-1308012.29170525,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0004</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,-2027545.63307427,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0004</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-2532165.44055848,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-2795280.93068493,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0005</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,763861.969004375,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0005</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,1137432.28984147,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0006</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,1063133.93586273,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0006</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,807956.348999743,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0006</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,-1420867.87172194,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0007</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,-898569.024432204,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0007</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,-1279543.80696152,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0007</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,-290855.136420436,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0007</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,-1308012.29170525,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0007</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,-2027545.63307427,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0007</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-2532165.44055848,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0008</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-2795280.93068493,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0008</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,763861.969004375,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0008</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,1137432.28984147,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0008</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,1063133.93586273,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0008</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,807956.348999743,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0008</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,317133.002930733,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0009</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,9855.91133927902,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0009</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,-316806.117084536,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0009</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,-122020.058047297,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0009</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,15638.4207086385,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0009</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,96445.9938942006,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0009</record>
+        <record>2010-01-01 00:00:00.000,0,HI,51,NOK,-1545564.15760171,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2010-02-01 00:00:00.000,0,HI,51,NOK,-2006521.17325721,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2010-03-01 00:00:00.000,0,HI,51,NOK,-722851.864893003,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2010-04-01 00:00:00.000,0,HI,51,NOK,-567313.736130455,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2010-05-01 00:00:00.000,0,HI,51,NOK,-1704556.36183376,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2010-06-01 00:00:00.000,0,HI,51,NOK,-1312365.17504914,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2010-07-01 00:00:00.000,0,HI,51,NOK,-2200946.27328415,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,-1654532.11239073,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,-2444571.53569816,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2010-10-01 00:00:00.000,0,HI,51,NOK,-751118.701873995,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2010-11-01 00:00:00.000,0,HI,51,NOK,-696823.278033935,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2010-12-01 00:00:00.000,0,HI,51,NOK,-1431706.859015,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0010</record>
+        <record>2011-01-01 00:00:00.000,0,HI,51,NOK,-848058.795429862,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2011-02-01 00:00:00.000,0,HI,51,NOK,-1345164.39738441,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2011-03-01 00:00:00.000,0,HI,51,NOK,-471202.077750259,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,-1420867.87172194,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,-898569.024432204,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,-1279543.80696152,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,-290855.136420436,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,-1308012.29170525,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,-2027545.63307427,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-2532165.44055848,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-2795280.93068493,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,763861.969004375,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0011</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,1137432.28984147,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,1063133.93586273,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,807956.348999743,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,317133.002930733,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,9855.91133927902,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,-316806.117084536,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,-122020.058047297,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,15638.4207086385,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,96445.9938942006,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2012-10-01 00:00:00.000,0,TR,51,NOK,589815.505766438,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2012-11-01 00:00:00.000,0,TR,51,NOK,1117267.62825968,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2012-12-01 00:00:00.000,0,TR,51,NOK,1630238.22509657,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0012</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,-1249665.57057951,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0013</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,-2069993.35915672,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0013</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-2505444.33554894,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0014</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-2795280.93068493,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0014</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,39558.0713470553,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0014</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,-2027545.63307427,monthly,Forward,Sep-11,Gas-Forward-THD-GBP-0016</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-2795280.93068493,monthly,Forward,Nov-11,Gas-Forward-THD-GBP-0017</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,763861.969004375,monthly,Forward,Dec-11,Gas-Forward-THD-GBP-0018</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,-1279543.80696152,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0019</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,-290855.136420436,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0019</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,-1308012.29170525,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0019</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,-2027545.63307427,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0019</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-2532165.44055848,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0020</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-2795280.93068493,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0020</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,763861.969004375,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0020</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,1137432.28984147,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0021</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,1063133.93586273,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0021</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,807956.348999743,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0021</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,-1420867.87172194,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0022</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,-898569.024432204,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0022</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,-1279543.80696152,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0022</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,-290855.136420436,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0022</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,-1308012.29170525,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0022</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,-2027545.63307427,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0022</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-2532165.44055848,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0023</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-2795280.93068493,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0023</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,763861.969004375,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0023</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,1137432.28984147,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0023</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,1063133.93586273,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0023</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,807956.348999743,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0023</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,317133.002930733,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0024</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,9855.91133927902,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0024</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,-316806.117084536,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0024</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,-122020.058047297,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0024</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,15638.4207086385,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0024</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,96445.9938942006,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0024</record>
+        <record>2010-01-01 00:00:00.000,0,HI,51,NOK,-1545564.15760171,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2010-02-01 00:00:00.000,0,HI,51,NOK,-2006521.17325721,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2010-03-01 00:00:00.000,0,HI,51,NOK,-722851.864893003,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2010-04-01 00:00:00.000,0,HI,51,NOK,-567313.736130455,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2010-05-01 00:00:00.000,0,HI,51,NOK,-1704556.36183376,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2010-06-01 00:00:00.000,0,HI,51,NOK,-1312365.17504914,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2010-07-01 00:00:00.000,0,HI,51,NOK,-2200946.27328415,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,-1654532.11239073,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,-2444571.53569816,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2010-10-01 00:00:00.000,0,HI,51,NOK,-751118.701873995,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2010-11-01 00:00:00.000,0,HI,51,NOK,-696823.278033935,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2010-12-01 00:00:00.000,0,HI,51,NOK,-1431706.859015,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0025</record>
+        <record>2011-01-01 00:00:00.000,0,HI,51,NOK,-848058.795429862,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2011-02-01 00:00:00.000,0,HI,51,NOK,-1345164.39738441,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2011-03-01 00:00:00.000,0,HI,51,NOK,-471202.077750259,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,-1420867.87172194,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,-898569.024432204,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,-1279543.80696152,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,-290855.136420436,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,-1308012.29170525,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,-2027545.63307427,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-2532165.44055848,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-2795280.93068493,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,763861.969004375,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0026</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,1137432.28984147,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,1063133.93586273,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,807956.348999743,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,317133.002930733,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,9855.91133927902,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,-316806.117084536,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,-122020.058047297,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,15638.4207086385,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,96445.9938942006,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2012-10-01 00:00:00.000,0,TR,51,NOK,589815.505766438,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2012-11-01 00:00:00.000,0,TR,51,NOK,1117267.62825968,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2012-12-01 00:00:00.000,0,TR,51,NOK,1630238.22509657,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0027</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,-1249665.57057951,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0028</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,-2069993.35915672,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0028</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-2505444.33554894,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0029</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-2795280.93068493,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0029</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,39558.0713470553,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0029</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,3399953.00198912,monthly,Forward,Sep-11,Gas-Forward-THD-GBP-0031</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,4197281.28038561,monthly,Forward,Nov-11,Gas-Forward-THD-GBP-0032</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,687471.869613301,monthly,Forward,Dec-11,Gas-Forward-THD-GBP-0033</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,2647991.0313266,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0034</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1700962.28639106,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0034</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,2734416.73285378,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0034</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,3399953.00198912,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0034</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,3959697.50512614,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0035</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,4197281.28038561,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0035</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,687471.869613301,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0035</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,316393.69762278,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0036</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,299052.024336569,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0036</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,650475.845766643,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0036</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,2791206.67324696,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0037</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,2331059.64839312,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0037</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,2647991.0313266,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0037</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1700962.28639106,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0037</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,2734416.73285378,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0037</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,3399953.00198912,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0037</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,3959697.50512614,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0038</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,4197281.28038561,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0038</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,687471.869613301,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0038</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,316393.69762278,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0038</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,299052.024336569,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0038</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,650475.845766643,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0038</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,1096509.91385756,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0039</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,1453205.63095323,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0039</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,1734844.63144579,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0039</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,1589512.74131982,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0039</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,1454010.33810816,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0039</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,1327777.27383535,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0039</record>
+        <record>2010-01-01 00:00:00.000,0,HI,51,NOK,3032267.77686881,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2010-02-01 00:00:00.000,0,HI,51,NOK,3344478.5195078,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2010-03-01 00:00:00.000,0,HI,51,NOK,2151047.78352419,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2010-04-01 00:00:00.000,0,HI,51,NOK,1972692.5746934,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2010-05-01 00:00:00.000,0,HI,51,NOK,3181626.60239504,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2010-06-01 00:00:00.000,0,HI,51,NOK,2794234.62838177,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2010-07-01 00:00:00.000,0,HI,51,NOK,3739321.99443492,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,3198081.48406338,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,3906955.9088639,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2010-10-01 00:00:00.000,0,HI,51,NOK,2235393.3870608,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2010-11-01 00:00:00.000,0,HI,51,NOK,2173393.98452517,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2010-12-01 00:00:00.000,0,HI,51,NOK,2926423.26411483,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0040</record>
+        <record>2011-01-01 00:00:00.000,0,HI,51,NOK,2328390.23087456,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2011-02-01 00:00:00.000,0,HI,51,NOK,2683950.9551969,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2011-03-01 00:00:00.000,0,HI,51,NOK,1919837.73648609,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,2791206.67324696,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,2331059.64839312,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,2647991.0313266,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1700962.28639106,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,2734416.73285378,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,3399953.00198912,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,3959697.50512614,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,4197281.28038561,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,687471.869613301,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0041</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,316393.69762278,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,299052.024336569,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,650475.845766643,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,1096509.91385756,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,1453205.63095323,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,1734844.63144579,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,1589512.74131982,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,1454010.33810816,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,1327777.27383535,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2012-10-01 00:00:00.000,0,TR,51,NOK,883848.170028758,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2012-11-01 00:00:00.000,0,TR,51,NOK,310672.359270258,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2012-12-01 00:00:00.000,0,TR,51,NOK,-152921.879676604,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0042</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,2596616.46465538,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0043</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,3243975.70328609,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0043</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,3510584.50969954,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0044</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,4197281.28038561,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0044</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,521938.270724984,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0044</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,3399953.00198912,monthly,Forward,Sep-11,Gas-Forward-THD-GBP-0046</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,4197281.28038561,monthly,Forward,Nov-11,Gas-Forward-THD-GBP-0047</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,687471.869613301,monthly,Forward,Dec-11,Gas-Forward-THD-GBP-0048</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,2647991.0313266,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0049</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1700962.28639106,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0049</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,2734416.73285378,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0049</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,3399953.00198912,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0049</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,3959697.50512614,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0050</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,4197281.28038561,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0050</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,687471.869613301,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0050</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,316393.69762278,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0051</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,299052.024336569,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0051</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,650475.845766643,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0051</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,2791206.67324696,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0052</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,2331059.64839312,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0052</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,2647991.0313266,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0052</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1700962.28639106,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0052</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,2734416.73285378,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0052</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,3399953.00198912,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0052</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,3959697.50512614,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0053</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,4197281.28038561,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0053</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,687471.869613301,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0053</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,316393.69762278,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0053</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,299052.024336569,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0053</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,650475.845766643,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0053</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,1096509.91385756,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0054</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,1453205.63095323,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0054</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,1734844.63144579,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0054</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,1589512.74131982,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0054</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,1454010.33810816,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0054</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,1327777.27383535,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0054</record>
+        <record>2010-01-01 00:00:00.000,0,HI,51,NOK,3032267.77686881,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2010-02-01 00:00:00.000,0,HI,51,NOK,3344478.5195078,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2010-03-01 00:00:00.000,0,HI,51,NOK,2151047.78352419,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2010-04-01 00:00:00.000,0,HI,51,NOK,1972692.5746934,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2010-05-01 00:00:00.000,0,HI,51,NOK,3181626.60239504,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2010-06-01 00:00:00.000,0,HI,51,NOK,2794234.62838177,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2010-07-01 00:00:00.000,0,HI,51,NOK,3739321.99443492,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,3198081.48406338,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,3906955.9088639,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2010-10-01 00:00:00.000,0,HI,51,NOK,2235393.3870608,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2010-11-01 00:00:00.000,0,HI,51,NOK,2173393.98452517,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2010-12-01 00:00:00.000,0,HI,51,NOK,2926423.26411483,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0055</record>
+        <record>2011-01-01 00:00:00.000,0,HI,51,NOK,2328390.23087456,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2011-02-01 00:00:00.000,0,HI,51,NOK,2683950.9551969,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2011-03-01 00:00:00.000,0,HI,51,NOK,1919837.73648609,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,2791206.67324696,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,2331059.64839312,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,2647991.0313266,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1700962.28639106,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,2734416.73285378,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,3399953.00198912,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,3959697.50512614,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,4197281.28038561,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,687471.869613301,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0056</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,316393.69762278,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,299052.024336569,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,650475.845766643,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,1096509.91385756,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,1453205.63095323,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,1734844.63144579,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,1589512.74131982,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,1454010.33810816,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,1327777.27383535,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2012-10-01 00:00:00.000,0,TR,51,NOK,883848.170028758,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2012-11-01 00:00:00.000,0,TR,51,NOK,310672.359270258,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2012-12-01 00:00:00.000,0,TR,51,NOK,-152921.879676604,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0057</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,2596616.46465538,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0058</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,3243975.70328609,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0058</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,3510584.50969954,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0059</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,4197281.28038561,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0059</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,521938.270724984,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0059</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,81502.0547455538,monthly,Forward,Sep-11,Gas-Forward-THD-GBP-0061</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-640756.215332544,monthly,Forward,Nov-11,Gas-Forward-THD-GBP-0062</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,2994199.94730562,monthly,Forward,Dec-11,Gas-Forward-THD-GBP-0063</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,823418.12680647,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0064</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1876127.70816691,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0064</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,884015.422980443,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0064</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,81502.0547455538,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0064</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-338404.850038157,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0065</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-640756.215332544,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0065</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,2994199.94730562,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0065</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,3371600.07908778,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0066</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,3156473.86889628,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0066</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,3049202.72954499,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0066</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,685000.944161279,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0067</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,1302811.63463345,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0067</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,823418.12680647,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0067</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1876127.70816691,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0067</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,884015.422980443,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0067</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,81502.0547455538,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0067</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-338404.850038157,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0068</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-640756.215332544,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0068</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,2994199.94730562,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0068</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,3371600.07908778,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0068</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,3156473.86889628,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0068</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,3049202.72954499,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0068</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,2489549.43888489,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0069</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,2258216.44393385,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0069</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,1862365.2555654,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0069</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,2133150.03259104,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0069</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,2274121.86148223,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0069</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,2285121.78927355,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0069</record>
+        <record>2010-01-01 00:00:00.000,0,HI,51,NOK,739128.348215923,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2010-02-01 00:00:00.000,0,HI,51,NOK,49585.4255746953,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2010-03-01 00:00:00.000,0,HI,51,NOK,1471928.90368045,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2010-04-01 00:00:00.000,0,HI,51,NOK,1592402.87361472,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2010-05-01 00:00:00.000,0,HI,51,NOK,565332.044599399,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2010-06-01 00:00:00.000,0,HI,51,NOK,964898.423931077,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2010-07-01 00:00:00.000,0,HI,51,NOK,163153.36008971,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,717518.130924376,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,-197251.643086594,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2010-10-01 00:00:00.000,0,HI,51,NOK,1529841.13832119,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2010-11-01 00:00:00.000,0,HI,51,NOK,1572297.46917551,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2010-12-01 00:00:00.000,0,HI,51,NOK,865299.299305725,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0070</record>
+        <record>2011-01-01 00:00:00.000,0,HI,51,NOK,1426841.25381735,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2011-02-01 00:00:00.000,0,HI,51,NOK,712216.492716209,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2011-03-01 00:00:00.000,0,HI,51,NOK,1754989.47131283,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,685000.944161279,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,1302811.63463345,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,823418.12680647,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1876127.70816691,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,884015.422980443,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,81502.0547455538,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-338404.850038157,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-640756.215332544,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,2994199.94730562,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0071</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,3371600.07908778,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,3156473.86889628,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,3049202.72954499,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,2489549.43888489,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,2258216.44393385,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,1862365.2555654,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,2133150.03259104,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,2274121.86148223,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,2285121.78927355,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2012-10-01 00:00:00.000,0,TR,51,NOK,2854468.87214803,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2012-11-01 00:00:00.000,0,TR,51,NOK,3311655.09458953,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2012-12-01 00:00:00.000,0,TR,51,NOK,3900504.83329032,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0072</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,820261.867221792,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0073</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,-265875.424126203,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0073</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-960794.686878425,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0074</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-640756.215332544,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0074</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,902437.846542868,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0074</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,81502.0547455538,monthly,Forward,Sep-11,Gas-Forward-THD-GBP-0076</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-640756.215332544,monthly,Forward,Nov-11,Gas-Forward-THD-GBP-0077</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,2994199.94730562,monthly,Forward,Dec-11,Gas-Forward-THD-GBP-0078</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,823418.12680647,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0079</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1876127.70816691,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0079</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,884015.422980443,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0079</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,81502.0547455538,monthly,Forward,01-Jun-11 - 30-Sep-11,Gas-Forward-THD-GBP-0079</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-338404.850038157,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0080</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-640756.215332544,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0080</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,2994199.94730562,monthly,Forward,Q4-11,Gas-Forward-THD-GBP-0080</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,3371600.07908778,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0081</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,3156473.86889628,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0081</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,3049202.72954499,monthly,Forward,Q1-12,Gas-Forward-THD-GBP-0081</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,685000.944161279,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0082</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,1302811.63463345,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0082</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,823418.12680647,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0082</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1876127.70816691,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0082</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,884015.422980443,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0082</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,81502.0547455538,monthly,Forward,SUM-11,Gas-Forward-THD-GBP-0082</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-338404.850038157,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0083</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-640756.215332544,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0083</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,2994199.94730562,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0083</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,3371600.07908778,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0083</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,3156473.86889628,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0083</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,3049202.72954499,monthly,Forward,WIN-11,Gas-Forward-THD-GBP-0083</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,2489549.43888489,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0084</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,2258216.44393385,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0084</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,1862365.2555654,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0084</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,2133150.03259104,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0084</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,2274121.86148223,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0084</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,2285121.78927355,monthly,Forward,SUM-12,Gas-Forward-THD-GBP-0084</record>
+        <record>2010-01-01 00:00:00.000,0,HI,51,NOK,739128.348215923,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2010-02-01 00:00:00.000,0,HI,51,NOK,49585.4255746953,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2010-03-01 00:00:00.000,0,HI,51,NOK,1471928.90368045,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2010-04-01 00:00:00.000,0,HI,51,NOK,1592402.87361472,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2010-05-01 00:00:00.000,0,HI,51,NOK,565332.044599399,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2010-06-01 00:00:00.000,0,HI,51,NOK,964898.423931077,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2010-07-01 00:00:00.000,0,HI,51,NOK,163153.36008971,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,717518.130924376,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,-197251.643086594,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2010-10-01 00:00:00.000,0,HI,51,NOK,1529841.13832119,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2010-11-01 00:00:00.000,0,HI,51,NOK,1572297.46917551,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2010-12-01 00:00:00.000,0,HI,51,NOK,865299.299305725,monthly,Forward,CAL-10,Gas-Forward-THD-GBP-0085</record>
+        <record>2011-01-01 00:00:00.000,0,HI,51,NOK,1426841.25381735,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2011-02-01 00:00:00.000,0,HI,51,NOK,712216.492716209,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2011-03-01 00:00:00.000,0,HI,51,NOK,1754989.47131283,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2011-04-01 00:00:00.000,0,HI,51,NOK,685000.944161279,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2011-05-01 00:00:00.000,0,HI,51,NOK,1302811.63463345,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2011-06-01 00:00:00.000,0,HI,51,NOK,823418.12680647,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2011-07-01 00:00:00.000,0,HI,51,NOK,1876127.70816691,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2011-08-01 00:00:00.000,0,HI,51,NOK,884015.422980443,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2011-09-01 00:00:00.000,0,HI,51,NOK,81502.0547455538,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-338404.850038157,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-640756.215332544,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,2994199.94730562,monthly,Forward,CAL-11,Gas-Forward-THD-GBP-0086</record>
+        <record>2012-01-01 00:00:00.000,0,TR,51,NOK,3371600.07908778,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2012-02-01 00:00:00.000,0,TR,51,NOK,3156473.86889628,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2012-03-01 00:00:00.000,0,TR,51,NOK,3049202.72954499,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2012-04-01 00:00:00.000,0,TR,51,NOK,2489549.43888489,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2012-05-01 00:00:00.000,0,TR,51,NOK,2258216.44393385,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2012-06-01 00:00:00.000,0,TR,51,NOK,1862365.2555654,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2012-07-01 00:00:00.000,0,TR,51,NOK,2133150.03259104,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2012-08-01 00:00:00.000,0,TR,51,NOK,2274121.86148223,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2012-09-01 00:00:00.000,0,TR,51,NOK,2285121.78927355,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2012-10-01 00:00:00.000,0,TR,51,NOK,2854468.87214803,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2012-11-01 00:00:00.000,0,TR,51,NOK,3311655.09458953,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2012-12-01 00:00:00.000,0,TR,51,NOK,3900504.83329032,monthly,Forward,CAL-12,Gas-Forward-THD-GBP-0087</record>
+        <record>2010-08-01 00:00:00.000,0,HI,51,NOK,820261.867221792,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0088</record>
+        <record>2010-09-01 00:00:00.000,0,HI,51,NOK,-265875.424126203,monthly,Forward,05-Aug-10 - 24-Sep-10,Gas-Forward-THD-GBP-0088</record>
+        <record>2011-10-01 00:00:00.000,0,HI,51,NOK,-960794.686878425,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0089</record>
+        <record>2011-11-01 00:00:00.000,0,TR,51,NOK,-640756.215332544,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0089</record>
+        <record>2011-12-01 00:00:00.000,0,TR,51,NOK,902437.846542868,monthly,Forward,10-Oct-11 - 12-Dec-11,Gas-Forward-THD-GBP-0089</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

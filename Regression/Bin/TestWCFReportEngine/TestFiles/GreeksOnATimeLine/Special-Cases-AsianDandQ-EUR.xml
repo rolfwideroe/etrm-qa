@@ -1,0 +1,76 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>GreeksOnATimelineReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-01T00:00:00" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseEndDate" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="PosCalcMethod" IsNotSet="false" XmlEncodedValue="NPVWA" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="TimeResolution" IsNotSet="false" XmlEncodedValue="Month" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Special-Cases-AsianDandQ" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedTimeSeriesArtifacts>
+      <ExpectedTimeSeriesArtifact ArtifactId="greeksOnATimeline" Columns="GroupBy,Greek,ReferenceArea,TimeZone,From,Until,Value" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Double">
+        <TimeSeriesProperties>
+          <Property Name="GroupBy" DataType="System.String" />
+          <Property Name="Greek" DataType="System.String" />
+          <Property Name="ReferenceArea" DataType="System.String" />
+        </TimeSeriesProperties>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,13640.0489684461</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,9892.8675042593</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,7007.69660126557</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,7211.14585743135</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,8397.93318506504</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,7949.96985498578</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,8846.88953093289</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,9173.04214036821</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),NordPool System Price,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,19.597771506388</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,13.2968649250797</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,9.41894704471179</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,10.360841749183</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,11.3027364536542</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,11.0416247985914</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,11.8909805523292</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,12.740336306067</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,65.1411433183017</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,42.5227453051708</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,55.7350464746907</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,57.3531607271817</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,66.7921605333793</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,145.281866572922</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,161.672641263201</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,167.632922968756</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),NordPool System Price,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,0.0935935967216979</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0.0571542275607134</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0.0749126968745842</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0.0824039665620426</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0.0898952362495011</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0.20178037024017</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0.217301937181721</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0.232823504123273</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,-87.6938788292531</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,-25.7111466860317</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,-30.1254839513452</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,-31.0000947757391</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,-36.1019912513701</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,-54.070088463456</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,-60.1703035721536</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,-62.38856361168</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2011-11-02T00:00:00,2011-12-01T00:00:00,104.15671645645</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,76.2073676157762</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,234.109749992839</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,240.90648467005</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,280.55410362045</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,686.465405549688</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,763.912784637345</ExpectedRecord>
+        <ExpectedRecord>Special-Cases,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,792.075467941948</ExpectedRecord>
+      </ExpectedTimeSeriesArtifact>
+    </ExpectedTimeSeriesArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

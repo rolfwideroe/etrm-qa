@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>Endex TTF</PriceBasis>
+				<PriceType>Cap/Floor</PriceType>
+				<CapFloorPricingResolution>Hourly</CapFloorPricingResolution>
+				<FromDate>2015-01-01</FromDate>
+				<ToDate>2017-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>GasFlexibleStructuredDealCapFloorSingle</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<ModelType>Retail</ModelType>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>						
+						<Resolution>Yearly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<TimeSeriesDetail FromDateTime="2015-01-01T06:00:00" ToDateTime="2016-01-01T06:00:00" Value="1.2"/>
+						<TimeSeriesDetail FromDateTime="2016-01-01T06:00:00" ToDateTime="2017-01-01T06:00:00" Value="1.3"/>
+						<TimeSeriesDetail FromDateTime="2017-01-01T06:00:00" ToDateTime="2018-01-01T06:00:00" Value="1.5"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>	
+						<Resolution>Yearly</Resolution>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>CapPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET</TimeZone>
+						<TimeSeriesDetail FromDateTime="2015-01-01T06:00:00" ToDateTime="2018-01-01T06:00:00" Value="2.1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>FloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET</TimeZone>
+						<TimeSeriesDetail FromDateTime="2015-01-01T06:00:00" ToDateTime="2018-01-01T06:00:00" Value="1.1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MultiplierBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET</TimeZone>
+						<TimeSeriesDetail FromDateTime="2015-01-01T06:00:00" ToDateTime="2018-01-01T06:00:00" Value="3.1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MultiplierAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET</TimeZone>
+						<TimeSeriesDetail FromDateTime="2015-01-01T06:00:00" ToDateTime="2018-01-01T06:00:00" Value="4.1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET</TimeZone>
+						<TimeSeriesDetail FromDateTime="2015-01-01T06:00:00" ToDateTime="2018-01-01T06:00:00" Value="5.1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET</TimeZone>
+						<TimeSeriesDetail FromDateTime="2015-01-01T06:00:00" ToDateTime="2018-01-01T06:00:00" Value="6.1"/>
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MWh/d</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2014-06-01T21:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>GasFlexibleStructuredDealCapFloorSingle; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>GasFlexibleStructuredDealCapFloorSingle</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>409</TransactionId>
+  <DealType>Gas-StructuredDeal</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <ContractModelType>Retail</ContractModelType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+	<ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>GasFlexibleStructuredDealCapFloorSingle</InstrumentName>
+    <PriceBasis>Endex TTF</PriceBasis>
+    <FromDate>2015-01-01T00:00:00</FromDate>
+    <ToDate>2017-12-31T00:00:00</ToDate>
+    <TimeZone>CET 06-06</TimeZone>
+    <PriceType>CapFloor</PriceType>
+	<CapFloorPricingResolution>Hourly</CapFloorPricingResolution>
+    <BalanceArea>TTF</BalanceArea>
+  </InstrumentData>
+  <SettlementData>
+    <QuantityUnit>MWhd</QuantityUnit>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <TimeSeriesSet>
+      <TimeSeries>
+        <TimeSeries>
+          <Resolution>EntirePeriod</Resolution>
+          <TimeSeriesTypeName>Cap Price</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+			<TimeSeriesValue FromDateTime="2015-01-01T00:00:00" ToDateTime="2018-01-01T00:00:00" Value="2.1"/>
+			</TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>EntirePeriod</Resolution>
+          <TimeSeriesTypeName>Floor Price</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+			<TimeSeriesValue FromDateTime="2015-01-01T00:00:00" ToDateTime="2018-01-01T00:00:00" Value="1.1"/>
+			</TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>Year</Resolution>
+          <TimeSeriesTypeName>Forecasted Volume</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+			<TimeSeriesValue FromDateTime="2015-01-01T00:00:00" ToDateTime="2016-01-01T00:00:00" Value="1.2"/>
+			<TimeSeriesValue FromDateTime="2016-01-01T00:00:00" ToDateTime="2017-01-01T00:00:00" Value="1.3"/>
+			<TimeSeriesValue FromDateTime="2017-01-01T00:00:00" ToDateTime="2018-01-01T00:00:00" Value="1.5"/>
+			</TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>EntirePeriod</Resolution>
+          <TimeSeriesTypeName>Margin After Cap/Floor Price</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+			<TimeSeriesValue FromDateTime="2015-01-01T00:00:00" ToDateTime="2018-01-01T00:00:00" Value="6.1"/>
+			</TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>EntirePeriod</Resolution>
+          <TimeSeriesTypeName>Margin Before Cap/Floor Price</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+			<TimeSeriesValue FromDateTime="2015-01-01T00:00:00" ToDateTime="2018-01-01T00:00:00" Value="5.1"/>
+			</TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>EntirePeriod</Resolution>
+          <TimeSeriesTypeName>Multiplier After Cap/Floor Price</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+			<TimeSeriesValue FromDateTime="2015-01-01T00:00:00" ToDateTime="2018-01-01T00:00:00" Value="4.1"/>
+			</TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>EntirePeriod</Resolution>
+          <TimeSeriesTypeName>Multiplier Before Cap/Floor Price</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+			<TimeSeriesValue FromDateTime="2015-01-01T00:00:00" ToDateTime="2018-01-01T00:00:00" Value="3.1"/>
+			</TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>Year</Resolution>
+          <TimeSeriesTypeName>Realized Volume</TimeSeriesTypeName>
+          <TimezoneName>CET 06-06</TimezoneName>
+          <TimeSeriesValues>
+			<TimeSeriesValue FromDateTime="2015-01-01T00:00:00" ToDateTime="2016-01-01T00:00:00" />
+			<TimeSeriesValue FromDateTime="2016-01-01T00:00:00" ToDateTime="2017-01-01T00:00:00" />
+			<TimeSeriesValue FromDateTime="2017-01-01T00:00:00" ToDateTime="2018-01-01T00:00:00" />
+          </TimeSeriesValues>
+        </TimeSeries>
+      </TimeSeries>
+    </TimeSeriesSet>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2014-06-01T19:22:23Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>GasFlexibleStructuredDealCapFloorSingle</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>GasFlexibleStructuredDealCapFloorSingle; should pass</Comment>
+    <ModificationDateTimeUtc>2014-08-12T12:11:32Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>26304</Deliveries>
+    <ReferringId>410</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

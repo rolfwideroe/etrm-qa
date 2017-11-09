@@ -1,0 +1,61 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-AsianBundle-ActualPL-Delta-Spread</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,PR,109,NOK,-57801.0823518123,monthly,Asian,ASIC/M Q4-11 45.00 - Premium,Special-Cases-AsianBundle-Buy-Call-NO1-Base-InDelviery-EUR</record>
+        <record>2011-11-01 00:00:00.000,0,HI,109,NOK,-45197.5249866024,monthly,Asian,ASIC/M Q4-11 45.00 - Settlement,Special-Cases-AsianBundle-Buy-Call-NO1-Base-InDelviery-EUR</record>
+        <record>2011-11-01 00:00:00.000,0,PR,109,NOK,-111739.840412117,monthly,Asian,ASIC/M Q4-11 45.00 - Premium,Special-Cases-AsianBundle-Buy-Call-NO1-Base-InDelviery-EUR</record>
+        <record>2011-12-01 00:00:00.000,0,PR,109,NOK,-173408.066621803,monthly,Asian,ASIC/M Q4-11 45.00 - Premium,Special-Cases-AsianBundle-Buy-Call-NO1-Base-InDelviery-EUR</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,NOK,4603.86240983757,monthly,Asian,ASIC/M Q4-11 45.00 - Settlement,Special-Cases-AsianBundle-Buy-Call-NO1-Base-InDelviery-EUR</record>
+        <record>2011-01-01 00:00:00.000,0,HI,109,NOK,1421038.44583912,monthly,Asian,ASIC/M Q1-11 45.00 - Settlement,Special-Cases-AsianBundle-Buy-Call-System Base-PostDelivery-EUR</record>
+        <record>2011-01-01 00:00:00.000,0,PR,109,NOK,-57723.4970063736,monthly,Asian,ASIC/M Q1-11 45.00 - Premium,Special-Cases-AsianBundle-Buy-Call-System Base-PostDelivery-EUR</record>
+        <record>2011-02-01 00:00:00.000,0,HI,109,NOK,2029632.63667572,monthly,Asian,ASIC/M Q1-11 45.00 - Settlement,Special-Cases-AsianBundle-Buy-Call-System Base-PostDelivery-EUR</record>
+        <record>2011-02-01 00:00:00.000,0,PR,109,NOK,-104274.704269578,monthly,Asian,ASIC/M Q1-11 45.00 - Premium,Special-Cases-AsianBundle-Buy-Call-System Base-PostDelivery-EUR</record>
+        <record>2011-03-01 00:00:00.000,0,HI,109,NOK,3323698.00958371,monthly,Asian,ASIC/M Q1-11 45.00 - Settlement,Special-Cases-AsianBundle-Buy-Call-System Base-PostDelivery-EUR</record>
+        <record>2011-03-01 00:00:00.000,0,PR,109,NOK,-172937.734982805,monthly,Asian,ASIC/M Q1-11 45.00 - Premium,Special-Cases-AsianBundle-Buy-Call-System Base-PostDelivery-EUR</record>
+        <record>2011-01-01 00:00:00.000,0,PR,109,NOK,-57723.4970063736,monthly,Asian,ASIP/M Q1-11 45.00 - Premium,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PostDelivery-EUR</record>
+        <record>2011-02-01 00:00:00.000,0,PR,109,NOK,-104274.704269578,monthly,Asian,ASIP/M Q1-11 45.00 - Premium,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PostDelivery-EUR</record>
+        <record>2011-03-01 00:00:00.000,0,PR,109,NOK,-172937.734982805,monthly,Asian,ASIP/M Q1-11 45.00 - Premium,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PostDelivery-EUR</record>
+        <record>2012-01-01 00:00:00.000,0,PR,109,NOK,-7440,monthly,Asian,ASIP/M Q1-12 300.00 - Premium,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PreDelivery-NOK</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,-56352.8093394051,monthly,Asian,ASIP/M Q1-12 300.00 - Settlement,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PreDelivery-NOK</record>
+        <record>2012-02-01 00:00:00.000,0,PR,109,NOK,-13920,monthly,Asian,ASIP/M Q1-12 300.00 - Premium,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PreDelivery-NOK</record>
+        <record>2012-02-01 00:00:00.000,0,TR,109,NOK,-113560.221187937,monthly,Asian,ASIP/M Q1-12 300.00 - Settlement,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PreDelivery-NOK</record>
+        <record>2012-03-01 00:00:00.000,0,PR,109,NOK,-22290,monthly,Asian,ASIP/M Q1-12 300.00 - Premium,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PreDelivery-NOK</record>
+        <record>2012-03-01 00:00:00.000,0,TR,109,NOK,-205968.593359926,monthly,Asian,ASIP/M Q1-12 300.00 - Settlement,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PreDelivery-NOK</record>
+        <record>2011-01-01 00:00:00.000,0,HI,109,NOK,-1948424.7,monthly,Asian,ASIC/M Q1-11 300.00 - Settlement,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PostDelivery-NOK</record>
+        <record>2011-01-01 00:00:00.000,0,PR,109,NOK,7440,monthly,Asian,ASIC/M Q1-11 300.00 - Premium,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PostDelivery-NOK</record>
+        <record>2011-02-01 00:00:00.000,0,HI,109,NOK,-2913420.6,monthly,Asian,ASIC/M Q1-11 300.00 - Settlement,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PostDelivery-NOK</record>
+        <record>2011-02-01 00:00:00.000,0,PR,109,NOK,13440,monthly,Asian,ASIC/M Q1-11 300.00 - Premium,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PostDelivery-NOK</record>
+        <record>2011-03-01 00:00:00.000,0,HI,109,NOK,-4721826.30000001,monthly,Asian,ASIC/M Q1-11 300.00 - Settlement,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PostDelivery-NOK</record>
+        <record>2011-03-01 00:00:00.000,0,PR,109,NOK,22290,monthly,Asian,ASIC/M Q1-11 300.00 - Premium,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PostDelivery-NOK</record>
+        <record>2012-01-01 00:00:00.000,0,PR,109,NOK,57883.7407949968,monthly,Asian,ASIC/M Q1-12 45.00 - Premium,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PreDelivery-EUR</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,-35602.7302841772,monthly,Asian,ASIC/M Q1-12 45.00 - Settlement,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PreDelivery-EUR</record>
+        <record>2012-02-01 00:00:00.000,0,PR,109,NOK,108435.7069024,monthly,Asian,ASIC/M Q1-12 45.00 - Premium,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PreDelivery-EUR</record>
+        <record>2012-02-01 00:00:00.000,0,TR,109,NOK,-120890.142759381,monthly,Asian,ASIC/M Q1-12 45.00 - Settlement,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PreDelivery-EUR</record>
+        <record>2012-03-01 00:00:00.000,0,PR,109,NOK,173845.635651561,monthly,Asian,ASIC/M Q1-12 45.00 - Premium,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PreDelivery-EUR</record>
+        <record>2012-03-01 00:00:00.000,0,TR,109,NOK,-18095.0112955561,monthly,Asian,ASIC/M Q1-12 45.00 - Settlement,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PreDelivery-EUR</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,-624325.2,monthly,Asian,ASIP/M Q4-11 300.00 - Settlement,Special-Cases-AsianBundle-Sell-Put-System-Base-InDelviery-NOK</record>
+        <record>2011-10-01 00:00:00.000,0,PR,109,NOK,7450,monthly,Asian,ASIP/M Q4-11 300.00 - Premium,Special-Cases-AsianBundle-Sell-Put-System-Base-InDelviery-NOK</record>
+        <record>2011-11-01 00:00:00.000,0,HI,109,NOK,17060.6553411824,monthly,Asian,ASIP/M Q4-11 300.00 - Settlement,Special-Cases-AsianBundle-Sell-Put-System-Base-InDelviery-NOK</record>
+        <record>2011-11-01 00:00:00.000,0,PR,109,NOK,14400,monthly,Asian,ASIP/M Q4-11 300.00 - Premium,Special-Cases-AsianBundle-Sell-Put-System-Base-InDelviery-NOK</record>
+        <record>2011-12-01 00:00:00.000,0,PR,109,NOK,22320,monthly,Asian,ASIP/M Q4-11 300.00 - Premium,Special-Cases-AsianBundle-Sell-Put-System-Base-InDelviery-NOK</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,NOK,243699.519399129,monthly,Asian,ASIP/M Q4-11 300.00 - Settlement,Special-Cases-AsianBundle-Sell-Put-System-Base-InDelviery-NOK</record>
+        <record>2012-01-01 00:00:00.000,0,PR,109,NOK,57883.7407949968,monthly,Asian,ASIP/M Q1-12 45.00 - Premium,Special-Cases-AsianBundle-Sell-Put-System-Base-PreDelivery-EUR</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,49897.871151383,monthly,Asian,ASIP/M Q1-12 45.00 - Settlement,Special-Cases-AsianBundle-Sell-Put-System-Base-PreDelivery-EUR</record>
+        <record>2012-02-01 00:00:00.000,0,PR,109,NOK,108435.7069024,monthly,Asian,ASIP/M Q1-12 45.00 - Premium,Special-Cases-AsianBundle-Sell-Put-System-Base-PreDelivery-EUR</record>
+        <record>2012-02-01 00:00:00.000,0,TR,109,NOK,111616.889059146,monthly,Asian,ASIP/M Q1-12 45.00 - Settlement,Special-Cases-AsianBundle-Sell-Put-System-Base-PreDelivery-EUR</record>
+        <record>2012-03-01 00:00:00.000,0,PR,109,NOK,173845.635651561,monthly,Asian,ASIP/M Q1-12 45.00 - Premium,Special-Cases-AsianBundle-Sell-Put-System-Base-PreDelivery-EUR</record>
+        <record>2012-03-01 00:00:00.000,0,TR,109,NOK,63728.2129539964,monthly,Asian,ASIP/M Q1-12 45.00 - Settlement,Special-Cases-AsianBundle-Sell-Put-System-Base-PreDelivery-EUR</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

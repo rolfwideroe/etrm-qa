@@ -1,0 +1,68 @@
+<CurveTestCase>
+  <InputData>
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="CurrencySource" Value="Viz"/>
+      <ElvizConfiguration Name="EnableFxOutright" Value="True"/>
+    </ElvizConfigurations>
+	<CurrencyQuote>mid</CurrencyQuote>	
+	<FromDate>2019-03-01</FromDate>
+	<ToDate>2019-03-31</ToDate>
+	<LoadType>Base</LoadType>
+	<PriceBookAppendix></PriceBookAppendix>
+	<ReferenceAreaName>LiveFXGas</ReferenceAreaName>
+	<ReportCurrencyIsoCode>DKK</ReportCurrencyIsoCode>
+	<Resolution>Day</Resolution>
+	<TemplateName>LiveFXGas</TemplateName>
+	<UseLiveCurrencyRates>1</UseLiveCurrencyRates>	
+  </InputData>
+  <ExpectedValues>
+    <ExpectedCurveVolatility>
+          <WinterShort>0.9</WinterShort>
+		  <WinterMedium>0.17</WinterMedium>
+		  <WinterLong>0.1</WinterLong>
+		  <WinterNumberOfYearsBetweenShortAndMedium>0.5</WinterNumberOfYearsBetweenShortAndMedium>
+		  <SummerShort>0.9</SummerShort>
+		  <SummerMedium>0.17</SummerMedium>
+		  <SummerLong>0.10</SummerLong>
+		  <SummerNumberOfYearsBetweenShortAndMedium>0.5</SummerNumberOfYearsBetweenShortAndMedium>
+    </ExpectedCurveVolatility>
+    <ExpectedProperties>
+      <CurveType>MarketPriceCurve</CurveType>
+      <VolumeUnit>MWh</VolumeUnit>
+      <TimeZone>CET</TimeZone>
+    </ExpectedProperties>
+    <ExpectedCurveValues>
+	    <ExpectedCurveValue Date="2019-03-01T00:00:00" Value="108.810249999999"/>
+		<ExpectedCurveValue Date="2019-03-02T00:00:00" Value="108.810249999998"/>
+		<ExpectedCurveValue Date="2019-03-03T00:00:00" Value="108.810249999999"/>
+		<ExpectedCurveValue Date="2019-03-04T00:00:00" Value="108.810250000006"/>
+		<ExpectedCurveValue Date="2019-03-05T00:00:00" Value="108.810249999991"/>
+		<ExpectedCurveValue Date="2019-03-06T00:00:00" Value="108.810250000006"/>
+		<ExpectedCurveValue Date="2019-03-07T00:00:00" Value="108.810249999999"/>
+		<ExpectedCurveValue Date="2019-03-08T00:00:00" Value="108.810249999998"/>
+		<ExpectedCurveValue Date="2019-03-09T00:00:00" Value="108.810249999999"/>
+		<ExpectedCurveValue Date="2019-03-10T00:00:00" Value="108.810250000006"/>
+		<ExpectedCurveValue Date="2019-03-11T00:00:00" Value="108.810249999999"/>
+		<ExpectedCurveValue Date="2019-03-12T00:00:00" Value="108.810249999998"/>
+		<ExpectedCurveValue Date="2019-03-13T00:00:00" Value="108.810249999999"/>
+		<ExpectedCurveValue Date="2019-03-14T00:00:00" Value="108.810249999999"/>
+		<ExpectedCurveValue Date="2019-03-15T00:00:00" Value="108.810249999998"/>
+		<ExpectedCurveValue Date="2019-03-16T00:00:00" Value="108.810249999999"/>
+		<ExpectedCurveValue Date="2019-03-17T00:00:00" Value="108.810250000006"/>
+		<ExpectedCurveValue Date="2019-03-18T00:00:00" Value="108.810249999991"/>
+		<ExpectedCurveValue Date="2019-03-19T00:00:00" Value="108.810250000006"/>
+		<ExpectedCurveValue Date="2019-03-20T00:00:00" Value="108.810249999999"/>
+		<ExpectedCurveValue Date="2019-03-21T00:00:00" Value="108.810249999998"/>
+		<ExpectedCurveValue Date="2019-03-22T00:00:00" Value="108.810249999999"/>
+		<ExpectedCurveValue Date="2019-03-23T00:00:00" Value="108.810250000006"/>
+		<ExpectedCurveValue Date="2019-03-24T00:00:00" Value="108.810249999991"/>
+		<ExpectedCurveValue Date="2019-03-25T00:00:00" Value="108.810250000006"/>
+		<ExpectedCurveValue Date="2019-03-26T00:00:00" Value="108.810250000006"/>
+		<ExpectedCurveValue Date="2019-03-27T00:00:00" Value="108.810249999998"/>
+		<ExpectedCurveValue Date="2019-03-28T00:00:00" Value="108.810249999999"/>
+		<ExpectedCurveValue Date="2019-03-29T00:00:00" Value="108.810250000006"/>
+		<ExpectedCurveValue Date="2019-03-30T00:00:00" Value="108.810249999991"/>
+		<ExpectedCurveValue Date="2019-03-31T00:00:00" Value="108.810250000006"/>
+    </ExpectedCurveValues>
+  </ExpectedValues>
+</CurveTestCase>

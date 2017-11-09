@@ -1,0 +1,125 @@
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>GreenCertificate-Forward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GreenCertificateForward>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>TestGreenCert</PriceBasis>
+				<FromDate>2013-01-01</FromDate>
+				<ToDate>2013-12-31</ToDate>
+				<TransferDate>2012-08-27</TransferDate>
+				<CertificateType>LECs</CertificateType>
+				<ProductionFacility>None</ProductionFacility>
+				<EnvironmentLabel>None</EnvironmentLabel>
+				<FromCountry>Angola</FromCountry>
+				<ToCountry>Cyprus</ToCountry>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>40</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GreenCertificateForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2013-06-06T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>GreenCertificateForward; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassGreenCertificateForwardEnvLabelAndProdFacilityNone</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>463</TransactionId>
+  <DealType>Green Certificate-Forward</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+	<ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>LECs YR-13</InstrumentName>	
+	<PriceBasis>TestGreenCert</PriceBasis>
+    <FromDate>2013-01-01T00:00:00</FromDate>
+    <ToDate>2013-12-31T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <TransferDate>2012-08-27T00:00:00</TransferDate>
+    <CertificateType>LECs</CertificateType>
+    <FromCountry>Angola</FromCountry>
+    <ToCountry>Cyprus</ToCountry>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>40</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>28</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2013-06-05T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassGreenCertificateForwardEnvLabelAndProdFacilityNone</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>GreenCertificateForward; should pass</Comment>
+    <ModificationDateTimeUtc>2014-07-31T09:53:19Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>8760</Deliveries>
+    <OriginalQuantity>40</OriginalQuantity>
+    <ReferringId>464</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

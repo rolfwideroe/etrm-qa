@@ -1,0 +1,42 @@
+<test type="EcmBatch" name="Oil-FFF-ICEBrentOilFLFSwap-USD-CFMon-ActualCF-NOK" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>Oil-FFF-ICEBrentOilFLFSwap-USD-CFMon-ActualCF-NOK</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<reportdate>2011-11-14</reportdate>
+    <tollerance>0.00000001</tollerance>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+	<assert>
+		<datawarehouse>
+		<query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+				<record>2011-10-01 00:00:00.000,0,HI,49,NOK,-363983.337347302,monthly,Swap,SWAP Oct-11,Oil-FFF-ICEBrentOilFLFSwap-USD-0001</record>
+				<record>2011-11-01 00:00:00.000,0,HI,49,NOK,147059.553526107,monthly,Swap,SWAP Nov-11,Oil-FFF-ICEBrentOilFLFSwap-USD-0002</record>
+				<record>2011-12-01 00:00:00.000,0,TR,49,NOK,281294.356116445,monthly,Swap,SWAP Dec-11,Oil-FFF-ICEBrentOilFLFSwap-USD-0003</record>
+				<record>2012-02-01 00:00:00.000,0,TR,49,NOK,-12030.161066415,monthly,Swap,SWAP Feb-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0004</record>
+				<record>2011-01-01 00:00:00.000,0,HI,49,NOK,469273.081710577,monthly,Swap,SWAP Jan-11 - Mar-11,Oil-FFF-ICEBrentOilFLFSwap-USD-0005</record>
+				<record>2011-02-01 00:00:00.000,0,HI,49,NOK,13106.8218834308,monthly,Swap,SWAP Jan-11 - Mar-11,Oil-FFF-ICEBrentOilFLFSwap-USD-0005</record>
+				<record>2011-03-01 00:00:00.000,0,HI,49,NOK,-7638.72495263474,monthly,Swap,SWAP Jan-11 - Mar-11,Oil-FFF-ICEBrentOilFLFSwap-USD-0005</record>
+				<record>2011-10-01 00:00:00.000,0,HI,49,NOK,-65067.990411415,monthly,Swap,SWAP Oct-11 - Feb-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0006</record>
+				<record>2011-11-01 00:00:00.000,0,HI,49,NOK,4372.6729458122,monthly,Swap,SWAP Oct-11 - Feb-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0006</record>
+				<record>2011-12-01 00:00:00.000,0,TR,49,NOK,-244000.689049601,monthly,Swap,SWAP Oct-11 - Feb-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0006</record>
+				<record>2012-01-01 00:00:00.000,0,TR,49,NOK,167916.672577932,monthly,Swap,SWAP Oct-11 - Feb-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0006</record>
+				<record>2012-02-01 00:00:00.000,0,TR,49,NOK,139847.991360566,monthly,Swap,SWAP Oct-11 - Feb-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0006</record>
+				<record>2012-01-01 00:00:00.000,0,TR,49,NOK,76533.419695285,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+				<record>2012-02-01 00:00:00.000,0,TR,49,NOK,-15272.1329215995,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+				<record>2012-03-01 00:00:00.000,0,TR,49,NOK,-7652.339108655,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+				<record>2012-04-01 00:00:00.000,0,TR,49,NOK,19019.4451475995,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+				<record>2012-05-01 00:00:00.000,0,TR,49,NOK,5516.14016421399,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+				<record>2012-06-01 00:00:00.000,0,TR,49,NOK,-488921.278323881,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+				<record>2012-07-01 00:00:00.000,0,TR,49,NOK,-3873.87654032696,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+				<record>2012-08-01 00:00:00.000,0,TR,49,NOK,-122824.757814272,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+				<record>2012-09-01 00:00:00.000,0,TR,49,NOK,-6351.43759768807,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+				<record>2012-10-01 00:00:00.000,0,TR,49,NOK,-22691.1910134493,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+				<record>2012-11-01 00:00:00.000,0,TR,49,NOK,-245506.462599496,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+				<record>2012-12-01 00:00:00.000,0,TR,49,NOK,218418.47047697,monthly,Swap,SWAP Jan-12 - Dec-12,Oil-FFF-ICEBrentOilFLFSwap-USD-0007</record>
+			</returns>
+		</datawarehouse>		
+	</assert>
+</test>

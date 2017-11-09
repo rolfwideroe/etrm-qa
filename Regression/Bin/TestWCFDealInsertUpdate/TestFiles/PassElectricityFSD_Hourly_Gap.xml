@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DealInsertUpdateTestCase>
+<InsertXml>
+<![CDATA[ 
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2015-10-25</FromDate>
+				<ToDate>2015-10-25</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="ENBW" />
+				</Physical>
+				<TransactionName>Transaction Name FSD Hourly 1</TransactionName>
+			</InstrumentData>
+			<SettlementData>				
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+							<TimeSeriesDetail FromDateTime="2015-10-25T00:00:00" ToDateTime="2015-10-25T01:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T01:00:00" ToDateTime="2015-10-25T02:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T02:00:00" ToDateTime="2015-10-25T03:00:00"  />
+							<TimeSeriesDetail FromDateTime="2015-10-25T02:00:00" ToDateTime="2015-10-25T03:00:00"  />
+							<TimeSeriesDetail FromDateTime="2015-10-25T03:00:00" ToDateTime="2015-10-25T04:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T04:00:00" ToDateTime="2015-10-25T05:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T05:00:00" ToDateTime="2015-10-25T06:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T06:00:00" ToDateTime="2015-10-25T07:00:00" Value="7" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T07:00:00" ToDateTime="2015-10-25T08:00:00" Value="8" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T08:00:00" ToDateTime="2015-10-25T09:00:00" Value="9" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T09:00:00" ToDateTime="2015-10-25T10:00:00" Value="10" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T10:00:00" ToDateTime="2015-10-25T11:00:00" Value="11" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T11:00:00" ToDateTime="2015-10-25T12:00:00" Value="12" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T12:00:00" ToDateTime="2015-10-25T13:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T13:00:00" ToDateTime="2015-10-25T14:00:00" Value="14" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T14:00:00" ToDateTime="2015-10-25T15:00:00" Value="15" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T15:00:00" ToDateTime="2015-10-25T16:00:00" Value="16" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T16:00:00" ToDateTime="2015-10-25T17:00:00" Value="17" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T17:00:00" ToDateTime="2015-10-25T18:00:00" Value="18" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T18:00:00" ToDateTime="2015-10-25T19:00:00" Value="19" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T19:00:00" ToDateTime="2015-10-25T20:00:00" Value="20" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T20:00:00" ToDateTime="2015-10-25T21:00:00" Value="21" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T21:00:00" ToDateTime="2015-10-25T22:00:00" Value="22" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T22:00:00" ToDateTime="2015-10-25T23:00:00" Value="23" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T23:00:00" ToDateTime="2015-10-26T00:00:00" Value="0.0" />
+						</TimeSeries>
+						<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+							<TimeSeriesDetail FromDateTime="2015-10-25T00:00:00" ToDateTime="2015-10-25T01:00:00" Value="0.0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T01:00:00" ToDateTime="2015-10-25T02:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T02:00:00" ToDateTime="2015-10-25T03:00:00" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T02:00:00" ToDateTime="2015-10-25T03:00:00" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T03:00:00" ToDateTime="2015-10-25T04:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T04:00:00" ToDateTime="2015-10-25T05:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T05:00:00" ToDateTime="2015-10-25T06:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T06:00:00" ToDateTime="2015-10-25T07:00:00" Value="7" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T07:00:00" ToDateTime="2015-10-25T08:00:00" Value="8" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T08:00:00" ToDateTime="2015-10-25T09:00:00" Value="9" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T09:00:00" ToDateTime="2015-10-25T10:00:00" Value="10" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T10:00:00" ToDateTime="2015-10-25T11:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T11:00:00" ToDateTime="2015-10-25T12:00:00" Value="12" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T12:00:00" ToDateTime="2015-10-25T13:00:00" Value="13" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T13:00:00" ToDateTime="2015-10-25T14:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T14:00:00" ToDateTime="2015-10-25T15:00:00" Value="15" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T15:00:00" ToDateTime="2015-10-25T16:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T16:00:00" ToDateTime="2015-10-25T17:00:00" Value="17" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T17:00:00" ToDateTime="2015-10-25T18:00:00" Value="18" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T18:00:00" ToDateTime="2015-10-25T19:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T19:00:00" ToDateTime="2015-10-25T20:00:00" Value="20" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T20:00:00" ToDateTime="2015-10-25T21:00:00" Value="21" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T21:00:00" ToDateTime="2015-10-25T22:00:00" Value="22" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T22:00:00" ToDateTime="2015-10-25T23:00:00" Value="23" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T23:00:00" ToDateTime="2015-10-26T00:00:00" Value="0.0" />
+						</TimeSeries>
+						<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+							<TimeSeriesDetail FromDateTime="2015-10-25T00:00:00" ToDateTime="2015-10-25T01:00:00" Value="1"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T01:00:00" ToDateTime="2015-10-25T02:00:00" Value="2"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T02:00:00" ToDateTime="2015-10-25T03:00:00" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T02:00:00" ToDateTime="2015-10-25T03:00:00" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T03:00:00" ToDateTime="2015-10-25T04:00:00" Value="4"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T04:00:00" ToDateTime="2015-10-25T05:00:00" Value="5"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T05:00:00" ToDateTime="2015-10-25T06:00:00" Value="6"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T06:00:00" ToDateTime="2015-10-25T07:00:00" Value="7"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T07:00:00" ToDateTime="2015-10-25T08:00:00" Value="8"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T08:00:00" ToDateTime="2015-10-25T09:00:00" Value="0"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T09:00:00" ToDateTime="2015-10-25T10:00:00" Value="10"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T10:00:00" ToDateTime="2015-10-25T11:00:00" Value="11"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T11:00:00" ToDateTime="2015-10-25T12:00:00" Value="12"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T12:00:00" ToDateTime="2015-10-25T13:00:00" Value="0"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T13:00:00" ToDateTime="2015-10-25T14:00:00" Value="14"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T14:00:00" ToDateTime="2015-10-25T15:00:00" Value="15"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T15:00:00" ToDateTime="2015-10-25T16:00:00" Value="0"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T16:00:00" ToDateTime="2015-10-25T17:00:00" Value="17"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T17:00:00" ToDateTime="2015-10-25T18:00:00" Value="18"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T18:00:00" ToDateTime="2015-10-25T19:00:00" Value="19"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T19:00:00" ToDateTime="2015-10-25T20:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T20:00:00" ToDateTime="2015-10-25T21:00:00" Value="21"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T21:00:00" ToDateTime="2015-10-25T22:00:00" Value="22"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T22:00:00" ToDateTime="2015-10-25T23:00:00" Value="23"/>
+							<TimeSeriesDetail FromDateTime="2015-10-25T23:00:00" ToDateTime="2015-10-26T00:00:00" Value="24"/>
+						</TimeSeries>
+						<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+							<TimeSeriesDetail FromDateTime="2015-10-25T00:00:00" ToDateTime="2015-10-25T01:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T01:00:00" ToDateTime="2015-10-25T02:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T02:00:00" ToDateTime="2015-10-25T03:00:00"  />
+							<TimeSeriesDetail FromDateTime="2015-10-25T02:00:00" ToDateTime="2015-10-25T03:00:00"  />
+							<TimeSeriesDetail FromDateTime="2015-10-25T03:00:00" ToDateTime="2015-10-25T04:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T04:00:00" ToDateTime="2015-10-25T05:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T05:00:00" ToDateTime="2015-10-25T06:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T06:00:00" ToDateTime="2015-10-25T07:00:00" Value="7" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T07:00:00" ToDateTime="2015-10-25T08:00:00" Value="8" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T08:00:00" ToDateTime="2015-10-25T09:00:00" Value="9" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T09:00:00" ToDateTime="2015-10-25T10:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T10:00:00" ToDateTime="2015-10-25T11:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T11:00:00" ToDateTime="2015-10-25T12:00:00" Value="12" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T12:00:00" ToDateTime="2015-10-25T13:00:00" Value="13" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T13:00:00" ToDateTime="2015-10-25T14:00:00" Value="14" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T14:00:00" ToDateTime="2015-10-25T15:00:00" Value="15" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T15:00:00" ToDateTime="2015-10-25T16:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T16:00:00" ToDateTime="2015-10-25T17:00:00" Value="17" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T17:00:00" ToDateTime="2015-10-25T18:00:00" Value="18" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T18:00:00" ToDateTime="2015-10-25T19:00:00" Value="19" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T19:00:00" ToDateTime="2015-10-25T20:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T20:00:00" ToDateTime="2015-10-25T21:00:00" Value="21" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T21:00:00" ToDateTime="2015-10-25T22:00:00" Value="22" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T22:00:00" ToDateTime="2015-10-25T23:00:00" Value="23" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T23:00:00" ToDateTime="2015-10-26T00:00:00" Value="24" />
+						</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2015-01-01T21:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>Electricity FSD hourly InsertUpdate</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassElectricityFSD_Hourly_Gap 1</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+]]>
+</InsertXml>
+	<UpdateXml>
+	<![CDATA[ 
+		<DealInsert>
+		<MetaData>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<TransactionPart>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+							<TimeSeriesDetail FromDateTime="2015-10-25T02:00:00" ToDateTime="2015-10-25T03:00:00" Value="10.0" />
+							<TimeSeriesDetail FromDateTime="2015-10-25T02:00:00" ToDateTime="2015-10-25T03:00:00" Value="20.0" />						
+						</TimeSeries>
+						<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+						</TimeSeries>
+						<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+						</TimeSeries>
+						<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+						</TimeSeries>
+				</FlexibleStructuredDealInformation>
+			</SettlementData>
+			<ReferenceData>
+				<ExternalId>PassElectricityFSD_Hourly_Gap 1</ExternalId>
+			</ReferenceData>
+		</TransactionPart>
+	</DealInsert>
+	]]>
+	</UpdateXml>
+	<ExpectedResult ExpectedType="TimeSeries">
+	<ExpectedTimeSeriesSets>
+	<ExpectedTimeSeriesSet ExternalId="PassElectricityFSD_Hourly_Gap 1">
+	<ExpectedTimeSeries>
+		<Resolution>Hour</Resolution>
+		<TimeSeriesTypeName>Forecasted Price</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T00:00:00" UntilDateTime="2015-10-25T01:00:00" UtcFromDateTime="2015-10-24T22:00:00Z" UtcUntilDateTime="2015-10-24T23:00:00Z" Value="0.0" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T01:00:00" UntilDateTime="2015-10-25T02:00:00" UtcFromDateTime="2015-10-24T23:00:00Z" UtcUntilDateTime="2015-10-25T00:00:00Z" Value="2.0" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T02:00:00" UntilDateTime="2015-10-25T03:00:00" UtcFromDateTime="2015-10-25T00:00:00Z" UtcUntilDateTime="2015-10-25T01:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T02:00:00" UntilDateTime="2015-10-25T03:00:00" UtcFromDateTime="2015-10-25T01:00:00Z" UtcUntilDateTime="2015-10-25T02:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T03:00:00" UntilDateTime="2015-10-25T04:00:00" UtcFromDateTime="2015-10-25T02:00:00Z" UtcUntilDateTime="2015-10-25T03:00:00Z" Value="4"/>			
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T04:00:00" UntilDateTime="2015-10-25T05:00:00" UtcFromDateTime="2015-10-25T03:00:00Z" UtcUntilDateTime="2015-10-25T04:00:00Z" Value="5"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T05:00:00" UntilDateTime="2015-10-25T06:00:00" UtcFromDateTime="2015-10-25T04:00:00Z" UtcUntilDateTime="2015-10-25T05:00:00Z" Value="6"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T06:00:00" UntilDateTime="2015-10-25T07:00:00" UtcFromDateTime="2015-10-25T05:00:00Z" UtcUntilDateTime="2015-10-25T06:00:00Z" Value="7"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T07:00:00" UntilDateTime="2015-10-25T08:00:00" UtcFromDateTime="2015-10-25T06:00:00Z" UtcUntilDateTime="2015-10-25T07:00:00Z" Value="8"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T08:00:00" UntilDateTime="2015-10-25T09:00:00" UtcFromDateTime="2015-10-25T07:00:00Z" UtcUntilDateTime="2015-10-25T08:00:00Z" Value="9"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T09:00:00" UntilDateTime="2015-10-25T10:00:00" UtcFromDateTime="2015-10-25T08:00:00Z" UtcUntilDateTime="2015-10-25T09:00:00Z" Value="10"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T10:00:00" UntilDateTime="2015-10-25T11:00:00" UtcFromDateTime="2015-10-25T09:00:00Z" UtcUntilDateTime="2015-10-25T10:00:00Z" Value="0"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T11:00:00" UntilDateTime="2015-10-25T12:00:00" UtcFromDateTime="2015-10-25T10:00:00Z" UtcUntilDateTime="2015-10-25T11:00:00Z" Value="12"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T12:00:00" UntilDateTime="2015-10-25T13:00:00" UtcFromDateTime="2015-10-25T11:00:00Z" UtcUntilDateTime="2015-10-25T12:00:00Z" Value="13"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T13:00:00" UntilDateTime="2015-10-25T14:00:00" UtcFromDateTime="2015-10-25T12:00:00Z" UtcUntilDateTime="2015-10-25T13:00:00Z" Value="0"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T14:00:00" UntilDateTime="2015-10-25T15:00:00" UtcFromDateTime="2015-10-25T13:00:00Z" UtcUntilDateTime="2015-10-25T14:00:00Z" Value="15"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T15:00:00" UntilDateTime="2015-10-25T16:00:00" UtcFromDateTime="2015-10-25T14:00:00Z" UtcUntilDateTime="2015-10-25T15:00:00Z" Value="0"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T16:00:00" UntilDateTime="2015-10-25T17:00:00" UtcFromDateTime="2015-10-25T15:00:00Z" UtcUntilDateTime="2015-10-25T16:00:00Z" Value="17"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T17:00:00" UntilDateTime="2015-10-25T18:00:00" UtcFromDateTime="2015-10-25T16:00:00Z" UtcUntilDateTime="2015-10-25T17:00:00Z" Value="18"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T18:00:00" UntilDateTime="2015-10-25T19:00:00" UtcFromDateTime="2015-10-25T17:00:00Z" UtcUntilDateTime="2015-10-25T18:00:00Z" Value="0"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T19:00:00" UntilDateTime="2015-10-25T20:00:00" UtcFromDateTime="2015-10-25T18:00:00Z" UtcUntilDateTime="2015-10-25T19:00:00Z" Value="20"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T20:00:00" UntilDateTime="2015-10-25T21:00:00" UtcFromDateTime="2015-10-25T19:00:00Z" UtcUntilDateTime="2015-10-25T20:00:00Z" Value="21"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T21:00:00" UntilDateTime="2015-10-25T22:00:00" UtcFromDateTime="2015-10-25T20:00:00Z" UtcUntilDateTime="2015-10-25T21:00:00Z" Value="22"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T22:00:00" UntilDateTime="2015-10-25T23:00:00" UtcFromDateTime="2015-10-25T21:00:00Z" UtcUntilDateTime="2015-10-25T22:00:00Z" Value="23"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T23:00:00" UntilDateTime="2015-10-26T00:00:00" UtcFromDateTime="2015-10-25T22:00:00Z" UtcUntilDateTime="2015-10-25T23:00:00Z" Value="0"/>	
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+	<ExpectedTimeSeries>
+		<Resolution>Hour</Resolution>
+		<TimeSeriesTypeName>Forecasted Volume</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T00:00:00" UntilDateTime="2015-10-25T01:00:00" UtcFromDateTime="2015-10-24T22:00:00Z" UtcUntilDateTime="2015-10-24T23:00:00Z" Value="1.0" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T01:00:00" UntilDateTime="2015-10-25T02:00:00" UtcFromDateTime="2015-10-24T23:00:00Z" UtcUntilDateTime="2015-10-25T00:00:00Z" Value="2.0" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T02:00:00" UntilDateTime="2015-10-25T03:00:00" UtcFromDateTime="2015-10-25T00:00:00Z" UtcUntilDateTime="2015-10-25T01:00:00Z" Value="10"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T02:00:00" UntilDateTime="2015-10-25T03:00:00" UtcFromDateTime="2015-10-25T01:00:00Z" UtcUntilDateTime="2015-10-25T02:00:00Z" Value="20"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T03:00:00" UntilDateTime="2015-10-25T04:00:00" UtcFromDateTime="2015-10-25T02:00:00Z" UtcUntilDateTime="2015-10-25T03:00:00Z" Value="4"/>			
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T04:00:00" UntilDateTime="2015-10-25T05:00:00" UtcFromDateTime="2015-10-25T03:00:00Z" UtcUntilDateTime="2015-10-25T04:00:00Z" Value="5"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T05:00:00" UntilDateTime="2015-10-25T06:00:00" UtcFromDateTime="2015-10-25T04:00:00Z" UtcUntilDateTime="2015-10-25T05:00:00Z" Value="6"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T06:00:00" UntilDateTime="2015-10-25T07:00:00" UtcFromDateTime="2015-10-25T05:00:00Z" UtcUntilDateTime="2015-10-25T06:00:00Z" Value="7"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T07:00:00" UntilDateTime="2015-10-25T08:00:00" UtcFromDateTime="2015-10-25T06:00:00Z" UtcUntilDateTime="2015-10-25T07:00:00Z" Value="8"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T08:00:00" UntilDateTime="2015-10-25T09:00:00" UtcFromDateTime="2015-10-25T07:00:00Z" UtcUntilDateTime="2015-10-25T08:00:00Z" Value="9"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T09:00:00" UntilDateTime="2015-10-25T10:00:00" UtcFromDateTime="2015-10-25T08:00:00Z" UtcUntilDateTime="2015-10-25T09:00:00Z" Value="10"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T10:00:00" UntilDateTime="2015-10-25T11:00:00" UtcFromDateTime="2015-10-25T09:00:00Z" UtcUntilDateTime="2015-10-25T10:00:00Z" Value="11"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T11:00:00" UntilDateTime="2015-10-25T12:00:00" UtcFromDateTime="2015-10-25T10:00:00Z" UtcUntilDateTime="2015-10-25T11:00:00Z" Value="12"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T12:00:00" UntilDateTime="2015-10-25T13:00:00" UtcFromDateTime="2015-10-25T11:00:00Z" UtcUntilDateTime="2015-10-25T12:00:00Z" Value="0"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T13:00:00" UntilDateTime="2015-10-25T14:00:00" UtcFromDateTime="2015-10-25T12:00:00Z" UtcUntilDateTime="2015-10-25T13:00:00Z" Value="14"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T14:00:00" UntilDateTime="2015-10-25T15:00:00" UtcFromDateTime="2015-10-25T13:00:00Z" UtcUntilDateTime="2015-10-25T14:00:00Z" Value="15"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T15:00:00" UntilDateTime="2015-10-25T16:00:00" UtcFromDateTime="2015-10-25T14:00:00Z" UtcUntilDateTime="2015-10-25T15:00:00Z" Value="16"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T16:00:00" UntilDateTime="2015-10-25T17:00:00" UtcFromDateTime="2015-10-25T15:00:00Z" UtcUntilDateTime="2015-10-25T16:00:00Z" Value="17"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T17:00:00" UntilDateTime="2015-10-25T18:00:00" UtcFromDateTime="2015-10-25T16:00:00Z" UtcUntilDateTime="2015-10-25T17:00:00Z" Value="18"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T18:00:00" UntilDateTime="2015-10-25T19:00:00" UtcFromDateTime="2015-10-25T17:00:00Z" UtcUntilDateTime="2015-10-25T18:00:00Z" Value="19"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T19:00:00" UntilDateTime="2015-10-25T20:00:00" UtcFromDateTime="2015-10-25T18:00:00Z" UtcUntilDateTime="2015-10-25T19:00:00Z" Value="20"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T20:00:00" UntilDateTime="2015-10-25T21:00:00" UtcFromDateTime="2015-10-25T19:00:00Z" UtcUntilDateTime="2015-10-25T20:00:00Z" Value="21"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T21:00:00" UntilDateTime="2015-10-25T22:00:00" UtcFromDateTime="2015-10-25T20:00:00Z" UtcUntilDateTime="2015-10-25T21:00:00Z" Value="22"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T22:00:00" UntilDateTime="2015-10-25T23:00:00" UtcFromDateTime="2015-10-25T21:00:00Z" UtcUntilDateTime="2015-10-25T22:00:00Z" Value="23"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T23:00:00" UntilDateTime="2015-10-26T00:00:00" UtcFromDateTime="2015-10-25T22:00:00Z" UtcUntilDateTime="2015-10-25T23:00:00Z" Value="0"/>	
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+	<ExpectedTimeSeries>
+		<Resolution>Hour</Resolution>
+		<TimeSeriesTypeName>Realized Price</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T00:00:00" UntilDateTime="2015-10-25T01:00:00" UtcFromDateTime="2015-10-24T22:00:00Z" UtcUntilDateTime="2015-10-24T23:00:00Z" Value="1" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T01:00:00" UntilDateTime="2015-10-25T02:00:00" UtcFromDateTime="2015-10-24T23:00:00Z" UtcUntilDateTime="2015-10-25T00:00:00Z" Value="2" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T02:00:00" UntilDateTime="2015-10-25T03:00:00" UtcFromDateTime="2015-10-25T00:00:00Z" UtcUntilDateTime="2015-10-25T01:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T02:00:00" UntilDateTime="2015-10-25T03:00:00" UtcFromDateTime="2015-10-25T01:00:00Z" UtcUntilDateTime="2015-10-25T02:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T03:00:00" UntilDateTime="2015-10-25T04:00:00" UtcFromDateTime="2015-10-25T02:00:00Z" UtcUntilDateTime="2015-10-25T03:00:00Z" Value="4"/>			
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T04:00:00" UntilDateTime="2015-10-25T05:00:00" UtcFromDateTime="2015-10-25T03:00:00Z" UtcUntilDateTime="2015-10-25T04:00:00Z" Value="5"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T05:00:00" UntilDateTime="2015-10-25T06:00:00" UtcFromDateTime="2015-10-25T04:00:00Z" UtcUntilDateTime="2015-10-25T05:00:00Z" Value="6"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T06:00:00" UntilDateTime="2015-10-25T07:00:00" UtcFromDateTime="2015-10-25T05:00:00Z" UtcUntilDateTime="2015-10-25T06:00:00Z" Value="7"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T07:00:00" UntilDateTime="2015-10-25T08:00:00" UtcFromDateTime="2015-10-25T06:00:00Z" UtcUntilDateTime="2015-10-25T07:00:00Z" Value="8"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T08:00:00" UntilDateTime="2015-10-25T09:00:00" UtcFromDateTime="2015-10-25T07:00:00Z" UtcUntilDateTime="2015-10-25T08:00:00Z" Value="9"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T09:00:00" UntilDateTime="2015-10-25T10:00:00" UtcFromDateTime="2015-10-25T08:00:00Z" UtcUntilDateTime="2015-10-25T09:00:00Z" Value="0"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T10:00:00" UntilDateTime="2015-10-25T11:00:00" UtcFromDateTime="2015-10-25T09:00:00Z" UtcUntilDateTime="2015-10-25T10:00:00Z" Value="0"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T11:00:00" UntilDateTime="2015-10-25T12:00:00" UtcFromDateTime="2015-10-25T10:00:00Z" UtcUntilDateTime="2015-10-25T11:00:00Z" Value="12"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T12:00:00" UntilDateTime="2015-10-25T13:00:00" UtcFromDateTime="2015-10-25T11:00:00Z" UtcUntilDateTime="2015-10-25T12:00:00Z" Value="13"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T13:00:00" UntilDateTime="2015-10-25T14:00:00" UtcFromDateTime="2015-10-25T12:00:00Z" UtcUntilDateTime="2015-10-25T13:00:00Z" Value="14"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T14:00:00" UntilDateTime="2015-10-25T15:00:00" UtcFromDateTime="2015-10-25T13:00:00Z" UtcUntilDateTime="2015-10-25T14:00:00Z" Value="15"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T15:00:00" UntilDateTime="2015-10-25T16:00:00" UtcFromDateTime="2015-10-25T14:00:00Z" UtcUntilDateTime="2015-10-25T15:00:00Z" Value="0"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T16:00:00" UntilDateTime="2015-10-25T17:00:00" UtcFromDateTime="2015-10-25T15:00:00Z" UtcUntilDateTime="2015-10-25T16:00:00Z" Value="17"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T17:00:00" UntilDateTime="2015-10-25T18:00:00" UtcFromDateTime="2015-10-25T16:00:00Z" UtcUntilDateTime="2015-10-25T17:00:00Z" Value="18"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T18:00:00" UntilDateTime="2015-10-25T19:00:00" UtcFromDateTime="2015-10-25T17:00:00Z" UtcUntilDateTime="2015-10-25T18:00:00Z" Value="19"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T19:00:00" UntilDateTime="2015-10-25T20:00:00" UtcFromDateTime="2015-10-25T18:00:00Z" UtcUntilDateTime="2015-10-25T19:00:00Z" Value="0"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T20:00:00" UntilDateTime="2015-10-25T21:00:00" UtcFromDateTime="2015-10-25T19:00:00Z" UtcUntilDateTime="2015-10-25T20:00:00Z" Value="21"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T21:00:00" UntilDateTime="2015-10-25T22:00:00" UtcFromDateTime="2015-10-25T20:00:00Z" UtcUntilDateTime="2015-10-25T21:00:00Z" Value="22"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T22:00:00" UntilDateTime="2015-10-25T23:00:00" UtcFromDateTime="2015-10-25T21:00:00Z" UtcUntilDateTime="2015-10-25T22:00:00Z" Value="23"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T23:00:00" UntilDateTime="2015-10-26T00:00:00" UtcFromDateTime="2015-10-25T22:00:00Z" UtcUntilDateTime="2015-10-25T23:00:00Z" Value="24"/>	
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+	<ExpectedTimeSeries>
+		<Resolution>Hour</Resolution>
+		<TimeSeriesTypeName>Realized Volume</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T00:00:00" UntilDateTime="2015-10-25T01:00:00" UtcFromDateTime="2015-10-24T22:00:00Z" UtcUntilDateTime="2015-10-24T23:00:00Z" Value="1" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T01:00:00" UntilDateTime="2015-10-25T02:00:00" UtcFromDateTime="2015-10-24T23:00:00Z" UtcUntilDateTime="2015-10-25T00:00:00Z" Value="2" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T02:00:00" UntilDateTime="2015-10-25T03:00:00" UtcFromDateTime="2015-10-25T00:00:00Z" UtcUntilDateTime="2015-10-25T01:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T02:00:00" UntilDateTime="2015-10-25T03:00:00" UtcFromDateTime="2015-10-25T01:00:00Z" UtcUntilDateTime="2015-10-25T02:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T03:00:00" UntilDateTime="2015-10-25T04:00:00" UtcFromDateTime="2015-10-25T02:00:00Z" UtcUntilDateTime="2015-10-25T03:00:00Z" Value="4"/>			
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T04:00:00" UntilDateTime="2015-10-25T05:00:00" UtcFromDateTime="2015-10-25T03:00:00Z" UtcUntilDateTime="2015-10-25T04:00:00Z" Value="5"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T05:00:00" UntilDateTime="2015-10-25T06:00:00" UtcFromDateTime="2015-10-25T04:00:00Z" UtcUntilDateTime="2015-10-25T05:00:00Z" Value="6"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T06:00:00" UntilDateTime="2015-10-25T07:00:00" UtcFromDateTime="2015-10-25T05:00:00Z" UtcUntilDateTime="2015-10-25T06:00:00Z" Value="7"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T07:00:00" UntilDateTime="2015-10-25T08:00:00" UtcFromDateTime="2015-10-25T06:00:00Z" UtcUntilDateTime="2015-10-25T07:00:00Z" Value="8"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T08:00:00" UntilDateTime="2015-10-25T09:00:00" UtcFromDateTime="2015-10-25T07:00:00Z" UtcUntilDateTime="2015-10-25T08:00:00Z" Value="0"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T09:00:00" UntilDateTime="2015-10-25T10:00:00" UtcFromDateTime="2015-10-25T08:00:00Z" UtcUntilDateTime="2015-10-25T09:00:00Z" Value="10"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T10:00:00" UntilDateTime="2015-10-25T11:00:00" UtcFromDateTime="2015-10-25T09:00:00Z" UtcUntilDateTime="2015-10-25T10:00:00Z" Value="11"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T11:00:00" UntilDateTime="2015-10-25T12:00:00" UtcFromDateTime="2015-10-25T10:00:00Z" UtcUntilDateTime="2015-10-25T11:00:00Z" Value="12"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T12:00:00" UntilDateTime="2015-10-25T13:00:00" UtcFromDateTime="2015-10-25T11:00:00Z" UtcUntilDateTime="2015-10-25T12:00:00Z" Value="0"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T13:00:00" UntilDateTime="2015-10-25T14:00:00" UtcFromDateTime="2015-10-25T12:00:00Z" UtcUntilDateTime="2015-10-25T13:00:00Z" Value="14"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T14:00:00" UntilDateTime="2015-10-25T15:00:00" UtcFromDateTime="2015-10-25T13:00:00Z" UtcUntilDateTime="2015-10-25T14:00:00Z" Value="15"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T15:00:00" UntilDateTime="2015-10-25T16:00:00" UtcFromDateTime="2015-10-25T14:00:00Z" UtcUntilDateTime="2015-10-25T15:00:00Z" Value="0"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T16:00:00" UntilDateTime="2015-10-25T17:00:00" UtcFromDateTime="2015-10-25T15:00:00Z" UtcUntilDateTime="2015-10-25T16:00:00Z" Value="17"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T17:00:00" UntilDateTime="2015-10-25T18:00:00" UtcFromDateTime="2015-10-25T16:00:00Z" UtcUntilDateTime="2015-10-25T17:00:00Z" Value="18"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T18:00:00" UntilDateTime="2015-10-25T19:00:00" UtcFromDateTime="2015-10-25T17:00:00Z" UtcUntilDateTime="2015-10-25T18:00:00Z" Value="19"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T19:00:00" UntilDateTime="2015-10-25T20:00:00" UtcFromDateTime="2015-10-25T18:00:00Z" UtcUntilDateTime="2015-10-25T19:00:00Z" Value="0"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T20:00:00" UntilDateTime="2015-10-25T21:00:00" UtcFromDateTime="2015-10-25T19:00:00Z" UtcUntilDateTime="2015-10-25T20:00:00Z" Value="21"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T21:00:00" UntilDateTime="2015-10-25T22:00:00" UtcFromDateTime="2015-10-25T20:00:00Z" UtcUntilDateTime="2015-10-25T21:00:00Z" Value="22"/>	
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T22:00:00" UntilDateTime="2015-10-25T23:00:00" UtcFromDateTime="2015-10-25T21:00:00Z" UtcUntilDateTime="2015-10-25T22:00:00Z" Value="23"/>
+			<ExpectedTimeSeriesValue FromDateTime="2015-10-25T23:00:00" UntilDateTime="2015-10-26T00:00:00" UtcFromDateTime="2015-10-25T22:00:00Z" UtcUntilDateTime="2015-10-25T23:00:00Z" Value="24"/>	
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+</ExpectedTimeSeriesSet>
+</ExpectedTimeSeriesSets>
+</ExpectedResult>
+</DealInsertUpdateTestCase>

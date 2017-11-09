@@ -1,0 +1,42 @@
+<CurrencyAccountTestCase>
+<InputData>
+	<CurrencyAccountInserts>
+		<Insert InsertBalanceDate="2015-01-12">
+			<CurrencyAccounts>
+				<CurrencyAccount CurrencyIsoCode="DKK" BalanceDate="0001-01-01" NominalAmount="1" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+				<CurrencyAccount CurrencyIsoCode="EUR" BalanceDate="0001-01-01" NominalAmount="1" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+				<CurrencyAccount CurrencyIsoCode="GBP" BalanceDate="0001-01-01" NominalAmount="1" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+				<CurrencyAccount CurrencyIsoCode="NOK" BalanceDate="0001-01-01" NominalAmount="1" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+				<CurrencyAccount CurrencyIsoCode="SEK" BalanceDate="0001-01-01" NominalAmount="1" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+				<CurrencyAccount CurrencyIsoCode="USD" BalanceDate="0001-01-01" NominalAmount="1" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+			</CurrencyAccounts>
+		</Insert>
+		<Insert InsertBalanceDate="2015-04-01">
+			<CurrencyAccounts>
+        <CurrencyAccount CurrencyIsoCode="DKK" BalanceDate="0001-01-01" NominalAmount="2" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+        <CurrencyAccount CurrencyIsoCode="EUR" BalanceDate="0001-01-01" NominalAmount="3" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+        <CurrencyAccount CurrencyIsoCode="GBP" BalanceDate="0001-01-01" NominalAmount="4" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+        <CurrencyAccount CurrencyIsoCode="NOK" BalanceDate="0001-01-01" NominalAmount="5" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+        <CurrencyAccount CurrencyIsoCode="SEK" BalanceDate="0001-01-01" NominalAmount="6" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+        <CurrencyAccount CurrencyIsoCode="USD" BalanceDate="0001-01-01" NominalAmount="7" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+			</CurrencyAccounts>
+		</Insert>
+	</CurrencyAccountInserts>
+</InputData>
+		<!--If GetAccountTpe is Latest then we do not pass a date range otherwise we need a date range to retrieve the correct currencyAccountsInserts-->
+<ExpectedResults>		 <!---UpdatedBy is irrelevant for API import, always uses the default API username, thats Create is BLANK, whilst Read is DealImport the default API username-->
+  <ExpectedResult Description="Test most recent funcion">
+    <GetMethod>
+      <MostRecent>true</MostRecent>
+    </GetMethod>
+  <CurrencyAccounts>
+    <CurrencyAccount CurrencyIsoCode="DKK" BalanceDate="2015-04-01" NominalAmount="2" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+    <CurrencyAccount CurrencyIsoCode="EUR" BalanceDate="2015-04-01" NominalAmount="3" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+    <CurrencyAccount CurrencyIsoCode="GBP" BalanceDate="2015-04-01" NominalAmount="4" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+    <CurrencyAccount CurrencyIsoCode="NOK" BalanceDate="2015-04-01" NominalAmount="5" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+    <CurrencyAccount CurrencyIsoCode="SEK" BalanceDate="2015-04-01" NominalAmount="6" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+    <CurrencyAccount CurrencyIsoCode="USD" BalanceDate="2015-04-01" NominalAmount="7" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+	</CurrencyAccounts>
+  </ExpectedResult>
+</ExpectedResults>
+</CurrencyAccountTestCase>

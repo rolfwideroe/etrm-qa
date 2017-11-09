@@ -1,0 +1,21 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FXSwap-PosMon-NOK</workspace>
+    <monitor>Special-Cases-FXSwap-PosMon-NOK</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <Tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0109 Special-Cases,,Financial,,Other Period,Other Period - ,,CET,NOK,Viz,Currency,,Currency Forward,NOKEUR 15-Oct-11,,,,2011-10-15 00:00:00.000,2011-10-15 00:00:00.000,Expired,0,739897.385260416,0,739897.385260416,0,0,739897.385260416,0,739897.385260416,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,7,-7000000,0,0,0,Special-Cases-FXSwap-0001-Leg1</record>
+        <record>0109 Special-Cases,,Financial,,Other Period,Other Period - ,,CET,NOK,Viz,Currency,,Currency Forward,NOKEUR 01-Nov-11,,,,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Expired,0,254578.233356103,0,254578.233356103,0,0,254578.233356103,0,254578.233356103,0,0,0,-1000000,0,0,0,0,-1000000,NULL,0,0,0,0,0,0,8,8000000,0,0,0,Special-Cases-FXSwap-0001-Leg2</record>
+        <record>0109 Special-Cases,,Financial,,Other Period,Other Period - ,,CET,NOK,Viz,Currency,,Currency Forward,NOKEUR 28-Oct-11,,,,2011-10-28 00:00:00.000,2011-10-28 00:00:00.000,Expired,0,673458.583897378,0,673458.583897378,0,0,673458.583897378,0,673458.583897378,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,7,-7000000,0,0,0,Special-Cases-FXSwap-0002-Leg1</record>
+        <record>0109 Special-Cases,,Financial,,Other Period,Other Period - ,ECS Curve,CET,NOK,Viz,Currency,,Currency Forward,NOKEUR 05-Jan-12,,,,2012-01-05 00:00:00.000,2012-01-05 00:00:00.000,Active,0,0,235211.407411156,235211.407411156,-7764788.59258884,235211.407411156,0,235211.407411156,235211.407411156,0,0,0,-1000000,0,0,0,0,-1000000,NULL,0,0,0,0,0,0,8,8000000,7.76478859258884,0,0,Special-Cases-FXSwap-0002-Leg2</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,31 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>ExpHistoricalPrices-Spot-EUR-ActualPL-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <Tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,HI,177,EUR,-288.590000000001,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0001</record>
+        <record>2011-10-01 00:00:00.000,0,HI,177,EUR,-326.55,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0002</record>
+        <record>2011-10-01 00:00:00.000,0,HI,177,EUR,-129.747,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0003</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,EUR,-650.648375000001,monthly,Spot,D0111-11,ExpHistoricalPrices-Spot-EUR-0004</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,EUR,-767.082500000002,monthly,Spot,D0111-11,ExpHistoricalPrices-Spot-EUR-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,EUR,-482.985000000001,monthly,Spot,D0111-11,ExpHistoricalPrices-Spot-EUR-0006</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,EUR,-279.539999999999,monthly,Spot,D2111-11,ExpHistoricalPrices-Spot-EUR-0007</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,EUR,-242.400000000002,monthly,Spot,D2111-11,ExpHistoricalPrices-Spot-EUR-0008</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,EUR,-114,monthly,Spot,D2111-11,ExpHistoricalPrices-Spot-EUR-0009</record>
+        <record>2011-10-01 00:00:00.000,0,HI,177,EUR,-987.995275,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0010</record>
+        <record>2011-10-01 00:00:00.000,0,HI,177,EUR,-279.539999999999,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0011</record>
+        <record>2011-10-01 00:00:00.000,0,HI,177,EUR,-242.400000000001,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0012</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,EUR,-114.000000000002,monthly,Spot,D0111-11,ExpHistoricalPrices-Spot-EUR-0013</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,EUR,-242.400000000002,monthly,Spot,D2111-11,ExpHistoricalPrices-Spot-EUR-0014</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

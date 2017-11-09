@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-Transport</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasTransport>
+			<InstrumentData>
+				<FromDate>2008-10-09</FromDate>
+				<ToDate>2008-10-10</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="NCG"/>
+						<DestinationBalanceArea AreaName="PEG_N"/>
+					</Interconnector>
+				</Physical>
+			</InstrumentData>
+			<SettlementData>
+				<TransportQuantityInformation>
+					<TimeSeriesDetail From="2008-10-09T00:00:00" Price="0" Volume="0" Until="2008-10-10T00:00:00"/>
+					<TimeSeriesDetail From="2008-10-10T00:00:00" Price="0" Volume="0" Until="2008-10-11T00:00:00"/>
+				</TransportQuantityInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+			</SettlementData>
+		</GasTransport>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2008-10-09T12:12:13</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>GasTransport; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassGasTransport - ZeroAmount</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TransactionId>171</TransactionId>
+  <DealType>Gas-Transport</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>09-Oct-08 - 10-Oct-08</InstrumentName>
+    <FromDate>2008-10-09T00:00:00</FromDate>
+    <ToDate>2008-10-10T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>CET 06-06</TimeZone>
+    <Interconnector>Medelsheim / Obergailbach</Interconnector>
+  </InstrumentData>
+  <SettlementData>
+    <QuantityUnit>MW</QuantityUnit>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <Resolution>Day</Resolution>
+    <PriceVolumeTimeSeriesDetails>
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-09T00:00:00" ToDateTime="2008-10-10T00:00:00" Price="0" Volume="0" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2008-10-10T00:00:00" ToDateTime="2008-10-11T00:00:00" Price="0" Volume="0" />
+    </PriceVolumeTimeSeriesDetails>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2008-10-09T10:12:13Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassGasTransport - ZeroAmount</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+    <DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>GasTransport; should pass</Comment>
+    <ModificationDateTimeUtc>2015-08-05T09:34:57Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>48</Deliveries>
+    <OriginalQuantity>0</OriginalQuantity>
+    <ReferringId>172</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

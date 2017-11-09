@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BulkDealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-FixedPriceFloatingVolume</DealType>
+      <Portfolios>
+        <Portfolio>Special-Cases</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityFixedPriceFloatingVolume>
+        <InstrumentData>
+          <PriceBasis>EEX</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <VolumeReferenceExternalId>Special-Cases-ZeroVolume-ElectricityStructuredFlexibleDeal</VolumeReferenceExternalId>
+          <FromDate>2011-11-01</FromDate>
+          <ToDate>2011-11-29</ToDate>
+          <Financial />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>25</Quantity>
+          <QuantityUnit>%</QuantityUnit>
+          <Price>30</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </ElectricityFixedPriceFloatingVolume>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-06T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <Comment>Special-Cases-ZeroVolume-FPFV</Comment>
+        <ExternalId>Special-Cases-ZeroVolume-FPFV</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+</BulkDealInsert>

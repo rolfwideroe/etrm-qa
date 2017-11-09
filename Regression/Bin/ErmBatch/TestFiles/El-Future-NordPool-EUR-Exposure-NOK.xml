@@ -1,0 +1,82 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-Future-NordPool-EUR-Exposure-NOK</workspace>
+    <monitor>El-Future-NordPool-EUR-Exposure-NOK</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0111-11,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0004;El-Future-EUR-0010,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-11-02 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0211-11,2011-11-02 00:00:00.000,2011-11-02 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0005;El-Future-EUR-0011,NordPool System Price,MWh,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0311-11,2011-11-03 00:00:00.000,2011-11-03 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0006;El-Future-EUR-0012,NordPool System Price,MWh,2011-11-03 00:00:00.000,2011-11-04 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0411-11,2011-11-04 00:00:00.000,2011-11-04 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0007;El-Future-EUR-0013,NordPool System Price,MWh,2011-11-04 00:00:00.000,2011-11-05 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0511-11,2011-11-05 00:00:00.000,2011-11-05 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0008;El-Future-EUR-0014,NordPool System Price,MWh,2011-11-05 00:00:00.000,2011-11-06 00:00:00.000,240,0,240</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,D0611-11,2011-11-06 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0009;El-Future-EUR-0015,NordPool System Price,MWh,2011-11-06 00:00:00.000,2011-11-07 00:00:00.000,240,0,240</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0017;El-Future-EUR-0021,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-11-02 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0017;El-Future-EUR-0021,NordPool System Price,MWh,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0017;El-Future-EUR-0021,NordPool System Price,MWh,2011-11-03 00:00:00.000,2011-11-04 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0017;El-Future-EUR-0021,NordPool System Price,MWh,2011-11-04 00:00:00.000,2011-11-05 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0017;El-Future-EUR-0021,NordPool System Price,MWh,2011-11-05 00:00:00.000,2011-11-06 00:00:00.000,240,0,240</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0017;El-Future-EUR-0021,NordPool System Price,MWh,2011-11-06 00:00:00.000,2011-11-07 00:00:00.000,240,0,240</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0018;El-Future-EUR-0022,NordPool System Price,MWh,2011-11-07 00:00:00.000,2011-11-08 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0018;El-Future-EUR-0022,NordPool System Price,MWh,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0018;El-Future-EUR-0022,NordPool System Price,MWh,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0018;El-Future-EUR-0022,NordPool System Price,MWh,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0018;El-Future-EUR-0022,NordPool System Price,MWh,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0018;El-Future-EUR-0022,NordPool System Price,MWh,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,240,0,240</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0018;El-Future-EUR-0022,NordPool System Price,MWh,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,240,0,240</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0019;El-Future-EUR-0023,NordPool System Price,MWh,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0019;El-Future-EUR-0023,NordPool System Price,MWh,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0019;El-Future-EUR-0023,NordPool System Price,MWh,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0019;El-Future-EUR-0023,NordPool System Price,MWh,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0019;El-Future-EUR-0023,NordPool System Price,MWh,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,240,120,120</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0019;El-Future-EUR-0023,NordPool System Price,MWh,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,240,0,240</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Base,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0019;El-Future-EUR-0023,NordPool System Price,MWh,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,240,0,240</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0025;El-Future-EUR-0029,NordPool System Price,MWh,2011-11-01 00:00:00.000,2011-11-02 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0025;El-Future-EUR-0029,NordPool System Price,MWh,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0025;El-Future-EUR-0029,NordPool System Price,MWh,2011-11-03 00:00:00.000,2011-11-04 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W44-11,2011-10-31 00:00:00.000,2011-11-06 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0025;El-Future-EUR-0029,NordPool System Price,MWh,2011-11-04 00:00:00.000,2011-11-05 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0026;El-Future-EUR-0030,NordPool System Price,MWh,2011-11-07 00:00:00.000,2011-11-08 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0026;El-Future-EUR-0030,NordPool System Price,MWh,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0026;El-Future-EUR-0030,NordPool System Price,MWh,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0026;El-Future-EUR-0030,NordPool System Price,MWh,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W45-11,2011-11-07 00:00:00.000,2011-11-13 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0026;El-Future-EUR-0030,NordPool System Price,MWh,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0027;El-Future-EUR-0031,NordPool System Price,MWh,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0027;El-Future-EUR-0031,NordPool System Price,MWh,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0027;El-Future-EUR-0031,NordPool System Price,MWh,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0027;El-Future-EUR-0031,NordPool System Price,MWh,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,120,120,0</record>
+        <record>Electricity-Future-NordPool-EUR,Electricity,W46-11,2011-11-14 00:00:00.000,2011-11-20 00:00:00.000,Future,Financial,Peak,NordPool System Price,Nord Pool,CET,EUR,El-Future-EUR-0027;El-Future-EUR-0031,NordPool System Price,MWh,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,120,120,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>NordPool System Price,2011-11-01 00:00:00.000,2011-11-02 00:00:00.000,311.0342085677,329.599523943705,292.468893191696</record>
+        <record>NordPool System Price,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,317.551142485208,342.509119744552,292.593165225864</record>
+        <record>NordPool System Price,2011-11-03 00:00:00.000,2011-11-04 00:00:00.000,309.817140053518,349.215259068778,270.419021038258</record>
+        <record>NordPool System Price,2011-11-04 00:00:00.000,2011-11-05 00:00:00.000,298.209712324089,355.86708758173,240.552337066448</record>
+        <record>NordPool System Price,2011-11-05 00:00:00.000,2011-11-06 00:00:00.000,302.093368701597,0,302.093368701597</record>
+        <record>NordPool System Price,2011-11-06 00:00:00.000,2011-11-07 00:00:00.000,294.358139765818,0,294.358139765818</record>
+        <record>NordPool System Price,2011-11-07 00:00:00.000,2011-11-08 00:00:00.000,353.039495407444,389.420624810753,316.658366004134</record>
+        <record>NordPool System Price,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,353.676954999283,390.077354717445,317.276555281121</record>
+        <record>NordPool System Price,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,356.444245691066,391.427292763644,321.461198618488</record>
+        <record>NordPool System Price,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,349.44170689448,378.010685971822,320.872727817138</record>
+        <record>NordPool System Price,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,341.435840362458,368.481162246927,314.390518477989</record>
+        <record>NordPool System Price,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,323.940580276039,0,323.940580276039</record>
+        <record>NordPool System Price,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,317.981414025455,0,317.981414025455</record>
+        <record>NordPool System Price,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,370.069689470848,409.399290818167,330.74008812353</record>
+        <record>NordPool System Price,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,370.759284086997,410.111022450848,331.407545723145</record>
+        <record>NordPool System Price,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,373.739611137956,411.582776143235,335.896446132676</record>
+        <record>NordPool System Price,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,366.136353348218,397.013563088633,335.259143607802</record>
+        <record>NordPool System Price,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,357.479192525242,386.68722350176,328.271161548723</record>
+        <record>NordPool System Price,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,338.560407090602,0,338.560407090602</record>
+        <record>NordPool System Price,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,332.148120203701,0,332.148120203701</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

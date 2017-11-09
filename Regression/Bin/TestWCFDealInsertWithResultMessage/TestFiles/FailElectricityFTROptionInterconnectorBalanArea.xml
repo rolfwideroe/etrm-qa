@@ -1,0 +1,57 @@
+<TestCase>
+<TestResult>Failure</TestResult><Message>Both InterconnectorName and OriginBalanceArea/DestinationBalanceArea can not be set. Set either InterconnectorName or OriginBalanceArea/DestinationBalanceArea.</Message> 
+<TestData>
+<DealInsert>
+<MetaData>
+	<Timezone>CET</Timezone>
+</MetaData>
+<Transaction>
+<TransactionType>Automatic</TransactionType>
+<DealType>Electricity-FTROption</DealType>
+	<Portfolios>
+		<Portfolio>API Test Customer</Portfolio>
+		<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+		<BuySell>Buy</BuySell>
+	</Portfolios>
+	<ElectricityFTROption>
+		<InstrumentData>
+			<ExecutionVenue>None</ExecutionVenue>
+			<FromDate>2018-01-01</FromDate>
+			<ToDate>2018-03-31</ToDate>
+			<Physical>
+				<Interconnector>
+					<InterconnectorName>Moyle GB - IE</InterconnectorName>
+					<OriginBalanceArea AreaName="GB"/>
+					<DestinationBalanceArea AreaName="IE"/>					
+				</Interconnector>
+			</Physical>					
+			<PriceBasis>GB</PriceBasis>
+			<PriceBasisToArea>IE</PriceBasisToArea>
+		</InstrumentData>
+		<SettlementData>
+			<Quantity>100</Quantity>
+			<QuantityUnit>MW</QuantityUnit>
+			<Price>2.3</Price>
+			<Currency>EUR</Currency>
+			<CurrencySource>Viz</CurrencySource>
+			<Clearing>Electronic</Clearing>
+		</SettlementData>
+	</ElectricityFTROption>
+	<DealDetails>
+		<Status>Active</Status>
+		<Trader>DealImport</Trader>
+		<TradeDate>2017-10-07T00:00:00</TradeDate>
+	</DealDetails>
+	<ReferenceData>
+		<Comment></Comment>
+		<DealGroup></DealGroup>
+		<ExternalId>TP-FTR-Option-0001</ExternalId>
+		<ExternalSource>RegTest</ExternalSource>
+		<TicketNumber>
+		</TicketNumber>
+	</ReferenceData>
+</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>False</AssertQaTransactionDTO>
+</TestCase>

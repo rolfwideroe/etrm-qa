@@ -1,0 +1,45 @@
+<test type="EcmBatch" name="Special-Cases-AsianDandQ-ActualCF-EUR-Delta-ActualCF-EUR-Delta" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>Special-Cases-AsianDandQ-ActualCF-EUR-Delta</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<tollerance>1E-08</tollerance>
+		<reportdate>2011-11-01T00:00:00</reportdate>
+		<executeElvizBatch>True</executeElvizBatch>
+	</setup>
+	<assert>
+		<datawarehouse>
+			<query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+				<record>2010-01-01 00:00:00.000,0,PR,109,EUR,-25200,monthly,Asian,ASIC/D W47-11 30.00 - Premium,Special-Cases-AsianDandQ-EUR-0001</record>
+				<record>2011-11-01 00:00:00.000,0,TR,109,EUR,26413.1135882177,monthly,Asian,ASIC/D W47-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0001</record>
+				<record>2010-01-01 00:00:00.000,0,PR,109,EUR,-1314000,monthly,Asian,ASIC/Q YR-11 30.00 - Premium,Special-Cases-AsianDandQ-EUR-0002</record>
+				<record>2011-03-01 00:00:00.000,0,HI,109,EUR,780605.6,monthly,Asian,ASIC/Q YR-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0002</record>
+				<record>2011-06-01 00:00:00.000,0,HI,109,EUR,486399.299999999,monthly,Asian,ASIC/Q YR-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0002</record>
+				<record>2011-09-01 00:00:00.000,0,HI,109,EUR,133128.4,monthly,Asian,ASIC/Q YR-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0002</record>
+				<record>2011-12-01 00:00:00.000,0,TR,109,EUR,206959.922275463,monthly,Asian,ASIC/Q YR-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0002</record>
+				<record>2010-01-01 00:00:00.000,0,PR,109,EUR,-32760,monthly,Asian,ASIC/D W47-11 30.00 - Premium,Special-Cases-AsianDandQ-EUR-0003</record>
+				<record>2011-11-01 00:00:00.000,0,TR,109,EUR,33723.1142757882,monthly,Asian,ASIC/D W47-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0003</record>
+				<record>2010-01-01 00:00:00.000,0,PR,109,EUR,-818820,monthly,Asian,ASIC/Q 01-Jan-12 - 30-Jun-12 30.00 - Premium,Special-Cases-AsianDandQ-EUR-0004</record>
+				<record>2012-03-01 00:00:00.000,0,TR,109,EUR,378362.493607006,monthly,Asian,ASIC/Q 01-Jan-12 - 30-Jun-12 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0004</record>
+				<record>2012-06-01 00:00:00.000,0,TR,109,EUR,286637.182348424,monthly,Asian,ASIC/Q 01-Jan-12 - 30-Jun-12 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0004</record>
+				<record>2010-01-01 00:00:00.000,0,PR,109,EUR,-9000,monthly,Asian,ASIC/D W47-11 30.00 - Premium,Special-Cases-AsianDandQ-EUR-0005</record>
+				<record>2011-11-01 00:00:00.000,0,TR,109,EUR,12590.8238607126,monthly,Asian,ASIC/D W47-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0005</record>
+				<record>2010-01-01 00:00:00.000,0,PR,109,EUR,-468000,monthly,Asian,ASIC/Q YR-11 30.00 - Premium,Special-Cases-AsianDandQ-EUR-0006</record>
+				<record>2011-03-01 00:00:00.000,0,HI,109,EUR,288649.9,monthly,Asian,ASIC/Q YR-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0006</record>
+				<record>2011-06-01 00:00:00.000,0,HI,109,EUR,202171.899999999,monthly,Asian,ASIC/Q YR-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0006</record>
+				<record>2011-09-01 00:00:00.000,0,HI,109,EUR,86208.6000000003,monthly,Asian,ASIC/Q YR-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0006</record>
+				<record>2011-12-01 00:00:00.000,0,TR,109,EUR,119068.252539507,monthly,Asian,ASIC/Q YR-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0006</record>
+				<record>2010-01-01 00:00:00.000,0,PR,109,EUR,-331350,monthly,Asian,ASIC/D Q4-11 30.00 - Premium,Special-Cases-AsianDandQ-EUR-0007</record>
+				<record>2011-10-01 00:00:00.000,0,HI,109,EUR,35086.9,monthly,Asian,ASIC/D Q4-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0007</record>
+				<record>2011-11-01 00:00:00.000,0,TR,109,EUR,101604.498503705,monthly,Asian,ASIC/D Q4-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0007</record>
+				<record>2011-12-01 00:00:00.000,0,TR,109,EUR,117178.910427977,monthly,Asian,ASIC/D Q4-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0007</record>
+				<record>2010-01-01 00:00:00.000,0,PR,109,EUR,353440,monthly,Asian,ASIC/D Q4-11 30.00 - Premium,Special-Cases-AsianDandQ-EUR-0008</record>
+				<record>2011-10-01 00:00:00.000,0,HI,109,EUR,-35086.9,monthly,Asian,ASIC/D Q4-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0008</record>
+				<record>2011-11-01 00:00:00.000,0,TR,109,EUR,-101604.498503705,monthly,Asian,ASIC/D Q4-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0008</record>
+				<record>2011-12-01 00:00:00.000,0,TR,109,EUR,-117178.910427977,monthly,Asian,ASIC/D Q4-11 30.00 - Settlement,Special-Cases-AsianDandQ-EUR-0008</record>
+			</returns>
+		</datawarehouse>
+	</assert>
+</test>

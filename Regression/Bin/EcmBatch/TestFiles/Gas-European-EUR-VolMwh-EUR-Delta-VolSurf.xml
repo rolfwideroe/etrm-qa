@@ -1,0 +1,38 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-EU-ICE-TTF-EUR-VolMwh-EUR-Delta-VolSurf</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-10-27T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,5.51114526402302,monthly,European,EURC Jun12 25-MAY-12 45.00,Gas-European-EUR-0007</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-5.51114526402302,monthly,European,EURC Jun12 25-MAY-12 45.00,Gas-European-EUR-0008</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,11.022290528046,monthly,European,EURC Jun12 25-MAY-12 45.00,Gas-European-EUR-0009</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-3549.65648249521,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0010</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,3549.65648249521,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0011</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-7099.31296499042,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0012</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-42201.844930954,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0019</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,6.11929985452176,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0023</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,-6.11929985452176,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0024</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,862155.205075592,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0025</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,-862155.205075592,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0026</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,5.5050387283677,monthly,European,EURC Jun12 25-MAY-12 45.00,Gas-European-EUR-0035</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-5.5050387283677,monthly,European,EURC Jun12 25-MAY-12 45.00,Gas-European-EUR-0036</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,11.0100774567354,monthly,European,EURC Jun12 25-MAY-12 45.00,Gas-European-EUR-0037</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-3545.72334285979,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0038</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,3545.72334285979,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0039</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-7091.44668571959,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0040</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-42166.6073427081,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0047</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,6.1136134310717,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0051</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,-6.1136134310717,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0052</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,861591.900139276,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0053</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,-861591.900139276,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0054</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

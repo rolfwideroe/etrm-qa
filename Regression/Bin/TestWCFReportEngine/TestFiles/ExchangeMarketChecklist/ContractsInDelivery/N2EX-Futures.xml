@@ -1,0 +1,27 @@
+﻿<TestCaseReportEngine xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<InputData>
+		<ReportId>NasdaqClearingReport</ReportId>
+		<Settings>
+			<Setting SettingId="SettlementDate" IsNotSet="false" XmlEncodedValue="2014-01-06T00:00:00"/>
+			<Setting SettingId="FilterName" IsNotSet="false" XmlEncodedValue="El-Future-N2EX-GBP"/>
+			<Setting SettingId="SEKEURRateNegative" IsNotSet="false" XmlEncodedValue="8.943213" />
+			<Setting SettingId="SEKEURRate" IsNotSet="false" XmlEncodedValue="9.943213" />
+		</Settings>
+	</InputData>
+	<ExpectedValues>
+		<ExpectedDataTableArtifacts>
+			<ExpectedDataTableArtifact 
+		ArtifactId="CDELC"
+		Columns="PortfolioName,CompanyName,ExecutionVenueName,InstrumentName,Load,InstrumentType,Quantity,RemainingHours,SpotPrice,LastClose,SpotRefSettlement,ExpiryMarketSettlement,SettlementFromDelivery,SettlementDate,DeliveryDate,Currency,ProductName,PricebasisName,FromDate,UntilDate,Commodity,ErrorMessage"
+		ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.String,System.Double,System.Int32,System.Double,System.Double,System.Double,System.Double,System.Double,System.DateTime,System.DateTime,System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String">
+			<ExpectedRecord>Electricity-Future-N2EX-GBP,RegCustomerCompany,NordPool,EUKSW-13,Base,Future,10,2015,64.08,53.53,2532,0,2532,2014-01-06T00:00:00,2014-01-06T00:00:00,GBP,EUKBLSW-13,UK Power N2EX,2013-10-01T00:00:00,2014-04-01T00:00:00,Electricity,NULL</ExpectedRecord>
+			<ExpectedRecord>Electricity-Future-N2EX-GBP,RegCustomerCompany,NordPool,EUKQ1-14,Peak,Future,10,720,64.1,60.02,489.599999999999,0,489.599999999999,2014-01-06T00:00:00,2014-01-06T00:00:00,GBP,EUKPKQ1-14,UK Power N2EX,2014-01-01T00:00:00,2014-04-01T00:00:00,Electricity,NULL</ExpectedRecord>
+			<ExpectedRecord>Electricity-Future-N2EX-GBP,RegCustomerCompany,NordPool,EUKQ1-14,Base,Future,10,2015,64.08,52.96,2668.8,0,2668.8,2014-01-06T00:00:00,2014-01-06T00:00:00,GBP,EUKBLQ1-14,UK Power N2EX,2014-01-01T00:00:00,2014-04-01T00:00:00,Electricity,NULL</ExpectedRecord>
+			<ExpectedRecord>Electricity-Future-N2EX-GBP,RegCustomerCompany,NordPool,EUKMJan-14,Peak,Future,10,228,64.1,59.8,516,0,516,2014-01-06T00:00:00,2014-01-06T00:00:00,GBP,EUKPKMJAN-14,UK Power N2EX,2014-01-01T00:00:00,2014-02-01T00:00:00,Electricity,NULL</ExpectedRecord>
+			<ExpectedRecord>Electricity-Future-N2EX-GBP,RegCustomerCompany,NordPool,EUKMJan-14,Base,Future,10,600,64.08,52.78,2712,0,2712,2014-01-06T00:00:00,2014-01-06T00:00:00,GBP,EUKBLMJAN-14,UK Power N2EX,2014-01-01T00:00:00,2014-02-01T00:00:00,Electricity,NULL</ExpectedRecord>
+			<ExpectedRecord>Electricity-Future-N2EX-GBP,RegCustomerCompany,NordPool,EUKW02-14,Peak,Future,10,48,64.1,55.65,1014,0,1014,2014-01-06T00:00:00,2014-01-06T00:00:00,GBP,EUKPKW02-14,UK Power N2EX,2014-01-06T00:00:00,2014-01-13T00:00:00,Electricity,NULL</ExpectedRecord>
+			<ExpectedRecord>Electricity-Future-N2EX-GBP,RegCustomerCompany,NordPool,EUKW02-14,Base,Future,10,144,64.08,47.55,3967.2,0,3967.2,2014-01-06T00:00:00,2014-01-06T00:00:00,GBP,EUKBLW02-14,UK Power N2EX,2014-01-06T00:00:00,2014-01-13T00:00:00,Electricity,NULL</ExpectedRecord>
+			</ExpectedDataTableArtifact>
+		</ExpectedDataTableArtifacts>
+	</ExpectedValues>
+</TestCaseReportEngine>

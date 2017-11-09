@@ -1,0 +1,57 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="PL-Explanation-El-Floating-Index" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="CurrencySource" Value="ECB" />
+    </ElvizConfigurations>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0005,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-1552239.39507664,-1553168.10029566,-1562725.53698444,-1562725.53698444,-1562725.53698444,-1562725.53698444,-1562725.53698444,-1567339.48417606,-1567339.48417606</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0006,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-2335058.36696456,-2334342.73493228,-2327086.14301828,-2327086.14301828,-2327086.14301828,-2327086.14301828,-2327086.14301828,-2327086.14301828,-2327086.14301828</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0007,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-236493.434669358,-246442.825732937,-244123.4891807,-244123.4891807,-244123.4891807,-244123.4891807,-244123.4891807,-244123.4891807,-244123.4891807</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0008,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-153645.752353149,-152511.787737495,-146317.054245956,-146317.054245956,-146317.054245956,-146317.054245956,-146317.054245956,-146244.854368908,-146244.854368908</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-001,FLOAT 01-Jul-11 - 29-Feb-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,-2394729.91577071,-2403132.46002982,-2517362.9207602,-2517362.9207602,-2517362.9207602,-2517362.9207602,-2517362.9207602,-2528634.35662746,-2528634.35662746</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-002,FLOAT M01-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,-262735.758028123,-263420.402074433,-291053.407778564,-291053.407778564,-291053.407778564,-291053.407778564,-291053.407778564,-294426.720641611,-294426.720641611</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-003,FLOAT M01-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,0,0,0,145526.703889282,145526.703889282,145526.703889282,145526.703889282,147213.360320805,147213.360320805</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-004,FLOAT 01-Jul-11 - 29-Feb-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,-396334.835459414,-399614.724254952,-430623.88086795,-430623.88086795,-430623.88086795,-430623.88086795,-430623.88086795,-430623.88086795,-430623.88086795</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0005,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-1053557.89212932,-1004107.92904151,-1013665.36573029,-1013665.36573029,-1013665.36573029,-1013665.36573029,-1013665.36573029,-1018279.3129219,-1018279.3129219</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0006,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-1590337.64105547,-1510726.33947773,-1505361.99756364,-1505361.99756364,-1505361.99756364,-1505361.99756364,-1505361.99756364,-1505361.99756364,-1505361.99756364</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0007,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-120912.088214313,-120498.09985575,-118667.352133715,-118667.352133715,-118667.352133715,-118667.352133715,-118667.352133715,-118667.352133715,-118667.352133715</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0008,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-112429.061138364,-105351.616870565,-99156.8833790268,-99156.8833790268,-99156.8833790268,-99156.8833790268,-99156.8833790268,-99084.6835019785,-99084.6835019785</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-001,FLOAT 01-Jul-11 - 29-Feb-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,-870242.648763298,-814652.990766143,-928883.451496526,-928883.451496526,-928883.451496526,-928883.451496526,-928883.451496526,-939327.151271929,-939327.151271929</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-002,FLOAT M01-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,-262735.758028123,-263420.402074433,-291053.407778564,-291053.407778564,-291053.407778564,-291053.407778564,-291053.407778564,-294426.720641611,-294426.720641611</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-003,FLOAT M01-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,0,0,0,145526.703889282,145526.703889282,145526.703889282,145526.703889282,147213.360320805,147213.360320805</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-004,FLOAT 01-Jul-11 - 29-Feb-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,-142322.535459414,-135128.975241152,-166642.43086795,-166642.43086795,-166642.43086795,-166642.43086795,-166642.43086795,-166642.43086795,-166642.43086795</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0005,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-498681.502947323,-549060.171254155,-549060.171254155,-549060.171254155,-549060.171254155,-549060.171254155,-549060.171254155,-549060.171254155,-549060.171254155</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0006,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-744720.725909089,-823616.39545455,-821724.145454642,-821724.145454642,-821724.145454642,-821724.145454642,-821724.145454642,-821724.145454642,-821724.145454642</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0007,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-115581.346455045,-125944.725877187,-125456.137046985,-125456.137046985,-125456.137046985,-125456.137046985,-125456.137046985,-125456.137046985,-125456.137046985</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-0008,01-Sep-11 - 31-Mar-12,ICE TTF,FloatingPrice,PL-Explanation-El-Floating-Index,-41216.6912147853,-47160.1708669295,-47160.1708669295,-47160.1708669295,-47160.1708669295,-47160.1708669295,-47160.1708669295,-47160.1708669295,-47160.1708669295</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-001,FLOAT 01-Jul-11 - 29-Feb-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,-1524487.26700741,-1588479.46926368,-1588479.46926368,-1588479.46926368,-1588479.46926368,-1588479.46926368,-1588479.46926368,-1589307.20535553,-1589307.20535553</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-002,FLOAT M01-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-003,FLOAT M01-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Floating-Index-004,FLOAT 01-Jul-11 - 29-Feb-12,NordPool System Price,FloatingPrice,PL-Explanation-El-Floating-Index,-254012.3,-264485.7490138,-263981.45,-263981.45,-263981.45,-263981.45,-263981.45,-263981.45,-263981.45</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

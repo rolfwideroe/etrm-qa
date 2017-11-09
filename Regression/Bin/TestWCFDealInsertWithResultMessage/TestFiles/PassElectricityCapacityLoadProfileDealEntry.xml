@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Capacity</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityCapacity>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<LoadProfile>Peak</LoadProfile>
+				<FromDate>2010-08-27</FromDate>
+				<ToDate>2010-08-27</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="RWE"/>
+						<DestinationBalanceArea AreaName="EON"/>
+					</Interconnector>
+				</Physical>
+				<ExpiryTime>07:30:00</ExpiryTime>
+				<ExpiryOffset>1</ExpiryOffset>
+				<Priority>Firm</Priority>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>1</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>1</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				<EntryFee>0</EntryFee>
+				<EntryFeeCurrency>EUR</EntryFeeCurrency>
+				<ExitFee>0</ExitFee>
+				<ExitFeeCurrency>EUR</ExitFeeCurrency>
+			</SettlementData>
+		</ElectricityCapacity>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>Vizard</Trader>
+			<TradeDate>2010-08-27T17:11:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>PassElectricityCapacityLoadProfileDealEntry</ExternalId>
+			<ExternalSource></ExternalSource>
+			<TicketNumber></TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>False</AssertQaTransactionDTO>
+</TestCase>

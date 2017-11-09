@@ -1,0 +1,173 @@
+<TestCase>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>				
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>France</PriceBasis>
+        <PriceType>Indexed</PriceType>
+        <IndexFormulaName>TestFormula</IndexFormulaName>
+				<FromDate>2016-06-01</FromDate>
+				<ToDate>2016-06-02</ToDate>
+				<Physical>
+					<DeliveryArea AreaName='RTE' />
+				</Physical>
+        <TransactionName>Remit-SD-Fixed-Index-Physical</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<StructuredDealInformation Resolution="Hourly">
+          <TimeSeriesDetail FromDateTime="2016-06-01T00:00:00" ToDateTime="2016-06-01T01:00:00" Price="1"     Volume="2" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T01:00:00" ToDateTime="2016-06-01T02:00:00" Price="27.8"  Volume="2.2" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T02:00:00" ToDateTime="2016-06-01T03:00:00" Price="18.01" Volume="2.3" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T03:00:00" ToDateTime="2016-06-01T04:00:00" Price="4.72"  Volume="2.2" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T04:00:00" ToDateTime="2016-06-01T05:00:00" Price="14.82" Volume="2.4" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T05:00:00" ToDateTime="2016-06-01T06:00:00" Price="12.14" Volume="2.2" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T06:00:00" ToDateTime="2016-06-01T07:00:00" Price="24.88" Volume="2.1" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T07:00:00" ToDateTime="2016-06-01T08:00:00" Price="8.28"  Volume="2.5" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T08:00:00" ToDateTime="2016-06-01T09:00:00" Price="7.8"   Volume="2.4" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T09:00:00" ToDateTime="2016-06-01T10:00:00" Price="21.58" Volume="2.5" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T10:00:00" ToDateTime="2016-06-01T11:00:00" Price="25.39" Volume="2.2" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T11:00:00" ToDateTime="2016-06-01T12:00:00" Price="4.37"  Volume="2.4" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T12:00:00" ToDateTime="2016-06-01T13:00:00" Price="20.38" Volume="2.3" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T13:00:00" ToDateTime="2016-06-01T14:00:00" Price="32.04" Volume="2.4" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T14:00:00" ToDateTime="2016-06-01T15:00:00" Price="13.07" Volume="2.6" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T15:00:00" ToDateTime="2016-06-01T16:00:00" Price="27.5"  Volume="2.5" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T16:00:00" ToDateTime="2016-06-01T17:00:00" Price="20.32" Volume="2.7" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T17:00:00" ToDateTime="2016-06-01T18:00:00" Price="29.71" Volume="2.9" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T18:00:00" ToDateTime="2016-06-01T19:00:00" Price="18.49" Volume="2.8" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T19:00:00" ToDateTime="2016-06-01T20:00:00" Price="27.9"  Volume="2.8" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T20:00:00" ToDateTime="2016-06-01T21:00:00" Price="29.69" Volume="2.7" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T21:00:00" ToDateTime="2016-06-01T22:00:00" Price="30.39" Volume="2.5" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T22:00:00" ToDateTime="2016-06-01T23:00:00" Price="2.4"   Volume="2.1" />
+          <TimeSeriesDetail FromDateTime="2016-06-01T23:00:00" ToDateTime="2016-06-02T00:00:00" Price="19.03" Volume="2.0" />          
+          <TimeSeriesDetail FromDateTime="2016-06-02T00:00:00" ToDateTime="2016-06-02T01:00:00" Price="1"     Volume="2" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T01:00:00" ToDateTime="2016-06-02T02:00:00" Price="27.8"  Volume="2.2" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T02:00:00" ToDateTime="2016-06-02T03:00:00" Price="18.01" Volume="2.3" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T03:00:00" ToDateTime="2016-06-02T04:00:00" Price="4.72"  Volume="2.2" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T04:00:00" ToDateTime="2016-06-02T05:00:00" Price="14.82" Volume="2.4" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T05:00:00" ToDateTime="2016-06-02T06:00:00" Price="12.14" Volume="2.2" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T06:00:00" ToDateTime="2016-06-02T07:00:00" Price="24.88" Volume="2.1" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T07:00:00" ToDateTime="2016-06-02T08:00:00" Price="8.28"  Volume="2.5" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T08:00:00" ToDateTime="2016-06-02T09:00:00" Price="7.8"   Volume="2.4" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T09:00:00" ToDateTime="2016-06-02T10:00:00" Price="21.58" Volume="2.5" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T10:00:00" ToDateTime="2016-06-02T11:00:00" Price="25.39" Volume="2.2" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T11:00:00" ToDateTime="2016-06-02T12:00:00" Price="4.37"  Volume="2.4" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T12:00:00" ToDateTime="2016-06-02T13:00:00" Price="20.38" Volume="2.3" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T13:00:00" ToDateTime="2016-06-02T14:00:00" Price="32.04" Volume="2.4" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T14:00:00" ToDateTime="2016-06-02T15:00:00" Price="13.07" Volume="2.6" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T15:00:00" ToDateTime="2016-06-02T16:00:00" Price="27.5"  Volume="2.5" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T16:00:00" ToDateTime="2016-06-02T17:00:00" Price="20.32" Volume="2.7" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T17:00:00" ToDateTime="2016-06-02T18:00:00" Price="29.71" Volume="2.9" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T18:00:00" ToDateTime="2016-06-02T19:00:00" Price="18.49" Volume="2.8" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T19:00:00" ToDateTime="2016-06-02T20:00:00" Price="27.9"  Volume="2.8" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T20:00:00" ToDateTime="2016-06-02T21:00:00" Price="29.69" Volume="2.7" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T21:00:00" ToDateTime="2016-06-02T22:00:00" Price="30.39" Volume="2.5" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T22:00:00" ToDateTime="2016-06-02T23:00:00" Price="2.4"   Volume="2.1" />
+          <TimeSeriesDetail FromDateTime="2016-06-02T23:00:00" ToDateTime="2016-06-03T00:00:00" Price="19.03" Volume="2.0" />          
+        </StructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>NordPool</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2016-04-01T00:00:00Z</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<!--<Audited>true</Audited>-->
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>API test: ElectricitySDFixedIndexPhysical; should pass</Comment>		
+      <GroupFields>
+        <GroupField1>API Test</GroupField1>
+        <GroupField2>REMIT</GroupField2>
+      </GroupFields>
+			<ExternalId>ElectricitySDFixedIndexPhysical</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+		<CustomProperties>
+			<PropertyGroup name='Compliance'>
+				<BooleanProperty name='RemitReporting' value='true' />	
+				<StringProperty name='UTI' value='ELSDFIXINDEXPH' />
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<RegulatoryReporting>
+<REMITTable2 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.acer.europa.eu/REMIT/REMITTable2_V1.xsd">
+  <reportingEntityID>
+    <ace>T1241247G.EU</ace>
+  </reportingEntityID>
+  <TradeList>
+    <nonStandardContractReport>
+      <RecordSeqNumber>1</RecordSeqNumber>
+      <idOfMarketParticipant>
+		<ace>ACER12345.EU</ace>
+	  </idOfMarketParticipant>      <otherMarketParticipant>
+		<ace>ACER12346.EU</ace>
+	  </otherMarketParticipant>
+	  <beneficiaryIdentification>
+		<ace>ACER12345.EU</ace>
+	  </beneficiaryIdentification>
+      <tradingCapacity>A</tradingCapacity>
+      <buySellIndicator>B</buySellIndicator>
+      <contractId>ELSDFIXINDEXPH</contractId>
+      <contractDate>2016-04-01</contractDate>
+      <contractType>OT</contractType>
+      <energyCommodity>EL</energyCommodity>
+      <priceOrPriceFormula>
+        <price>
+          <value>18.81910</value>
+          <currency>EUR</currency>
+        </price>
+      </priceOrPriceFormula>
+      <estimatedNotionalAmount>
+        <value>2171.724</value>
+        <currency>EUR</currency>
+      </estimatedNotionalAmount>
+      <totalNotionalContractQuantity>
+        <value>115.4</value>
+        <unit>MWh</unit>
+      </totalNotionalContractQuantity>
+      <volumeOptionality>F</volumeOptionality>
+      <typeOfIndexPrice>F</typeOfIndexPrice>
+      <fixingIndexDetails>
+        <fixingIndex>TestFormula</fixingIndex>
+        <fixingIndexType>OT</fixingIndexType>
+        <fixingIndexSource>PEX System</fixingIndexSource>
+        <firstFixingDate>2016-06-01</firstFixingDate>
+        <lastFixingDate>2016-06-02</lastFixingDate>
+        <fixingFrequency>H</fixingFrequency>
+      </fixingIndexDetails>
+      <settlementMethod>P</settlementMethod>
+      <deliveryPointOrZone>10YFR-RTE------C</deliveryPointOrZone>
+      <deliveryStartDate>2016-06-01</deliveryStartDate>
+      <deliveryEndDate>2016-06-02</deliveryEndDate>
+      <loadType>BL</loadType>
+      <actionType>M</actionType>
+    </nonStandardContractReport>
+  </TradeList>
+</REMITTable2>
+</RegulatoryReporting>
+</TestCase>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DealInsertUpdateTestCase>
+<InsertXml>
+<![CDATA[ 
+<DealInsert>
+	<MetaData>	
+		<Timezone>CET-1</Timezone>	
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Sell</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>OMIP PTEL</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2015-12-01</FromDate>
+				<ToDate>2016-01-30</ToDate>
+				<Physical/>
+				<TransactionName>InstrumentData-Timezone</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeSeriesDetail FromDateTime="2015-12-01T00:00:00" ToDateTime="2015-12-01T01:00:00" Value="0.01114035306"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T01:00:00" ToDateTime="2015-12-01T02:00:00" Value="0.01089691258"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T02:00:00" ToDateTime="2015-12-01T03:00:00" Value="0.01092770455"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T03:00:00" ToDateTime="2015-12-01T04:00:00" Value="0.01114362745"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T04:00:00" ToDateTime="2015-12-01T05:00:00" Value="0.01143675212"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T05:00:00" ToDateTime="2015-12-01T06:00:00" Value="0.01187093680"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T06:00:00" ToDateTime="2015-12-01T07:00:00" Value="0.01404700763"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T07:00:00" ToDateTime="2015-12-01T08:00:00" Value="0.01768520979"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T08:00:00" ToDateTime="2015-12-01T09:00:00" Value="0.02214261577"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T09:00:00" ToDateTime="2015-12-01T10:00:00" Value="0.02524397786"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T10:00:00" ToDateTime="2015-12-01T11:00:00" Value="0.02592599954"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T11:00:00" ToDateTime="2015-12-01T12:00:00" Value="0.02579080003"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T12:00:00" ToDateTime="2015-12-01T13:00:00" Value="0.02500440592"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T13:00:00" ToDateTime="2015-12-01T14:00:00" Value="0.02477898413"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T14:00:00" ToDateTime="2015-12-01T15:00:00" Value="0.02477951921"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T15:00:00" ToDateTime="2015-12-01T16:00:00" Value="0.02394628267"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T16:00:00" ToDateTime="2015-12-01T17:00:00" Value="0.02332931284"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T17:00:00" ToDateTime="2015-12-01T18:00:00" Value="0.02199971494"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T18:00:00" ToDateTime="2015-12-01T19:00:00" Value="0.01893019888"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T19:00:00" ToDateTime="2015-12-01T20:00:00" Value="0.01759445188"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T20:00:00" ToDateTime="2015-12-01T21:00:00" Value="0.01647797599"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T21:00:00" ToDateTime="2015-12-01T22:00:00" Value="0.01491499412"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T22:00:00" ToDateTime="2015-12-01T23:00:00" Value="0.01318912908"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T23:00:00" ToDateTime="2015-12-02T00:00:00" Value="0.01177201905"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeSeriesDetail FromDateTime="2015-12-01T00:00:00" ToDateTime="2015-12-01T01:00:00" Value="44.261"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T01:00:00" ToDateTime="2015-12-01T02:00:00" Value="44.261"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T02:00:00" ToDateTime="2015-12-01T03:00:00" Value="37.006"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T03:00:00" ToDateTime="2015-12-01T04:00:00" Value="37.006"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T04:00:00" ToDateTime="2015-12-01T05:00:00" Value="37.006"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T05:00:00" ToDateTime="2015-12-01T06:00:00" Value="37.006"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T06:00:00" ToDateTime="2015-12-01T07:00:00" Value="44.261"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T07:00:00" ToDateTime="2015-12-01T08:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T08:00:00" ToDateTime="2015-12-01T09:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T09:00:00" ToDateTime="2015-12-01T10:00:00" Value="58.147"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T10:00:00" ToDateTime="2015-12-01T11:00:00" Value="61.048"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T11:00:00" ToDateTime="2015-12-01T12:00:00" Value="61.048"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T12:00:00" ToDateTime="2015-12-01T13:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T13:00:00" ToDateTime="2015-12-01T14:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T14:00:00" ToDateTime="2015-12-01T15:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T15:00:00" ToDateTime="2015-12-01T16:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T16:00:00" ToDateTime="2015-12-01T17:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T17:00:00" ToDateTime="2015-12-01T18:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T18:00:00" ToDateTime="2015-12-01T19:00:00" Value="58.147"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T19:00:00" ToDateTime="2015-12-01T20:00:00" Value="61.048"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T20:00:00" ToDateTime="2015-12-01T21:00:00" Value="61.048"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T21:00:00" ToDateTime="2015-12-01T22:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T22:00:00" ToDateTime="2015-12-01T23:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T23:00:00" ToDateTime="2015-12-02T00:00:00" Value="55.246"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeSeriesDetail FromDateTime="2015-12-01T00:00:00" ToDateTime="2015-12-01T01:00:00" Value="0.01114035306"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T01:00:00" ToDateTime="2015-12-01T02:00:00" Value="0.01089691258"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T02:00:00" ToDateTime="2015-12-01T03:00:00" Value="0.01092770455"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T03:00:00" ToDateTime="2015-12-01T04:00:00" Value="0.01114362745"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T04:00:00" ToDateTime="2015-12-01T05:00:00" Value="0.01143675212"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T05:00:00" ToDateTime="2015-12-01T06:00:00" Value="0.01187093680"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T06:00:00" ToDateTime="2015-12-01T07:00:00" Value="0.01404700763"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T07:00:00" ToDateTime="2015-12-01T08:00:00" Value="0.01768520979"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T08:00:00" ToDateTime="2015-12-01T09:00:00" Value="0.02214261577"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T09:00:00" ToDateTime="2015-12-01T10:00:00" Value="0.02524397786"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T10:00:00" ToDateTime="2015-12-01T11:00:00" Value="0.02592599954"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T11:00:00" ToDateTime="2015-12-01T12:00:00" Value="0.02579080003"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T12:00:00" ToDateTime="2015-12-01T13:00:00" Value="0.02500440592"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T13:00:00" ToDateTime="2015-12-01T14:00:00" Value="0.02477898413"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T14:00:00" ToDateTime="2015-12-01T15:00:00" Value="0.02477951921"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T15:00:00" ToDateTime="2015-12-01T16:00:00" Value="0.02394628267"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T16:00:00" ToDateTime="2015-12-01T17:00:00" Value="0.02332931284"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T17:00:00" ToDateTime="2015-12-01T18:00:00" Value="0.02199971494"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T18:00:00" ToDateTime="2015-12-01T19:00:00" Value="0.01893019888"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T19:00:00" ToDateTime="2015-12-01T20:00:00" Value="0.01759445188"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T20:00:00" ToDateTime="2015-12-01T21:00:00" Value="0.01647797599"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T21:00:00" ToDateTime="2015-12-01T22:00:00" Value="0.01491499412"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T22:00:00" ToDateTime="2015-12-01T23:00:00" Value="0.01318912908"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T23:00:00" ToDateTime="2015-12-02T00:00:00" Value="0.01177201905"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeSeriesDetail FromDateTime="2015-12-01T00:00:00" ToDateTime="2015-12-01T01:00:00" Value="44.261"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T01:00:00" ToDateTime="2015-12-01T02:00:00" Value="44.261"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T02:00:00" ToDateTime="2015-12-01T03:00:00" Value="37.006"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T03:00:00" ToDateTime="2015-12-01T04:00:00" Value="37.006"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T04:00:00" ToDateTime="2015-12-01T05:00:00" Value="37.006"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T05:00:00" ToDateTime="2015-12-01T06:00:00" Value="37.006"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T06:00:00" ToDateTime="2015-12-01T07:00:00" Value="44.261"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T07:00:00" ToDateTime="2015-12-01T08:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T08:00:00" ToDateTime="2015-12-01T09:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T09:00:00" ToDateTime="2015-12-01T10:00:00" Value="58.147"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T10:00:00" ToDateTime="2015-12-01T11:00:00" Value="61.048"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T11:00:00" ToDateTime="2015-12-01T12:00:00" Value="61.048"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T12:00:00" ToDateTime="2015-12-01T13:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T13:00:00" ToDateTime="2015-12-01T14:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T14:00:00" ToDateTime="2015-12-01T15:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T15:00:00" ToDateTime="2015-12-01T16:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T16:00:00" ToDateTime="2015-12-01T17:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T17:00:00" ToDateTime="2015-12-01T18:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T18:00:00" ToDateTime="2015-12-01T19:00:00" Value="58.147"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T19:00:00" ToDateTime="2015-12-01T20:00:00" Value="61.048"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T20:00:00" ToDateTime="2015-12-01T21:00:00" Value="61.048"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T21:00:00" ToDateTime="2015-12-01T22:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T22:00:00" ToDateTime="2015-12-01T23:00:00" Value="55.246"/>
+						<TimeSeriesDetail FromDateTime="2015-12-01T23:00:00" ToDateTime="2015-12-02T00:00:00" Value="55.246"/>
+					</TimeSeries>	
+		</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>Vizard</Trader>
+			<TradeDate>2015-11-16T00:00:00+00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<ExternalId>PassElectricityFSD_DefaultVersionExtractCET-1</ExternalId>
+			<ExternalSource>XML</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>   
+]]>
+</InsertXml>
+<UpdateXml>
+<![CDATA[ 
+		<DealInsert>
+		<MetaData>
+			<Timezone>CET-1</Timezone>	
+		</MetaData>
+		<TransactionPart>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<!--Don't need to update. Test should check correct effective date when timezone cet-1 -->				
+				</FlexibleStructuredDealInformation>
+			</SettlementData>
+			<ReferenceData>
+				<ExternalId>PassElectricityFSD_DefaultVersionExtractCET-1</ExternalId>
+			</ReferenceData>
+		</TransactionPart>
+	</DealInsert>
+	]]>
+</UpdateXml>
+<ReportDate Value="2015-11-27" />
+<ExpectedResult ExpectedType="Versions">
+		<ExpectedVersions ExternalId="PassElectricityFSD_DefaultVersionExtractCET-1">	
+				<ExpectedVersion IsLatestVersion="true">
+					<EffectiveDate>2015-11-16T00:00:00</EffectiveDate>
+					<ExpectedVersionDate>2015-11-16T00:00:00</ExpectedVersionDate>
+				</ExpectedVersion>
+		</ExpectedVersions>
+</ExpectedResult>			
+</DealInsertUpdateTestCase>

@@ -1,0 +1,27 @@
+<test type="EcmBatch" name="Gas-IndOption-EUR-ActualCF-NOK-MtM" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>Gas-IndOption-EUR-ActualCF-NOK-MtM</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<reportdate>2011-11-14</reportdate>
+    <tollerance>0.00000001</tollerance>
+    <executeElvizBatch>True</executeElvizBatch>
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="CurrencySource" Value="ECB"/>
+    </ElvizConfigurations>
+	</setup>
+	<assert>
+		<datawarehouse>
+		<query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+				<record>2011-09-01 00:00:00.000,0,PR,116,NOK,-19348817.9689703,monthly,Indexed Option,Indexed Option C GAS-11 - Premium,Gas-IndexedOption-001</record>
+				<record>2011-11-01 00:00:00.000,0,HI,116,NOK,284651.4842448,monthly,Indexed Option,Indexed Option C GAS-11 - Settlement,Gas-IndexedOption-001</record>
+				<record>2011-09-01 00:00:00.000,0,PR,116,NOK,1042207.99364477,monthly,Indexed Option,Indexed Option C Q4-12 - Premium,Gas-IndexedOption-002</record>
+				<record>2011-11-01 00:00:00.000,0,HI,116,NOK,-1694493.74432676,monthly,Indexed Option,Indexed Option C Q4-12 - Settlement,Gas-IndexedOption-002</record>
+				<record>2011-09-01 00:00:00.000,0,PR,116,NOK,-19348817.9689703,monthly,Indexed Option,Indexed Option P GAS-11 - Premium,Gas-IndexedOption-003</record>
+				<record>2011-11-01 00:00:00.000,0,HI,116,NOK,3886436.90306431,monthly,Indexed Option,Indexed Option P GAS-11 - Settlement,Gas-IndexedOption-003</record>
+			</returns>
+		</datawarehouse>		
+	</assert>
+</test>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Capacity Structured Deal does not support negative volumes.</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-CapacityStructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasCapacityStructuredDeal>
+			<InstrumentData>				
+				<FromDate>2009-09-11</FromDate>
+				<ToDate>2009-09-13</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="NCG"/>
+						<DestinationBalanceArea AreaName="PEG_N"/>
+					</Interconnector>
+				</Physical>
+				<Priority>Interruptible</Priority>
+				<ExpiryOffset>1</ExpiryOffset>
+				<ExpiryTime>07:30:00</ExpiryTime>
+			</InstrumentData>
+			<SettlementData>
+				<DailyInformation>
+					<TimeSeriesDetail DateTime="2009-09-11T00:00:00" Volume="1"/>
+					<TimeSeriesDetail DateTime="2009-09-12T00:00:00" Volume="-2"/>
+					<TimeSeriesDetail DateTime="2009-09-13T00:00:00" Volume="3"/>
+				</DailyInformation>
+				<Price>100</Price>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<BrokerTradingFee>4</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				<EntryFee>123</EntryFee>
+				<EntryFeeCurrency>EUR</EntryFeeCurrency>
+				<ExitFee>123</ExitFee>
+				<ExitFeeCurrency>EUR</ExitFeeCurrency>
+			</SettlementData>
+		</GasCapacityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2008-10-03T12:13:06</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>FailGasCapacityStructuredDealNegativeVolumes; should fail because of negative valumes present</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailGasCapacityStructuredDealNegativeVolumes</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

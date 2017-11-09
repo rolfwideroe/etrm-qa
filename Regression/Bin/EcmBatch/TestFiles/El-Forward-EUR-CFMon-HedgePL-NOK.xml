@@ -1,0 +1,1367 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-Forward-EUR-CFMon-HedgePL-NOK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-14982.743865396,monthly,Forward,D0106-10,El-Forward-EUR-0001</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-14982.743865396,monthly,Forward,D0106-10,El-Forward-EUR-0002</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-19722.941986582,monthly,Forward,D0111-11,El-Forward-EUR-0003</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-19722.941986582,monthly,Forward,D0111-11,El-Forward-EUR-0004</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-13951.1823827041,monthly,Forward,D0405-12,El-Forward-EUR-0005</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-13951.1823827041,monthly,Forward,D0405-12,El-Forward-EUR-0006</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,173819.657118315,monthly,Forward,W12-11,El-Forward-EUR-0007</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,173819.657118315,monthly,Forward,W12-11,El-Forward-EUR-0008</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-20629.0384322835,monthly,Forward,W44-11,El-Forward-EUR-0009</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-123774.230593701,monthly,Forward,W44-11,El-Forward-EUR-0009</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-20629.0384322835,monthly,Forward,W44-11,El-Forward-EUR-0010</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-123774.230593701,monthly,Forward,W44-11,El-Forward-EUR-0010</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-3736.27742004516,monthly,Forward,W01-13,El-Forward-EUR-0011</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-3736.27742004516,monthly,Forward,W01-13,El-Forward-EUR-0012</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,150533.821119078,monthly,Forward,M01-10,El-Forward-EUR-0013</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,150533.821119078,monthly,Forward,M01-10,El-Forward-EUR-0014</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-357543.859168587,monthly,Forward,M11-11,El-Forward-EUR-0015</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-357543.859168587,monthly,Forward,M11-11,El-Forward-EUR-0016</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-587202.642159167,monthly,Forward,M06-12,El-Forward-EUR-0017</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-587202.642159167,monthly,Forward,M06-12,El-Forward-EUR-0018</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-64313.3350971519,monthly,Forward,M10-10,El-Forward-EUR-0019</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-64313.3350971519,monthly,Forward,M10-10,El-Forward-EUR-0020</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-646504.696382392,monthly,Forward,Q4-11,El-Forward-EUR-0021</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-624809.907913185,monthly,Forward,Q4-11,El-Forward-EUR-0021</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-645636.904843624,monthly,Forward,Q4-11,El-Forward-EUR-0021</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-646504.696382392,monthly,Forward,Q4-11,El-Forward-EUR-0022</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-624809.907913185,monthly,Forward,Q4-11,El-Forward-EUR-0022</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-645636.904843624,monthly,Forward,Q4-11,El-Forward-EUR-0022</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-543538.721086263,monthly,Forward,Q2-12,El-Forward-EUR-0023</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-561656.678455805,monthly,Forward,Q2-12,El-Forward-EUR-0023</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-543538.721086263,monthly,Forward,Q2-12,El-Forward-EUR-0023</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-543538.721086263,monthly,Forward,Q2-12,El-Forward-EUR-0024</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-561656.678455805,monthly,Forward,Q2-12,El-Forward-EUR-0024</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-543538.721086263,monthly,Forward,Q2-12,El-Forward-EUR-0024</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,131900.640876764,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,119136.0627274,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,131723.355069134,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,127645.781493643,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,131900.640876764,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,127645.781493643,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,131900.640876764,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,131900.640876764,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,127645.781493643,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,132077.926684394,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,127645.781493643,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,131900.640876764,monthly,Forward,FWYR-10,El-Forward-EUR-0025</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,131900.640876764,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,119136.0627274,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,131723.355069134,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,127645.781493643,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,131900.640876764,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,127645.781493643,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,131900.640876764,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,131900.640876764,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,127645.781493643,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,132077.926684394,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,127645.781493643,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,131900.640876764,monthly,Forward,FWYR-10,El-Forward-EUR-0026</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-136831.0706332,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-123589.35412031,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-136647.157903855,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-132417.165128903,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-136831.0706332,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-132417.165128903,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-136831.0706332,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-136831.0706332,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-132417.165128903,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-137014.983362546,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-132417.165128903,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-136831.0706332,monthly,Forward,FWYR-11,El-Forward-EUR-0027</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-136831.0706332,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-123589.35412031,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-136647.157903855,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-132417.165128903,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-136831.0706332,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-132417.165128903,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-136831.0706332,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-136831.0706332,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-132417.165128903,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-137014.983362546,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-132417.165128903,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-136831.0706332,monthly,Forward,FWYR-11,El-Forward-EUR-0028</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-406315.72174295,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-380101.804211147,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-405769.598461038,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-393208.762977049,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-406315.72174295,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-393208.762977049,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-406315.72174295,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-406315.72174295,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-393208.762977049,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-406861.845024863,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-393208.762977049,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-406315.72174295,monthly,Forward,FWYR-12,El-Forward-EUR-0029</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-406315.72174295,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-380101.804211147,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-405769.598461038,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-393208.762977049,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-406315.72174295,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-393208.762977049,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-406315.72174295,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-406315.72174295,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-393208.762977049,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-406861.845024863,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-393208.762977049,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-406315.72174295,monthly,Forward,FWYR-12,El-Forward-EUR-0030</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-135690.846113713,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0031</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-233689.790529172,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0031</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-233689.790529172,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0031</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-226151.410189521,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0031</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-234003.889709991,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0031</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-75383.8033965071,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0031</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-135690.846113713,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0032</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-233689.790529172,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0032</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-233689.790529172,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0032</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-226151.410189521,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0032</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-234003.889709991,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0032</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-75383.8033965071,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0032</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-905606.788230401,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0033</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-876393.66602942,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0033</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-906824.001655442,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0033</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-788754.299426478,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0033</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-905606.788230401,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0034</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-876393.66602942,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0034</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-906824.001655442,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0034</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-788754.299426478,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0034</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-27718.6858212261,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-429639.630229005,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-401920.944407779,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-429062.157607729,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-415780.287318392,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-429639.630229005,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-415780.287318392,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-429639.630229005,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-429639.630229005,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-415780.287318392,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-430217.102850281,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-415780.287318392,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0035</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-27718.6858212261,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-429639.630229005,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-401920.944407779,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-429062.157607729,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-415780.287318392,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-429639.630229005,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-415780.287318392,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-429639.630229005,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-429639.630229005,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-415780.287318392,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-430217.102850281,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-415780.287318392,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0036</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-901.567093637364,monthly,Forward,D0106-10,El-Forward-EUR-0037</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-901.567093637364,monthly,Forward,D0106-10,El-Forward-EUR-0038</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-7630.78952449757,monthly,Forward,D0111-11,El-Forward-EUR-0039</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-7630.78952449757,monthly,Forward,D0111-11,El-Forward-EUR-0040</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-2021.46229877415,monthly,Forward,D0405-12,El-Forward-EUR-0041</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-2021.46229877415,monthly,Forward,D0405-12,El-Forward-EUR-0042</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,67236.4572718823,monthly,Forward,W12-11,El-Forward-EUR-0043</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,67236.4572718823,monthly,Forward,W12-11,El-Forward-EUR-0044</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-6028.06663907979,monthly,Forward,W44-11,El-Forward-EUR-0045</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-24112.2665563192,monthly,Forward,W44-11,El-Forward-EUR-0045</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-6028.06663907979,monthly,Forward,W44-11,El-Forward-EUR-0046</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-24112.2665563192,monthly,Forward,W44-11,El-Forward-EUR-0046</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-1500.61799781267,monthly,Forward,W01-13,El-Forward-EUR-0047</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-1500.61799781267,monthly,Forward,W01-13,El-Forward-EUR-0048</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,297470.668369726,monthly,Forward,M01-10,El-Forward-EUR-0049</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,297470.668369726,monthly,Forward,M01-10,El-Forward-EUR-0050</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-15119.5342728132,monthly,Forward,M11-11,El-Forward-EUR-0051</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-15119.5342728132,monthly,Forward,M11-11,El-Forward-EUR-0052</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-114649.313577238,monthly,Forward,M06-12,El-Forward-EUR-0053</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-114649.313577238,monthly,Forward,M06-12,El-Forward-EUR-0054</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,30541.7471102301,monthly,Forward,M10-10,El-Forward-EUR-0055</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,30541.7471102301,monthly,Forward,M10-10,El-Forward-EUR-0056</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-103866.968095688,monthly,Forward,Q4-11,El-Forward-EUR-0057</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-108813.014195483,monthly,Forward,Q4-11,El-Forward-EUR-0057</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-108813.014195483,monthly,Forward,Q4-11,El-Forward-EUR-0057</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-103866.968095688,monthly,Forward,Q4-11,El-Forward-EUR-0058</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-108813.014195483,monthly,Forward,Q4-11,El-Forward-EUR-0058</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-108813.014195483,monthly,Forward,Q4-11,El-Forward-EUR-0058</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-88922.2602645753,monthly,Forward,Q2-12,El-Forward-EUR-0059</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-97391.0469564396,monthly,Forward,Q2-12,El-Forward-EUR-0059</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-88922.2602645753,monthly,Forward,Q2-12,El-Forward-EUR-0059</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-88922.2602645753,monthly,Forward,Q2-12,El-Forward-EUR-0060</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-97391.0469564396,monthly,Forward,Q2-12,El-Forward-EUR-0060</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-88922.2602645753,monthly,Forward,Q2-12,El-Forward-EUR-0060</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,158923.661976705,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,151355.868549243,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,174059.24883163,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,158923.661976705,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,158923.661976705,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,174059.24883163,monthly,Forward,FWYR-10,El-Forward-EUR-0061</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,158923.661976705,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,151355.868549243,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,174059.24883163,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,158923.661976705,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,158923.661976705,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,166491.455404168,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,174059.24883163,monthly,Forward,FWYR-10,El-Forward-EUR-0062</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,30977.6226365107,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,29502.4977490578,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,33927.8724114165,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,30977.6226365107,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,32452.7475239636,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,32452.7475239636,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,30977.6226365107,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,33927.8724114165,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,32452.7475239636,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,30977.6226365107,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,32452.7475239636,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,32452.7475239636,monthly,Forward,FWYR-11,El-Forward-EUR-0063</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,30977.6226365107,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,29502.4977490578,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,33927.8724114165,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,30977.6226365107,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,32452.7475239636,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,32452.7475239636,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,30977.6226365107,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,33927.8724114165,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,32452.7475239636,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,30977.6226365107,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,32452.7475239636,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,32452.7475239636,monthly,Forward,FWYR-11,El-Forward-EUR-0064</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-57200.2034767025,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-54600.1942277615,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-57200.2034767025,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-54600.1942277615,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-59800.2127256435,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-54600.1942277615,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-57200.2034767025,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-59800.2127256435,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-52000.1849788205,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-59800.2127256435,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-57200.2034767025,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-54600.1942277615,monthly,Forward,FWYR-12,El-Forward-EUR-0065</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-57200.2034767025,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-54600.1942277615,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-57200.2034767025,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-54600.1942277615,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-59800.2127256435,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-54600.1942277615,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-57200.2034767025,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-59800.2127256435,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-52000.1849788205,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-59800.2127256435,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-57200.2034767025,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-54600.1942277615,monthly,Forward,FWYR-12,El-Forward-EUR-0066</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-4432.61881680836,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0067</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-7501.3549207526,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0067</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-7501.3549207526,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0067</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-7501.3549207526,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0067</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-7160.38424253658,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0067</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-2727.76542572822,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0067</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-4432.61881680836,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0068</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-7501.3549207526,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0068</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-7501.3549207526,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0068</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-7501.3549207526,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0068</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-7160.38424253658,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0068</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-2727.76542572822,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0068</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-229671.689595266,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0069</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-219685.963960689,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0069</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-209700.238326112,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0069</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-189728.787056959,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0069</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-229671.689595266,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0070</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-219685.963960689,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0070</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-209700.238326112,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0070</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-189728.787056959,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0070</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-2595.14445996852,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-57093.1781193074,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-54498.0336593389,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-57093.1781193074,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-54498.0336593389,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-59688.3225792759,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-54498.0336593389,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-57093.1781193074,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-59688.3225792759,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-51902.8891993704,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-59688.3225792759,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-57093.1781193074,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0071</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-2595.14445996852,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-57093.1781193074,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-54498.0336593389,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-57093.1781193074,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-54498.0336593389,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-59688.3225792759,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-54498.0336593389,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-57093.1781193074,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-59688.3225792759,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-51902.8891993704,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-59688.3225792759,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-57093.1781193074,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0072</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-14085.0494826419,monthly,Forward,D0106-10,El-Forward-EUR-0073</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-14085.0494826419,monthly,Forward,D0106-10,El-Forward-EUR-0074</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-12095.2506307911,monthly,Forward,D0111-11,El-Forward-EUR-0075</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-12095.2506307911,monthly,Forward,D0111-11,El-Forward-EUR-0076</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-11929.7200839321,monthly,Forward,D0405-12,El-Forward-EUR-0077</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-11929.7200839321,monthly,Forward,D0405-12,El-Forward-EUR-0078</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,106590.170726023,monthly,Forward,W12-11,El-Forward-EUR-0079</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,106590.170726023,monthly,Forward,W12-11,El-Forward-EUR-0080</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-12695.9678191958,monthly,Forward,W44-11,El-Forward-EUR-0081</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-101567.742553566,monthly,Forward,W44-11,El-Forward-EUR-0081</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-12695.9678191958,monthly,Forward,W44-11,El-Forward-EUR-0082</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-101567.742553566,monthly,Forward,W44-11,El-Forward-EUR-0082</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-2072.31688347035,monthly,Forward,W01-13,El-Forward-EUR-0083</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-2072.31688347035,monthly,Forward,W01-13,El-Forward-EUR-0084</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-146922.130949292,monthly,Forward,M01-10,El-Forward-EUR-0085</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-146922.130949292,monthly,Forward,M01-10,El-Forward-EUR-0086</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-342427.423064479,monthly,Forward,M11-11,El-Forward-EUR-0087</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-342427.423064479,monthly,Forward,M11-11,El-Forward-EUR-0088</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-472553.32858192,monthly,Forward,M06-12,El-Forward-EUR-0089</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-472553.32858192,monthly,Forward,M06-12,El-Forward-EUR-0090</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-94845.0131590844,monthly,Forward,M10-10,El-Forward-EUR-0091</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-94845.0131590844,monthly,Forward,M10-10,El-Forward-EUR-0092</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-550434.819222264,monthly,Forward,Q4-11,El-Forward-EUR-0093</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-509124.295264407,monthly,Forward,Q4-11,El-Forward-EUR-0093</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-535920.310804639,monthly,Forward,Q4-11,El-Forward-EUR-0093</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-550434.819222264,monthly,Forward,Q4-11,El-Forward-EUR-0094</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-509124.295264407,monthly,Forward,Q4-11,El-Forward-EUR-0094</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-535920.310804639,monthly,Forward,Q4-11,El-Forward-EUR-0094</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-457832.851047573,monthly,Forward,Q2-12,El-Forward-EUR-0095</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-457832.851047573,monthly,Forward,Q2-12,El-Forward-EUR-0095</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-457832.851047573,monthly,Forward,Q2-12,El-Forward-EUR-0095</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-457832.851047573,monthly,Forward,Q2-12,El-Forward-EUR-0096</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-457832.851047573,monthly,Forward,Q2-12,El-Forward-EUR-0096</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-457832.851047573,monthly,Forward,Q2-12,El-Forward-EUR-0096</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-36896.5403290162,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,-32396.9622401118,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,-35021.716125306,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,-34196.7934756736,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,-36896.5403290162,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-34196.7934756736,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-35996.6247112353,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-35996.6247112353,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-34196.7934756736,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-36971.5332971646,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-34196.7934756736,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,-35096.7090934544,monthly,Forward,FWYR-10,El-Forward-EUR-0097</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-36896.5403290162,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,-32396.9622401118,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,-35021.716125306,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,-34196.7934756736,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,-36896.5403290162,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-34196.7934756736,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-35996.6247112353,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-35996.6247112353,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-34196.7934756736,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-36971.5332971646,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-34196.7934756736,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,-35096.7090934544,monthly,Forward,FWYR-10,El-Forward-EUR-0098</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-173991.568840825,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-152773.084835846,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-165150.533838751,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-165504.175238834,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-169747.872039829,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-161260.478437838,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-173991.568840825,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-165504.175238834,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-161260.478437838,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-174345.210240908,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-161260.478437838,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-169747.872039829,monthly,Forward,FWYR-11,El-Forward-EUR-0099</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-173991.568840825,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-152773.084835846,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-165150.533838751,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-165504.175238834,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-169747.872039829,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-161260.478437838,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-173991.568840825,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-165504.175238834,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-161260.478437838,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-174345.210240908,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-161260.478437838,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-169747.872039829,monthly,Forward,FWYR-11,El-Forward-EUR-0100</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-349770.233065512,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-323537.465585599,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-349041.545079959,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-341025.977238875,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-341025.977238875,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-341025.977238875,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-349770.233065512,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-341025.977238875,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-349770.233065513,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-341754.665224428,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-332281.721412237,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-358514.48889215,monthly,Forward,FWYR-12,El-Forward-EUR-0101</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-349770.233065512,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-323537.465585599,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-349041.545079959,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-341025.977238875,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-341025.977238875,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-341025.977238875,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-349770.233065512,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-341025.977238875,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-349770.233065513,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-341754.665224428,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-332281.721412237,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-358514.48889215,monthly,Forward,FWYR-12,El-Forward-EUR-0102</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-130560.346498232,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0103</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-227061.472170838,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0103</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-227061.472170838,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0103</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-215708.398562296,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0103</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-233211.053708799,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0103</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-68118.4416512516,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0103</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-130560.346498232,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0104</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-227061.472170838,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0104</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-227061.472170838,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0104</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-215708.398562296,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0104</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-233211.053708799,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0104</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-68118.4416512516,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0104</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-669704.684445328,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0105</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-652532.769459551,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0105</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-705479.507332365,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0105</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-601017.024502217,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0105</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-669704.684445328,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0106</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-652532.769459551,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0106</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-705479.507332365,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0106</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-601017.024502217,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0106</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-28026.5732980892,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-373687.643974523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-345661.070676434,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-372909.128049576,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-364345.45287516,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-364345.45287516,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-364345.45287516,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-373687.643974523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-364345.45287516,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-373687.643974523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-365123.968800107,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-355003.261775797,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0107</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-28026.5732980892,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-373687.643974523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-345661.070676434,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-372909.128049576,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-364345.45287516,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-364345.45287516,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-364345.45287516,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-373687.643974523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-364345.45287516,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-373687.643974523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-365123.968800107,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-355003.261775797,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0108</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-6737.74239480353,monthly,Forward,D0106-10,El-Forward-EUR-0109</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-6737.74239480353,monthly,Forward,D0106-10,El-Forward-EUR-0110</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-9841.33289669774,monthly,Forward,D0111-11,El-Forward-EUR-0111</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-9841.33289669774,monthly,Forward,D0111-11,El-Forward-EUR-0112</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-6898.11829632724,monthly,Forward,D0405-12,El-Forward-EUR-0113</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-6898.11829632724,monthly,Forward,D0405-12,El-Forward-EUR-0114</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,86332.0200953662,monthly,Forward,W12-11,El-Forward-EUR-0115</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,86332.0200953662,monthly,Forward,W12-11,El-Forward-EUR-0116</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-10319.5099553286,monthly,Forward,W44-11,El-Forward-EUR-0117</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-61917.0597319716,monthly,Forward,W44-11,El-Forward-EUR-0117</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-10319.5099553286,monthly,Forward,W44-11,El-Forward-EUR-0118</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-61917.0597319716,monthly,Forward,W44-11,El-Forward-EUR-0118</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-1867.34864942248,monthly,Forward,W01-13,El-Forward-EUR-0119</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-1867.34864942248,monthly,Forward,W01-13,El-Forward-EUR-0120</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,74024.5449081686,monthly,Forward,M01-10,El-Forward-EUR-0121</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,74024.5449081686,monthly,Forward,M01-10,El-Forward-EUR-0122</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-179478.447897718,monthly,Forward,M11-11,El-Forward-EUR-0123</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-179478.447897718,monthly,Forward,M11-11,El-Forward-EUR-0124</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-292188.992390587,monthly,Forward,M06-12,El-Forward-EUR-0125</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-292188.992390587,monthly,Forward,M06-12,El-Forward-EUR-0126</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-31625.3316153838,monthly,Forward,M10-10,El-Forward-EUR-0127</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-31625.3316153838,monthly,Forward,M10-10,El-Forward-EUR-0128</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-324182.687890999,monthly,Forward,Q4-11,El-Forward-EUR-0129</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-312884.095551634,monthly,Forward,Q4-11,El-Forward-EUR-0129</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-323313.565403355,monthly,Forward,Q4-11,El-Forward-EUR-0129</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-324182.687890999,monthly,Forward,Q4-11,El-Forward-EUR-0130</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-312884.095551634,monthly,Forward,Q4-11,El-Forward-EUR-0130</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-323313.565403355,monthly,Forward,Q4-11,El-Forward-EUR-0130</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-269374.19653981,monthly,Forward,Q2-12,El-Forward-EUR-0131</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-278353.336424471,monthly,Forward,Q2-12,El-Forward-EUR-0131</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-269374.19653981,monthly,Forward,Q2-12,El-Forward-EUR-0131</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-269374.19653981,monthly,Forward,Q2-12,El-Forward-EUR-0132</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-278353.336424471,monthly,Forward,Q2-12,El-Forward-EUR-0132</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-269374.19653981,monthly,Forward,Q2-12,El-Forward-EUR-0132</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,67307.4902166002,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,60793.8621311228,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,67126.5561031147,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,65136.2808547744,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,67307.4902166002,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,65136.2808547744,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,67307.4902166002,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,67307.4902166002,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,65136.2808547744,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,67488.4243300857,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,65136.2808547744,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,67307.4902166002,monthly,Forward,FWYR-10,El-Forward-EUR-0133</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,67307.4902166002,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,60793.8621311228,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,67126.5561031147,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,65136.2808547744,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,67307.4902166002,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,65136.2808547744,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,67307.4902166002,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,67307.4902166002,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,65136.2808547744,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,67488.4243300857,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,65136.2808547744,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,67307.4902166002,monthly,Forward,FWYR-10,El-Forward-EUR-0134</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-67997.1547999737,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-61416.7849806214,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-67814.3667494362,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-65803.698193523,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-67997.1547999737,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-65803.698193523,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-67997.1547999737,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-67997.1547999737,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-65803.698193523,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-68179.9428505113,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-65803.698193523,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-67997.1547999737,monthly,Forward,FWYR-11,El-Forward-EUR-0135</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-67997.1547999737,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-61416.7849806214,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-67814.3667494362,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-65803.698193523,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-67997.1547999737,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-65803.698193523,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-67997.1547999737,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-67997.1547999737,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-65803.698193523,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-68179.9428505113,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-65803.698193523,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-67997.1547999737,monthly,Forward,FWYR-11,El-Forward-EUR-0136</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-201392.29592476,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-188399.244574776,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-200850.918785178,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-194895.770249768,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-201392.29592476,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-194895.770249768,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-201392.29592476,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-201392.29592476,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-194895.770249768,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-201933.673064343,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-194895.770249768,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-201392.29592476,monthly,Forward,FWYR-12,El-Forward-EUR-0137</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-201392.29592476,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-188399.244574776,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-200850.918785178,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-194895.770249768,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-201392.29592476,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-194895.770249768,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-201392.29592476,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-201392.29592476,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-194895.770249768,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-201933.673064343,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-194895.770249768,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-201392.29592476,monthly,Forward,FWYR-12,El-Forward-EUR-0138</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-66726.0130438876,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0139</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-114917.022464473,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0139</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-114917.022464473,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0139</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-111210.021739813,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0139</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-115225.939191528,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0139</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-37070.0072466042,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0139</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-66726.0130438876,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0140</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-114917.022464473,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0140</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-114917.022464473,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0140</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-111210.021739813,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0140</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-115225.939191528,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0140</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-37070.0072466042,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0140</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-452552.32974313,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0141</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-437953.867493352,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0141</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-453768.868263945,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0141</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-394158.480744017,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0141</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-452552.32974313,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0142</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-437953.867493352,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0142</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-453768.868263945,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0142</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-394158.480744017,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0142</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-13735.2509125375,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-212896.389144331,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-199161.138231793,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-212324.087022975,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-206028.763688062,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-212896.389144331,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-206028.763688062,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-212896.389144331,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-212896.389144331,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-206028.763688062,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-213468.691265686,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-206028.763688062,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0143</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-13735.2509125375,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-212896.389144331,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-199161.138231793,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-212324.087022975,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-206028.763688062,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-212896.389144331,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-206028.763688062,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-212896.389144331,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-212896.389144331,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-206028.763688062,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-213468.691265686,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-206028.763688062,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0144</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-903.116177990691,monthly,Forward,D0106-10,El-Forward-EUR-0145</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-903.116177990691,monthly,Forward,D0106-10,El-Forward-EUR-0146</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-7633.88769320423,monthly,Forward,D0111-11,El-Forward-EUR-0147</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-7633.88769320423,monthly,Forward,D0111-11,El-Forward-EUR-0148</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-2021.46229877199,monthly,Forward,D0405-12,El-Forward-EUR-0149</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-2021.46229877199,monthly,Forward,D0405-12,El-Forward-EUR-0150</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,78491.3296409925,monthly,Forward,W12-11,El-Forward-EUR-0151</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,78491.3296409925,monthly,Forward,W12-11,El-Forward-EUR-0152</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-17044.6072496084,monthly,Forward,W44-11,El-Forward-EUR-0153</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-34089.2144992169,monthly,Forward,W44-11,El-Forward-EUR-0153</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-17044.6072496084,monthly,Forward,W44-11,El-Forward-EUR-0154</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-34089.2144992169,monthly,Forward,W44-11,El-Forward-EUR-0154</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-3655.60294411044,monthly,Forward,W01-13,El-Forward-EUR-0155</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-3655.60294411044,monthly,Forward,W01-13,El-Forward-EUR-0156</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,167149.299892882,monthly,Forward,M01-10,El-Forward-EUR-0157</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,167149.299892882,monthly,Forward,M01-10,El-Forward-EUR-0158</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-100780.661436616,monthly,Forward,M11-11,El-Forward-EUR-0159</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-100780.661436616,monthly,Forward,M11-11,El-Forward-EUR-0160</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-206333.884855633,monthly,Forward,M06-12,El-Forward-EUR-0161</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-206333.884855633,monthly,Forward,M06-12,El-Forward-EUR-0162</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-1027.04292625701,monthly,Forward,M10-10,El-Forward-EUR-0163</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-1027.04292625701,monthly,Forward,M10-10,El-Forward-EUR-0164</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-237435.365053199,monthly,Forward,Q4-11,El-Forward-EUR-0165</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-227937.950451071,monthly,Forward,Q4-11,El-Forward-EUR-0165</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-219171.106202953,monthly,Forward,Q4-11,El-Forward-EUR-0165</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-237435.365053199,monthly,Forward,Q4-11,El-Forward-EUR-0166</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-227937.950451071,monthly,Forward,Q4-11,El-Forward-EUR-0166</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-219171.106202953,monthly,Forward,Q4-11,El-Forward-EUR-0166</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-203402.92178472,monthly,Forward,Q2-12,El-Forward-EUR-0167</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-195869.480237138,monthly,Forward,Q2-12,El-Forward-EUR-0167</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-188336.038689556,monthly,Forward,Q2-12,El-Forward-EUR-0167</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-203402.92178472,monthly,Forward,Q2-12,El-Forward-EUR-0168</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-195869.480237138,monthly,Forward,Q2-12,El-Forward-EUR-0168</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-188336.038689556,monthly,Forward,Q2-12,El-Forward-EUR-0168</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,108182.691305636,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,99860.9458205873,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,116157.697395475,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,104021.818563112,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,112343.564048161,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,108182.691305636,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,104021.818563112,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,116504.436790685,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,104021.818563112,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,108529.430700847,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,112343.564048161,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,108182.691305636,monthly,Forward,FWYR-10,El-Forward-EUR-0169</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,108182.691305636,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,99860.9458205873,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,116157.697395475,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,104021.818563112,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,112343.564048161,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,108182.691305636,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,104021.818563112,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,116504.436790685,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,104021.818563112,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,108529.430700847,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,112343.564048161,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,108182.691305636,monthly,Forward,FWYR-10,El-Forward-EUR-0170</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-26852.2453404149,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-23868.6625248132,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-25774.8404347809,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-24863.1901300138,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-27846.7729456154,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-24863.1901300138,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-25857.7177352143,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-27846.7729456154,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-24863.1901300138,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-26935.1226408482,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-25857.7177352143,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-24863.1901300138,monthly,Forward,FWYR-11,El-Forward-EUR-0171</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-26852.2453404149,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-23868.6625248132,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-25774.8404347809,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-24863.1901300138,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-27846.7729456154,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-24863.1901300138,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-25857.7177352143,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-27846.7729456154,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-24863.1901300138,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-26935.1226408482,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-25857.7177352143,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-24863.1901300138,monthly,Forward,FWYR-11,El-Forward-EUR-0172</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-147548.45138235,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-131739.688734241,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-131300.55643846,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-142278.86383298,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-137009.276283611,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-131739.688734241,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-147548.45138235,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-137009.276283611,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-131739.688734241,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-147987.583678131,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-131739.688734241,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-142278.86383298,monthly,Forward,FWYR-12,El-Forward-EUR-0173</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-147548.45138235,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-131739.688734241,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-131300.55643846,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-142278.86383298,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-137009.276283611,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-131739.688734241,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-147548.45138235,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-137009.276283611,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-131739.688734241,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-147987.583678131,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-131739.688734241,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-142278.86383298,monthly,Forward,FWYR-12,El-Forward-EUR-0174</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-44961.2663581082,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0175</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-66119.5093501591,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0175</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-74053.8504721783,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0175</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-66119.5093501591,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0175</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-68984.688088666,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0175</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-26447.8037400637,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0175</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-44961.2663581082,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0176</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-66119.5093501591,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0176</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-74053.8504721783,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0176</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-66119.5093501591,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0176</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-68984.688088666,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0176</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-26447.8037400637,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0176</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-361058.96024769,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0177</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-322374.071649723,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0177</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-349238.577620533,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0177</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-283689.183051756,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0177</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-361058.96024769,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0178</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-322374.071649723,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0178</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-349238.577620533,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0178</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-283689.183051756,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0178</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-5504.66256690897,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-154130.551873451,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-137616.564172724,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-137157.842292149,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-148625.889306542,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-143121.226739633,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-137616.564172724,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-154130.551873451,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-143121.226739633,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-137616.564172724,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-154589.273754027,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-137616.564172724,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0179</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-5504.66256690897,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-154130.551873451,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-137616.564172724,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-137157.842292149,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-148625.889306542,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-143121.226739633,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-137616.564172724,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-154130.551873451,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-143121.226739633,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-137616.564172724,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-154589.273754027,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-137616.564172724,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0180</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-9740.64241373137,monthly,Forward,D0106-10,El-Forward-EUR-0181</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-9740.64241373137,monthly,Forward,D0106-10,El-Forward-EUR-0182</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-21563.2541983366,monthly,Forward,D0111-11,El-Forward-EUR-0183</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-21563.2541983366,monthly,Forward,D0111-11,El-Forward-EUR-0184</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-19314.6421592436,monthly,Forward,D0405-12,El-Forward-EUR-0185</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-19314.6421592436,monthly,Forward,D0405-12,El-Forward-EUR-0186</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,189659.044631102,monthly,Forward,W12-11,El-Forward-EUR-0187</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,189659.044631102,monthly,Forward,W12-11,El-Forward-EUR-0188</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-24661.6988354804,monthly,Forward,W44-11,El-Forward-EUR-0189</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-147970.193012882,monthly,Forward,W44-11,El-Forward-EUR-0189</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-24661.6988354804,monthly,Forward,W44-11,El-Forward-EUR-0190</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-147970.193012882,monthly,Forward,W44-11,El-Forward-EUR-0190</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-7092.75710653743,monthly,Forward,W01-13,El-Forward-EUR-0191</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-7092.75710653743,monthly,Forward,W01-13,El-Forward-EUR-0192</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-33887.7693134206,monthly,Forward,M01-10,El-Forward-EUR-0193</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-33887.7693134206,monthly,Forward,M01-10,El-Forward-EUR-0194</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-481929.685288383,monthly,Forward,M11-11,El-Forward-EUR-0195</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-481929.685288383,monthly,Forward,M11-11,El-Forward-EUR-0196</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-567167.723572586,monthly,Forward,M06-12,El-Forward-EUR-0197</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-567167.723572586,monthly,Forward,M06-12,El-Forward-EUR-0198</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-106492.578411763,monthly,Forward,M10-10,El-Forward-EUR-0199</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-106492.578411763,monthly,Forward,M10-10,El-Forward-EUR-0200</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-755700.563983979,monthly,Forward,Q4-11,El-Forward-EUR-0201</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-730341.484655658,monthly,Forward,Q4-11,El-Forward-EUR-0201</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-754686.200810846,monthly,Forward,Q4-11,El-Forward-EUR-0201</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-755700.563983979,monthly,Forward,Q4-11,El-Forward-EUR-0202</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-730341.484655658,monthly,Forward,Q4-11,El-Forward-EUR-0202</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-754686.200810846,monthly,Forward,Q4-11,El-Forward-EUR-0202</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-558152.999005858,monthly,Forward,Q2-12,El-Forward-EUR-0203</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-576758.09897272,monthly,Forward,Q2-12,El-Forward-EUR-0203</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-558152.999005858,monthly,Forward,Q2-12,El-Forward-EUR-0203</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-558152.999005858,monthly,Forward,Q2-12,El-Forward-EUR-0204</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-576758.09897272,monthly,Forward,Q2-12,El-Forward-EUR-0204</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-558152.999005858,monthly,Forward,Q2-12,El-Forward-EUR-0204</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,200589.443245126,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,181177.561640759,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,200319.833778398,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,194118.81604367,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,200589.443245126,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,194118.81604367,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,200589.443245126,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,200589.443245126,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,194118.81604367,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,200859.052711853,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,194118.81604367,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,200589.443245126,monthly,Forward,FWYR-10,El-Forward-EUR-0205</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,200589.443245126,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,181177.561640759,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,200319.833778398,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,194118.81604367,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,200589.443245126,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,194118.81604367,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,200589.443245126,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,200589.443245126,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,194118.81604367,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,200859.052711853,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,194118.81604367,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,200589.443245126,monthly,Forward,FWYR-10,El-Forward-EUR-0206</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-190264.615164893,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-171851.910471516,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-190008.883155262,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-184127.046933767,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-190264.615164893,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-184127.046933767,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-190264.615164893,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-190264.615164893,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-184127.046933767,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-190520.347174523,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-184127.046933767,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-190264.615164893,monthly,Forward,FWYR-11,El-Forward-EUR-0207</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-190264.615164893,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-171851.910471516,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-190008.883155262,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-184127.046933767,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-190264.615164893,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-184127.046933767,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-190264.615164893,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-190264.615164893,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-184127.046933767,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-190520.347174523,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-184127.046933767,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-190264.615164893,monthly,Forward,FWYR-11,El-Forward-EUR-0208</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-464510.87460733,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-434542.431084276,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-463886.532033933,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-449526.652845803,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-464510.87460733,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-449526.652845803,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-464510.87460733,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-464510.87460733,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-449526.652845803,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-465135.217180726,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-449526.652845803,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-464510.87460733,monthly,Forward,FWYR-12,El-Forward-EUR-0209</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-464510.87460733,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-434542.431084276,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-463886.532033933,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-449526.652845803,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-464510.87460733,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-449526.652845803,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-464510.87460733,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-464510.87460733,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-449526.652845803,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-465135.217180726,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-449526.652845803,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-464510.87460733,monthly,Forward,FWYR-12,El-Forward-EUR-0210</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-139678.473843368,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0211</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-240557.371619134,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0211</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-240557.371619134,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0211</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-232797.456405614,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0211</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-240880.701419698,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0211</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-77599.1521352047,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0211</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-139678.473843368,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0212</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-240557.371619134,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0212</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-240557.371619134,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0212</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-232797.456405614,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0212</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-240880.701419698,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0212</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-77599.1521352047,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0212</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-1101613.24687516,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0213</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-1066077.33568564,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0213</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-1103093.90984139,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0213</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-959469.602117075,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0213</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-1101613.24687516,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0214</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-1066077.33568564,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0214</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-1103093.90984139,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0214</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-959469.602117075,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0214</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-31114.1042704836,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-482268.616192496,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-451154.511922012,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-481620.405686861,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-466711.564057254,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-482268.616192496,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-466711.564057254,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-482268.616192496,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-482268.616192496,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-466711.564057254,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-482916.826698131,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-466711.564057254,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0215</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-31114.1042704836,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-482268.616192496,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-451154.511922012,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-481620.405686861,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-466711.564057254,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-482268.616192496,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-466711.564057254,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-482268.616192496,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-482268.616192496,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-466711.564057254,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-482916.826698131,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-466711.564057254,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0216</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-4767.30709736933,monthly,Forward,D0106-10,El-Forward-EUR-0217</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-4767.30709736933,monthly,Forward,D0106-10,El-Forward-EUR-0218</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-10675.5148209653,monthly,Forward,D0111-11,El-Forward-EUR-0219</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-10675.5148209653,monthly,Forward,D0111-11,El-Forward-EUR-0220</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-9655.36347155125,monthly,Forward,D0405-12,El-Forward-EUR-0221</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-9655.36347155125,monthly,Forward,D0405-12,El-Forward-EUR-0222</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,94133.9834409066,monthly,Forward,W12-11,El-Forward-EUR-0223</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,94133.9834409066,monthly,Forward,W12-11,El-Forward-EUR-0224</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-12303.204484947,monthly,Forward,W44-11,El-Forward-EUR-0225</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-73819.2269096821,monthly,Forward,W44-11,El-Forward-EUR-0225</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-12303.204484947,monthly,Forward,W44-11,El-Forward-EUR-0226</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-73819.2269096821,monthly,Forward,W44-11,El-Forward-EUR-0226</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-3546.9928710788,monthly,Forward,W01-13,El-Forward-EUR-0227</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-3546.9928710788,monthly,Forward,W01-13,El-Forward-EUR-0228</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-17603.7945912282,monthly,Forward,M01-10,El-Forward-EUR-0229</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-17603.7945912282,monthly,Forward,M01-10,El-Forward-EUR-0230</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-240972.079512208,monthly,Forward,M11-11,El-Forward-EUR-0231</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-240972.079512208,monthly,Forward,M11-11,El-Forward-EUR-0232</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-283599.217261592,monthly,Forward,M06-12,El-Forward-EUR-0233</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-283599.217261592,monthly,Forward,M06-12,El-Forward-EUR-0234</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-52801.314725388,monthly,Forward,M10-10,El-Forward-EUR-0235</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-52801.314725388,monthly,Forward,M10-10,El-Forward-EUR-0236</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-378242.05947641,monthly,Forward,Q4-11,El-Forward-EUR-0237</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-365059.360352568,monthly,Forward,Q4-11,El-Forward-EUR-0237</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-377228.005697653,monthly,Forward,Q4-11,El-Forward-EUR-0237</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-378242.05947641,monthly,Forward,Q4-11,El-Forward-EUR-0238</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-365059.360352568,monthly,Forward,Q4-11,El-Forward-EUR-0238</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-377228.005697653,monthly,Forward,Q4-11,El-Forward-EUR-0238</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-279066.346610261,monthly,Forward,Q2-12,El-Forward-EUR-0239</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-288368.558163936,monthly,Forward,Q2-12,El-Forward-EUR-0239</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-279066.346610261,monthly,Forward,Q2-12,El-Forward-EUR-0239</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-279066.346610261,monthly,Forward,Q2-12,El-Forward-EUR-0240</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-288368.558163936,monthly,Forward,Q2-12,El-Forward-EUR-0240</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-279066.346610261,monthly,Forward,Q2-12,El-Forward-EUR-0240</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,101634.064198518,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,91798.5095986613,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,101360.854348522,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,98355.5459985657,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,101634.064198518,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,98355.5459985657,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,101634.064198518,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,101634.064198518,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,98355.5459985657,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,101907.274048514,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,98355.5459985657,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,101634.064198518,monthly,Forward,FWYR-10,El-Forward-EUR-0241</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,101634.064198518,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,91798.5095986613,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,101360.854348522,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,98355.5459985657,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,101634.064198518,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,98355.5459985657,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,101634.064198518,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,101634.064198518,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,98355.5459985657,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,101907.274048514,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,98355.5459985657,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,101634.064198518,monthly,Forward,FWYR-10,El-Forward-EUR-0242</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-94714.8759073892,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-85548.9201744161,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-94460.2660259178,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-91659.5573297315,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-94714.8759073892,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-91659.5573297315,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-94714.8759073892,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-94714.8759073892,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-91659.5573297315,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-94969.4857888607,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-91659.5573297315,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-94714.8759073892,monthly,Forward,FWYR-11,El-Forward-EUR-0243</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-94714.8759073892,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-85548.9201744161,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-94460.2660259178,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-91659.5573297315,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-94714.8759073892,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-91659.5573297315,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-94714.8759073892,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-94714.8759073892,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-91659.5573297315,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-94969.4857888607,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-91659.5573297315,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-94714.8759073892,monthly,Forward,FWYR-11,El-Forward-EUR-0244</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-232257.17152811,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-217272.837881135,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-231632.824292819,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-224765.004704622,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-232257.17152811,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-224765.004704622,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-232257.17152811,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-232257.17152811,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-224765.004704622,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-232881.5187634,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-224765.004704622,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-232257.17152811,monthly,Forward,FWYR-12,El-Forward-EUR-0245</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-232257.17152811,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-217272.837881135,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-231632.824292819,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-224765.004704622,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-232257.17152811,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-224765.004704622,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-232257.17152811,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-232257.17152811,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-224765.004704622,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-232881.5187634,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-224765.004704622,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-232257.17152811,monthly,Forward,FWYR-12,El-Forward-EUR-0246</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-68680.5661681509,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0247</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-118283.197289593,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0247</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-118283.197289593,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0247</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-114467.610280252,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0247</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-118601.162873705,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0247</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-38155.8700934172,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0247</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-68680.5661681509,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0248</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-118283.197289593,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0248</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-118283.197289593,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0248</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-114467.610280252,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0248</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-118601.162873705,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0248</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-38155.8700934172,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0248</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-550028.371740912,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0249</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-532285.521039592,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0249</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-551506.942632689,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0249</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-479056.968935633,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0249</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-550028.371740912,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0250</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-532285.521039592,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0250</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-551506.942632689,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0250</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-479056.968935633,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0250</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-15557.0309400983,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-241133.979571523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-225576.948631425,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-240485.769949019,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-233355.464101474,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-241133.979571523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-233355.464101474,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-241133.979571523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-241133.979571523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-233355.464101474,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-241782.189194027,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-233355.464101474,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0251</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-15557.0309400983,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-241133.979571523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-225576.948631425,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-240485.769949019,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-233355.464101474,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-241133.979571523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-233355.464101474,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-241133.979571523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-241133.979571523,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-233355.464101474,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-241782.189194027,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-233355.464101474,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0252</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-817.916538557598,monthly,Forward,D0106-10,El-Forward-EUR-0253</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-817.916538557598,monthly,Forward,D0106-10,El-Forward-EUR-0254</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-9318.51692744927,monthly,Forward,D0111-11,El-Forward-EUR-0255</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-9318.51692744927,monthly,Forward,D0111-11,El-Forward-EUR-0256</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-9665.2902172656,monthly,Forward,D0405-12,El-Forward-EUR-0257</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-9665.2902172656,monthly,Forward,D0405-12,El-Forward-EUR-0258</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,85284.0645303393,monthly,Forward,W12-11,El-Forward-EUR-0259</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,85284.0645303393,monthly,Forward,W12-11,El-Forward-EUR-0260</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-23106.0126628471,monthly,Forward,W44-11,El-Forward-EUR-0261</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-46212.0253256942,monthly,Forward,W44-11,El-Forward-EUR-0261</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-23106.0126628471,monthly,Forward,W44-11,El-Forward-EUR-0262</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-46212.0253256942,monthly,Forward,W44-11,El-Forward-EUR-0262</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-7142.54063478687,monthly,Forward,W01-13,El-Forward-EUR-0263</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-7142.54063478687,monthly,Forward,W01-13,El-Forward-EUR-0264</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,17852.4226299375,monthly,Forward,M01-10,El-Forward-EUR-0265</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,17852.4226299375,monthly,Forward,M01-10,El-Forward-EUR-0266</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-206115.266098811,monthly,Forward,M11-11,El-Forward-EUR-0267</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-206115.266098811,monthly,Forward,M11-11,El-Forward-EUR-0268</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-236437.905429778,monthly,Forward,M06-12,El-Forward-EUR-0269</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-236437.905429778,monthly,Forward,M06-12,El-Forward-EUR-0270</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-27795.9950939554,monthly,Forward,M10-10,El-Forward-EUR-0271</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-27795.9950939554,monthly,Forward,M10-10,El-Forward-EUR-0272</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-329228.573577895,monthly,Forward,Q4-11,El-Forward-EUR-0273</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-316059.430634779,monthly,Forward,Q4-11,El-Forward-EUR-0273</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-303903.298687288,monthly,Forward,Q4-11,El-Forward-EUR-0273</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-329228.573577895,monthly,Forward,Q4-11,El-Forward-EUR-0274</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-316059.430634779,monthly,Forward,Q4-11,El-Forward-EUR-0274</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-303903.298687288,monthly,Forward,Q4-11,El-Forward-EUR-0274</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-250737.349726699,monthly,Forward,Q2-12,El-Forward-EUR-0275</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-241450.781218303,monthly,Forward,Q2-12,El-Forward-EUR-0275</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-232164.212709907,monthly,Forward,Q2-12,El-Forward-EUR-0275</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-250737.349726699,monthly,Forward,Q2-12,El-Forward-EUR-0276</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-241450.781218303,monthly,Forward,Q2-12,El-Forward-EUR-0276</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-232164.212709907,monthly,Forward,Q2-12,El-Forward-EUR-0276</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,119974.994487751,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,110746.148757924,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,128819.304978835,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,115360.571622838,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,124589.417352665,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,119974.994487751,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,115360.571622838,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,129203.840217578,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,115360.571622838,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,120359.529726494,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,124589.417352665,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,119974.994487751,monthly,Forward,FWYR-10,El-Forward-EUR-0277</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,119974.994487751,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,110746.148757924,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,128819.304978835,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,115360.571622838,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,124589.417352665,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,119974.994487751,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,115360.571622838,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,129203.840217578,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,115360.571622838,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,120359.529726494,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,124589.417352665,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,119974.994487751,monthly,Forward,FWYR-10,El-Forward-EUR-0278</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-72261.1375721151,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-64232.1222863246,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-69361.7709411352,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-66908.4607149214,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-74937.476000712,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-66908.4607149214,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-69584.7991435183,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-74937.476000712,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-66908.4607149214,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-72484.1657744982,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-69584.7991435183,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-66908.4607149214,monthly,Forward,FWYR-11,El-Forward-EUR-0279</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-72261.1375721151,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-64232.1222863246,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-69361.7709411352,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-66908.4607149214,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-74937.476000712,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-66908.4607149214,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-69584.7991435183,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-74937.476000712,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-66908.4607149214,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-72484.1657744982,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-69584.7991435183,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-66908.4607149214,monthly,Forward,FWYR-11,El-Forward-EUR-0280</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-209515.782200109,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-187067.662678668,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-186444.103803073,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-202033.075692962,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-194550.369185815,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-187067.662678668,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-209515.782200109,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-194550.369185815,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-187067.662678668,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-210139.341075704,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-187067.662678668,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-202033.075692962,monthly,Forward,FWYR-12,El-Forward-EUR-0281</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-209515.782200109,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-187067.662678668,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-186444.103803073,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-202033.075692962,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-194550.369185815,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-187067.662678668,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-209515.782200109,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-194550.369185815,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-187067.662678668,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-210139.341075704,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-187067.662678668,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-202033.075692962,monthly,Forward,FWYR-12,El-Forward-EUR-0282</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-50956.7782305224,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0283</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-74936.4385742977,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0283</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-83928.8112032134,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0283</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-74936.4385742976,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0283</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-78183.6842458506,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0283</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-29974.5754297191,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0283</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-50956.7782305224,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0284</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-74936.4385742977,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0284</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-83928.8112032134,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0284</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-74936.4385742976,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0284</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-78183.6842458506,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0284</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-29974.5754297191,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0284</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-487909.472623349,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0285</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-435633.457699419,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0285</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-471936.245841037,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0285</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-383357.442775488,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0285</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-487909.472623349,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0286</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-435633.457699419,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0286</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-471936.245841037,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0286</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-383357.442775488,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0286</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-7777.28914827941,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-217764.096151823,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-194432.228706985,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-193784.121277962,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-209986.807003544,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-202209.517855265,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-194432.228706985,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-217764.096151823,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-202209.517855265,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-194432.228706985,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-218412.203580847,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-194432.228706985,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0287</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-7777.28914827941,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-217764.096151823,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-194432.228706985,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-193784.121277962,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-209986.807003544,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-202209.517855265,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-194432.228706985,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-217764.096151823,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-202209.517855265,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-194432.228706985,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-218412.203580847,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-194432.228706985,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0288</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-103150.428919457,monthly,Forward,D0106-10,El-Forward-EUR-0289</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-103150.428919457,monthly,Forward,D0106-10,El-Forward-EUR-0290</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-91290.6391103716,monthly,Forward,D0111-11,El-Forward-EUR-0291</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-91290.6391103716,monthly,Forward,D0111-11,El-Forward-EUR-0292</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-95076.2824495183,monthly,Forward,D0405-12,El-Forward-EUR-0293</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-95076.2824495183,monthly,Forward,D0405-12,El-Forward-EUR-0294</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-656861.336510709,monthly,Forward,W12-11,El-Forward-EUR-0295</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-656861.336510709,monthly,Forward,W12-11,El-Forward-EUR-0296</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-93513.1150283039,monthly,Forward,W44-11,El-Forward-EUR-0297</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-561078.690169823,monthly,Forward,W44-11,El-Forward-EUR-0297</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-93513.1150283039,monthly,Forward,W44-11,El-Forward-EUR-0298</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-561078.690169823,monthly,Forward,W44-11,El-Forward-EUR-0298</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-96042.3883879976,monthly,Forward,W01-13,El-Forward-EUR-0299</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-96042.3883879976,monthly,Forward,W01-13,El-Forward-EUR-0300</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-2211032.88285582,monthly,Forward,M01-10,El-Forward-EUR-0301</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-2211032.88285582,monthly,Forward,M01-10,El-Forward-EUR-0302</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-2829534.94608644,monthly,Forward,M11-11,El-Forward-EUR-0303</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-2829534.94608644,monthly,Forward,M11-11,El-Forward-EUR-0304</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-2857406.85071108,monthly,Forward,M06-12,El-Forward-EUR-0305</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-2857406.85071108,monthly,Forward,M06-12,El-Forward-EUR-0306</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-2833533.97932534,monthly,Forward,M10-10,El-Forward-EUR-0307</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-2833533.97932534,monthly,Forward,M10-10,El-Forward-EUR-0308</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-2881353.25415292,monthly,Forward,Q4-11,El-Forward-EUR-0309</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-2784663.54763772,monthly,Forward,Q4-11,El-Forward-EUR-0309</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-2877485.66589232,monthly,Forward,Q4-11,El-Forward-EUR-0309</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-2881353.25415292,monthly,Forward,Q4-11,El-Forward-EUR-0310</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-2784663.54763772,monthly,Forward,Q4-11,El-Forward-EUR-0310</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-2877485.66589232,monthly,Forward,Q4-11,El-Forward-EUR-0310</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-2853718.80760592,monthly,Forward,Q2-12,El-Forward-EUR-0311</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-2948842.76785945,monthly,Forward,Q2-12,El-Forward-EUR-0311</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-2853718.80760592,monthly,Forward,Q2-12,El-Forward-EUR-0311</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-2853718.80760592,monthly,Forward,Q2-12,El-Forward-EUR-0312</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-2948842.76785945,monthly,Forward,Q2-12,El-Forward-EUR-0312</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-2853718.80760592,monthly,Forward,Q2-12,El-Forward-EUR-0312</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-2709084.74188293,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,-2446915.25073297,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,-2705443.49895029,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,-2621694.91149961,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,-2709084.74188293,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-2621694.91149961,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-2709084.74188293,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-2709084.74188293,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-2621694.91149961,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-2712725.98481557,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-2621694.91149961,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,-2709084.74188293,monthly,Forward,FWYR-10,El-Forward-EUR-0313</record>
+        <record>2010-01-01 00:00:00.000,0,HI,2,NOK,-2709084.74188293,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2010-02-01 00:00:00.000,0,HI,2,NOK,-2446915.25073297,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2010-03-01 00:00:00.000,0,HI,2,NOK,-2705443.49895029,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2010-04-01 00:00:00.000,0,HI,2,NOK,-2621694.91149961,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2010-05-01 00:00:00.000,0,HI,2,NOK,-2709084.74188293,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-2621694.91149961,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-2709084.74188293,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-2709084.74188293,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-2621694.91149961,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-2712725.98481557,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-2621694.91149961,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2010-12-01 00:00:00.000,0,HI,2,NOK,-2709084.74188293,monthly,Forward,FWYR-10,El-Forward-EUR-0314</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-2888220.84060672,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-2608715.59796736,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-2884338.82334784,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-2795052.4263936,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-2888220.84060672,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-2795052.4263936,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-2888220.84060672,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-2888220.84060672,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-2795052.4263936,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-2892102.8578656,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-2795052.4263936,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-2888220.84060672,monthly,Forward,FWYR-11,El-Forward-EUR-0315</record>
+        <record>2011-01-01 00:00:00.000,0,HI,2,NOK,-2888220.84060672,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2011-02-01 00:00:00.000,0,HI,2,NOK,-2608715.59796736,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2011-03-01 00:00:00.000,0,HI,2,NOK,-2884338.82334784,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2011-04-01 00:00:00.000,0,HI,2,NOK,-2795052.4263936,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2011-05-01 00:00:00.000,0,HI,2,NOK,-2888220.84060672,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2011-06-01 00:00:00.000,0,HI,2,NOK,-2795052.4263936,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2011-07-01 00:00:00.000,0,HI,2,NOK,-2888220.84060672,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-2888220.84060672,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-2795052.4263936,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-2892102.8578656,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-2795052.4263936,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-2888220.84060672,monthly,Forward,FWYR-11,El-Forward-EUR-0316</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-2954567.91092467,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-2763950.62634888,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-2950596.717496,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-2859259.26863677,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-2954567.91092467,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-2859259.26863677,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-2954567.91092467,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-2954567.91092467,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-2859259.26863677,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-2958539.10435333,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-2859259.26863677,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-2954567.91092467,monthly,Forward,FWYR-12,El-Forward-EUR-0317</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-2954567.91092467,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-2763950.62634888,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-2950596.717496,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-2859259.26863677,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-2954567.91092467,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-2859259.26863677,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-2954567.91092467,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-2954567.91092467,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-2859259.26863677,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-2958539.10435333,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-2859259.26863677,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2012-12-01 00:00:00.000,0,TR,2,NOK,-2954567.91092467,monthly,Forward,FWYR-12,El-Forward-EUR-0318</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-1678397.04354146,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0319</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-2890572.68609918,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0319</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-2890572.68609918,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0319</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-2797328.40590243,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0319</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-2894457.86444071,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0319</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-932442.801967477,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0319</record>
+        <record>2010-06-01 00:00:00.000,0,HI,2,NOK,-1678397.04354146,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0320</record>
+        <record>2010-07-01 00:00:00.000,0,HI,2,NOK,-2890572.68609918,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0320</record>
+        <record>2010-08-01 00:00:00.000,0,HI,2,NOK,-2890572.68609918,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0320</record>
+        <record>2010-09-01 00:00:00.000,0,HI,2,NOK,-2797328.40590243,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0320</record>
+        <record>2010-10-01 00:00:00.000,0,HI,2,NOK,-2894457.86444071,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0320</record>
+        <record>2010-11-01 00:00:00.000,0,HI,2,NOK,-932442.801967477,monthly,Forward,13-Jun-10 - 10-Nov-10,El-Forward-EUR-0320</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-2811248.53734642,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0321</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-2720563.10065782,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0321</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-2815027.09720844,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0321</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-2448506.79059204,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0321</record>
+        <record>2011-08-01 00:00:00.000,0,HI,2,NOK,-2811248.53734642,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0322</record>
+        <record>2011-09-01 00:00:00.000,0,HI,2,NOK,-2720563.10065782,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0322</record>
+        <record>2011-10-01 00:00:00.000,0,HI,2,NOK,-2815027.09720844,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0322</record>
+        <record>2011-11-01 00:00:00.000,0,TR,2,NOK,-2448506.79059204,monthly,Forward,01-Aug-11 - 27-Nov-11,El-Forward-EUR-0322</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-190484.508373962,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-2952509.87979641,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-2762025.37142245,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-2948541.45253862,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-2857267.62560943,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-2952509.87979641,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-2857267.62560943,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-2952509.87979641,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-2952509.87979641,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-2857267.62560943,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-2956478.3070542,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-2857267.62560943,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0323</record>
+        <record>2011-12-01 00:00:00.000,0,TR,2,NOK,-190484.508373962,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+        <record>2012-01-01 00:00:00.000,0,TR,2,NOK,-2952509.87979641,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+        <record>2012-02-01 00:00:00.000,0,TR,2,NOK,-2762025.37142245,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+        <record>2012-03-01 00:00:00.000,0,TR,2,NOK,-2948541.45253862,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+        <record>2012-04-01 00:00:00.000,0,TR,2,NOK,-2857267.62560943,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+        <record>2012-05-01 00:00:00.000,0,TR,2,NOK,-2952509.87979641,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+        <record>2012-06-01 00:00:00.000,0,TR,2,NOK,-2857267.62560943,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+        <record>2012-07-01 00:00:00.000,0,TR,2,NOK,-2952509.87979641,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+        <record>2012-08-01 00:00:00.000,0,TR,2,NOK,-2952509.87979641,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+        <record>2012-09-01 00:00:00.000,0,TR,2,NOK,-2857267.62560943,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+        <record>2012-10-01 00:00:00.000,0,TR,2,NOK,-2956478.3070542,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+        <record>2012-11-01 00:00:00.000,0,TR,2,NOK,-2857267.62560943,monthly,Forward,30-Dec-11 - 30-Nov-12,El-Forward-EUR-0324</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-CapacityStructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasCapacityStructuredDeal>
+			<InstrumentData>				
+				<FromDate>2009-09-11</FromDate>
+				<ToDate>2009-09-13</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="NCG"/>
+						<DestinationBalanceArea AreaName="PEG_N"/>
+					</Interconnector>
+				</Physical>
+				<Priority>Interruptible</Priority>
+				<ExpiryOffset>1</ExpiryOffset>
+				<ExpiryTime>07:30:00</ExpiryTime>
+			</InstrumentData>
+			<SettlementData>
+				<DailyInformation>
+					<TimeSeriesDetail DateTime="2009-09-11T00:00:00" Volume="1"/>
+					<TimeSeriesDetail DateTime="2009-09-12T00:00:00" Volume="2"/>
+					<TimeSeriesDetail DateTime="2009-09-13T00:00:00" Volume="3"/>
+				</DailyInformation>
+				<Price>100</Price>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+			<FeesData>
+				<Fees>
+				    <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="1" FeeUnit="EUR" />
+					<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.1" FeeUnit="EUR/MWh" />
+					<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="4" FeeUnit="NOK" />
+					<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1.4" FeeUnit="NOK/MWh" />
+					<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="NOK" />
+					<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="NOK/MWh" />
+					<Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="123" FeeUnit="EUR" />
+					<Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="123" FeeUnit="EUR" />	
+				</Fees>
+			</FeesData>
+		</GasCapacityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2008-10-03T12:13:06</TradeDate>			
+			<TradeDateTimeZone>CET+1</TradeDateTimeZone>
+			<TimeStampClearedUTC>2013-11-20T15:00:00</TimeStampClearedUTC>
+			<TimeStampConfirmationBrokerUTC>2013-11-21T13:00:00</TimeStampConfirmationBrokerUTC>
+			<TimeStampConfirmationCounterPartyUTC>2013-11-22T17:00:00</TimeStampConfirmationCounterPartyUTC>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>GasCapacityStructuredDeal; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassGasCapacityStructuredDealComplianceFees</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+		<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="PassGasCapacityStructuredDealCompliance"/>
+				<DateProperty name="TerminationDate" value="2013-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+				<StringProperty name="EMIRStatus" value="EMIR speculative"/>
+				<StringProperty name="BuyerInitiatorAggressor" value="Sleeve"/>
+				<StringProperty name="SellerInitiatorAggressor" value="Initiator"/>
+				<BooleanProperty name="RemitReporting" value="1"/>
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>407</TransactionId>
+  <DealType>Gas-CapacityStructuredDeal</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>11-Sep-09 - 13-Sep-09</InstrumentName>
+    <FromDate>2009-09-11T00:00:00</FromDate>
+    <ToDate>2009-09-13T00:00:00</ToDate>
+    <PutCall>Call</PutCall>
+    <LoadProfile>Base</LoadProfile>
+    <ExpiryTime>01:30:00</ExpiryTime>
+    <TimeZone>CET 06-06</TimeZone>
+    <Interconnector>Medelsheim / Obergailbach</Interconnector>
+    <ExpiryOffset>1</ExpiryOffset>
+    <Priority>Interruptible</Priority>
+  </InstrumentData>
+  <SettlementData>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>100</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <Resolution>Day</Resolution>
+    <PriceVolumeTimeSeriesDetails>
+      <PriceVolumeTimeSeriesDetail FromDateTime="2009-09-11T00:00:00" ToDateTime="2009-09-12T00:00:00" Price="0" Volume="1" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2009-09-12T00:00:00" ToDateTime="2009-09-13T00:00:00" Price="0" Volume="2" />
+      <PriceVolumeTimeSeriesDetail FromDateTime="2009-09-13T00:00:00" ToDateTime="2009-09-14T00:00:00" Price="0" Volume="3" />
+    </PriceVolumeTimeSeriesDetails>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2008-10-03T09:13:06Z</TradeDateTimeUtc>
+  </DealDetails>
+   <FeesData>
+    <Broker>API Test Broker</Broker>
+    <ClearingType>Electronic</ClearingType>
+	 <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.1" FeeUnit="EUR/MWh" />
+      <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="1" FeeUnit="EUR" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1.4" FeeUnit="NOK/MWh" />
+      <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="4" FeeUnit="NOK" />
+      <Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="123" FeeUnit="EUR" />
+      <Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="123" FeeUnit="EUR" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="NOK/MWh" />
+      <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="NOK" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassGasCapacityStructuredDealComplianceFees</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>GasCapacityStructuredDeal; should pass</Comment>
+    <ModificationDateTimeUtc>2014-08-12T12:10:13Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>72</Deliveries>
+    <ReferringId>408</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="PassGasCapacityStructuredDealCompliance" ValueType="System.String" />
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+        <Property Name="TerminationDate" Value="2013-11-20T00:00:00" ValueType="System.DateTime" />
+        <Property Name="EMIRStatus" Value="EMIR speculative" ValueType="System.String" />
+		<Property Name="RemitReporting" Value="True" ValueType="System.Boolean" />
+        <Property Name="BuyerInitiatorAggressor" Value="Sleeve" ValueType="System.String" />
+        <Property Name="SellerInitiatorAggressor" Value="Initiator" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  <PropertyGroup Name="Deal Group"> <Properties> <Property Name="GroupField1" Value="API Test" ValueType="System.String" /> </Properties> </PropertyGroup> </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+    <TimeStampClearedUtc>2013-11-20T15:00:00Z</TimeStampClearedUtc>
+    <TimeStampConfirmationBrokerUtc>2013-11-21T13:00:00Z</TimeStampConfirmationBrokerUtc>
+	<TimeStampConfirmationCounterPartyUtc>2013-11-22T17:00:00Z</TimeStampConfirmationCounterPartyUtc>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

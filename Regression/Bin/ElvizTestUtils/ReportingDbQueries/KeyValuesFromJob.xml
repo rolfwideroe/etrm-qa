@@ -1,0 +1,31 @@
+<DbQuery>
+  <Columns>
+    <Column ColumnName="ExternalId" ColumnDataType="System.String"/>
+    <Column ColumnName="JobDescription" ColumnDataType="System.String"/>
+    <Column ColumnName="ReportDate" ColumnDataType="System.DateTime"/>
+	  <Column ColumnName="ReportCurrency" ColumnDataType="System.String"/>
+    <Column ColumnName="ValueType" ColumnDataType="System.String"/>
+    <Column ColumnName="ValueUnit" ColumnDataType="System.String"/>
+    <Column ColumnName="Value" ColumnDataType="System.Double"/>
+  </Columns>
+  <SqlQuery>
+	<![CDATA[
+
+DECLARE @reportDate DATE
+set @reportDate='{reportDate}'
+
+DECLARE @jobExecutionId INT
+set @jobExecutionId='{jobExecutionId}'
+  SELECT  c.ExternalId,cvg.JobDescription,cvg.ReportDate, cvg.ReportCurrency, g.ValueType as ValueType, k.ValueUnit as ValueUnit, k.Value as [Value] FROM KeyValues k
+  JOIN ContractExports c on c.ContractExportId=k.ContractExportId
+  JOIN KeyValuesGroups g on g.KeyValuesGroupId=k.KeyValuesGroupId
+  JOIN ContractValuesGroups cvg on cvg.ContractValuesGroupId=g.ContractValuesGroupId
+  WHERE cvg.JobExecutionId=@jobExecutionId
+  AND cvg.ReportDate=@reportDate
+  ORDER BY cvg.JobDescription,cvg.ReportDate, g.ValueType,c.ExternalId,k.ValueUnit, cvg.ReportCurrency
+
+	]]>
+  </SqlQuery>
+</DbQuery>
+
+			

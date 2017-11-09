@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<CurveTestCase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<InputData>
+		<CurrencyQuote>mid</CurrencyQuote>	
+		<FromDate>2017-11-01</FromDate>
+		<ToDate>2017-12-31</ToDate>
+		<LoadType>Base</LoadType>
+		<PriceBookAppendix></PriceBookAppendix>
+		<ReferenceAreaName>nps</ReferenceAreaName>
+		<ReportCurrencyIsoCode>USD</ReportCurrencyIsoCode>
+		<Resolution>Hour</Resolution>		
+		<TemplateName>LiveFXEl</TemplateName>
+		<UseLiveCurrencyRates>1</UseLiveCurrencyRates>		
+	</InputData>
+	<ExpectedValues>
+		<ErrorMessage>Failed to return a curve: No price sheet found in the price book for referance area 'nps'</ErrorMessage>	
+	</ExpectedValues>
+</CurveTestCase>

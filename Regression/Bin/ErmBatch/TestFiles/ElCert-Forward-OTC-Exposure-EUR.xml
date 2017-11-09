@@ -1,0 +1,166 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>ElCert-Forward-OTC-Exposure-EUR</workspace>
+    <monitor>ElCert-Forward-OTC-Exposure-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-07,2007-03-16 00:00:00.000,2007-03-16 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,SEK,ElCert-Forward-OTC-0001;ElCert-Forward-OTC-0009;ElCert-Forward-OTC-0017,Elcertificate,ECS,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,100000,0,0</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-07,2007-03-16 00:00:00.000,2007-03-16 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,NOK,ElCert-Forward-OTC-0002;ElCert-Forward-OTC-0010;ElCert-Forward-OTC-0018,Elcertificate,ECS,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,100000,0,0</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-11,2011-03-18 00:00:00.000,2011-03-18 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,SEK,ElCert-Forward-OTC-0003;ElCert-Forward-OTC-0011;ElCert-Forward-OTC-0019,Elcertificate,ECS,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,100000,0,0</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-11,2011-03-18 00:00:00.000,2011-03-18 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,NOK,ElCert-Forward-OTC-0004;ElCert-Forward-OTC-0012;ElCert-Forward-OTC-0020,Elcertificate,ECS,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,100000,0,0</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS011111,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,SEK,ElCert-Forward-OTC-0005;ElCert-Forward-OTC-0013;ElCert-Forward-OTC-0021,Elcertificate,ECS,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,100000,0,0</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS011111,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,NOK,ElCert-Forward-OTC-0006;ElCert-Forward-OTC-0014;ElCert-Forward-OTC-0022,Elcertificate,ECS,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,100000,0,0</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-12,2012-03-16 00:00:00.000,2012-03-16 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,SEK,ElCert-Forward-OTC-0007;ElCert-Forward-OTC-0015;ElCert-Forward-OTC-0023,Elcertificate,ECS,2012-03-16 00:00:00.000,2012-03-17 00:00:00.000,100000,0,0</record>
+        <record>ElCert-Forward-OTC,Elcertificate,ECS Mar-12,2012-03-16 00:00:00.000,2012-03-16 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,NOK,ElCert-Forward-OTC-0008;ElCert-Forward-OTC-0016;ElCert-Forward-OTC-0024,Elcertificate,ECS,2012-03-16 00:00:00.000,2012-03-17 00:00:00.000,100000,0,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>Elcertificate,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,19.4421065775013,0,0</record>
+        <record>Elcertificate,2011-11-03 00:00:00.000,2011-11-04 00:00:00.000,19.4432307337127,0,0</record>
+        <record>Elcertificate,2011-11-04 00:00:00.000,2011-11-05 00:00:00.000,19.4443624536797,0,0</record>
+        <record>Elcertificate,2011-11-05 00:00:00.000,2011-11-06 00:00:00.000,19.4455016636423,0,0</record>
+        <record>Elcertificate,2011-11-06 00:00:00.000,2011-11-07 00:00:00.000,19.4466482602867,0,0</record>
+        <record>Elcertificate,2011-11-07 00:00:00.000,2011-11-08 00:00:00.000,19.4478020997128,0,0</record>
+        <record>Elcertificate,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,19.4489629967193,0,0</record>
+        <record>Elcertificate,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,19.450130795168,0,0</record>
+        <record>Elcertificate,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,19.4513053837069,0,0</record>
+        <record>Elcertificate,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,19.4524866390916,0,0</record>
+        <record>Elcertificate,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,19.453674417902,0,0</record>
+        <record>Elcertificate,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,19.4548685509749,0,0</record>
+        <record>Elcertificate,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,19.456068845262,0,0</record>
+        <record>Elcertificate,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,19.4572750794313,0,0</record>
+        <record>Elcertificate,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,19.458487001803,0,0</record>
+        <record>Elcertificate,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,19.4597043290242,0,0</record>
+        <record>Elcertificate,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,19.4609267416098,0,0</record>
+        <record>Elcertificate,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,19.4621538852928,0,0</record>
+        <record>Elcertificate,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,19.4633853642153,0,0</record>
+        <record>Elcertificate,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,19.4646207434534,0,0</record>
+        <record>Elcertificate,2011-11-22 00:00:00.000,2011-11-23 00:00:00.000,19.4658595439707,0,0</record>
+        <record>Elcertificate,2011-11-23 00:00:00.000,2011-11-24 00:00:00.000,19.4671012390614,0,0</record>
+        <record>Elcertificate,2011-11-24 00:00:00.000,2011-11-25 00:00:00.000,19.468345256327,0,0</record>
+        <record>Elcertificate,2011-11-25 00:00:00.000,2011-11-26 00:00:00.000,19.4695909720878,0,0</record>
+        <record>Elcertificate,2011-11-26 00:00:00.000,2011-11-27 00:00:00.000,19.4708377093496,0,0</record>
+        <record>Elcertificate,2011-11-27 00:00:00.000,2011-11-28 00:00:00.000,19.4720847377396,0,0</record>
+        <record>Elcertificate,2011-11-28 00:00:00.000,2011-11-29 00:00:00.000,19.4733312692415,0,0</record>
+        <record>Elcertificate,2011-11-29 00:00:00.000,2011-11-30 00:00:00.000,19.4745764552719,0,0</record>
+        <record>Elcertificate,2011-11-30 00:00:00.000,2011-12-01 00:00:00.000,19.4758193875054,0,0</record>
+        <record>Elcertificate,2011-12-01 00:00:00.000,2011-12-02 00:00:00.000,19.4770591363267,0,0</record>
+        <record>Elcertificate,2011-12-02 00:00:00.000,2011-12-03 00:00:00.000,19.4782951941798,0,0</record>
+        <record>Elcertificate,2011-12-03 00:00:00.000,2011-12-04 00:00:00.000,19.4795275137078,0,0</record>
+        <record>Elcertificate,2011-12-04 00:00:00.000,2011-12-05 00:00:00.000,19.4807560896806,0,0</record>
+        <record>Elcertificate,2011-12-05 00:00:00.000,2011-12-06 00:00:00.000,19.4819809206199,0,0</record>
+        <record>Elcertificate,2011-12-06 00:00:00.000,2011-12-07 00:00:00.000,19.4832020060814,0,0</record>
+        <record>Elcertificate,2011-12-07 00:00:00.000,2011-12-08 00:00:00.000,19.4844193480526,0,0</record>
+        <record>Elcertificate,2011-12-08 00:00:00.000,2011-12-09 00:00:00.000,19.4856329505541,0,0</record>
+        <record>Elcertificate,2011-12-09 00:00:00.000,2011-12-10 00:00:00.000,19.4868428203943,0,0</record>
+        <record>Elcertificate,2011-12-10 00:00:00.000,2011-12-11 00:00:00.000,19.4880489644751,0,0</record>
+        <record>Elcertificate,2011-12-11 00:00:00.000,2011-12-12 00:00:00.000,19.4892513951873,0,0</record>
+        <record>Elcertificate,2011-12-12 00:00:00.000,2011-12-13 00:00:00.000,19.4904501242343,0,0</record>
+        <record>Elcertificate,2011-12-13 00:00:00.000,2011-12-14 00:00:00.000,19.4916451682137,0,0</record>
+        <record>Elcertificate,2011-12-14 00:00:00.000,2011-12-15 00:00:00.000,19.492836544078,0,0</record>
+        <record>Elcertificate,2011-12-15 00:00:00.000,2011-12-16 00:00:00.000,19.4940242728566,0,0</record>
+        <record>Elcertificate,2011-12-16 00:00:00.000,2011-12-17 00:00:00.000,19.4952083772148,0,0</record>
+        <record>Elcertificate,2011-12-17 00:00:00.000,2011-12-18 00:00:00.000,19.4963888831329,0,0</record>
+        <record>Elcertificate,2011-12-18 00:00:00.000,2011-12-19 00:00:00.000,19.4975658188342,0,0</record>
+        <record>Elcertificate,2011-12-19 00:00:00.000,2011-12-20 00:00:00.000,19.4987392159232,0,0</record>
+        <record>Elcertificate,2011-12-20 00:00:00.000,2011-12-21 00:00:00.000,19.4999091077181,0,0</record>
+        <record>Elcertificate,2011-12-21 00:00:00.000,2011-12-22 00:00:00.000,19.5010755316012,0,0</record>
+        <record>Elcertificate,2011-12-22 00:00:00.000,2011-12-23 00:00:00.000,19.5022385269908,0,0</record>
+        <record>Elcertificate,2011-12-23 00:00:00.000,2011-12-24 00:00:00.000,19.5033981370549,0,0</record>
+        <record>Elcertificate,2011-12-24 00:00:00.000,2011-12-25 00:00:00.000,19.5045544076506,0,0</record>
+        <record>Elcertificate,2011-12-25 00:00:00.000,2011-12-26 00:00:00.000,19.5057073873812,0,0</record>
+        <record>Elcertificate,2011-12-26 00:00:00.000,2011-12-27 00:00:00.000,19.5068571289985,0,0</record>
+        <record>Elcertificate,2011-12-27 00:00:00.000,2011-12-28 00:00:00.000,19.5080036876222,0,0</record>
+        <record>Elcertificate,2011-12-28 00:00:00.000,2011-12-29 00:00:00.000,19.5091471225006,0,0</record>
+        <record>Elcertificate,2011-12-29 00:00:00.000,2011-12-30 00:00:00.000,19.5102874947968,0,0</record>
+        <record>Elcertificate,2011-12-30 00:00:00.000,2011-12-31 00:00:00.000,19.5114248708405,0,0</record>
+        <record>Elcertificate,2011-12-31 00:00:00.000,2012-01-01 00:00:00.000,19.5125593193779,0,0</record>
+        <record>Elcertificate,2012-01-01 00:00:00.000,2012-01-02 00:00:00.000,19.5136909131404,0,0</record>
+        <record>Elcertificate,2012-01-02 00:00:00.000,2012-01-03 00:00:00.000,19.5148197282029,0,0</record>
+        <record>Elcertificate,2012-01-03 00:00:00.000,2012-01-04 00:00:00.000,19.515945844458,0,0</record>
+        <record>Elcertificate,2012-01-04 00:00:00.000,2012-01-05 00:00:00.000,19.5170693454049,0,0</record>
+        <record>Elcertificate,2012-01-05 00:00:00.000,2012-01-06 00:00:00.000,19.5181903184535,0,0</record>
+        <record>Elcertificate,2012-01-06 00:00:00.000,2012-01-07 00:00:00.000,19.5193088551349,0,0</record>
+        <record>Elcertificate,2012-01-07 00:00:00.000,2012-01-08 00:00:00.000,19.5204250499439,0,0</record>
+        <record>Elcertificate,2012-01-08 00:00:00.000,2012-01-09 00:00:00.000,19.5215390021937,0,0</record>
+        <record>Elcertificate,2012-01-09 00:00:00.000,2012-01-10 00:00:00.000,19.5226508152433,0,0</record>
+        <record>Elcertificate,2012-01-10 00:00:00.000,2012-01-11 00:00:00.000,19.5237605961987,0,0</record>
+        <record>Elcertificate,2012-01-11 00:00:00.000,2012-01-12 00:00:00.000,19.5248684560127,0,0</record>
+        <record>Elcertificate,2012-01-12 00:00:00.000,2012-01-13 00:00:00.000,19.5259745108136,0,0</record>
+        <record>Elcertificate,2012-01-13 00:00:00.000,2012-01-14 00:00:00.000,19.5270788794625,0,0</record>
+        <record>Elcertificate,2012-01-14 00:00:00.000,2012-01-15 00:00:00.000,19.5281816873882,0,0</record>
+        <record>Elcertificate,2012-01-15 00:00:00.000,2012-01-16 00:00:00.000,19.5292830622394,0,0</record>
+        <record>Elcertificate,2012-01-16 00:00:00.000,2012-01-17 00:00:00.000,19.5303831374285,0,0</record>
+        <record>Elcertificate,2012-01-17 00:00:00.000,2012-01-18 00:00:00.000,19.5314820497865,0,0</record>
+        <record>Elcertificate,2012-01-18 00:00:00.000,2012-01-19 00:00:00.000,19.5325799420668,0,0</record>
+        <record>Elcertificate,2012-01-19 00:00:00.000,2012-01-20 00:00:00.000,19.5336769605357,0,0</record>
+        <record>Elcertificate,2012-01-20 00:00:00.000,2012-01-21 00:00:00.000,19.5347732564945,0,0</record>
+        <record>Elcertificate,2012-01-21 00:00:00.000,2012-01-22 00:00:00.000,19.5358689867912,0,0</record>
+        <record>Elcertificate,2012-01-22 00:00:00.000,2012-01-23 00:00:00.000,19.536964311195,0,0</record>
+        <record>Elcertificate,2012-01-23 00:00:00.000,2012-01-24 00:00:00.000,19.5380593965919,0,0</record>
+        <record>Elcertificate,2012-01-24 00:00:00.000,2012-01-25 00:00:00.000,19.539154412771,0,0</record>
+        <record>Elcertificate,2012-01-25 00:00:00.000,2012-01-26 00:00:00.000,19.5402495362041,0,0</record>
+        <record>Elcertificate,2012-01-26 00:00:00.000,2012-01-27 00:00:00.000,19.5413449470983,0,0</record>
+        <record>Elcertificate,2012-01-27 00:00:00.000,2012-01-28 00:00:00.000,19.5424408313709,0,0</record>
+        <record>Elcertificate,2012-01-28 00:00:00.000,2012-01-29 00:00:00.000,19.5435373805741,0,0</record>
+        <record>Elcertificate,2012-01-29 00:00:00.000,2012-01-30 00:00:00.000,19.5446347907416,0,0</record>
+        <record>Elcertificate,2012-01-30 00:00:00.000,2012-01-31 00:00:00.000,19.5457332522157,0,0</record>
+        <record>Elcertificate,2012-01-31 00:00:00.000,2012-02-01 00:00:00.000,19.5468328410305,0,0</record>
+        <record>Elcertificate,2012-02-01 00:00:00.000,2012-02-02 00:00:00.000,19.5479335147894,0,0</record>
+        <record>Elcertificate,2012-02-02 00:00:00.000,2012-02-03 00:00:00.000,19.5490352202654,0,0</record>
+        <record>Elcertificate,2012-02-03 00:00:00.000,2012-02-04 00:00:00.000,19.5501379031312,0,0</record>
+        <record>Elcertificate,2012-02-04 00:00:00.000,2012-02-05 00:00:00.000,19.5512415087554,0,0</record>
+        <record>Elcertificate,2012-02-05 00:00:00.000,2012-02-06 00:00:00.000,19.5523459826496,0,0</record>
+        <record>Elcertificate,2012-02-06 00:00:00.000,2012-02-07 00:00:00.000,19.5534512691456,0,0</record>
+        <record>Elcertificate,2012-02-07 00:00:00.000,2012-02-08 00:00:00.000,19.5545573124566,0,0</record>
+        <record>Elcertificate,2012-02-08 00:00:00.000,2012-02-09 00:00:00.000,19.5556640558348,0,0</record>
+        <record>Elcertificate,2012-02-09 00:00:00.000,2012-02-10 00:00:00.000,19.5567714427818,0,0</record>
+        <record>Elcertificate,2012-02-10 00:00:00.000,2012-02-11 00:00:00.000,19.5578794164327,0,0</record>
+        <record>Elcertificate,2012-02-11 00:00:00.000,2012-02-12 00:00:00.000,19.5589879180133,0,0</record>
+        <record>Elcertificate,2012-02-12 00:00:00.000,2012-02-13 00:00:00.000,19.5600968896188,0,0</record>
+        <record>Elcertificate,2012-02-13 00:00:00.000,2012-02-14 00:00:00.000,19.5612062725042,0,0</record>
+        <record>Elcertificate,2012-02-14 00:00:00.000,2012-02-15 00:00:00.000,19.5623160071913,0,0</record>
+        <record>Elcertificate,2012-02-15 00:00:00.000,2012-02-16 00:00:00.000,19.5634260337172,0,0</record>
+        <record>Elcertificate,2012-02-16 00:00:00.000,2012-02-17 00:00:00.000,19.5645362918283,0,0</record>
+        <record>Elcertificate,2012-02-17 00:00:00.000,2012-02-18 00:00:00.000,19.5656467210965,0,0</record>
+        <record>Elcertificate,2012-02-18 00:00:00.000,2012-02-19 00:00:00.000,19.5667572595213,0,0</record>
+        <record>Elcertificate,2012-02-19 00:00:00.000,2012-02-20 00:00:00.000,19.567867844718,0,0</record>
+        <record>Elcertificate,2012-02-20 00:00:00.000,2012-02-21 00:00:00.000,19.5689784147856,0,0</record>
+        <record>Elcertificate,2012-02-21 00:00:00.000,2012-02-22 00:00:00.000,19.5700889068182,0,0</record>
+        <record>Elcertificate,2012-02-22 00:00:00.000,2012-02-23 00:00:00.000,19.5711992565813,0,0</record>
+        <record>Elcertificate,2012-02-23 00:00:00.000,2012-02-24 00:00:00.000,19.5723094002346,0,0</record>
+        <record>Elcertificate,2012-02-24 00:00:00.000,2012-02-25 00:00:00.000,19.5734192732221,0,0</record>
+        <record>Elcertificate,2012-02-25 00:00:00.000,2012-02-26 00:00:00.000,19.5745288097221,0,0</record>
+        <record>Elcertificate,2012-02-26 00:00:00.000,2012-02-27 00:00:00.000,19.575637944218,0,0</record>
+        <record>Elcertificate,2012-02-27 00:00:00.000,2012-02-28 00:00:00.000,19.576746610272,0,0</record>
+        <record>Elcertificate,2012-02-28 00:00:00.000,2012-02-29 00:00:00.000,19.5778547408361,0,0</record>
+        <record>Elcertificate,2012-02-29 00:00:00.000,2012-03-01 00:00:00.000,19.5789622679577,0,0</record>
+        <record>Elcertificate,2012-03-01 00:00:00.000,2012-03-02 00:00:00.000,19.5800691240254,0,0</record>
+        <record>Elcertificate,2012-03-02 00:00:00.000,2012-03-03 00:00:00.000,19.5811752395369,0,0</record>
+        <record>Elcertificate,2012-03-03 00:00:00.000,2012-03-04 00:00:00.000,19.5822805455064,0,0</record>
+        <record>Elcertificate,2012-03-04 00:00:00.000,2012-03-05 00:00:00.000,19.5833849719251,0,0</record>
+        <record>Elcertificate,2012-03-05 00:00:00.000,2012-03-06 00:00:00.000,19.5844884480512,0,0</record>
+        <record>Elcertificate,2012-03-06 00:00:00.000,2012-03-07 00:00:00.000,19.5855909026111,0,0</record>
+        <record>Elcertificate,2012-03-07 00:00:00.000,2012-03-08 00:00:00.000,19.5866922636885,0,0</record>
+        <record>Elcertificate,2012-03-08 00:00:00.000,2012-03-09 00:00:00.000,19.587792458633,0,0</record>
+        <record>Elcertificate,2012-03-09 00:00:00.000,2012-03-10 00:00:00.000,19.5888914146583,0,0</record>
+        <record>Elcertificate,2012-03-10 00:00:00.000,2012-03-11 00:00:00.000,19.5899890577345,0,0</record>
+        <record>Elcertificate,2012-03-11 00:00:00.000,2012-03-12 00:00:00.000,19.5910853137978,0,0</record>
+        <record>Elcertificate,2012-03-12 00:00:00.000,2012-03-13 00:00:00.000,19.5921801069409,0,0</record>
+        <record>Elcertificate,2012-03-13 00:00:00.000,2012-03-14 00:00:00.000,19.593273362549,0,0</record>
+        <record>Elcertificate,2012-03-14 00:00:00.000,2012-03-15 00:00:00.000,19.5943650029519,0,0</record>
+        <record>Elcertificate,2012-03-15 00:00:00.000,2012-03-16 00:00:00.000,19.5954549524898,0,0</record>
+        <record>Elcertificate,2012-03-16 00:00:00.000,2012-03-17 00:00:00.000,19.5965431327472,0,0</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

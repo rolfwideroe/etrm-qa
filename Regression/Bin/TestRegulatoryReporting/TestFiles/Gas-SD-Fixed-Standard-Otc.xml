@@ -1,0 +1,163 @@
+<TestCase>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>				
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>TTF</PriceBasis>
+        <PriceType>Fixed</PriceType>
+				<FromDate>2016-06-01</FromDate>
+				<ToDate>2016-06-02</ToDate>
+				<Physical>
+					<DeliveryArea AreaName='TTF' />
+				</Physical>
+        <TransactionName>Remit-SD-Fixed-Physical</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<StructuredDealInformation Resolution="Daily">
+                    <TimeSeriesDetail FromDateTime="2016-06-01T00:00:00" ToDateTime="2016-06-02T00:00:00" Price="22"    Volume="33" />                   
+					<TimeSeriesDetail FromDateTime="2016-06-02T00:00:00" ToDateTime="2016-06-03T00:00:00" Price="24"     Volume="35" />               
+				</StructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>NordPool</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2016-04-01T00:00:00Z</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<!--<Audited>true</Audited>-->
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>API test: GasSDFixedPhysical; should pass</Comment>		
+      <GroupFields>
+        <GroupField1>API Test</GroupField1>
+        <GroupField2>REMIT</GroupField2>
+      </GroupFields>
+			<ExternalId>GasSDFixedPhysical</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+		<CustomProperties>
+			<PropertyGroup name='Compliance'>
+				<BooleanProperty name='RemitReporting' value='true' />	
+				<StringProperty name='UTI' value='GASSDFIXPH' />
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<RegulatoryReporting>
+<REMITTable1 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xmlns="http://www.acer.europa.eu/REMIT/REMITTable1_V2.xsd">
+  <reportingEntityID>
+    <ace>T1241247G.EU</ace>
+  </reportingEntityID>
+  <contractList>
+    <contract>
+      <contractId>NA</contractId>
+      <contractName>Bilcontract</contractName>
+      <contractType>OT</contractType>
+      <energyCommodity>NG</energyCommodity>
+      <fixingIndex>
+        <indexName>APXGas DAM TTF Hi All day</indexName>
+        <indexValue>0</indexValue>
+      </fixingIndex>
+      <settlementMethod>P</settlementMethod>
+      <organisedMarketPlaceIdentifier>
+        <bil>XBIL</bil>
+      </organisedMarketPlaceIdentifier>
+      <contractTradingHours>
+        <startTime>00:00:00.0000000+01:00</startTime>
+        <endTime>00:00:00.0000000+01:00</endTime>
+      </contractTradingHours>
+      <deliveryPointOrZone>21YNL----TTF---1</deliveryPointOrZone>
+      <deliveryStartDate>2016-06-01</deliveryStartDate>
+      <deliveryEndDate>2016-06-02</deliveryEndDate>
+      <duration>O</duration>
+      <loadType>OT</loadType>
+      <deliveryProfile>
+        <loadDeliveryStartTime>00:00:00.0000000+01:00</loadDeliveryStartTime>
+        <loadDeliveryEndTime>00:00:00.0000000+01:00</loadDeliveryEndTime>
+      </deliveryProfile>
+    </contract>
+  </contractList>
+  <TradeList>
+    <TradeReport>
+      <RecordSeqNumber>1</RecordSeqNumber>
+      <idOfMarketParticipant>
+		<ace>ACER12345.EU</ace>
+	  </idOfMarketParticipant>      <traderID>
+        <traderIdForMarketParticipant>DealImport</traderIdForMarketParticipant>
+      </traderID>
+      <otherMarketParticipant>
+		<ace>ACER12346.EU</ace>
+	  </otherMarketParticipant>
+	  <beneficiaryIdentification>
+		<ace>ACER12345.EU</ace>
+	  </beneficiaryIdentification>
+      <tradingCapacity>A</tradingCapacity>
+      <buySellIndicator>B</buySellIndicator>
+      <contractInfo>
+        <contractId>NA</contractId>
+      </contractInfo>
+      <organisedMarketPlaceIdentifier>
+        <bil>XBIL</bil>
+      </organisedMarketPlaceIdentifier>
+      <transactionTime>2016-04-01T00:00:00Z</transactionTime>
+      <uniqueTransactionIdentifier>
+        <uniqueTransactionIdentifier>GASSDFIXPH</uniqueTransactionIdentifier>
+      </uniqueTransactionIdentifier>
+      <notionalAmountDetails>
+        <notionalAmount>37584</notionalAmount>
+        <notionalCurrency>EUR</notionalCurrency>
+      </notionalAmountDetails>
+      <totalNotionalContractQuantity>
+        <value>1632</value>
+        <unit>MWh</unit>
+      </totalNotionalContractQuantity>
+      <priceIntervalQuantityDetails>
+        <intervalStartTime>00:00:00.0000000+01:00</intervalStartTime>
+        <intervalEndTime>00:00:00.0000000+01:00</intervalEndTime>
+        <quantity>33</quantity>
+        <unit>MW</unit>
+        <priceTimeIntervalQuantity>
+          <value>22</value>
+          <currency>EUR</currency>
+        </priceTimeIntervalQuantity>
+      </priceIntervalQuantityDetails>
+      <priceIntervalQuantityDetails>
+        <intervalStartTime>00:00:00.0000000+01:00</intervalStartTime>
+        <intervalEndTime>00:00:00.0000000+01:00</intervalEndTime>
+        <quantity>35</quantity>
+        <unit>MW</unit>
+        <priceTimeIntervalQuantity>
+          <value>24</value>
+          <currency>EUR</currency>
+        </priceTimeIntervalQuantity>
+      </priceIntervalQuantityDetails>
+      <actionType>M</actionType>
+    </TradeReport>
+  </TradeList>
+</REMITTable1>
+</RegulatoryReporting>
+</TestCase>

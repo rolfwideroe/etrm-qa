@@ -1,0 +1,28 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-Storage-TTF-Mix-PosMon-EUR</workspace>
+    <monitor>Gas-Storage-TTF-Mix-PosMon-EUR</monitor>
+    <reportdate>2011-12-29T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0122 StorageCustomerTTF,Base,Physical,ICE TTF,M12-11,M12-11,ECS Curve,CET 06-06,EUR,Viz,Gas,,Structured Deal,Transaction For Negative Storage,,,,2011-12-01 00:00:00.000,2011-12-31 00:00:00.000,Active,0,-22186.5115,489.210677427568,-21697.3008225724,489.210677427568,489.210677427568,0,0,0,0,0,0,-30,0,0,-952.5,54,-30,NULL,0,0,0,0,0,0,0,0,21.7426967745586,0,0,Gas-Storage-GetNegativeStorage</record>
+        <record>0122 StorageCustomerTTF,Base,Physical,ICE TTF,Y2011,Y2011,ECS Curve,CET 06-06,EUR,Viz,Gas,,Storage,Gas-Storage-TTF-Mix,,,,2011-01-01 00:00:00.000,2011-12-31 00:00:00.000,Active,0,-643638.359840449,0.100000000001081,-643638.259840449,2389.09,2389.09,0,0,0,0,0,0,110,0,0,0,0,110,NULL,0,0,0,0,0,0,21.7180909090909,-2388.99,21.719,0,0,Gas-Storage-TTF-Mix1</record>
+        <record>0122 StorageCustomerTTF,Base,Physical,ICE TTF,M03-11,M03-11,,CET 06-06,EUR,Viz,Gas,,Floating Price,Mar-11,,,,2011-03-01 00:00:00.000,2011-03-31 00:00:00.000,Expired,0,-154164.767902913,0,-154164.767902913,0,0,-227954.527902913,0,-227954.527902913,0,0,0,100,0,0,3100,743,100,NULL,0,0,0,0,0,0,73.5337186783589,-227954.527902913,0,0,0,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>0122 StorageCustomerTTF,Base,Physical,ICE TTF,M03-11,M03-11,,CET 06-06,EUR,Viz,Gas,,Floating Price,Mar-11,,,,2011-03-01 00:00:00.000,2011-03-31 00:00:00.000,Expired,0,151064.767902913,0,151064.767902913,0,0,224854.527902913,0,224854.527902913,0,0,0,-100,0,0,-3100,743,-100,NULL,0,0,0,0,0,0,72.5337186783589,224854.527902913,0,0,0,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>0122 StorageCustomerTTF,Base,Physical,ICE TTF,M03-11,M03-11,,CET 06-06,EUR,Viz,Gas,,Floating Price,Mar-11,,,,2011-03-01 00:00:00.000,2011-03-31 00:00:00.000,Expired,0,-151064.767902913,0,-151064.767902913,0,0,-224854.527902913,0,-224854.527902913,0,0,0,100,0,0,3100,743,100,NULL,0,0,0,0,0,0,72.5337186783589,-224854.527902913,0,0,0,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>0122 StorageCustomerTTF,Base,Physical,Endex TTF,M01-11,M01-11,,CET 06-06,EUR,Viz,Gas,Endex,Future,Jan-11,,,,2011-01-01 00:00:00.000,2011-01-31 00:00:00.000,Expired,186000,-828569.16,0,-828569.16,0,0,-1674000,0,-1674000,0,0,0,50,0,0,37200,744,50,NULL,0,0,0,0,0,0,50,-1860000,0,0,0,Gas-Storage-TTF-Mix-Future-0001;Gas-Storage-TTF-Mix-Future-0002;Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>0122 StorageCustomerTTF,Base,Physical,ICE TTF,M02-11,M02-11,,CET,EUR,Viz,Gas,,Forward,Feb-11,,,,2011-02-01 00:00:00.000,2011-02-28 00:00:00.000,Expired,-466200,2298268.72725,0,2298268.72725,0,0,3263400,0,3263400,0,0,0,-150000,0,0,-4200000,672,-150000,NULL,0,0,0,0,0,0,0.888,3729600,0,0,0,Gas-Storage-TTF-Mix-Fwd-Sm3-0001;Gas-Storage-TTF-Mix-Fwd-Sm3-0002;Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>0122 StorageCustomerTTF,Base,Physical,ICE TTF,M10-11,M10-11,,CET 06-06,EUR,Viz,Gas,,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,,,,2011-10-01 00:00:00.000,2011-10-31 00:00:00.000,Expired,0,368877.141,0,368877.141,0,0,536400,0,536400,0,0,0,-36,0,0,-26820,745,-36,NULL,0,0,0,0,0,0,20,536400,0,0,0,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>0122 StorageCustomerTTF,Base,Physical,ICE TTF,M10-11,M10-11,,CET 06-06,EUR,Viz,Gas,,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,,,,2011-10-01 00:00:00.000,2011-10-31 00:00:00.000,Expired,0,-737754.282,0,-737754.282,0,0,-1072800,0,-1072800,0,0,0,72,0,0,53640,745,72,NULL,0,0,0,0,0,0,20,-1072800,0,0,0,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>0122 StorageCustomerTTF,Base,Physical,ICE TTF,Other Period,Other Period - Base,,CET 06-06,EUR,Viz,Gas,,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,,,,2011-11-02 00:00:00.000,2011-11-20 00:00:00.000,Expired,0,-98793.3599999999,0,-98793.3599999999,0,0,-104196,0,-104196,0,0,0,0.5,0,0,228,456,0.5,NULL,0,0,0,0,0,0,457,-104196,0,0,0,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>0122 StorageCustomerTTF,Base,Physical,ICE TTF-ICE NBP,Other Period,Other Period - Base,,CET 06-06,EUR,Viz,Gas,,Transport,01-Apr-11 - 15-Apr-11,,,,2011-04-01 00:00:00.000,2011-04-15 00:00:00.000,Expired,0,2047.1924220443,0,2047.1924220443,0,0,0,0,0,0,0,10800,10,0,0,3600,360,10,NULL,0,0,0,0,0,0,0,0,0,0,0,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>0122 StorageCustomerTTF,Base,Physical,ICE NBP-ICE TTF,Other Period,Other Period - Base,,CET 06-06,EUR,Viz,Gas,,Transport,16-Apr-11 - 30-Apr-11,,,,2011-04-16 00:00:00.000,2011-04-30 00:00:00.000,Expired,0,54788.2808429387,0,54788.2808429387,0,0,0,0,0,0,0,21600,20,0,0,7200,360,20,NULL,0,0,0,0,0,0,0,0,0,0,0,Gas-Storage-TTF-Mix-Transport-0002</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

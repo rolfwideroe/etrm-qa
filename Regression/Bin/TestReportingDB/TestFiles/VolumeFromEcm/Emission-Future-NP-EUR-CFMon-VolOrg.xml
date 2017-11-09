@@ -1,0 +1,50 @@
+<test type="EcmBatch" name="Emission-Future-NP-EUR-CFMon-VolORg" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>Emission-Future-NP-EUR-CFMon-VolOrg</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<reportdate>2011-11-01</reportdate>
+    <tollerance>0.00000001</tollerance>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+	<assert>
+		<datawarehouse>
+		<query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+				<record>2011-12-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NEDEC1,Emission-Future-NP-EUR-0001</record>
+				<record>2012-12-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NEDEC2,Emission-Future-NP-EUR-0002</record>
+				<record>2011-03-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NEMAR1,Emission-Future-NP-EUR-0003</record>
+				<record>2012-03-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NEMAR2,Emission-Future-NP-EUR-0004</record>
+				<record>2011-06-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NEJUN1,Emission-Future-NP-EUR-0005</record>
+				<record>2012-06-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NEJUN2,Emission-Future-NP-EUR-0006</record>
+				<record>2011-09-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NESEP1,Emission-Future-NP-EUR-0007</record>
+				<record>2012-09-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NESEP2,Emission-Future-NP-EUR-0008</record>
+				<record>2011-12-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NEDEC1,Emission-Future-NP-EUR-0009</record>
+				<record>2012-12-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NEDEC2,Emission-Future-NP-EUR-0010</record>
+				<record>2011-03-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NEMAR1,Emission-Future-NP-EUR-0011</record>
+				<record>2012-03-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NEMAR2,Emission-Future-NP-EUR-0012</record>
+				<record>2011-06-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NEJUN1,Emission-Future-NP-EUR-0013</record>
+				<record>2012-06-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NEJUN2,Emission-Future-NP-EUR-0014</record>
+				<record>2011-09-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NESEP1,Emission-Future-NP-EUR-0015</record>
+				<record>2012-09-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NESEP2,Emission-Future-NP-EUR-0016</record>
+				<record>2011-12-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NCDEC1,Emission-Future-NP-EUR-0017</record>
+				<record>2012-12-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NCDEC2,Emission-Future-NP-EUR-0018</record>
+				<record>2011-03-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NCMAR1,Emission-Future-NP-EUR-0019</record>
+				<record>2012-03-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NCMAR2,Emission-Future-NP-EUR-0020</record>
+				<record>2011-06-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NCJUN1,Emission-Future-NP-EUR-0021</record>
+				<record>2012-06-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NCJUN2,Emission-Future-NP-EUR-0022</record>
+				<record>2011-09-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NCSEP1,Emission-Future-NP-EUR-0023</record>
+				<record>2012-09-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NCSEP2,Emission-Future-NP-EUR-0024</record>
+				<record>2011-12-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NCDEC1,Emission-Future-NP-EUR-0025</record>
+				<record>2012-12-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NCDEC2,Emission-Future-NP-EUR-0026</record>
+				<record>2011-03-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NCMAR1,Emission-Future-NP-EUR-0027</record>
+				<record>2012-03-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NCMAR2,Emission-Future-NP-EUR-0028</record>
+				<record>2011-06-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NCJUN1,Emission-Future-NP-EUR-0029</record>
+				<record>2012-06-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NCJUN2,Emission-Future-NP-EUR-0030</record>
+				<record>2011-09-01 00:00:00.000,0,HI,38,EUR,500000,monthly,Future,NCSEP1,Emission-Future-NP-EUR-0031</record>
+				<record>2012-09-01 00:00:00.000,0,TR,38,EUR,500000,monthly,Future,NCSEP2,Emission-Future-NP-EUR-0032</record>
+			</returns>
+		</datawarehouse>		
+	</assert>
+</test>

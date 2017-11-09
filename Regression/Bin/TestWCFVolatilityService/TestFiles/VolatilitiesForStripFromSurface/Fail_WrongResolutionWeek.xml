@@ -1,0 +1,25 @@
+<VolatilitySurfaceTestCase>
+	<ExpectedResult>
+		<Result>Failure</Result>
+		<ErrorMessage>Failed to return implicit volatilities for option strip: Resolution 'Week' is not supported yet. Supported resolutions are: "Hour"</ErrorMessage>
+	</ExpectedResult>
+	<InputData>
+		<ExerciseTimeOfDay>2014-04-01T06:00:00</ExerciseTimeOfDay>
+		<OptionFromDate>2012-04-01</OptionFromDate>
+		<OptionToDate>2012-06-30</OptionToDate>
+		<LoadType>Base</LoadType>
+		<PriceBookAppendix></PriceBookAppendix>
+		<ReferenceAreaName>NPS</ReferenceAreaName>
+		<ReportDate>2011-11-16</ReportDate>
+		<Strike>45</Strike>
+		<Resolution>Week</Resolution>
+		<TemplateName>NPXSYSALL</TemplateName>
+	</InputData>
+	<ExpectedProperties>
+		<CurveType>MarketPriceCurve</CurveType>
+		<VolumeUnit>MWh</VolumeUnit>
+		<TimeZone>CET</TimeZone>
+	</ExpectedProperties>
+	<ExpectedValues>
+	</ExpectedValues>
+</VolatilitySurfaceTestCase>

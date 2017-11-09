@@ -1,0 +1,114 @@
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Future</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityFuture>
+			<InstrumentData>
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<PriceBasis>EEX</PriceBasis>
+				<LoadProfile>Peak</LoadProfile>
+				<FromDate>2013-01-01</FromDate>
+				<ToDate>2013-03-31</ToDate>
+				<Financial />
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>50</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>32</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</ElectricityFuture>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2012-09-12T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>ElectricityFuture; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassElectricityFuture_NP_EEX_QuarterPeak</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>289</TransactionId>
+  <DealType>Electricity-Future</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>EDEFUTQ1-13</InstrumentName>
+    <PriceBasis>EEX</PriceBasis>
+    <FromDate>2013-01-01T00:00:00</FromDate>
+    <ToDate>2013-03-31T00:00:00</ToDate>
+    <LoadProfile>Peak</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>50</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>32</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2012-09-11T22:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassElectricityFuture_NP_EEX_QuarterPeak</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>ElectricityFuture; should pass</Comment>
+    <ModificationDateTimeUtc>2014-08-12T11:15:39Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>2159</Deliveries>
+    <OriginalQuantity>50</OriginalQuantity>
+    <ReferringId>290</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

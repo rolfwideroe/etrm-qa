@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-ZeroVolume-PosMon-NOK</workspace>
+    <monitor>Special-Cases-ZeroVolume-PosMon-NOK</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0109 Special-Cases,Base,Physical,EEX-EEX,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Capacity Structured Deal,31-Oct-11 - 02-Nov-11 - Base,,,,2011-10-31 00:00:00.000,2011-11-02 00:00:00.000,Expired,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL,0,0,0,0,0,0,0,0,0,0,0,Special-Cases-ZeroVolume-ElectricityCapacityStructuredDeal</record>
+        <record>0109 Special-Cases,Base,Physical,NordPool System Price,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Special-Cases-ZeroVolume-ElectricityStructuredDeal - Base,,,,2011-10-01 00:00:00.000,2011-11-30 00:00:00.000,Active,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,696,0,NULL,0,0,0,0,0,0,0,0,0,0,0,Special-Cases-ZeroVolume-ElectricityStructuredDeal</record>
+        <record>0109 Special-Cases,Base,Physical,NordPool System Price,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Special-Cases-ZeroVolume-ElectricityStructuredDeal-DummyDeal - Base,,,,2011-10-01 00:00:00.000,2011-11-30 00:00:00.000,Active,0,162460.522774959,234648.9091843,397109.431959259,240042.338979407,234648.9091843,-5964.4879291322,-5393.4297951075,-11357.9177242397,0.0794520547945206,696,0,1,0,0,769,696,1,NULL,0,0,0,0,0,0,7.74918074009697,-5393.42979510749,344.888418073861,0,0,Special-Cases-ZeroVolume-ElectricityStructuredDeal-DummyDeal</record>
+        <record>0109 Special-Cases,Base,Physical,NordPool System Price,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Special-Cases-ZeroVolume-ElectricityStructuredFlexibleDeal - Base,,,,2011-10-01 00:00:00.000,2011-11-30 00:00:00.000,Active,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,696,0,NULL,0,0,0,0,0,0,0,0,0,0,0,Special-Cases-ZeroVolume-ElectricityStructuredFlexibleDeal</record>
+        <record>0109 Special-Cases,Base,Physical,EEX-EEX,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Transport,31-Oct-11 - 02-Nov-11 - Base,,,,2011-10-31 00:00:00.000,2011-11-02 00:00:00.000,Active,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,NULL,0,0,0,0,0,0,0,0,0,0,0,Special-Cases-ZeroVolume-ElectricityTransportDeal</record>
+        <record>0109 Special-Cases,Base,Financial,EEX,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Electricity,,Fixed Price Floating Volume,01-Nov-11 - 29-Nov-11 - Base,,,,2011-11-01 00:00:00.000,2011-11-29 00:00:00.000,Active,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,672,0,NULL,0,0,0,0,0,0,0,0,0,0,0,Special-Cases-ZeroVolume-FPFV</record>
+        <record>0109 Special-Cases,Base,Physical,ICE TTF-ICE NBP,Other Period,Other Period - Base,ECS Curve,CET,EUR,Viz,Gas,,Capacity Structured Deal,31-Oct-11 - 02-Nov-11,,,,2011-10-31 00:00:00.000,2011-11-02 00:00:00.000,Expired,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,NULL,0,0,0,0,0,0,0,0,0,0,0,Special-Cases-ZeroVolume-GasCapacityStructuredDeal</record>
+        <record>0109 Special-Cases,Base,Physical,ICE TTF,Other Period,Other Period - Base,ECS Curve,CET 06-06,EUR,Viz,Gas,,Structured Deal,Special-Cases-ZeroVolume-GasStructuredDeal,,,,2011-10-01 00:00:00.000,2011-11-30 00:00:00.000,Active,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,702,0,NULL,0,0,0,0,0,0,0,0,0,0,0,Special-Cases-ZeroVolume-GasStructuredDeal</record>
+        <record>0109 Special-Cases,Base,Physical,ICE TTF,Other Period,Other Period - Base,ECS Curve,CET 06-06,EUR,Viz,Gas,,Structured Deal,Special-Cases-ZeroVolume-GasStructuredFlexibleDeal,,,,2011-10-01 00:00:00.000,2011-11-30 00:00:00.000,Active,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,702,0,NULL,0,0,0,0,0,0,0,0,0,0,0,Special-Cases-ZeroVolume-GasStructuredFlexibleDeal</record>
+        <record>0109 Special-Cases,Base,Physical,ICE TTF-ICE NBP,Other Period,Other Period - Base,ECS Curve,CET 06-06,EUR,Viz,Gas,,Transport,31-Oct-11 - 02-Nov-11,,,,2011-10-31 00:00:00.000,2011-11-02 00:00:00.000,Active,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,NULL,0,0,0,0,0,0,0,0,-109.940091664133,0,0,Special-Cases-ZeroVolume-GasTransportDeal</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

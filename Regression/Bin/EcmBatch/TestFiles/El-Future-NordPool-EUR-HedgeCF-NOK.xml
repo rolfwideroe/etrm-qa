@@ -1,0 +1,36 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-Future-NordPool-EUR-HedgeCF-NOK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance>1E-08</tollerance>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,HI,24,NOK,4665.84207222629,monthly,Future,D2910-11,El-Future-EUR-0001</record>
+        <record>2011-10-01 00:00:00.000,0,HI,24,NOK,2459.17141090943,monthly,Future,D3010-11,El-Future-EUR-0002</record>
+        <record>2011-10-01 00:00:00.000,0,HI,24,NOK,7370.54335313833,monthly,Future,D3110-11,El-Future-EUR-0003</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,13086.6646169215,monthly,Future,D0111-11,El-Future-EUR-0004</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,14648.1416450769,monthly,Future,D0211-11,El-Future-EUR-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,12789.2404210824,monthly,Future,D0311-11,El-Future-EUR-0006</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,10000.8885850906,monthly,Future,D0411-11,El-Future-EUR-0007</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,10930.3391970879,monthly,Future,D0511-11,El-Future-EUR-0008</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,9071.43797309333,monthly,Future,D0611-11,El-Future-EUR-0009</record>
+        <record>2011-10-01 00:00:00.000,0,HI,24,NOK,71039.4593593045,monthly,Future,W43-11,El-Future-EUR-0016</record>
+        <record>2011-10-01 00:00:00.000,0,HI,24,NOK,12181.1403444917,monthly,Future,W44-11,El-Future-EUR-0017</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,73086.84206695,monthly,Future,W44-11,El-Future-EUR-0017</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,143916.132761658,monthly,Future,W45-11,El-Future-EUR-0018</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,170851.611497338,monthly,Future,W46-11,El-Future-EUR-0019</record>
+        <record>2011-10-01 00:00:00.000,0,HI,24,NOK,36741.182692252,monthly,Future,W43-11,El-Future-EUR-0024</record>
+        <record>2011-10-01 00:00:00.000,0,HI,24,NOK,10376.8920062872,monthly,Future,W44-11,El-Future-EUR-0025</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,41507.5680251488,monthly,Future,W44-11,El-Future-EUR-0025</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,76122.0051225764,monthly,Future,W45-11,El-Future-EUR-0026</record>
+        <record>2011-11-01 00:00:00.000,0,TR,24,NOK,87740.1377725415,monthly,Future,W46-11,El-Future-EUR-0027</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

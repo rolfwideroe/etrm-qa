@@ -1,0 +1,127 @@
+<DbQuery>
+	<Columns>
+		<Column ColumnName="Portfolioname" ColumnDataType="System.String"/>
+		<Column ColumnName="Loadtype" ColumnDataType="System.String"/>
+		<Column ColumnName="DeliveryType" ColumnDataType="System.String"/>
+		<Column ColumnName="PriceBasis" ColumnDataType="System.String"/>
+		<Column ColumnName="Period" ColumnDataType="System.String"/>
+		<Column ColumnName="Product" ColumnDataType="System.String"/>
+		<Column ColumnName="PriceSource" ColumnDataType="System.String"/>
+		<Column ColumnName="Timezone" ColumnDataType="System.String"/>
+		<Column ColumnName="Currency" ColumnDataType="System.String"/>
+		<Column ColumnName="CurrencySource" ColumnDataType="System.String"/>
+		<Column ColumnName="Commodity" ColumnDataType="System.String"/>
+		<Column ColumnName="ExecutionVenue" ColumnDataType="System.String"/>
+		<Column ColumnName="InstrumentType" ColumnDataType="System.String"/>
+		<Column ColumnName="Instrument" ColumnDataType="System.String"/>
+		<Column ColumnName="GroupField1" ColumnDataType="System.String"/>
+		<Column ColumnName="GroupField2" ColumnDataType="System.String"/>
+		<Column ColumnName="GroupField3" ColumnDataType="System.String"/>
+		<Column ColumnName="FromDate" ColumnDataType="System.DateTime"/>
+		<Column ColumnName="ToDate" ColumnDataType="System.DateTime"/>
+		<Column ColumnName="PosStatus" ColumnDataType="System.String"/>
+		<Column ColumnName="TradePL" ColumnDataType="System.Double"/>
+		<Column ColumnName="RealizedPL" ColumnDataType="System.Double"/>
+		<Column ColumnName="UnrealizedPL" ColumnDataType="System.Double"/>
+		<Column ColumnName="NetPL" ColumnDataType="System.Double"/>
+		<Column ColumnName="GrossValue" ColumnDataType="System.Double"/>
+		<Column ColumnName="MtmValue" ColumnDataType="System.Double"/>
+		<Column ColumnName="CFstoDate" ColumnDataType="System.Double"/>
+		<Column ColumnName="FwdCFs" ColumnDataType="System.Double"/>
+		<Column ColumnName="NetCfs" ColumnDataType="System.Double"/>
+		<Column ColumnName="ExpMWyr" ColumnDataType="System.Double"/>
+		<Column ColumnName="ExpMWh" ColumnDataType="System.Double"/>
+		<Column ColumnName="FeesPaid" ColumnDataType="System.Double"/>
+		<Column ColumnName="QTY" ColumnDataType="System.Double"/>
+		<Column ColumnName="MinVol" ColumnDataType="System.Double"/>
+		<Column ColumnName="MaxVol" ColumnDataType="System.Double"/>
+		<Column ColumnName="UsedVol" ColumnDataType="System.Double"/>
+		<Column ColumnName="Hours" ColumnDataType="System.Int32"/>
+		<Column ColumnName="DeltaQuantity" ColumnDataType="System.Double"/>
+		<Column ColumnName="Expiry" ColumnDataType="System.DateTime"/>
+		<Column ColumnName="Strike" ColumnDataType="System.Double"/>
+		<Column ColumnName="Gamma" ColumnDataType="System.Double"/>
+		<Column ColumnName="Theta" ColumnDataType="System.Double"/>
+		<Column ColumnName="Vega" ColumnDataType="System.Double"/>
+		<Column ColumnName="Rho" ColumnDataType="System.Double"/>
+		<Column ColumnName="Delta" ColumnDataType="System.Double"/>
+		<Column ColumnName="BookPrice" ColumnDataType="System.Double"/>
+		<Column ColumnName="BookValue" ColumnDataType="System.Double"/>
+		<Column ColumnName="MarketPrice" ColumnDataType="System.Double"/>
+		<Column ColumnName="UnderlyingPrice" ColumnDataType="System.Double"/>
+		<Column ColumnName="Volatility" ColumnDataType="System.Double"/>
+		<Column ColumnName="ExtIds" ColumnDataType="System.String"/>
+	</Columns>
+	<SqlQuery>
+		DECLARE @workspace VARCHAR(255)
+		DECLARE @monitor VARCHAR(255)
+		DECLARE @reportDate DATE
+
+		SET @workspace='{workspace}'
+		SET @monitor='{monitor}'
+		SET @reportDate='{reportdate}'
+							
+			SELECT [Portfolioname]
+				  ,[Loadtype]
+				  ,[DelType] AS DeliveryType
+				  ,[PriceBasis] 
+				  ,[Period]
+				  ,[Product]
+				  ,[PriceSrc] AS PriceSource
+				  ,[Timezone]
+				  ,[Currency]
+				  ,[CurSource] AS CurrencySource
+				  ,[Commodity]
+				  ,[ExecutionVenue]
+				  ,[InstType] AS InstrumentType
+				  ,[Instrument]
+				  ,[GroupField1]
+				  ,[GroupField2]
+				  ,[GroupField3]
+				  ,[FromDate]
+				  ,[ToDate]
+				  ,[PosStatus]
+				  ,[Trade_PL] as TradePL
+				  ,[Real_PL] as RealizedPL
+				  ,[Unreal_PL] as UnrealizedPL
+				  ,[Net_PL] as NetPL
+				  ,[GrossValue]
+				  ,[MtmValue]
+				  ,[CFstoDate]
+				  ,[FwdCFs]
+				  ,[NetCfs]
+				  ,[ExpMWyr]
+				  ,[ExpMWh]
+				  ,[FeesPaid]
+				  ,[QTY]
+				  ,[MinVol]
+				  ,[MaxVol]
+				  ,[UsedVol]
+				  ,[Hours]
+				  ,[DeltaQuantity]
+				  ,[Expiry]
+				  ,[Strike]
+				  ,[Gamma]
+				  ,[Theta]
+				  ,[Vega]
+				  ,[Rho]
+				  ,[Delta]
+				  ,[Bkprice] AS BookPrice
+				  ,[Bkvalue] AS BookValue
+				  ,[Mktprice] AS MarketPrice
+				  ,[Uprice] AS UnderlyingPrice
+				  ,[Volat] AS Volatility
+				  ,dbo.ufn_TransIdCsvToExtIdCsv(TransactionIds) AS ExtIds
+			  FROM [VizPosMonData]
+			  
+			  WHERE ReportID=(
+								SELECT [ReportID]
+								FROM [VizPosMonReports]
+								WHERE [ReportDate]=@reportDate
+								AND [Workspace]=@workspace
+								AND [MonitorTitle]=@monitor
+							  )
+        ORDER By ExtIds
+	</SqlQuery>	
+</DbQuery>	
+							 

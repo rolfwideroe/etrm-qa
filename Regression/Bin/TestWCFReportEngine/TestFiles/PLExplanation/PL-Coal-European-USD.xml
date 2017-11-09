@@ -1,0 +1,72 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-01T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Coal-EU-ICE-USD" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="USD" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Coal-EU-ICE-USD-0001,EURC Nov11 30-SEP-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0002,EURP Nov11 30-SEP-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0003,EURC Nov11 30-SEP-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0004,EURP Nov11 30-SEP-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0005,EURC Sep11 02-AUG-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0006,EURP Sep11 02-AUG-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0007,EURC Sep11 02-AUG-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0008,EURP Sep11 02-AUG-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0009,EURC Mar12 31-JAN-12 130.00,Coal API #2,European,Coal-EU-ICE-USD,1.7,-17.8633510746801,-17.8633510746958,-17.8633510746958,-17.8633510746958,-17.8228490296899,-17.8228414265315,-17.8228414265315,-17.8228414265315</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0010,EURP Mar12 31-JAN-12 130.00,Coal API #2,European,Coal-EU-ICE-USD,126.2,126.240018461557,126.240018462307,126.240018462307,126.240018462307,126.280520507313,126.282824324486,126.282824324486,126.282824324486</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0011,EURC Mar12 31-JAN-12 80.00,Coal API #2,European,Coal-EU-ICE-USD,101.7,87.8390718192916,87.8390718185429,87.8390718185429,87.8390718185429,87.8809159108147,87.8826078497886,87.8826078497886,87.8826078497886</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0012,EURP Mar12 31-JAN-12 80.00,Coal API #2,European,Coal-EU-ICE-USD,6.7,-17.8034330581877,-17.8034330581714,-17.8034330581714,-17.8034330581714,-17.7615889658994,-17.761580386593,-17.761580386593,-17.761580386593</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0013;Coal-EU-ICE-USD-0014,EURC May11 01-APR-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0015;Coal-EU-ICE-USD-0016,EURC Jun12 02-MAY-12 130.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Coal-EU-ICE-USD-0001,EURC Nov11 30-SEP-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0002,EURP Nov11 30-SEP-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0003,EURC Nov11 30-SEP-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0004,EURP Nov11 30-SEP-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0005,EURC Sep11 02-AUG-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0006,EURP Sep11 02-AUG-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0007,EURC Sep11 02-AUG-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0008,EURP Sep11 02-AUG-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0009,EURC Mar12 31-JAN-12 130.00,Coal API #2,European,Coal-EU-ICE-USD,20,0.436648925319866,0.436648925304219,0.436648925304219,0.436648925304219,0.477150970310131,0.477158573468534,0.477158573468534,0.477158573468534</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0010,EURP Mar12 31-JAN-12 130.00,Coal API #2,European,Coal-EU-ICE-USD,144.5,144.540018461557,144.540018462307,144.540018462307,144.540018462307,144.580520507313,144.582824324486,144.582824324486,144.582824324486</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0011,EURC Mar12 31-JAN-12 80.00,Coal API #2,European,Coal-EU-ICE-USD,120,106.139071819292,106.139071818543,106.139071818543,106.139071818543,106.180915910815,106.182607849789,106.182607849789,106.182607849789</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0012,EURP Mar12 31-JAN-12 80.00,Coal API #2,European,Coal-EU-ICE-USD,25,0.496566941812264,0.496566941828603,0.496566941828603,0.496566941828603,0.538411034100551,0.538419613406961,0.538419613406961,0.538419613406961</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0013;Coal-EU-ICE-USD-0014,EURC May11 01-APR-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0015;Coal-EU-ICE-USD-0016,EURC Jun12 02-MAY-12 130.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Coal-EU-ICE-USD-0001,EURC Nov11 30-SEP-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0002,EURP Nov11 30-SEP-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0003,EURC Nov11 30-SEP-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0004,EURP Nov11 30-SEP-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0005,EURC Sep11 02-AUG-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0006,EURP Sep11 02-AUG-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0007,EURC Sep11 02-AUG-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0008,EURP Sep11 02-AUG-11 80.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0009,EURC Mar12 31-JAN-12 130.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0010,EURP Mar12 31-JAN-12 130.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0011,EURC Mar12 31-JAN-12 80.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0012,EURP Mar12 31-JAN-12 80.00,Coal API #2,European,Coal-EU-ICE-USD,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3,-18.3</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0013;Coal-EU-ICE-USD-0014,EURC May11 01-APR-11 130.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Coal-EU-ICE-USD-0015;Coal-EU-ICE-USD-0016,EURC Jun12 02-MAY-12 130.00,Coal API #2,European,Coal-EU-ICE-USD,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

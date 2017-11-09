@@ -1,0 +1,54 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-01T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Special-Cases-AsianSpreadNOK" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="USD" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0001,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,SYOSL,Asian,Special-Cases,-713.686421018188,-808.481258403089,-808.481258403089,-808.481258403089,-808.481258403089,-808.481258403089,-808.481258403089,-808.481258403089,-808.481258403089</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0002,ASIC/Q YR-11 0.00,SYOSL,Asian,Special-Cases,-101157.333791126,-102772.408415027,-96972.6467442693,-96972.6467442693,-96972.6467442693,-100090.27198471,-100092.930350853,-99890.3735260642,-99890.3735260642</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0003,ASIC/M Q4-11 15.00,SYOSL,Asian,Special-Cases,-13834.3790164141,-17476.2959395944,-11767.4828093509,-11767.4828093509,-11767.4828093509,-13283.0279232206,-13285.1594717207,-13107.022707476,-13107.022707476</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0004,ASIC/A YR-11 0.00,SYOSL,Asian,Special-Cases,-172075.695178004,-173682.958310773,-169079.303807779,-169079.303807779,-169079.303807779,-171553.272493675,-171554.68057557,-171504.616363585,-171504.616363585</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0005,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,EEX-France,Asian,Special-Cases,2037.41967052947,1312.38797076159,1312.38797076159,1312.38797076159,1312.38797076159,1312.38797076159,1312.38797076159,1312.38797076159,1312.38797076159</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0006,ASIC/Q YR-11 0.00,EEX-France,Asian,Special-Cases,351272.272368181,339696.424791777,233443.31890679,233443.31890679,233443.31890679,231578.456956477,231571.84239865,232155.54238222,232155.54238222</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0007,ASIC/M Q4-11 15.00,EEX-France,Asian,Special-Cases,132581.675376528,120085.474583631,25140.012257148,25140.012257148,25140.012257148,24140.381121346,24136.8008126304,24528.7963118045,24528.7963118045</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0008;Special-Cases-AsianSpreadNOK-0009,ASIC/A YR-11 0.00,EEX-France,Asian,Special-Cases,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0001,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,SYOSL,Asian,Special-Cases,130.547163326786,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0002,ASIC/Q YR-11 0.00,SYOSL,Asian,Special-Cases,34877.8841998969,33262.809575996,39062.571246754,39062.571246754,39062.571246754,35944.946006313,35942.2876401703,36144.8444649591,36144.8444649591</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0003,ASIC/M Q4-11 15.00,SYOSL,Asian,Special-Cases,34227.1495550145,30585.2326318342,36294.0457620776,36294.0457620776,36294.0457620776,34778.500648208,34776.3690997079,34954.5058639526,34954.5058639526</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0004,ASIC/A YR-11 0.00,SYOSL,Asian,Special-Cases,18516.8762505678,16909.6131177985,21513.2676207922,21513.2676207922,21513.2676207922,19039.298934896,19037.8908530015,19087.9550649861,19087.9550649861</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0005,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,EEX-France,Asian,Special-Cases,2060.67158353548,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0006,ASIC/Q YR-11 0.00,EEX-France,Asian,Special-Cases,209132.181378123,197556.33380172,91303.2279167329,91303.2279167329,91303.2279167329,89438.3659664199,89431.7514085929,90015.4513921626,90015.4513921626</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0007,ASIC/M Q4-11 15.00,EEX-France,Asian,Special-Cases,180643.203947956,168147.00315506,73201.5408285766,73201.5408285766,73201.5408285766,72201.9096927746,72198.329384059,72590.3248832331,72590.3248832331</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0008;Special-Cases-AsianSpreadNOK-0009,ASIC/A YR-11 0.00,EEX-France,Asian,Special-Cases,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0001,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,SYOSL,Asian,Special-Cases,-844.233584344974,-808.481258403089,-808.481258403089,-808.481258403089,-808.481258403089,-808.481258403089,-808.481258403089,-808.481258403089,-808.481258403089</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0002,ASIC/Q YR-11 0.00,SYOSL,Asian,Special-Cases,-136035.217991023,-136035.217991023,-136035.217991023,-136035.217991023,-136035.217991023,-136035.217991023,-136035.217991023,-136035.217991023,-136035.217991023</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0003,ASIC/M Q4-11 15.00,SYOSL,Asian,Special-Cases,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0004,ASIC/A YR-11 0.00,SYOSL,Asian,Special-Cases,-190592.571428571,-190592.571428571,-190592.571428571,-190592.571428571,-190592.571428571,-190592.571428571,-190592.571428571,-190592.571428571,-190592.571428571</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0005,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,EEX-France,Asian,Special-Cases,-23.2519130060076,1312.38797076159,1312.38797076159,1312.38797076159,1312.38797076159,1312.38797076159,1312.38797076159,1312.38797076159,1312.38797076159</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0006,ASIC/Q YR-11 0.00,EEX-France,Asian,Special-Cases,142140.090990058,142140.090990058,142140.090990058,142140.090990058,142140.090990058,142140.090990058,142140.090990058,142140.090990058,142140.090990058</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0007,ASIC/M Q4-11 15.00,EEX-France,Asian,Special-Cases,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286,-48061.5285714286</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianSpreadNOK-0008;Special-Cases-AsianSpreadNOK-0009,ASIC/A YR-11 0.00,EEX-France,Asian,Special-Cases,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857,12514.2857142857</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

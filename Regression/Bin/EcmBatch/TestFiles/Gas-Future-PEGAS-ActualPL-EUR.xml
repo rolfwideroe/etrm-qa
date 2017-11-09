@@ -1,0 +1,175 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-Future-PEGAS-ActualPL-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2015-10-15T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2014-12-01 00:00:00.000,0,HI,172,EUR,-16933080,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-01-01 00:00:00.000,0,HI,172,EUR,1922568,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-02-01 00:00:00.000,0,HI,172,EUR,1815960,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-03-01 00:00:00.000,0,HI,172,EUR,1997782,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-04-01 00:00:00.000,0,HI,172,EUR,1907388,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-05-01 00:00:00.000,0,HI,172,EUR,1989552,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-06-01 00:00:00.000,0,HI,172,EUR,1913196,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,1892904,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,1979904,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,1994316,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,1493518.71416353,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-11-01 00:00:00.000,0,TR,172,EUR,-135720.000000005,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2015-12-01 00:00:00.000,0,TR,172,EUR,-131316.000000007,monthly,Future,Cal-15,Gas-Future-PEGAS-0001</record>
+        <record>2014-12-01 00:00:00.000,0,HI,172,EUR,-4154995.5,monthly,Future,1/15,Gas-Future-PEGAS-0002</record>
+        <record>2015-01-01 00:00:00.000,0,HI,172,EUR,1916244,monthly,Future,1/15,Gas-Future-PEGAS-0002</record>
+        <record>2015-02-01 00:00:00.000,0,HI,172,EUR,1810248,monthly,Future,1/15,Gas-Future-PEGAS-0002</record>
+        <record>2015-03-01 00:00:00.000,0,HI,172,EUR,1991466.5,monthly,Future,1/15,Gas-Future-PEGAS-0002</record>
+        <record>2014-12-01 00:00:00.000,0,HI,172,EUR,-8687376,monthly,Future,Sum15,Gas-Future-PEGAS-0003</record>
+        <record>2015-01-01 00:00:00.000,0,HI,172,EUR,-267912,monthly,Future,Sum15,Gas-Future-PEGAS-0003</record>
+        <record>2015-02-01 00:00:00.000,0,HI,172,EUR,555588,monthly,Future,Sum15,Gas-Future-PEGAS-0003</record>
+        <record>2015-03-01 00:00:00.000,0,HI,172,EUR,-105408,monthly,Future,Sum15,Gas-Future-PEGAS-0003</record>
+        <record>2015-04-01 00:00:00.000,0,HI,172,EUR,1909908,monthly,Future,Sum15,Gas-Future-PEGAS-0003</record>
+        <record>2015-05-01 00:00:00.000,0,HI,172,EUR,1992156,monthly,Future,Sum15,Gas-Future-PEGAS-0003</record>
+        <record>2015-06-01 00:00:00.000,0,HI,172,EUR,1915716,monthly,Future,Sum15,Gas-Future-PEGAS-0003</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,1895508,monthly,Future,Sum15,Gas-Future-PEGAS-0003</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,1982508,monthly,Future,Sum15,Gas-Future-PEGAS-0003</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,1996836,monthly,Future,Sum15,Gas-Future-PEGAS-0003</record>
+        <record>2014-12-01 00:00:00.000,0,HI,172,EUR,-4221399,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-01-01 00:00:00.000,0,HI,172,EUR,-133644.5,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-02-01 00:00:00.000,0,HI,172,EUR,280543,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-03-01 00:00:00.000,0,HI,172,EUR,-98300.5,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-04-01 00:00:00.000,0,HI,172,EUR,-104927.5,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-05-01 00:00:00.000,0,HI,172,EUR,-17672,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-06-01 00:00:00.000,0,HI,172,EUR,5522.5,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-66270,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-155734.5,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-101614,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,1609366.21416353,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-11-01 00:00:00.000,0,TR,172,EUR,-23760.0000000048,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2015-12-01 00:00:00.000,0,TR,172,EUR,-15624.0000000073,monthly,Future,4/15,Gas-Future-PEGAS-0004</record>
+        <record>2014-12-01 00:00:00.000,0,HI,172,EUR,-1299984,monthly,Future,Feb-15,Gas-Future-PEGAS-0005</record>
+        <record>2015-01-01 00:00:00.000,0,HI,172,EUR,-25872,monthly,Future,Feb-15,Gas-Future-PEGAS-0005</record>
+        <record>2015-02-01 00:00:00.000,0,HI,172,EUR,1842840,monthly,Future,Feb-15,Gas-Future-PEGAS-0005</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-1572695,monthly,Future,Oct-15,Gas-Future-PEGAS-0006</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,1626128.71416353,monthly,Future,Oct-15,Gas-Future-PEGAS-0006</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-1543056,monthly,Future,Jan-16,Gas-Future-PEGAS-0007</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-19344,monthly,Future,Jan-16,Gas-Future-PEGAS-0007</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-8958768,monthly,Future,Win16,Gas-Future-PEGAS-0008</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-10920,monthly,Future,Win16,Gas-Future-PEGAS-0008</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-4542823,monthly,Future,1/16,Gas-Future-PEGAS-0009</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-48025.9999999998,monthly,Future,1/16,Gas-Future-PEGAS-0009</record>
+        <record>2014-12-01 00:00:00.000,0,HI,172,EUR,-17138940,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-01-01 00:00:00.000,0,HI,172,EUR,1183560,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-02-01 00:00:00.000,0,HI,172,EUR,1062528,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-03-01 00:00:00.000,0,HI,172,EUR,1010496.5,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-04-01 00:00:00.000,0,HI,172,EUR,1056144,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-05-01 00:00:00.000,0,HI,172,EUR,1097592,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-06-01 00:00:00.000,0,HI,172,EUR,912348,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,1222728,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,996720,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,1314672,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,604946.173811193,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-11-01 00:00:00.000,0,TR,172,EUR,-122039.999999995,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2015-12-01 00:00:00.000,0,TR,172,EUR,-117552.000000003,monthly,Future,Cal-15,Gas-Future-PEGAS-0010</record>
+        <record>2014-12-01 00:00:00.000,0,HI,172,EUR,-4188460,monthly,Future,1/15,Gas-Future-PEGAS-0011</record>
+        <record>2015-01-01 00:00:00.000,0,HI,172,EUR,1171284,monthly,Future,1/15,Gas-Future-PEGAS-0011</record>
+        <record>2015-02-01 00:00:00.000,0,HI,172,EUR,1051440,monthly,Future,1/15,Gas-Future-PEGAS-0011</record>
+        <record>2015-03-01 00:00:00.000,0,HI,172,EUR,998237,monthly,Future,1/15,Gas-Future-PEGAS-0011</record>
+        <record>2014-12-01 00:00:00.000,0,HI,172,EUR,-8797176,monthly,Future,Sum15,Gas-Future-PEGAS-0012</record>
+        <record>2015-01-01 00:00:00.000,0,HI,172,EUR,-256932,monthly,Future,Sum15,Gas-Future-PEGAS-0012</record>
+        <record>2015-02-01 00:00:00.000,0,HI,172,EUR,573156,monthly,Future,Sum15,Gas-Future-PEGAS-0012</record>
+        <record>2015-03-01 00:00:00.000,0,HI,172,EUR,-107604,monthly,Future,Sum15,Gas-Future-PEGAS-0012</record>
+        <record>2015-04-01 00:00:00.000,0,HI,172,EUR,1055424,monthly,Future,Sum15,Gas-Future-PEGAS-0012</record>
+        <record>2015-05-01 00:00:00.000,0,HI,172,EUR,1096848,monthly,Future,Sum15,Gas-Future-PEGAS-0012</record>
+        <record>2015-06-01 00:00:00.000,0,HI,172,EUR,911628,monthly,Future,Sum15,Gas-Future-PEGAS-0012</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,1221984,monthly,Future,Sum15,Gas-Future-PEGAS-0012</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,995976,monthly,Future,Sum15,Gas-Future-PEGAS-0012</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,1313952,monthly,Future,Sum15,Gas-Future-PEGAS-0012</record>
+        <record>2014-12-01 00:00:00.000,0,HI,172,EUR,-4288773.5,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-01-01 00:00:00.000,0,HI,172,EUR,-124808.5,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-02-01 00:00:00.000,0,HI,172,EUR,207646,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-03-01 00:00:00.000,0,HI,172,EUR,-16567.5,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-04-01 00:00:00.000,0,HI,172,EUR,-99405,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-05-01 00:00:00.000,0,HI,172,EUR,-15463,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-06-01 00:00:00.000,0,HI,172,EUR,4418,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-54120.5,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-133644.5,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-106032,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,707756.173811193,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-11-01 00:00:00.000,0,TR,172,EUR,-22679.999999995,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2015-12-01 00:00:00.000,0,TR,172,EUR,-14880.0000000027,monthly,Future,4/15,Gas-Future-PEGAS-0013</record>
+        <record>2014-12-01 00:00:00.000,0,HI,172,EUR,-1315440,monthly,Future,Feb-15,Gas-Future-PEGAS-0014</record>
+        <record>2015-01-01 00:00:00.000,0,HI,172,EUR,-28560,monthly,Future,Feb-15,Gas-Future-PEGAS-0014</record>
+        <record>2015-02-01 00:00:00.000,0,HI,172,EUR,1091760,monthly,Future,Feb-15,Gas-Future-PEGAS-0014</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-1571205,monthly,Future,Oct-15,Gas-Future-PEGAS-0015</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,718558.673811193,monthly,Future,Oct-15,Gas-Future-PEGAS-0015</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-1547892,monthly,Future,Jan-16,Gas-Future-PEGAS-0016</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-21204,monthly,Future,Jan-16,Gas-Future-PEGAS-0016</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-8989344,monthly,Future,Win16,Gas-Future-PEGAS-0017</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-24024,monthly,Future,Win16,Gas-Future-PEGAS-0017</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-4536274,monthly,Future,1/16,Gas-Future-PEGAS-0018</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-77496.5000000002,monthly,Future,1/16,Gas-Future-PEGAS-0018</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-1564872.5,monthly,Future,Oct-15,Gas-Future-PEGAS-0019</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-2753.66057475394,monthly,Future,Oct-15,Gas-Future-PEGAS-0019</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-1481760,monthly,Future,Sep-15,Gas-Future-PEGAS-0020</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-5472,monthly,Future,Sep-15,Gas-Future-PEGAS-0020</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-1572695,monthly,Future,Oct-15,Gas-Future-PEGAS-0021</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,1664992.68314991,monthly,Future,Oct-15,Gas-Future-PEGAS-0021</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-1503360,monthly,Future,Sep-15,Gas-Future-PEGAS-0022</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,2105916,monthly,Future,Sep-15,Gas-Future-PEGAS-0022</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-1383468,monthly,Future,Aug-15,Gas-Future-PEGAS-0023</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,924552,monthly,Future,Aug-15,Gas-Future-PEGAS-0023</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-1395385,monthly,Future,Oct-15,Gas-Future-PEGAS-0024</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-41347.5,monthly,Future,Oct-15,Gas-Future-PEGAS-0024</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-62207.4999999999,monthly,Future,Oct-15,Gas-Future-PEGAS-0024</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,659051.132864011,monthly,Future,Oct-15,Gas-Future-PEGAS-0024</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-4126412,monthly,Future,4/15,Gas-Future-PEGAS-0025</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-99405,monthly,Future,4/15,Gas-Future-PEGAS-0025</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-164570.5,monthly,Future,4/15,Gas-Future-PEGAS-0025</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,640798.632864011,monthly,Future,4/15,Gas-Future-PEGAS-0025</record>
+        <record>2015-11-01 00:00:00.000,0,TR,172,EUR,-30599.9999999979,monthly,Future,4/15,Gas-Future-PEGAS-0025</record>
+        <record>2015-12-01 00:00:00.000,0,TR,172,EUR,-17856.000000002,monthly,Future,4/15,Gas-Future-PEGAS-0025</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-4056014,monthly,Future,1/16,Gas-Future-PEGAS-0026</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-125522.5,monthly,Future,1/16,Gas-Future-PEGAS-0026</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-147352.5,monthly,Future,1/16,Gas-Future-PEGAS-0026</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-67673,monthly,Future,1/16,Gas-Future-PEGAS-0026</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-8555616,monthly,Future,Sum16,Gas-Future-PEGAS-0027</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-197640,monthly,Future,Sum16,Gas-Future-PEGAS-0027</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-191052,monthly,Future,Sum16,Gas-Future-PEGAS-0027</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-114192,monthly,Future,Sum16,Gas-Future-PEGAS-0027</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-16847712,monthly,Future,Cal-16,Gas-Future-PEGAS-0028</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-395280,monthly,Future,Cal-16,Gas-Future-PEGAS-0028</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-439200,monthly,Future,Cal-16,Gas-Future-PEGAS-0028</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-197640,monthly,Future,Cal-16,Gas-Future-PEGAS-0028</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-382.848232632715,monthly,Future,Aug-15,Gas-Future-PEGAS-0029</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,689.194674327752,monthly,Future,Aug-15,Gas-Future-PEGAS-0029</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-393.997109716783,monthly,Future,Oct-15,Gas-Future-PEGAS-0030</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-19.142411597174,monthly,Future,Oct-15,Gas-Future-PEGAS-0030</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-25.6634529104973,monthly,Future,Oct-15,Gas-Future-PEGAS-0030</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,551.347431417873,monthly,Future,Oct-15,Gas-Future-PEGAS-0030</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-1073.14218895432,monthly,Future,4/15,Gas-Future-PEGAS-0031</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-93.642424686637,monthly,Future,4/15,Gas-Future-PEGAS-0031</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-101.133818661568,monthly,Future,4/15,Gas-Future-PEGAS-0031</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,539.778303665278,monthly,Future,4/15,Gas-Future-PEGAS-0031</record>
+        <record>2015-11-01 00:00:00.000,0,TR,172,EUR,-19.7234493261798,monthly,Future,4/15,Gas-Future-PEGAS-0031</record>
+        <record>2015-12-01 00:00:00.000,0,TR,172,EUR,-13.0351114272766,monthly,Future,4/15,Gas-Future-PEGAS-0031</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-986.142947851846,monthly,Future,1/16,Gas-Future-PEGAS-0032</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-90.7720807995031,monthly,Future,1/16,Gas-Future-PEGAS-0032</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-127.821909697259,monthly,Future,1/16,Gas-Future-PEGAS-0032</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-78.4221378335845,monthly,Future,1/16,Gas-Future-PEGAS-0032</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-1946.35101547526,monthly,Future,Win16,Gas-Future-PEGAS-0033</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-163.019247150128,monthly,Future,Win16,Gas-Future-PEGAS-0033</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-135.849372625107,monthly,Future,Win16,Gas-Future-PEGAS-0033</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-40.7548117875323,monthly,Future,Win16,Gas-Future-PEGAS-0033</record>
+        <record>2015-07-01 00:00:00.000,0,HI,172,EUR,-4410.80249546413,monthly,Future,Cal-16,Gas-Future-PEGAS-0034</record>
+        <record>2015-08-01 00:00:00.000,0,HI,172,EUR,-322.862794680448,monthly,Future,Cal-16,Gas-Future-PEGAS-0034</record>
+        <record>2015-09-01 00:00:00.000,0,HI,172,EUR,-310.444994885047,monthly,Future,Cal-16,Gas-Future-PEGAS-0034</record>
+        <record>2015-10-01 00:00:00.000,0,HI,172,EUR,-191.234116849189,monthly,Future,Cal-16,Gas-Future-PEGAS-0034</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

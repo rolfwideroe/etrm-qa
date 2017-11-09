@@ -1,0 +1,44 @@
+<CurveTestCase>
+	<InputData>
+		<FromDate>2012-01-01</FromDate>
+		<ToDate>2012-12-31</ToDate>
+		<LoadType>Base</LoadType>
+		<PriceBookAppendix></PriceBookAppendix>
+		<ReferenceAreaName>BRN</ReferenceAreaName>
+		<ReportCurrencyIsoCode>USD</ReportCurrencyIsoCode>
+		<ReportDate>2011-11-01</ReportDate>
+		<Resolution>Month</Resolution>
+		<TemplateName>BrentOil</TemplateName>
+	</InputData>
+	<ExpectedValues>
+		<ExpectedCurveVolatility>
+			<WinterShort>0.9</WinterShort>
+			<WinterMedium>0.17</WinterMedium>
+			<WinterLong>0.1</WinterLong>
+			<WinterNumberOfYearsBetweenShortAndMedium>0.5</WinterNumberOfYearsBetweenShortAndMedium>
+			<SummerShort>0.90</SummerShort>
+			<SummerMedium>0.17</SummerMedium>
+			<SummerLong>0.1</SummerLong>		
+			<SummerNumberOfYearsBetweenShortAndMedium>0.5</SummerNumberOfYearsBetweenShortAndMedium>		
+		</ExpectedCurveVolatility>
+		<ExpectedProperties>
+			<CurveType>MarketPriceCurve</CurveType>
+			<VolumeUnit>bbl</VolumeUnit>
+			<TimeZone>CET</TimeZone>
+		</ExpectedProperties>
+		<ExpectedCurveValues>
+			<ExpectedCurveValue Date="2012-01-01T00:00:00" Value="108.380000000103"/>
+			<ExpectedCurveValue Date="2012-02-01T00:00:00" Value="107.579999999898"/>
+			<ExpectedCurveValue Date="2012-03-01T00:00:00" Value="106.850000000231"/>
+			<ExpectedCurveValue Date="2012-04-01T00:00:00" Value="106.339999999956"/>
+			<ExpectedCurveValue Date="2012-05-01T00:00:00" Value="105.92999999979"/>
+			<ExpectedCurveValue Date="2012-06-01T00:00:00" Value="105.529999999759"/>
+			<ExpectedCurveValue Date="2012-07-01T00:00:00" Value="105.1600000002"/>
+			<ExpectedCurveValue Date="2012-08-01T00:00:00" Value="104.779999999898"/>
+			<ExpectedCurveValue Date="2012-09-01T00:00:00" Value="104.340000000143"/>
+			<ExpectedCurveValue Date="2012-10-01T00:00:00" Value="103.940000000332"/>
+			<ExpectedCurveValue Date="2012-11-01T00:00:00" Value="103.569999999571"/>
+			<ExpectedCurveValue Date="2012-12-01T00:00:00" Value="103.210000000315"/>
+		</ExpectedCurveValues>
+	</ExpectedValues>
+</CurveTestCase>

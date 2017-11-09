@@ -1,0 +1,23 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Oil-Future-ICE-USD-CurrExposure-NOK-IntraDay</workspace>
+    <monitor>Oil-Future-ICE-USD-CurrExposure-NOK-IntraDay</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>Oil-Future-ICE-USD,Oil,Dec-11,2011-12-01 00:00:00.000,2011-12-31 00:00:00.000,Future,Financial,Base,BrentOil,ICE,CET,USD,Oil-Future-ICE-USD-0004;Oil-Future-ICE-USD-0010;Oil-Future-ICE-USD-0028,USD,2011-12-31 00:00:00.000,-1134999.99999278</record>
+        <record>Oil-Future-ICE-USD,Oil,Mar-12,2012-03-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Financial,Base,BrentOil,ICE,CET,USD,Oil-Future-ICE-USD-0005;Oil-Future-ICE-USD-0011;Oil-Future-ICE-USD-0029,USD,2012-03-31 00:00:00.000,-649999.999991849</record>
+        <record>Oil-Future-ICE-USD,Oil,Dec-13,2013-12-01 00:00:00.000,2013-12-31 00:00:00.000,Future,Financial,Base,BrentOil,ICE,CET,USD,Oil-Future-ICE-USD-0006;Oil-Future-ICE-USD-0012;Oil-Future-ICE-USD-0030,USD,2013-12-31 00:00:00.000,-124999.999646053</record>
+        <record>Oil-Future-ICE-USD,Oil,Dec-11,2011-12-01 00:00:00.000,2011-12-31 00:00:00.000,Future,Physical,Base,GasOil,ICE,CET,USD,Oil-Future-ICE-USD-0016;Oil-Future-ICE-USD-0022;Oil-Future-ICE-USD-0034,USD,2011-12-31 00:00:00.000,-0.000113308429718018</record>
+        <record>Oil-Future-ICE-USD,Oil,Mar-12,2012-03-01 00:00:00.000,2012-03-31 00:00:00.000,Future,Physical,Base,GasOil,ICE,CET,USD,Oil-Future-ICE-USD-0017;Oil-Future-ICE-USD-0023;Oil-Future-ICE-USD-0035,USD,2012-03-31 00:00:00.000,-499999.999857664</record>
+        <record>Oil-Future-ICE-USD,Oil,Dec-13,2013-12-01 00:00:00.000,2013-12-31 00:00:00.000,Future,Physical,Base,GasOil,ICE,CET,USD,Oil-Future-ICE-USD-0018;Oil-Future-ICE-USD-0024;Oil-Future-ICE-USD-0036,USD,2013-12-31 00:00:00.000,1124999.99956346</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,63 @@
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>The message does not conform to the deal insert xml schema. 
+(1)	The element 'Portfolios' has invalid child element 'Paidreceived'. List of possible elements expected: 'BuySell, PaidReceived'.
+</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Forward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<Paidreceived>Paid</Paidreceived>
+		</Portfolios>
+		<ElectricityForward>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<LoadProfile>SystemBase</LoadProfile>
+				<FromDate>2008-01-01</FromDate>
+				<ToDate>2008-12-31</ToDate>
+				<Financial/>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>40</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>-28</Price>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</ElectricityForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2007-12-24T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>ElectricityForward; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailElectricityForwardPaid</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

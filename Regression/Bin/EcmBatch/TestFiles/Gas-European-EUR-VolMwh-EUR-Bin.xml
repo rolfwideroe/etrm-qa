@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-EU-ICE-TTF-EUR-VolMwh-EUR-Bin</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-10-27T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-3600,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0010</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,3600,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0011</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-7200,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0012</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,879213.2104749,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0025</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,-879213.2104749,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0026</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-3600,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0038</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,3600,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0039</record>
+        <record>2012-06-01 00:00:00.000,0,TR,165,EUR,-7200,monthly,European,EURP Jun12 25-MAY-12 45.00,Gas-European-EUR-0040</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,879213.2104749,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0053</record>
+        <record>2012-04-01 00:00:00.000,0,TR,165,EUR,-879213.2104749,monthly,European,EURC Apr12 27-MAR-12 45.00,Gas-European-EUR-0054</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

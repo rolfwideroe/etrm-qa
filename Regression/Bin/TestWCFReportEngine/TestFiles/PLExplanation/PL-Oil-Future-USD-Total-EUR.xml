@@ -1,0 +1,48 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="PL-Explanation-Oil-Future" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-Oil-Future-0001,Oct-10,BrentOil,Future,PL-Explanation-Oil-Future,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0002,Nov-11,BrentOil,Future,PL-Explanation-Oil-Future,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0003,Dec-11,BrentOil,Future,PL-Explanation-Oil-Future,5191485.975885,5179965.91993415,4208567.49662825,4208567.49662825,4208567.49662825,4208567.49662825,4208567.49662825,4201330.83053934,4201330.83053934</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0004,Oct-10,GasOil,Future,PL-Explanation-Oil-Future,214281954.853706,214281954.853706,214281954.853706,214281954.853706,214281954.853706,214281954.853706,214281954.853706,214281954.853706,214281954.853706</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0005,Nov-11,GasOil,Future,PL-Explanation-Oil-Future,308727070.666447,313912302.067688,313912302.067688,313912302.067688,313912302.067688,313912302.067688,313912302.067688,313912302.067688,313912302.067688</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0006;PL-Explanation-Oil-Future-0007,Dec-11,GasOil,Future,PL-Explanation-Oil-Future,346260.38643953,346260.38643953,346260.38643953,346260.38643953,346260.38643953,346260.38643953,346260.38643953,346260.38643953,346260.38643953</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-Oil-Future-0001,Oct-10,BrentOil,Future,PL-Explanation-Oil-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0002,Nov-11,BrentOil,Future,PL-Explanation-Oil-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0003,Dec-11,BrentOil,Future,PL-Explanation-Oil-Future,942292.852574907,145527.853670955,-825870.569634944,-825870.569634944,-825870.569634944,-825870.569634944,-825870.569634944,-833107.235723861,-833107.235723861</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0004,Oct-10,GasOil,Future,PL-Explanation-Oil-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0005,Nov-11,GasOil,Future,PL-Explanation-Oil-Future,5452114.96991414,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0006;PL-Explanation-Oil-Future-0007,Dec-11,GasOil,Future,PL-Explanation-Oil-Future,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-Oil-Future-0001,Oct-10,BrentOil,Future,PL-Explanation-Oil-Future,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478,-7867625.53512478</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0002,Nov-11,BrentOil,Future,PL-Explanation-Oil-Future,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671,5165363.84834671</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0003,Dec-11,BrentOil,Future,PL-Explanation-Oil-Future,4249193.12331009,5034438.0662632,5034438.0662632,5034438.0662632,5034438.0662632,5034438.0662632,5034438.0662632,5034438.0662632,5034438.0662632</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0004,Oct-10,GasOil,Future,PL-Explanation-Oil-Future,214281954.853706,214281954.853706,214281954.853706,214281954.853706,214281954.853706,214281954.853706,214281954.853706,214281954.853706,214281954.853706</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0005,Nov-11,GasOil,Future,PL-Explanation-Oil-Future,303274955.696533,313912302.067688,313912302.067688,313912302.067688,313912302.067688,313912302.067688,313912302.067688,313912302.067688,313912302.067688</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-Oil-Future-0006;PL-Explanation-Oil-Future-0007,Dec-11,GasOil,Future,PL-Explanation-Oil-Future,346260.38643953,346260.38643953,346260.38643953,346260.38643953,346260.38643953,346260.38643953,346260.38643953,346260.38643953,346260.38643953</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

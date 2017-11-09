@@ -1,0 +1,126 @@
+<TestCase>
+	<TestResult>Success</TestResult>
+	<TestData>
+		<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+			<MetaData>
+				<Timezone>CET-6</Timezone>
+			</MetaData>
+			<Transaction>
+				<TransactionType>Automatic</TransactionType>
+				<DealType>Gas-Forward</DealType>
+				<Portfolios>
+					<Portfolio>API Test Customer</Portfolio>
+					<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+					<BuySell>Buy</BuySell>
+				</Portfolios>
+				<GasForward>
+					<InstrumentData>
+						<ExecutionVenue>None</ExecutionVenue>
+						<PriceBasis>Endex Zeebrugge</PriceBasis>
+						<LoadProfile>Base Week</LoadProfile>
+						<FromDate>2008-01-01</FromDate>
+						<ToDate>2008-12-31</ToDate>
+						<Financial/>
+					</InstrumentData>
+					<SettlementData>
+						<Quantity>38</Quantity>
+						<QuantityUnit>th/d</QuantityUnit>
+						<Price>28</Price>
+						<Currency>GBP</Currency>
+						<PriceVolumeUnit>CentsPerTherm</PriceVolumeUnit>
+						<CurrencySource>Viz</CurrencySource>
+						<Clearing>Electronic</Clearing>
+						<Broker>API Test Broker</Broker>
+					</SettlementData>
+					<FeesData>
+						<Fees>
+							<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.5" FeeUnit="EUR" />
+							<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.2" FeeUnit="EUR"/>
+							<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="EUR" />
+							<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.01" FeeUnit="EUR"/>
+						</Fees>
+					</FeesData>			
+				</GasForward>
+				<DealDetails>
+					<Status>Active</Status>
+					<Trader>DealImport</Trader>
+					<TradeDate>2007-08-27T15:12:53Z</TradeDate>
+				</DealDetails>
+				<ReferenceData>
+					<Comment>GasForward; should pass</Comment>
+					<DealGroup>API Test</DealGroup>
+					<ExternalId>PassGasForwardFixedFees</ExternalId>
+					<ExternalSource>XMLFileImport</ExternalSource>
+					<TicketNumber>TicketNumber</TicketNumber>
+				</ReferenceData>
+			</Transaction>
+		</DealInsert>
+	</TestData>
+	<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+	<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<TransactionId>429</TransactionId>
+		<DealType>Gas-Forward</DealType>
+		<BuySell>Buy</BuySell>
+		<DeliveryType>Financial</DeliveryType>
+		<Portfolios>
+			<PortfolioName>API Test Customer</PortfolioName>
+			<PortfolioExternalId>API Test Customer</PortfolioExternalId>
+			<CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+			<CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+		</Portfolios>
+		<InstrumentData>
+			<ExecutionVenue>None</ExecutionVenue>
+			<InstrumentName>CAL-08</InstrumentName>
+			<PriceBasis>Endex Zeebrugge</PriceBasis>
+			<FromDate>2008-01-01T00:00:00</FromDate>
+			<ToDate>2008-12-31T00:00:00</ToDate>
+			<LoadProfile>Base Week</LoadProfile>
+			<TimeZone>CET 06-06</TimeZone>
+		</InstrumentData>
+		<SettlementData>
+			<Quantity>38</Quantity>
+			<QuantityUnit>thd</QuantityUnit>
+			<Price>28</Price>
+			<PriceIsoCurrency>GBP</PriceIsoCurrency>
+			<PriceVolumeUnit>CentsPerTherm</PriceVolumeUnit>
+			<CurrencySource>Viz</CurrencySource>
+		</SettlementData>
+		<DealDetails>
+			<Trader>DealImport</Trader>
+			<Status>Active</Status>
+			<TradeDateTimeUtc>2007-08-27T15:12:53Z</TradeDateTimeUtc>
+		</DealDetails>
+		<FeesData>
+			<Broker>API Test Broker</Broker>
+			<ClearingType>Electronic</ClearingType>
+			<Fees>
+				<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.5" FeeUnit="EUR" />
+				<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.2" FeeUnit="EUR"/>
+				<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="EUR" />
+				<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.01" FeeUnit="EUR"/>
+			</Fees>
+		</FeesData>
+		<ReferenceData>
+			<ExternalId>PassGasForwardFixedFees</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+			<DealGroups>
+				<DealGroup Name="DealGroup1" Value="API Test" />
+			</DealGroups>
+			<Comment>GasForward; should pass</Comment>
+			<ModificationDateTimeUtc>2014-08-12T12:18:12Z</ModificationDateTimeUtc>
+			<RiskValue>0</RiskValue>
+			<Originator>true</Originator>
+			<Deliveries>8784</Deliveries>
+			<OriginalQuantity>38</OriginalQuantity>
+			<ReferringId>430</ReferringId>
+		</ReferenceData>
+		<TransactionWorkFlowDetails>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Audited>false</Audited>
+		</TransactionWorkFlowDetails>
+	</QaTransactionDTO>
+</TestCase>

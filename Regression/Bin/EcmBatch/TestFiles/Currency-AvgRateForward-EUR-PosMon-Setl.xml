@@ -1,0 +1,25 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Currency-AvgRateForward-PosMon-Setl</workspace>
+    <monitor>Currency-AvgRateForward-PosMon-Setl</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0159 Currency-AvgRateForward,,Financial,,M06-11,M06-11,,CET,USD,ECB,Currency,,Average Rate Forward,USDEUR 010611 - 300611,,,,2011-06-01 00:00:00.000,2011-06-30 00:00:00.000,Expired,9000.00000000012,206273.684210527,0,206273.684210527,0,0,206273.684210527,0,206273.684210527,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,1.2423,-1242300,0,0,0,Currency-AvgRateForward-0001;Currency-AvgRateForward-0002;Currency-AvgRateForward-0003</record>
+        <record>0159 Currency-AvgRateForward,,Financial,,Q4-11,Q4-11,ECS Curve,CET,USD,ECB,Currency,,Average Rate Forward,USDEUR 011011 - 311211,,,,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Active,9000.00000000012,9000.00000000012,126152.110231882,135152.110231883,1368452.11023188,126152.110231882,0,135152.110231883,135152.110231883,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,1.2423,-1242300,1.36845211023188,0,0,Currency-AvgRateForward-0004;Currency-AvgRateForward-0005;Currency-AvgRateForward-0006</record>
+        <record>0159 Currency-AvgRateForward,,Financial,,Q1-12,Q1-12,ECS Curve,CET,USD,ECB,Currency,,Average Rate Forward,USDEUR 010112 - 310312,,,,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Active,9000.00000000012,9000.00000000012,120905.953310293,129905.953310293,1363205.95331029,120905.953310293,0,129905.953310293,129905.953310293,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,1.2423,-1242300,1.36320595331029,0,0,Currency-AvgRateForward-0007;Currency-AvgRateForward-0008;Currency-AvgRateForward-0009</record>
+        <record>0159 Currency-AvgRateForward,,Financial,,M06-11,M06-11,,CET,EUR,ECB,Currency,,Average Rate Forward,EURUSD 010611 - 300611,,,,2011-06-01 00:00:00.000,2011-06-30 00:00:00.000,Expired,109800,336169.522793252,0,336169.522793252,0,0,336169.522793252,0,336169.522793252,0,0,0,-1000000,0,0,0,0,-1000000,NULL,0,0,0,0,0,0,0.9211,921100,0,0,0,Currency-AvgRateForward-0010;Currency-AvgRateForward-0011;Currency-AvgRateForward-0012</record>
+        <record>0159 Currency-AvgRateForward,,Financial,,Q4-11,Q4-11,ECS Curve,CET,EUR,ECB,Currency,,Average Rate Forward,EURUSD 011011 - 311211,,,,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Active,109800,109800,190264.261842702,300064.261842702,-730835.738157298,190264.261842702,0,300064.261842702,300064.261842702,0,0,0,-1000000,0,0,0,0,-1000000,NULL,0,0,0,0,0,0,0.9211,921100,0.730835738157298,0,0,Currency-AvgRateForward-0013;Currency-AvgRateForward-0014;Currency-AvgRateForward-0015</record>
+        <record>0159 Currency-AvgRateForward,,Financial,,Q1-12,Q1-12,ECS Curve,CET,EUR,ECB,Currency,,Average Rate Forward,EURUSD 010112 - 310312,,,,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Active,170800,170800,0,170800,0,0,0,170800,170800,0,0,0,0,0,0,0,0,0,NULL,0,0,0,0,0,0,0,0,0.733565362202167,0,0,Currency-AvgRateForward-0016;Currency-AvgRateForward-0017;Currency-AvgRateForward-0018</record>
+        <record>0159 Currency-AvgRateForward,,Financial,,M06-11,M06-11,,CET,SEK,ECB,Currency,,Average Rate Forward,SEKEUR 010611 - 300611,,,,2011-06-01 00:00:00.000,2011-06-30 00:00:00.000,Expired,19999.9999999996,124647.368421051,0,124647.368421051,0,0,124647.368421051,0,124647.368421051,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,9.0124,-9012400,0,0,0,Currency-AvgRateForward-0019;Currency-AvgRateForward-0020;Currency-AvgRateForward-0021</record>
+        <record>0159 Currency-AvgRateForward,,Financial,,Q4-11,Q4-11,ECS Curve,CET,SEK,ECB,Currency,,Average Rate Forward,SEKEUR 011011 - 311211,,,,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Active,19999.9999999996,19999.9999999996,64413.5688205697,84413.5688205692,9076813.56882057,64413.5688205697,0,84413.5688205692,84413.5688205692,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,9.0124,-9012400,9.07681356882057,0,0,Currency-AvgRateForward-0022;Currency-AvgRateForward-0023;Currency-AvgRateForward-0024</record>
+        <record>0159 Currency-AvgRateForward,,Financial,,Q1-12,Q1-12,ECS Curve,CET,SEK,ECB,Currency,,Average Rate Forward,SEKEUR 010112 - 310312,,,,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Active,19999.9999999996,19999.9999999996,65116.0373892467,85116.0373892463,9077516.03738925,65116.0373892467,0,85116.0373892463,85116.0373892463,0,0,0,1000000,0,0,0,0,1000000,NULL,0,0,0,0,0,0,9.0124,-9012400,9.07751603738925,0,0,Currency-AvgRateForward-0025;Currency-AvgRateForward-0026;Currency-AvgRateForward-0027</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

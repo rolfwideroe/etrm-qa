@@ -1,0 +1,33 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-Storage-TTF-Mix-Exposure-NOK</workspace>
+    <monitor>Gas-Storage-TTF-Mix-Exposure-NOK</monitor>
+    <reportdate>2011-11-15T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>StorageCustomerTTF,Gas,Gas-Storage-TTF-Mix,2011-01-01 00:00:00.000,2011-12-31 00:00:00.000,Storage,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-TTF-Mix1,ICE TTF,MWh,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,1000,0,0</record>
+        <record>StorageCustomerTTF,Gas,Gas-Storage-TTF-Mix-StructFlex-MW-0001,2011-11-02 00:00:00.000,2011-11-20 00:00:00.000,Structured deal,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-TTF-Mix-StructFlex-MW-0001,ICE TTF,MWh,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,960,0,0</record>
+        <record>StorageCustomerTTF,Gas,Gas-Storage-TTF-Mix-StructFlex-MW-0001,2011-11-02 00:00:00.000,2011-11-20 00:00:00.000,Structured deal,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-TTF-Mix-StructFlex-MW-0001,ICE TTF,MWh,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,960,0,0</record>
+        <record>StorageCustomerTTF,Gas,Gas-Storage-TTF-Mix-StructFlex-MW-0001,2011-11-02 00:00:00.000,2011-11-20 00:00:00.000,Structured deal,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-TTF-Mix-StructFlex-MW-0001,ICE TTF,MWh,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,960,0,0</record>
+        <record>StorageCustomerTTF,Gas,Gas-Storage-TTF-Mix-StructFlex-MW-0001,2011-11-02 00:00:00.000,2011-11-20 00:00:00.000,Structured deal,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-TTF-Mix-StructFlex-MW-0001,ICE TTF,MWh,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,960,0,0</record>
+        <record>StorageCustomerTTF,Gas,Gas-Storage-TTF-Mix-StructFlex-MW-0001,2011-11-02 00:00:00.000,2011-11-20 00:00:00.000,Structured deal,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-TTF-Mix-StructFlex-MW-0001,ICE TTF,MWh,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,960,0,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>ICE TTF,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,500.171624903906,0,0</record>
+        <record>ICE TTF,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,485.982225692367,0,0</record>
+        <record>ICE TTF,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,471.813084430844,0,0</record>
+        <record>ICE TTF,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,457.681789026833,0,0</record>
+        <record>ICE TTF,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,443.611346805147,0,0</record>
+        <record>ICE TTF,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,429.630185603021,0,0</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

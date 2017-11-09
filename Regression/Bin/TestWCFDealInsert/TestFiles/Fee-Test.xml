@@ -1,0 +1,3124 @@
+<?xml version="1.0"?>
+<BulkDealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-Forward</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>CounterParty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityForward>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2010-06-01</FromDate>
+          <ToDate>2010-06-01</ToDate>
+          <Financial />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>1</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>50.77</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+          <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+          </Fees>
+        </FeesData>
+      </ElectricityForward>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-El-Forward</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-Future</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>CounterParty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityFuture>
+        <InstrumentData>
+          <ExecutionVenue>Nord Pool</ExecutionVenue>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2011-10-29</FromDate>
+          <ToDate>2011-10-29</ToDate>
+          <Financial />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>1</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>33.12</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+          </Fees>
+        </FeesData>
+      </ElectricityFuture>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2011-10-28T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-El-Future-NordPool</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-Asian</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>CounterParty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityAsian>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2010-01-01</FromDate>
+          <ToDate>2010-01-31</ToDate>
+          <Financial />
+          <PutCall>Call</PutCall>
+          <Strike>45</Strike>
+          <SamplingPeriod>All</SamplingPeriod>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>1</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>2.33</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+          </Fees>
+        </FeesData>
+      </ElectricityAsian>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-Asian</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Elcertificate-Forward</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>CounterParty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Sell</BuySell>
+      </Portfolios>
+      <ElcertificateForward>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>Elcertificate</PriceBasis>
+          <SettlementDate>2011-03-18</SettlementDate>
+          <Physical />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>1000</Quantity>
+          <QuantityUnit>ECS</QuantityUnit>
+          <Price>177.87</Price>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerECS</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/ECS"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/ECS"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/ECS"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/ECS"/>
+          </Fees>
+        </FeesData>
+      </ElcertificateForward>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-TestElCert-Forward</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-European</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>CounterParty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Sell</BuySell>
+      </Portfolios>
+      <ElectricityEuropean>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Peak</LoadProfile>
+          <FromDate>2011-11-01</FromDate>
+          <ToDate>2011-11-30</ToDate>
+          <Financial />
+          <PutCall>Call</PutCall>
+          <Strike>45</Strike>
+          <ExpiryDate>2011-10-20</ExpiryDate>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>1</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>3.66</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+          </Fees>
+        </FeesData>
+      </ElectricityEuropean>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-El-European</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+		<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-European</DealType>
+		<Portfolios>
+			<Portfolio>Fee-Test</Portfolio>
+			<CounterpartyPortfolio>CounterParty-Fee-Test</CounterpartyPortfolio>
+			<BuySell>Sell</BuySell>
+		</Portfolios>
+		<ElectricityEuropean>
+			<InstrumentData>
+				<UnderlyingInstrumentType>Structured Deal</UnderlyingInstrumentType>
+				<ExecutionVenue>None</ExecutionVenue>
+					<PriceBasis>NordPool System Price</PriceBasis>
+				<LoadProfile>Base</LoadProfile>
+				<FromDate>2011-11-01</FromDate>
+				<ToDate>2011-11-30</ToDate>
+				<Financial/>
+				<PutCall>Call</PutCall>
+				<Strike>20</Strike>
+				<ExpiryDate>2011-10-20</ExpiryDate>       
+			</InstrumentData>
+			<SettlementData>
+				<QuantitySeries>
+				  <Resolution>Daily</Resolution>
+					<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-11-02T00:00:00" Value="51"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T00:00:00" ToDateTime="2011-11-03T00:00:00" Value="71"/>
+					<TimeSeriesDetail FromDateTime="2011-11-03T00:00:00" ToDateTime="2011-11-04T00:00:00" Value="45"/>
+					<TimeSeriesDetail FromDateTime="2011-11-04T00:00:00" ToDateTime="2011-11-05T00:00:00" Value="6"/>
+					<TimeSeriesDetail FromDateTime="2011-11-05T00:00:00" ToDateTime="2011-11-06T00:00:00" Value="70"/>
+					<TimeSeriesDetail FromDateTime="2011-11-06T00:00:00" ToDateTime="2011-11-07T00:00:00" Value="37"/>
+					<TimeSeriesDetail FromDateTime="2011-11-07T00:00:00" ToDateTime="2011-11-08T00:00:00" Value="60"/>
+					<TimeSeriesDetail FromDateTime="2011-11-08T00:00:00" ToDateTime="2011-11-09T00:00:00" Value="16"/>
+					<TimeSeriesDetail FromDateTime="2011-11-09T00:00:00" ToDateTime="2011-11-10T00:00:00" Value="49"/>
+					<TimeSeriesDetail FromDateTime="2011-11-10T00:00:00" ToDateTime="2011-11-11T00:00:00" Value="25"/>
+					<TimeSeriesDetail FromDateTime="2011-11-11T00:00:00" ToDateTime="2011-11-12T00:00:00" Value="74"/>
+					<TimeSeriesDetail FromDateTime="2011-11-12T00:00:00" ToDateTime="2011-11-13T00:00:00" Value="78"/>
+					<TimeSeriesDetail FromDateTime="2011-11-13T00:00:00" ToDateTime="2011-11-14T00:00:00" Value="41"/>
+					<TimeSeriesDetail FromDateTime="2011-11-14T00:00:00" ToDateTime="2011-11-15T00:00:00" Value="24"/>
+					<TimeSeriesDetail FromDateTime="2011-11-15T00:00:00" ToDateTime="2011-11-16T00:00:00" Value="32"/>
+					<TimeSeriesDetail FromDateTime="2011-11-16T00:00:00" ToDateTime="2011-11-17T00:00:00" Value="40"/>
+					<TimeSeriesDetail FromDateTime="2011-11-17T00:00:00" ToDateTime="2011-11-18T00:00:00" Value="57"/>
+					<TimeSeriesDetail FromDateTime="2011-11-18T00:00:00" ToDateTime="2011-11-19T00:00:00" Value="95"/>
+					<TimeSeriesDetail FromDateTime="2011-11-19T00:00:00" ToDateTime="2011-11-20T00:00:00" Value="69"/>
+					<TimeSeriesDetail FromDateTime="2011-11-20T00:00:00" ToDateTime="2011-11-21T00:00:00" Value="53"/>
+					<TimeSeriesDetail FromDateTime="2011-11-21T00:00:00" ToDateTime="2011-11-22T00:00:00" Value="43"/>
+					<TimeSeriesDetail FromDateTime="2011-11-22T00:00:00" ToDateTime="2011-11-23T00:00:00" Value="3"/>
+					<TimeSeriesDetail FromDateTime="2011-11-23T00:00:00" ToDateTime="2011-11-24T00:00:00" Value="91"/>
+					<TimeSeriesDetail FromDateTime="2011-11-24T00:00:00" ToDateTime="2011-11-25T00:00:00" Value="47"/>
+					<TimeSeriesDetail FromDateTime="2011-11-25T00:00:00" ToDateTime="2011-11-26T00:00:00" Value="73"/>
+					<TimeSeriesDetail FromDateTime="2011-11-26T00:00:00" ToDateTime="2011-11-27T00:00:00" Value="38"/>
+					<TimeSeriesDetail FromDateTime="2011-11-27T00:00:00" ToDateTime="2011-11-28T00:00:00" Value="73"/>
+					<TimeSeriesDetail FromDateTime="2011-11-28T00:00:00" ToDateTime="2011-11-29T00:00:00" Value="18"/>
+					<TimeSeriesDetail FromDateTime="2011-11-29T00:00:00" ToDateTime="2011-11-30T00:00:00" Value="48"/>
+					<TimeSeriesDetail FromDateTime="2011-11-30T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="47"/>
+				</QuantitySeries>
+				<QuantityUnit>MW</QuantityUnit>
+        <Price>3.57</Price>
+        <Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>ICAP</Broker>
+			</SettlementData>
+      <FeesData>
+        <Fees>
+          <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+          <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+          <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+          <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+          <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+          <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+        </Fees>
+      </FeesData>
+		</ElectricityEuropean>
+				<DealDetails>
+					<Status>Active</Status>
+					<Trader>DealImport</Trader>
+					<TradeDate>2010-01-01T00:00:00</TradeDate>
+					<ConfirmedByBroker>false</ConfirmedByBroker>
+					<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+					<Authorised>false</Authorised>
+					<Paid>false</Paid>
+				</DealDetails>
+				<ReferenceData>			
+					<DealGroup>API Test</DealGroup>
+					<ExternalId>Fee-Test-El-EU-Struct</ExternalId>
+					<ExternalSource>XMLFileImport</ExternalSource>
+					<TicketNumber>TicketNumber</TicketNumber>
+				</ReferenceData>
+		</Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-FixedPriceFloatingVolume</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityFixedPriceFloatingVolume>
+        <InstrumentData>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <VolumeReferenceExternalId>GenCon-Consuption-Spot-0020</VolumeReferenceExternalId>
+          <FromDate>2010-02-07</FromDate>
+          <ToDate>2010-02-07</ToDate>
+          <Financial />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>25</Quantity>
+          <QuantityUnit>%</QuantityUnit>
+          <Price>30</Price>
+          <Currency>EUR</Currency>
+		      <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+          </Fees>
+        </FeesData>
+      </ElectricityFixedPriceFloatingVolume>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-06T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-El-FixedPriceFloatingVolume</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-FloatingPrice</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Sell</BuySell>
+      </Portfolios>
+      <ElectricityFloatingPrice>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2010-06-01</FromDate>
+          <ToDate>2010-06-01</ToDate>
+          <Financial />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>1</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <PriceMargin>1.25</PriceMargin>
+          <MarketPriceMultiplicator>1</MarketPriceMultiplicator>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+          </Fees>
+        </FeesData>
+      </ElectricityFloatingPrice>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-El-Floating-Spot</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-Asian</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityAsian>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2011-11-01</FromDate>
+          <ToDate>2011-11-30</ToDate>
+          <Financial />
+          <PutCall>Call</PutCall>
+          <Strike>30</Strike>
+          <SamplingPeriod>All</SamplingPeriod>
+        </InstrumentData>
+        <SettlementData>
+          <QuantitySeries>
+            <Resolution>Hourly</Resolution>
+            <TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-11-01T01:00:00" Value="9.61" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T01:00:00" ToDateTime="2011-11-01T02:00:00" Value="7.25" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T02:00:00" ToDateTime="2011-11-01T03:00:00" Value="0.09" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T03:00:00" ToDateTime="2011-11-01T04:00:00" Value="8.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T04:00:00" ToDateTime="2011-11-01T05:00:00" Value="9.69" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T05:00:00" ToDateTime="2011-11-01T06:00:00" Value="5.58" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T06:00:00" ToDateTime="2011-11-01T07:00:00" Value="3.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T07:00:00" ToDateTime="2011-11-01T08:00:00" Value="1.14" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T08:00:00" ToDateTime="2011-11-01T09:00:00" Value="9.48" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T09:00:00" ToDateTime="2011-11-01T10:00:00" Value="8.16" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T10:00:00" ToDateTime="2011-11-01T11:00:00" Value="5.73" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T11:00:00" ToDateTime="2011-11-01T12:00:00" Value="9.81" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T12:00:00" ToDateTime="2011-11-01T13:00:00" Value="4.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T13:00:00" ToDateTime="2011-11-01T14:00:00" Value="0.08" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T14:00:00" ToDateTime="2011-11-01T15:00:00" Value="1.23" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T15:00:00" ToDateTime="2011-11-01T16:00:00" Value="9.81" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T16:00:00" ToDateTime="2011-11-01T17:00:00" Value="8.77" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T17:00:00" ToDateTime="2011-11-01T18:00:00" Value="6.89" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T18:00:00" ToDateTime="2011-11-01T19:00:00" Value="4.79" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T19:00:00" ToDateTime="2011-11-01T20:00:00" Value="6.83" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T20:00:00" ToDateTime="2011-11-01T21:00:00" Value="0.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T21:00:00" ToDateTime="2011-11-01T22:00:00" Value="7.47" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T22:00:00" ToDateTime="2011-11-01T23:00:00" Value="4.01" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T23:00:00" ToDateTime="2011-11-02T00:00:00" Value="9.23" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T00:00:00" ToDateTime="2011-11-02T01:00:00" Value="3.14" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T01:00:00" ToDateTime="2011-11-02T02:00:00" Value="2.99" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T02:00:00" ToDateTime="2011-11-02T03:00:00" Value="0.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T03:00:00" ToDateTime="2011-11-02T04:00:00" Value="6.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T04:00:00" ToDateTime="2011-11-02T05:00:00" Value="3.15" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T05:00:00" ToDateTime="2011-11-02T06:00:00" Value="9.88" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T06:00:00" ToDateTime="2011-11-02T07:00:00" Value="7.48" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T07:00:00" ToDateTime="2011-11-02T08:00:00" Value="5.79" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T08:00:00" ToDateTime="2011-11-02T09:00:00" Value="0.51" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T09:00:00" ToDateTime="2011-11-02T10:00:00" Value="2.84" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T10:00:00" ToDateTime="2011-11-02T11:00:00" Value="0.9" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T11:00:00" ToDateTime="2011-11-02T12:00:00" Value="0.74" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T12:00:00" ToDateTime="2011-11-02T13:00:00" Value="1.06" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T13:00:00" ToDateTime="2011-11-02T14:00:00" Value="7.33" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T14:00:00" ToDateTime="2011-11-02T15:00:00" Value="8.73" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T15:00:00" ToDateTime="2011-11-02T16:00:00" Value="9.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T16:00:00" ToDateTime="2011-11-02T17:00:00" Value="1.13" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T17:00:00" ToDateTime="2011-11-02T18:00:00" Value="5.3" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T18:00:00" ToDateTime="2011-11-02T19:00:00" Value="9.41" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T19:00:00" ToDateTime="2011-11-02T20:00:00" Value="0.08" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T20:00:00" ToDateTime="2011-11-02T21:00:00" Value="6.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T21:00:00" ToDateTime="2011-11-02T22:00:00" Value="7.9" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T22:00:00" ToDateTime="2011-11-02T23:00:00" Value="9.76" />
+            <TimeSeriesDetail FromDateTime="2011-11-02T23:00:00" ToDateTime="2011-11-03T00:00:00" Value="9.14" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T00:00:00" ToDateTime="2011-11-03T01:00:00" Value="1.07" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T01:00:00" ToDateTime="2011-11-03T02:00:00" Value="5.08" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T02:00:00" ToDateTime="2011-11-03T03:00:00" Value="2.68" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T03:00:00" ToDateTime="2011-11-03T04:00:00" Value="4.88" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T04:00:00" ToDateTime="2011-11-03T05:00:00" Value="9.97" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T05:00:00" ToDateTime="2011-11-03T06:00:00" Value="8.08" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T06:00:00" ToDateTime="2011-11-03T07:00:00" Value="9.14" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T07:00:00" ToDateTime="2011-11-03T08:00:00" Value="9.94" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T08:00:00" ToDateTime="2011-11-03T09:00:00" Value="4.73" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T09:00:00" ToDateTime="2011-11-03T10:00:00" Value="3.96" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T10:00:00" ToDateTime="2011-11-03T11:00:00" Value="2" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T11:00:00" ToDateTime="2011-11-03T12:00:00" Value="6.08" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T12:00:00" ToDateTime="2011-11-03T13:00:00" Value="3.12" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T13:00:00" ToDateTime="2011-11-03T14:00:00" Value="0.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T14:00:00" ToDateTime="2011-11-03T15:00:00" Value="5.27" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T15:00:00" ToDateTime="2011-11-03T16:00:00" Value="4.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T16:00:00" ToDateTime="2011-11-03T17:00:00" Value="3.11" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T17:00:00" ToDateTime="2011-11-03T18:00:00" Value="0.16" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T18:00:00" ToDateTime="2011-11-03T19:00:00" Value="3.67" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T19:00:00" ToDateTime="2011-11-03T20:00:00" Value="6.63" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T20:00:00" ToDateTime="2011-11-03T21:00:00" Value="8.45" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T21:00:00" ToDateTime="2011-11-03T22:00:00" Value="8.43" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T22:00:00" ToDateTime="2011-11-03T23:00:00" Value="1.62" />
+            <TimeSeriesDetail FromDateTime="2011-11-03T23:00:00" ToDateTime="2011-11-04T00:00:00" Value="6.79" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T00:00:00" ToDateTime="2011-11-04T01:00:00" Value="3.81" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T01:00:00" ToDateTime="2011-11-04T02:00:00" Value="1.83" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T02:00:00" ToDateTime="2011-11-04T03:00:00" Value="2.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T03:00:00" ToDateTime="2011-11-04T04:00:00" Value="1.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T04:00:00" ToDateTime="2011-11-04T05:00:00" Value="9.7" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T05:00:00" ToDateTime="2011-11-04T06:00:00" Value="3.52" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T06:00:00" ToDateTime="2011-11-04T07:00:00" Value="2.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T07:00:00" ToDateTime="2011-11-04T08:00:00" Value="8.1" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T08:00:00" ToDateTime="2011-11-04T09:00:00" Value="2.17" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T09:00:00" ToDateTime="2011-11-04T10:00:00" Value="4.43" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T10:00:00" ToDateTime="2011-11-04T11:00:00" Value="6.41" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T11:00:00" ToDateTime="2011-11-04T12:00:00" Value="0.99" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T12:00:00" ToDateTime="2011-11-04T13:00:00" Value="7.74" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T13:00:00" ToDateTime="2011-11-04T14:00:00" Value="5.32" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T14:00:00" ToDateTime="2011-11-04T15:00:00" Value="4.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T15:00:00" ToDateTime="2011-11-04T16:00:00" Value="6.93" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T16:00:00" ToDateTime="2011-11-04T17:00:00" Value="9.68" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T17:00:00" ToDateTime="2011-11-04T18:00:00" Value="1.56" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T18:00:00" ToDateTime="2011-11-04T19:00:00" Value="5.92" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T19:00:00" ToDateTime="2011-11-04T20:00:00" Value="5.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T20:00:00" ToDateTime="2011-11-04T21:00:00" Value="6.92" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T21:00:00" ToDateTime="2011-11-04T22:00:00" Value="4.66" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T22:00:00" ToDateTime="2011-11-04T23:00:00" Value="2.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-04T23:00:00" ToDateTime="2011-11-05T00:00:00" Value="6.15" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T00:00:00" ToDateTime="2011-11-05T01:00:00" Value="2.25" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T01:00:00" ToDateTime="2011-11-05T02:00:00" Value="1.77" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T02:00:00" ToDateTime="2011-11-05T03:00:00" Value="5.77" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T03:00:00" ToDateTime="2011-11-05T04:00:00" Value="4.31" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T04:00:00" ToDateTime="2011-11-05T05:00:00" Value="5.99" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T05:00:00" ToDateTime="2011-11-05T06:00:00" Value="6.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T06:00:00" ToDateTime="2011-11-05T07:00:00" Value="5.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T07:00:00" ToDateTime="2011-11-05T08:00:00" Value="5.85" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T08:00:00" ToDateTime="2011-11-05T09:00:00" Value="7.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T09:00:00" ToDateTime="2011-11-05T10:00:00" Value="4.83" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T10:00:00" ToDateTime="2011-11-05T11:00:00" Value="2.22" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T11:00:00" ToDateTime="2011-11-05T12:00:00" Value="7.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T12:00:00" ToDateTime="2011-11-05T13:00:00" Value="5.93" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T13:00:00" ToDateTime="2011-11-05T14:00:00" Value="8.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T14:00:00" ToDateTime="2011-11-05T15:00:00" Value="0.58" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T15:00:00" ToDateTime="2011-11-05T16:00:00" Value="3.55" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T16:00:00" ToDateTime="2011-11-05T17:00:00" Value="6.65" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T17:00:00" ToDateTime="2011-11-05T18:00:00" Value="9.33" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T18:00:00" ToDateTime="2011-11-05T19:00:00" Value="7.84" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T19:00:00" ToDateTime="2011-11-05T20:00:00" Value="1.19" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T20:00:00" ToDateTime="2011-11-05T21:00:00" Value="4.95" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T21:00:00" ToDateTime="2011-11-05T22:00:00" Value="2.35" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T22:00:00" ToDateTime="2011-11-05T23:00:00" Value="0.98" />
+            <TimeSeriesDetail FromDateTime="2011-11-05T23:00:00" ToDateTime="2011-11-06T00:00:00" Value="5.31" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T00:00:00" ToDateTime="2011-11-06T01:00:00" Value="8.38" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T01:00:00" ToDateTime="2011-11-06T02:00:00" Value="1.16" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T02:00:00" ToDateTime="2011-11-06T03:00:00" Value="4.84" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T03:00:00" ToDateTime="2011-11-06T04:00:00" Value="0.38" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T04:00:00" ToDateTime="2011-11-06T05:00:00" Value="0.66" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T05:00:00" ToDateTime="2011-11-06T06:00:00" Value="6.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T06:00:00" ToDateTime="2011-11-06T07:00:00" Value="7.7" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T07:00:00" ToDateTime="2011-11-06T08:00:00" Value="2.29" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T08:00:00" ToDateTime="2011-11-06T09:00:00" Value="4.25" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T09:00:00" ToDateTime="2011-11-06T10:00:00" Value="3.34" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T10:00:00" ToDateTime="2011-11-06T11:00:00" Value="1.4" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T11:00:00" ToDateTime="2011-11-06T12:00:00" Value="8.3" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T12:00:00" ToDateTime="2011-11-06T13:00:00" Value="1.46" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T13:00:00" ToDateTime="2011-11-06T14:00:00" Value="6.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T14:00:00" ToDateTime="2011-11-06T15:00:00" Value="6.57" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T15:00:00" ToDateTime="2011-11-06T16:00:00" Value="0.86" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T16:00:00" ToDateTime="2011-11-06T17:00:00" Value="2.92" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T17:00:00" ToDateTime="2011-11-06T18:00:00" Value="4.51" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T18:00:00" ToDateTime="2011-11-06T19:00:00" Value="3.46" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T19:00:00" ToDateTime="2011-11-06T20:00:00" Value="6.42" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T20:00:00" ToDateTime="2011-11-06T21:00:00" Value="7.05" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T21:00:00" ToDateTime="2011-11-06T22:00:00" Value="7.93" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T22:00:00" ToDateTime="2011-11-06T23:00:00" Value="5.32" />
+            <TimeSeriesDetail FromDateTime="2011-11-06T23:00:00" ToDateTime="2011-11-07T00:00:00" Value="0.12" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T00:00:00" ToDateTime="2011-11-07T01:00:00" Value="2.66" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T01:00:00" ToDateTime="2011-11-07T02:00:00" Value="9.65" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T02:00:00" ToDateTime="2011-11-07T03:00:00" Value="4.65" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T03:00:00" ToDateTime="2011-11-07T04:00:00" Value="8.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T04:00:00" ToDateTime="2011-11-07T05:00:00" Value="6.42" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T05:00:00" ToDateTime="2011-11-07T06:00:00" Value="8.63" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T06:00:00" ToDateTime="2011-11-07T07:00:00" Value="0.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T07:00:00" ToDateTime="2011-11-07T08:00:00" Value="6.65" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T08:00:00" ToDateTime="2011-11-07T09:00:00" Value="4.83" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T09:00:00" ToDateTime="2011-11-07T10:00:00" Value="7.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T10:00:00" ToDateTime="2011-11-07T11:00:00" Value="6.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T11:00:00" ToDateTime="2011-11-07T12:00:00" Value="3.93" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T12:00:00" ToDateTime="2011-11-07T13:00:00" Value="4.73" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T13:00:00" ToDateTime="2011-11-07T14:00:00" Value="2.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T14:00:00" ToDateTime="2011-11-07T15:00:00" Value="8.99" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T15:00:00" ToDateTime="2011-11-07T16:00:00" Value="3.24" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T16:00:00" ToDateTime="2011-11-07T17:00:00" Value="8.67" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T17:00:00" ToDateTime="2011-11-07T18:00:00" Value="3.99" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T18:00:00" ToDateTime="2011-11-07T19:00:00" Value="1.01" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T19:00:00" ToDateTime="2011-11-07T20:00:00" Value="2.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T20:00:00" ToDateTime="2011-11-07T21:00:00" Value="1.09" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T21:00:00" ToDateTime="2011-11-07T22:00:00" Value="8.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T22:00:00" ToDateTime="2011-11-07T23:00:00" Value="0.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-07T23:00:00" ToDateTime="2011-11-08T00:00:00" Value="0.4" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T00:00:00" ToDateTime="2011-11-08T01:00:00" Value="7.14" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T01:00:00" ToDateTime="2011-11-08T02:00:00" Value="0.35" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T02:00:00" ToDateTime="2011-11-08T03:00:00" Value="8.79" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T03:00:00" ToDateTime="2011-11-08T04:00:00" Value="5.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T04:00:00" ToDateTime="2011-11-08T05:00:00" Value="7.62" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T05:00:00" ToDateTime="2011-11-08T06:00:00" Value="2.4" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T06:00:00" ToDateTime="2011-11-08T07:00:00" Value="6.29" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T07:00:00" ToDateTime="2011-11-08T08:00:00" Value="5.29" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T08:00:00" ToDateTime="2011-11-08T09:00:00" Value="9.58" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T09:00:00" ToDateTime="2011-11-08T10:00:00" Value="8.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T10:00:00" ToDateTime="2011-11-08T11:00:00" Value="3.3" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T11:00:00" ToDateTime="2011-11-08T12:00:00" Value="5.95" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T12:00:00" ToDateTime="2011-11-08T13:00:00" Value="9.25" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T13:00:00" ToDateTime="2011-11-08T14:00:00" Value="8.41" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T14:00:00" ToDateTime="2011-11-08T15:00:00" Value="2.05" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T15:00:00" ToDateTime="2011-11-08T16:00:00" Value="9.63" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T16:00:00" ToDateTime="2011-11-08T17:00:00" Value="7.86" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T17:00:00" ToDateTime="2011-11-08T18:00:00" Value="2.23" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T18:00:00" ToDateTime="2011-11-08T19:00:00" Value="0.79" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T19:00:00" ToDateTime="2011-11-08T20:00:00" Value="5.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T20:00:00" ToDateTime="2011-11-08T21:00:00" Value="7.95" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T21:00:00" ToDateTime="2011-11-08T22:00:00" Value="2.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T22:00:00" ToDateTime="2011-11-08T23:00:00" Value="8.32" />
+            <TimeSeriesDetail FromDateTime="2011-11-08T23:00:00" ToDateTime="2011-11-09T00:00:00" Value="9.04" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T00:00:00" ToDateTime="2011-11-09T01:00:00" Value="2.76" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T01:00:00" ToDateTime="2011-11-09T02:00:00" Value="7.73" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T02:00:00" ToDateTime="2011-11-09T03:00:00" Value="6.71" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T03:00:00" ToDateTime="2011-11-09T04:00:00" Value="5.42" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T04:00:00" ToDateTime="2011-11-09T05:00:00" Value="1.77" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T05:00:00" ToDateTime="2011-11-09T06:00:00" Value="8.27" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T06:00:00" ToDateTime="2011-11-09T07:00:00" Value="0.11" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T07:00:00" ToDateTime="2011-11-09T08:00:00" Value="7.31" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T08:00:00" ToDateTime="2011-11-09T09:00:00" Value="2.41" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T09:00:00" ToDateTime="2011-11-09T10:00:00" Value="6.01" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T10:00:00" ToDateTime="2011-11-09T11:00:00" Value="3.4" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T11:00:00" ToDateTime="2011-11-09T12:00:00" Value="2.42" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T12:00:00" ToDateTime="2011-11-09T13:00:00" Value="5.65" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T13:00:00" ToDateTime="2011-11-09T14:00:00" Value="4.96" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T14:00:00" ToDateTime="2011-11-09T15:00:00" Value="0.93" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T15:00:00" ToDateTime="2011-11-09T16:00:00" Value="6.25" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T16:00:00" ToDateTime="2011-11-09T17:00:00" Value="9.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T17:00:00" ToDateTime="2011-11-09T18:00:00" Value="0.64" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T18:00:00" ToDateTime="2011-11-09T19:00:00" Value="9.83" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T19:00:00" ToDateTime="2011-11-09T20:00:00" Value="2.84" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T20:00:00" ToDateTime="2011-11-09T21:00:00" Value="1.68" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T21:00:00" ToDateTime="2011-11-09T22:00:00" Value="3.33" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T22:00:00" ToDateTime="2011-11-09T23:00:00" Value="9.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-09T23:00:00" ToDateTime="2011-11-10T00:00:00" Value="2.04" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T00:00:00" ToDateTime="2011-11-10T01:00:00" Value="0.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T01:00:00" ToDateTime="2011-11-10T02:00:00" Value="9.67" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T02:00:00" ToDateTime="2011-11-10T03:00:00" Value="1.41" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T03:00:00" ToDateTime="2011-11-10T04:00:00" Value="2.24" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T04:00:00" ToDateTime="2011-11-10T05:00:00" Value="3.19" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T05:00:00" ToDateTime="2011-11-10T06:00:00" Value="7.43" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T06:00:00" ToDateTime="2011-11-10T07:00:00" Value="1.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T07:00:00" ToDateTime="2011-11-10T08:00:00" Value="6.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T08:00:00" ToDateTime="2011-11-10T09:00:00" Value="7.1" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T09:00:00" ToDateTime="2011-11-10T10:00:00" Value="9.42" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T10:00:00" ToDateTime="2011-11-10T11:00:00" Value="0.43" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T11:00:00" ToDateTime="2011-11-10T12:00:00" Value="4.14" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T12:00:00" ToDateTime="2011-11-10T13:00:00" Value="9.96" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T13:00:00" ToDateTime="2011-11-10T14:00:00" Value="7.62" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T14:00:00" ToDateTime="2011-11-10T15:00:00" Value="9.44" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T15:00:00" ToDateTime="2011-11-10T16:00:00" Value="1.23" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T16:00:00" ToDateTime="2011-11-10T17:00:00" Value="3.66" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T17:00:00" ToDateTime="2011-11-10T18:00:00" Value="6.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T18:00:00" ToDateTime="2011-11-10T19:00:00" Value="4.64" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T19:00:00" ToDateTime="2011-11-10T20:00:00" Value="2.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T20:00:00" ToDateTime="2011-11-10T21:00:00" Value="2.86" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T21:00:00" ToDateTime="2011-11-10T22:00:00" Value="7.53" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T22:00:00" ToDateTime="2011-11-10T23:00:00" Value="7.48" />
+            <TimeSeriesDetail FromDateTime="2011-11-10T23:00:00" ToDateTime="2011-11-11T00:00:00" Value="5.88" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T00:00:00" ToDateTime="2011-11-11T01:00:00" Value="6.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T01:00:00" ToDateTime="2011-11-11T02:00:00" Value="8.24" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T02:00:00" ToDateTime="2011-11-11T03:00:00" Value="1.19" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T03:00:00" ToDateTime="2011-11-11T04:00:00" Value="2.82" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T04:00:00" ToDateTime="2011-11-11T05:00:00" Value="4.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T05:00:00" ToDateTime="2011-11-11T06:00:00" Value="1.98" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T06:00:00" ToDateTime="2011-11-11T07:00:00" Value="7.1" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T07:00:00" ToDateTime="2011-11-11T08:00:00" Value="4.86" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T08:00:00" ToDateTime="2011-11-11T09:00:00" Value="5.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T09:00:00" ToDateTime="2011-11-11T10:00:00" Value="3.77" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T10:00:00" ToDateTime="2011-11-11T11:00:00" Value="5.47" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T11:00:00" ToDateTime="2011-11-11T12:00:00" Value="4.82" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T12:00:00" ToDateTime="2011-11-11T13:00:00" Value="4.7" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T13:00:00" ToDateTime="2011-11-11T14:00:00" Value="1.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T14:00:00" ToDateTime="2011-11-11T15:00:00" Value="0.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T15:00:00" ToDateTime="2011-11-11T16:00:00" Value="6.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T16:00:00" ToDateTime="2011-11-11T17:00:00" Value="3.07" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T17:00:00" ToDateTime="2011-11-11T18:00:00" Value="1.47" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T18:00:00" ToDateTime="2011-11-11T19:00:00" Value="5.45" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T19:00:00" ToDateTime="2011-11-11T20:00:00" Value="4.16" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T20:00:00" ToDateTime="2011-11-11T21:00:00" Value="4.79" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T21:00:00" ToDateTime="2011-11-11T22:00:00" Value="7.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T22:00:00" ToDateTime="2011-11-11T23:00:00" Value="4.77" />
+            <TimeSeriesDetail FromDateTime="2011-11-11T23:00:00" ToDateTime="2011-11-12T00:00:00" Value="9.69" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T00:00:00" ToDateTime="2011-11-12T01:00:00" Value="4.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T01:00:00" ToDateTime="2011-11-12T02:00:00" Value="4.38" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T02:00:00" ToDateTime="2011-11-12T03:00:00" Value="6.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T03:00:00" ToDateTime="2011-11-12T04:00:00" Value="5.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T04:00:00" ToDateTime="2011-11-12T05:00:00" Value="2.04" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T05:00:00" ToDateTime="2011-11-12T06:00:00" Value="2.08" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T06:00:00" ToDateTime="2011-11-12T07:00:00" Value="9.71" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T07:00:00" ToDateTime="2011-11-12T08:00:00" Value="0.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T08:00:00" ToDateTime="2011-11-12T09:00:00" Value="4.67" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T09:00:00" ToDateTime="2011-11-12T10:00:00" Value="0.39" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T10:00:00" ToDateTime="2011-11-12T11:00:00" Value="2.89" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T11:00:00" ToDateTime="2011-11-12T12:00:00" Value="5.44" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T12:00:00" ToDateTime="2011-11-12T13:00:00" Value="8.3" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T13:00:00" ToDateTime="2011-11-12T14:00:00" Value="5.38" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T14:00:00" ToDateTime="2011-11-12T15:00:00" Value="3.81" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T15:00:00" ToDateTime="2011-11-12T16:00:00" Value="2.5" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T16:00:00" ToDateTime="2011-11-12T17:00:00" Value="9.9" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T17:00:00" ToDateTime="2011-11-12T18:00:00" Value="7.13" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T18:00:00" ToDateTime="2011-11-12T19:00:00" Value="0.44" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T19:00:00" ToDateTime="2011-11-12T20:00:00" Value="2.93" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T20:00:00" ToDateTime="2011-11-12T21:00:00" Value="3.67" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T21:00:00" ToDateTime="2011-11-12T22:00:00" Value="2.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T22:00:00" ToDateTime="2011-11-12T23:00:00" Value="8.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-12T23:00:00" ToDateTime="2011-11-13T00:00:00" Value="7.63" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T00:00:00" ToDateTime="2011-11-13T01:00:00" Value="4.59" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T01:00:00" ToDateTime="2011-11-13T02:00:00" Value="5.84" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T02:00:00" ToDateTime="2011-11-13T03:00:00" Value="2.76" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T03:00:00" ToDateTime="2011-11-13T04:00:00" Value="3.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T04:00:00" ToDateTime="2011-11-13T05:00:00" Value="3.28" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T05:00:00" ToDateTime="2011-11-13T06:00:00" Value="3.98" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T06:00:00" ToDateTime="2011-11-13T07:00:00" Value="3.56" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T07:00:00" ToDateTime="2011-11-13T08:00:00" Value="1.14" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T08:00:00" ToDateTime="2011-11-13T09:00:00" Value="5.98" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T09:00:00" ToDateTime="2011-11-13T10:00:00" Value="6.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T10:00:00" ToDateTime="2011-11-13T11:00:00" Value="0.04" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T11:00:00" ToDateTime="2011-11-13T12:00:00" Value="7.08" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T12:00:00" ToDateTime="2011-11-13T13:00:00" Value="7.75" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T13:00:00" ToDateTime="2011-11-13T14:00:00" Value="3.48" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T14:00:00" ToDateTime="2011-11-13T15:00:00" Value="3.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T15:00:00" ToDateTime="2011-11-13T16:00:00" Value="3.92" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T16:00:00" ToDateTime="2011-11-13T17:00:00" Value="7.68" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T17:00:00" ToDateTime="2011-11-13T18:00:00" Value="8.68" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T18:00:00" ToDateTime="2011-11-13T19:00:00" Value="9.25" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T19:00:00" ToDateTime="2011-11-13T20:00:00" Value="6.6" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T20:00:00" ToDateTime="2011-11-13T21:00:00" Value="1.09" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T21:00:00" ToDateTime="2011-11-13T22:00:00" Value="1.1" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T22:00:00" ToDateTime="2011-11-13T23:00:00" Value="1.4" />
+            <TimeSeriesDetail FromDateTime="2011-11-13T23:00:00" ToDateTime="2011-11-14T00:00:00" Value="6.89" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T00:00:00" ToDateTime="2011-11-14T01:00:00" Value="4.74" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T01:00:00" ToDateTime="2011-11-14T02:00:00" Value="5.12" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T02:00:00" ToDateTime="2011-11-14T03:00:00" Value="8.77" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T03:00:00" ToDateTime="2011-11-14T04:00:00" Value="1.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T04:00:00" ToDateTime="2011-11-14T05:00:00" Value="1.75" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T05:00:00" ToDateTime="2011-11-14T06:00:00" Value="5.05" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T06:00:00" ToDateTime="2011-11-14T07:00:00" Value="6.97" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T07:00:00" ToDateTime="2011-11-14T08:00:00" Value="1.53" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T08:00:00" ToDateTime="2011-11-14T09:00:00" Value="6.92" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T09:00:00" ToDateTime="2011-11-14T10:00:00" Value="2.14" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T10:00:00" ToDateTime="2011-11-14T11:00:00" Value="1.35" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T11:00:00" ToDateTime="2011-11-14T12:00:00" Value="8.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T12:00:00" ToDateTime="2011-11-14T13:00:00" Value="8.46" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T13:00:00" ToDateTime="2011-11-14T14:00:00" Value="9.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T14:00:00" ToDateTime="2011-11-14T15:00:00" Value="8.28" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T15:00:00" ToDateTime="2011-11-14T16:00:00" Value="4.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T16:00:00" ToDateTime="2011-11-14T17:00:00" Value="8.05" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T17:00:00" ToDateTime="2011-11-14T18:00:00" Value="0.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T18:00:00" ToDateTime="2011-11-14T19:00:00" Value="5.63" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T19:00:00" ToDateTime="2011-11-14T20:00:00" Value="6.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T20:00:00" ToDateTime="2011-11-14T21:00:00" Value="1.13" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T21:00:00" ToDateTime="2011-11-14T22:00:00" Value="6.51" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T22:00:00" ToDateTime="2011-11-14T23:00:00" Value="7.18" />
+            <TimeSeriesDetail FromDateTime="2011-11-14T23:00:00" ToDateTime="2011-11-15T00:00:00" Value="3.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T00:00:00" ToDateTime="2011-11-15T01:00:00" Value="5.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T01:00:00" ToDateTime="2011-11-15T02:00:00" Value="9.17" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T02:00:00" ToDateTime="2011-11-15T03:00:00" Value="3.12" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T03:00:00" ToDateTime="2011-11-15T04:00:00" Value="1.06" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T04:00:00" ToDateTime="2011-11-15T05:00:00" Value="6.93" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T05:00:00" ToDateTime="2011-11-15T06:00:00" Value="3.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T06:00:00" ToDateTime="2011-11-15T07:00:00" Value="6.15" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T07:00:00" ToDateTime="2011-11-15T08:00:00" Value="2.18" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T08:00:00" ToDateTime="2011-11-15T09:00:00" Value="6.23" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T09:00:00" ToDateTime="2011-11-15T10:00:00" Value="7.45" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T10:00:00" ToDateTime="2011-11-15T11:00:00" Value="6.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T11:00:00" ToDateTime="2011-11-15T12:00:00" Value="9.52" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T12:00:00" ToDateTime="2011-11-15T13:00:00" Value="8.76" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T13:00:00" ToDateTime="2011-11-15T14:00:00" Value="5.85" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T14:00:00" ToDateTime="2011-11-15T15:00:00" Value="5.37" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T15:00:00" ToDateTime="2011-11-15T16:00:00" Value="6.18" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T16:00:00" ToDateTime="2011-11-15T17:00:00" Value="6.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T17:00:00" ToDateTime="2011-11-15T18:00:00" Value="2.6" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T18:00:00" ToDateTime="2011-11-15T19:00:00" Value="0.6" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T19:00:00" ToDateTime="2011-11-15T20:00:00" Value="0.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T20:00:00" ToDateTime="2011-11-15T21:00:00" Value="2.56" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T21:00:00" ToDateTime="2011-11-15T22:00:00" Value="9.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T22:00:00" ToDateTime="2011-11-15T23:00:00" Value="1.17" />
+            <TimeSeriesDetail FromDateTime="2011-11-15T23:00:00" ToDateTime="2011-11-16T00:00:00" Value="9.27" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T00:00:00" ToDateTime="2011-11-16T01:00:00" Value="3.07" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T01:00:00" ToDateTime="2011-11-16T02:00:00" Value="4.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T02:00:00" ToDateTime="2011-11-16T03:00:00" Value="2.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T03:00:00" ToDateTime="2011-11-16T04:00:00" Value="4.79" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T04:00:00" ToDateTime="2011-11-16T05:00:00" Value="7.29" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T05:00:00" ToDateTime="2011-11-16T06:00:00" Value="4.9" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T06:00:00" ToDateTime="2011-11-16T07:00:00" Value="7.92" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T07:00:00" ToDateTime="2011-11-16T08:00:00" Value="9.7" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T08:00:00" ToDateTime="2011-11-16T09:00:00" Value="2.97" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T09:00:00" ToDateTime="2011-11-16T10:00:00" Value="7.25" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T10:00:00" ToDateTime="2011-11-16T11:00:00" Value="6.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T11:00:00" ToDateTime="2011-11-16T12:00:00" Value="3.36" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T12:00:00" ToDateTime="2011-11-16T13:00:00" Value="3.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T13:00:00" ToDateTime="2011-11-16T14:00:00" Value="7.52" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T14:00:00" ToDateTime="2011-11-16T15:00:00" Value="5.17" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T15:00:00" ToDateTime="2011-11-16T16:00:00" Value="6.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T16:00:00" ToDateTime="2011-11-16T17:00:00" Value="7.41" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T17:00:00" ToDateTime="2011-11-16T18:00:00" Value="0.49" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T18:00:00" ToDateTime="2011-11-16T19:00:00" Value="1.43" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T19:00:00" ToDateTime="2011-11-16T20:00:00" Value="7.19" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T20:00:00" ToDateTime="2011-11-16T21:00:00" Value="7.65" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T21:00:00" ToDateTime="2011-11-16T22:00:00" Value="1.99" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T22:00:00" ToDateTime="2011-11-16T23:00:00" Value="5.98" />
+            <TimeSeriesDetail FromDateTime="2011-11-16T23:00:00" ToDateTime="2011-11-17T00:00:00" Value="8.07" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T00:00:00" ToDateTime="2011-11-17T01:00:00" Value="4.47" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T01:00:00" ToDateTime="2011-11-17T02:00:00" Value="0.56" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T02:00:00" ToDateTime="2011-11-17T03:00:00" Value="8.11" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T03:00:00" ToDateTime="2011-11-17T04:00:00" Value="1.79" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T04:00:00" ToDateTime="2011-11-17T05:00:00" Value="6.52" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T05:00:00" ToDateTime="2011-11-17T06:00:00" Value="8.55" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T06:00:00" ToDateTime="2011-11-17T07:00:00" Value="0.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T07:00:00" ToDateTime="2011-11-17T08:00:00" Value="0.16" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T08:00:00" ToDateTime="2011-11-17T09:00:00" Value="1.97" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T09:00:00" ToDateTime="2011-11-17T10:00:00" Value="9.34" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T10:00:00" ToDateTime="2011-11-17T11:00:00" Value="6.88" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T11:00:00" ToDateTime="2011-11-17T12:00:00" Value="9.94" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T12:00:00" ToDateTime="2011-11-17T13:00:00" Value="2.51" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T13:00:00" ToDateTime="2011-11-17T14:00:00" Value="6.27" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T14:00:00" ToDateTime="2011-11-17T15:00:00" Value="3.34" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T15:00:00" ToDateTime="2011-11-17T16:00:00" Value="8.78" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T16:00:00" ToDateTime="2011-11-17T17:00:00" Value="8.12" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T17:00:00" ToDateTime="2011-11-17T18:00:00" Value="5.67" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T18:00:00" ToDateTime="2011-11-17T19:00:00" Value="7.59" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T19:00:00" ToDateTime="2011-11-17T20:00:00" Value="5.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T20:00:00" ToDateTime="2011-11-17T21:00:00" Value="2.68" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T21:00:00" ToDateTime="2011-11-17T22:00:00" Value="6.07" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T22:00:00" ToDateTime="2011-11-17T23:00:00" Value="5.72" />
+            <TimeSeriesDetail FromDateTime="2011-11-17T23:00:00" ToDateTime="2011-11-18T00:00:00" Value="5.72" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T00:00:00" ToDateTime="2011-11-18T01:00:00" Value="9.86" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T01:00:00" ToDateTime="2011-11-18T02:00:00" Value="6.06" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T02:00:00" ToDateTime="2011-11-18T03:00:00" Value="0.96" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T03:00:00" ToDateTime="2011-11-18T04:00:00" Value="5.85" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T04:00:00" ToDateTime="2011-11-18T05:00:00" Value="0.86" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T05:00:00" ToDateTime="2011-11-18T06:00:00" Value="0.05" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T06:00:00" ToDateTime="2011-11-18T07:00:00" Value="9.72" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T07:00:00" ToDateTime="2011-11-18T08:00:00" Value="3.63" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T08:00:00" ToDateTime="2011-11-18T09:00:00" Value="9.71" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T09:00:00" ToDateTime="2011-11-18T10:00:00" Value="7.19" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T10:00:00" ToDateTime="2011-11-18T11:00:00" Value="7.42" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T11:00:00" ToDateTime="2011-11-18T12:00:00" Value="2.23" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T12:00:00" ToDateTime="2011-11-18T13:00:00" Value="4.06" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T13:00:00" ToDateTime="2011-11-18T14:00:00" Value="6.95" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T14:00:00" ToDateTime="2011-11-18T15:00:00" Value="8.09" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T15:00:00" ToDateTime="2011-11-18T16:00:00" Value="0.15" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T16:00:00" ToDateTime="2011-11-18T17:00:00" Value="0.92" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T17:00:00" ToDateTime="2011-11-18T18:00:00" Value="8.6" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T18:00:00" ToDateTime="2011-11-18T19:00:00" Value="8.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T19:00:00" ToDateTime="2011-11-18T20:00:00" Value="6.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T20:00:00" ToDateTime="2011-11-18T21:00:00" Value="9.91" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T21:00:00" ToDateTime="2011-11-18T22:00:00" Value="1.29" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T22:00:00" ToDateTime="2011-11-18T23:00:00" Value="0.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-18T23:00:00" ToDateTime="2011-11-19T00:00:00" Value="6.31" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T00:00:00" ToDateTime="2011-11-19T01:00:00" Value="6.38" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T01:00:00" ToDateTime="2011-11-19T02:00:00" Value="0.64" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T02:00:00" ToDateTime="2011-11-19T03:00:00" Value="6.68" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T03:00:00" ToDateTime="2011-11-19T04:00:00" Value="4.39" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T04:00:00" ToDateTime="2011-11-19T05:00:00" Value="1.14" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T05:00:00" ToDateTime="2011-11-19T06:00:00" Value="5.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T06:00:00" ToDateTime="2011-11-19T07:00:00" Value="4.79" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T07:00:00" ToDateTime="2011-11-19T08:00:00" Value="3.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T08:00:00" ToDateTime="2011-11-19T09:00:00" Value="8.49" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T09:00:00" ToDateTime="2011-11-19T10:00:00" Value="0.64" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T10:00:00" ToDateTime="2011-11-19T11:00:00" Value="1.51" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T11:00:00" ToDateTime="2011-11-19T12:00:00" Value="3.3" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T12:00:00" ToDateTime="2011-11-19T13:00:00" Value="8.7" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T13:00:00" ToDateTime="2011-11-19T14:00:00" Value="1.28" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T14:00:00" ToDateTime="2011-11-19T15:00:00" Value="5.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T15:00:00" ToDateTime="2011-11-19T16:00:00" Value="6.27" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T16:00:00" ToDateTime="2011-11-19T17:00:00" Value="2.5" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T17:00:00" ToDateTime="2011-11-19T18:00:00" Value="1.37" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T18:00:00" ToDateTime="2011-11-19T19:00:00" Value="8.1" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T19:00:00" ToDateTime="2011-11-19T20:00:00" Value="5.6" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T20:00:00" ToDateTime="2011-11-19T21:00:00" Value="5.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T21:00:00" ToDateTime="2011-11-19T22:00:00" Value="4.66" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T22:00:00" ToDateTime="2011-11-19T23:00:00" Value="9.43" />
+            <TimeSeriesDetail FromDateTime="2011-11-19T23:00:00" ToDateTime="2011-11-20T00:00:00" Value="9.93" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T00:00:00" ToDateTime="2011-11-20T01:00:00" Value="8.47" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T01:00:00" ToDateTime="2011-11-20T02:00:00" Value="3.04" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T02:00:00" ToDateTime="2011-11-20T03:00:00" Value="1.53" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T03:00:00" ToDateTime="2011-11-20T04:00:00" Value="5.81" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T04:00:00" ToDateTime="2011-11-20T05:00:00" Value="0.56" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T05:00:00" ToDateTime="2011-11-20T06:00:00" Value="0.24" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T06:00:00" ToDateTime="2011-11-20T07:00:00" Value="6.31" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T07:00:00" ToDateTime="2011-11-20T08:00:00" Value="5.17" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T08:00:00" ToDateTime="2011-11-20T09:00:00" Value="4.85" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T09:00:00" ToDateTime="2011-11-20T10:00:00" Value="7.47" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T10:00:00" ToDateTime="2011-11-20T11:00:00" Value="2.52" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T11:00:00" ToDateTime="2011-11-20T12:00:00" Value="8.59" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T12:00:00" ToDateTime="2011-11-20T13:00:00" Value="6.13" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T13:00:00" ToDateTime="2011-11-20T14:00:00" Value="2.96" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T14:00:00" ToDateTime="2011-11-20T15:00:00" Value="7.31" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T15:00:00" ToDateTime="2011-11-20T16:00:00" Value="3.89" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T16:00:00" ToDateTime="2011-11-20T17:00:00" Value="9.68" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T17:00:00" ToDateTime="2011-11-20T18:00:00" Value="1.65" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T18:00:00" ToDateTime="2011-11-20T19:00:00" Value="4.38" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T19:00:00" ToDateTime="2011-11-20T20:00:00" Value="6.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T20:00:00" ToDateTime="2011-11-20T21:00:00" Value="1.27" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T21:00:00" ToDateTime="2011-11-20T22:00:00" Value="6.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T22:00:00" ToDateTime="2011-11-20T23:00:00" Value="7.17" />
+            <TimeSeriesDetail FromDateTime="2011-11-20T23:00:00" ToDateTime="2011-11-21T00:00:00" Value="7.57" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T00:00:00" ToDateTime="2011-11-21T01:00:00" Value="4.74" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T01:00:00" ToDateTime="2011-11-21T02:00:00" Value="6.24" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T02:00:00" ToDateTime="2011-11-21T03:00:00" Value="1.48" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T03:00:00" ToDateTime="2011-11-21T04:00:00" Value="7.09" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T04:00:00" ToDateTime="2011-11-21T05:00:00" Value="0.43" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T05:00:00" ToDateTime="2011-11-21T06:00:00" Value="5.82" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T06:00:00" ToDateTime="2011-11-21T07:00:00" Value="5.93" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T07:00:00" ToDateTime="2011-11-21T08:00:00" Value="5.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T08:00:00" ToDateTime="2011-11-21T09:00:00" Value="4.67" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T09:00:00" ToDateTime="2011-11-21T10:00:00" Value="3" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T10:00:00" ToDateTime="2011-11-21T11:00:00" Value="0.04" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T11:00:00" ToDateTime="2011-11-21T12:00:00" Value="7.9" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T12:00:00" ToDateTime="2011-11-21T13:00:00" Value="0.97" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T13:00:00" ToDateTime="2011-11-21T14:00:00" Value="3.53" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T14:00:00" ToDateTime="2011-11-21T15:00:00" Value="4.73" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T15:00:00" ToDateTime="2011-11-21T16:00:00" Value="9.16" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T16:00:00" ToDateTime="2011-11-21T17:00:00" Value="9.33" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T17:00:00" ToDateTime="2011-11-21T18:00:00" Value="5.38" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T18:00:00" ToDateTime="2011-11-21T19:00:00" Value="7.24" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T19:00:00" ToDateTime="2011-11-21T20:00:00" Value="7.07" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T20:00:00" ToDateTime="2011-11-21T21:00:00" Value="3.7" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T21:00:00" ToDateTime="2011-11-21T22:00:00" Value="5.27" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T22:00:00" ToDateTime="2011-11-21T23:00:00" Value="5.81" />
+            <TimeSeriesDetail FromDateTime="2011-11-21T23:00:00" ToDateTime="2011-11-22T00:00:00" Value="4.47" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T00:00:00" ToDateTime="2011-11-22T01:00:00" Value="1.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T01:00:00" ToDateTime="2011-11-22T02:00:00" Value="4.46" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T02:00:00" ToDateTime="2011-11-22T03:00:00" Value="4.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T03:00:00" ToDateTime="2011-11-22T04:00:00" Value="7.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T04:00:00" ToDateTime="2011-11-22T05:00:00" Value="0.1" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T05:00:00" ToDateTime="2011-11-22T06:00:00" Value="8.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T06:00:00" ToDateTime="2011-11-22T07:00:00" Value="1.28" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T07:00:00" ToDateTime="2011-11-22T08:00:00" Value="7.94" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T08:00:00" ToDateTime="2011-11-22T09:00:00" Value="2.75" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T09:00:00" ToDateTime="2011-11-22T10:00:00" Value="8.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T10:00:00" ToDateTime="2011-11-22T11:00:00" Value="5.79" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T11:00:00" ToDateTime="2011-11-22T12:00:00" Value="1.41" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T12:00:00" ToDateTime="2011-11-22T13:00:00" Value="3.41" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T13:00:00" ToDateTime="2011-11-22T14:00:00" Value="9.9" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T14:00:00" ToDateTime="2011-11-22T15:00:00" Value="5" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T15:00:00" ToDateTime="2011-11-22T16:00:00" Value="4.98" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T16:00:00" ToDateTime="2011-11-22T17:00:00" Value="9.27" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T17:00:00" ToDateTime="2011-11-22T18:00:00" Value="9.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T18:00:00" ToDateTime="2011-11-22T19:00:00" Value="8.88" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T19:00:00" ToDateTime="2011-11-22T20:00:00" Value="3.66" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T20:00:00" ToDateTime="2011-11-22T21:00:00" Value="9.3" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T21:00:00" ToDateTime="2011-11-22T22:00:00" Value="2.89" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T22:00:00" ToDateTime="2011-11-22T23:00:00" Value="2.13" />
+            <TimeSeriesDetail FromDateTime="2011-11-22T23:00:00" ToDateTime="2011-11-23T00:00:00" Value="3.9" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T00:00:00" ToDateTime="2011-11-23T01:00:00" Value="5.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T01:00:00" ToDateTime="2011-11-23T02:00:00" Value="7.55" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T02:00:00" ToDateTime="2011-11-23T03:00:00" Value="8.02" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T03:00:00" ToDateTime="2011-11-23T04:00:00" Value="1.82" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T04:00:00" ToDateTime="2011-11-23T05:00:00" Value="5.99" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T05:00:00" ToDateTime="2011-11-23T06:00:00" Value="5.22" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T06:00:00" ToDateTime="2011-11-23T07:00:00" Value="0.23" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T07:00:00" ToDateTime="2011-11-23T08:00:00" Value="4.84" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T08:00:00" ToDateTime="2011-11-23T09:00:00" Value="8.63" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T09:00:00" ToDateTime="2011-11-23T10:00:00" Value="6.01" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T10:00:00" ToDateTime="2011-11-23T11:00:00" Value="4.89" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T11:00:00" ToDateTime="2011-11-23T12:00:00" Value="3.79" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T12:00:00" ToDateTime="2011-11-23T13:00:00" Value="9.42" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T13:00:00" ToDateTime="2011-11-23T14:00:00" Value="0.47" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T14:00:00" ToDateTime="2011-11-23T15:00:00" Value="4.06" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T15:00:00" ToDateTime="2011-11-23T16:00:00" Value="7.23" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T16:00:00" ToDateTime="2011-11-23T17:00:00" Value="3.69" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T17:00:00" ToDateTime="2011-11-23T18:00:00" Value="3.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T18:00:00" ToDateTime="2011-11-23T19:00:00" Value="3.88" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T19:00:00" ToDateTime="2011-11-23T20:00:00" Value="3.76" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T20:00:00" ToDateTime="2011-11-23T21:00:00" Value="0.96" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T21:00:00" ToDateTime="2011-11-23T22:00:00" Value="8.36" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T22:00:00" ToDateTime="2011-11-23T23:00:00" Value="4.56" />
+            <TimeSeriesDetail FromDateTime="2011-11-23T23:00:00" ToDateTime="2011-11-24T00:00:00" Value="7.38" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T00:00:00" ToDateTime="2011-11-24T01:00:00" Value="5.53" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T01:00:00" ToDateTime="2011-11-24T02:00:00" Value="9.04" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T02:00:00" ToDateTime="2011-11-24T03:00:00" Value="1.61" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T03:00:00" ToDateTime="2011-11-24T04:00:00" Value="4.52" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T04:00:00" ToDateTime="2011-11-24T05:00:00" Value="2.59" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T05:00:00" ToDateTime="2011-11-24T06:00:00" Value="7.32" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T06:00:00" ToDateTime="2011-11-24T07:00:00" Value="0.22" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T07:00:00" ToDateTime="2011-11-24T08:00:00" Value="5.86" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T08:00:00" ToDateTime="2011-11-24T09:00:00" Value="5.84" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T09:00:00" ToDateTime="2011-11-24T10:00:00" Value="5.27" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T10:00:00" ToDateTime="2011-11-24T11:00:00" Value="3.27" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T11:00:00" ToDateTime="2011-11-24T12:00:00" Value="2.92" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T12:00:00" ToDateTime="2011-11-24T13:00:00" Value="4" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T13:00:00" ToDateTime="2011-11-24T14:00:00" Value="1.25" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T14:00:00" ToDateTime="2011-11-24T15:00:00" Value="0.51" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T15:00:00" ToDateTime="2011-11-24T16:00:00" Value="3.69" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T16:00:00" ToDateTime="2011-11-24T17:00:00" Value="7.41" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T17:00:00" ToDateTime="2011-11-24T18:00:00" Value="8.81" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T18:00:00" ToDateTime="2011-11-24T19:00:00" Value="2.71" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T19:00:00" ToDateTime="2011-11-24T20:00:00" Value="6.04" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T20:00:00" ToDateTime="2011-11-24T21:00:00" Value="2.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T21:00:00" ToDateTime="2011-11-24T22:00:00" Value="7.85" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T22:00:00" ToDateTime="2011-11-24T23:00:00" Value="9.91" />
+            <TimeSeriesDetail FromDateTime="2011-11-24T23:00:00" ToDateTime="2011-11-25T00:00:00" Value="7.98" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T00:00:00" ToDateTime="2011-11-25T01:00:00" Value="1.72" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T01:00:00" ToDateTime="2011-11-25T02:00:00" Value="2.19" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T02:00:00" ToDateTime="2011-11-25T03:00:00" Value="5.98" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T03:00:00" ToDateTime="2011-11-25T04:00:00" Value="1.69" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T04:00:00" ToDateTime="2011-11-25T05:00:00" Value="3.44" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T05:00:00" ToDateTime="2011-11-25T06:00:00" Value="7.77" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T06:00:00" ToDateTime="2011-11-25T07:00:00" Value="9.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T07:00:00" ToDateTime="2011-11-25T08:00:00" Value="0.36" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T08:00:00" ToDateTime="2011-11-25T09:00:00" Value="1.36" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T09:00:00" ToDateTime="2011-11-25T10:00:00" Value="7.45" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T10:00:00" ToDateTime="2011-11-25T11:00:00" Value="6.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T11:00:00" ToDateTime="2011-11-25T12:00:00" Value="4.77" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T12:00:00" ToDateTime="2011-11-25T13:00:00" Value="3.36" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T13:00:00" ToDateTime="2011-11-25T14:00:00" Value="4.85" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T14:00:00" ToDateTime="2011-11-25T15:00:00" Value="0.31" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T15:00:00" ToDateTime="2011-11-25T16:00:00" Value="1.31" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T16:00:00" ToDateTime="2011-11-25T17:00:00" Value="5.11" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T17:00:00" ToDateTime="2011-11-25T18:00:00" Value="9.91" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T18:00:00" ToDateTime="2011-11-25T19:00:00" Value="3.9" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T19:00:00" ToDateTime="2011-11-25T20:00:00" Value="8.58" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T20:00:00" ToDateTime="2011-11-25T21:00:00" Value="0.62" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T21:00:00" ToDateTime="2011-11-25T22:00:00" Value="7.82" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T22:00:00" ToDateTime="2011-11-25T23:00:00" Value="6.34" />
+            <TimeSeriesDetail FromDateTime="2011-11-25T23:00:00" ToDateTime="2011-11-26T00:00:00" Value="7.04" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T00:00:00" ToDateTime="2011-11-26T01:00:00" Value="9.03" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T01:00:00" ToDateTime="2011-11-26T02:00:00" Value="6.33" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T02:00:00" ToDateTime="2011-11-26T03:00:00" Value="5.37" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T03:00:00" ToDateTime="2011-11-26T04:00:00" Value="8.71" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T04:00:00" ToDateTime="2011-11-26T05:00:00" Value="8.96" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T05:00:00" ToDateTime="2011-11-26T06:00:00" Value="5.62" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T06:00:00" ToDateTime="2011-11-26T07:00:00" Value="9.67" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T07:00:00" ToDateTime="2011-11-26T08:00:00" Value="5.91" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T08:00:00" ToDateTime="2011-11-26T09:00:00" Value="4.97" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T09:00:00" ToDateTime="2011-11-26T10:00:00" Value="9.11" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T10:00:00" ToDateTime="2011-11-26T11:00:00" Value="1.24" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T11:00:00" ToDateTime="2011-11-26T12:00:00" Value="1.38" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T12:00:00" ToDateTime="2011-11-26T13:00:00" Value="7.61" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T13:00:00" ToDateTime="2011-11-26T14:00:00" Value="3.91" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T14:00:00" ToDateTime="2011-11-26T15:00:00" Value="9.55" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T15:00:00" ToDateTime="2011-11-26T16:00:00" Value="7.66" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T16:00:00" ToDateTime="2011-11-26T17:00:00" Value="3.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T17:00:00" ToDateTime="2011-11-26T18:00:00" Value="1.94" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T18:00:00" ToDateTime="2011-11-26T19:00:00" Value="9.25" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T19:00:00" ToDateTime="2011-11-26T20:00:00" Value="9.25" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T20:00:00" ToDateTime="2011-11-26T21:00:00" Value="4.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T21:00:00" ToDateTime="2011-11-26T22:00:00" Value="3.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T22:00:00" ToDateTime="2011-11-26T23:00:00" Value="9.24" />
+            <TimeSeriesDetail FromDateTime="2011-11-26T23:00:00" ToDateTime="2011-11-27T00:00:00" Value="9.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T00:00:00" ToDateTime="2011-11-27T01:00:00" Value="6.29" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T01:00:00" ToDateTime="2011-11-27T02:00:00" Value="6.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T02:00:00" ToDateTime="2011-11-27T03:00:00" Value="6.05" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T03:00:00" ToDateTime="2011-11-27T04:00:00" Value="1.86" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T04:00:00" ToDateTime="2011-11-27T05:00:00" Value="3.75" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T05:00:00" ToDateTime="2011-11-27T06:00:00" Value="5.05" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T06:00:00" ToDateTime="2011-11-27T07:00:00" Value="3.42" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T07:00:00" ToDateTime="2011-11-27T08:00:00" Value="6.76" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T08:00:00" ToDateTime="2011-11-27T09:00:00" Value="8.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T09:00:00" ToDateTime="2011-11-27T10:00:00" Value="3.06" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T10:00:00" ToDateTime="2011-11-27T11:00:00" Value="6.06" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T11:00:00" ToDateTime="2011-11-27T12:00:00" Value="3.43" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T12:00:00" ToDateTime="2011-11-27T13:00:00" Value="6.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T13:00:00" ToDateTime="2011-11-27T14:00:00" Value="0.29" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T14:00:00" ToDateTime="2011-11-27T15:00:00" Value="6.8" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T15:00:00" ToDateTime="2011-11-27T16:00:00" Value="7.35" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T16:00:00" ToDateTime="2011-11-27T17:00:00" Value="1.71" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T17:00:00" ToDateTime="2011-11-27T18:00:00" Value="4.63" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T18:00:00" ToDateTime="2011-11-27T19:00:00" Value="0.22" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T19:00:00" ToDateTime="2011-11-27T20:00:00" Value="8.95" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T20:00:00" ToDateTime="2011-11-27T21:00:00" Value="1.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T21:00:00" ToDateTime="2011-11-27T22:00:00" Value="3.74" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T22:00:00" ToDateTime="2011-11-27T23:00:00" Value="9.61" />
+            <TimeSeriesDetail FromDateTime="2011-11-27T23:00:00" ToDateTime="2011-11-28T00:00:00" Value="0.92" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T00:00:00" ToDateTime="2011-11-28T01:00:00" Value="3.72" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T01:00:00" ToDateTime="2011-11-28T02:00:00" Value="7.81" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T02:00:00" ToDateTime="2011-11-28T03:00:00" Value="2.23" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T03:00:00" ToDateTime="2011-11-28T04:00:00" Value="6.39" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T04:00:00" ToDateTime="2011-11-28T05:00:00" Value="4.13" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T05:00:00" ToDateTime="2011-11-28T06:00:00" Value="7.58" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T06:00:00" ToDateTime="2011-11-28T07:00:00" Value="6.89" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T07:00:00" ToDateTime="2011-11-28T08:00:00" Value="1.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T08:00:00" ToDateTime="2011-11-28T09:00:00" Value="1.18" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T09:00:00" ToDateTime="2011-11-28T10:00:00" Value="8.93" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T10:00:00" ToDateTime="2011-11-28T11:00:00" Value="2.17" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T11:00:00" ToDateTime="2011-11-28T12:00:00" Value="7.27" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T12:00:00" ToDateTime="2011-11-28T13:00:00" Value="4.37" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T13:00:00" ToDateTime="2011-11-28T14:00:00" Value="6.76" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T14:00:00" ToDateTime="2011-11-28T15:00:00" Value="3.07" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T15:00:00" ToDateTime="2011-11-28T16:00:00" Value="4.35" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T16:00:00" ToDateTime="2011-11-28T17:00:00" Value="7.98" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T17:00:00" ToDateTime="2011-11-28T18:00:00" Value="4.49" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T18:00:00" ToDateTime="2011-11-28T19:00:00" Value="4.88" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T19:00:00" ToDateTime="2011-11-28T20:00:00" Value="3.29" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T20:00:00" ToDateTime="2011-11-28T21:00:00" Value="9.08" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T21:00:00" ToDateTime="2011-11-28T22:00:00" Value="8.61" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T22:00:00" ToDateTime="2011-11-28T23:00:00" Value="8.63" />
+            <TimeSeriesDetail FromDateTime="2011-11-28T23:00:00" ToDateTime="2011-11-29T00:00:00" Value="6.32" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T00:00:00" ToDateTime="2011-11-29T01:00:00" Value="1.87" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T01:00:00" ToDateTime="2011-11-29T02:00:00" Value="1.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T02:00:00" ToDateTime="2011-11-29T03:00:00" Value="0.81" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T03:00:00" ToDateTime="2011-11-29T04:00:00" Value="4.15" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T04:00:00" ToDateTime="2011-11-29T05:00:00" Value="8.18" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T05:00:00" ToDateTime="2011-11-29T06:00:00" Value="2.12" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T06:00:00" ToDateTime="2011-11-29T07:00:00" Value="1.37" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T07:00:00" ToDateTime="2011-11-29T08:00:00" Value="2.41" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T08:00:00" ToDateTime="2011-11-29T09:00:00" Value="8.26" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T09:00:00" ToDateTime="2011-11-29T10:00:00" Value="1.15" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T10:00:00" ToDateTime="2011-11-29T11:00:00" Value="6.22" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T11:00:00" ToDateTime="2011-11-29T12:00:00" Value="3.2" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T12:00:00" ToDateTime="2011-11-29T13:00:00" Value="9.44" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T13:00:00" ToDateTime="2011-11-29T14:00:00" Value="9.93" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T14:00:00" ToDateTime="2011-11-29T15:00:00" Value="2.83" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T15:00:00" ToDateTime="2011-11-29T16:00:00" Value="2.67" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T16:00:00" ToDateTime="2011-11-29T17:00:00" Value="2.3" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T17:00:00" ToDateTime="2011-11-29T18:00:00" Value="7.47" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T18:00:00" ToDateTime="2011-11-29T19:00:00" Value="5.38" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T19:00:00" ToDateTime="2011-11-29T20:00:00" Value="9.51" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T20:00:00" ToDateTime="2011-11-29T21:00:00" Value="5.72" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T21:00:00" ToDateTime="2011-11-29T22:00:00" Value="3.47" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T22:00:00" ToDateTime="2011-11-29T23:00:00" Value="7.59" />
+            <TimeSeriesDetail FromDateTime="2011-11-29T23:00:00" ToDateTime="2011-11-30T00:00:00" Value="0.72" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T00:00:00" ToDateTime="2011-11-30T01:00:00" Value="4.24" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T01:00:00" ToDateTime="2011-11-30T02:00:00" Value="6.89" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T02:00:00" ToDateTime="2011-11-30T03:00:00" Value="9.21" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T03:00:00" ToDateTime="2011-11-30T04:00:00" Value="6.96" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T04:00:00" ToDateTime="2011-11-30T05:00:00" Value="6.94" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T05:00:00" ToDateTime="2011-11-30T06:00:00" Value="1.47" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T06:00:00" ToDateTime="2011-11-30T07:00:00" Value="7.04" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T07:00:00" ToDateTime="2011-11-30T08:00:00" Value="9.01" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T08:00:00" ToDateTime="2011-11-30T09:00:00" Value="1.48" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T09:00:00" ToDateTime="2011-11-30T10:00:00" Value="4.18" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T10:00:00" ToDateTime="2011-11-30T11:00:00" Value="5.25" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T11:00:00" ToDateTime="2011-11-30T12:00:00" Value="0.76" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T12:00:00" ToDateTime="2011-11-30T13:00:00" Value="8.57" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T13:00:00" ToDateTime="2011-11-30T14:00:00" Value="8.62" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T14:00:00" ToDateTime="2011-11-30T15:00:00" Value="7.15" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T15:00:00" ToDateTime="2011-11-30T16:00:00" Value="5.05" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T16:00:00" ToDateTime="2011-11-30T17:00:00" Value="5.52" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T17:00:00" ToDateTime="2011-11-30T18:00:00" Value="5.72" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T18:00:00" ToDateTime="2011-11-30T19:00:00" Value="3.43" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T19:00:00" ToDateTime="2011-11-30T20:00:00" Value="5.01" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T20:00:00" ToDateTime="2011-11-30T21:00:00" Value="2.24" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T21:00:00" ToDateTime="2011-11-30T22:00:00" Value="8.54" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T22:00:00" ToDateTime="2011-11-30T23:00:00" Value="6" />
+            <TimeSeriesDetail FromDateTime="2011-11-30T23:00:00" ToDateTime="2011-12-01T00:00:00" Value="1.58" />
+          </QuantitySeries>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>3.57</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+          </Fees>
+        </FeesData>
+      </ElectricityAsian>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-El-Asian-Struct</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>-->
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-StructuredDeal</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityStructuredDeal>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <PriceType>Fixed</PriceType>
+          <FromDate>2010-06-13</FromDate>
+          <ToDate>2010-09-20</ToDate>
+          <Financial />
+          <TransactionName>Electricity-Struct-Fixed-FeeTest</TransactionName>
+          <LoadProfile>Base</LoadProfile>
+        </InstrumentData>
+        <SettlementData>
+          <StructuredDealInformation Resolution="Daily">
+            <TimeSeriesDetail FromDateTime="2010-06-13T00:00:00" ToDateTime="2010-06-14T00:00:00" Price="4.86" Volume="60.21" />
+            <TimeSeriesDetail FromDateTime="2010-06-14T00:00:00" ToDateTime="2010-06-15T00:00:00" Price="5.38" Volume="43.73" />
+            <TimeSeriesDetail FromDateTime="2010-06-15T00:00:00" ToDateTime="2010-06-16T00:00:00" Price="5.85" Volume="71.82" />
+            <TimeSeriesDetail FromDateTime="2010-06-16T00:00:00" ToDateTime="2010-06-17T00:00:00" Price="5.67" Volume="48.84" />
+            <TimeSeriesDetail FromDateTime="2010-06-17T00:00:00" ToDateTime="2010-06-18T00:00:00" Price="6.21" Volume="28.07" />
+            <TimeSeriesDetail FromDateTime="2010-06-18T00:00:00" ToDateTime="2010-06-19T00:00:00" Price="1.03" Volume="21.04" />
+            <TimeSeriesDetail FromDateTime="2010-06-19T00:00:00" ToDateTime="2010-06-20T00:00:00" Price="4.21" Volume="98.89" />
+            <TimeSeriesDetail FromDateTime="2010-06-20T00:00:00" ToDateTime="2010-06-21T00:00:00" Price="3.11" Volume="40.71" />
+            <TimeSeriesDetail FromDateTime="2010-06-21T00:00:00" ToDateTime="2010-06-22T00:00:00" Price="2.92" Volume="1.12" />
+            <TimeSeriesDetail FromDateTime="2010-06-22T00:00:00" ToDateTime="2010-06-23T00:00:00" Price="0.44" Volume="88.72" />
+            <TimeSeriesDetail FromDateTime="2010-06-23T00:00:00" ToDateTime="2010-06-24T00:00:00" Price="2.74" Volume="18.01" />
+            <TimeSeriesDetail FromDateTime="2010-06-24T00:00:00" ToDateTime="2010-06-25T00:00:00" Price="7.66" Volume="78.07" />
+            <TimeSeriesDetail FromDateTime="2010-06-25T00:00:00" ToDateTime="2010-06-26T00:00:00" Price="5" Volume="73.39" />
+            <TimeSeriesDetail FromDateTime="2010-06-26T00:00:00" ToDateTime="2010-06-27T00:00:00" Price="7.15" Volume="33.33" />
+            <TimeSeriesDetail FromDateTime="2010-06-27T00:00:00" ToDateTime="2010-06-28T00:00:00" Price="7.85" Volume="92.34" />
+            <TimeSeriesDetail FromDateTime="2010-06-28T00:00:00" ToDateTime="2010-06-29T00:00:00" Price="5.34" Volume="12.22" />
+            <TimeSeriesDetail FromDateTime="2010-06-29T00:00:00" ToDateTime="2010-06-30T00:00:00" Price="9.98" Volume="26.47" />
+            <TimeSeriesDetail FromDateTime="2010-06-30T00:00:00" ToDateTime="2010-07-01T00:00:00" Price="9.43" Volume="78.27" />
+            <TimeSeriesDetail FromDateTime="2010-07-01T00:00:00" ToDateTime="2010-07-02T00:00:00" Price="9.69" Volume="22.9" />
+            <TimeSeriesDetail FromDateTime="2010-07-02T00:00:00" ToDateTime="2010-07-03T00:00:00" Price="7.49" Volume="79.97" />
+            <TimeSeriesDetail FromDateTime="2010-07-03T00:00:00" ToDateTime="2010-07-04T00:00:00" Price="8.56" Volume="93.73" />
+            <TimeSeriesDetail FromDateTime="2010-07-04T00:00:00" ToDateTime="2010-07-05T00:00:00" Price="4.11" Volume="56.77" />
+            <TimeSeriesDetail FromDateTime="2010-07-05T00:00:00" ToDateTime="2010-07-06T00:00:00" Price="9.97" Volume="16.65" />
+            <TimeSeriesDetail FromDateTime="2010-07-06T00:00:00" ToDateTime="2010-07-07T00:00:00" Price="5.72" Volume="89.95" />
+            <TimeSeriesDetail FromDateTime="2010-07-07T00:00:00" ToDateTime="2010-07-08T00:00:00" Price="4.54" Volume="12.93" />
+            <TimeSeriesDetail FromDateTime="2010-07-08T00:00:00" ToDateTime="2010-07-09T00:00:00" Price="7.67" Volume="20.74" />
+            <TimeSeriesDetail FromDateTime="2010-07-09T00:00:00" ToDateTime="2010-07-10T00:00:00" Price="8.06" Volume="38.48" />
+            <TimeSeriesDetail FromDateTime="2010-07-10T00:00:00" ToDateTime="2010-07-11T00:00:00" Price="9.74" Volume="82.51" />
+            <TimeSeriesDetail FromDateTime="2010-07-11T00:00:00" ToDateTime="2010-07-12T00:00:00" Price="6.71" Volume="70.53" />
+            <TimeSeriesDetail FromDateTime="2010-07-12T00:00:00" ToDateTime="2010-07-13T00:00:00" Price="0.05" Volume="77.41" />
+            <TimeSeriesDetail FromDateTime="2010-07-13T00:00:00" ToDateTime="2010-07-14T00:00:00" Price="0.18" Volume="98.88" />
+            <TimeSeriesDetail FromDateTime="2010-07-14T00:00:00" ToDateTime="2010-07-15T00:00:00" Price="9.89" Volume="86.93" />
+            <TimeSeriesDetail FromDateTime="2010-07-15T00:00:00" ToDateTime="2010-07-16T00:00:00" Price="6.89" Volume="44.25" />
+            <TimeSeriesDetail FromDateTime="2010-07-16T00:00:00" ToDateTime="2010-07-17T00:00:00" Price="6.62" Volume="77.24" />
+            <TimeSeriesDetail FromDateTime="2010-07-17T00:00:00" ToDateTime="2010-07-18T00:00:00" Price="7.35" Volume="28.68" />
+            <TimeSeriesDetail FromDateTime="2010-07-18T00:00:00" ToDateTime="2010-07-19T00:00:00" Price="8.56" Volume="53.55" />
+            <TimeSeriesDetail FromDateTime="2010-07-19T00:00:00" ToDateTime="2010-07-20T00:00:00" Price="7.41" Volume="91.65" />
+            <TimeSeriesDetail FromDateTime="2010-07-20T00:00:00" ToDateTime="2010-07-21T00:00:00" Price="1.43" Volume="96.91" />
+            <TimeSeriesDetail FromDateTime="2010-07-21T00:00:00" ToDateTime="2010-07-22T00:00:00" Price="5.63" Volume="55.09" />
+            <TimeSeriesDetail FromDateTime="2010-07-22T00:00:00" ToDateTime="2010-07-23T00:00:00" Price="3.88" Volume="64.24" />
+            <TimeSeriesDetail FromDateTime="2010-07-23T00:00:00" ToDateTime="2010-07-24T00:00:00" Price="6.14" Volume="84.42" />
+            <TimeSeriesDetail FromDateTime="2010-07-24T00:00:00" ToDateTime="2010-07-25T00:00:00" Price="9.17" Volume="23.51" />
+            <TimeSeriesDetail FromDateTime="2010-07-25T00:00:00" ToDateTime="2010-07-26T00:00:00" Price="3.92" Volume="0.71" />
+            <TimeSeriesDetail FromDateTime="2010-07-26T00:00:00" ToDateTime="2010-07-27T00:00:00" Price="3.23" Volume="14.82" />
+            <TimeSeriesDetail FromDateTime="2010-07-27T00:00:00" ToDateTime="2010-07-28T00:00:00" Price="2.98" Volume="37.3" />
+            <TimeSeriesDetail FromDateTime="2010-07-28T00:00:00" ToDateTime="2010-07-29T00:00:00" Price="8.08" Volume="16.08" />
+            <TimeSeriesDetail FromDateTime="2010-07-29T00:00:00" ToDateTime="2010-07-30T00:00:00" Price="0.62" Volume="2.27" />
+            <TimeSeriesDetail FromDateTime="2010-07-30T00:00:00" ToDateTime="2010-07-31T00:00:00" Price="8.33" Volume="77.87" />
+            <TimeSeriesDetail FromDateTime="2010-07-31T00:00:00" ToDateTime="2010-08-01T00:00:00" Price="0.25" Volume="24.22" />
+            <TimeSeriesDetail FromDateTime="2010-08-01T00:00:00" ToDateTime="2010-08-02T00:00:00" Price="8.17" Volume="3.42" />
+            <TimeSeriesDetail FromDateTime="2010-08-02T00:00:00" ToDateTime="2010-08-03T00:00:00" Price="4.85" Volume="33.11" />
+            <TimeSeriesDetail FromDateTime="2010-08-03T00:00:00" ToDateTime="2010-08-04T00:00:00" Price="4.49" Volume="33.27" />
+            <TimeSeriesDetail FromDateTime="2010-08-04T00:00:00" ToDateTime="2010-08-05T00:00:00" Price="8.78" Volume="11.96" />
+            <TimeSeriesDetail FromDateTime="2010-08-05T00:00:00" ToDateTime="2010-08-06T00:00:00" Price="6.92" Volume="4.43" />
+            <TimeSeriesDetail FromDateTime="2010-08-06T00:00:00" ToDateTime="2010-08-07T00:00:00" Price="7.91" Volume="84.96" />
+            <TimeSeriesDetail FromDateTime="2010-08-07T00:00:00" ToDateTime="2010-08-08T00:00:00" Price="5.1" Volume="80.43" />
+            <TimeSeriesDetail FromDateTime="2010-08-08T00:00:00" ToDateTime="2010-08-09T00:00:00" Price="6.39" Volume="78.33" />
+            <TimeSeriesDetail FromDateTime="2010-08-09T00:00:00" ToDateTime="2010-08-10T00:00:00" Price="5.05" Volume="17.4" />
+            <TimeSeriesDetail FromDateTime="2010-08-10T00:00:00" ToDateTime="2010-08-11T00:00:00" Price="4.78" Volume="7.29" />
+            <TimeSeriesDetail FromDateTime="2010-08-11T00:00:00" ToDateTime="2010-08-12T00:00:00" Price="2.32" Volume="30.95" />
+            <TimeSeriesDetail FromDateTime="2010-08-12T00:00:00" ToDateTime="2010-08-13T00:00:00" Price="8.87" Volume="19.27" />
+            <TimeSeriesDetail FromDateTime="2010-08-13T00:00:00" ToDateTime="2010-08-14T00:00:00" Price="9.17" Volume="65.42" />
+            <TimeSeriesDetail FromDateTime="2010-08-14T00:00:00" ToDateTime="2010-08-15T00:00:00" Price="1.23" Volume="27.56" />
+            <TimeSeriesDetail FromDateTime="2010-08-15T00:00:00" ToDateTime="2010-08-16T00:00:00" Price="8.05" Volume="11.6" />
+            <TimeSeriesDetail FromDateTime="2010-08-16T00:00:00" ToDateTime="2010-08-17T00:00:00" Price="5.96" Volume="81.62" />
+            <TimeSeriesDetail FromDateTime="2010-08-17T00:00:00" ToDateTime="2010-08-18T00:00:00" Price="0.06" Volume="47.52" />
+            <TimeSeriesDetail FromDateTime="2010-08-18T00:00:00" ToDateTime="2010-08-19T00:00:00" Price="1.86" Volume="24.9" />
+            <TimeSeriesDetail FromDateTime="2010-08-19T00:00:00" ToDateTime="2010-08-20T00:00:00" Price="0.95" Volume="55.19" />
+            <TimeSeriesDetail FromDateTime="2010-08-20T00:00:00" ToDateTime="2010-08-21T00:00:00" Price="4.12" Volume="62.46" />
+            <TimeSeriesDetail FromDateTime="2010-08-21T00:00:00" ToDateTime="2010-08-22T00:00:00" Price="5.78" Volume="64.46" />
+            <TimeSeriesDetail FromDateTime="2010-08-22T00:00:00" ToDateTime="2010-08-23T00:00:00" Price="4.13" Volume="39.02" />
+            <TimeSeriesDetail FromDateTime="2010-08-23T00:00:00" ToDateTime="2010-08-24T00:00:00" Price="8.3" Volume="22.65" />
+            <TimeSeriesDetail FromDateTime="2010-08-24T00:00:00" ToDateTime="2010-08-25T00:00:00" Price="9.53" Volume="26.33" />
+            <TimeSeriesDetail FromDateTime="2010-08-25T00:00:00" ToDateTime="2010-08-26T00:00:00" Price="2.11" Volume="83.34" />
+            <TimeSeriesDetail FromDateTime="2010-08-26T00:00:00" ToDateTime="2010-08-27T00:00:00" Price="0.36" Volume="63.33" />
+            <TimeSeriesDetail FromDateTime="2010-08-27T00:00:00" ToDateTime="2010-08-28T00:00:00" Price="3.23" Volume="73.03" />
+            <TimeSeriesDetail FromDateTime="2010-08-28T00:00:00" ToDateTime="2010-08-29T00:00:00" Price="7.43" Volume="27.53" />
+            <TimeSeriesDetail FromDateTime="2010-08-29T00:00:00" ToDateTime="2010-08-30T00:00:00" Price="4.87" Volume="32.68" />
+            <TimeSeriesDetail FromDateTime="2010-08-30T00:00:00" ToDateTime="2010-08-31T00:00:00" Price="4.05" Volume="51.42" />
+            <TimeSeriesDetail FromDateTime="2010-08-31T00:00:00" ToDateTime="2010-09-01T00:00:00" Price="2.03" Volume="13.18" />
+            <TimeSeriesDetail FromDateTime="2010-09-01T00:00:00" ToDateTime="2010-09-02T00:00:00" Price="7.97" Volume="46.35" />
+            <TimeSeriesDetail FromDateTime="2010-09-02T00:00:00" ToDateTime="2010-09-03T00:00:00" Price="0.35" Volume="14.23" />
+            <TimeSeriesDetail FromDateTime="2010-09-03T00:00:00" ToDateTime="2010-09-04T00:00:00" Price="0.59" Volume="99.34" />
+            <TimeSeriesDetail FromDateTime="2010-09-04T00:00:00" ToDateTime="2010-09-05T00:00:00" Price="5.33" Volume="58.79" />
+            <TimeSeriesDetail FromDateTime="2010-09-05T00:00:00" ToDateTime="2010-09-06T00:00:00" Price="0.53" Volume="47.9" />
+            <TimeSeriesDetail FromDateTime="2010-09-06T00:00:00" ToDateTime="2010-09-07T00:00:00" Price="7.78" Volume="54.76" />
+            <TimeSeriesDetail FromDateTime="2010-09-07T00:00:00" ToDateTime="2010-09-08T00:00:00" Price="7.16" Volume="79.42" />
+            <TimeSeriesDetail FromDateTime="2010-09-08T00:00:00" ToDateTime="2010-09-09T00:00:00" Price="4.84" Volume="62.24" />
+            <TimeSeriesDetail FromDateTime="2010-09-09T00:00:00" ToDateTime="2010-09-10T00:00:00" Price="0.3" Volume="18.64" />
+            <TimeSeriesDetail FromDateTime="2010-09-10T00:00:00" ToDateTime="2010-09-11T00:00:00" Price="2.73" Volume="37.38" />
+            <TimeSeriesDetail FromDateTime="2010-09-11T00:00:00" ToDateTime="2010-09-12T00:00:00" Price="8.04" Volume="37.47" />
+            <TimeSeriesDetail FromDateTime="2010-09-12T00:00:00" ToDateTime="2010-09-13T00:00:00" Price="3.18" Volume="66.5" />
+            <TimeSeriesDetail FromDateTime="2010-09-13T00:00:00" ToDateTime="2010-09-14T00:00:00" Price="9.13" Volume="82.07" />
+            <TimeSeriesDetail FromDateTime="2010-09-14T00:00:00" ToDateTime="2010-09-15T00:00:00" Price="3.45" Volume="48.41" />
+            <TimeSeriesDetail FromDateTime="2010-09-15T00:00:00" ToDateTime="2010-09-16T00:00:00" Price="7.29" Volume="44.51" />
+            <TimeSeriesDetail FromDateTime="2010-09-16T00:00:00" ToDateTime="2010-09-17T00:00:00" Price="1.76" Volume="37.84" />
+            <TimeSeriesDetail FromDateTime="2010-09-17T00:00:00" ToDateTime="2010-09-18T00:00:00" Price="2.34" Volume="57.8" />
+            <TimeSeriesDetail FromDateTime="2010-09-18T00:00:00" ToDateTime="2010-09-19T00:00:00" Price="6.85" Volume="11.81" />
+            <TimeSeriesDetail FromDateTime="2010-09-19T00:00:00" ToDateTime="2010-09-20T00:00:00" Price="7.81" Volume="90.06" />
+            <TimeSeriesDetail FromDateTime="2010-09-20T00:00:00" ToDateTime="2010-09-21T00:00:00" Price="4.43" Volume="56.78" />
+          </StructuredDealInformation>
+          <QuantityUnit>MW</QuantityUnit>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+          </Fees>
+        </FeesData>
+      </ElectricityStructuredDeal>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-02T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-El-Struct-Fixed</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Fee-Test</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2011-01-01</FromDate>
+				<ToDate>2011-03-31</ToDate>
+				<Financial />
+				<TransactionName>El-StructFlex-Versioned-FeeTest</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<ModelType>Retail</ModelType>
+					<!-- FORECASTED VOLUMES -->
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2010-01-01</EffectiveFromDate>
+        							<Comment>Initial Load</Comment>
+							</EffectiveDateVersion>
+						</Version>
+						<TimeSeriesDetail FromDateTime="2011-01-01T00:00:00" Value="1"/>
+						<TimeSeriesDetail FromDateTime="2011-02-01T00:00:00" Value="1"/>
+						<TimeSeriesDetail FromDateTime="2011-03-01T00:00:00" Value="1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2010-12-01</EffectiveFromDate>
+							</EffectiveDateVersion>
+						</Version>
+						<TimeSeriesDetail FromDateTime="2011-01-01T00:00:00" Value="2"/>
+						<TimeSeriesDetail FromDateTime="2011-02-01T00:00:00" Value="2"/>
+						<TimeSeriesDetail FromDateTime="2011-03-01T00:00:00" Value="2"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2011-01-20</EffectiveFromDate>
+							</EffectiveDateVersion>
+						</Version>
+						<TimeSeriesDetail FromDateTime="2011-01-01T00:00:00" Value="2"/>
+						<TimeSeriesDetail FromDateTime="2011-02-01T00:00:00" Value="4"/>
+						<TimeSeriesDetail FromDateTime="2011-03-01T00:00:00" Value="3"/>
+					</TimeSeries>
+					<!-- FORECASTED PRICES -->
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2010-01-01</EffectiveFromDate>
+        							<Comment>Initial Load</Comment>
+							</EffectiveDateVersion>
+						</Version>
+						<TimeSeriesDetail FromDateTime="2011-01-01T00:00:00" Value="10"/>
+						<TimeSeriesDetail FromDateTime="2011-02-01T00:00:00" Value="10"/>
+						<TimeSeriesDetail FromDateTime="2011-03-01T00:00:00" Value="10"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2010-12-01</EffectiveFromDate>
+							</EffectiveDateVersion>
+						</Version>
+						<TimeSeriesDetail FromDateTime="2011-01-01T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2011-02-01T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2011-03-01T00:00:00" Value="20"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2011-01-01</EffectiveFromDate>
+							</EffectiveDateVersion>
+						</Version>
+						<TimeSeriesDetail FromDateTime="2011-01-01T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2011-02-01T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2011-03-01T00:00:00" Value="30"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2011-01-15</EffectiveFromDate>
+							</EffectiveDateVersion>
+						</Version>
+						<TimeSeriesDetail FromDateTime="2011-03-01T00:00:00" Value="40"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2011-01-20</EffectiveFromDate>
+							</EffectiveDateVersion>
+						</Version>
+						<TimeSeriesDetail FromDateTime="2011-02-01T00:00:00" Value="50"/>
+					</TimeSeries>
+					<!-- Realized time series -->
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-01-01T00:00:00" Value="0.5"/>
+						<TimeSeriesDetail FromDateTime="2011-02-01T00:00:00" Value="0.5"/>
+						<TimeSeriesDetail FromDateTime="2011-03-01T00:00:00" Value="0.5"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-01-01T00:00:00" Value="9"/>
+						<TimeSeriesDetail FromDateTime="2011-02-01T00:00:00" Value="9"/>
+						<TimeSeriesDetail FromDateTime="2011-03-01T00:00:00" Value="9"/>
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>ICAP</Broker>
+			</SettlementData>
+      <FeesData>
+        <Fees>
+          <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+          <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+          <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="300" FeeUnit="EUR"/>
+          <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="400" FeeUnit="EUR"/>
+        </Fees>
+      </FeesData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Fee-Test-El-FlexStruct-Versioned</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<TicketNumber></TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+   <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Emission-Future</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <EmissionFuture>
+        <InstrumentData>
+          <ExecutionVenue>ICE</ExecutionVenue>
+          <PriceBasis>EUA ICE</PriceBasis>
+          <SettlementDate>2011-11-01</SettlementDate>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>1000</Quantity>
+          <QuantityUnit>Ton</QuantityUnit>
+          <Price>11.66</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/Ton"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/Ton"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/Ton"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/Ton"/>
+          </Fees>
+        </FeesData>
+      </EmissionFuture>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2011-11-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-Emission-Future-ICE</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET-6</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Gas-Forward</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <GasForward>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>ICE TTF</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2011-09-01</FromDate>
+          <ToDate>2011-09-30</ToDate>
+          <Financial />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>1</Quantity>
+          <QuantityUnit>MWh/d</QuantityUnit>
+          <Price>60.66</Price>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+          </Fees>
+        </FeesData>
+      </GasForward>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2009-12-30T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-Gas-Forward-MWhd</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET-6</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Gas-Future</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <GasFuture>
+        <InstrumentData>
+          <ExecutionVenue>ICE</ExecutionVenue>
+          <PriceBasis>ICE TTF</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2011-10-01</FromDate>
+          <ToDate>2011-10-31</ToDate>
+          <Physical />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>1</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>60.66</Price>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+    		  <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/MWh"/>
+          </Fees>
+        </FeesData>
+      </GasFuture>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2011-09-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-Gas-Future-ICE-TTF</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Oil-Swap</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <OilSwap>
+        <InstrumentData>
+          <PriceType>FixedForFloating</PriceType>
+          <IndexFormulaName>ICEBrentOilFLFSwap</IndexFormulaName>
+          <FromDate>2011-10-01</FromDate>
+          <ToDate>2011-10-31</ToDate>
+        </InstrumentData>
+        <SettlementData>
+          <PriceVolumeTimeSeries>
+            <TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Price="187.28" Volume="1000" />
+          </PriceVolumeTimeSeries>
+          <QuantityUnit>Bbl</QuantityUnit>
+          <Currency>USD</Currency>
+          <PriceVolumeUnit>PerBbl</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="1" FeeUnit="EUR/Bbl"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="2" FeeUnit="EUR/Bbl"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="3" FeeUnit="EUR/Bbl"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="4" FeeUnit="EUR/Bbl"/>
+          </Fees>
+        </FeesData>
+      </OilSwap>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2011-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-Oil-FFF-ICEBrentOilFLFSwap</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Gas-Swap</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <GasSwap>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceType>FixedForFloating</PriceType>
+          <IndexFormulaName>ICEMonthAheadNBP</IndexFormulaName>
+          <FromDate>2011-03-01</FromDate>
+          <ToDate>2011-03-31</ToDate>
+        </InstrumentData>
+        <SettlementData>
+          <PriceVolumeTimeSeries>
+            <TimeSeriesDetail FromDateTime="2011-03-01T00:00:00" ToDateTime="2011-04-01T00:00:00" Price="28.9" Volume="1" />
+          </PriceVolumeTimeSeries>
+          <QuantityUnit>th/d</QuantityUnit>
+          <Currency>GBP</Currency>
+          <PriceVolumeUnit>CentsPerTherm</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+		      <Clearing>Electronic</Clearing>
+		      <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="100" FeeUnit="p/th"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="200" FeeUnit="p/th"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="GBP"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="GBP"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="300" FeeUnit="p/th"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="400" FeeUnit="p/th"/>
+          </Fees>
+        </FeesData>
+      </GasSwap>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2011-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-TestGas-FFF-ICEMonthAheadNBP</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Currency-Forward</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <Currency-Forward>
+        <InstrumentData>
+          <Timezone>CET</Timezone>
+          <ExecutionVenue>None</ExecutionVenue>
+          <BaseCurrency>EUR</BaseCurrency>
+          <CrossCurrency>USD</CrossCurrency>
+          <DeliveryDate>2011-06-01</DeliveryDate>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>1000000</Quantity>
+          <Price>1.4444</Price>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.001" FeeUnit="USD/EUR"/>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.002" FeeUnit="USD/EUR"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="USD"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="USD"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.003" FeeUnit="USD/EUR"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.004" FeeUnit="USD/EUR"/>
+          </Fees>
+        </FeesData>
+      </Currency-Forward>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2011-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-Currency-Forward-0001</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-Capacity</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityCapacity>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <FromDate>2010-10-01</FromDate>
+          <ToDate>2010-10-31</ToDate>
+          <Physical>
+            <Interconnector>
+              <OriginBalanceArea AreaName="RWE"/>
+              <DestinationBalanceArea AreaName="EON"/>
+            </Interconnector>
+          </Physical>
+          <ExpiryTime>07:00:00</ExpiryTime>
+          <ExpiryOffset>2</ExpiryOffset>
+          <Priority>Firm</Priority>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>10</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>20</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.658" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="6.58" FeeUnit="EUR"/>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.58" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="5.8" FeeUnit="EUR"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+            <Fee FeeType="Entry" FeeValueType="Variable" FeeValue="0.5" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="5" FeeUnit="EUR"/>
+            <Fee FeeType="Exit" FeeValueType="Variable" FeeValue="0.6" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="6" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="EUR"/>
+          </Fees>
+        </FeesData>
+      </ElectricityCapacity>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-ElectricityCapacity</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-CapacitySpot</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityCapacitySpot>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <Date>2010-09-11</Date>
+          <Physical>
+            <Interconnector>
+              <OriginBalanceArea AreaName="RWE" />
+              <DestinationBalanceArea AreaName="ENBW" />
+            </Interconnector>
+          </Physical>
+          <Priority>Interruptible</Priority>
+          <ExpiryOffset>1</ExpiryOffset>
+          <ExpiryTime>07:30:00</ExpiryTime>
+        </InstrumentData>
+        <SettlementData>
+          <SpotHourInformation>
+            <TimeSeriesDetail DateTime="2010-09-11T00:00:00" Price="1" Volume="1" />
+            <TimeSeriesDetail DateTime="2010-09-11T01:00:00" Price="2" Volume="2" />
+            <TimeSeriesDetail DateTime="2010-09-11T02:00:00" Price="3" Volume="3" />
+            <TimeSeriesDetail DateTime="2010-09-11T03:00:00" Price="4" Volume="4" />
+            <TimeSeriesDetail DateTime="2010-09-11T04:00:00" Price="5" Volume="5" />
+            <TimeSeriesDetail DateTime="2010-09-11T05:00:00" Price="6" Volume="6" />
+            <TimeSeriesDetail DateTime="2010-09-11T06:00:00" Price="7" Volume="7" />
+            <TimeSeriesDetail DateTime="2010-09-11T07:00:00" Price="8" Volume="8" />
+            <TimeSeriesDetail DateTime="2010-09-11T08:00:00" Price="9" Volume="9" />
+            <TimeSeriesDetail DateTime="2010-09-11T09:00:00" Price="10" Volume="10" />
+            <TimeSeriesDetail DateTime="2010-09-11T10:00:00" Price="11" Volume="11" />
+            <TimeSeriesDetail DateTime="2010-09-11T11:00:00" Price="12" Volume="12" />
+            <TimeSeriesDetail DateTime="2010-09-11T12:00:00" Price="13" Volume="13" />
+            <TimeSeriesDetail DateTime="2010-09-11T13:00:00" Price="14" Volume="14" />
+            <TimeSeriesDetail DateTime="2010-09-11T14:00:00" Price="15" Volume="15" />
+            <TimeSeriesDetail DateTime="2010-09-11T15:00:00" Price="16" Volume="16" />
+            <TimeSeriesDetail DateTime="2010-09-11T16:00:00" Price="17" Volume="17" />
+            <TimeSeriesDetail DateTime="2010-09-11T17:00:00" Price="18" Volume="18" />
+            <TimeSeriesDetail DateTime="2010-09-11T18:00:00" Price="19" Volume="19" />
+            <TimeSeriesDetail DateTime="2010-09-11T19:00:00" Price="20" Volume="20" />
+            <TimeSeriesDetail DateTime="2010-09-11T20:00:00" Price="21" Volume="21" />
+            <TimeSeriesDetail DateTime="2010-09-11T21:00:00" Price="22" Volume="22" />
+            <TimeSeriesDetail DateTime="2010-09-11T22:00:00" Price="23" Volume="23" />
+            <TimeSeriesDetail DateTime="2010-09-11T23:00:00" Price="24" Volume="24" />
+          </SpotHourInformation>
+          <QuantityUnit>MW</QuantityUnit>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.658" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="6.58" FeeUnit="EUR"/>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.58" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="5.8" FeeUnit="EUR"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+            <Fee FeeType="Entry" FeeValueType="Variable" FeeValue="0.5" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="5" FeeUnit="EUR"/>
+            <Fee FeeType="Exit" FeeValueType="Variable" FeeValue="0.6" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="6" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="EUR"/>
+          </Fees>
+        </FeesData>
+      </ElectricityCapacitySpot>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-ElectricityCapacitySpot</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-CapacityStructuredDeal</DealType>
+      <Portfolios>
+        <Portfolio>Fee-Test</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityCapacityStructuredDeal>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <FromDate>2010-09-11</FromDate>
+          <ToDate>2010-09-11</ToDate>
+          <Physical>
+            <Interconnector>
+              <OriginBalanceArea AreaName="RWE"/>
+              <DestinationBalanceArea AreaName="ENBW"/>
+            </Interconnector>
+          </Physical>
+          <Priority>Interruptible</Priority>
+          <ExpiryOffset>1</ExpiryOffset>
+          <ExpiryTime>07:30:00</ExpiryTime>
+        </InstrumentData>
+        <SettlementData>
+          <StructuredDealInformation>
+            <TimeSeriesDetail FromDateTime="2010-09-11T00:00:00" Price="0" Volume="1" ToDateTime="2010-09-11T01:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T01:00:00" Price="0" Volume="2" ToDateTime="2010-09-11T02:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T02:00:00" Price="0" Volume="3" ToDateTime="2010-09-11T03:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T03:00:00" Price="0" Volume="4" ToDateTime="2010-09-11T04:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T04:00:00" Price="0" Volume="5" ToDateTime="2010-09-11T05:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T05:00:00" Price="0" Volume="6" ToDateTime="2010-09-11T06:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T06:00:00" Price="0" Volume="7" ToDateTime="2010-09-11T07:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T07:00:00" Price="0" Volume="8" ToDateTime="2010-09-11T08:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T08:00:00" Price="0" Volume="9" ToDateTime="2010-09-11T09:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T09:00:00" Price="0" Volume="10" ToDateTime="2010-09-11T10:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T10:00:00" Price="0" Volume="11" ToDateTime="2010-09-11T11:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T11:00:00" Price="0" Volume="12" ToDateTime="2010-09-11T12:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T12:00:00" Price="0" Volume="13" ToDateTime="2010-09-11T13:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T13:00:00" Price="0" Volume="14" ToDateTime="2010-09-11T14:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T14:00:00" Price="0" Volume="15" ToDateTime="2010-09-11T15:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T15:00:00" Price="0" Volume="16" ToDateTime="2010-09-11T16:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T16:00:00" Price="0" Volume="17" ToDateTime="2010-09-11T17:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T17:00:00" Price="0" Volume="18" ToDateTime="2010-09-11T18:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T18:00:00" Price="0" Volume="19" ToDateTime="2010-09-11T19:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T19:00:00" Price="0" Volume="20" ToDateTime="2010-09-11T20:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T20:00:00" Price="0" Volume="21" ToDateTime="2010-09-11T21:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T21:00:00" Price="0" Volume="22" ToDateTime="2010-09-11T22:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T22:00:00" Price="0" Volume="23" ToDateTime="2010-09-11T23:00:00"/>
+            <TimeSeriesDetail FromDateTime="2010-09-11T23:00:00" Price="0" Volume="24" ToDateTime="2010-09-12T00:00:00"/>
+          </StructuredDealInformation>
+          <Price>100</Price>
+          <QuantityUnit>MW</QuantityUnit>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.658" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="6.58" FeeUnit="EUR"/>
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.58" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="5.8" FeeUnit="EUR"/>
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+            <Fee FeeType="Entry" FeeValueType="Variable" FeeValue="0.5" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="5" FeeUnit="EUR"/>
+            <Fee FeeType="Exit" FeeValueType="Variable" FeeValue="0.6" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="6" FeeUnit="EUR"/>
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="EUR/MWh"/>
+            <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="EUR"/>
+          </Fees>
+        </FeesData>
+      </ElectricityCapacityStructuredDeal>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-01T00:00:00</TradeDate>
+        <TradeDateTimeZone>CET</TradeDateTimeZone>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-ElectricityCapacityStrDeal</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>GreenCertificate-Forward</DealType>
+		<Portfolios>
+			<Portfolio>Fee-Test</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GreenCertificateForward>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<FromDate>2010-01-01</FromDate>
+				<ToDate>2010-12-31</ToDate>
+				<TransferDate>2010-08-27</TransferDate>
+				<CertificateType>LECs</CertificateType>
+				<ProductionFacility>Virtual OK Power</ProductionFacility>
+				<EnvironmentLabel>None</EnvironmentLabel>
+				<FromCountry>Angola</FromCountry>
+				<ToCountry>Cyprus</ToCountry>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>40</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>ICAP</Broker>
+			</SettlementData>
+			<FeesData>
+			  <Fees>
+				<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="200" FeeUnit="GBP"/>
+				<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="20" FeeUnit="GBP/MWh"/>
+				<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="100" FeeUnit="GBP"/>
+				<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="10" FeeUnit="GBP/MWh"/>				
+				<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="300" FeeUnit="GBP"/>
+				<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="30" FeeUnit="GBP/MWh"/>
+				<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="40" FeeUnit="GBP/MWh"/>
+				<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="400" FeeUnit="GBP"/>
+			  </Fees>
+			</FeesData>
+		</GreenCertificateForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>			
+		</DealDetails>
+		<ReferenceData>				
+			<ExternalId>Fee-Test-GreenCertificateForwardEnvLabelNone</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<!-- DealInsert> 
+  <MetaData> 
+    <Timezone>CET</Timezone> 
+  </MetaData> 
+  <Transaction> 
+    <TransactionType>Automatic</TransactionType> 
+    <DealType>Elcertificate-Future</DealType> 
+    <Portfolios> 
+      <Portfolio>Fee-Test</Portfolio>
+	  <CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+      <BuySell>Sell</BuySell> 
+    </Portfolios> 
+       <ElcertificateFuture> 
+        <InstrumentData> 
+          <Timezone>CET</Timezone> 
+          <ExecutionVenue>Nord Pool</ExecutionVenue> 
+          <PriceBasis>ElCertificate NASDAQ</PriceBasis> 
+          <SettlementDate>2011-02-16</SettlementDate> 
+          <Physical/> 
+        </InstrumentData> 
+        <SettlementData> 
+          <Quantity>12</Quantity> 
+          <QuantityUnit>ECS</QuantityUnit> 
+          <Price>5</Price> 
+          <Currency>EUR</Currency> 
+          <PriceVolumeUnit>PerECS</PriceVolumeUnit> 
+          <CurrencySource>Viz</CurrencySource> 
+          <Clearing>Electronic</Clearing> 	  
+		  <Broker>ICAP</Broker>
+        </SettlementData> 
+		<FeesData>
+		  <Fees>
+			<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="100" FeeUnit="EUR/ECS"/>
+			<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="200" FeeUnit="EUR/ECS"/>
+			<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="10" FeeUnit="EUR"/>
+			<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="20" FeeUnit="EUR"/>
+			<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="300" FeeUnit="EUR/ECS"/>
+			<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="30" FeeUnit="EUR"/>
+			<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="400" FeeUnit="NOK/ECS"/>
+			<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="40" FeeUnit="NOK"/>
+		  </Fees>
+        </FeesData>
+      </ElcertificateFuture> 
+    <DealDetails> 
+      <Status>Active</Status> 
+      <Trader>Vizard</Trader> 
+      <TradeDate>2011-02-14T00:00:00</TradeDate> 
+    </DealDetails> 
+    <ReferenceData> 
+      <ExternalId>Fee-Test-ElCertificateNasdaqFuture</ExternalId> 
+      <ExternalSource>RegTest</ExternalSource> 
+    </ReferenceData> 
+  </Transaction> 
+</DealInsert-->
+<DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Elcertificate-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Fee-Test</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElcertificateStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>Elcertificate</PriceBasis>
+				<Physical/>
+				<TransactionName>q4-10</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FromDate>2010-10-01</FromDate>
+				<ToDate>2010-12-31</ToDate>
+				<PriceType>Fixed</PriceType>
+				<QuotaRegion>Norway</QuotaRegion>
+				<QuantityUnit>ECS</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerECS</PriceVolumeUnit>
+				<StructuredDealInformation Resolution="Monthly">
+					<TimeSeriesDetail FromDateTime="2010-10-01T00:00:00" Price="1" Volume="1" ToDateTime="2010-11-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2010-11-01T00:00:00" Price="2" Volume="2" ToDateTime="2010-12-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2010-12-01T00:00:00" Price="3" Volume="3" ToDateTime="2011-01-01T00:00:00"/>
+				</StructuredDealInformation>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>				
+				<Broker>ICAP</Broker>
+			</SettlementData>
+			<FeesData>
+			  <Fees>
+				<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="100" FeeUnit="SEK/ECS"/>
+				<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="200" FeeUnit="EUR/ECS"/>
+				<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="10" FeeUnit="SEK"/>
+				<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="20" FeeUnit="EUR"/>
+				<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="300" FeeUnit="DKK/ECS"/>
+				<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="30" FeeUnit="DKK"/>
+				<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="400" FeeUnit="NOK/ECS"/>
+				<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="40" FeeUnit="NOK"/>
+			  </Fees>
+			</FeesData>
+		</ElcertificateStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>			
+			<ExternalId>Fee-Test-ElCertificateStructuredDeal</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+ <DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Oil-Future</DealType>
+		<Portfolios>
+			<Portfolio>Fee-Test</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<OilFuture>
+			<InstrumentData>
+				<ExecutionVenue>ICE</ExecutionVenue>
+			    <PriceBasis>BrentOil</PriceBasis>				
+				<FromDate>2011-04-01</FromDate>
+				<ToDate>2011-04-30</ToDate>
+				<Financial></Financial>			
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>38</Quantity>
+				<QuantityUnit>Bbl</QuantityUnit>
+				<Price>28</Price>
+				<Currency>USD</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>ICAP</Broker>
+			</SettlementData>		
+			<FeesData>
+			  <Fees>
+				<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="100" FeeUnit="EUR/Bbl"/>
+				<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="200" FeeUnit="EUR/Bbl"/>
+				<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="10" FeeUnit="EUR"/>
+				<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="20" FeeUnit="EUR"/>
+				<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="300" FeeUnit="EUR/Bbl"/>
+				<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="30" FeeUnit="EUR"/>
+				<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="400" FeeUnit="NOK/Bbl"/>
+				<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="40" FeeUnit="NOK"/>
+			  </Fees>
+			</FeesData>
+		</OilFuture>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-04T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<ExternalId>FeeTest-OilFutureBrentOil</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>			
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Emission-European</DealType>
+		<Portfolios>
+			<Portfolio>Fee-Test</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<EmissionEuropean>
+			<InstrumentData>
+				<ExecutionVenue>ICE</ExecutionVenue>
+				<PriceBasis>EUA ICE</PriceBasis>
+				<SettlementDate>2010-12-20</SettlementDate>				
+				<PutCall>Call</PutCall>
+				<Strike>10.00</Strike>
+				<ExpiryDate>2010-12-15</ExpiryDate>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>38</Quantity>
+				<QuantityUnit>Ton</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerTon</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>ICAP</Broker>
+			</SettlementData>
+			<FeesData>
+			  <Fees>
+				<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="100" FeeUnit="EUR/Ton"/>
+				<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="200" FeeUnit="EUR/Ton"/>
+				<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="10" FeeUnit="EUR"/>
+				<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="20" FeeUnit="EUR"/>
+				<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="300" FeeUnit="EUR/Ton"/>
+				<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="30" FeeUnit="EUR"/>
+				<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="400" FeeUnit="NOK/Ton"/>
+				<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="40" FeeUnit="NOK"/>
+			  </Fees>
+			</FeesData>
+		</EmissionEuropean>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-12-08T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<ExternalId>Fee-Test-EmissionEuropean</ExternalId>			
+			<ExternalSource>RegTest</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Emission-Forward</DealType>
+		<Portfolios>
+			<Portfolio>Fee-Test</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+			<EmissionForward>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>EUA ICE</PriceBasis>
+				<SettlementDate>2010-12-30</SettlementDate>
+				<Country>NO</Country>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>38</Quantity>
+				<QuantityUnit>Ton</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerTon</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>ICAP</Broker>
+			</SettlementData>
+			<FeesData>
+			  <Fees>
+				<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="100" FeeUnit="EUR/Ton"/>
+				<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="200" FeeUnit="EUR/Ton"/>
+				<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="10" FeeUnit="EUR"/>
+				<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="20" FeeUnit="EUR"/>
+				<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="300" FeeUnit="EUR/Ton"/>
+				<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="30" FeeUnit="EUR"/>
+				<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="400" FeeUnit="NOK/Ton"/>
+				<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="40" FeeUnit="NOK"/>
+			  </Fees>
+			</FeesData>
+		</EmissionForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<ExternalId>Fee-Test-EmissionForward</ExternalId>			
+			<ExternalSource>RegTest</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+	<DealInsert>
+		<MetaData>
+			<MessageId>123456</MessageId>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Coal-Forward</DealType>
+			<Portfolios>
+				<Portfolio>Fee-Test</Portfolio>
+				<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<CoalForward>
+				<InstrumentData>
+					<Timezone>CET</Timezone>
+					<ExecutionVenue>None</ExecutionVenue>
+					<PriceBasis>Coal API #4</PriceBasis>
+					<FromDate>2011-11-26</FromDate>
+					<ToDate>2011-12-30</ToDate>
+					<Financial/>
+				</InstrumentData>
+				<SettlementData>
+					<Quantity>120</Quantity>
+					<QuantityUnit>Ton</QuantityUnit>
+					<Price>20</Price>
+					<Currency>USD</Currency>
+					<CurrencySource>Viz</CurrencySource>
+					<Clearing>Electronic</Clearing>
+					<Broker>ICAP</Broker>
+				</SettlementData>
+				<FeesData>
+				  <Fees>
+					<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="100" FeeUnit="EUR/Ton"/>
+					<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="200" FeeUnit="EUR/Ton"/>
+					<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="10" FeeUnit="EUR"/>
+					<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="20" FeeUnit="EUR"/>
+					<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="300" FeeUnit="EUR/Ton"/>
+					<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="30" FeeUnit="EUR"/>
+					<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="400" FeeUnit="NOK/Ton"/>
+					<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="40" FeeUnit="NOK"/>
+				  </Fees>
+				</FeesData>
+			</CoalForward>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2010-01-01T00:00:00</TradeDate>
+			</DealDetails>
+			<ReferenceData>
+				<ExternalId>Fee-Test-CoalForward</ExternalId>
+				<ExternalSource>RegTest</ExternalSource>				
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+	<DealInsert>
+		<MetaData>
+			<MessageId>123456</MessageId>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Coal-Future</DealType>
+			<Portfolios>
+				<Portfolio>Fee-Test</Portfolio>
+				<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<CoalFuture>
+				<InstrumentData>
+					<ExecutionVenue>ICE</ExecutionVenue>
+					<PriceBasis>Coal API #2</PriceBasis>
+					<FromDate>2011-11-26</FromDate>
+					<ToDate>2011-12-30</ToDate>
+					<Financial/>
+				</InstrumentData>
+				<SettlementData>
+					<Quantity>120</Quantity>
+					<QuantityUnit>Ton</QuantityUnit>
+					<Price>20</Price>
+					<Currency>USD</Currency>
+					<CurrencySource>Viz</CurrencySource>
+					<Clearing>Electronic</Clearing>
+					<Broker>ICAP</Broker>
+				</SettlementData>
+				<FeesData>
+					<Fees>
+						<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="100" FeeUnit="EUR/Ton"/>
+						<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="200" FeeUnit="EUR/Ton"/>
+						<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="10" FeeUnit="EUR"/>
+						<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="20" FeeUnit="EUR"/>
+						<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="300" FeeUnit="EUR/Ton"/>
+						<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="30" FeeUnit="EUR"/>
+						<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="400" FeeUnit="NOK/Ton"/>
+						<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="40" FeeUnit="NOK"/>
+					</Fees>
+				</FeesData>
+			</CoalFuture>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2011-11-01T00:00:00</TradeDate>
+			</DealDetails>
+			<ReferenceData>
+				<ExternalId>Fee-Test-CoalFuture</ExternalId>
+				<ExternalSource>RegTest</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+	
+	<!--<DealInsert>
+		<MetaData>
+			<MessageId>Test</MessageId>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Electricity-Swap</DealType>
+			<Portfolios>
+				<Portfolio>Fee-Test</Portfolio>
+				<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<ElectricitySwap>
+				<InstrumentData>
+					<Timezone>CET</Timezone>
+					<ExecutionVenue>None</ExecutionVenue>
+					<PriceBasis>NordPool System Price</PriceBasis>
+					<LoadProfile>Base</LoadProfile>
+					<FromDate>2010-11-01</FromDate>
+					<ToDate>2010-11-30</ToDate>
+				</InstrumentData>
+				<SettlementData>
+					<Quantity>12</Quantity>
+					<QuantityUnit>MW</QuantityUnit>
+					<Price>12</Price>
+					<MarketPriceMultiplicator>1.2</MarketPriceMultiplicator>
+					<Currency>EUR</Currency>
+					<CurrencySource>ECB</CurrencySource>
+					<Clearing>Voice</Clearing>					
+					<Broker>ICAP</Broker>	
+				</SettlementData>
+				<FeesData>
+					<Fees>	
+						<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.658" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="6.58" FeeUnit="EUR"/>					
+						<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.58" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="5.8" FeeUnit="EUR"/>		
+						<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+						<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="EUR"/>
+					</Fees>	
+				</FeesData>
+			</ElectricitySwap>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2010-01-01T00:00:00</TradeDate>
+			</DealDetails>
+			<ReferenceData>	
+				<ExternalId>Fee-Test-ElectricitySwap</ExternalId>
+				<ExternalSource>RegTest</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>-->
+  
+		<DealInsert>
+		<MetaData>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Electricity-Transport</DealType>
+			<Portfolios>
+				<Portfolio>Fee-Test</Portfolio>
+				<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<ElectricityTransport>
+				<InstrumentData>
+					<FromDate>2010-10-28</FromDate>
+					<ToDate>2010-10-28</ToDate>
+					<Physical>
+						<Interconnector>
+							<OriginBalanceArea AreaName="RWE"/>
+							<DestinationBalanceArea AreaName="EON"/>
+						</Interconnector>
+					</Physical>
+				</InstrumentData>
+				<SettlementData>
+					<TransportQuantityInformation>
+						<TimeSeriesDetail From="2010-10-28T00:00:00" Price="26" Volume="1" Until="2010-10-28T01:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T01:00:00" Price="26" Volume="2" Until="2010-10-28T02:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T02:00:00" Price="26" Volume="3" Until="2010-10-28T03:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T03:00:00" Price="26" Volume="4" Until="2010-10-28T04:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T04:00:00" Price="26" Volume="5" Until="2010-10-28T05:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T05:00:00" Price="26" Volume="6" Until="2010-10-28T06:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T06:00:00" Price="26" Volume="7" Until="2010-10-28T07:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T07:00:00" Price="26" Volume="8" Until="2010-10-28T08:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T08:00:00" Price="26" Volume="9" Until="2010-10-28T09:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T09:00:00" Price="26" Volume="10" Until="2010-10-28T10:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T10:00:00" Price="26" Volume="11" Until="2010-10-28T11:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T11:00:00" Price="26" Volume="12" Until="2010-10-28T12:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T12:00:00" Price="26" Volume="13" Until="2010-10-28T13:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T13:00:00" Price="26" Volume="14" Until="2010-10-28T14:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T14:00:00" Price="26" Volume="15" Until="2010-10-28T15:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T15:00:00" Price="26" Volume="16" Until="2010-10-28T16:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T16:00:00" Price="26" Volume="17" Until="2010-10-28T17:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T17:00:00" Price="26" Volume="18" Until="2010-10-28T18:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T18:00:00" Price="26" Volume="19" Until="2010-10-28T19:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T19:00:00" Price="26" Volume="20" Until="2010-10-28T20:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T20:00:00" Price="26" Volume="21" Until="2010-10-28T21:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T21:00:00" Price="26" Volume="22" Until="2010-10-28T22:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T22:00:00" Price="26" Volume="23" Until="2010-10-28T23:00:00"/>
+						<TimeSeriesDetail From="2010-10-28T23:00:00" Price="26" Volume="24" Until="2010-10-29T00:00:00"/>
+					</TransportQuantityInformation>
+					<QuantityUnit>MW</QuantityUnit>
+					<Currency>EUR</Currency>
+					<CurrencySource>Viz</CurrencySource>
+				</SettlementData>
+				<FeesData>
+					<Fees>						
+						<Fee FeeType="Entry" FeeValueType="Variable" FeeValue="0.5" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="5" FeeUnit="EUR"/>
+						<Fee FeeType="Exit" FeeValueType="Variable" FeeValue="0.6" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="6" FeeUnit="EUR"/>
+					</Fees>
+				</FeesData>
+			</ElectricityTransport>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2010-01-01T00:00:00</TradeDate>
+			</DealDetails>
+			<ReferenceData>
+				<ExternalId>Fee-Test-ElectricityTransport</ExternalId>
+				<ExternalSource>RegTest</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+		<DealInsert>
+		<MetaData>
+			<Timezone>CET-6</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Gas-Capacity</DealType>
+			<Portfolios>
+				<Portfolio>Fee-Test</Portfolio>
+				<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<GasCapacity>
+				<InstrumentData>
+					<FromDate>2010-10-01</FromDate>
+					<ToDate>2010-10-31</ToDate>
+					<Physical>
+						<Interconnector>
+							<OriginBalanceArea AreaName="TTF"/>
+							<DestinationBalanceArea AreaName="NBP"/>
+						</Interconnector>
+					</Physical>
+					<Priority>Firm</Priority>
+					<ExpiryTime>07:30:00</ExpiryTime>
+					<ExpiryOffset>1</ExpiryOffset>
+				</InstrumentData>
+				<SettlementData>
+					<Quantity>10</Quantity>
+					<QuantityUnit>MW</QuantityUnit>
+					<Price>20</Price>
+					<Currency>EUR</Currency>
+					<CurrencySource>Viz</CurrencySource>
+					<Clearing>Electronic</Clearing>
+					<Broker>ICAP</Broker>
+					<CapacityId>TestCapacityIDFees</CapacityId>													
+				</SettlementData>
+				<FeesData>
+					<Fees>
+						<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.658" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="6.58" FeeUnit="EUR"/>					
+						<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.58" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="5.8" FeeUnit="EUR"/>		
+						<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+						<Fee FeeType="Entry" FeeValueType="Variable" FeeValue="0.5" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="5" FeeUnit="EUR"/>
+						<Fee FeeType="Exit" FeeValueType="Variable" FeeValue="0.6" FeeUnit="NOK/MWh"/>
+						<Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="6" FeeUnit="NOK"/>
+						<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="EUR"/>
+					</Fees>
+				</FeesData>
+			</GasCapacity>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2010-10-01T00:00:00</TradeDate>
+			</DealDetails>
+			<ReferenceData>
+				<ExternalId>Fee-Test-PassGasCapacity</ExternalId>
+				<ExternalSource>XMLFileImport</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+		<DealInsert>
+		<MetaData>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Gas-CapacityStructuredDeal</DealType>
+			<Portfolios>
+				<Portfolio>Fee-Test</Portfolio>
+				<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<GasCapacityStructuredDeal>
+				<InstrumentData>				
+					<FromDate>2010-09-11</FromDate>
+					<ToDate>2010-09-13</ToDate>
+					<Physical>
+						<Interconnector>
+							<OriginBalanceArea AreaName="TTF"/>
+							<DestinationBalanceArea AreaName="NBP"/>
+						</Interconnector>
+					</Physical>
+					<Priority>Interruptible</Priority>
+					<ExpiryOffset>1</ExpiryOffset>
+					<ExpiryTime>07:30:00</ExpiryTime>
+				</InstrumentData>
+				<SettlementData>
+					<DailyInformation>
+						<TimeSeriesDetail DateTime="2010-09-11T00:00:00" Volume="1"/>
+						<TimeSeriesDetail DateTime="2010-09-12T00:00:00" Volume="2"/>
+						<TimeSeriesDetail DateTime="2010-09-13T00:00:00" Volume="3"/>
+					</DailyInformation>
+					<Price>100</Price>
+					<QuantityUnit>MW</QuantityUnit>
+					<Currency>EUR</Currency>
+					<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+					<CurrencySource>Viz</CurrencySource>
+					<Clearing>Electronic</Clearing>				
+					<Broker>ICAP</Broker>					
+				</SettlementData>
+				<FeesData>
+					<Fees>
+						<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.658" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="6.58" FeeUnit="EUR"/>					
+						<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.58" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="5.8" FeeUnit="EUR"/>		
+						<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+						<Fee FeeType="Entry" FeeValueType="Variable" FeeValue="0.5" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="5" FeeUnit="EUR"/>
+						<Fee FeeType="Exit" FeeValueType="Variable" FeeValue="0.6" FeeUnit="NOK/MWh"/>
+						<Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="6" FeeUnit="NOK"/>
+						<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="EUR"/>
+					</Fees>
+				</FeesData>
+			</GasCapacityStructuredDeal>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2010-01-01T00:00:00</TradeDate>
+			</DealDetails>
+			<ReferenceData>
+				<ExternalId>Fee-Test-GasapacityStructuredDeal</ExternalId>
+				<ExternalSource>XMLFileImport</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+	<DealInsert>
+		<MetaData>
+			<MessageId>MessageId</MessageId>
+			<Timezone>CET-6</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Gas-FloatingPrice</DealType>
+			<Portfolios>
+				<Portfolio>Fee-Test</Portfolio>
+				<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<GasFloatingPrice>
+				<InstrumentData>
+					<ExecutionVenue>None</ExecutionVenue>
+					<PriceBasis>ICE NBP</PriceBasis>
+					<FromDate>2010-01-01</FromDate>
+					<ToDate>2010-12-31</ToDate>
+					<Physical>
+						<DeliveryArea AreaName="NBP"/>
+					</Physical>
+				</InstrumentData>
+				<SettlementData>
+					<Quantity>38</Quantity>
+					<QuantityUnit>MWh/d</QuantityUnit>
+					<PriceMargin>0.1</PriceMargin>
+					<MarketPriceMultiplicator>1</MarketPriceMultiplicator>
+					<Currency>EUR</Currency>
+					<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+					<CurrencySource>Viz</CurrencySource>
+					<Clearing>Electronic</Clearing>		
+					<Broker>ICAP</Broker>			
+				</SettlementData>
+				<FeesData>
+					<Fees>
+						<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.658" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="6.58" FeeUnit="EUR"/>					
+						<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.58" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="5.8" FeeUnit="EUR"/>		
+						<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+						<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="NOK/MWh"/>
+						<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="NOK"/>
+					</Fees>
+				</FeesData>
+			</GasFloatingPrice>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2010-01-01T00:00:00</TradeDate>
+				<ConfirmedByBroker>false</ConfirmedByBroker>
+				<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+				<Authorised>false</Authorised>
+				<Paid>false</Paid>
+			</DealDetails>
+			<ReferenceData>
+				<ExternalId>Fee-Test-GasFloatingPrice</ExternalId>
+				<ExternalSource>RegTest</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+	<DealInsert>
+		<MetaData>
+			<Timezone>CET-6</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>IndexedOption</DealType>
+			<Portfolios>
+				<Portfolio>Fee-Test</Portfolio>
+				<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<IndexedOption>
+				<InstrumentData>
+					<IndexFormulaName>AxpoIndexedOption</IndexFormulaName>
+					<ExecutionVenue>None</ExecutionVenue>
+					<PriceBasis>ICE TTF</PriceBasis>
+					<FromDate>2010-10-01</FromDate>
+					<ToDate>2010-12-31</ToDate>
+					<Financial/>
+					<PutCall>Call</PutCall> 
+					<ExpiryDate>2010-09-25</ExpiryDate>       
+				</InstrumentData>
+				<SettlementData>
+					<Quantity>38</Quantity>
+					<QuantityUnit>Sm3/d</QuantityUnit>
+					<Price>28</Price>
+					<Currency>EUR</Currency>
+					<CurrencySource>Viz</CurrencySource>		
+					<Clearing>Electronic</Clearing>
+					<Broker>ICAP</Broker>
+				</SettlementData>
+				<FeesData>
+					<Fees>
+						<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.658" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="6.58" FeeUnit="EUR"/>					
+						<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.58" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="5.8" FeeUnit="EUR"/>		
+						<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+						<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="NOK/MWh"/>
+						<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="NOK"/>
+					</Fees>
+				</FeesData>
+			</IndexedOption>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2010-01-01T00:00:00Z</TradeDate>
+			</DealDetails>
+			<ReferenceData>
+				<ExternalId>Fee-Test-IndexedOptionFinancial</ExternalId>
+				<ExternalSource>RegTest</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+	<DealInsert>
+		<MetaData>
+			<Timezone>CET-6</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Gas-Transport</DealType>
+			<Portfolios>
+				<Portfolio>Fee-Test</Portfolio>
+				<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<GasTransport>
+				<InstrumentData>
+					<FromDate>2010-10-09</FromDate>
+					<ToDate>2010-10-10</ToDate>
+					<Physical>
+						<Interconnector>
+							<OriginBalanceArea AreaName="TTF"/>
+							<DestinationBalanceArea AreaName="NBP"/>
+						</Interconnector>
+					</Physical>
+				</InstrumentData>
+				<SettlementData>
+					<TransportQuantityInformation>
+						<TimeSeriesDetail From="2010-10-09T00:00:00" Price="20" Volume="40" Until="2010-10-10T00:00:00"/>
+						<TimeSeriesDetail From="2010-10-10T00:00:00" Price="20" Volume="35" Until="2010-10-11T00:00:00"/>
+					</TransportQuantityInformation>
+					<QuantityUnit>MW</QuantityUnit>
+					<Currency>EUR</Currency>
+					<CurrencySource>Viz</CurrencySource>				
+				</SettlementData>
+				<FeesData>
+					<Fees>						
+						<Fee FeeType="Entry" FeeValueType="Variable" FeeValue="0.5" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="5" FeeUnit="EUR"/>
+						<Fee FeeType="Exit" FeeValueType="Variable" FeeValue="0.6" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="6" FeeUnit="EUR"/>					
+					</Fees>
+				</FeesData>
+			</GasTransport>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2010-01-01T00:00:00</TradeDate>
+			</DealDetails>
+			<ReferenceData>
+				<ExternalId>Fee-Test-GasTransport</ExternalId>
+				<ExternalSource>RegTest</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+	<DealInsert>
+		<MetaData>
+			<Timezone>CET-6</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Gas-StructuredDeal</DealType>
+			<Portfolios>
+				<Portfolio>Fee-Test</Portfolio>
+				<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+				<BuySell>Buy</BuySell>
+			</Portfolios>
+			<GasStructuredDeal>
+				<InstrumentData>
+					<ExecutionVenue>None</ExecutionVenue>
+					<PriceBasis>Endex TTF</PriceBasis>
+					<PriceType>Fixed</PriceType>
+					<FromDate>2010-10-01</FromDate>
+					<ToDate>2010-12-31</ToDate>
+					<Physical>
+						<DeliveryArea AreaName="TTF"/>
+					</Physical>
+					<TransactionName>Transaction Name</TransactionName>
+				</InstrumentData>
+				<SettlementData>
+					<StructuredDealInformation Resolution="Monthly">
+						<TimeSeriesDetail FromDateTime="2010-10-01T00:00:00" Price="1" Volume="1" ToDateTime="2010-11-01T00:00:00"/>
+						<TimeSeriesDetail FromDateTime="2010-11-01T00:00:00" Price="2" Volume="2" ToDateTime="2010-12-01T00:00:00"/>
+						<TimeSeriesDetail FromDateTime="2010-12-01T00:00:00" Price="3" Volume="3" ToDateTime="2011-01-01T00:00:00"/>
+					</StructuredDealInformation>
+					<QuantityUnit>MWh/d</QuantityUnit>
+					<Currency>EUR</Currency>
+					<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+					<CurrencySource>Viz</CurrencySource>				
+					<Clearing>Electronic</Clearing>			
+					<Broker>ICAP</Broker>					
+				</SettlementData>
+				<FeesData>
+					<Fees>
+						<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.658" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="6.58" FeeUnit="EUR"/>					
+						<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.58" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="5.8" FeeUnit="EUR"/>		
+						<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+						<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="EUR/MWh"/>
+						<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="EUR"/>
+					</Fees>
+				</FeesData>
+			</GasStructuredDeal>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>DealImport</Trader>
+				<TradeDate>2010-01-01T00:00:00</TradeDate>
+			</DealDetails>
+			<ReferenceData>
+				<ExternalId>Fee-Test-GasStructuredDealMonthly</ExternalId>
+				<ExternalSource>RegTest</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+	  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Currency-Forward</DealType>
+      <Portfolios>
+				<Portfolio>Fee-Test</Portfolio>
+				<CounterpartyPortfolio>Counterparty-Fee-Test</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <Currency-Forward>
+        <InstrumentData>
+          <Timezone>CET</Timezone>
+          <ExecutionVenue>None</ExecutionVenue>
+          <BaseCurrency>EUR</BaseCurrency>
+          <CrossCurrency>USD</CrossCurrency>
+          <DeliveryDate>2011-06-01</DeliveryDate>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>1250000</Quantity>
+          <Price>1.4444</Price>
+          <CurrencySource>Viz</CurrencySource>
+		  <Clearing>Electronic</Clearing>			
+		  <Broker>ICAP</Broker>
+        </SettlementData>
+		<FeesData>
+			<Fees>
+				<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.000004" FeeUnit="USD/EUR"/>
+				<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="100" FeeUnit="USD"/>					
+				<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.000005" FeeUnit="USD/EUR"/>
+				<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="200" FeeUnit="USD"/>		
+				<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.000006" FeeUnit="USD/EUR"/>
+				<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="300" FeeUnit="USD"/>
+				<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.000007" FeeUnit="USD/EUR"/>
+				<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="400" FeeUnit="USD"/>
+			</Fees>
+		</FeesData>
+      </Currency-Forward>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Fee-Test-Currency-Forward</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+</BulkDealInsert>

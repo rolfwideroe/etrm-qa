@@ -1,0 +1,20 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FXSwap-ActualCF-NOK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,739897.385260416,monthly,Currency Forward,NOKEUR 15-Oct-11,Special-Cases-FXSwap-0001-Leg1</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,NOK,254578.233356103,monthly,Currency Forward,NOKEUR 01-Nov-11,Special-Cases-FXSwap-0001-Leg2</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,NOK,673458.583897378,monthly,Currency Forward,NOKEUR 28-Oct-11,Special-Cases-FXSwap-0002-Leg1</record>
+        <record>2012-01-01 00:00:00.000,0,TR,109,NOK,235211.407411156,monthly,Currency Forward,NOKEUR 05-Jan-12,Special-Cases-FXSwap-0002-Leg2</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

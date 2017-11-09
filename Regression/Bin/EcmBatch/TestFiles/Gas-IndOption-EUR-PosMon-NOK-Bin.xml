@@ -1,0 +1,22 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-IndOption-EUR-PosMon-NOK-Bin</workspace>
+    <monitor>Gas-IndOption-EUR-PosMon-NOK-Bin</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="CurrencySource" Value="ECB" />
+    </ElvizConfigurations>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0116 Gas-IndexedOption-EUR,Base,Physical,ICE TTF,Y2011,Y2011,ECS Curve,CET 06-06,EUR,ECB,Gas,,Indexed Option,Indexed Option C GAS-11,,,,2011-10-01 00:00:00.000,2012-09-30 00:00:00.000,Active,0,-19394544.96,0,-19394544.96,0,0,-19394544.96,0,-19394544.96,0,0,0,240,0,0,0,7709,240,NULL,0,0,0,0,0,0,220.794,-19394544.96,194.14217075332,0,0,Gas-IndexedOption-001</record>
+        <record>0116 Gas-IndexedOption-EUR,Base,Financial,ICE TTF,Q4-12,Q4-12,ECS Curve,CET 06-06,EUR,ECB,Gas,,Indexed Option,Indexed Option C Q4-12,,,,2012-10-01 00:00:00.000,2012-12-31 00:00:00.000,Active,0,1044671.04,-1733391.66087085,-688720.620870853,-4783330.86644574,-1733391.66087085,1044671.04,3049939.20557489,4094610.24557489,0,0,0,-240,0,0,0,2209,-240,NULL,0,0,0,0,0,0,47.3130000000001,1044671.04,216.63636170497,0,0,Gas-IndexedOption-002</record>
+        <record>0116 Gas-IndexedOption-EUR,Base,Physical,ICE TTF,Y2011,Y2011,ECS Curve,CET 06-06,EUR,ECB,Gas,,Indexed Option,Indexed Option P GAS-11,,,,2011-10-01 00:00:00.000,2012-09-30 00:00:00.000,Active,0,-19394544.96,-3651058.49251347,-23045603.4525135,14868613.4426842,-3651058.49251347,-19394544.96,-18519671.9351976,-37914216.8951976,0,0,0,240,0,0,0,7709,240,NULL,0,0,0,0,0,0,220.794,-19394544.96,194.208639533492,0,0,Gas-IndexedOption-003</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

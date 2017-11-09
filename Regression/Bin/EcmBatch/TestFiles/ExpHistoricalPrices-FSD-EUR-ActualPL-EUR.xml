@@ -1,0 +1,58 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>ExpHistoricalPrices-FSD-EUR-ActualPL-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <Tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-01-01 00:00:00.000,0,HI,176,EUR,-174791.208725,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Post-Delivery-Explicit-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0001</record>
+        <record>2011-02-01 00:00:00.000,0,HI,176,EUR,-256723.580675,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Post-Delivery-Explicit-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0001</record>
+        <record>2011-03-01 00:00:00.000,0,HI,176,EUR,-176207.24145,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Post-Delivery-Explicit-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0001</record>
+        <record>2011-08-01 00:00:00.000,0,HI,176,EUR,-319381.3963,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-In-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0002</record>
+        <record>2011-09-01 00:00:00.000,0,HI,176,EUR,-227486.276675,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-In-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0002</record>
+        <record>2011-10-01 00:00:00.000,0,HI,176,EUR,-336731.716575,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-In-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0002</record>
+        <record>2011-11-01 00:00:00.000,0,TR,176,EUR,-49738.6824000001,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-In-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0002</record>
+        <record>2011-12-01 00:00:00.000,0,TR,176,EUR,-4333.1904,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Pre-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0003</record>
+        <record>2012-01-01 00:00:00.000,0,TR,176,EUR,-177436.524,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Pre-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0003</record>
+        <record>2012-02-01 00:00:00.000,0,TR,176,EUR,-128000.7096,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Pre-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0003</record>
+        <record>2012-03-01 00:00:00.000,0,TR,176,EUR,-222347.9376,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Pre-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0003</record>
+        <record>2012-04-01 00:00:00.000,0,TR,176,EUR,-24049.0944000001,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Pre-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0003</record>
+        <record>2011-02-01 00:00:00.000,0,HI,176,EUR,-30150.1809999999,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-15min-Post-Delivery-Explicit-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0004</record>
+        <record>2011-10-01 00:00:00.000,0,HI,176,EUR,-94495.9360750003,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-15min-In-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,176,EUR,-47238.2668749994,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-15min-In-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0005</record>
+        <record>2012-04-01 00:00:00.000,0,TR,176,EUR,-31327.80525,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-15min-Pre-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0006</record>
+        <record>2011-02-01 00:00:00.000,0,HI,176,EUR,-198095.931875,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-Post-Delivery-Explicit-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0007</record>
+        <record>2011-03-01 00:00:00.000,0,HI,176,EUR,-272729.159774997,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-Post-Delivery-Explicit-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0007</record>
+        <record>2011-04-01 00:00:00.000,0,HI,176,EUR,-303624.671874994,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-Post-Delivery-Explicit-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0007</record>
+        <record>2011-05-01 00:00:00.000,0,HI,176,EUR,-125347.012349996,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-Post-Delivery-Explicit-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0007</record>
+        <record>2011-10-01 00:00:00.000,0,HI,176,EUR,-89346.542075,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-In-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0008</record>
+        <record>2011-11-01 00:00:00.000,0,TR,176,EUR,-166066.6974,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-In-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0008</record>
+        <record>2011-12-01 00:00:00.000,0,TR,176,EUR,-184792.8771,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-In-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0008</record>
+        <record>2012-01-01 00:00:00.000,0,TR,176,EUR,-167467.600600001,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-In-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0008</record>
+        <record>2012-02-01 00:00:00.000,0,TR,176,EUR,-5785.97050000008,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-In-Delivery-SP1-IntraDay-15min-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0008</record>
+        <record>2011-01-01 00:00:00.000,0,HI,176,EUR,192689.14245,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Post-Delivery-Explicit-SP1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0010</record>
+        <record>2011-02-01 00:00:00.000,0,HI,176,EUR,330459.0075,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Post-Delivery-Explicit-SP1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0010</record>
+        <record>2011-03-01 00:00:00.000,0,HI,176,EUR,247685.348025,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Post-Delivery-Explicit-SP1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0010</record>
+        <record>2011-01-01 00:00:00.000,0,HI,176,EUR,-176193.636,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Post-Delivery-Explicit-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0011</record>
+        <record>2011-02-01 00:00:00.000,0,HI,176,EUR,-252830.4456,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Post-Delivery-Explicit-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0011</record>
+        <record>2011-03-01 00:00:00.000,0,HI,176,EUR,-184389.444,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-Post-Delivery-Explicit-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0011</record>
+        <record>2011-08-01 00:00:00.000,0,HI,176,EUR,-283569.0264,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-In-Delivery,El-Struct-Spot-ExplicitBookPrice-EUR-0012</record>
+        <record>2011-09-01 00:00:00.000,0,HI,176,EUR,-265854.96,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-In-Delivery,El-Struct-Spot-ExplicitBookPrice-EUR-0012</record>
+        <record>2011-10-01 00:00:00.000,0,HI,176,EUR,-289363.7089,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-In-Delivery,El-Struct-Spot-ExplicitBookPrice-EUR-0012</record>
+        <record>2011-11-01 00:00:00.000,0,TR,176,EUR,-49738.6824000001,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Daily-In-Delivery,El-Struct-Spot-ExplicitBookPrice-EUR-0012</record>
+        <record>2011-10-01 00:00:00.000,0,HI,176,EUR,-65193.9684,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-In-Delivery-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0013</record>
+        <record>2011-11-01 00:00:00.000,0,TR,176,EUR,-166066.6974,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-In-Delivery-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0013</record>
+        <record>2011-12-01 00:00:00.000,0,TR,176,EUR,-184792.8771,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-In-Delivery-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0013</record>
+        <record>2012-01-01 00:00:00.000,0,TR,176,EUR,-167467.600600001,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-In-Delivery-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0013</record>
+        <record>2012-02-01 00:00:00.000,0,TR,176,EUR,-5785.97050000008,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-Hourly-In-Delivery-NO1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0013</record>
+        <record>2012-04-01 00:00:00.000,0,TR,176,EUR,-31327.80525,monthly,Structured Deal,ExpHistoricalPrices-FSD-EUR-Base-NordPool System Price-Physical-15min-Pre-Delivery-SP1-IntraDay-15min,El-Struct-Spot-ExplicitBookPrice-EUR-0014</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

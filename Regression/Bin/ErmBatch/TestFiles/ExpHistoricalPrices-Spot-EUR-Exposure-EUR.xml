@@ -1,0 +1,45 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>ExpHistoricalPrices-Spot-EUR-Exposure-EUR</workspace>
+    <monitor>ExpHistoricalPrices-Spot-EUR-Exposure-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>ExpHistoricalPrices-Spot-EUR,Electricity,D2111-11,2011-11-21 00:00:00.000,2011-11-21 00:00:00.000,Structured deal,Physical,Base,NordPool System Price,,CET,EUR,ExpHistoricalPrices-Spot-EUR-0007,NordPool System Price,MWh,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,85.2,42.6,42.6</record>
+        <record>ExpHistoricalPrices-Spot-EUR,Electricity,D2111-11,2011-11-21 00:00:00.000,2011-11-21 00:00:00.000,Structured deal,Physical,Base,NordPool System Price,,CET,EUR,ExpHistoricalPrices-Spot-EUR-0008,NordPool System Price,MWh,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,108,54,54</record>
+        <record>ExpHistoricalPrices-Spot-EUR,Electricity,D2111-11,2011-11-21 00:00:00.000,2011-11-21 00:00:00.000,Structured deal,Physical,Base,NordPool System Price,,CET,EUR,ExpHistoricalPrices-Spot-EUR-0009,NordPool System Price,MWh,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,64.8,32.4,32.4</record>
+        <record>ExpHistoricalPrices-Spot-EUR,Electricity,D2111-11,2011-11-21 00:00:00.000,2011-11-21 00:00:00.000,Structured deal,Physical,Base,NordPool System Price,,CET,EUR,ExpHistoricalPrices-Spot-EUR-0014,NordPool System Price,MWh,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,108,54,54</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>NordPool System Price,2011-11-02 00:00:00.000,2011-11-03 00:00:00.000,41,44.2222841362178,37.7777158637822</record>
+        <record>NordPool System Price,2011-11-03 00:00:00.000,2011-11-04 00:00:00.000,40,45.0865219074448,34.9134780925553</record>
+        <record>NordPool System Price,2011-11-04 00:00:00.000,2011-11-05 00:00:00.000,38.5,45.9436884717597,31.0563115282403</record>
+        <record>NordPool System Price,2011-11-05 00:00:00.000,2011-11-06 00:00:00.000,39,0,39</record>
+        <record>NordPool System Price,2011-11-06 00:00:00.000,2011-11-07 00:00:00.000,38,0,38</record>
+        <record>NordPool System Price,2011-11-07 00:00:00.000,2011-11-08 00:00:00.000,45.5737567961751,50.2700581988283,40.8774553935219</record>
+        <record>NordPool System Price,2011-11-08 00:00:00.000,2011-11-09 00:00:00.000,45.6543561821835,50.3529750913553,40.9557372730116</record>
+        <record>NordPool System Price,2011-11-09 00:00:00.000,2011-11-10 00:00:00.000,46.0098675299216,50.5253492731291,41.4943857867142</record>
+        <record>NordPool System Price,2011-11-10 00:00:00.000,2011-11-11 00:00:00.000,45.1042930479723,48.7917122110713,41.4168738848734</record>
+        <record>NordPool System Price,2011-11-11 00:00:00.000,2011-11-12 00:00:00.000,44.0692819253499,47.559905225616,40.5786586250837</record>
+        <record>NordPool System Price,2011-11-12 00:00:00.000,2011-11-13 00:00:00.000,41.8095698334845,0,41.8095698334845</record>
+        <record>NordPool System Price,2011-11-13 00:00:00.000,2011-11-14 00:00:00.000,41.0388746849131,0,41.0388746849131</record>
+        <record>NordPool System Price,2011-11-14 00:00:00.000,2011-11-15 00:00:00.000,47.7595897154212,52.8351587804678,42.6840206503746</record>
+        <record>NordPool System Price,2011-11-15 00:00:00.000,2011-11-16 00:00:00.000,47.8467354334786,52.9249695158635,42.7685013510936</record>
+        <record>NordPool System Price,2011-11-16 00:00:00.000,2011-11-17 00:00:00.000,48.2294845952375,53.1128351972594,43.3461339932155</record>
+        <record>NordPool System Price,2011-11-17 00:00:00.000,2011-11-18 00:00:00.000,47.2464760223959,51.2307495267675,43.2622025180242</record>
+        <record>NordPool System Price,2011-11-18 00:00:00.000,2011-11-19 00:00:00.000,46.1275506115626,49.8962869796418,42.3588142434833</record>
+        <record>NordPool System Price,2011-11-19 00:00:00.000,2011-11-20 00:00:00.000,43.6846246272518,0,43.6846246272518</record>
+        <record>NordPool System Price,2011-11-20 00:00:00.000,2011-11-21 00:00:00.000,42.8555389946525,0,42.8555389946525</record>
+        <record>NordPool System Price,2011-11-21 00:00:00.000,2011-11-22 00:00:00.000,47.5482113018125,52.2713488369514,42.8250737666736</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>
