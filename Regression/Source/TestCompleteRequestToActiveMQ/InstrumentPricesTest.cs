@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ElvizTestUtils;
 using ElvizTestUtils.DatabaseTools;
+using ElvizTestUtils.QaLookUp;
 using Microsoft.Office.Interop.Excel;
 using NUnit.Framework;
 
