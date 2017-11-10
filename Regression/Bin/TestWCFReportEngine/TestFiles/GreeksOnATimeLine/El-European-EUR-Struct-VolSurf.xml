@@ -1,0 +1,124 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>GreeksOnATimelineReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-16T00:00:00" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseEndDate" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="PosCalcMethod" IsNotSet="false" XmlEncodedValue="NPVWA" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="TimeResolution" IsNotSet="false" XmlEncodedValue="Month" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="El-EU-Struct-EUR" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedTimeSeriesArtifacts>
+      <ExpectedTimeSeriesArtifact ArtifactId="greeksOnATimeline" Columns="GroupBy,Greek,ReferenceArea,TimeZone,From,Until,Value" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Double">
+        <TimeSeriesProperties>
+          <Property Name="GroupBy" DataType="System.String" />
+          <Property Name="Greek" DataType="System.String" />
+          <Property Name="ReferenceArea" DataType="System.String" />
+        </TimeSeriesProperties>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,-45055.6248539139</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,44951.6743414602</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,-5066.68857961698</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,-70717.1952580618</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,33215.6521032857</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (Curve Unit),SYOSL,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,66363.4802743943</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,-62.577256741547</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,60.4189171256185</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,-7.03706747169014</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,-98.218326747308</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,44.644693687212</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Delta (MW),SYOSL,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,92.1715003811033</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,20.6307913818138</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,28.3073956260228</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,605.360228178607</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,8.13987548356386E-05</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0.000217010731204797</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (Curve Unit),Norway 1,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0.617240334976845</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0.0286538769191858</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0.0380475747661596</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0.840778094692509</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,1.13053826160609E-07</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,2.91681090329029E-07</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Gamma (MW),Norway 1,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0.000857278243023396</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,516.656698797301</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,513.700458439019</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,1163.94054962627</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,446.9310169685</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,451.139819659692</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Theta (EUR/day),Norway 1,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,1366.65430595113</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,49.1602800385426</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,66.8112538556667</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),NordPool System Price,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,2379.52525606991</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2011-11-16T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0.000102480134419999</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0.000272689790236482</ExpectedRecord>
+        <ExpectedRecord>El-EU-Struct-EUR,Vega (EUR/Vol(%)),Norway 1,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,1.2532092738316</ExpectedRecord>
+      </ExpectedTimeSeriesArtifact>
+    </ExpectedTimeSeriesArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

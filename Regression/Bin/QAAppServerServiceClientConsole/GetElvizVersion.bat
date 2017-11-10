@@ -1,0 +1,2 @@
+QAAppServerServiceClientConsole.exe ElvizVersion
+pause

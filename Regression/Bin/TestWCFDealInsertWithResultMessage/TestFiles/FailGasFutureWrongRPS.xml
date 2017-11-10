@@ -1,0 +1,55 @@
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>No reference price series found for name:APXGas DAM TTF Hi All day-EUR-Day; price basis:ICE TTF; execution venue:ICE</Message>
+  <TestData>
+    <DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+      <MetaData>
+        <Timezone>CET-6</Timezone>
+      </MetaData>
+      <Transaction>
+        <TransactionType>Automatic</TransactionType>
+        <DealType>Gas-Future</DealType>
+        <Portfolios>
+          <Portfolio>API Test Customer</Portfolio>
+          <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+          <BuySell>Buy</BuySell>
+        </Portfolios>
+        <GasFuture>
+          <InstrumentData>
+            <ExecutionVenue>ICE</ExecutionVenue>
+            <PriceBasis>ICE TTF</PriceBasis>
+            <ReferencePriceSeries>APXGas DAM TTF Hi All day-EUR-Day</ReferencePriceSeries>
+            <LoadProfile>Base Week</LoadProfile>
+            <FromDate>2008-01-01</FromDate>
+            <ToDate>2008-12-31</ToDate>
+            <Financial />
+          </InstrumentData>
+          <SettlementData>
+            <Quantity>38</Quantity>
+            <QuantityUnit>MW</QuantityUnit>
+            <Price>28</Price>
+            <Currency>EUR</Currency>
+            <CurrencySource>Viz</CurrencySource>
+            <Clearing>Electronic</Clearing>
+            <ClearingCurrency>EUR</ClearingCurrency>
+            <ClearingFee>0</ClearingFee>
+            <BrokerTradingFee>0</BrokerTradingFee>
+            <BrokerCurrency>EUR</BrokerCurrency>
+          </SettlementData>
+        </GasFuture>
+        <DealDetails>
+          <Status>Active</Status>
+          <Trader>DealImport</Trader>
+          <TradeDate>2007-12-24T00:00:00Z</TradeDate>
+        </DealDetails>
+        <ReferenceData>
+          <Comment>GasFuture; should pass</Comment>
+          <DealGroup>API Test</DealGroup>
+          <ExternalId>PassGasFuture</ExternalId>
+          <ExternalSource>XMLFileImport</ExternalSource>
+          <TicketNumber>TicketNumber</TicketNumber>
+        </ReferenceData>
+      </Transaction>
+    </DealInsert>
+  </TestData>
+</TestCase>

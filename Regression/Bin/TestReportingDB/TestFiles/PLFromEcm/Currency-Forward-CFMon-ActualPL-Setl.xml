@@ -1,0 +1,28 @@
+<test type="EcmBatch" name="Currency-Forward-CFMon-ActualPL-Setl" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Currency-Forward-CFMon-ActualPL-Setl</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-06-01 00:00:00.000,0,HI,39,USD,-2485.02435683995,monthly,Currency Forward,USDEUR 01-Jun-11,Currency-Forward-0001</record>
+        <record>2011-11-01 00:00:00.000,0,TR,39,USD,-76700.01926422,monthly,Currency Forward,USDEUR 01-Nov-11,Currency-Forward-0002</record>
+        <record>2012-05-01 00:00:00.000,0,TR,39,USD,-85809.744304345,monthly,Currency Forward,USDEUR 31-May-12,Currency-Forward-0003</record>
+        <record>2011-06-01 00:00:00.000,0,HI,39,EUR,-81222.1680140705,monthly,Currency Forward,EURUSD 01-Jun-11,Currency-Forward-0004</record>
+        <record>2011-11-01 00:00:00.000,0,TR,39,EUR,-118854.503242759,monthly,Currency Forward,EURUSD 01-Nov-11,Currency-Forward-0005</record>
+        <record>2012-05-01 00:00:00.000,0,TR,39,EUR,-123757.097279826,monthly,Currency Forward,EURUSD 31-May-12,Currency-Forward-0006</record>
+        <record>2011-06-01 00:00:00.000,0,HI,39,DKK,-974899.82414246,monthly,Currency Forward,DKKUSD 01-Jun-11,Currency-Forward-0007</record>
+        <record>2011-11-01 00:00:00.000,0,TR,39,DKK,-704730.089187619,monthly,Currency Forward,DKKUSD 01-Nov-11,Currency-Forward-0008</record>
+        <record>2012-05-01 00:00:00.000,0,TR,39,DKK,-674165.085008129,monthly,Currency Forward,DKKUSD 31-May-12,Currency-Forward-0009</record>
+        <record>2011-06-01 00:00:00.000,0,HI,39,USD,-35601.1460930937,monthly,Currency Forward,USDDKK 01-Jun-11,Currency-Forward-0010</record>
+        <record>2011-11-01 00:00:00.000,0,TR,39,USD,-25997.5169677203,monthly,Currency Forward,USDDKK 01-Nov-11,Currency-Forward-0011</record>
+        <record>2012-05-01 00:00:00.000,0,TR,39,USD,-24970.752574463,monthly,Currency Forward,USDDKK 31-May-12,Currency-Forward-0012</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

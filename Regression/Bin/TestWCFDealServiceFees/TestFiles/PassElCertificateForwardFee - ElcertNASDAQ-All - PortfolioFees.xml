@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+	<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<MetaData>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<Transaction>
+			<TransactionType>Automatic</TransactionType>
+			<DealType>Elcertificate-Forward</DealType>
+			<Portfolios>
+				<Portfolio>Test Company A</Portfolio>
+				<CounterpartyPortfolio>EEX</CounterpartyPortfolio>
+				<BuySell>Sell</BuySell>
+			</Portfolios>
+			<ElcertificateForward>
+				<InstrumentData>
+					<Timezone>CET</Timezone>
+					<ExecutionVenue>Nord Pool</ExecutionVenue>
+					<PriceBasis>ElCertificate NASDAQ</PriceBasis>
+					<SettlementDate>2014-03-18</SettlementDate>
+					<Physical />
+				</InstrumentData>
+				<SettlementData>
+					<Quantity>12</Quantity>
+					<QuantityUnit>ECS</QuantityUnit>
+					<Price>5</Price>
+					<Currency>EUR</Currency>
+					<PriceVolumeUnit>PerECS</PriceVolumeUnit>
+					<CurrencySource>Viz</CurrencySource>
+					<Clearing>Electronic</Clearing>
+
+
+					<Broker>Test Broker A</Broker>
+				</SettlementData>
+				<FeesData>
+					<Fees>
+						<Fee FeeType="Clearing" FeeValueType="Variable" FeeUnit="EUR/ECS" />
+						<Fee FeeType="Broker" FeeValueType="Variable" FeeUnit="EUR/ECS" />
+						<Fee FeeType="Trading" FeeValueType="Variable" FeeUnit="EUR/ECS" />
+					</Fees>
+				</FeesData>
+			</ElcertificateForward>
+			<DealDetails>
+				<Status>Active</Status>
+				<Trader>Vizard</Trader>
+				<TradeDate>2011-02-14T00:00:00</TradeDate>
+			</DealDetails>
+			<ReferenceData>
+				<GroupFields>
+					<GroupField1 />
+					<GroupField2 />
+					<GroupField3 />
+				</GroupFields>
+				<ExternalId>PassElCertificateForwardFee - ElcertNASDAQ-All -
+					PortfolioFees</ExternalId>
+				<ExternalSource>XMLFileImport</ExternalSource>
+				<TicketNumber>TicketNumber</TicketNumber>
+			</ReferenceData>
+		</Transaction>
+	</DealInsert>
+	<ExpectedValues>
+		<ClearingCurrency>EUR</ClearingCurrency>
+		<ClearingFee>0.14</ClearingFee>
+		<BrokerFee>0.23</BrokerFee>
+		<BrokerCurrency>EUR</BrokerCurrency>
+		<TradingFee>2.5</TradingFee>
+		<TradingFeeCurrency>EUR</TradingFeeCurrency>
+		<CommissionFee>0</CommissionFee>
+		<CommissionFeeCurrency>EUR</CommissionFeeCurrency>
+		<EntryFee>0</EntryFee>
+		<EntryFeeCurrency>EUR</EntryFeeCurrency>
+		<ExitFee>0</ExitFee>
+		<ExitFeeCurrency>EUR</ExitFeeCurrency>
+		<Fees>
+			<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.14"
+				FeeUnit="EUR/ECS" />
+			<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.23"
+				FeeUnit="EUR/ECS" />
+			<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="2.5"
+				FeeUnit="EUR/ECS" />
+		</Fees>
+	</ExpectedValues>
+</TestCase>

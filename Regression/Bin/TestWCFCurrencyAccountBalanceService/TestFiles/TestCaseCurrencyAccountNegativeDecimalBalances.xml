@@ -1,0 +1,27 @@
+<CurrencyAccountTestCase>
+<InputData>
+	<CurrencyAccountInserts>
+		<Insert InsertBalanceDate="2014-01-01">
+			<CurrencyAccounts>
+				<CurrencyAccount CurrencyIsoCode="SEK" balanceDate="0001-01-01" NominalAmount="-40.23" UpdatedBy="" UpdatedTimeStampUtc="0001-01-01"/>
+			</CurrencyAccounts>
+		</Insert>
+	</CurrencyAccountInserts>
+		<!--If GetAccountTpe is Latest then we do not pass a date range otherwise we need a date range to retrieve the correct currencyAccountsInserts-->	
+</InputData>	
+<ExpectedResults>	
+  <!---UpdatedBy is irrelevant for API import, always uses the default API username, thats Create is BLANK, whilst Read is DealImport the default API username-->
+  <ExpectedResult Description="Test that negative Nominal Amount is allowed">
+  	<GetMethod>
+		<MostRecent>false</MostRecent>
+		<DateRangeCriteria>
+			<BalanceDateFrom>2014-01-01</BalanceDateFrom>
+			<BalanceDateTo>2014-01-01</BalanceDateTo>
+		</DateRangeCriteria>
+	</GetMethod>
+  <CurrencyAccounts>	
+		<CurrencyAccount CurrencyIsoCode="SEK" BalanceDate="2014-01-01" NominalAmount="-40.23" UpdatedBy="DealImport" UpdatedTimeStampUtc="0001-01-01"/>
+	</CurrencyAccounts>
+  </ExpectedResult>
+</ExpectedResults>
+</CurrencyAccountTestCase>

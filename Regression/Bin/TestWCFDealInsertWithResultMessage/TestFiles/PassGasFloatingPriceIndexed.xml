@@ -1,0 +1,124 @@
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Data/ElvizETRM/Development/Source/Integration/Viz.Integration.Core.DealImport/Files/Schemas/DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-FloatingPrice</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasFloatingPrice>
+			<InstrumentData>				
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE NBP</PriceBasis>
+				<ReferencePriceSeries>APXGas DAM TTF Hi All day-EUR-Day</ReferencePriceSeries>
+				<PriceType>Indexed</PriceType>
+				<IndexFormulaName>AxpoIndexedOption</IndexFormulaName>				
+				<FromDate>2008-01-01</FromDate>
+				<ToDate>2008-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="NBP"/>
+				</Physical>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>38</Quantity>
+				<QuantityUnit>MWh/d</QuantityUnit>
+				<PriceMargin>0.1</PriceMargin>
+				<MarketPriceMultiplicator>1</MarketPriceMultiplicator>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasFloatingPrice>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2007-12-24T00:00:00Z</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>PassGasFloatingPriceIndexed; should pass</Comment>
+			<ExternalId>PassGasFloatingPriceIndexed</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>425</TransactionId>
+  <DealType>Gas-FloatingPrice</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+	<ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>CAL-08</InstrumentName>
+    <PriceBasis>ICE NBP</PriceBasis>
+    <FromDate>2008-01-01T00:00:00</FromDate>
+    <ToDate>2008-12-31T00:00:00</ToDate>
+    <TimeZone>CET 06-06</TimeZone>
+	<ReferencePriceSeries>APXGas DAM TTF Hi All day-EUR-Day</ReferencePriceSeries>
+    <PriceType>Indexed</PriceType>
+	<IndexFormula>AxpoIndexedOption</IndexFormula>	
+    <BalanceArea>NBP</BalanceArea>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>38</Quantity>
+    <QuantityUnit>MWhd</QuantityUnit>
+    <Price>0.1</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <MarketPriceMultiplicator>1</MarketPriceMultiplicator>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2007-12-24T00:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassGasFloatingPriceIndexed</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+    <Comment>PassGasFloatingPriceIndexed; should pass</Comment>
+    <ModificationDateTimeUtc>2014-08-12T12:16:37Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>8784</Deliveries>
+    <OriginalQuantity>38</OriginalQuantity>
+    <ReferringId>426</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

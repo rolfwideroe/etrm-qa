@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DealInsertUpdateTestCase>
+<InsertXml>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2014-09-22</FromDate>
+				<ToDate>2014-09-23</ToDate>
+				<Financial></Financial>
+				<TransactionName>Transaction Name FSD Hourly Revision Test Pass</TransactionName>
+			</InstrumentData>
+			<SettlementData>				
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2014-09-22T00:00:00" ToDateTime="2014-09-22T01:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T01:00:00" ToDateTime="2014-09-22T02:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T02:00:00" ToDateTime="2014-09-22T03:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T03:00:00" ToDateTime="2014-09-22T04:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T04:00:00" ToDateTime="2014-09-22T05:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T05:00:00" ToDateTime="2014-09-22T06:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T06:00:00" ToDateTime="2014-09-22T07:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T07:00:00" ToDateTime="2014-09-22T08:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T08:00:00" ToDateTime="2014-09-22T09:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T09:00:00" ToDateTime="2014-09-22T10:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T10:00:00" ToDateTime="2014-09-22T11:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T11:00:00" ToDateTime="2014-09-22T12:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T12:00:00" ToDateTime="2014-09-22T13:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T13:00:00" ToDateTime="2014-09-22T14:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T14:00:00" ToDateTime="2014-09-22T15:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T15:00:00" ToDateTime="2014-09-22T16:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T16:00:00" ToDateTime="2014-09-22T17:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T17:00:00" ToDateTime="2014-09-22T18:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T18:00:00" ToDateTime="2014-09-22T19:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T19:00:00" ToDateTime="2014-09-22T20:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T20:00:00" ToDateTime="2014-09-22T21:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T21:00:00" ToDateTime="2014-09-22T22:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T22:00:00" ToDateTime="2014-09-22T23:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T23:00:00" ToDateTime="2014-09-23T00:00:00" Value="1" />
+					</TimeSeries>					
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>					
+							<TimeSeriesDetail FromDateTime="2014-09-22T00:00:00" ToDateTime="2014-09-22T01:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T01:00:00" ToDateTime="2014-09-22T02:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T02:00:00" ToDateTime="2014-09-22T03:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T03:00:00" ToDateTime="2014-09-22T04:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T04:00:00" ToDateTime="2014-09-22T05:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T05:00:00" ToDateTime="2014-09-22T06:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T06:00:00" ToDateTime="2014-09-22T07:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T07:00:00" ToDateTime="2014-09-22T08:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T08:00:00" ToDateTime="2014-09-22T09:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T09:00:00" ToDateTime="2014-09-22T10:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T10:00:00" ToDateTime="2014-09-22T11:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T11:00:00" ToDateTime="2014-09-22T12:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T12:00:00" ToDateTime="2014-09-22T13:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T13:00:00" ToDateTime="2014-09-22T14:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T14:00:00" ToDateTime="2014-09-22T15:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T15:00:00" ToDateTime="2014-09-22T16:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T16:00:00" ToDateTime="2014-09-22T17:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T17:00:00" ToDateTime="2014-09-22T18:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T18:00:00" ToDateTime="2014-09-22T19:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T19:00:00" ToDateTime="2014-09-22T20:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T20:00:00" ToDateTime="2014-09-22T21:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T21:00:00" ToDateTime="2014-09-22T22:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T22:00:00" ToDateTime="2014-09-22T23:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T23:00:00" ToDateTime="2014-09-23T00:00:00" Value="1" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2014-09-22T00:00:00" ToDateTime="2014-09-22T01:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T01:00:00" ToDateTime="2014-09-22T02:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T02:00:00" ToDateTime="2014-09-22T03:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T03:00:00" ToDateTime="2014-09-22T04:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T04:00:00" ToDateTime="2014-09-22T05:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T05:00:00" ToDateTime="2014-09-22T06:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T06:00:00" ToDateTime="2014-09-22T07:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T07:00:00" ToDateTime="2014-09-22T08:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T08:00:00" ToDateTime="2014-09-22T09:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T09:00:00" ToDateTime="2014-09-22T10:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T10:00:00" ToDateTime="2014-09-22T11:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T11:00:00" ToDateTime="2014-09-22T12:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T12:00:00" ToDateTime="2014-09-22T13:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T13:00:00" ToDateTime="2014-09-22T14:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T14:00:00" ToDateTime="2014-09-22T15:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T15:00:00" ToDateTime="2014-09-22T16:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T16:00:00" ToDateTime="2014-09-22T17:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T17:00:00" ToDateTime="2014-09-22T18:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T18:00:00" ToDateTime="2014-09-22T19:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T19:00:00" ToDateTime="2014-09-22T20:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T20:00:00" ToDateTime="2014-09-22T21:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T21:00:00" ToDateTime="2014-09-22T22:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T22:00:00" ToDateTime="2014-09-22T23:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T23:00:00" ToDateTime="2014-09-23T00:00:00" Value="0" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2014-09-22T00:00:00" ToDateTime="2014-09-22T01:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T01:00:00" ToDateTime="2014-09-22T02:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T02:00:00" ToDateTime="2014-09-22T03:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T03:00:00" ToDateTime="2014-09-22T04:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T04:00:00" ToDateTime="2014-09-22T05:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T05:00:00" ToDateTime="2014-09-22T06:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T06:00:00" ToDateTime="2014-09-22T07:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T07:00:00" ToDateTime="2014-09-22T08:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T08:00:00" ToDateTime="2014-09-22T09:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T09:00:00" ToDateTime="2014-09-22T10:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T10:00:00" ToDateTime="2014-09-22T11:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T11:00:00" ToDateTime="2014-09-22T12:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T12:00:00" ToDateTime="2014-09-22T13:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T13:00:00" ToDateTime="2014-09-22T14:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T14:00:00" ToDateTime="2014-09-22T15:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T15:00:00" ToDateTime="2014-09-22T16:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T16:00:00" ToDateTime="2014-09-22T17:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T17:00:00" ToDateTime="2014-09-22T18:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T18:00:00" ToDateTime="2014-09-22T19:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T19:00:00" ToDateTime="2014-09-22T20:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T20:00:00" ToDateTime="2014-09-22T21:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T21:00:00" ToDateTime="2014-09-22T22:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T22:00:00" ToDateTime="2014-09-22T23:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-09-22T23:00:00" ToDateTime="2014-09-23T00:00:00" Value="0" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>Vizard</Trader>
+			<TradeDate>2008-09-10T21:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>ElectricityStructuredDealHourly; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FlexibleHourly InsertUpdate Revision Test Pass</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</InsertXml>
+<UpdateXml>
+	<DealInsert>
+		<MetaData>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<TransactionPart>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+							<EffectiveDateVersion>
+								<EffectiveFromDate>2008-09-10</EffectiveFromDate>
+							</EffectiveDateVersion>
+						</Version>
+						<TimeSeriesDetail FromDateTime="2014-09-22T00:00:00" ToDateTime="2014-09-22T01:00:00" Value="200" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+			</SettlementData>
+			<ReferenceData>
+				<ExternalId>FlexibleHourly InsertUpdate Revision Test Pass</ExternalId>
+			</ReferenceData>
+		</TransactionPart>
+	</DealInsert>
+</UpdateXml>
+<Update1Xml>
+	<DealInsert>
+		<MetaData>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<TransactionPart>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+							<EffectiveDateVersion>
+								<EffectiveFromDate>2008-09-10</EffectiveFromDate>
+							</EffectiveDateVersion>
+						</Version>
+						<TimeSeriesDetail FromDateTime="2014-09-22T00:00:00" ToDateTime="2014-09-22T01:00:00" Value="300" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+			</SettlementData>
+			<ReferenceData>
+				<ExternalId>FlexibleHourly InsertUpdate Revision Test Pass</ExternalId>
+			</ReferenceData>
+		</TransactionPart>
+	</DealInsert>
+</Update1Xml>
+<ExpectedResult ExpectedType="TimeSeries">
+	<ExpectedTimeSeriesSet>
+	<ExpectedTimeSeries>
+		<Resolution>Hour</Resolution>
+		<TimeSeriesTypeName>Forecasted Volume</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2014-09-22T00:00:00" UntilDateTime="2014-09-22T01:00:00" UtcFromDateTime="2014-09-21T22:00:00Z" UtcUntilDateTime="2014-09-21T23:00:00Z" Value="200" />
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+</ExpectedTimeSeriesSet>
+</ExpectedResult>			
+</DealInsertUpdateTestCase>

@@ -1,0 +1,19 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Coal-EU-ICE-USD-CurrExposure-NOK-Bin</workspace>
+    <monitor>Coal-EU-ICE-USD-CurrExposure-Nok-Bin</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>Coal-EU-ICE-USD,Coal,EURP Mar12 31-JAN-12 130.00,2012-02-25 00:00:00.000,2012-03-30 00:00:00.000,European put,Financial,Base,Coal API #2,ICE,CET,USD,Coal-EU-ICE-USD-0010,USD,2012-03-30 00:00:00.000,144.249999999522</record>
+        <record>Coal-EU-ICE-USD,Coal,EURC Mar12 31-JAN-12 80.00,2012-02-25 00:00:00.000,2012-03-30 00:00:00.000,European call,Financial,Base,Coal API #2,ICE,CET,USD,Coal-EU-ICE-USD-0011,USD,2012-03-30 00:00:00.000,105.750000000478</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

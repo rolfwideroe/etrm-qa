@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Capacity</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityCapacity>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<FromDate>2008-10-01</FromDate>
+				<ToDate>2008-10-31</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="RWE"/>
+						<DestinationBalanceArea AreaName="EON"/>
+					</Interconnector>
+				</Physical>
+				<ExpiryTime>07:00:00</ExpiryTime>
+				<ExpiryOffset>2</ExpiryOffset>
+				<Priority>Firm</Priority>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>10</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>20</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>				
+				<Broker>Test Broker A</Broker>										
+			</SettlementData>
+			<FeesData>
+				<Fees>
+					<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.658" FeeUnit="EUR/MWh"/>
+					<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="6.58" FeeUnit="EUR"/>					
+					<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.58" FeeUnit="EUR/MWh"/>
+					<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="5.8" FeeUnit="EUR"/>		
+					<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh"/>
+					<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+					<Fee FeeType="Entry" FeeValueType="Variable" FeeValue="0.5" FeeUnit="EUR/MWh"/>
+					<Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="5" FeeUnit="EUR"/>
+					<Fee FeeType="Exit" FeeValueType="Variable" FeeValue="0.6" FeeUnit="EUR/MWh"/>
+					<Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="6" FeeUnit="EUR"/>
+					<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="EUR/MWh"/>
+					<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="EUR"/>
+				</Fees>
+			</FeesData>
+		</ElectricityCapacity>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2007-10-03T12:13:06</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>ElectricityCapacity; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassElectricityCapacityFees</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>205</TransactionId>
+  <DealType>Electricity-Capacity</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>M10-08</InstrumentName>
+    <FromDate>2008-10-01T00:00:00</FromDate>
+    <ToDate>2008-10-31T00:00:00</ToDate>
+    <PutCall>Call</PutCall>
+    <ExpiryTime>07:00:00</ExpiryTime>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <Interconnector>DE.RWE_DE.EON</Interconnector>
+    <ExpiryOffset>2</ExpiryOffset>
+    <Priority>Firm</Priority>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>10</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>20</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2007-10-03T10:13:06Z</TradeDateTimeUtc>
+  </DealDetails>
+   <FeesData>
+    <Broker>Test Broker A</Broker>
+    <ClearingType>Electronic</ClearingType>    
+	 <Fees>
+		<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.658" FeeUnit="EUR/MWh"/>
+		<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="6.58" FeeUnit="EUR"/>					
+		<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.58" FeeUnit="EUR/MWh"/>
+		<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="5.8" FeeUnit="EUR"/>		
+		<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/MWh"/>
+		<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="2" FeeUnit="EUR"/>
+		<Fee FeeType="Entry" FeeValueType="Variable" FeeValue="0.5" FeeUnit="EUR/MWh"/>
+		<Fee FeeType="Entry" FeeValueType="Fixed" FeeValue="5" FeeUnit="EUR"/>
+		<Fee FeeType="Exit" FeeValueType="Variable" FeeValue="0.6" FeeUnit="EUR/MWh"/>
+		<Fee FeeType="Exit" FeeValueType="Fixed" FeeValue="6" FeeUnit="EUR"/>
+		<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.4" FeeUnit="EUR/MWh"/>
+		<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="4" FeeUnit="EUR"/>
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassElectricityCapacityFees</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test"/>
+    </DealGroups>
+    <Comment>ElectricityCapacity; should pass</Comment>
+    <ModificationDateTimeUtc>2014-08-11T14:26:21Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>745</Deliveries>
+    <OriginalQuantity>10</OriginalQuantity>
+    <ReferringId>206</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<BulkDealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Oil-Swap</DealType>
+      <Portfolios>
+        <Portfolio>Special-Cases</Portfolio>
+        <CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <OilSwap>
+        <InstrumentData>
+          <PriceType>FixedForFloating</PriceType>
+          <IndexFormulaName>ICEBrentOilFLFSwap_EUR</IndexFormulaName>
+          <FromDate>2011-10-01</FromDate>
+          <ToDate>2011-12-31</ToDate>
+        </InstrumentData>
+        <SettlementData>
+          <PriceVolumeTimeSeries>
+            <TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Price="0" Volume="1000000" />
+            <TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Price="0" Volume="1000000" />
+            <TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Price="0" Volume="1000000" />
+          </PriceVolumeTimeSeries>
+          <QuantityUnit>Bbl</QuantityUnit>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerBbl</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </OilSwap>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2011-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Special-Cases-AvgRollCurrency-0001</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+	<MetaData>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Special-Cases</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Indexed</PriceType>
+				<IndexFormulaName>Gas_ICEBrentOilFLFSwap_EUR</IndexFormulaName>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Special-Cases-AvgRollCurrency-Gas-StructuredDeal</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<StructuredDealInformation Resolution="Monthly">
+					<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Price="0" Volume="32258.06452"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Price="0" Volume="33333.33333"/>
+					<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Price="0" Volume="32258.06452"/>
+				</StructuredDealInformation>
+				<QuantityUnit>MWh/d</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2011-09-10T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<ExternalId>Special-Cases-AvgRollCurrency-0002</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</BulkDealInsert>

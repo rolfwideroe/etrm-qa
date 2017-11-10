@@ -1,0 +1,302 @@
+<TransactionByUTITestCase>
+	<InsertXml>
+	<![CDATA[ 
+<BulkDealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-Future</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityFuture>
+        <InstrumentData>
+          <ExecutionVenue>EEX</ExecutionVenue>
+          <PriceBasis>EEX</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2015-12-01</FromDate>
+          <ToDate>2015-12-31</ToDate>
+          <Financial />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>5</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>33.12</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </ElectricityFuture>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2015-11-17T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>OriginalTransactionsByUTI-ElForward</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+	  	<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="OriginalTransactionsByUTI-ElForward"/>
+				<DateProperty name="TerminationDate" value="2016-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+				<StringProperty name="BuyerInitiatorAggressor" value="Aggressor"/>
+				<StringProperty name="SellerInitiatorAggressor" value="Sleeve"/>
+				<BooleanProperty name="RemitReporting" value="1"/>
+			</PropertyGroup>
+			<PropertyGroup name="Deal Group">
+				<StringProperty name="GroupField1" value="API Test"/>
+				<StringProperty name="GroupField2" value="DealGroupOne"/>
+				<StringProperty name="GroupField3" value="DealGroupTwo"/>
+			</PropertyGroup>
+			<PropertyGroup name="QA">
+				<StringProperty name="PropertyCustom1" value="Custom Property"/>
+				<StringProperty name="PropertyCustom2" value="Custom Property"/>
+				<StringProperty name="PropertyCustom3" value="Custom Property"/>
+			</PropertyGroup>
+			<PropertyGroup name="TestCustomer">
+				<StringProperty name="PropertyCustom4" value="Custom Property 4"/>
+				<StringProperty name="PropertyCustom5" value="Custom Property 5"/>
+				<StringProperty name="PropertyCustom6" value="Custom Property 6"/>
+				<StringProperty name="PropertyCustom7" value="Custom Property 7"/>
+				<StringProperty name="PropertyCustom8" value="Custom Property 8"/>
+				<StringProperty name="PropertyCustom9" value="Custom Property 9"/>
+				<StringProperty name="PropertyCustom10" value="Custom Property 10"/>
+			</PropertyGroup>
+		</CustomProperties>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Electricity-Future</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElectricityFuture>
+        <InstrumentData>
+          <ExecutionVenue>EEX</ExecutionVenue>
+          <PriceBasis>EEX</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2015-12-01</FromDate>
+          <ToDate>2015-12-31</ToDate>
+          <Financial />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>5</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>33.12</Price>
+          <Currency>EUR</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </ElectricityFuture>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2015-11-17T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>OriginalTransactionsByUTI-ElForward2</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+	  	<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="OriginalTransactionsByUTI-ElForward2"/>
+				<DateProperty name="TerminationDate" value="2016-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+				<StringProperty name="BuyerInitiatorAggressor" value="Aggressor"/>
+				<StringProperty name="SellerInitiatorAggressor" value="Sleeve"/>
+				<BooleanProperty name="RemitReporting" value="1"/>
+			</PropertyGroup>			
+		</CustomProperties>
+    </Transaction>
+  </DealInsert>
+  </BulkDealInsert>
+	]]>
+	</InsertXml>
+	<ExpectedResult>
+		<QaTransactionDTO>
+		  <TransactionId>2257</TransactionId>
+		  <DealType>Electricity-Future</DealType>
+		  <BuySell>Buy</BuySell>
+		  <DeliveryType>Financial</DeliveryType>
+		  <Portfolios>
+			<PortfolioName>API Test Customer</PortfolioName>
+			<PortfolioExternalId>API Test Customer</PortfolioExternalId>
+			<CounterpartyPortfolioName>ICE</CounterpartyPortfolioName>
+			<CounterpartyPortfolioExternalId>ICE</CounterpartyPortfolioExternalId>
+		  </Portfolios>
+		  <InstrumentData>
+			<ExecutionVenue>EEX</ExecutionVenue>
+			<InstrumentName>Dec-15</InstrumentName>
+			<PriceBasis>EEX</PriceBasis>
+			<FromDate>2015-12-01T00:00:00</FromDate>
+			<ToDate>2015-12-31T00:00:00</ToDate>
+			<LoadProfile>Base</LoadProfile>
+			<TimeZone>Central Europe Standard Time</TimeZone>
+		  </InstrumentData>
+		  <SettlementData>
+			<Quantity>5</Quantity>
+			<QuantityUnit>MW</QuantityUnit>
+			<Price>33.12</Price>
+			<PriceIsoCurrency>EUR</PriceIsoCurrency>
+			<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+			<CurrencySource>Viz</CurrencySource>
+		  </SettlementData>
+		  <DealDetails>
+			<Trader>DealImport</Trader>
+			<Status>Active</Status>
+			<TradeDateTimeUtc>2015-11-16T23:00:00Z</TradeDateTimeUtc>
+		  </DealDetails>
+		  <FeesData>
+			<ClearingType>Electronic</ClearingType>
+		  </FeesData>
+		  <ReferenceData>
+			<ExternalId>OriginalTransactionsByUTI-ElForward</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<DealGroups>
+			  <DealGroup Name="DealGroup1" Value="API Test" />
+			  <DealGroup Name="DealGroup2" Value="DealGroupOne" />
+			  <DealGroup Name="DealGroup3" Value="DealGroupTwo" />
+			</DealGroups>
+			<ModificationDateTimeUtc>2016-02-24T13:01:39Z</ModificationDateTimeUtc>
+			<RiskValue>0</RiskValue>
+			<Originator>true</Originator>
+			<Deliveries>744</Deliveries>
+			<OriginalQuantity>5</OriginalQuantity>
+			<ReferringId>2258</ReferringId>
+		  </ReferenceData>
+		  <PropertyGroups>
+			<PropertyGroup Name="Compliance">
+			  <Properties>
+				<Property Name="UTI" Value="OriginalTransactionsByUTI-ElForward" ValueType="System.String" />
+				<Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+				<Property Name="TerminationDate" Value="2016-11-20T00:00:00" ValueType="System.DateTime" />
+				<Property Name="RemitReporting" Value="True" ValueType="System.Boolean" />
+				<Property Name="BuyerInitiatorAggressor" Value="Aggressor" ValueType="System.String" />
+				<Property Name="SellerInitiatorAggressor" Value="Sleeve" ValueType="System.String" />
+			  </Properties>
+			</PropertyGroup>
+			<PropertyGroup Name="Deal Group">
+			  <Properties>
+				<Property Name="GroupField1" Value="API Test" ValueType="System.String" />
+				<Property Name="GroupField2" Value="DealGroupOne" ValueType="System.String" />
+				<Property Name="GroupField3" Value="DealGroupTwo" ValueType="System.String" />
+			  </Properties>
+			</PropertyGroup>
+			<PropertyGroup Name="QA">
+			  <Properties>
+				<Property Name="PropertyCustom1" Value="Custom Property" ValueType="System.String" />
+				<Property Name="PropertyCustom2" Value="Custom Property" ValueType="System.String" />
+				<Property Name="PropertyCustom3" Value="Custom Property" ValueType="System.String" />
+			  </Properties>
+			</PropertyGroup>
+			<PropertyGroup Name="TestCustomer">
+			  <Properties>
+				<Property Name="PropertyCustom4" Value="Custom Property 4" ValueType="System.String" />
+				<Property Name="PropertyCustom5" Value="Custom Property 5" ValueType="System.String" />
+				<Property Name="PropertyCustom6" Value="Custom Property 6" ValueType="System.String" />
+				<Property Name="PropertyCustom7" Value="Custom Property 7" ValueType="System.String" />
+				<Property Name="PropertyCustom8" Value="Custom Property 8" ValueType="System.String" />
+				<Property Name="PropertyCustom9" Value="Custom Property 9" ValueType="System.String" />
+				<Property Name="PropertyCustom10" Value="Custom Property 10" ValueType="System.String" />
+			  </Properties>
+			</PropertyGroup>
+		  </PropertyGroups>
+		  <TransactionWorkFlowDetails>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Audited>false</Audited>
+		  </TransactionWorkFlowDetails>
+		</QaTransactionDTO>
+		<QaTransactionDTO>
+		  <TransactionId>2257</TransactionId>
+		  <DealType>Electricity-Future</DealType>
+		  <BuySell>Buy</BuySell>
+		  <DeliveryType>Financial</DeliveryType>
+		  <Portfolios>
+			<PortfolioName>API Test Customer</PortfolioName>
+			<PortfolioExternalId>API Test Customer</PortfolioExternalId>
+			<CounterpartyPortfolioName>ICE</CounterpartyPortfolioName>
+			<CounterpartyPortfolioExternalId>ICE</CounterpartyPortfolioExternalId>
+		  </Portfolios>
+		  <InstrumentData>
+			<ExecutionVenue>EEX</ExecutionVenue>
+			<InstrumentName>Dec-15</InstrumentName>
+			<PriceBasis>EEX</PriceBasis>
+			<FromDate>2015-12-01T00:00:00</FromDate>
+			<ToDate>2015-12-31T00:00:00</ToDate>
+			<LoadProfile>Base</LoadProfile>
+			<TimeZone>Central Europe Standard Time</TimeZone>
+		  </InstrumentData>
+		  <SettlementData>
+			<Quantity>5</Quantity>
+			<QuantityUnit>MW</QuantityUnit>
+			<Price>33.12</Price>
+			<PriceIsoCurrency>EUR</PriceIsoCurrency>
+			<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+			<CurrencySource>Viz</CurrencySource>
+		  </SettlementData>
+		  <DealDetails>
+			<Trader>DealImport</Trader>
+			<Status>Active</Status>
+			<TradeDateTimeUtc>2015-11-16T23:00:00Z</TradeDateTimeUtc>
+		  </DealDetails>
+		  <FeesData>
+			<ClearingType>Electronic</ClearingType>
+		  </FeesData>
+		  <ReferenceData>
+			<ExternalId>OriginalTransactionsByUTI-ElForward2</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<DealGroups>
+			  <DealGroup Name="DealGroup1" Value="API Test" />
+			  <DealGroup Name="DealGroup2" Value="DealGroupOne" />
+			  <DealGroup Name="DealGroup3" Value="DealGroupTwo" />
+			</DealGroups>
+			<ModificationDateTimeUtc>2016-02-24T13:01:39Z</ModificationDateTimeUtc>
+			<RiskValue>0</RiskValue>
+			<Originator>true</Originator>
+			<Deliveries>744</Deliveries>
+			<OriginalQuantity>5</OriginalQuantity>
+			<ReferringId>2258</ReferringId>
+		  </ReferenceData>
+		  <PropertyGroups>
+			<PropertyGroup Name="Compliance">
+			  <Properties>
+				<Property Name="UTI" Value="OriginalTransactionsByUTI-ElForward2" ValueType="System.String" />
+				<Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+				<Property Name="TerminationDate" Value="2016-11-20T00:00:00" ValueType="System.DateTime" />
+				<Property Name="RemitReporting" Value="True" ValueType="System.Boolean" />
+				<Property Name="BuyerInitiatorAggressor" Value="Aggressor" ValueType="System.String" />
+				<Property Name="SellerInitiatorAggressor" Value="Sleeve" ValueType="System.String" />
+			  </Properties>
+			</PropertyGroup>			
+		  </PropertyGroups>
+		  <TransactionWorkFlowDetails>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Audited>false</Audited>
+		  </TransactionWorkFlowDetails>
+		</QaTransactionDTO>
+	</ExpectedResult>
+</TransactionByUTITestCase>

@@ -1,0 +1,87 @@
+<DbQuery>
+  <Columns>
+    <Column ColumnName="TransactionId" ColumnDataType="System.Int32"/>
+    <Column ColumnName="CashFlowDate" ColumnDataType="System.DateTime"/>
+    <Column ColumnName="ContractType" ColumnDataType="System.Int32"/>
+    <Column ColumnName="ValueType" ColumnDataType="System.String"/>
+    <Column ColumnName="PortfolioId" ColumnDataType="System.Int32"/>
+    <Column ColumnName="Currency" ColumnDataType="System.String"/>
+    <Column ColumnName="Resolution" ColumnDataType="System.String"/>
+    <Column ColumnName="InstrumentType" ColumnDataType="System.String"/>
+    <Column ColumnName="InstrumentName" ColumnDataType="System.String"/>
+	<Column ColumnName="CashFlowValue" ColumnDataType="System.Double"/>
+  </Columns>
+  <SqlQuery>
+    DECLARE @sqlCashFlowTable NVARCHAR(2048)
+    DECLARE @cashFlowTableName NVARCHAR(50)
+    DECLARE @monitorName NVARCHAR(255)
+    DECLARE @workspaceName NVARCHAR(255)
+    DECLARE @reportDate NVARCHAR(255)
+
+    SET @workspaceName= '{workspace}'
+    SET @monitorName= '{monitor}'
+    SET @reportDate='{reportdate}'
+
+
+      SET @cashFlowTableName= (SELECT [TableName] FROM [VizCFMonSettings]
+    WHERE [FormName]=@monitorName
+    AND [WorkspaceName]=@workspaceName
+    AND [ReportDate]=@reportDate)
+
+
+    DECLARE @cashFlowTable TABLE(
+    TransactionId INT
+    ,CashFlowDate DATETIME
+    ,ContractType  INT
+    ,ValueType VARCHAR(2)
+    ,PortfolioId INT
+    ,Currency VARCHAR(3)
+    ,Resolution VARCHAR(30)
+    ,InstrumentType VARCHAR(60)
+    ,InstrumentName VARCHAR(255)
+	,CashFlowValue FLOAT
+    )
+
+    SET @sqlCashFlowTable=N'(
+	SELECT [CF_TransId]
+    ,[CF_Date]
+    ,[CF_ContractType]
+    ,[CF_ValueType]
+    ,[CF_PortfolioId]
+    ,[CF_Currency]
+    ,[CF_Resolution]
+    ,[CF_Instrumenttype]
+    ,[CF_Instrumentname] 
+	,[CF_Value]
+	FROM ['+@cashFlowTableName+'])'
+    
+	
+	INSERT INTO @cashFlowTable (TransactionId
+    ,CashFlowDate
+    ,ContractType
+    ,ValueType
+    ,PortfolioId
+    ,Currency
+    ,Resolution
+    ,InstrumentType
+    ,InstrumentName
+    ,CashFlowValue) EXEC sp_executesql @sqlCashFlowTable
+
+	select 
+	TransactionId
+    ,CashFlowDate
+    ,ContractType
+    ,ValueType
+    ,PortfolioId
+    ,Currency
+    ,Resolution
+    ,InstrumentType
+    ,InstrumentName
+    ,CashFlowValue
+	 from @cashFlowTable
+	 order by TransactionId,CashFlowDate,ValueType
+
+  </SqlQuery>
+</DbQuery>
+
+			

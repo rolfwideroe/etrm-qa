@@ -1,0 +1,163 @@
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Oil-American</DealType>
+      <Portfolios>
+        <Portfolio>Test Company A</Portfolio>
+        <CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <OilAmerican>
+        <InstrumentData>
+          <ExecutionVenue>ICE</ExecutionVenue>
+          <PriceBasis>BrentOil</PriceBasis>
+          <FromDate>2015-11-01</FromDate>
+          <ToDate>2015-11-30</ToDate>
+          <Financial />
+          <PutCall>Call</PutCall>
+          <Strike>130</Strike>
+          <ExpiryDate>2015-09-30</ExpiryDate>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>5</Quantity>
+          <QuantityUnit>Ton</QuantityUnit>
+          <Price>3.66</Price>		  
+		  <PriceVolumeUnit>PerTon</PriceVolumeUnit>
+          <Currency>USD</Currency>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+		  <Broker>API Test Broker</Broker>
+        </SettlementData>
+		<FeesData>
+				<Fees>
+					<Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.5" FeeUnit="USD"/>
+					<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.2" FeeUnit="USD"/>
+					<Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="USD"/>
+					<Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="USD"/>
+					<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" FeeUnit="USD/Ton"/>
+					<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="4" FeeUnit="USD/Ton"/>
+					<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="123" FeeUnit="USD/Ton"/>
+					<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="123" FeeUnit="USD/Ton"/>
+				</Fees>
+			</FeesData>
+      </OilAmerican>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-01-04T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>Oil-American-USD-0001</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+	  <CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="PassOilAmerican"/>
+				<DateProperty name="TerminationDate" value="2015-11-20"/>
+			</PropertyGroup>
+			<PropertyGroup name="Deal Group">
+				<StringProperty name="GroupField1" value="PassOilAmerican"/>
+				<StringProperty name="GroupField3" value="PassOilAmerican3"/>
+			</PropertyGroup>
+		</CustomProperties>
+    </Transaction>
+  </DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO>
+  <TransactionId>251</TransactionId>
+  <DealType>Oil-American</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>Test Company A</PortfolioName>
+    <PortfolioExternalId>Test Company A</PortfolioExternalId>
+    <CounterpartyPortfolioName>ICE</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>ICE</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>ICE</ExecutionVenue>
+    <InstrumentName>AMEC Nov-15 30-SEP-15 130.00</InstrumentName>
+    <PriceBasis>BrentOil</PriceBasis>
+    <FromDate>2015-11-01T00:00:00</FromDate>
+    <ToDate>2015-11-30T00:00:00</ToDate>
+    <PutCall>Call</PutCall>
+    <Strike>130</Strike>
+    <ExpiryDate>2015-09-30T00:00:00</ExpiryDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <UnderlyingExecutionVenue>ICE</UnderlyingExecutionVenue>
+    <UnderlyingDeliveryType>Financial</UnderlyingDeliveryType>
+    <UnderlyingInstrumentType>Future</UnderlyingInstrumentType>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>5</Quantity>
+    <QuantityUnit>Ton</QuantityUnit>
+    <Price>3.66</Price>
+    <PriceIsoCurrency>USD</PriceIsoCurrency>
+    <PriceVolumeUnit>PerTon</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2010-01-03T23:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>API Test Broker</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="123" FeeUnit="USD/Ton" />
+      <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.5" FeeUnit="USD" />
+      <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="123" FeeUnit="USD/Ton" />
+      <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="USD" />
+      <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" FeeUnit="USD/Ton" />
+      <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="USD" />
+      <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="4" FeeUnit="USD/Ton" />
+      <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.2" FeeUnit="USD" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>Oil-American-USD-0001</ExternalId>
+    <ExternalSource>RegTest</ExternalSource>
+    <DealGroups>
+      <DealGroup Name="DealGroup1" Value="PassOilAmerican" />
+      <DealGroup Name="DealGroup3" Value="PassOilAmerican3" />
+    </DealGroups>
+    <ModificationDateTimeUtc>2016-06-30T09:01:23Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>720</Deliveries>
+    <OriginalQuantity>5</OriginalQuantity>
+    <ReferringId>252</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="PassOilAmerican" ValueType="System.String" />
+        <Property Name="TerminationDate" Value="2015-11-20T00:00:00" ValueType="System.DateTime" />
+      </Properties>
+    </PropertyGroup>
+    <PropertyGroup Name="Deal Group">
+      <Properties>
+        <Property Name="GroupField1" Value="PassOilAmerican" ValueType="System.String" />
+        <Property Name="GroupField3" Value="PassOilAmerican3" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

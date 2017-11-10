@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>The message does not conform to the deal insert xml schema. 
+(1)	The value of the 'Timezone' element does not equal its fixed value.
+</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>123456</MessageId>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Coal-Future</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<CoalFuture>
+			<InstrumentData>
+				<Timezone>CET+1</Timezone>
+				<ExecutionVenue>ICE</ExecutionVenue>
+				<PriceBasis>Coal API #2</PriceBasis>
+				<FromDate>2015-05-30</FromDate>
+				<ToDate>2015-06-26</ToDate>
+				<Financial/>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>120</Quantity>
+				<QuantityUnit>Ton</QuantityUnit>
+				<Price>20</Price>
+				<Currency>USD</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</CoalFuture>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2014-11-11T12:00:22</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>CoalFuture; should FAIL - timezone not supported</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailCoalFutureBadTimezone</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

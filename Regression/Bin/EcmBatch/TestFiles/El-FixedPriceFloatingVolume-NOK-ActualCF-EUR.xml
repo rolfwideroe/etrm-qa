@@ -1,0 +1,43 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-FixedPriceFloatingVolume-NOK-ActualCF-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2010-02-01 00:00:00.000,0,HI,102,EUR,-7250.10055253996,monthly,Fixed Price Floating Volume,D0702-10,Electricity-FixedPriceFloatingVolume-0002</record>
+        <record>2010-03-01 00:00:00.000,0,HI,102,EUR,-41579.6242629335,monthly,Fixed Price Floating Volume,W12-10,Electricity-FixedPriceFloatingVolume-0004</record>
+        <record>2010-03-01 00:00:00.000,0,HI,102,EUR,-223207.09026916,monthly,Fixed Price Floating Volume,M03-10,Electricity-FixedPriceFloatingVolume-0006</record>
+        <record>2010-02-01 00:00:00.000,0,HI,102,EUR,-276581.486548051,monthly,Fixed Price Floating Volume,05-Feb-10 - 15-May-10,Electricity-FixedPriceFloatingVolume-0008</record>
+        <record>2010-03-01 00:00:00.000,0,HI,102,EUR,-223207.09026916,monthly,Fixed Price Floating Volume,05-Feb-10 - 15-May-10,Electricity-FixedPriceFloatingVolume-0008</record>
+        <record>2010-04-01 00:00:00.000,0,HI,102,EUR,-164175.325368497,monthly,Fixed Price Floating Volume,05-Feb-10 - 15-May-10,Electricity-FixedPriceFloatingVolume-0008</record>
+        <record>2010-05-01 00:00:00.000,0,HI,102,EUR,-81195.7107007875,monthly,Fixed Price Floating Volume,05-Feb-10 - 15-May-10,Electricity-FixedPriceFloatingVolume-0008</record>
+        <record>2011-10-01 00:00:00.000,0,HI,102,EUR,-8649.13619662411,monthly,Fixed Price Floating Volume,D3110-11,Electricity-FixedPriceFloatingVolume-0050</record>
+        <record>2011-11-01 00:00:00.000,0,TR,102,EUR,-8929.45916329685,monthly,Fixed Price Floating Volume,D0111-11,Electricity-FixedPriceFloatingVolume-0052</record>
+        <record>2011-11-01 00:00:00.000,0,TR,102,EUR,-10320.4980732489,monthly,Fixed Price Floating Volume,D0211-11,Electricity-FixedPriceFloatingVolume-0054</record>
+        <record>2011-10-01 00:00:00.000,0,HI,102,EUR,-49099.9785095995,monthly,Fixed Price Floating Volume,25-Oct-11 - 30-Oct-11,Electricity-FixedPriceFloatingVolume-0056</record>
+        <record>2011-10-01 00:00:00.000,0,HI,102,EUR,-8649.13619662411,monthly,Fixed Price Floating Volume,W44-11,Electricity-FixedPriceFloatingVolume-0058</record>
+        <record>2011-11-01 00:00:00.000,0,TR,102,EUR,-52771.6884946999,monthly,Fixed Price Floating Volume,W44-11,Electricity-FixedPriceFloatingVolume-0058</record>
+        <record>2011-11-01 00:00:00.000,0,TR,102,EUR,-65169.9459067987,monthly,Fixed Price Floating Volume,W45-11,Electricity-FixedPriceFloatingVolume-0060</record>
+        <record>2011-11-01 00:00:00.000,0,TR,102,EUR,-287289.098958788,monthly,Fixed Price Floating Volume,M11-11,Electricity-FixedPriceFloatingVolume-0062</record>
+        <record>2011-12-01 00:00:00.000,0,TR,102,EUR,-326686.473424688,monthly,Fixed Price Floating Volume,M12-11,Electricity-FixedPriceFloatingVolume-0064</record>
+        <record>2011-10-01 00:00:00.000,0,HI,102,EUR,-57749.1147062237,monthly,Fixed Price Floating Volume,25-Oct-11 - 21-Dec-11,Electricity-FixedPriceFloatingVolume-0066</record>
+        <record>2011-11-01 00:00:00.000,0,TR,102,EUR,-287289.098958788,monthly,Fixed Price Floating Volume,25-Oct-11 - 21-Dec-11,Electricity-FixedPriceFloatingVolume-0066</record>
+        <record>2011-12-01 00:00:00.000,0,TR,102,EUR,-222905.449393977,monthly,Fixed Price Floating Volume,25-Oct-11 - 21-Dec-11,Electricity-FixedPriceFloatingVolume-0066</record>
+        <record>2014-07-01 00:00:00.000,0,TR,102,EUR,-4597.29868999887,monthly,Fixed Price Floating Volume,D1007-14,Electricity-FixedPriceFloatingVolume-0266</record>
+        <record>2014-06-01 00:00:00.000,0,TR,102,EUR,-31786.0030649041,monthly,Fixed Price Floating Volume,W24-14,Electricity-FixedPriceFloatingVolume-0268</record>
+        <record>2014-05-01 00:00:00.000,0,TR,102,EUR,-151058.164083491,monthly,Fixed Price Floating Volume,M05-14,Electricity-FixedPriceFloatingVolume-0270</record>
+        <record>2014-04-01 00:00:00.000,0,TR,102,EUR,-146972.657695777,monthly,Fixed Price Floating Volume,04-Apr-14 - 12-Jul-14,Electricity-FixedPriceFloatingVolume-0272</record>
+        <record>2014-05-01 00:00:00.000,0,TR,102,EUR,-151058.164083491,monthly,Fixed Price Floating Volume,04-Apr-14 - 12-Jul-14,Electricity-FixedPriceFloatingVolume-0272</record>
+        <record>2014-06-01 00:00:00.000,0,TR,102,EUR,-135591.896282232,monthly,Fixed Price Floating Volume,04-Apr-14 - 12-Jul-14,Electricity-FixedPriceFloatingVolume-0272</record>
+        <record>2014-07-01 00:00:00.000,0,TR,102,EUR,-53124.6366378477,monthly,Fixed Price Floating Volume,04-Apr-14 - 12-Jul-14,Electricity-FixedPriceFloatingVolume-0272</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

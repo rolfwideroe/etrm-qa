@@ -1,0 +1,24 @@
+<test type="EcmBatch" name="Gas-IndOption-EUR-TransMon-EUR" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-IndOption-EUR-TransMon-EUR</workspace>
+    <monitor>Gas-IndOption-EUR-TransMon-EUR</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="CurrencySource" Value="ECB" />
+    </ElvizConfigurations>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\TransactionMonitor.xml" />
+      <returns>
+        <record>EUR,Gas-IndOption-EUR,2011-09-23 00:00:00.000,2011-09-23 00:00:00.000,Gas,MWh/d,Gas-IndexedOption-EUR,116,Counterparty-Gas-IndexedOption-EUR,117,RegCustomerCompany,RegCounterpartyCompany,NULL,NULL,ICE TTF,CET 06-06,EUR,ECB,NULL,NULL,DealImport,DealImport,NULL,Active,TicketNumber,API Test,NULL,NULL,NULL,0,0,Gas-IndexedOption-001,XMLFileImport,NULL,NULL,0,Buy,0,0,EUR,0,EUR,28,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,AxpoIndexedOption,NULL,NULL,0,NULL,Indexed Option C GAS-11,Indexed Option,Physical,Base,2011-10-01 00:00:00.000,2012-09-30 00:00:00.000,366,NULL,Call,0,2011-09-30 00:00:00.000,0,NULL,0,0,0,0,NULL,NULL,240,87840,0,0,0,0,0,0,28,240,0.477719021998087,7709,36688.8208894531,36688.8208894531,ECS Curve,Vizard,NULL,Day,NULL,NULL,NULL,NULL,MWh,MWh,0,0,0,0,NULL,NULL</record>
+        <record>EUR,Gas-IndOption-EUR,2011-09-23 00:00:00.000,2011-09-23 00:00:00.000,Gas,MWh/d,Gas-IndexedOption-EUR,116,Counterparty-Gas-IndexedOption-EUR,117,RegCustomerCompany,RegCounterpartyCompany,NULL,NULL,ICE TTF,CET 06-06,EUR,ECB,NULL,NULL,DealImport,DealImport,NULL,Active,TicketNumber,API Test,NULL,NULL,NULL,0,0,Gas-IndexedOption-002,XMLFileImport,NULL,NULL,0,Sell,0,0,EUR,0,EUR,6,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,AxpoIndexedOptionOtherConstants,NULL,NULL,0,NULL,Indexed Option C Q4-12,Indexed Option,Financial,Base,2012-10-01 00:00:00.000,2012-12-31 00:00:00.000,92,NULL,Call,0,2012-09-25 00:00:00.000,0,NULL,0,0,0,0,NULL,NULL,-240,-22080,0,0,0,0,0,0,6,-240,9.89147830274278,2209,-218403.840924561,-218403.840924561,ECS Curve,Vizard,NULL,Day,NULL,NULL,NULL,NULL,MWh,MWh,0,0,0,0,NULL,NULL</record>
+        <record>EUR,Gas-IndOption-EUR,2011-09-23 00:00:00.000,2011-09-23 00:00:00.000,Gas,MWh/d,Gas-IndexedOption-EUR,116,Counterparty-Gas-IndexedOption-EUR,117,RegCustomerCompany,RegCounterpartyCompany,NULL,NULL,ICE TTF,CET 06-06,EUR,ECB,NULL,NULL,DealImport,DealImport,NULL,Active,TicketNumber,API Test,NULL,NULL,NULL,0,0,Gas-IndexedOption-003,XMLFileImport,NULL,NULL,0,Buy,0,0,EUR,0,EUR,28,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,AxpoIndexedOption,NULL,NULL,0,NULL,Indexed Option P GAS-11,Indexed Option,Physical,Base,2011-10-01 00:00:00.000,2012-09-30 00:00:00.000,366,NULL,Put,0,2011-09-30 00:00:00.000,0,NULL,0,0,0,0,NULL,NULL,240,87840,0,0,0,0,0,0,28,240,6.52244916732922,7709,500924.096050884,500924.096050884,ECS Curve,Vizard,NULL,Day,NULL,NULL,NULL,NULL,MWh,MWh,0,0,0,0,NULL,NULL</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

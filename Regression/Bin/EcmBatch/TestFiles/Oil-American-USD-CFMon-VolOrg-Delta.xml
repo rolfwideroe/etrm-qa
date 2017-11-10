@@ -1,0 +1,24 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Oil-American-USD-CFMon-VolOrg-Delta</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2012-03-31 00:00:00.000,0,TR,182,EUR,2.76972359468169,daily,American,AMEC Mar-12 31-JAN-12 130.00,Oil-American-USD-0009</record>
+        <record>2012-03-31 00:00:00.000,0,TR,182,EUR,-2.21306332218445,daily,American,AMEP Mar-12 31-JAN-12 130.00,Oil-American-USD-0010</record>
+        <record>2012-03-31 00:00:00.000,0,TR,182,EUR,4.46714944072038,daily,American,AMEC Mar-12 31-JAN-12 80.00,Oil-American-USD-0011</record>
+        <record>2012-03-31 00:00:00.000,0,TR,182,EUR,-0.880378670953977,daily,American,AMEP Mar-12 31-JAN-12 80.00,Oil-American-USD-0012</record>
+        <record>2012-06-30 00:00:00.000,0,TR,182,EUR,-3.16256138725756,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0015</record>
+        <record>2012-06-30 00:00:00.000,0,TR,182,EUR,3.16256138725756,daily,American,AMEC Jun-12 02-MAY-12 130.00,Oil-American-USD-0016</record>
+        <record>2012-03-31 00:00:00.000,0,TR,182,EUR,0.0418012853385534,daily,American,AMEC Mar-12 31-JAN-12 130.00,Oil-American-USD-0017</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

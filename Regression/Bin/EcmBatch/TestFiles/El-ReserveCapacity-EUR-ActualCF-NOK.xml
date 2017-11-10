@@ -1,0 +1,41 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-ReserveCapacity-EUR-ActualCF-NOK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-09-28 00:00:00.000,0,HI,174,NOK,309.750516091229,daily,Reserve Capacity,ReserveCapacity-Quarterly-Pre-Delivery-00-04-Tertiary-Day-Ahead,El-ReserveCapacity-EEX-0001</record>
+        <record>2011-10-10 00:00:00.000,0,HI,174,NOK,122877.602816347,daily,Reserve Capacity,ReserveCapacity-Quarterly-Pre-Delivery-00-04-Tertiary-Day-Ahead,El-ReserveCapacity-EEX-0001</record>
+        <record>2011-09-28 00:00:00.000,0,HI,174,NOK,483.229549460325,daily,Reserve Capacity,ReserveCapacity-Quarterly-In-Delivery-00-04-Tertiary-Day-Ahead,El-ReserveCapacity-EEX-0002</record>
+        <record>2011-11-01 00:00:00.000,0,TR,174,NOK,128264.184455623,daily,Reserve Capacity,ReserveCapacity-Quarterly-In-Delivery-00-04-Tertiary-Day-Ahead,El-ReserveCapacity-EEX-0002</record>
+        <record>2011-09-28 00:00:00.000,0,HI,174,NOK,344.372907362848,daily,Reserve Capacity,ReserveCapacity-Quarterly-Post-Delivery-00-04-Tertiary-Day-Ahead,El-ReserveCapacity-EEX-0003</record>
+        <record>2011-09-28 00:00:00.000,0,HI,174,NOK,1666.37342695977,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0004</record>
+        <record>2011-10-24 00:00:00.000,0,HI,174,NOK,195920.220580919,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0004</record>
+        <record>2011-10-25 00:00:00.000,0,HI,174,NOK,195717.814077725,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0004</record>
+        <record>2011-10-26 00:00:00.000,0,HI,174,NOK,195351.46285852,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0004</record>
+        <record>2011-10-27 00:00:00.000,0,HI,174,NOK,195442.425929117,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0004</record>
+        <record>2011-10-28 00:00:00.000,0,HI,174,NOK,195318.680102807,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0004</record>
+        <record>2011-10-29 00:00:00.000,0,HI,174,NOK,390637.360205614,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0004</record>
+        <record>2011-10-30 00:00:00.000,0,HI,174,NOK,390637.360205614,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0004</record>
+        <record>2011-09-28 00:00:00.000,0,HI,174,NOK,555.45780898659,daily,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0005</record>
+        <record>2011-10-31 00:00:00.000,0,HI,174,NOK,195963.58543166,daily,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,174,NOK,197150.4165638,daily,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0005</record>
+        <record>2011-09-28 00:00:00.000,0,HI,174,NOK,3617.66109564945,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0007</record>
+        <record>2011-10-24 00:00:00.000,0,HI,174,NOK,195920.220580919,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0007</record>
+        <record>2011-10-25 00:00:00.000,0,HI,174,NOK,195717.814077725,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0007</record>
+        <record>2011-10-26 00:00:00.000,0,HI,174,NOK,195351.46285852,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0007</record>
+        <record>2011-10-27 00:00:00.000,0,HI,174,NOK,195442.425929117,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0007</record>
+        <record>2011-10-28 00:00:00.000,0,HI,174,NOK,195318.680102807,daily,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0007</record>
+        <record>2011-09-28 00:00:00.000,0,HI,174,NOK,1205.88703188315,daily,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0008</record>
+        <record>2011-10-31 00:00:00.000,0,HI,174,NOK,195963.58543166,daily,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0008</record>
+        <record>2011-11-01 00:00:00.000,0,TR,174,NOK,197150.4165638,daily,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0008</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,44 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>NasdaqClearingReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="SettlementDate" IsNotSet="false" XmlEncodedValue="2011-10-31T00:00:00" />
+      <Setting SettingId="FilterName" IsNotSet="false" XmlEncodedValue="El-Future-NordPool-EUR" />
+      <Setting SettingId="SEKEURRateNegative" IsNotSet="false" XmlEncodedValue="8.943213" />
+      <Setting SettingId="SEKEURRate" IsNotSet="false" XmlEncodedValue="9.943213" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="-1" ArtifactId="FUTM2M" Columns="PortfolioName,CompanyName,ExecutionVenueName,InstrumentName,Load,BeginOrEndBalance,Quantity,MarketPrice,BookPrice,MarketValue,SettlementDate,Currency,ProductName,PricebasisName,FromDate,UntilDate,InstrumentType,Commodity,SummaryRow,ErrorMessage" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.DateTime,System.String,System.String, System.String, System.DateTime,System.DateTime,System.String,System.String,System.Boolean,System.String">
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0111-11,Base,5,NULL,40.08,38.75,159.6,2011-10-31T00:00:00,EUR,ENOD0111-11,NordPool System Price,2011-11-01T00:00:00,2011-11-02T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0111-11,Base,NULL,5,40.08,33.12,835.2,2011-10-31T00:00:00,EUR,ENOD0111-11,NordPool System Price,2011-11-01T00:00:00,2011-11-02T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0111-11,Base,10,5,NULL,NULL,994.8,2011-10-31T00:00:00,EUR,ENOD0111-11,NordPool System Price,2011-11-01T00:00:00,2011-11-02T00:00:00,Future,Electricity,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0211-11,Base,5,NULL,40,38.75,150,2011-10-31T00:00:00,EUR,ENOD0211-11,NordPool System Price,2011-11-02T00:00:00,2011-11-03T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0211-11,Base,NULL,5,40,33.12,825.6,2011-10-31T00:00:00,EUR,ENOD0211-11,NordPool System Price,2011-11-02T00:00:00,2011-11-03T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0211-11,Base,10,5,NULL,NULL,975.6,2011-10-31T00:00:00,EUR,ENOD0211-11,NordPool System Price,2011-11-02T00:00:00,2011-11-03T00:00:00,Future,Electricity,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0311-11,Base,5,NULL,40,38.75,150,2011-10-31T00:00:00,EUR,ENOD0311-11,NordPool System Price,2011-11-03T00:00:00,2011-11-04T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0311-11,Base,NULL,5,40,33.12,825.6,2011-10-31T00:00:00,EUR,ENOD0311-11,NordPool System Price,2011-11-03T00:00:00,2011-11-04T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0311-11,Base,10,5,NULL,NULL,975.6,2011-10-31T00:00:00,EUR,ENOD0311-11,NordPool System Price,2011-11-03T00:00:00,2011-11-04T00:00:00,Future,Electricity,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0411-11,Base,5,NULL,39,38.75,30,2011-10-31T00:00:00,EUR,ENOD0411-11,NordPool System Price,2011-11-04T00:00:00,2011-11-05T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0411-11,Base,NULL,5,39,33.12,705.6,2011-10-31T00:00:00,EUR,ENOD0411-11,NordPool System Price,2011-11-04T00:00:00,2011-11-05T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0411-11,Base,10,5,NULL,NULL,735.6,2011-10-31T00:00:00,EUR,ENOD0411-11,NordPool System Price,2011-11-04T00:00:00,2011-11-05T00:00:00,Future,Electricity,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0511-11,Base,5,NULL,37,38.75,-210,2011-10-31T00:00:00,EUR,ENOD0511-11,NordPool System Price,2011-11-05T00:00:00,2011-11-06T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0511-11,Base,NULL,5,37,33.12,465.6,2011-10-31T00:00:00,EUR,ENOD0511-11,NordPool System Price,2011-11-05T00:00:00,2011-11-06T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0511-11,Base,10,5,NULL,NULL,255.6,2011-10-31T00:00:00,EUR,ENOD0511-11,NordPool System Price,2011-11-05T00:00:00,2011-11-06T00:00:00,Future,Electricity,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0611-11,Base,5,NULL,36,38.75,-330,2011-10-31T00:00:00,EUR,ENOD0611-11,NordPool System Price,2011-11-06T00:00:00,2011-11-07T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0611-11,Base,NULL,5,36,33.12,345.6,2011-10-31T00:00:00,EUR,ENOD0611-11,NordPool System Price,2011-11-06T00:00:00,2011-11-07T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,D0611-11,Base,10,5,NULL,NULL,15.6000000000003,2011-10-31T00:00:00,EUR,ENOD0611-11,NordPool System Price,2011-11-06T00:00:00,2011-11-07T00:00:00,Future,Electricity,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,W45-11,Peak,10,NULL,51,47,2400,2011-10-31T00:00:00,EUR,ENOPLW45-11,NordPool System Price,2011-11-07T00:00:00,2011-11-14T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,W45-11,Peak,10,0,NULL,NULL,2400,2011-10-31T00:00:00,EUR,ENOPLW45-11,NordPool System Price,2011-11-07T00:00:00,2011-11-14T00:00:00,Future,Electricity,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,W45-11,Base,10,NULL,45.4,44,2352,2011-10-31T00:00:00,EUR,ENOW45-11,NordPool System Price,2011-11-07T00:00:00,2011-11-14T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,W45-11,Base,10,0,NULL,NULL,2352,2011-10-31T00:00:00,EUR,ENOW45-11,NordPool System Price,2011-11-07T00:00:00,2011-11-14T00:00:00,Future,Electricity,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,W46-11,Peak,10,NULL,53,50.75,1350,2011-10-31T00:00:00,EUR,ENOPLW46-11,NordPool System Price,2011-11-14T00:00:00,2011-11-21T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,W46-11,Peak,10,0,NULL,NULL,1350,2011-10-31T00:00:00,EUR,ENOPLW46-11,NordPool System Price,2011-11-14T00:00:00,2011-11-21T00:00:00,Future,Electricity,True,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,W46-11,Base,10,NULL,47.5,46.73,1293.60000000001,2011-10-31T00:00:00,EUR,ENOW46-11,NordPool System Price,2011-11-14T00:00:00,2011-11-21T00:00:00,Future,Electricity,False,NULL</ExpectedRecord>
+        <ExpectedRecord>Electricity-Future-NordPool-EUR,RegCustomerCompany,NordPool,W46-11,Base,10,0,NULL,NULL,1293.60000000001,2011-10-31T00:00:00,EUR,ENOW46-11,NordPool System Price,2011-11-14T00:00:00,2011-11-21T00:00:00,Future,Electricity,True,NULL</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

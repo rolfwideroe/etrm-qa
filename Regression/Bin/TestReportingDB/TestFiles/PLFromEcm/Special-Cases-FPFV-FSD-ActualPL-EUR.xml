@@ -1,0 +1,24 @@
+<test type="EcmBatch" name="Currency-Forward-CFMon-ActualPL-EUR" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FPFV-FSD-ActualPL-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,7559.89137500005,monthly,Fixed Price Floating Volume,D0111-11,Special-Cases-FPFV-FSD-Day-EEX</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,623.273274999965,monthly,Fixed Price Floating Volume,D0111-11,Special-Cases-FPFV-FSD-Hour-EEX</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,EUR,27591.793325,monthly,Fixed Price Floating Volume,Q4-11,Special-Cases-FPFV-FSD-Hour-Q411-EEX</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,272624.202358217,monthly,Fixed Price Floating Volume,Q4-11,Special-Cases-FPFV-FSD-Hour-Q411-EEX</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,299624.278805603,monthly,Fixed Price Floating Volume,Q4-11,Special-Cases-FPFV-FSD-Hour-Q411-EEX</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,7559.89137500005,monthly,Fixed Price Floating Volume,D0111-11,Special-Cases-FPFV-FSD-Month-Day-EEX</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

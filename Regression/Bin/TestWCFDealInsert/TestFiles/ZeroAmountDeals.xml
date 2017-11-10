@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BulkDealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Special-Cases</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-11-30</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="ENBW"/>
+				</Physical>
+				<TransactionName>Special-Cases-ZeroVolume-ElectricityStructuredDeal</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<StructuredDealInformation Resolution="Monthly">
+					<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" Price="0" Volume="0" ToDateTime="2011-12-01T00:00:00"/>
+				</StructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Special-Cases-ZeroVolume-ElectricityStructuredDeal</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Special-Cases</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-11-30</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="ENBW" />
+				</Physical>
+				<TransactionName>Special-Cases-ZeroVolume-ElectricityStructuredFlexibleDeal</TransactionName>
+			</InstrumentData>
+			<SettlementData>				
+				<FlexibleStructuredDealInformation>
+					<ModelType>Retail</ModelType>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="0" />
+					</TimeSeries>					
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>					
+							<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="0" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="0" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="0" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Special-Cases-ZeroVolume-ElectricityStructuredFlexibleDeal</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-CapacityStructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Special-Cases</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityCapacityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<FromDate>2011-10-31</FromDate>
+				<ToDate>2011-11-02</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="RWE"/>
+						<DestinationBalanceArea AreaName="ENBW"/>
+					</Interconnector>
+				</Physical>
+				<Priority>Interruptible</Priority>
+				<ExpiryOffset>1</ExpiryOffset>
+				<ExpiryTime>07:30:00</ExpiryTime>
+			</InstrumentData>
+			<SettlementData>
+				<StructuredDealInformation>
+					<TimeSeriesDetail FromDateTime="2011-10-31T00:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T01:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T01:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T02:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T02:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T03:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T03:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T04:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T04:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T05:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T05:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T06:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T06:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T07:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T07:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T08:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T08:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T09:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T09:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T10:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T10:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T11:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T11:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T12:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T12:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T13:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T13:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T14:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T14:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T15:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T15:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T16:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T16:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T17:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T17:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T18:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T18:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T19:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T19:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T20:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T20:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T21:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T21:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T22:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T22:00:00" Price="0" Volume="0" ToDateTime="2011-10-31T23:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-10-31T23:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T01:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T01:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T02:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T02:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T03:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T03:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T04:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T04:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T05:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T05:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T06:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T06:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T07:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T07:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T08:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T08:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T09:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T09:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T10:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T10:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T11:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T11:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T12:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T12:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T13:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T13:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T14:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T14:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T15:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T15:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T16:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T16:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T17:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T17:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T18:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T18:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T19:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T19:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T20:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T20:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T21:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T21:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T22:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T22:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T23:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T23:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T00:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T01:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T01:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T02:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T02:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T03:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T03:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T04:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T04:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T05:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T05:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T06:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T06:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T07:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T07:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T08:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T08:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T09:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T09:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T10:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T10:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T11:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T11:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T12:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T12:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T13:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T13:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T14:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T14:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T15:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T15:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T16:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T16:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T17:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T17:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T18:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T18:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T19:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T19:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T20:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T20:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T21:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T21:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T22:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T22:00:00" Price="0" Volume="0" ToDateTime="2011-11-02T23:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-02T23:00:00" Price="0" Volume="0" ToDateTime="2011-11-03T00:00:00"/>
+				</StructuredDealInformation>
+				<Price>100</Price>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<BrokerTradingFee>4</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				<EntryFee>123</EntryFee>
+				<EntryFeeCurrency>EUR</EntryFeeCurrency>
+				<ExitFee>123</ExitFee>
+				<ExitFeeCurrency>EUR</ExitFeeCurrency>
+			</SettlementData>
+		</ElectricityCapacityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Special-Cases-ZeroVolume-ElectricityCapacityStructuredDeal</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Transport</DealType>
+		<Portfolios>
+			<Portfolio>Special-Cases</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityTransport>
+			<InstrumentData>
+				<FromDate>2011-10-31</FromDate>
+				<ToDate>2011-11-02</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="RWE"/>
+						<DestinationBalanceArea AreaName="EON"/>
+					</Interconnector>
+				</Physical>
+			</InstrumentData>
+			<SettlementData>
+				<TransportQuantityInformation>
+					<TimeSeriesDetail From="2011-10-31T00:00:00" Price="0" Volume="0" Until="2011-10-31T01:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T01:00:00" Price="0" Volume="0" Until="2011-10-31T02:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T02:00:00" Price="0" Volume="0" Until="2011-10-31T03:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T03:00:00" Price="0" Volume="0" Until="2011-10-31T04:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T04:00:00" Price="0" Volume="0" Until="2011-10-31T05:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T05:00:00" Price="0" Volume="0" Until="2011-10-31T06:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T06:00:00" Price="0" Volume="0" Until="2011-10-31T07:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T07:00:00" Price="0" Volume="0" Until="2011-10-31T08:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T08:00:00" Price="0" Volume="0" Until="2011-10-31T09:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T09:00:00" Price="0" Volume="0" Until="2011-10-31T10:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T10:00:00" Price="0" Volume="0" Until="2011-10-31T11:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T11:00:00" Price="0" Volume="0" Until="2011-10-31T12:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T12:00:00" Price="0" Volume="0" Until="2011-10-31T13:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T13:00:00" Price="0" Volume="0" Until="2011-10-31T14:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T14:00:00" Price="0" Volume="0" Until="2011-10-31T15:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T15:00:00" Price="0" Volume="0" Until="2011-10-31T16:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T16:00:00" Price="0" Volume="0" Until="2011-10-31T17:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T17:00:00" Price="0" Volume="0" Until="2011-10-31T18:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T18:00:00" Price="0" Volume="0" Until="2011-10-31T19:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T19:00:00" Price="0" Volume="0" Until="2011-10-31T20:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T20:00:00" Price="0" Volume="0" Until="2011-10-31T21:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T21:00:00" Price="0" Volume="0" Until="2011-10-31T22:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T22:00:00" Price="0" Volume="0" Until="2011-10-31T23:00:00"/>
+					<TimeSeriesDetail From="2011-10-31T23:00:00" Price="0" Volume="0" Until="2011-11-01T00:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T00:00:00" Price="0" Volume="0" Until="2011-11-01T01:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T01:00:00" Price="0" Volume="0" Until="2011-11-01T02:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T02:00:00" Price="0" Volume="0" Until="2011-11-01T03:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T03:00:00" Price="0" Volume="0" Until="2011-11-01T04:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T04:00:00" Price="0" Volume="0" Until="2011-11-01T05:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T05:00:00" Price="0" Volume="0" Until="2011-11-01T06:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T06:00:00" Price="0" Volume="0" Until="2011-11-01T07:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T07:00:00" Price="0" Volume="0" Until="2011-11-01T08:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T08:00:00" Price="0" Volume="0" Until="2011-11-01T09:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T09:00:00" Price="0" Volume="0" Until="2011-11-01T10:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T10:00:00" Price="0" Volume="0" Until="2011-11-01T11:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T11:00:00" Price="0" Volume="0" Until="2011-11-01T12:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T12:00:00" Price="0" Volume="0" Until="2011-11-01T13:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T13:00:00" Price="0" Volume="0" Until="2011-11-01T14:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T14:00:00" Price="0" Volume="0" Until="2011-11-01T15:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T15:00:00" Price="0" Volume="0" Until="2011-11-01T16:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T16:00:00" Price="0" Volume="0" Until="2011-11-01T17:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T17:00:00" Price="0" Volume="0" Until="2011-11-01T18:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T18:00:00" Price="0" Volume="0" Until="2011-11-01T19:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T19:00:00" Price="0" Volume="0" Until="2011-11-01T20:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T20:00:00" Price="0" Volume="0" Until="2011-11-01T21:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T21:00:00" Price="0" Volume="0" Until="2011-11-01T22:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T22:00:00" Price="0" Volume="0" Until="2011-11-01T23:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T23:00:00" Price="0" Volume="0" Until="2011-11-02T00:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T00:00:00" Price="0" Volume="0" Until="2011-11-02T01:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T01:00:00" Price="0" Volume="0" Until="2011-11-02T02:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T02:00:00" Price="0" Volume="0" Until="2011-11-02T03:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T03:00:00" Price="0" Volume="0" Until="2011-11-02T04:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T04:00:00" Price="0" Volume="0" Until="2011-11-02T05:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T05:00:00" Price="0" Volume="0" Until="2011-11-02T06:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T06:00:00" Price="0" Volume="0" Until="2011-11-02T07:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T07:00:00" Price="0" Volume="0" Until="2011-11-02T08:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T08:00:00" Price="0" Volume="0" Until="2011-11-02T09:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T09:00:00" Price="0" Volume="0" Until="2011-11-02T10:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T10:00:00" Price="0" Volume="0" Until="2011-11-02T11:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T11:00:00" Price="0" Volume="0" Until="2011-11-02T12:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T12:00:00" Price="0" Volume="0" Until="2011-11-02T13:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T13:00:00" Price="0" Volume="0" Until="2011-11-02T14:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T14:00:00" Price="0" Volume="0" Until="2011-11-02T15:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T15:00:00" Price="0" Volume="0" Until="2011-11-02T16:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T16:00:00" Price="0" Volume="0" Until="2011-11-02T17:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T17:00:00" Price="0" Volume="0" Until="2011-11-02T18:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T18:00:00" Price="0" Volume="0" Until="2011-11-02T19:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T19:00:00" Price="0" Volume="0" Until="2011-11-02T20:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T20:00:00" Price="0" Volume="0" Until="2011-11-02T21:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T21:00:00" Price="0" Volume="0" Until="2011-11-02T22:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T22:00:00" Price="0" Volume="0" Until="2011-11-02T23:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T23:00:00" Price="0" Volume="0" Until="2011-11-03T00:00:00"/>
+				</TransportQuantityInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<EntryFee>12</EntryFee>
+				<EntryFeeCurrency>EUR</EntryFeeCurrency>
+				<ExitFee>0</ExitFee>
+				<ExitFeeCurrency>EUR</ExitFeeCurrency>
+			</SettlementData>
+		</ElectricityTransport>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Special-Cases-ZeroVolume-ElectricityTransportDeal</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Special-Cases</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-11-30</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Special-Cases-ZeroVolume-GasStructuredDeal</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<StructuredDealInformation Resolution="Monthly">
+					<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" Price="0" Volume="0" ToDateTime="2011-11-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" Price="0" Volume="0" ToDateTime="2011-12-01T00:00:00"/>
+				</StructuredDealInformation>
+				<QuantityUnit>MWh/d</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Special-Cases-ZeroVolume-GasStructuredDeal</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Special-Cases</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-11-30</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Special-Cases-ZeroVolume-GasStructuredFlexibleDeal</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<ModelType>Retail</ModelType>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="0" />
+					</TimeSeries>					
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>					
+							<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="0" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="0" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="0" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MWh/d</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Special-Cases-ZeroVolume-GasStructuredFlexibleDeal</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-CapacityStructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Special-Cases</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasCapacityStructuredDeal>
+			<InstrumentData>				
+				<FromDate>2011-10-31</FromDate>
+				<ToDate>2011-11-02</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="TTF"/>
+						<DestinationBalanceArea AreaName="NBP"/>
+					</Interconnector>
+				</Physical>
+				<Priority>Interruptible</Priority>
+				<ExpiryOffset>1</ExpiryOffset>
+				<ExpiryTime>07:30:00</ExpiryTime>
+			</InstrumentData>
+			<SettlementData>
+				<DailyInformation>
+					<TimeSeriesDetail DateTime="2011-10-31T00:00:00" Volume="0"/>
+					<TimeSeriesDetail DateTime="2011-11-01T00:00:00" Volume="0"/>
+					<TimeSeriesDetail DateTime="2011-11-02T00:00:00" Volume="0"/>
+				</DailyInformation>
+				<Price>100</Price>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<BrokerTradingFee>4</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				<EntryFee>123</EntryFee>
+				<EntryFeeCurrency>EUR</EntryFeeCurrency>
+				<ExitFee>123</ExitFee>
+				<ExitFeeCurrency>EUR</ExitFeeCurrency>
+			</SettlementData>
+		</GasCapacityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Special-Cases-ZeroVolume-GasCapacityStructuredDeal</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-Transport</DealType>
+		<Portfolios>
+			<Portfolio>Special-Cases</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasTransport>
+			<InstrumentData>
+				<FromDate>2011-10-31</FromDate>
+				<ToDate>2011-11-02</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="TTF"/>
+						<DestinationBalanceArea AreaName="NBP"/>
+					</Interconnector>
+				</Physical>
+			</InstrumentData>
+			<SettlementData>
+				<TransportQuantityInformation>
+					<TimeSeriesDetail From="2011-10-31T00:00:00" Price="0" Volume="0" Until="2011-11-01T00:00:00"/>
+					<TimeSeriesDetail From="2011-11-01T00:00:00" Price="0" Volume="0" Until="2011-11-02T00:00:00"/>
+					<TimeSeriesDetail From="2011-11-02T00:00:00" Price="0" Volume="0" Until="2011-11-03T00:00:00"/>
+				</TransportQuantityInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<EntryFee>1</EntryFee>
+				<EntryFeeCurrency>EUR</EntryFeeCurrency>
+				<ExitFee>2</ExitFee>
+				<ExitFeeCurrency>EUR</ExitFeeCurrency>
+			</SettlementData>
+		</GasTransport>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Special-Cases-ZeroVolume-GasTransportDeal</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Special-Cases</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Special-Cases</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-11-30</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="ENBW"/>
+				</Physical>
+				<TransactionName>Special-Cases-ZeroVolume-ElectricityStructuredDeal-DummyDeal</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<StructuredDealInformation Resolution="Monthly">
+					<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" Price="1" Volume="1" ToDateTime="2011-11-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" Price="1" Volume="1" ToDateTime="2011-12-01T00:00:00"/>
+				</StructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Dummy Deal added to force workspace to export values for this one deal</Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Special-Cases-ZeroVolume-ElectricityStructuredDeal-DummyDeal</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</BulkDealInsert>

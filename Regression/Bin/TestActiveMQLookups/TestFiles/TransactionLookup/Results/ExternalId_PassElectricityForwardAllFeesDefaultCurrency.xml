@@ -1,0 +1,197 @@
+<LookupResult xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MetaData Timestamp="2016-02-26T11:40:13.434194+01:00">
+    <Action>TransactionLookup</Action>
+    <MessageId>1234</MessageId>
+    <ElvizVersion>2016.1.1.303</ElvizVersion>
+    <ProcessorVersion>1.0.0.0</ProcessorVersion>
+  </MetaData>
+  <Result>Success</Result>
+  <Transactions>
+    <Transaction>
+      <DealType>Electricity-Forward</DealType>
+      <Portfolios>
+        <Portfolio>API Test Counterparty</Portfolio>
+        <PortfolioElvizId>6</PortfolioElvizId>
+        <PortfolioReplicationId>54574938-30af-41ca-adbb-759eb5c4491e</PortfolioReplicationId>
+        <CounterpartyPortfolio>API Test Customer</CounterpartyPortfolio>
+        <CounterpartyPortfolioElvizId>5</CounterpartyPortfolioElvizId>
+        <CounterpartyPortfolioReplicationId>ccd6ce82-c9a0-43c8-a684-cf7a77fa1fcf</CounterpartyPortfolioReplicationId>
+        <BuySell>Sell</BuySell>
+        <CompanyName>API Test Counterparty</CompanyName>
+        <PortfolioName>API Test Counterparty</PortfolioName>
+        <CounterpartyCompanyName>API Test Customer</CounterpartyCompanyName>
+        <CounterpartyPortfolioName>API Test Customer</CounterpartyPortfolioName>
+        <CompanyShortName />
+        <CounterpartyCompanyShortName />
+      </Portfolios>
+      <ElectricityForward>
+        <InstrumentData>
+          <Timezone>CET</Timezone>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Base Week</LoadProfile>
+          <FromDate>2008-01-01</FromDate>
+          <ToDate>2008-01-01</ToDate>
+          <Financial />
+          <InstrumentName>D0101-08</InstrumentName>
+          <Deliveries>24</Deliveries>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>40</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>28</Price>
+          <Currency>NOK</Currency>
+          <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Broker</Clearing>
+          <ClearingCurrency>NOK</ClearingCurrency>
+          <ClearingFee>0.1</ClearingFee>
+          <BrokerTradingFee>0.3</BrokerTradingFee>
+          <BrokerCurrency>NOK</BrokerCurrency>
+          <BrokerFee>0.3</BrokerFee>
+          <BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+          <TradingFee>0.3</TradingFee>
+          <TradingFeeCurrency>NOK</TradingFeeCurrency>
+          <CommissionFee>0.01</CommissionFee>
+          <CommissionFeeCurrency>NOK</CommissionFeeCurrency>
+          <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.3" FeeUnit="NOK/MWh" />
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.3" FeeUnit="NOK" />
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.1" FeeUnit="NOK/MWh" />
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="NOK" />
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" FeeUnit="NOK/MWh" />
+            <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.01" FeeUnit="NOK" />
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.3" FeeUnit="NOK/MWh" />
+            <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.3" FeeUnit="NOK" />
+          </Fees>
+        </FeesData>
+      </ElectricityForward>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2007-12-24T00:00:00</TradeDate>
+        <ModificationDate>2016-02-26T09:28:08</ModificationDate>
+        <ConfirmedByBroker>false</ConfirmedByBroker>
+        <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+        <Authorised>false</Authorised>
+        <Audited>false</Audited>
+        <Paid>false</Paid>
+        <DeclareId>0</DeclareId>
+        <ContractSplitId>0</ContractSplitId>
+      </DealDetails>
+      <ReferenceData>
+        <ElvizId>352</ElvizId>
+        <Comment>ElectricityForward with Broker Fee Profile; should pass</Comment>
+        <DealGroup>API Test</DealGroup>
+        <GroupFields>
+          <GroupField1 xsi:type="xsd:string">API Test</GroupField1>
+        </GroupFields>
+        <ExternalId>PassElectricityForwardAllFeesDefaultCurrency</ExternalId>
+        <ExternalSource>XMLFileImport</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+        <RiskValue xsi:type="xsd:double">0</RiskValue>
+      </ReferenceData>
+      <CustomProperties>
+        <PropertyGroup name="Deal Group">
+          <StringProperty name="GroupField1" value="API Test" />
+        </PropertyGroup>
+      </CustomProperties>
+    </Transaction>
+    <Transaction>
+      <DealType>Electricity-Forward</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <PortfolioElvizId>5</PortfolioElvizId>
+        <PortfolioReplicationId>ccd6ce82-c9a0-43c8-a684-cf7a77fa1fcf</PortfolioReplicationId>
+        <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+        <CounterpartyPortfolioElvizId>6</CounterpartyPortfolioElvizId>
+        <CounterpartyPortfolioReplicationId>54574938-30af-41ca-adbb-759eb5c4491e</CounterpartyPortfolioReplicationId>
+        <BuySell>Buy</BuySell>
+        <CompanyName>API Test Customer</CompanyName>
+        <PortfolioName>API Test Customer</PortfolioName>
+        <CounterpartyCompanyName>API Test Counterparty</CounterpartyCompanyName>
+        <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+        <CompanyShortName />
+        <CounterpartyCompanyShortName />
+      </Portfolios>
+      <ElectricityForward>
+        <InstrumentData>
+          <Timezone>CET</Timezone>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>NordPool System Price</PriceBasis>
+          <LoadProfile>Base Week</LoadProfile>
+          <FromDate>2008-01-01</FromDate>
+          <ToDate>2008-01-01</ToDate>
+          <Financial />
+          <InstrumentName>D0101-08</InstrumentName>
+          <Deliveries>24</Deliveries>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>40</Quantity>
+          <QuantityUnit>MW</QuantityUnit>
+          <Price>28</Price>
+          <Currency>NOK</Currency>
+          <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Broker</Clearing>
+          <ClearingCurrency>NOK</ClearingCurrency>
+          <ClearingFee>0.1</ClearingFee>
+          <BrokerTradingFee>0.3</BrokerTradingFee>
+          <BrokerCurrency>NOK</BrokerCurrency>
+          <BrokerFee>0.3</BrokerFee>
+          <BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+          <TradingFee>0.3</TradingFee>
+          <TradingFeeCurrency>NOK</TradingFeeCurrency>
+          <CommissionFee>0.01</CommissionFee>
+          <CommissionFeeCurrency>NOK</CommissionFeeCurrency>
+          <Broker>ICAP</Broker>
+        </SettlementData>
+        <FeesData>
+          <Fees>
+            <Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.3" FeeUnit="NOK/MWh" />
+            <Fee FeeType="Broker" FeeValueType="Fixed" FeeValue="0.3" FeeUnit="NOK" />
+            <Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.1" FeeUnit="NOK/MWh" />
+            <Fee FeeType="Clearing" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="NOK" />
+            <Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" FeeUnit="NOK/MWh" />
+            <Fee FeeType="Commission" FeeValueType="Fixed" FeeValue="0.01" FeeUnit="NOK" />
+            <Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.3" FeeUnit="NOK/MWh" />
+            <Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.3" FeeUnit="NOK" />
+          </Fees>
+        </FeesData>
+      </ElectricityForward>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2007-12-24T00:00:00</TradeDate>
+        <ModificationDate>2016-02-26T09:28:08</ModificationDate>
+        <ConfirmedByBroker>false</ConfirmedByBroker>
+        <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+        <Authorised>false</Authorised>
+        <Audited>false</Audited>
+        <Paid>false</Paid>
+        <DeclareId>0</DeclareId>
+        <ContractSplitId>0</ContractSplitId>
+      </DealDetails>
+      <ReferenceData>
+        <ElvizId>351</ElvizId>
+        <Comment>ElectricityForward with Broker Fee Profile; should pass</Comment>
+        <DealGroup>API Test</DealGroup>
+        <GroupFields>
+          <GroupField1 xsi:type="xsd:string">API Test</GroupField1>
+        </GroupFields>
+        <ExternalId>PassElectricityForwardAllFeesDefaultCurrency</ExternalId>
+        <ExternalSource>XMLFileImport</ExternalSource>
+        <TicketNumber>TicketNumber</TicketNumber>
+        <RiskValue xsi:type="xsd:double">0</RiskValue>
+      </ReferenceData>
+      <CustomProperties>
+        <PropertyGroup name="Deal Group">
+          <StringProperty name="GroupField1" value="API Test" />
+        </PropertyGroup>
+      </CustomProperties>
+    </Transaction>
+  </Transactions>
+</LookupResult>

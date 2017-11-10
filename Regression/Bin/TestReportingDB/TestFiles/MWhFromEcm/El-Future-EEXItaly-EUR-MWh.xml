@@ -1,0 +1,200 @@
+<test type="EcmBatch" name="El-Future-EEXItaly-EUR-MWh" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>El-Future-EEXItaly-EUR-MWh</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<reportdate>2014-09-12</reportdate>
+		<tollerance>0.00000001</tollerance>
+		<executeElvizBatch>True</executeElvizBatch>		
+	</setup>
+	<assert>
+		<datawarehouse>
+			<query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+				<record>2014-01-01 00:00:00.000,0,HI,108,EUR,3720,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-02-01 00:00:00.000,0,HI,108,EUR,3360,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-03-01 00:00:00.000,0,HI,108,EUR,3715,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-04-01 00:00:00.000,0,HI,108,EUR,3600,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-05-01 00:00:00.000,0,HI,108,EUR,3720,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-06-01 00:00:00.000,0,HI,108,EUR,3600,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-07-01 00:00:00.000,0,HI,108,EUR,3720,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-08-01 00:00:00.000,0,HI,108,EUR,3720,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,3600,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,3725,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-11-01 00:00:00.000,0,TR,108,EUR,3600,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-12-01 00:00:00.000,0,TR,108,EUR,3720,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0001</record>
+				<record>2014-01-01 00:00:00.000,0,HI,108,EUR,-3720,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-02-01 00:00:00.000,0,HI,108,EUR,-3360,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-03-01 00:00:00.000,0,HI,108,EUR,-3715,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-04-01 00:00:00.000,0,HI,108,EUR,-3600,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-05-01 00:00:00.000,0,HI,108,EUR,-3720,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-06-01 00:00:00.000,0,HI,108,EUR,-3600,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-07-01 00:00:00.000,0,HI,108,EUR,-3720,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-08-01 00:00:00.000,0,HI,108,EUR,-3720,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,-3600,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,-3725,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-11-01 00:00:00.000,0,TR,108,EUR,-3600,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-12-01 00:00:00.000,0,TR,108,EUR,-3720,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0002</record>
+				<record>2014-01-01 00:00:00.000,0,HI,108,EUR,7440,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2014-02-01 00:00:00.000,0,HI,108,EUR,6720,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2014-03-01 00:00:00.000,0,HI,108,EUR,7430,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2014-04-01 00:00:00.000,0,HI,108,EUR,7200,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2014-05-01 00:00:00.000,0,HI,108,EUR,7440,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2014-06-01 00:00:00.000,0,HI,108,EUR,7200,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2014-07-01 00:00:00.000,0,HI,108,EUR,7440,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2014-08-01 00:00:00.000,0,HI,108,EUR,7440,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,7200,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,7450,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2014-11-01 00:00:00.000,0,TR,108,EUR,7200,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2014-12-01 00:00:00.000,0,TR,108,EUR,7440,monthly,Future,Cal-14,El-Future-EEXItaly-EUR-0003</record>
+				<record>2015-01-01 00:00:00.000,0,TR,108,EUR,3720,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-02-01 00:00:00.000,0,TR,108,EUR,3360,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-03-01 00:00:00.000,0,TR,108,EUR,3715,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-04-01 00:00:00.000,0,TR,108,EUR,3600,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-05-01 00:00:00.000,0,TR,108,EUR,3720,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-06-01 00:00:00.000,0,TR,108,EUR,3600,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-07-01 00:00:00.000,0,TR,108,EUR,3720,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-08-01 00:00:00.000,0,TR,108,EUR,3720,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-09-01 00:00:00.000,0,TR,108,EUR,3600,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-10-01 00:00:00.000,0,TR,108,EUR,3725,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-11-01 00:00:00.000,0,TR,108,EUR,3600,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-12-01 00:00:00.000,0,TR,108,EUR,3720,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0004</record>
+				<record>2015-01-01 00:00:00.000,0,TR,108,EUR,-3720,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-02-01 00:00:00.000,0,TR,108,EUR,-3360,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-03-01 00:00:00.000,0,TR,108,EUR,-3715,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-04-01 00:00:00.000,0,TR,108,EUR,-3600,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-05-01 00:00:00.000,0,TR,108,EUR,-3720,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-06-01 00:00:00.000,0,TR,108,EUR,-3600,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-07-01 00:00:00.000,0,TR,108,EUR,-3720,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-08-01 00:00:00.000,0,TR,108,EUR,-3720,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-09-01 00:00:00.000,0,TR,108,EUR,-3600,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-10-01 00:00:00.000,0,TR,108,EUR,-3725,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-11-01 00:00:00.000,0,TR,108,EUR,-3600,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-12-01 00:00:00.000,0,TR,108,EUR,-3720,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0005</record>
+				<record>2015-01-01 00:00:00.000,0,TR,108,EUR,7440,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-02-01 00:00:00.000,0,TR,108,EUR,6720,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-03-01 00:00:00.000,0,TR,108,EUR,7430,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-04-01 00:00:00.000,0,TR,108,EUR,7200,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-05-01 00:00:00.000,0,TR,108,EUR,7440,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-06-01 00:00:00.000,0,TR,108,EUR,7200,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-07-01 00:00:00.000,0,TR,108,EUR,7440,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-08-01 00:00:00.000,0,TR,108,EUR,7440,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-09-01 00:00:00.000,0,TR,108,EUR,7200,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-10-01 00:00:00.000,0,TR,108,EUR,7450,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-11-01 00:00:00.000,0,TR,108,EUR,7200,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-12-01 00:00:00.000,0,TR,108,EUR,7440,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0006</record>
+				<record>2015-01-01 00:00:00.000,0,TR,108,EUR,1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-02-01 00:00:00.000,0,TR,108,EUR,1200,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-03-01 00:00:00.000,0,TR,108,EUR,1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-04-01 00:00:00.000,0,TR,108,EUR,1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-05-01 00:00:00.000,0,TR,108,EUR,1260,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-06-01 00:00:00.000,0,TR,108,EUR,1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-07-01 00:00:00.000,0,TR,108,EUR,1380,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-08-01 00:00:00.000,0,TR,108,EUR,1260,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-09-01 00:00:00.000,0,TR,108,EUR,1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-10-01 00:00:00.000,0,TR,108,EUR,1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-11-01 00:00:00.000,0,TR,108,EUR,1260,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-12-01 00:00:00.000,0,TR,108,EUR,1380,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0007</record>
+				<record>2015-01-01 00:00:00.000,0,TR,108,EUR,-1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-02-01 00:00:00.000,0,TR,108,EUR,-1200,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-03-01 00:00:00.000,0,TR,108,EUR,-1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-04-01 00:00:00.000,0,TR,108,EUR,-1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-05-01 00:00:00.000,0,TR,108,EUR,-1260,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-06-01 00:00:00.000,0,TR,108,EUR,-1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-07-01 00:00:00.000,0,TR,108,EUR,-1380,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-08-01 00:00:00.000,0,TR,108,EUR,-1260,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-09-01 00:00:00.000,0,TR,108,EUR,-1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-10-01 00:00:00.000,0,TR,108,EUR,-1320,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-11-01 00:00:00.000,0,TR,108,EUR,-1260,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-12-01 00:00:00.000,0,TR,108,EUR,-1380,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0008</record>
+				<record>2015-01-01 00:00:00.000,0,TR,108,EUR,2640,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2015-02-01 00:00:00.000,0,TR,108,EUR,2400,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2015-03-01 00:00:00.000,0,TR,108,EUR,2640,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2015-04-01 00:00:00.000,0,TR,108,EUR,2640,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2015-05-01 00:00:00.000,0,TR,108,EUR,2520,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2015-06-01 00:00:00.000,0,TR,108,EUR,2640,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2015-07-01 00:00:00.000,0,TR,108,EUR,2760,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2015-08-01 00:00:00.000,0,TR,108,EUR,2520,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2015-09-01 00:00:00.000,0,TR,108,EUR,2640,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2015-10-01 00:00:00.000,0,TR,108,EUR,2640,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2015-11-01 00:00:00.000,0,TR,108,EUR,2520,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2015-12-01 00:00:00.000,0,TR,108,EUR,2760,monthly,Future,Cal-15,El-Future-EEXItaly-EUR-0009</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,3725,monthly,Future,4/14,El-Future-EEXItaly-EUR-0010</record>
+				<record>2014-11-01 00:00:00.000,0,TR,108,EUR,3600,monthly,Future,4/14,El-Future-EEXItaly-EUR-0010</record>
+				<record>2014-12-01 00:00:00.000,0,TR,108,EUR,3720,monthly,Future,4/14,El-Future-EEXItaly-EUR-0010</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,-3725,monthly,Future,4/14,El-Future-EEXItaly-EUR-0011</record>
+				<record>2014-11-01 00:00:00.000,0,TR,108,EUR,-3600,monthly,Future,4/14,El-Future-EEXItaly-EUR-0011</record>
+				<record>2014-12-01 00:00:00.000,0,TR,108,EUR,-3720,monthly,Future,4/14,El-Future-EEXItaly-EUR-0011</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,7450,monthly,Future,4/14,El-Future-EEXItaly-EUR-0012</record>
+				<record>2014-11-01 00:00:00.000,0,TR,108,EUR,7200,monthly,Future,4/14,El-Future-EEXItaly-EUR-0012</record>
+				<record>2014-12-01 00:00:00.000,0,TR,108,EUR,7440,monthly,Future,4/14,El-Future-EEXItaly-EUR-0012</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,1380,monthly,Future,4/14,El-Future-EEXItaly-EUR-0013</record>
+				<record>2014-11-01 00:00:00.000,0,TR,108,EUR,1200,monthly,Future,4/14,El-Future-EEXItaly-EUR-0013</record>
+				<record>2014-12-01 00:00:00.000,0,TR,108,EUR,1380,monthly,Future,4/14,El-Future-EEXItaly-EUR-0013</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,-1380,monthly,Future,4/14,El-Future-EEXItaly-EUR-0014</record>
+				<record>2014-11-01 00:00:00.000,0,TR,108,EUR,-1200,monthly,Future,4/14,El-Future-EEXItaly-EUR-0014</record>
+				<record>2014-12-01 00:00:00.000,0,TR,108,EUR,-1380,monthly,Future,4/14,El-Future-EEXItaly-EUR-0014</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,2760,monthly,Future,4/14,El-Future-EEXItaly-EUR-0015</record>
+				<record>2014-11-01 00:00:00.000,0,TR,108,EUR,2400,monthly,Future,4/14,El-Future-EEXItaly-EUR-0015</record>
+				<record>2014-12-01 00:00:00.000,0,TR,108,EUR,2760,monthly,Future,4/14,El-Future-EEXItaly-EUR-0015</record>
+				<record>2014-01-01 00:00:00.000,0,HI,108,EUR,3720,monthly,Future,1/14,El-Future-EEXItaly-EUR-0016</record>
+				<record>2014-02-01 00:00:00.000,0,HI,108,EUR,3360,monthly,Future,1/14,El-Future-EEXItaly-EUR-0016</record>
+				<record>2014-03-01 00:00:00.000,0,HI,108,EUR,3715,monthly,Future,1/14,El-Future-EEXItaly-EUR-0016</record>
+				<record>2014-01-01 00:00:00.000,0,HI,108,EUR,-3720,monthly,Future,1/14,El-Future-EEXItaly-EUR-0017</record>
+				<record>2014-02-01 00:00:00.000,0,HI,108,EUR,-3360,monthly,Future,1/14,El-Future-EEXItaly-EUR-0017</record>
+				<record>2014-03-01 00:00:00.000,0,HI,108,EUR,-3715,monthly,Future,1/14,El-Future-EEXItaly-EUR-0017</record>
+				<record>2014-01-01 00:00:00.000,0,HI,108,EUR,7440,monthly,Future,1/14,El-Future-EEXItaly-EUR-0018</record>
+				<record>2014-02-01 00:00:00.000,0,HI,108,EUR,6720,monthly,Future,1/14,El-Future-EEXItaly-EUR-0018</record>
+				<record>2014-03-01 00:00:00.000,0,HI,108,EUR,7430,monthly,Future,1/14,El-Future-EEXItaly-EUR-0018</record>
+				<record>2014-07-01 00:00:00.000,0,HI,108,EUR,3720,monthly,Future,3/14,El-Future-EEXItaly-EUR-0019</record>
+				<record>2014-08-01 00:00:00.000,0,HI,108,EUR,3720,monthly,Future,3/14,El-Future-EEXItaly-EUR-0019</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,3600,monthly,Future,3/14,El-Future-EEXItaly-EUR-0019</record>
+				<record>2014-07-01 00:00:00.000,0,HI,108,EUR,-3720,monthly,Future,3/14,El-Future-EEXItaly-EUR-0020</record>
+				<record>2014-08-01 00:00:00.000,0,HI,108,EUR,-3720,monthly,Future,3/14,El-Future-EEXItaly-EUR-0020</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,-3600,monthly,Future,3/14,El-Future-EEXItaly-EUR-0020</record>
+				<record>2014-07-01 00:00:00.000,0,HI,108,EUR,7440,monthly,Future,3/14,El-Future-EEXItaly-EUR-0021</record>
+				<record>2014-08-01 00:00:00.000,0,HI,108,EUR,7440,monthly,Future,3/14,El-Future-EEXItaly-EUR-0021</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,7200,monthly,Future,3/14,El-Future-EEXItaly-EUR-0021</record>
+				<record>2014-07-01 00:00:00.000,0,HI,108,EUR,-2760,monthly,Future,3/14,El-Future-EEXItaly-EUR-0022</record>
+				<record>2014-08-01 00:00:00.000,0,HI,108,EUR,-2520,monthly,Future,3/14,El-Future-EEXItaly-EUR-0022</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,-2640,monthly,Future,3/14,El-Future-EEXItaly-EUR-0022</record>
+				<record>2014-07-01 00:00:00.000,0,HI,108,EUR,2760,monthly,Future,3/14,El-Future-EEXItaly-EUR-0023</record>
+				<record>2014-08-01 00:00:00.000,0,HI,108,EUR,2520,monthly,Future,3/14,El-Future-EEXItaly-EUR-0023</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,2640,monthly,Future,3/14,El-Future-EEXItaly-EUR-0023</record>
+				<record>2014-05-01 00:00:00.000,0,HI,108,EUR,3720,monthly,Future,May-14,El-Future-EEXItaly-EUR-0024</record>
+				<record>2014-05-01 00:00:00.000,0,HI,108,EUR,-3720,monthly,Future,May-14,El-Future-EEXItaly-EUR-0025</record>
+				<record>2014-05-01 00:00:00.000,0,HI,108,EUR,7440,monthly,Future,May-14,El-Future-EEXItaly-EUR-0026</record>
+				<record>2014-05-01 00:00:00.000,0,HI,108,EUR,1320,monthly,Future,May-14,El-Future-EEXItaly-EUR-0027</record>
+				<record>2014-05-01 00:00:00.000,0,HI,108,EUR,-1320,monthly,Future,May-14,El-Future-EEXItaly-EUR-0028</record>
+				<record>2014-05-01 00:00:00.000,0,HI,108,EUR,2640,monthly,Future,May-14,El-Future-EEXItaly-EUR-0029</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,3600,monthly,Future,Sep-14,El-Future-EEXItaly-EUR-0030</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,-3600,monthly,Future,Sep-14,El-Future-EEXItaly-EUR-0031</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,7200,monthly,Future,Sep-14,El-Future-EEXItaly-EUR-0032</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,1320,monthly,Future,Sep-14,El-Future-EEXItaly-EUR-0033</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,-1320,monthly,Future,Sep-14,El-Future-EEXItaly-EUR-0034</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,2640,monthly,Future,Sep-14,El-Future-EEXItaly-EUR-0035</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,7450,monthly,Future,Oct-14,El-Future-EEXItaly-EUR-0036</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,-7450,monthly,Future,Oct-14,El-Future-EEXItaly-EUR-0037</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,2760,monthly,Future,Oct-14,El-Future-EEXItaly-EUR-0038</record>
+				<record>2014-10-01 00:00:00.000,0,TR,108,EUR,-2760,monthly,Future,Oct-14,El-Future-EEXItaly-EUR-0039</record>
+				<record>2014-04-01 00:00:00.000,0,HI,108,EUR,840,monthly,Future,Week 16/14,El-Future-EEXItaly-EUR-0040</record>
+				<record>2014-04-01 00:00:00.000,0,HI,108,EUR,-840,monthly,Future,Week 16/14,El-Future-EEXItaly-EUR-0041</record>
+				<record>2014-04-01 00:00:00.000,0,HI,108,EUR,1680,monthly,Future,Week 16/14,El-Future-EEXItaly-EUR-0042</record>
+				<record>2014-04-01 00:00:00.000,0,HI,108,EUR,300,monthly,Future,Week 16/14,El-Future-EEXItaly-EUR-0043</record>
+				<record>2014-04-01 00:00:00.000,0,HI,108,EUR,-300,monthly,Future,Week 16/14,El-Future-EEXItaly-EUR-0044</record>
+				<record>2014-04-01 00:00:00.000,0,HI,108,EUR,600,monthly,Future,Week 16/14,El-Future-EEXItaly-EUR-0045</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,840,monthly,Future,Week 37/14,El-Future-EEXItaly-EUR-0046</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,-840,monthly,Future,Week 37/14,El-Future-EEXItaly-EUR-0047</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,1680,monthly,Future,Week 37/14,El-Future-EEXItaly-EUR-0048</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,300,monthly,Future,Week 37/14,El-Future-EEXItaly-EUR-0049</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,-300,monthly,Future,Week 37/14,El-Future-EEXItaly-EUR-0050</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,600,monthly,Future,Week 37/14,El-Future-EEXItaly-EUR-0051</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,1680,monthly,Future,Week 38/14,El-Future-EEXItaly-EUR-0052</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,-1680,monthly,Future,Week 37/14,El-Future-EEXItaly-EUR-0053</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,600,monthly,Future,Week 38/14,El-Future-EEXItaly-EUR-0054</record>
+				<record>2014-09-01 00:00:00.000,0,HI,108,EUR,-600,monthly,Future,Week 37/14,El-Future-EEXItaly-EUR-0055</record>
+			</returns>
+		</datawarehouse>		
+	</assert>
+</test>

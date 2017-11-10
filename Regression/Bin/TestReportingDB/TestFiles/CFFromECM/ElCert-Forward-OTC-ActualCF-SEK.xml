@@ -1,0 +1,42 @@
+<test type="EcmBatch" name="ElCert-Forward-OTC-ActualCF-SEK" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>ElCert-Forward-OTC-ActualCF-SEK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2007-03-01 00:00:00.000,0,HI,69,SEK,-7208500,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0001</record>
+        <record>2007-03-01 00:00:00.000,0,HI,69,NOK,-7208500,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0002</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,SEK,-7208500,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0003</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,NOK,-7208500,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0004</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,SEK,-7208500,monthly,Forward,ECS011111,ElCert-Forward-OTC-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,NOK,-7208500,monthly,Forward,ECS011111,ElCert-Forward-OTC-0006</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,SEK,-7208500,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0007</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,NOK,-7208500,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0008</record>
+        <record>2007-03-01 00:00:00.000,0,HI,69,SEK,8893500,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0009</record>
+        <record>2007-03-01 00:00:00.000,0,HI,69,NOK,8893500,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0010</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,SEK,8893500,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0011</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,NOK,8893500,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0012</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,SEK,8893500,monthly,Forward,ECS011111,ElCert-Forward-OTC-0013</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,NOK,8893500,monthly,Forward,ECS011111,ElCert-Forward-OTC-0014</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,SEK,8893500,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0015</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,NOK,8893500,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0016</record>
+        <record>2007-03-01 00:00:00.000,0,HI,69,SEK,-13246000,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0017</record>
+        <record>2007-03-01 00:00:00.000,0,HI,69,NOK,-13246000,monthly,Forward,ECS Mar-07,ElCert-Forward-OTC-0018</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,SEK,-13246000,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0019</record>
+        <record>2011-03-01 00:00:00.000,0,HI,69,NOK,-13246000,monthly,Forward,ECS Mar-11,ElCert-Forward-OTC-0020</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,SEK,-13246000,monthly,Forward,ECS011111,ElCert-Forward-OTC-0021</record>
+        <record>2011-11-01 00:00:00.000,0,TR,69,NOK,-13246000,monthly,Forward,ECS011111,ElCert-Forward-OTC-0022</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,SEK,-13246000,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0023</record>
+        <record>2012-03-01 00:00:00.000,0,TR,69,NOK,-13246000,monthly,Forward,ECS Mar-12,ElCert-Forward-OTC-0024</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

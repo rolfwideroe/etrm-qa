@@ -1,0 +1,54 @@
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Index Formula should be set for Indexed Option</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>IndexedOption</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<IndexedOption>
+			<InstrumentData>
+				<IndexFormulaName></IndexFormulaName>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>TTF</PriceBasis>
+				<FromDate>2012-10-01</FromDate>
+				<ToDate>2012-12-31</ToDate>
+				<Financial/>
+				<PutCall>Call</PutCall> 
+				<ExpiryDate>2012-09-25</ExpiryDate>       
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>38</Quantity>
+				<QuantityUnit>Sm3/d</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>		
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+		</IndexedOption>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2012-08-27T15:12:53Z</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>IndexedOptionFinancialWithNoFormula; should fail</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>IndexedOptionFinancialWithNoFormula</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

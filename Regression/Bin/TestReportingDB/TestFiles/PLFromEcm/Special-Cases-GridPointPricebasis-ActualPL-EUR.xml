@@ -1,0 +1,27 @@
+<test type="EcmBatch" name="Special-Cases-GridPointPricebasis-ActualPL-EUR" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>Special-Cases-GridPointPricebasis-ActualPL-EUR</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<reportdate>2011-11-01</reportdate>
+		<tollerance>0.00000001</tollerance>
+		<executeElvizBatch>True</executeElvizBatch>			
+	</setup>
+	<assert>
+		<datawarehouse>
+			<query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+				<record>2011-10-01 00:00:00.000,0,HI,109,EUR,-152670,monthly,Structured Deal,Special-Cases-GridPointPricebasis-InDelivery,Special-Cases-GridPointPricebasis-InDelivery</record>
+				<record>2011-11-01 00:00:00.000,0,TR,109,EUR,-247800.495828089,monthly,Structured Deal,Special-Cases-GridPointPricebasis-InDelivery,Special-Cases-GridPointPricebasis-InDelivery</record>
+				<record>2011-12-01 00:00:00.000,0,TR,109,EUR,-272006.400000065,monthly,Structured Deal,Special-Cases-GridPointPricebasis-InDelivery,Special-Cases-GridPointPricebasis-InDelivery</record>
+				<record>2011-01-01 00:00:00.000,0,HI,109,EUR,-444309.6,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PostDelivery,Special-Cases-GridPointPricebasis-PostDelivery</record>
+				<record>2011-02-01 00:00:00.000,0,HI,109,EUR,-366430.5,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PostDelivery,Special-Cases-GridPointPricebasis-PostDelivery</record>
+				<record>2011-03-01 00:00:00.000,0,HI,109,EUR,-395911.4,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PostDelivery,Special-Cases-GridPointPricebasis-PostDelivery</record>
+				<record>2012-01-01 00:00:00.000,0,TR,109,EUR,-279595.200000285,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PreDelivery,Special-Cases-GridPointPricebasis-PreDelivery</record>
+				<record>2012-02-01 00:00:00.000,0,TR,109,EUR,-263088.000000203,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PreDelivery,Special-Cases-GridPointPricebasis-PreDelivery</record>
+				<record>2012-03-01 00:00:00.000,0,TR,109,EUR,-260792.999999918,monthly,Structured Deal,Special-Cases-GridPointPricebasis-PreDelivery,Special-Cases-GridPointPricebasis-PreDelivery</record>
+			</returns>
+		</datawarehouse>		
+	</assert>
+</test>

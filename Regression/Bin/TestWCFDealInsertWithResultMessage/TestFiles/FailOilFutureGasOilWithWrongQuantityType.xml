@@ -1,0 +1,55 @@
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>The quantity unit specified : Bbl does not match the Pricebasis (GasOil) Settlement Ref Area 'GasOil CIF ARA' : Ton</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Schemas/DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Oil-Future</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<OilFuture>
+			<InstrumentData>
+				<ExecutionVenue>ICE</ExecutionVenue>
+			    <PriceBasis>GasOil</PriceBasis>
+				<!--LoadProfile>Base</LoadProfile-->
+				<FromDate>2011-04-01</FromDate>
+				<ToDate>2011-04-30</ToDate>
+<Financial></Financial>			
+</InstrumentData>
+			<SettlementData>
+				<Quantity>38</Quantity>
+				<QuantityUnit>Bbl</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</OilFuture>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2007-12-24T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>FailOilFutureGasOilWithWrongQuantityType; should fail - has incorrect QuanityUnit.</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailOilFutureGasOilWithWrongQuantityType</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

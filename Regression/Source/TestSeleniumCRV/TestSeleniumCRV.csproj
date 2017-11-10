@@ -74,15 +74,11 @@
     <Compile Include="SeleniumBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="WebDrivers\chromedriver.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="WebDrivers\IEDriverServer.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Content Include="WebDrivers\chromedriver.exe" />
+    <Content Include="WebDrivers\IEDriverServer.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

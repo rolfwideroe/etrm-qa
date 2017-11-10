@@ -1,0 +1,106 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FXOutright-ActualPL-NOK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-07T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="EnableFxOutright" Value="True" />
+    </ElvizConfigurations>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-12-07 00:00:00.000,0,TR,109,NOK,-440437.916580306,daily,Currency Forward,USDEUR 07-Dec-11,Special-Cases-FXOutright-Currency-Forward-0001</record>
+        <record>2011-11-01 00:00:00.000,0,PR,109,NOK,-8388,daily,Asian,ASIC/A M11-11 335.00 - Premium,Special-Cases-FXOutright-El-Asian-NOK-0001</record>
+        <record>2011-11-30 00:00:00.000,0,TR,109,NOK,112942.106808705,daily,Asian,ASIC/A M11-11 335.00 - Settlement,Special-Cases-FXOutright-El-Asian-NOK-0001</record>
+        <record>2012-03-16 00:00:00.000,0,TR,109,NOK,3911727.58444578,daily,Forward,ECS Mar-12,Special-Cases-FXOutright-ElCert-Forward-OTC-0001</record>
+        <record>2011-11-01 00:00:00.000,0,HI,109,NOK,-19722.941986582,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-02 00:00:00.000,0,HI,109,NOK,-18320.4499538862,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-03 00:00:00.000,0,HI,109,NOK,-20086.9795955815,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-04 00:00:00.000,0,HI,109,NOK,-21579.6541135387,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-05 00:00:00.000,0,HI,109,NOK,-20332.1676376051,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-06 00:00:00.000,0,HI,109,NOK,-20108.737224005,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-07 00:00:00.000,0,TR,109,NOK,-14572.8448808031,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-08 00:00:00.000,0,TR,109,NOK,-10695.6824695354,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-09 00:00:00.000,0,TR,109,NOK,-6198.00951950108,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-10 00:00:00.000,0,TR,109,NOK,-6075.01620756293,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-11 00:00:00.000,0,TR,109,NOK,-5152.34685450848,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-12 00:00:00.000,0,TR,109,NOK,-10560.3084446392,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-13 00:00:00.000,0,TR,109,NOK,-10575.4328947782,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-14 00:00:00.000,0,TR,109,NOK,3355.4022961007,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-15 00:00:00.000,0,TR,109,NOK,3551.38175952835,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-16 00:00:00.000,0,TR,109,NOK,4387.98363328214,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-17 00:00:00.000,0,TR,109,NOK,2226.88432689396,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-18 00:00:00.000,0,TR,109,NOK,-223.959346532355,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-19 00:00:00.000,0,TR,109,NOK,-5596.56226447431,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-20 00:00:00.000,0,TR,109,NOK,-7418.22627300066,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-21 00:00:00.000,0,TR,109,NOK,3489.60412781304,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-22 00:00:00.000,0,TR,109,NOK,3647.59545169334,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-23 00:00:00.000,0,TR,109,NOK,4334.80290192849,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-24 00:00:00.000,0,TR,109,NOK,2673.73231475968,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-25 00:00:00.000,0,TR,109,NOK,730.288143614617,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-26 00:00:00.000,0,TR,109,NOK,-3530.53413411838,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-27 00:00:00.000,0,TR,109,NOK,-5026.9477656598,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-28 00:00:00.000,0,TR,109,NOK,-1989.87127126644,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-29 00:00:00.000,0,TR,109,NOK,-1847.01527972794,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-30 00:00:00.000,0,TR,109,NOK,-1204.63213793905,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-EUR-0001</record>
+        <record>2011-11-01 00:00:00.000,0,HI,109,NOK,3554.4,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-02 00:00:00.000,0,HI,109,NOK,4764,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-03 00:00:00.000,0,HI,109,NOK,3286.8,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-04 00:00:00.000,0,HI,109,NOK,2308.8,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-07 00:00:00.000,0,TR,109,NOK,6897.60000000001,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-08 00:00:00.000,0,TR,109,NOK,9651.67530535357,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-09 00:00:00.000,0,TR,109,NOK,11206.4918160956,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-10 00:00:00.000,0,TR,109,NOK,12728.9629707023,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-11 00:00:00.000,0,TR,109,NOK,14185.08505402,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-14 00:00:00.000,0,TR,109,NOK,18630.3806102217,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-15 00:00:00.000,0,TR,109,NOK,18824.4309249479,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-16 00:00:00.000,0,TR,109,NOK,19136.7557664864,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-17 00:00:00.000,0,TR,109,NOK,17168.6213304751,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-18 00:00:00.000,0,TR,109,NOK,15807.7729305724,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-21 00:00:00.000,0,TR,109,NOK,18236.7644390023,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-22 00:00:00.000,0,TR,109,NOK,18426.7958693665,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-23 00:00:00.000,0,TR,109,NOK,18694.0897921309,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-24 00:00:00.000,0,TR,109,NOK,17205.9248241157,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-25 00:00:00.000,0,TR,109,NOK,16161.3301859225,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-28 00:00:00.000,0,TR,109,NOK,17717.4916120597,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-29 00:00:00.000,0,TR,109,NOK,17888.9271067007,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-30 00:00:00.000,0,TR,109,NOK,18137.1555669498,daily,Forward,M11-11,Special-Cases-FXOutright-El-Forward-NOK-0001</record>
+        <record>2011-11-01 00:00:00.000,0,HI,109,NOK,-145215.039991923,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-02 00:00:00.000,0,HI,109,NOK,-144481.659722376,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-03 00:00:00.000,0,HI,109,NOK,-148417.114574134,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-04 00:00:00.000,0,HI,109,NOK,-147592.079983829,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-05 00:00:00.000,0,HI,109,NOK,-147972.997807015,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-06 00:00:00.000,0,HI,109,NOK,-147972.997807015,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-07 00:00:00.000,0,TR,109,NOK,-144412.973346268,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-08 00:00:00.000,0,TR,109,NOK,-144221.102637866,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-09 00:00:00.000,0,TR,109,NOK,-144032.043012157,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-10 00:00:00.000,0,TR,109,NOK,-143849.425836458,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-11 00:00:00.000,0,TR,109,NOK,-143676.930497222,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-12 00:00:00.000,0,TR,109,NOK,-143518.247706631,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-13 00:00:00.000,0,TR,109,NOK,-143377.047065087,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-14 00:00:00.000,0,TR,109,NOK,-143256.915939683,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-15 00:00:00.000,0,TR,109,NOK,-143159.821272577,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-16 00:00:00.000,0,TR,109,NOK,-143083.076503566,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-17 00:00:00.000,0,TR,109,NOK,-143022.525645146,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-18 00:00:00.000,0,TR,109,NOK,-142974.106815205,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-19 00:00:00.000,0,TR,109,NOK,-142933.916381687,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-20 00:00:00.000,0,TR,109,NOK,-142898.238263089,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-21 00:00:00.000,0,TR,109,NOK,-142863.56735029,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-22 00:00:00.000,0,TR,109,NOK,-142827.258434897,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-23 00:00:00.000,0,TR,109,NOK,-142788.788588769,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-24 00:00:00.000,0,TR,109,NOK,-142748.323700988,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-25 00:00:00.000,0,TR,109,NOK,-142706.053664126,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-26 00:00:00.000,0,TR,109,NOK,-142662.185963961,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-27 00:00:00.000,0,TR,109,NOK,-142616.947651886,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-28 00:00:00.000,0,TR,109,NOK,-142570.587061444,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-29 00:00:00.000,0,TR,109,NOK,-142523.38621697,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+        <record>2011-11-30 00:00:00.000,0,TR,109,NOK,-142475.692073903,daily,Forward,Nov-11,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,46 @@
+<CurveTestCase>
+  <InputData>
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="CurrencySource" Value="Viz"/>
+      <ElvizConfiguration Name="EnableFxOutright" Value="True"/>
+    </ElvizConfigurations>
+	<CurrencyQuote>mid</CurrencyQuote>	
+	<FromDate>2019-01-01</FromDate>
+	<ToDate>2019-09-30</ToDate>
+	<LoadType>Base</LoadType>
+	<PriceBookAppendix></PriceBookAppendix>
+	<ReferenceAreaName>LiveFXEl</ReferenceAreaName>
+	<ReportCurrencyIsoCode>SEK</ReportCurrencyIsoCode>
+	<Resolution>Month</Resolution>
+	<TemplateName>LiveFXEl</TemplateName>
+	<UseLiveCurrencyRates>1</UseLiveCurrencyRates>	
+  </InputData>
+  <ExpectedValues>
+    <ExpectedCurveVolatility>
+      <WinterShort>0.88</WinterShort>
+      <WinterMedium>0.16</WinterMedium>
+      <WinterLong>0.12</WinterLong>
+      <WinterNumberOfYearsBetweenShortAndMedium>0.5</WinterNumberOfYearsBetweenShortAndMedium>
+      <SummerShort>0.88</SummerShort>
+      <SummerMedium>0.16</SummerMedium>
+      <SummerLong>0.12</SummerLong>
+      <SummerNumberOfYearsBetweenShortAndMedium>0.5</SummerNumberOfYearsBetweenShortAndMedium>
+    </ExpectedCurveVolatility>
+    <ExpectedProperties>
+      <CurveType>MarketPriceCurve</CurveType>
+      <VolumeUnit>MWh</VolumeUnit>
+      <TimeZone>CET</TimeZone>
+    </ExpectedProperties>
+    <ExpectedCurveValues>
+	    <ExpectedCurveValue Date="2019-01-01T00:00:00" Value="13.48835"/>
+		<ExpectedCurveValue Date="2019-02-01T00:00:00" Value="13.48835"/>
+		<ExpectedCurveValue Date="2019-03-01T00:00:00" Value="13.48835"/>
+		<ExpectedCurveValue Date="2019-04-01T00:00:00" Value="13.48835"/>
+		<ExpectedCurveValue Date="2019-05-01T00:00:00" Value="13.48835"/>
+		<ExpectedCurveValue Date="2019-06-01T00:00:00" Value="13.48835"/>
+		<ExpectedCurveValue Date="2019-07-01T00:00:00" Value="13.48835"/>
+		<ExpectedCurveValue Date="2019-08-01T00:00:00" Value="13.48835"/>
+		<ExpectedCurveValue Date="2019-09-01T00:00:00" Value="13.48835"/>
+    </ExpectedCurveValues>
+  </ExpectedValues>
+</CurveTestCase>

@@ -1,0 +1,56 @@
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Authorisations check failed. 
+ Not enough authorisations left. Max volume to buy: 0</Message>
+<TestData>
+<DealInsert IgnoreAuthorisations='false' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Future</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityFuture>
+			<InstrumentData>
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<PriceBasis>EEX</PriceBasis>
+				<LoadProfile>Base</LoadProfile>
+				<FromDate>2013-08-01</FromDate>
+				<ToDate>2013-08-31</ToDate>
+				<Financial />
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>40</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>30</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</ElectricityFuture>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2013-06-10T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>Pass_ElectFuture_NP_EEX_MonthBase_Auth</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>Fail_ElectFuture_Ignore_Auth_False</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>False</AssertQaTransactionDTO>
+</TestCase>

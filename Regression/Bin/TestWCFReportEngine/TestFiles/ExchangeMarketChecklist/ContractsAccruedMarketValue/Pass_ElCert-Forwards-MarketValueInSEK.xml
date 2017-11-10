@@ -1,0 +1,22 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>NasdaqClearingReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="SettlementDate" IsNotSet="false" XmlEncodedValue="2015-01-05T00:00:00" />
+      <Setting SettingId="FilterName" IsNotSet="false" XmlEncodedValue="ElCert-Forward-NASDAQ" />
+      <Setting SettingId="SEKEURRateNegative" IsNotSet="false" XmlEncodedValue="8.943213" />
+      <Setting SettingId="SEKEURRate" IsNotSet="false" XmlEncodedValue="9.943213" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="-1" ArtifactId="FOACCMV" Columns="PortfolioName,CompanyName,ExecutionVenueName,InstrumentName,Load,BuyQuantity,BuyBookValue,SellQuantity,SellBookValue,NetQuantity,NetBookValue,ClosePrice,MarketValue,Currency,ProductName,PricebasisName,FromDate,UntilDate,InstrumentType,Commodity,SettlementDate,ErrorMessage" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.String,System.String,System.String, System.DateTime,System.DateTime,System.String,System.String,System.DateTime,System.String">
+        <ExpectedRecord>ElCert-Forward-NASDAQ,RegCustomerCompany,NordPool,ELCSEKMAR-15,NULL,1,150000,1,-149000,0,1000,166,-111.816636817215,SEK,ELCSEKMAR-15,Elcertificate,2015-03-18T00:00:00,2015-03-19T00:00:00,Forward,Elcertificate,2015-01-05T00:00:00,NULL</ExpectedRecord>
+		<ExpectedRecord>ElCert-Forward-NASDAQ,RegCustomerCompany,NordPool,ELCSEKMAR-16,NULL,3,490000,1,-151000,2,339000,172,502.855565902085,SEK,ELCSEKMAR-16,Elcertificate,2016-03-18T00:00:00,2016-03-19T00:00:00,Forward,Elcertificate,2015-01-05T00:00:00,NULL</ExpectedRecord>
+		<ExpectedRecord>ElCert-Forward-NASDAQ,RegCustomerCompany,NordPool,ELCEURMAR-15,NULL,1,15000,1,-15100,0,-100,17.52,99.9999999999995,EUR,ELCEURXMAR-15,ElCertificate NASDAQ,2015-03-18T00:00:00,2015-03-19T00:00:00,Forward,Elcertificate,2015-01-05T00:00:00,NULL</ExpectedRecord>
+		<ExpectedRecord>ElCert-Forward-NASDAQ,RegCustomerCompany,NordPool,ELCEURMAR-16,NULL,3,49000,1,-15100,2,33900,18.16,2420,EUR,ELCEURXMAR-16,ElCertificate NASDAQ,2016-03-18T00:00:00,2016-03-19T00:00:00,Forward,Elcertificate,2015-01-05T00:00:00,NULL</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

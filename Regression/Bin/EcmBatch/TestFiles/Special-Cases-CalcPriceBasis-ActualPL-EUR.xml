@@ -1,0 +1,110 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-CalcPriceBasis-ActualPL-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2014-01-06T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2016-01-01 00:00:00.000,0,TR,109,EUR,-55964.2220833878,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-02-01 00:00:00.000,0,TR,109,EUR,-58697.5295305578,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-03-01 00:00:00.000,0,TR,109,EUR,-58948.0998480833,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-04-01 00:00:00.000,0,TR,109,EUR,-41148.1339443422,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-05-01 00:00:00.000,0,TR,109,EUR,-15017.9566061556,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-06-01 00:00:00.000,0,TR,109,EUR,-1399.00274292889,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-07-01 00:00:00.000,0,TR,109,EUR,12058.9497876589,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-08-01 00:00:00.000,0,TR,109,EUR,7675.73700404223,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-09-01 00:00:00.000,0,TR,109,EUR,-11860.3210588433,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-10-01 00:00:00.000,0,TR,109,EUR,-30282.1749190478,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-11-01 00:00:00.000,0,TR,109,EUR,-58710.3230243189,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-12-01 00:00:00.000,0,TR,109,EUR,-84743.7230334978,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0001</record>
+        <record>2016-01-01 00:00:00.000,0,TR,109,EUR,63404.2220833878,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2016-02-01 00:00:00.000,0,TR,109,EUR,65657.5295305578,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2016-03-01 00:00:00.000,0,TR,109,EUR,66378.0998480833,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2016-04-01 00:00:00.000,0,TR,109,EUR,48348.1339443422,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2016-05-01 00:00:00.000,0,TR,109,EUR,22457.9566061556,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2016-06-01 00:00:00.000,0,TR,109,EUR,8599.00274292889,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2016-07-01 00:00:00.000,0,TR,109,EUR,-4618.94978765888,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2016-08-01 00:00:00.000,0,TR,109,EUR,-235.737004042228,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2016-09-01 00:00:00.000,0,TR,109,EUR,19060.3210588433,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2016-10-01 00:00:00.000,0,TR,109,EUR,37732.1749190478,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2016-11-01 00:00:00.000,0,TR,109,EUR,65910.3230243189,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2016-12-01 00:00:00.000,0,TR,109,EUR,92183.7230334978,monthly,Forward,FWYR-16,Special-Cases-CalcPriceBasis-0002</record>
+        <record>2014-02-01 00:00:00.000,0,TR,109,EUR,21888.0000000009,monthly,Forward,M02-14,Special-Cases-CalcPriceBasis-0003</record>
+        <record>2014-01-01 00:00:00.000,0,HI,109,EUR,-29950.0250791508,monthly,Forward,M01-14,Special-Cases-CalcPriceBasis-0004</record>
+        <record>2014-01-01 00:00:00.000,0,HI,109,EUR,-15460.8911279333,monthly,Forward,M01-14,Special-Cases-CalcPriceBasis-0005</record>
+        <record>2013-12-01 00:00:00.000,0,HI,109,EUR,-52402.7,monthly,Forward,M12-13,Special-Cases-CalcPriceBasis-0006</record>
+        <record>2013-10-01 00:00:00.000,0,HI,109,EUR,-6385.40000000001,monthly,Forward,M10-13,Special-Cases-CalcPriceBasis-0007</record>
+        <record>2010-06-01 00:00:00.000,0,HI,109,EUR,-81843.65832,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Daily-Post-Delivery,Special-Cases-CalcPriceBasis-0008</record>
+        <record>2010-07-01 00:00:00.000,0,HI,109,EUR,-247036.92336,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Daily-Post-Delivery,Special-Cases-CalcPriceBasis-0008</record>
+        <record>2010-08-01 00:00:00.000,0,HI,109,EUR,-64660.46664,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Daily-Post-Delivery,Special-Cases-CalcPriceBasis-0008</record>
+        <record>2010-09-01 00:00:00.000,0,HI,109,EUR,-131775.08232,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Daily-Post-Delivery,Special-Cases-CalcPriceBasis-0008</record>
+        <record>2014-04-01 00:00:00.000,0,TR,109,EUR,318193.124376068,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0009</record>
+        <record>2014-05-01 00:00:00.000,0,TR,109,EUR,257712.662705861,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0009</record>
+        <record>2014-06-01 00:00:00.000,0,TR,109,EUR,78556.6418116983,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0009</record>
+        <record>2014-07-01 00:00:00.000,0,TR,109,EUR,29931.2148891451,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0009</record>
+        <record>2014-04-01 00:00:00.000,0,TR,109,EUR,-168437.612875216,monthly,Structured Deal,El-StructDeal-Fixed-NOK-Base-EEXvsFrance-Physical-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0010</record>
+        <record>2014-05-01 00:00:00.000,0,TR,109,EUR,-87935.3552735285,monthly,Structured Deal,El-StructDeal-Fixed-NOK-Base-EEXvsFrance-Physical-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0010</record>
+        <record>2014-06-01 00:00:00.000,0,TR,109,EUR,85372.8429077675,monthly,Structured Deal,El-StructDeal-Fixed-NOK-Base-EEXvsFrance-Physical-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0010</record>
+        <record>2014-07-01 00:00:00.000,0,TR,109,EUR,32077.6565320398,monthly,Structured Deal,El-StructDeal-Fixed-NOK-Base-EEXvsFrance-Physical-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0010</record>
+        <record>2014-04-01 00:00:00.000,0,TR,109,EUR,-318193.124376068,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0011</record>
+        <record>2014-05-01 00:00:00.000,0,TR,109,EUR,-257712.662705861,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0011</record>
+        <record>2014-06-01 00:00:00.000,0,TR,109,EUR,-78556.6418116983,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0011</record>
+        <record>2014-07-01 00:00:00.000,0,TR,109,EUR,-29931.2148891451,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Financial-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0011</record>
+        <record>2014-04-01 00:00:00.000,0,TR,109,EUR,-318193.124376068,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Physical-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0012</record>
+        <record>2014-05-01 00:00:00.000,0,TR,109,EUR,-257712.662705861,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Physical-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0012</record>
+        <record>2014-06-01 00:00:00.000,0,TR,109,EUR,-78556.6418116983,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Physical-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0012</record>
+        <record>2014-07-01 00:00:00.000,0,TR,109,EUR,-29931.2148891451,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Base-EEXvsFrance-Physical-Hourly-Pre-Delivery,Special-Cases-CalcPriceBasis-0012</record>
+        <record>2010-06-01 00:00:00.000,0,HI,109,EUR,52028.20836,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Peak-EEXvsFrance-Financial-Daily-Post-Delivery,Special-Cases-CalcPriceBasis-0013</record>
+        <record>2010-07-01 00:00:00.000,0,HI,109,EUR,96857.78296,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Peak-EEXvsFrance-Financial-Daily-Post-Delivery,Special-Cases-CalcPriceBasis-0013</record>
+        <record>2010-08-01 00:00:00.000,0,HI,109,EUR,37491.81448,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Peak-EEXvsFrance-Financial-Daily-Post-Delivery,Special-Cases-CalcPriceBasis-0013</record>
+        <record>2010-09-01 00:00:00.000,0,HI,109,EUR,54388.26165,monthly,Structured Deal,El-StructDeal-Fixed-EUR-Peak-EEXvsFrance-Financial-Daily-Post-Delivery,Special-Cases-CalcPriceBasis-0013</record>
+        <record>2010-01-01 00:00:00.000,0,HI,109,EUR,3487221.64752,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2010-02-01 00:00:00.000,0,HI,109,EUR,2976181.52448,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2010-03-01 00:00:00.000,0,HI,109,EUR,4122183.71753,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2010-04-01 00:00:00.000,0,HI,109,EUR,3743583.91224,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2010-05-01 00:00:00.000,0,HI,109,EUR,3777088.79616,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2010-06-01 00:00:00.000,0,HI,109,EUR,3156838.9632,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2010-07-01 00:00:00.000,0,HI,109,EUR,3963180.44999999,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2010-08-01 00:00:00.000,0,HI,109,EUR,2803501.69608,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2010-09-01 00:00:00.000,0,HI,109,EUR,2648239.73136,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2010-10-01 00:00:00.000,0,HI,109,EUR,3962660.52162,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2010-11-01 00:00:00.000,0,HI,109,EUR,3095077.08336001,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2010-12-01 00:00:00.000,0,HI,109,EUR,3563734.94423999,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PostDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0014</record>
+        <record>2013-06-01 00:00:00.000,0,HI,109,EUR,-780.48,monthly,Floating Price,FLOAT D0606-13,Special-Cases-CalcPriceBasis-0015</record>
+        <record>2015-04-01 00:00:00.000,0,TR,109,EUR,8100,monthly,Floating Price,FLOAT 04-Apr-15 - 06-Jun-15,Special-Cases-CalcPriceBasis-0016</record>
+        <record>2015-05-01 00:00:00.000,0,TR,109,EUR,9300,monthly,Floating Price,FLOAT 04-Apr-15 - 06-Jun-15,Special-Cases-CalcPriceBasis-0016</record>
+        <record>2015-06-01 00:00:00.000,0,TR,109,EUR,1800,monthly,Floating Price,FLOAT 04-Apr-15 - 06-Jun-15,Special-Cases-CalcPriceBasis-0016</record>
+        <record>2015-03-01 00:00:00.000,0,TR,109,EUR,4844.45611743222,monthly,Floating Price,FLOAT M03-15,Special-Cases-CalcPriceBasis-0017</record>
+        <record>2016-01-01 00:00:00.000,0,TR,109,EUR,-67358125.4147874,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-02-01 00:00:00.000,0,TR,109,EUR,-15197894.9686768,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-03-01 00:00:00.000,0,TR,109,EUR,-59307838.8588115,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-04-01 00:00:00.000,0,TR,109,EUR,-87284865.5117512,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-05-01 00:00:00.000,0,TR,109,EUR,-68865191.1393743,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-06-01 00:00:00.000,0,TR,109,EUR,-2282058.7728711,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-07-01 00:00:00.000,0,TR,109,EUR,-4196573.65998424,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-08-01 00:00:00.000,0,TR,109,EUR,-53427201.4851227,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-09-01 00:00:00.000,0,TR,109,EUR,-15947510.9169014,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-10-01 00:00:00.000,0,TR,109,EUR,-24644211.7754437,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-11-01 00:00:00.000,0,TR,109,EUR,-79668490.5007847,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-12-01 00:00:00.000,0,TR,109,EUR,-83338836.8946281,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Day-Day,Special-Cases-CalcPriceBasis-0018</record>
+        <record>2016-01-01 00:00:00.000,0,TR,109,EUR,-67358125.4147874,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+        <record>2016-02-01 00:00:00.000,0,TR,109,EUR,-15197894.9686768,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+        <record>2016-03-01 00:00:00.000,0,TR,109,EUR,-59307838.8588115,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+        <record>2016-04-01 00:00:00.000,0,TR,109,EUR,-87284865.5117512,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+        <record>2016-05-01 00:00:00.000,0,TR,109,EUR,-68865191.1393743,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+        <record>2016-06-01 00:00:00.000,0,TR,109,EUR,-2282058.7728711,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+        <record>2016-07-01 00:00:00.000,0,TR,109,EUR,-4196573.65998424,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+        <record>2016-08-01 00:00:00.000,0,TR,109,EUR,-53427201.4851227,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+        <record>2016-09-01 00:00:00.000,0,TR,109,EUR,-15947510.9169014,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+        <record>2016-10-01 00:00:00.000,0,TR,109,EUR,-24644211.7754437,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+        <record>2016-11-01 00:00:00.000,0,TR,109,EUR,-79668490.5007847,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+        <record>2016-12-01 00:00:00.000,0,TR,109,EUR,-83338836.8946281,monthly,Structured Deal,El-FlexStructDeal-EUR-EEXvsFrance-Financial-PreDelivery-Month-Month-Hour-Hour,Special-Cases-CalcPriceBasis-0019</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

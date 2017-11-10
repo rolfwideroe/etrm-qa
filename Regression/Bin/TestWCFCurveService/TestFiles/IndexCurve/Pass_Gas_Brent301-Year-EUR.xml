@@ -1,0 +1,42 @@
+<CurveTestCase>
+	<InputData>
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="CurrencySource" Value="ECB"/>
+    </ElvizConfigurations>
+		<FromDate>2010-01-01</FromDate>
+		<ToDate>2016-12-31</ToDate>
+		<LoadType>Base</LoadType>
+		<PriceBookAppendix></PriceBookAppendix>
+		<ReferenceAreaName>Index</ReferenceAreaName>
+		<ReportCurrencyIsoCode>EUR</ReportCurrencyIsoCode>
+		<ReportDate>2011-11-14</ReportDate>
+		<Resolution>Year</Resolution>
+		<TemplateName>Gas_Brent301</TemplateName>
+	</InputData>
+	<ExpectedValues>
+		<ExpectedCurveVolatility>
+			<WinterShort>0.9</WinterShort>
+			<WinterMedium>0.17</WinterMedium>
+			<WinterLong>0.1</WinterLong>
+			<WinterNumberOfYearsBetweenShortAndMedium>0.5</WinterNumberOfYearsBetweenShortAndMedium>
+			<SummerShort>0.90</SummerShort>
+			<SummerMedium>0.17</SummerMedium>
+			<SummerLong>0.1</SummerLong>		
+			<SummerNumberOfYearsBetweenShortAndMedium>0.5</SummerNumberOfYearsBetweenShortAndMedium>		
+		</ExpectedCurveVolatility>
+		<ExpectedProperties>
+			<CurveType>IndexPriceCurve</CurveType>
+			<VolumeUnit>MWh</VolumeUnit>
+			<TimeZone>CET 06-06</TimeZone>
+		</ExpectedProperties>
+		<ExpectedCurveValues>
+			<ExpectedCurveValue Date="2010-01-01T00:00:00" Value="58.1189260040724"/>
+			<ExpectedCurveValue Date="2011-01-01T00:00:00" Value="77.1191613975624"/>
+			<ExpectedCurveValue Date="2012-01-01T00:00:00" Value="80.820163604039"/>
+			<ExpectedCurveValue Date="2013-01-01T00:00:00" Value="77.6735671607051"/>
+			<ExpectedCurveValue Date="2014-01-01T00:00:00" Value="74.0875767201905"/>
+			<ExpectedCurveValue Date="2015-01-01T00:00:00" Value="71.8978189640179"/>
+			<ExpectedCurveValue Date="2016-01-01T00:00:00" Value="70.3051774479661"/>
+		</ExpectedCurveValues>
+	</ExpectedValues>
+</CurveTestCase>

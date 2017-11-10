@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DealInsertUpdateTestCase>
+<InsertXml>
+<![CDATA[ 
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2016-01-01</FromDate>
+				<ToDate>2016-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="ENBW" />
+				</Physical>
+				<TransactionName>ElectricityFlexibleDistribution InsertUpdate</TransactionName>
+			</InstrumentData>
+			<SettlementData>				
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>				
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>				
+						<ProfileDistribution>
+							<VolumeUnit>MWh</VolumeUnit>
+							<ProfileDetail FromDateTime="2016-01-01T00:00:00" ToDateTime="2017-01-01T00:00:00" Volume="8760" Profile= "YearVolumeProfile"/> 
+						</ProfileDistribution> 
+					</TimeSeries>					
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>					
+							<TimeSeriesDetail FromDateTime="2016-01-01T00:00:00" ToDateTime="2016-02-01T00:00:00" Value="2" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>					
+							<TimeSeriesDetail FromDateTime="2016-01-01T00:00:00" ToDateTime="2016-02-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2016-02-01T00:00:00" ToDateTime="2016-03-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2016-03-01T00:00:00" ToDateTime="2016-04-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2016-04-01T00:00:00" ToDateTime="2016-05-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2016-05-01T00:00:00" ToDateTime="2016-06-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2016-06-01T00:00:00" ToDateTime="2016-07-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2016-07-01T00:00:00" ToDateTime="2016-08-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2016-08-01T00:00:00" ToDateTime="2016-09-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2016-09-01T00:00:00" ToDateTime="2016-10-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2016-10-01T00:00:00" ToDateTime="2016-11-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2016-11-01T00:00:00" ToDateTime="2016-12-01T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2016-12-01T00:00:00" ToDateTime="2017-01-01T00:00:00" Value="2" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2016-01-01T00:00:00" ToDateTime="2016-02-01T00:00:00" Value="2" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2008-09-10T21:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>ElectricityFlexyStructuredDeal; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>ElectricityFlexibleDistribution InsertUpdate201</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+]]>	
+</InsertXml>
+<UpdateXml>
+<![CDATA[ 
+		<DealInsert>
+		<MetaData>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<TransactionPart>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>				
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET</TimeZone>				
+						<ProfileDistribution>
+							<VolumeUnit>MWh</VolumeUnit>
+							<ProfileDetail FromDateTime="2016-01-01T00:00:00" ToDateTime="2017-01-01T00:00:00" Volume="4030" Profile= "YearVolumeProfile"/> 							
+						</ProfileDistribution> 
+					</TimeSeries>					
+				</FlexibleStructuredDealInformation>
+			</SettlementData>
+			<ReferenceData>
+				<ExternalId>ElectricityFlexibleDistribution InsertUpdate201</ExternalId>
+			</ReferenceData>
+		</TransactionPart>
+	</DealInsert>
+	]]>
+	</UpdateXml>
+	<ExpectedResult ExpectedType="TimeSeries">		 
+	<ExpectedTimeSeriesSets>
+	<ExpectedTimeSeriesSet ExternalId="ElectricityFlexibleDistribution InsertUpdate201">
+	<ExpectedTimeSeries>
+		<Resolution>Month</Resolution>
+		<TimeSeriesTypeName>Forecasted Price</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2016-01-01T00:00:00" UntilDateTime="2016-02-01T00:00:00" UtcFromDateTime="2015-12-31T23:00:00Z" UtcUntilDateTime="2016-01-31T23:00:00Z" Value="2" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-02-01T00:00:00" UntilDateTime="2016-03-01T00:00:00" UtcFromDateTime="2016-01-31T23:00:00Z" UtcUntilDateTime="2016-02-29T23:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-03-01T00:00:00" UntilDateTime="2016-04-01T00:00:00" UtcFromDateTime="2016-02-29T23:00:00Z" UtcUntilDateTime="2016-03-31T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-04-01T00:00:00" UntilDateTime="2016-05-01T00:00:00" UtcFromDateTime="2016-03-31T22:00:00Z" UtcUntilDateTime="2016-04-30T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-05-01T00:00:00" UntilDateTime="2016-06-01T00:00:00" UtcFromDateTime="2016-04-30T22:00:00Z" UtcUntilDateTime="2016-05-31T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-06-01T00:00:00" UntilDateTime="2016-07-01T00:00:00" UtcFromDateTime="2016-05-31T22:00:00Z" UtcUntilDateTime="2016-06-30T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-07-01T00:00:00" UntilDateTime="2016-08-01T00:00:00" UtcFromDateTime="2016-06-30T22:00:00Z" UtcUntilDateTime="2016-07-31T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-08-01T00:00:00" UntilDateTime="2016-09-01T00:00:00" UtcFromDateTime="2016-07-31T22:00:00Z" UtcUntilDateTime="2016-08-31T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-09-01T00:00:00" UntilDateTime="2016-10-01T00:00:00" UtcFromDateTime="2016-08-31T22:00:00Z" UtcUntilDateTime="2016-09-30T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-10-01T00:00:00" UntilDateTime="2016-11-01T00:00:00" UtcFromDateTime="2016-09-30T22:00:00Z" UtcUntilDateTime="2016-10-31T23:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-11-01T00:00:00" UntilDateTime="2016-12-01T00:00:00" UtcFromDateTime="2016-10-31T23:00:00Z" UtcUntilDateTime="2016-11-30T23:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-12-01T00:00:00" UntilDateTime="2017-01-01T00:00:00" UtcFromDateTime="2016-11-30T23:00:00Z" UtcUntilDateTime="2016-12-31T23:00:00Z" />			
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+	<ExpectedTimeSeries>
+		<Resolution>Month</Resolution>
+		<TimeSeriesTypeName>Forecasted Volume</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+	        <ExpectedTimeSeriesValue FromDateTime="2016-01-01T00:00:00" UntilDateTime="2016-02-01T00:00:00" UtcFromDateTime="2015-12-31T23:00:00Z" UtcUntilDateTime="2016-01-31T23:00:00Z" Value="0.56745545884586" />
+            <ExpectedTimeSeriesValue FromDateTime="2016-02-01T00:00:00" UntilDateTime="2016-03-01T00:00:00" UtcFromDateTime="2016-01-31T23:00:00Z" UtcUntilDateTime="2016-02-29T23:00:00Z" Value="0.4787652451971" />
+            <ExpectedTimeSeriesValue FromDateTime="2016-03-01T00:00:00" UntilDateTime="2016-04-01T00:00:00" UtcFromDateTime="2016-02-29T23:00:00Z" UtcUntilDateTime="2016-03-31T22:00:00Z" Value="0.48097245519877" />
+            <ExpectedTimeSeriesValue FromDateTime="2016-04-01T00:00:00" UntilDateTime="2016-05-01T00:00:00" UtcFromDateTime="2016-03-31T22:00:00Z" UtcUntilDateTime="2016-04-30T22:00:00Z" Value="0.55735033525897" />
+            <ExpectedTimeSeriesValue FromDateTime="2016-05-01T00:00:00" UntilDateTime="2016-06-01T00:00:00" UtcFromDateTime="2016-04-30T22:00:00Z" UtcUntilDateTime="2016-05-31T22:00:00Z" Value="0.6174051476228" />
+            <ExpectedTimeSeriesValue FromDateTime="2016-06-01T00:00:00" UntilDateTime="2016-07-01T00:00:00" UtcFromDateTime="2016-05-31T22:00:00Z" UtcUntilDateTime="2016-06-30T22:00:00Z" Value="0.36383576760652" />
+            <ExpectedTimeSeriesValue FromDateTime="2016-07-01T00:00:00" UntilDateTime="2016-08-01T00:00:00" UtcFromDateTime="2016-06-30T22:00:00Z" UtcUntilDateTime="2016-07-31T22:00:00Z" Value="0.21471622936692" />
+            <ExpectedTimeSeriesValue FromDateTime="2016-08-01T00:00:00" UntilDateTime="2016-09-01T00:00:00" UtcFromDateTime="2016-07-31T22:00:00Z" UtcUntilDateTime="2016-08-31T22:00:00Z" Value="0.34601631270285" />
+            <ExpectedTimeSeriesValue FromDateTime="2016-09-01T00:00:00" UntilDateTime="2016-10-01T00:00:00" UtcFromDateTime="2016-08-31T22:00:00Z" UtcUntilDateTime="2016-09-30T22:00:00Z" Value="0.44393088258865" />
+            <ExpectedTimeSeriesValue FromDateTime="2016-10-01T00:00:00" UntilDateTime="2016-11-01T00:00:00" UtcFromDateTime="2016-09-30T22:00:00Z" UtcUntilDateTime="2016-10-31T23:00:00Z" Value="0.4346497891028" />
+            <ExpectedTimeSeriesValue FromDateTime="2016-11-01T00:00:00" UntilDateTime="2016-12-01T00:00:00" UtcFromDateTime="2016-10-31T23:00:00Z" UtcUntilDateTime="2016-11-30T23:00:00Z" Value="0.480433650482" />
+            <ExpectedTimeSeriesValue FromDateTime="2016-12-01T00:00:00" UntilDateTime="2017-01-01T00:00:00" UtcFromDateTime="2016-11-30T23:00:00Z" UtcUntilDateTime="2016-12-31T23:00:00Z" Value="0.5216196261585" />
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+	<ExpectedTimeSeries>
+		<Resolution>Month</Resolution>
+		<TimeSeriesTypeName>Realized Price</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2016-01-01T00:00:00" UntilDateTime="2016-02-01T00:00:00" UtcFromDateTime="2015-12-31T23:00:00Z" UtcUntilDateTime="2016-01-31T23:00:00Z" Value="2" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-02-01T00:00:00" UntilDateTime="2016-03-01T00:00:00" UtcFromDateTime="2016-01-31T23:00:00Z" UtcUntilDateTime="2016-02-29T23:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-03-01T00:00:00" UntilDateTime="2016-04-01T00:00:00" UtcFromDateTime="2016-02-29T23:00:00Z" UtcUntilDateTime="2016-03-31T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-04-01T00:00:00" UntilDateTime="2016-05-01T00:00:00" UtcFromDateTime="2016-03-31T22:00:00Z" UtcUntilDateTime="2016-04-30T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-05-01T00:00:00" UntilDateTime="2016-06-01T00:00:00" UtcFromDateTime="2016-04-30T22:00:00Z" UtcUntilDateTime="2016-05-31T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-06-01T00:00:00" UntilDateTime="2016-07-01T00:00:00" UtcFromDateTime="2016-05-31T22:00:00Z" UtcUntilDateTime="2016-06-30T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-07-01T00:00:00" UntilDateTime="2016-08-01T00:00:00" UtcFromDateTime="2016-06-30T22:00:00Z" UtcUntilDateTime="2016-07-31T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-08-01T00:00:00" UntilDateTime="2016-09-01T00:00:00" UtcFromDateTime="2016-07-31T22:00:00Z" UtcUntilDateTime="2016-08-31T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-09-01T00:00:00" UntilDateTime="2016-10-01T00:00:00" UtcFromDateTime="2016-08-31T22:00:00Z" UtcUntilDateTime="2016-09-30T22:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-10-01T00:00:00" UntilDateTime="2016-11-01T00:00:00" UtcFromDateTime="2016-09-30T22:00:00Z" UtcUntilDateTime="2016-10-31T23:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-11-01T00:00:00" UntilDateTime="2016-12-01T00:00:00" UtcFromDateTime="2016-10-31T23:00:00Z" UtcUntilDateTime="2016-11-30T23:00:00Z" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-12-01T00:00:00" UntilDateTime="2017-01-01T00:00:00" UtcFromDateTime="2016-11-30T23:00:00Z" UtcUntilDateTime="2016-12-31T23:00:00Z" />
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+	<ExpectedTimeSeries>
+		<Resolution>Month</Resolution>
+		<TimeSeriesTypeName>Realized Volume</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2016-01-01T00:00:00" UntilDateTime="2016-02-01T00:00:00" UtcFromDateTime="2015-12-31T23:00:00Z" UtcUntilDateTime="2016-01-31T23:00:00Z" Value="2" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-02-01T00:00:00" UntilDateTime="2016-03-01T00:00:00" UtcFromDateTime="2016-01-31T23:00:00Z" UtcUntilDateTime="2016-02-29T23:00:00Z" Value="2" />
+			<ExpectedTimeSeriesValue FromDateTime="2016-03-01T00:00:00" UntilDateTime="2016-04-01T00:00:00" UtcFromDateTime="2016-02-29T23:00:00Z" UtcUntilDateTime="2016-03-31T22:00:00Z" Value="2"/>
+			<ExpectedTimeSeriesValue FromDateTime="2016-04-01T00:00:00" UntilDateTime="2016-05-01T00:00:00" UtcFromDateTime="2016-03-31T22:00:00Z" UtcUntilDateTime="2016-04-30T22:00:00Z" Value="2"/>
+			<ExpectedTimeSeriesValue FromDateTime="2016-05-01T00:00:00" UntilDateTime="2016-06-01T00:00:00" UtcFromDateTime="2016-04-30T22:00:00Z" UtcUntilDateTime="2016-05-31T22:00:00Z" Value="2"/>
+			<ExpectedTimeSeriesValue FromDateTime="2016-06-01T00:00:00" UntilDateTime="2016-07-01T00:00:00" UtcFromDateTime="2016-05-31T22:00:00Z" UtcUntilDateTime="2016-06-30T22:00:00Z" Value="2"/>
+			<ExpectedTimeSeriesValue FromDateTime="2016-07-01T00:00:00" UntilDateTime="2016-08-01T00:00:00" UtcFromDateTime="2016-06-30T22:00:00Z" UtcUntilDateTime="2016-07-31T22:00:00Z" Value="2"/>
+			<ExpectedTimeSeriesValue FromDateTime="2016-08-01T00:00:00" UntilDateTime="2016-09-01T00:00:00" UtcFromDateTime="2016-07-31T22:00:00Z" UtcUntilDateTime="2016-08-31T22:00:00Z" Value="2"/>
+			<ExpectedTimeSeriesValue FromDateTime="2016-09-01T00:00:00" UntilDateTime="2016-10-01T00:00:00" UtcFromDateTime="2016-08-31T22:00:00Z" UtcUntilDateTime="2016-09-30T22:00:00Z" Value="2"/>
+			<ExpectedTimeSeriesValue FromDateTime="2016-10-01T00:00:00" UntilDateTime="2016-11-01T00:00:00" UtcFromDateTime="2016-09-30T22:00:00Z" UtcUntilDateTime="2016-10-31T23:00:00Z" Value="2"/>
+			<ExpectedTimeSeriesValue FromDateTime="2016-11-01T00:00:00" UntilDateTime="2016-12-01T00:00:00" UtcFromDateTime="2016-10-31T23:00:00Z" UtcUntilDateTime="2016-11-30T23:00:00Z" Value="2"/>
+			<ExpectedTimeSeriesValue FromDateTime="2016-12-01T00:00:00" UntilDateTime="2017-01-01T00:00:00" UtcFromDateTime="2016-11-30T23:00:00Z" UtcUntilDateTime="2016-12-31T23:00:00Z" Value="2"/>
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+	</ExpectedTimeSeriesSet>
+	</ExpectedTimeSeriesSets>	
+	</ExpectedResult>
+</DealInsertUpdateTestCase>

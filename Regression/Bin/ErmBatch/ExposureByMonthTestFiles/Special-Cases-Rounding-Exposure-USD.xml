@@ -1,0 +1,65 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>zMonth-Special-Cases-Rounding-Exposure-USD</workspace>
+    <monitor>zMonth-Special-Cases-Rounding-Exposure-USD</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>Special-Cases,Oil,SWAP Feb-12,2012-02-01 00:00:00.000,2012-02-29 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0004,BrentOil,bbl,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,47.8594248364256,0,0</record>
+        <record>Special-Cases,Oil,SWAP Feb-12,2012-02-01 00:00:00.000,2012-02-29 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0004,BrentOil,bbl,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,47.8105286937747,0,0</record>
+        <record>Special-Cases,Oil,SWAP Oct-11 - Feb-12,2011-10-01 00:00:00.000,2012-02-29 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0006,BrentOil,bbl,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,45.3673364425762,0,0</record>
+        <record>Special-Cases,Oil,SWAP Oct-11 - Feb-12,2011-10-01 00:00:00.000,2012-02-29 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0006,BrentOil,bbl,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,45.3209863712586,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0007,BrentOil,bbl,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,147.540380453269,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0007,BrentOil,bbl,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,147.389644093314,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0007,BrentOil,bbl,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,158.411335654475,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0007,BrentOil,bbl,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,158.264631395134,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0007,BrentOil,bbl,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,158.115639444168,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0007,BrentOil,bbl,2012-04-01 00:00:00.000,2012-05-01 00:00:00.000,180.174428760945,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0007,BrentOil,bbl,2012-05-01 00:00:00.000,2012-06-01 00:00:00.000,179.99622537278,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0007,BrentOil,bbl,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,179.816351422252,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0007,BrentOil,bbl,2012-07-01 00:00:00.000,2012-08-01 00:00:00.000,103.178693688269,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0007,BrentOil,bbl,2012-08-01 00:00:00.000,2012-09-01 00:00:00.000,103.075109614765,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0007,BrentOil,bbl,2012-09-01 00:00:00.000,2012-10-01 00:00:00.000,102.976230782,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,377,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2012-04-01 00:00:00.000,2012-05-01 00:00:00.000,71,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2012-05-01 00:00:00.000,2012-06-01 00:00:00.000,715,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,342,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2012-07-01 00:00:00.000,2012-08-01 00:00:00.000,102,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2012-08-01 00:00:00.000,2012-09-01 00:00:00.000,993,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2012-09-01 00:00:00.000,2012-10-01 00:00:00.000,873,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2012-10-01 00:00:00.000,2012-11-01 00:00:00.000,428,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2012-11-01 00:00:00.000,2012-12-01 00:00:00.000,51,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2012-12-01 00:00:00.000,2013-01-01 00:00:00.000,350,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2013-01-01 00:00:00.000,2013-02-01 00:00:00.000,759,0,0</record>
+        <record>Special-Cases,Oil,SWAP Jan-12 - Dec-12,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,Swap,Financial,Base,,None,CET,EUR,Special-Cases-Rounding-EUR-0009,BrentOil,bbl,2013-02-01 00:00:00.000,2013-03-01 00:00:00.000,710,0,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>BrentOil,2011-11-01 00:00:00.000,2011-12-01 00:00:00.000,109.26,0,0</record>
+        <record>BrentOil,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,109.539999999975,0,0</record>
+        <record>BrentOil,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,108.380000000103,0,0</record>
+        <record>BrentOil,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,107.579999999898,0,0</record>
+        <record>BrentOil,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,106.850000000231,0,0</record>
+        <record>BrentOil,2012-04-01 00:00:00.000,2012-05-01 00:00:00.000,106.339999999956,0,0</record>
+        <record>BrentOil,2012-05-01 00:00:00.000,2012-06-01 00:00:00.000,105.92999999979,0,0</record>
+        <record>BrentOil,2012-06-01 00:00:00.000,2012-07-01 00:00:00.000,105.529999999759,0,0</record>
+        <record>BrentOil,2012-07-01 00:00:00.000,2012-08-01 00:00:00.000,105.1600000002,0,0</record>
+        <record>BrentOil,2012-08-01 00:00:00.000,2012-09-01 00:00:00.000,104.779999999898,0,0</record>
+        <record>BrentOil,2012-09-01 00:00:00.000,2012-10-01 00:00:00.000,104.340000000143,0,0</record>
+        <record>BrentOil,2012-10-01 00:00:00.000,2012-11-01 00:00:00.000,103.940000000332,0,0</record>
+        <record>BrentOil,2012-11-01 00:00:00.000,2012-12-01 00:00:00.000,103.569999999571,0,0</record>
+        <record>BrentOil,2012-12-01 00:00:00.000,2013-01-01 00:00:00.000,103.210000000315,0,0</record>
+        <record>BrentOil,2013-01-01 00:00:00.000,2013-02-01 00:00:00.000,102.910000000095,0,0</record>
+        <record>BrentOil,2013-02-01 00:00:00.000,2013-03-01 00:00:00.000,102.570000000045,0,0</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

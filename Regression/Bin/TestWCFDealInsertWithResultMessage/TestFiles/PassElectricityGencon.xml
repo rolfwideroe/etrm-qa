@@ -1,0 +1,44 @@
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Gencon>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+		</Portfolios>
+		<ElectricityGenconDetails>
+			<GenconName>Gencon Via Interface 080109</GenconName>
+			<PeriodFromDate>2008-11-01</PeriodFromDate>
+			<PeriodToDate>2008-11-30</PeriodToDate>
+			<ActivationDate>2008-10-17</ActivationDate>
+			<ContractType>Consumption</ContractType>
+			<Status>Active</Status>
+			<MTMResolution>Hour</MTMResolution>
+			<Currency>EUR</Currency>
+			<CurrencySource>Viz</CurrencySource>
+			<DeliveryType>Financial</DeliveryType>
+			<QuantityUnit>MW</QuantityUnit>
+			<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+			<PriceBasis>Norway 1</PriceBasis>
+			<BalanceArea AreaName="RWE"/>
+			<DeliveryLocation>Test</DeliveryLocation>
+		</ElectricityGenconDetails>
+		<TimesSeries>
+			<TimeSeriesDetail Forecast="true" FromDate="2008-11-01T00:00:00.0" ToDate="2008-11-30T23:59:59" Price="0.000" Volume="5"/>
+		</TimesSeries>
+		<ReferenceData>
+			<DealGroup>API Test</DealGroup>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<ExternalId>PassElectricityGencon</ExternalId>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Gencon>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>False</AssertQaTransactionDTO>
+</TestCase>

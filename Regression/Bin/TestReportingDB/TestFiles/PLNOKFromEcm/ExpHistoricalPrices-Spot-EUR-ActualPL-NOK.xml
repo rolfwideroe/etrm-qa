@@ -1,0 +1,31 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>ExpHistoricalPrices-Spot-EUR-ActualPL-NOK</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <Tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,HI,177,NOK,-2214.48341272695,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0001</record>
+        <record>2011-10-01 00:00:00.000,0,HI,177,NOK,-2505.76790057169,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0002</record>
+        <record>2011-10-01 00:00:00.000,0,HI,177,NOK,-995.608230884932,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0003</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,NOK,-5039.54608615649,monthly,Spot,D0111-11,ExpHistoricalPrices-Spot-EUR-0004</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,NOK,-5941.37749231163,monthly,Spot,D0111-11,ExpHistoricalPrices-Spot-EUR-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,NOK,-3740.92253196251,monthly,Spot,D0111-11,ExpHistoricalPrices-Spot-EUR-0006</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,NOK,-2166.63254547484,monthly,Spot,D2111-11,ExpHistoricalPrices-Spot-EUR-0007</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,NOK,-1878.77129936005,monthly,Spot,D2111-11,ExpHistoricalPrices-Spot-EUR-0008</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,NOK,-883.580561580217,monthly,Spot,D2111-11,ExpHistoricalPrices-Spot-EUR-0009</record>
+        <record>2011-10-01 00:00:00.000,0,HI,177,NOK,-7581.3408237988,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0010</record>
+        <record>2011-10-01 00:00:00.000,0,HI,177,NOK,-2145.03861254267,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0011</record>
+        <record>2011-10-01 00:00:00.000,0,HI,177,NOK,-1860.04636073673,monthly,Spot,D2910-11,ExpHistoricalPrices-Spot-EUR-0012</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,NOK,-882.978081397418,monthly,Spot,D0111-11,ExpHistoricalPrices-Spot-EUR-0013</record>
+        <record>2011-11-01 00:00:00.000,0,TR,177,NOK,-1878.77129936005,monthly,Spot,D2111-11,ExpHistoricalPrices-Spot-EUR-0014</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

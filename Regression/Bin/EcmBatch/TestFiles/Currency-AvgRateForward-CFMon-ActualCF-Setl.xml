@@ -1,0 +1,43 @@
+<test type="EcmBatch" name="Currency-AvgRateForward-CFMon-ActualCF-Setl" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Currency-AvgRateForward-CFMon-ActualCF-Setl</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-07-01 00:00:00.000,0,HI,159,USD,-4826.31578947348,monthly,Average Rate Forward,USDEUR 010611 - 300611,Currency-AvgRateForward-0001</record>
+        <record>2011-07-01 00:00:00.000,0,HI,159,USD,13826.3157894735,monthly,Average Rate Forward,USDEUR 010611 - 300611,Currency-AvgRateForward-0002</record>
+        <record>2011-07-01 00:00:00.000,0,HI,159,USD,197273.684210527,monthly,Average Rate Forward,USDEUR 010611 - 300611,Currency-AvgRateForward-0003</record>
+        <record>2012-01-01 00:00:00.000,0,TR,159,USD,-75947.8897681176,monthly,Average Rate Forward,USDEUR 011011 - 311211,Currency-AvgRateForward-0004</record>
+        <record>2012-01-01 00:00:00.000,0,TR,159,USD,84947.8897681176,monthly,Average Rate Forward,USDEUR 011011 - 311211,Currency-AvgRateForward-0005</record>
+        <record>2012-01-01 00:00:00.000,0,TR,159,USD,126152.110231882,monthly,Average Rate Forward,USDEUR 011011 - 311211,Currency-AvgRateForward-0006</record>
+        <record>2012-04-01 00:00:00.000,0,TR,159,USD,-81194.0466897069,monthly,Average Rate Forward,USDEUR 010112 - 310312,Currency-AvgRateForward-0007</record>
+        <record>2012-04-01 00:00:00.000,0,TR,159,USD,90194.0466897069,monthly,Average Rate Forward,USDEUR 010112 - 310312,Currency-AvgRateForward-0008</record>
+        <record>2012-04-01 00:00:00.000,0,TR,159,USD,120905.953310293,monthly,Average Rate Forward,USDEUR 010112 - 310312,Currency-AvgRateForward-0009</record>
+        <record>2011-07-01 00:00:00.000,0,HI,159,EUR,-177569.522793252,monthly,Average Rate Forward,EURUSD 010611 - 300611,Currency-AvgRateForward-0010</record>
+        <record>2011-07-01 00:00:00.000,0,HI,159,EUR,287369.522793252,monthly,Average Rate Forward,EURUSD 010611 - 300611,Currency-AvgRateForward-0011</record>
+        <record>2011-07-01 00:00:00.000,0,HI,159,EUR,226369.522793252,monthly,Average Rate Forward,EURUSD 010611 - 300611,Currency-AvgRateForward-0012</record>
+        <record>2012-01-01 00:00:00.000,0,TR,159,EUR,-141464.261842702,monthly,Average Rate Forward,EURUSD 011011 - 311211,Currency-AvgRateForward-0013</record>
+        <record>2012-01-01 00:00:00.000,0,TR,159,EUR,251264.261842702,monthly,Average Rate Forward,EURUSD 011011 - 311211,Currency-AvgRateForward-0014</record>
+        <record>2012-01-01 00:00:00.000,0,TR,159,EUR,190264.261842702,monthly,Average Rate Forward,EURUSD 011011 - 311211,Currency-AvgRateForward-0015</record>
+        <record>2012-04-01 00:00:00.000,0,TR,159,EUR,-138734.637797833,monthly,Average Rate Forward,EURUSD 010112 - 310312,Currency-AvgRateForward-0016</record>
+        <record>2012-04-01 00:00:00.000,0,TR,159,EUR,497069.275595667,monthly,Average Rate Forward,EURUSD 010112 - 310312,Currency-AvgRateForward-0017</record>
+        <record>2012-04-01 00:00:00.000,0,TR,159,EUR,-187534.637797833,monthly,Average Rate Forward,EURUSD 010112 - 310312,Currency-AvgRateForward-0018</record>
+        <record>2011-07-01 00:00:00.000,0,HI,159,SEK,574947.368421052,monthly,Average Rate Forward,SEKEUR 010611 - 300611,Currency-AvgRateForward-0019</record>
+        <record>2011-07-01 00:00:00.000,0,HI,159,SEK,-554947.368421052,monthly,Average Rate Forward,SEKEUR 010611 - 300611,Currency-AvgRateForward-0020</record>
+        <record>2011-07-01 00:00:00.000,0,HI,159,SEK,104647.368421052,monthly,Average Rate Forward,SEKEUR 010611 - 300611,Currency-AvgRateForward-0021</record>
+        <record>2012-01-01 00:00:00.000,0,TR,159,SEK,534713.56882057,monthly,Average Rate Forward,SEKEUR 011011 - 311211,Currency-AvgRateForward-0022</record>
+        <record>2012-01-01 00:00:00.000,0,TR,159,SEK,-514713.56882057,monthly,Average Rate Forward,SEKEUR 011011 - 311211,Currency-AvgRateForward-0023</record>
+        <record>2012-01-01 00:00:00.000,0,TR,159,SEK,64413.5688205697,monthly,Average Rate Forward,SEKEUR 011011 - 311211,Currency-AvgRateForward-0024</record>
+        <record>2012-04-01 00:00:00.000,0,TR,159,SEK,535416.037389247,monthly,Average Rate Forward,SEKEUR 010112 - 310312,Currency-AvgRateForward-0025</record>
+        <record>2012-04-01 00:00:00.000,0,TR,159,SEK,-515416.037389247,monthly,Average Rate Forward,SEKEUR 010112 - 310312,Currency-AvgRateForward-0026</record>
+        <record>2012-04-01 00:00:00.000,0,TR,159,SEK,65116.0373892467,monthly,Average Rate Forward,SEKEUR 010112 - 310312,Currency-AvgRateForward-0027</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

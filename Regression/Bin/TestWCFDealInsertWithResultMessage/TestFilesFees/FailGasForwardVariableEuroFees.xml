@@ -1,0 +1,60 @@
+<TestCase>
+	<TestResult>Failure</TestResult>
+	<Message>Broker fee with value type Variable has an invalid fee unit, EUR/th cannot be matched to the price unit of the contract</Message>
+	<TestData>
+		<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+			<MetaData>
+				<Timezone>CET-6</Timezone>
+			</MetaData>
+			<Transaction>
+				<TransactionType>Automatic</TransactionType>
+				<DealType>Gas-Forward</DealType>
+				<Portfolios>
+					<Portfolio>API Test Customer</Portfolio>
+					<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+					<BuySell>Buy</BuySell>
+				</Portfolios>
+				<GasForward>
+					<InstrumentData>
+						<ExecutionVenue>None</ExecutionVenue>
+						<PriceBasis>Endex Zeebrugge</PriceBasis>
+						<LoadProfile>Base Week</LoadProfile>
+						<FromDate>2008-01-01</FromDate>
+						<ToDate>2008-12-31</ToDate>
+						<Financial/>
+					</InstrumentData>
+					<SettlementData>
+						<Quantity>38</Quantity>
+						<QuantityUnit>th/d</QuantityUnit>
+						<Price>28</Price>
+						<Currency>GBP</Currency>
+						<PriceVolumeUnit>CentsPerTherm</PriceVolumeUnit>
+						<CurrencySource>Viz</CurrencySource>
+						<Clearing>Electronic</Clearing>
+						<Broker>API Test Broker</Broker>
+					</SettlementData>
+					<FeesData>
+						<Fees>
+							<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="0.5" FeeUnit="EUR/th" />
+							<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="0.2" FeeUnit="EUR/th"/>
+							<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="0.1" FeeUnit="EUR/th" />
+							<Fee FeeType="Commission" FeeValueType="Variable" FeeValue="0.01" FeeUnit="EUR/th"/>
+						</Fees>
+					</FeesData>			
+				</GasForward>
+				<DealDetails>
+					<Status>Active</Status>
+					<Trader>DealImport</Trader>
+					<TradeDate>2007-08-27T15:12:53Z</TradeDate>
+				</DealDetails>
+				<ReferenceData>
+					<Comment>GasForward; should pass</Comment>
+					<DealGroup>API Test</DealGroup>
+					<ExternalId>FailGasForwardVariableEURFees</ExternalId>
+					<ExternalSource>XMLFileImport</ExternalSource>
+					<TicketNumber>TicketNumber</TicketNumber>
+				</ReferenceData>
+			</Transaction>
+		</DealInsert>
+	</TestData>
+</TestCase>

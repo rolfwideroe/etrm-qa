@@ -1,0 +1,45 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="PL-Explanation-El-EU-Struct" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="NOK" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Percent" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,ExchangeRate,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net ExchangeRate,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0001,EURP M11-11 15-OCT-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,-854671.260046689,0,0,0,0,0,0,0,-854671.260046689</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0002,EURC D1011-11 04-NOV-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,-29489.6977389868,0,0,0,0,0,0,0,-29489.6977389868</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0003,EURC D1011-11 09-NOV-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,0,0,0,0,1,0,0,0,29603.7541313435</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0004,EURC YR-14 15-DEC-13 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,-8664692.47519949,0.142028541430972,-0.193035984891627,1.15449342177602,0,0,-0.0731998336233818,-0.0302861446919827,-13029830.4082461</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0005,EURP M01-12 15-DEC-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,0,0,0,0,1.04323701719264,0,-0.0431334686458286,-0.000103548546814384,510646.117156491</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered ExchangeRate,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0001,EURP M11-11 15-OCT-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0002,EURC D1011-11 04-NOV-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0003,EURC D1011-11 09-NOV-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0004,EURC YR-14 15-DEC-13 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,159801368.455242,0.142028541430972,-0.193035984891627,1.15449342177602,0,0,-0.0731998336233818,-0.0302861446919827,155436230.522195</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0005,EURP M01-12 15-DEC-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,0,0,0,0,0.962020898067786,0,0.0378881455927215,9.09563394920141E-05,-581341.154044628</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered ExchangeRate,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0001,EURP M11-11 15-OCT-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,-854671.260046689,0,0,0,0,0,0,0,-854671.260046689</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0002,EURC D1011-11 04-NOV-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,-29489.6977389868,0,0,0,0,0,0,0,-29489.6977389868</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0003,EURC D1011-11 09-NOV-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,0,0,0,0,1,0,0,0,29603.7541313435</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0004,EURC YR-14 15-DEC-13 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,-168466060.930441,0,0,0,0,0,0,0,-168466060.930441</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-EU-Struct-0005,EURP M01-12 15-DEC-11 45.00,NordPool System Price,European,PL-Explanation-El-EU-Struct,0,0,0,0,1,0,0,0,1091987.27120112</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

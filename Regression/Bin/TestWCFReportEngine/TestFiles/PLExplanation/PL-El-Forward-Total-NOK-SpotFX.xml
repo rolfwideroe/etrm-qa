@@ -1,0 +1,69 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="PL-Explanation-El-Forward" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="NOK" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Forward-0001;PL-Explanation-El-Forward-0002,10-Nov-11 - 16-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,53790.3269984435,14577.5417711404,-7330.70174482669,-14661.4034896534,-14661.4034896534,-14661.4034896534,-14661.4034896534,-14747.7332515371,-14747.7332515371</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0003,10-Nov-11 - 16-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,0,0,7330.70174482669,7330.70174482669,7330.70174482669,7330.70174482669,7373.86662576857,7373.86662576857</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0004,10-Nov-11 - 16-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,748.279409450537,-14375.4460690424,-16926.1289479463,-16926.1289479463,-16926.1289479463,-16926.1289479463,-16926.1289479463,-17021.1502033124,-17021.1502033124</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0005,04-Nov-11 - 10-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,33772.5691902484,34878.2309234213,34878.2309234213,34878.2309234213,34878.2309234213,34878.2309234213,34878.2309234213,35073.2312590071,35073.2312590071</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0006,04-Nov-11 - 10-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,-24386.8319148018,-37959.7611253446,-37959.7611253446,-37959.7611253446,-37959.7611253446,-37959.7611253446,-37959.7611253446,-38171.9899558277,-38171.9899558277</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0007,04-Nov-11 - 10-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,24386.8319148018,37959.7611253446,37959.7611253446,37959.7611253446,37959.7611253446,37959.7611253446,37959.7611253446,38171.9899558277,38171.9899558277</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0008;PL-Explanation-El-Forward-0009,D1011-11,NordPool System Price,Forward,PL-Explanation-El-Forward,-4629.43135574758,1036.94957220454,1036.94957220454,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0010,D1011-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,0,0,1036.94957220454,1036.94957220454,1036.94957220454,1036.94957220454,1042.74704269577,1042.74704269577</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0011,D1011-11,NordPool System Price,Forward,PL-Explanation-El-Forward,6901.17193763117,1657.26761986261,1657.26761986261,1657.26761986261,1657.26761986261,1657.26761986261,1657.26761986261,1666.53322002272,1666.53322002272</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0012;PL-Explanation-El-Forward-0013,M11-11,NordPool System Price,Forward,PL-Explanation-El-Forward,20375.3945426281,20375.1505216052,20375.1505216052,20375.1505216052,20375.1505216052,20375.1505216052,20375.1505216052,20485.6745715632,20485.6745715632</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0014;PL-Explanation-El-Forward-0015,01-Dec-11 - 31-Dec-12,NordPool System Price,Forward,PL-Explanation-El-Forward,-100606.834472958,-100606.834472958,-1414917.46173934,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0016;PL-Explanation-El-Forward-0017,M10-11,NordPool System Price,Forward,PL-Explanation-El-Forward,31555.9802850934,31555.9802850934,31555.9802850934,31555.9802850934,31555.9802850934,31555.9802850934,31555.9802850934,31732.4062844177,31732.4062844177</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0018;PL-Explanation-El-Forward-0019,M12-11,NordPool System Price,Forward,PL-Explanation-El-Forward,-304741.497466538,-304741.497466538,8624.75936226919,81935.2139414687,81935.2139414687,81935.2139414687,81935.2139414687,82369.0861117883,82369.0861117883</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Forward-0001;PL-Explanation-El-Forward-0002,10-Nov-11 - 16-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,53790.3269984435,29224.4544785295,7316.21096256247,14632.4219251249,14632.4219251249,14632.4219251249,14632.4219251249,14709.8707046187,14709.8707046187</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0003,10-Nov-11 - 16-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,0,0,-7316.21096256247,-7316.21096256247,-7316.21096256247,-7316.21096256247,-7354.93535230935,-7354.93535230935</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0004,10-Nov-11 - 16-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,748.279409450537,3856.81236902707,1306.12949012316,1306.12949012316,1306.12949012316,1306.12949012316,1306.12949012316,1313.04277730067,1313.04277730067</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0005,04-Nov-11 - 10-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,5902.23481767063,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0006,04-Nov-11 - 10-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,9128.85961538058,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0007,04-Nov-11 - 10-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,-9128.85961538058,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0008;PL-Explanation-El-Forward-0009,D1011-11,NordPool System Price,Forward,PL-Explanation-El-Forward,-4629.43135574758,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0010,D1011-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0011,D1011-11,NordPool System Price,Forward,PL-Explanation-El-Forward,6901.17193763117,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0012;PL-Explanation-El-Forward-0013,M11-11,NordPool System Price,Forward,PL-Explanation-El-Forward,15746.1553810007,11116.6721983504,11116.6721983504,11116.6721983504,11116.6721983504,11116.6721983504,11116.6721983504,11175.4331189223,11175.4331189223</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0014;PL-Explanation-El-Forward-0015,01-Dec-11 - 31-Dec-12,NordPool System Price,Forward,PL-Explanation-El-Forward,-100606.834472958,-100606.834472958,-1414917.46173934,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0016;PL-Explanation-El-Forward-0017,M10-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0018;PL-Explanation-El-Forward-0019,M12-11,NordPool System Price,Forward,PL-Explanation-El-Forward,-304741.497466538,-304741.497466538,8624.75936226919,81935.2139414687,81935.2139414687,81935.2139414687,81935.2139414687,82369.0861117883,82369.0861117883</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Forward-0001;PL-Explanation-El-Forward-0002,10-Nov-11 - 16-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,-14646.9127073892,-14646.9127073892,-29293.8254147783,-29293.8254147783,-29293.8254147783,-29293.8254147783,-29457.6039561558,-29457.6039561558</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0003,10-Nov-11 - 16-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,0,0,14646.9127073892,14646.9127073892,14646.9127073892,14646.9127073892,14728.8019780779,14728.8019780779</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0004,10-Nov-11 - 16-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,-18232.2584380694,-18232.2584380694,-18232.2584380694,-18232.2584380694,-18232.2584380694,-18232.2584380694,-18334.1929806131,-18334.1929806131</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0005,04-Nov-11 - 10-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,27870.3343725778,34878.2309234213,34878.2309234213,34878.2309234213,34878.2309234213,34878.2309234213,34878.2309234213,35073.2312590071,35073.2312590071</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0006,04-Nov-11 - 10-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,-33515.6915301824,-37959.7611253446,-37959.7611253446,-37959.7611253446,-37959.7611253446,-37959.7611253446,-37959.7611253446,-38171.9899558277,-38171.9899558277</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0007,04-Nov-11 - 10-Nov-11,NordPool System Price,Forward,PL-Explanation-El-Forward,33515.6915301824,37959.7611253446,37959.7611253446,37959.7611253446,37959.7611253446,37959.7611253446,37959.7611253446,38171.9899558277,38171.9899558277</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0008;PL-Explanation-El-Forward-0009,D1011-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,1036.94957220454,1036.94957220454,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0010,D1011-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,0,0,1036.94957220454,1036.94957220454,1036.94957220454,1036.94957220454,1042.74704269577,1042.74704269577</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0011,D1011-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,1657.26761986261,1657.26761986261,1657.26761986261,1657.26761986261,1657.26761986261,1657.26761986261,1666.53322002272,1666.53322002272</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0012;PL-Explanation-El-Forward-0013,M11-11,NordPool System Price,Forward,PL-Explanation-El-Forward,4629.2391616274,9258.4783232548,9258.4783232548,9258.4783232548,9258.4783232548,9258.4783232548,9258.4783232548,9310.2414526409,9310.2414526409</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0014;PL-Explanation-El-Forward-0015,01-Dec-11 - 31-Dec-12,NordPool System Price,Forward,PL-Explanation-El-Forward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0016;PL-Explanation-El-Forward-0017,M10-11,NordPool System Price,Forward,PL-Explanation-El-Forward,31555.9802850934,31555.9802850934,31555.9802850934,31555.9802850934,31555.9802850934,31555.9802850934,31555.9802850934,31732.4062844177,31732.4062844177</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Forward-0018;PL-Explanation-El-Forward-0019,M12-11,NordPool System Price,Forward,PL-Explanation-El-Forward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

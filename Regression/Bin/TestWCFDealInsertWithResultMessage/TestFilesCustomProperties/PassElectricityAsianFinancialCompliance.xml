@@ -1,0 +1,168 @@
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Asian</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityAsian>
+			<InstrumentData>
+				<Timezone>CET</Timezone>
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<LoadProfile>SystemBase</LoadProfile>
+				<FromDate>2010-06-01</FromDate>
+				<ToDate>2010-06-30</ToDate>
+				<Financial/>
+				<PutCall>Put</PutCall>
+				<Strike>1.0</Strike>
+				<SamplingPeriod>All</SamplingPeriod>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>2.0</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>3.0</Price>
+				<Currency>NOK</Currency>
+				<CurrencySource>NordPool</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>NOK</ClearingCurrency>
+				<ClearingFee>4.0</ClearingFee>				
+				<BrokerCurrency>NOK</BrokerCurrency>
+				<BrokerFee>3.3</BrokerFee>
+				<BrokerFeeCurrency>NOK</BrokerFeeCurrency>
+				<TradingFee>5.0</TradingFee>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+		</ElectricityAsian>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-05-01T00:00:00Z</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<!--<Audited>true</Audited>-->
+			<Paid>false</Paid>
+			<TimeStampClearedUTC>2013-11-20T15:00:00</TimeStampClearedUTC>
+			<TimeStampConfirmationBrokerUTC>2013-11-21T13:00:00</TimeStampConfirmationBrokerUTC>
+			<TimeStampConfirmationCounterPartyUTC>2013-11-22T17:00:00</TimeStampConfirmationCounterPartyUTC>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>PassElectricityAsianFinancialCompliance - should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassElectricityAsianFinancialCompliance</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>		
+		<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="PassElectricityAsianFinancialCompliance"/>
+				<DateProperty name="TerminationDate" value="2013-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+				<StringProperty name="EMIRStatus" value="EMIR risk reducing"/>
+				<StringProperty name="BuyerInitiatorAggressor" value="Aggressor"/>
+				<StringProperty name="SellerInitiatorAggressor" value="Sleeve"/>
+				<BooleanProperty name="RemitReporting" value="1"/>
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>189</TransactionId>
+  <DealType>Electricity-Asian</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Nord Pool</ExecutionVenue>
+    <InstrumentName>ASIP/A M06-10 1.00</InstrumentName>
+    <PriceBasis>NordPool System Price</PriceBasis>
+    <FromDate>2010-06-01T00:00:00</FromDate>
+    <ToDate>2010-06-30T00:00:00</ToDate>
+    <PutCall>Put</PutCall>
+    <Strike>1</Strike>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <SamplingPeriod>All</SamplingPeriod>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>2</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>3</Price>
+    <PriceIsoCurrency>NOK</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>NordPool</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2010-05-01T00:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <Broker>API Test Broker</Broker>
+    <ClearingType>Electronic</ClearingType>
+    <Fees>
+      <Fee FeeType="Broker" FeeValue="3.3" FeeValueType="Variable" FeeUnit="NOK/MWh" />
+      <Fee FeeType="Clearing" FeeValue="4" FeeValueType="Variable" FeeUnit="NOK/MWh" />
+      <Fee FeeType="Trading" FeeValue="5" FeeValueType="Variable" FeeUnit="NOK/MWh" />
+    </Fees>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassElectricityAsianFinancialCompliance</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>PassElectricityAsianFinancialCompliance - should pass</Comment>
+    <ModificationDateTimeUtc>2014-07-25T10:07:52Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>720</Deliveries>
+    <OriginalQuantity>2</OriginalQuantity>
+    <ReferringId>190</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="PassElectricityAsianFinancialCompliance" ValueType="System.String" />
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+        <Property Name="TerminationDate" Value="2013-11-20T00:00:00" ValueType="System.DateTime" />
+        <Property Name="EMIRStatus" Value="EMIR risk reducing" ValueType="System.String" />
+		<Property Name="RemitReporting" Value="True" ValueType="System.Boolean" />
+        <Property Name="BuyerInitiatorAggressor" Value="Aggressor" ValueType="System.String" />
+        <Property Name="SellerInitiatorAggressor" Value="Sleeve" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  <PropertyGroup Name="Deal Group"> <Properties> <Property Name="GroupField1" Value="API Test" ValueType="System.String" /> </Properties> </PropertyGroup> </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>true</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+    <TimeStampAuthorised>2014-07-25T12:07:52</TimeStampAuthorised>
+    <TimeStampCounterpartyAuthorised>2014-07-25T12:07:52</TimeStampCounterpartyAuthorised>
+    <TimeStampClearedUtc>2013-11-20T15:00:00Z</TimeStampClearedUtc>
+    <TimeStampConfirmationBrokerUtc>2013-11-21T13:00:00Z</TimeStampConfirmationBrokerUtc>
+    <TimeStampConfirmationCounterPartyUtc>2013-11-22T17:00:00Z</TimeStampConfirmationCounterPartyUtc>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

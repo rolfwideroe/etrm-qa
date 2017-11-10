@@ -1,0 +1,45 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="PL-Explanation-El-Future-EEX-Phelix" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0001,Week 44/11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,15817.2,15817.2,15817.2,15817.2,15817.2,15817.2,15817.2,15817.2,15817.2</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0002;PL-Explanation-El-Future-EEX-Phelix-0006,Week 45/11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,17228.4,17455.2000000001,17455.2000000001,840,840,840,840,840,840</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0003;PL-Explanation-El-Future-EEX-Phelix-0005,Dec-11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,99249.6000000001,89354.3999999999,89354.3999999999,178708.8,178708.8,178708.8,178708.8,178708.8,178708.8</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0004,Nov-11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,52456.8,49117.2,49117.2,49117.2,49117.2,49117.2,49117.2,49117.2,49117.2</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0007,Nov-11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,90396,84024,84024,84024,84024,84024,84024,84024,84024</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0001,Week 44/11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0002;PL-Explanation-El-Future-EEX-Phelix-0006,Week 45/11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0003;PL-Explanation-El-Future-EEX-Phelix-0005,Dec-11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0004,Nov-11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0007,Nov-11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0001,Week 44/11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,15817.2,15817.2,15817.2,15817.2,15817.2,15817.2,15817.2,15817.2,15817.2</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0002;PL-Explanation-El-Future-EEX-Phelix-0006,Week 45/11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,17228.4,17455.2000000001,17455.2000000001,840,840,840,840,840,840</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0003;PL-Explanation-El-Future-EEX-Phelix-0005,Dec-11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,99249.6000000001,89354.3999999999,89354.3999999999,178708.8,178708.8,178708.8,178708.8,178708.8,178708.8</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0004,Nov-11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,52456.8,49117.2,49117.2,49117.2,49117.2,49117.2,49117.2,49117.2,49117.2</ExpectedRecord>
+        <ExpectedRecord>PL-Explanation-El-Future-EEX-Phelix-0007,Nov-11,EEX,Future,PL-Explanation-El-Future-EEX-Phelix,90396,84024,84024,84024,84024,84024,84024,84024,84024</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

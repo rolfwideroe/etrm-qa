@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Incorrect PriceVolumeDetail values number: expected 3 (resolution Week, fromDate (UTC+01:00) 10/04/2010 00:00:00 (DST), toDate (UTC+01:00) 10/25/2010 00:00:00 (DST), recieved 2</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2010-10-04</FromDate>
+				<ToDate>2010-10-24</ToDate>
+				<Physical/>
+				<TransactionName>Transaction Name</TransactionName>
+				<LoadProfile>Complex</LoadProfile>
+			</InstrumentData>
+			<SettlementData>
+				<StructuredDealInformation Resolution="Weekly">
+					<TimeSeriesDetail FromDateTime="2010-10-04T00:00:00" ToDateTime="2010-10-11T00:00:00" Price="1" Volume="1" PriceOutsideProfile="1.5" VolumeOutsideProfile="1.7"/>
+					<TimeSeriesDetail FromDateTime="2010-10-18T00:00:00" ToDateTime="2010-10-25T00:00:00" Price="3" Volume="3" PriceOutsideProfile="2.5" VolumeOutsideProfile="2.7" />
+				</StructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2008-09-10T21:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>ElectricityStructuredDealWeekly with Profile; should pass 1</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailElectricityStructuredDealWeeklyWithLoadProfile2</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+			<CustomCompanyId>CustomCompanyId</CustomCompanyId>
+			<CustomCompanyName>CustomCompanyName</CustomCompanyName>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

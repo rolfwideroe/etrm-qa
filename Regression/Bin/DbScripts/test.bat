@@ -1,0 +1,1 @@
+powershell.exe %CD%\AddColumnsReportingDB.ps1 "NETSV-DBS12REG.nortest.bradyplc.com" "VizReporting_161" "qainstall" "qainstall"

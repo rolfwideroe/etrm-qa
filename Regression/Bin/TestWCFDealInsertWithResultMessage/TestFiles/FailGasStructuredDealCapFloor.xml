@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Transactions with Model type Fixed do not support Price Type of Cap/Floor</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>Endex TTF</PriceBasis>
+				<PriceType>Cap/Floor</PriceType>
+				<FromDate>2008-09-11</FromDate>
+				<ToDate>2008-09-14</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>FailGasStructuredDealCapFloor</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<StructuredDealInformation Resolution="Daily">
+					<TimeSeriesDetail FromDateTime="2008-09-11T00:00:00" Price="1" Volume="1" ToDateTime="2008-09-12T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2008-09-12T00:00:00" Price="2" Volume="2" ToDateTime="2008-09-13T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2008-09-13T00:00:00" Price="2" Volume="2" ToDateTime="2008-09-14T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2008-09-14T00:00:00" Price="4" Volume="4" ToDateTime="2008-09-15T00:00:00"/>
+				</StructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2007-06-01T21:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>FailGasStructuredDealCapFloor; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailGasStructuredDealCapFloor</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

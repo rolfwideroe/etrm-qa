@@ -1,0 +1,128 @@
+<TestCase>
+  <TestResult>Success</TestResult>
+  <TestData>
+    <DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+      <MetaData>
+        <MessageId>MessageId</MessageId>
+        <Timezone>CET</Timezone>
+      </MetaData>
+      <Transaction>
+        <TransactionType>Automatic</TransactionType>
+        <DealType>Electricity-Forward</DealType>
+        <Portfolios>
+          <Portfolio>API Test Customer</Portfolio>
+          <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+          <BuySell>Buy</BuySell>
+        </Portfolios>
+        <ElectricityForward>
+          <InstrumentData>
+            <ExecutionVenue>None</ExecutionVenue>
+            <PriceBasis>SYOSL</PriceBasis>
+            <LoadProfile>Base Week</LoadProfile>
+            <FromDate>2008-01-01</FromDate>
+            <ToDate>2008-12-31</ToDate>
+            <Financial />
+          </InstrumentData>
+          <SettlementData>
+            <Quantity>40</Quantity>
+            <QuantityUnit>MW</QuantityUnit>
+            <Price>28</Price>
+            <Currency>NOK</Currency>
+            <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+            <CurrencySource>Viz</CurrencySource>
+            <Clearing>Electronic</Clearing>
+            <ClearingCurrency>EUR</ClearingCurrency>
+            <ClearingFee>0</ClearingFee>
+            <BrokerTradingFee>0</BrokerTradingFee>
+            <BrokerCurrency>EUR</BrokerCurrency>
+          </SettlementData>
+        </ElectricityForward>
+        <DealDetails>
+          <Status>Active</Status>
+          <Trader>DealImport</Trader>
+          <CounterpartyTrader>Markus TraderCounterparty</CounterpartyTrader>
+          <TradeDate>2007-12-24T00:00:00</TradeDate>
+          <ConfirmedByBroker>false</ConfirmedByBroker>
+          <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+          <Authorised>false</Authorised>
+          <Paid>false</Paid>
+        </DealDetails>
+        <ReferenceData>
+          <Comment>PassElectricityForwardCounterpartyTrader</Comment>
+          <DealGroup>API Test</DealGroup>
+          <ExternalId>PassElectricityForwardCounterpartyTrader</ExternalId>
+          <ExternalSource>XMLFileImport</ExternalSource>
+          <TicketNumber>TicketNumber</TicketNumber>
+        </ReferenceData>
+      </Transaction>
+    </DealInsert>
+  </TestData>
+  <AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+  <QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <TransactionId>2907</TransactionId>
+    <DealType>Electricity-Forward</DealType>
+    <BuySell>Buy</BuySell>
+    <DeliveryType>Financial</DeliveryType>
+    <Portfolios>
+      <PortfolioName>API Test Customer</PortfolioName>
+      <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+      <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+      <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+    </Portfolios>
+    <InstrumentData>
+      <ExecutionVenue>None</ExecutionVenue>
+      <InstrumentName>FWYR-08</InstrumentName>
+      <PriceBasis>SYOSL</PriceBasis>
+      <FromDate>2008-01-01T00:00:00</FromDate>
+      <ToDate>2008-12-31T00:00:00</ToDate>
+      <LoadProfile>Base Week</LoadProfile>
+      <TimeZone>Central Europe Standard Time</TimeZone>	  
+    </InstrumentData>
+    <SettlementData>
+      <Quantity>40</Quantity>
+      <QuantityUnit>MW</QuantityUnit>
+      <Price>28</Price>
+      <PriceIsoCurrency>NOK</PriceIsoCurrency>
+      <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+      <CurrencySource>Viz</CurrencySource>
+    </SettlementData>
+    <DealDetails>
+      <Trader>DealImport</Trader>
+      <CounterpartyTrader>Markus TraderCounterparty</CounterpartyTrader>
+      <Status>Active</Status>
+      <TradeDateTimeUtc>2007-12-23T23:00:00Z</TradeDateTimeUtc>
+    </DealDetails>
+    <FeesData>
+      <ClearingType>Electronic</ClearingType>
+    </FeesData>
+    <ReferenceData>
+      <ExternalId>PassElectricityForwardCounterpartyTrader</ExternalId>
+      <ExternalSource>XMLFileImport</ExternalSource>
+      <TicketNumber>TicketNumber</TicketNumber>
+      <DealGroups>
+        <DealGroup Name="DealGroup1" Value="API Test" />
+      </DealGroups>
+      <Comment>PassElectricityForwardCounterpartyTrader</Comment>
+      <ModificationDateTimeUtc>2016-10-17T11:18:11Z</ModificationDateTimeUtc>
+      <RiskValue>0</RiskValue>
+      <Originator>true</Originator>
+      <Deliveries>8784</Deliveries>
+      <OriginalQuantity>40</OriginalQuantity>
+      <ReferringId>2908</ReferringId>
+    </ReferenceData>
+    <PropertyGroups>
+      <PropertyGroup Name="Deal Group">
+        <Properties>
+          <Property Name="GroupField1" Value="API Test" ValueType="System.String" />
+        </Properties>
+      </PropertyGroup>
+    </PropertyGroups>
+    <TransactionWorkFlowDetails>
+      <Authorised>false</Authorised>
+      <Paid>false</Paid>
+      <ConfirmedByBroker>false</ConfirmedByBroker>
+      <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+      <Audited>false</Audited>
+    </TransactionWorkFlowDetails>
+  </QaTransactionDTO>
+</TestCase>

@@ -1,0 +1,31 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>zMonth-Special-Cases-FSD-Model-Exposure-EUR</workspace>
+    <monitor>zMonth-Special-Cases-FSD-Model-Exposure-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>Special-Cases,Electricity,Special-Cases-FSD-Model-Generation,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,StructuredDeal,Physical,Base,NordPool System Price,None,CET,EUR,Special-Cases-FSD-Model-Generation,NordPool System Price,MWh,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,7440,2640,4800</record>
+        <record>Special-Cases,Electricity,Special-Cases-FSD-Model-Generation,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,StructuredDeal,Physical,Base,NordPool System Price,None,CET,EUR,Special-Cases-FSD-Model-Generation,NordPool System Price,MWh,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,6960.00000000063,2520.00000000023,4440.0000000004</record>
+        <record>Special-Cases,Electricity,Special-Cases-FSD-Model-Generation,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,StructuredDeal,Physical,Base,NordPool System Price,None,CET,EUR,Special-Cases-FSD-Model-Generation,NordPool System Price,MWh,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,7430,2640,4790</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>NordPool System Price,2011-11-02 00:00:00.000,2011-12-01 00:00:00.000,44.5064361822518,50.3865111892283,41.1690963134272</record>
+        <record>NordPool System Price,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,46.56,53.5,42.7430000000001</record>
+        <record>NordPool System Price,2012-01-01 00:00:00.000,2012-02-01 00:00:00.000,47.58,54.3000000000001,43.8839999999999</record>
+        <record>NordPool System Price,2012-02-01 00:00:00.000,2012-03-01 00:00:00.000,47.8000000000001,52.6495913978224,45.0475292066415</record>
+        <record>NordPool System Price,2012-03-01 00:00:00.000,2012-04-01 00:00:00.000,45.0999999999995,50.2617536657146,42.2551086268287</record>
+        <record>SYOSL,2011-11-02 00:00:00.000,2011-12-01 00:00:00.000,-2.27212587469136,0,-2.27212587469136</record>
+        <record>SYOSL,2011-12-01 00:00:00.000,2012-01-01 00:00:00.000,-1.5,0,-1.5</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

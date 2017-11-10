@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Trading fee with value type Fixed has an invalid fee unit, NOK/MWh is not a valid currency for import</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Asian</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityAsian>
+			<InstrumentData>
+				<Timezone>CET+1</Timezone>
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<LoadProfile>SystemBase</LoadProfile>
+				<FromDate>2010-06-01</FromDate>
+				<ToDate>2010-06-30</ToDate>
+				<Financial/>
+				<PutCall>Put</PutCall>
+				<Strike>1.0</Strike>
+				<SamplingPeriod>All</SamplingPeriod>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>2.0</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>3.0</Price>
+				<Currency>NOK</Currency>
+				<CurrencySource>NordPool</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+				<FeesData>
+					<Fees>
+						<Fee FeeType="Clearing" FeeValueType="Variable" FeeValue="4.0" FeeUnit="NOK/MWh"/>
+						<Fee FeeType="Broker" FeeValueType="Variable" FeeValue="3.3" FeeUnit="NOK/MWh"/>
+						<Fee FeeType="Trading" FeeValueType="Variable" FeeValue="5.0" FeeUnit="NOK/MWh"/>
+						<Fee FeeType="Trading" FeeValueType="Fixed" FeeValue="0.1" FeeUnit="NOK/MWh"/>
+					</Fees>
+				</FeesData>
+		</ElectricityAsian>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-05-01T00:00:00</TradeDate>
+			<TradeDateTimeZone>CET 06-06</TradeDateTimeZone>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>API test: ElectricityAsianFinancial; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassElectricityAsianFinancialFees</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

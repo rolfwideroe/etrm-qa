@@ -1,0 +1,145 @@
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Schemas/DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Emission-European</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<EmissionEuropean>
+			<InstrumentData>
+				<ExecutionVenue>ICE</ExecutionVenue>
+				<PriceBasis>EUA</PriceBasis>
+				<SettlementDate>2011-12-19</SettlementDate>				
+				<PutCall>Put</PutCall>
+				<Strike>100.00</Strike>
+				<ExpiryDate>2009-03-01</ExpiryDate>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>38</Quantity>
+				<QuantityUnit>Ton</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerTon</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</EmissionEuropean>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2011-02-24T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>			
+			<TimeStampClearedUTC>2011-11-20T15:00:00</TimeStampClearedUTC>
+			<TimeStampConfirmationBrokerUTC>2011-11-21T13:00:00</TimeStampConfirmationBrokerUTC>
+			<TimeStampConfirmationCounterPartyUTC>2011-11-30T23:59:00</TimeStampConfirmationCounterPartyUTC>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>EmissionEuropean; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassEmissionEuropeanCompliance</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>				
+		<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="PassEmissionEuropeanCompliance"/>
+				<DateProperty name="TerminationDate" value="2013-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+				<StringProperty name="EMIRStatus" value="EMIR risk reducing"/>
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>389</TransactionId>
+  <DealType>Emission-European</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>ICE</ExecutionVenue>
+    <InstrumentName>EURP EUADEC-11 01-MAR-09 100.00</InstrumentName>
+    <PriceBasis>EUA</PriceBasis>
+    <FromDate>2011-12-19T00:00:00</FromDate>
+    <ToDate>2011-12-19T00:00:00</ToDate>
+    <PutCall>Put</PutCall>
+    <Strike>100</Strike>
+    <ExpiryDate>2009-03-01T00:00:00</ExpiryDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>38</Quantity>
+    <QuantityUnit>Ton</QuantityUnit>
+    <Price>28</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerTon</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2011-02-23T23:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassEmissionEuropeanCompliance</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>EmissionEuropean; should pass</Comment>
+    <ModificationDateTimeUtc>2014-08-11T12:51:45Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>24</Deliveries>
+    <OriginalQuantity>38</OriginalQuantity>
+    <ReferringId>390</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="PassEmissionEuropeanCompliance" ValueType="System.String" />
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+        <Property Name="TerminationDate" Value="2013-11-20T00:00:00" ValueType="System.DateTime" />
+        <Property Name="EMIRStatus" Value="EMIR risk reducing" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  <PropertyGroup Name="Deal Group"> <Properties> <Property Name="GroupField1" Value="API Test" ValueType="System.String" /> </Properties> </PropertyGroup> </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+    <TimeStampClearedUtc>2011-11-20T15:00:00Z</TimeStampClearedUtc> 
+	<TimeStampConfirmationBrokerUtc>2011-11-21T13:00:00Z</TimeStampConfirmationBrokerUtc>
+    <TimeStampConfirmationCounterPartyUtc>2011-11-30T23:59:00Z</TimeStampConfirmationCounterPartyUtc>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

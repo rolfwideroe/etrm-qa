@@ -1,0 +1,31 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>ExpHistoricalPrices-FSD-EUR-ActualPL-NOK-Aggr</workspace>
+    <monitor>ExpHistoricalPrices-FSD-EUR-ActualPL-NOK-Aggr</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitorAggregatedStructDeals.xml" />
+      <returns>
+        <record>2011-01-01 00:00:00.000,0,HI,176,NOK,-1246625.57546853,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2011-02-01 00:00:00.000,0,HI,176,NOK,-3190394.41379425,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2011-03-01 00:00:00.000,0,HI,176,NOK,-3017532.87329098,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2011-04-01 00:00:00.000,0,HI,176,NOK,-2366597.46132137,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2011-05-01 00:00:00.000,0,HI,176,NOK,-986961.126878645,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2011-08-01 00:00:00.000,0,HI,176,NOK,-4694535.89653779,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2011-09-01 00:00:00.000,0,HI,176,NOK,-3806490.016027,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2011-10-01 00:00:00.000,0,HI,176,NOK,-6765981.48038208,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2011-11-01 00:00:00.000,0,TR,176,NOK,-3710207.69148318,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2011-12-01 00:00:00.000,0,TR,176,NOK,-2901105.25640958,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2012-01-01 00:00:00.000,0,TR,176,NOK,-3980130.45797474,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2012-02-01 00:00:00.000,0,TR,176,NOK,-1085403.01872749,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2012-03-01 00:00:00.000,0,TR,176,NOK,-1731267.07406945,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+        <record>2012-04-01 00:00:00.000,0,TR,176,NOK,-675854.297619099,monthly,Structured Deal,Physical Flexible Volume deal(s)</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

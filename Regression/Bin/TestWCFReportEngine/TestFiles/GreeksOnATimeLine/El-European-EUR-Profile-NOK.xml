@@ -1,0 +1,112 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>GreeksOnATimelineReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-16T00:00:00" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="NOK" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseEndDate" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="PosCalcMethod" IsNotSet="false" XmlEncodedValue="NPVWA" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="TimeResolution" IsNotSet="false" XmlEncodedValue="Month" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="El-EU-Profile-EUR" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedTimeSeriesArtifacts>
+      <ExpectedTimeSeriesArtifact ArtifactId="greeksOnATimeline" Columns="GroupBy,Greek,ReferenceArea,TimeZone,From,Until,Value" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Double">
+        <TimeSeriesProperties>
+          <Property Name="GroupBy" DataType="System.String" />
+          <Property Name="Greek" DataType="System.String" />
+          <Property Name="ReferenceArea" DataType="System.String" />
+        </TimeSeriesProperties>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,10856.3985986481</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,20825.1426695035</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,19314.9223995776</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,7736.33523198476</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,15217.5145756987</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,15534.5461293591</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,28052.1680160134</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,11238.4614111697</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,14720.8015667434</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,7914.40944448569</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,7775.90727920719</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,7597.83306670626</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (Curve Unit),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,10961.4570806127</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,14.5919336003335</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,27.9907831579348</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,27.7513252867495</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,10.4122950632366</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,21.1354369106926</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,20.879766302902</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,38.9613444666853</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,15.1054588859808</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,19.7860236112142</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,10.9922353395635</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,10.4374594351774</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,10.5525459259809</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Delta (MW),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,14.7331412373826</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (Curve Unit),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,5.55111512312578E-17</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Gamma (MW),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,15.8659472387317</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,102.922658050012</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,96.2319212913526</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,56.6545096410438</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,88.8238343044096</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,90.6743308524182</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,171.087817104079</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,94.7300108324825</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,107.802954406487</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,57.9585776378965</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,56.9443025292333</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,55.6402345323806</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Theta (NOK/day),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,88.3231225675794</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2011-11-17T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,-1.13686837721616E-13</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>El-EU-Profile-EUR,Vega (NOK/Vol(%)),OMIP,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,0</ExpectedRecord>
+      </ExpectedTimeSeriesArtifact>
+    </ExpectedTimeSeriesArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

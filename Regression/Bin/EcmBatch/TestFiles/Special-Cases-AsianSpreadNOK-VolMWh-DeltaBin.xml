@@ -1,0 +1,37 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-AsianSpreadNOK-VolMWh-DeltaBin</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,HI,109,EUR,490,monthly,Asian,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,Special-Cases-AsianSpreadNOK-0001</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,240,monthly,Asian,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,Special-Cases-AsianSpreadNOK-0001</record>
+        <record>2011-01-01 00:00:00.000,0,HI,109,EUR,7440,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0002</record>
+        <record>2011-02-01 00:00:00.000,0,HI,109,EUR,6720,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0002</record>
+        <record>2011-03-01 00:00:00.000,0,HI,109,EUR,7430,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0002</record>
+        <record>2011-04-01 00:00:00.000,0,HI,109,EUR,7200,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0002</record>
+        <record>2011-05-01 00:00:00.000,0,HI,109,EUR,7440,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0002</record>
+        <record>2011-06-01 00:00:00.000,0,HI,109,EUR,7200,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0002</record>
+        <record>2011-10-01 00:00:00.000,0,HI,109,EUR,490,monthly,Asian,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,Special-Cases-AsianSpreadNOK-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,479.943127161885,monthly,Asian,ASIC/D 30-Oct-11 - 02-Nov-11 -15.00,Special-Cases-AsianSpreadNOK-0005</record>
+        <record>2011-04-01 00:00:00.000,0,HI,109,EUR,7200,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0006</record>
+        <record>2011-05-01 00:00:00.000,0,HI,109,EUR,7440,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0006</record>
+        <record>2011-06-01 00:00:00.000,0,HI,109,EUR,7200,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0006</record>
+        <record>2011-07-01 00:00:00.000,0,HI,109,EUR,7440,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0006</record>
+        <record>2011-08-01 00:00:00.000,0,HI,109,EUR,7440,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0006</record>
+        <record>2011-09-01 00:00:00.000,0,HI,109,EUR,7200,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0006</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,6673.80703775061,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0006</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,7134.06959207824,monthly,Asian,ASIC/Q YR-11 0.00,Special-Cases-AsianSpreadNOK-0006</record>
+        <record>2011-11-01 00:00:00.000,0,TR,109,EUR,6563.85541708935,monthly,Asian,ASIC/M Q4-11 15.00,Special-Cases-AsianSpreadNOK-0007</record>
+        <record>2011-12-01 00:00:00.000,0,TR,109,EUR,6639.81977845335,monthly,Asian,ASIC/M Q4-11 15.00,Special-Cases-AsianSpreadNOK-0007</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

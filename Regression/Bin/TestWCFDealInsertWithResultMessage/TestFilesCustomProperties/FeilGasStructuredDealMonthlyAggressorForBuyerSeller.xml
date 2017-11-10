@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>BuyerInitiatorAggressor and SellerInitiatorAggressor cannot have same values.</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Data/ElvizETRM/Development/Source/Integration/Viz.Integration.Core.DealImport/Files/Schemas/DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>Endex TTF</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2010-10-01</FromDate>
+				<ToDate>2010-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Transaction Name</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<StructuredDealInformation Resolution="Monthly">
+					<TimeSeriesDetail FromDateTime="2010-10-01T00:00:00" Price="1" Volume="1" ToDateTime="2010-11-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2010-11-01T00:00:00" Price="2" Volume="2" ToDateTime="2010-12-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2010-12-01T00:00:00" Price="3" Volume="3" ToDateTime="2011-01-01T00:00:00"/>
+				</StructuredDealInformation>
+				<QuantityUnit>MWh/d</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2008-09-10T21:22:23</TradeDate>
+			<TimeStampClearedUTC>2008-11-20T15:00:00</TimeStampClearedUTC>
+			<TimeStampConfirmationBrokerUTC>2008-11-21T13:00:00</TimeStampConfirmationBrokerUTC>
+			<TimeStampConfirmationCounterPartyUTC>2008-11-22T17:00:00</TimeStampConfirmationCounterPartyUTC>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>GasStructuredDealMonthly; should pass</Comment>
+			<ExternalId>PassGasStructuredDealMonthlyCompliance</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+		<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="PassGasStructuredDealMonthlyCompliance"/>
+				<DateProperty name="TerminationDate" value="2013-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+				<StringProperty name="BuyerInitiatorAggressor" value="Aggressor"/>
+				<StringProperty name="SellerInitiatorAggressor" value="Aggressor"/>
+				<BooleanProperty name="RemitReporting" value="1"/>
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>False</AssertQaTransactionDTO>
+</TestCase>

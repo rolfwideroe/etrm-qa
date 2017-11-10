@@ -1,0 +1,84 @@
+<BulkDealInsert>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-Storage</DealType>
+		<Portfolios>
+			<Portfolio>StorageCustomerTTF</Portfolio>
+			<CounterpartyPortfolio>StorageCounterPartyTTF</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStorage>
+			<InstrumentData>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<FromDate>2011-01-01</FromDate>
+				<ToDate>2011-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+					<DeliveryLocation>TTF_StorageLocationA</DeliveryLocation>
+				</Physical>
+				<TransactionName>Gas-Storage-TTF-Mix</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>VolumeMeasurement</TimeSeriesType>						
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<Version>
+							<Comment></Comment>
+						</Version>
+							<TimeSeriesDetail FromDateTime="2010-12-31T00:00:00" Value="10024" />
+							<TimeSeriesDetail FromDateTime="2011-11-11T00:00:00" Value="100" />
+							<TimeSeriesDetail FromDateTime="2011-11-15T00:00:00" Value="1000" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MWh/d</QuantityUnit>
+				<InitialPrice>44.444</InitialPrice>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+			</SettlementData>
+		</GasStorage>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<ExternalId>Gas-Storage-TTF-Mix1</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</BulkDealInsert>
+<!--
+<UpdateXml>
+		<DealInsert>
+		<MetaData>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<TransactionPart>
+			<SettlementData>
+			<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>VolumeMeasurement</TimeSeriesType>						
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>
+						<TimeSeriesDetail FromDateTime="2013-12-31T06:00:00" ToDateTime="2014-01-01T06:00:00" Value="10" />
+						<TimeSeriesDetail FromDateTime="2014-01-01T06:00:00" ToDateTime="2014-01-02T06:00:00" Value="48" />
+						<TimeSeriesDetail FromDateTime="2014-01-02T06:00:00" ToDateTime="2014-01-03T06:00:00" Value="72" />
+						<TimeSeriesDetail FromDateTime="2014-01-04T06:00:00" ToDateTime="2014-01-05T06:00:00" Value="96" />
+					</TimeSeries>
+			</FlexibleStructuredDealInformation>
+			</SettlementData>
+			<ReferenceData>
+				<ExternalId>GasStoragePassWithTranPart</ExternalId>
+			</ReferenceData>
+		</TransactionPart>
+	</DealInsert>
+</UpdateXml>
+-->

@@ -1,0 +1,19 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-GridPointPricebasis-PosMon-NOK</workspace>
+    <monitor>Special-Cases-GridPointPricebasis-PosMon-NOK</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0109 Special-Cases,Base,Physical,Barsebekk,Q4-11,Q4-11 - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Special-Cases-GridPointPricebasis-InDelivery - Base,,,,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Active,0,-1237699.5122364,-3971370.7175629,-5209070.2297993,-5087945.38632061,-3971370.7175629,596448.79291322,1116574.6687577,1713023.46167092,-1.64383561643836,-14400,0,-10,0,0,-7690,1440,-10,NULL,0,0,0,0,0,0,77.5399075526184,1116574.6687577,353.329540716709,0,0,Special-Cases-GridPointPricebasis-InDelivery</record>
+        <record>0109 Special-Cases,Base,Physical,Barsebekk,Q1-11,Q1-11 - Base,,CET,EUR,Viz,Electricity,,Structured Deal,Special-Cases-GridPointPricebasis-PostDelivery - Base,,,,2011-01-01 00:00:00.000,2011-03-31 00:00:00.000,Expired,0,-9446566.97920119,0,-9446566.97920119,0,0,1690879.99684687,0,1690879.99684687,0,0,0,-10,0,0,-21590,2159,-10,NULL,0,0,0,0,0,0,78.3177395482571,1690879.99684687,0,0,0,Special-Cases-GridPointPricebasis-PostDelivery</record>
+        <record>0109 Special-Cases,Base,Physical,Barsebekk,Q1-12,Q1-12 - Base,ECS Curve,CET,EUR,Viz,Electricity,,Structured Deal,Special-Cases-GridPointPricebasis-PreDelivery - Base,,,,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Active,0,0,-6249086.74544508,-6249086.74544508,-7946928.74316695,-6249086.74544508,0,1697841.99772187,1697841.99772187,-2.49200913242009,-21830,0,-10,0,0,0,2183,-10,NULL,0,0,0,0,0,0,77.7756297627973,1697841.99772187,364.037047327849,0,0,Special-Cases-GridPointPricebasis-PreDelivery</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

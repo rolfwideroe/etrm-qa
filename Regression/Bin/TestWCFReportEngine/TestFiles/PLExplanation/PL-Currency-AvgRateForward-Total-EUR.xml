@@ -1,0 +1,57 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Currency-AvgRateForward" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Currency-AvgRateForward-0001;Currency-AvgRateForward-0002;Currency-AvgRateForward-0003,USDEUR 010611 - 300611,,AverageRateForward,Currency-AvgRateForward,142250.017736839,142250.017736839,142250.017736839,142250.017736839,142250.017736839,142250.017736839,142250.017736839,142250.017736839,142250.017736839</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0004;Currency-AvgRateForward-0005;Currency-AvgRateForward-0006,USDEUR 011011 - 311211,,AverageRateForward,Currency-AvgRateForward,102838.084215652,102287.170851556,102287.170851556,102287.170851556,102287.170851556,102287.170851556,102287.170851556,98510.4744445494,98510.4744445494</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0007;Currency-AvgRateForward-0008;Currency-AvgRateForward-0009,USDEUR 010112 - 310312,,AverageRateForward,Currency-AvgRateForward,101563.765105413,101563.765105413,101563.765105413,101563.765105413,101563.765105413,101563.765105413,101563.765105413,93696.7215542467,93696.7215542467</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0010;Currency-AvgRateForward-0011;Currency-AvgRateForward-0012,EURUSD 010611 - 300611,,AverageRateForward,Currency-AvgRateForward,336169.522793252,336169.522793252,336169.522793252,336169.522793252,336169.522793252,336169.522793252,336169.522793252,336169.522793252,336169.522793252</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0013;Currency-AvgRateForward-0014;Currency-AvgRateForward-0015,EURUSD 011011 - 311211,,AverageRateForward,Currency-AvgRateForward,303344.624346006,302941.036762832,302941.036762832,302941.036762832,302941.036762832,302941.036762832,302941.036762832,299545.887817195,299545.887817195</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0016;Currency-AvgRateForward-0017;Currency-AvgRateForward-0018,EURUSD 010112 - 310312,,AverageRateForward,Currency-AvgRateForward,170800,170800,170800,170800,170800,170800,170800,170800,170800</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0019;Currency-AvgRateForward-0020;Currency-AvgRateForward-0021,SEKEUR 010611 - 300611,,AverageRateForward,Currency-AvgRateForward,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0022;Currency-AvgRateForward-0023;Currency-AvgRateForward-0024,SEKEUR 011011 - 311211,,AverageRateForward,Currency-AvgRateForward,8511.62891773767,8833.47326038828,8833.47326038828,8833.47326038828,8833.47326038828,8833.47326038828,8833.47326038828,12967.1607480853,12967.1607480853</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0025;Currency-AvgRateForward-0026;Currency-AvgRateForward-0027,SEKEUR 010112 - 310312,,AverageRateForward,Currency-AvgRateForward,8086.07612824141,8086.07612824141,8086.07612824141,8086.07612824141,8086.07612824141,8086.07612824141,8086.07612824141,16032.023185242,16032.023185242</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Currency-AvgRateForward-0001;Currency-AvgRateForward-0002;Currency-AvgRateForward-0003,USDEUR 010611 - 300611,,AverageRateForward,Currency-AvgRateForward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0004;Currency-AvgRateForward-0005;Currency-AvgRateForward-0006,USDEUR 011011 - 311211,,AverageRateForward,Currency-AvgRateForward,102838.084215652,102287.170851556,102287.170851556,102287.170851556,102287.170851556,102287.170851556,102287.170851556,98510.4744445494,98510.4744445494</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0007;Currency-AvgRateForward-0008;Currency-AvgRateForward-0009,USDEUR 010112 - 310312,,AverageRateForward,Currency-AvgRateForward,101563.765105413,101563.765105413,101563.765105413,101563.765105413,101563.765105413,101563.765105413,101563.765105413,93696.7215542467,93696.7215542467</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0010;Currency-AvgRateForward-0011;Currency-AvgRateForward-0012,EURUSD 010611 - 300611,,AverageRateForward,Currency-AvgRateForward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0013;Currency-AvgRateForward-0014;Currency-AvgRateForward-0015,EURUSD 011011 - 311211,,AverageRateForward,Currency-AvgRateForward,303344.624346006,302941.036762832,302941.036762832,302941.036762832,302941.036762832,302941.036762832,302941.036762832,299545.887817195,299545.887817195</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0016;Currency-AvgRateForward-0017;Currency-AvgRateForward-0018,EURUSD 010112 - 310312,,AverageRateForward,Currency-AvgRateForward,170800,170800,170800,170800,170800,170800,170800,170800,170800</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0019;Currency-AvgRateForward-0020;Currency-AvgRateForward-0021,SEKEUR 010611 - 300611,,AverageRateForward,Currency-AvgRateForward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0022;Currency-AvgRateForward-0023;Currency-AvgRateForward-0024,SEKEUR 011011 - 311211,,AverageRateForward,Currency-AvgRateForward,8511.62891773767,8833.47326038828,8833.47326038828,8833.47326038828,8833.47326038828,8833.47326038828,8833.47326038828,12967.1607480853,12967.1607480853</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0025;Currency-AvgRateForward-0026;Currency-AvgRateForward-0027,SEKEUR 010112 - 310312,,AverageRateForward,Currency-AvgRateForward,8086.07612824141,8086.07612824141,8086.07612824141,8086.07612824141,8086.07612824141,8086.07612824141,8086.07612824141,16032.023185242,16032.023185242</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Currency-AvgRateForward-0001;Currency-AvgRateForward-0002;Currency-AvgRateForward-0003,USDEUR 010611 - 300611,,AverageRateForward,Currency-AvgRateForward,142250.017736839,142250.017736839,142250.017736839,142250.017736839,142250.017736839,142250.017736839,142250.017736839,142250.017736839,142250.017736839</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0004;Currency-AvgRateForward-0005;Currency-AvgRateForward-0006,USDEUR 011011 - 311211,,AverageRateForward,Currency-AvgRateForward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0007;Currency-AvgRateForward-0008;Currency-AvgRateForward-0009,USDEUR 010112 - 310312,,AverageRateForward,Currency-AvgRateForward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0010;Currency-AvgRateForward-0011;Currency-AvgRateForward-0012,EURUSD 010611 - 300611,,AverageRateForward,Currency-AvgRateForward,336169.522793252,336169.522793252,336169.522793252,336169.522793252,336169.522793252,336169.522793252,336169.522793252,336169.522793252,336169.522793252</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0013;Currency-AvgRateForward-0014;Currency-AvgRateForward-0015,EURUSD 011011 - 311211,,AverageRateForward,Currency-AvgRateForward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0016;Currency-AvgRateForward-0017;Currency-AvgRateForward-0018,EURUSD 010112 - 310312,,AverageRateForward,Currency-AvgRateForward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0019;Currency-AvgRateForward-0020;Currency-AvgRateForward-0021,SEKEUR 010611 - 300611,,AverageRateForward,Currency-AvgRateForward,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375,13696.9611096375</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0022;Currency-AvgRateForward-0023;Currency-AvgRateForward-0024,SEKEUR 011011 - 311211,,AverageRateForward,Currency-AvgRateForward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Currency-AvgRateForward-0025;Currency-AvgRateForward-0026;Currency-AvgRateForward-0027,SEKEUR 010112 - 310312,,AverageRateForward,Currency-AvgRateForward,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

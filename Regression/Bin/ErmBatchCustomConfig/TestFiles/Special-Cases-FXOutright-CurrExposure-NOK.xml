@@ -1,0 +1,87 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FXOutright-CurrExposure-NOK</workspace>
+    <monitor>Special-Cases-FXOutright-CurrExposure-NOK</monitor>
+    <reportdate>2011-11-07T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="EnableFxOutright" Value="True" />
+    </ElvizConfigurations>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>Special-Cases,Currency,USDEUR 07-Dec-11,2011-12-07 00:00:00.000,2011-12-07 00:00:00.000,Currency forward,Financial,Base,N/A,,CET,USD,Special-Cases-FXOutright-Currency-Forward-0001,EUR,2011-12-07 00:00:00.000,1000000</record>
+        <record>Special-Cases,Currency,USDEUR 07-Dec-11,2011-12-07 00:00:00.000,2011-12-07 00:00:00.000,Currency forward,Financial,Base,N/A,,CET,USD,Special-Cases-FXOutright-Currency-Forward-0001,USD,2011-12-07 00:00:00.000,-1444400</record>
+        <record>Special-Cases,Elcertificate,ECS Mar-12,2012-03-16 00:00:00.000,2012-03-16 00:00:00.000,Elcertificate forward,Physical,Base,Elcertificate,,CET,SEK,Special-Cases-FXOutright-ElCert-Forward-OTC-0001,SEK,2012-03-16 00:00:00.000,4623582.03965114</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-08 00:00:00.000,-1384.8</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-09 00:00:00.000,-801.600000000008</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-10 00:00:00.000,-784.799999999996</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-11 00:00:00.000,-664.800000000019</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-12 00:00:00.000,-1360.80000000001</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-13 00:00:00.000,-1360.80000000003</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-14 00:00:00.000,431.077591077579</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-15 00:00:00.000,455.463687326763</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-16 00:00:00.000,561.702848987416</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-17 00:00:00.000,284.496972220779</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-18 00:00:00.000,-28.5531476978886</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-19 00:00:00.000,-712.017010744645</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-20 00:00:00.000,-941.770941169949</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-21 00:00:00.000,442.080661931157</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-22 00:00:00.000,461.132421075523</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-23 00:00:00.000,546.888340310872</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-24 00:00:00.000,336.647538476356</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-25 00:00:00.000,91.769660274691</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-26 00:00:00.000,-442.805602236382</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-27 00:00:00.000,-629.313019832451</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-28 00:00:00.000,-248.656740696548</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-29 00:00:00.000,-230.400463892376</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-FXOutright-El-Forward-EUR-0001,EUR,2011-11-30 00:00:00.000,-150.013714241846</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-08 00:00:00.000,5910.12018665938</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-09 00:00:00.000,6104.73824612514</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-10 00:00:00.000,6294.43018902051</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-11 00:00:00.000,6474.67341350599</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-14 00:00:00.000,7017.55257514765</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-15 00:00:00.000,7030.16206937632</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-16 00:00:00.000,7056.85696860203</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-17 00:00:00.000,6791.42872079954</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-18 00:00:00.000,6603.9996660745</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-21 00:00:00.000,6869.75580715654</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-22 00:00:00.000,6879.47699669402</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-23 00:00:00.000,6899.1191151123</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-24 00:00:00.000,6697.97944270181</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-25 00:00:00.000,6553.6686383353</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-28 00:00:00.000,6711.57771043349</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-29 00:00:00.000,6721.22321058538</record>
+        <record>Special-Cases,Electricity,M11-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Peak,NordPool System Price,,CET,NOK,Special-Cases-FXOutright-El-Forward-NOK-0001,EUR,2011-11-30 00:00:00.000,6740.76421732189</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-08 00:00:00.000,-18688.1065172289</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-09 00:00:00.000,-18639.1238339432</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-10 00:00:00.000,-18594.3540864316</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-11 00:00:00.000,-18549.6103693412</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-12 00:00:00.000,-18504.9093421417</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-13 00:00:00.000,-18460.27182917</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-14 00:00:00.000,-18415.7228196305</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-15 00:00:00.000,-18371.2914675952</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-16 00:00:00.000,-18327.011092003</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-17 00:00:00.000,-18282.9191766607</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-18 00:00:00.000,-18239.0573702423</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-19 00:00:00.000,-18195.471486289</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-20 00:00:00.000,-18152.2115032099</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-21 00:00:00.000,-18109.3315642809</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-22 00:00:00.000,-18066.8899776458</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-23 00:00:00.000,-18024.9492163156</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-24 00:00:00.000,-17983.5759181685</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-25 00:00:00.000,-17942.8408859505</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-26 00:00:00.000,-17902.8190872748</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-27 00:00:00.000,-17863.5896546218</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-28 00:00:00.000,-17825.2358853397</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-29 00:00:00.000,-17787.8452416437</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-11-30 00:00:00.000,-17751.5093506168</record>
+        <record>Special-Cases,Gas,Nov-11,2011-11-01 00:00:00.000,2011-11-30 00:00:00.000,Forward,Financial,Base,ICE TTF,,CET 06-06,EUR,Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,EUR,2011-12-01 00:00:00.000,-4432.33251984164</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

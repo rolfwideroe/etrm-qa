@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\SmartBear\TestExecute 9\Bin\TestExecute.exe" "..\..\Source\TestComplete\CurveServer\CurveServer.pjs" /r /e

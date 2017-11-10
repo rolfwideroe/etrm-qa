@@ -1,0 +1,194 @@
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>GreenCertificate-Forward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GreenCertificateForward>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>				
+				<PriceBasis>TestGreenCert</PriceBasis>
+				<FromDate>2013-01-01</FromDate>
+				<ToDate>2013-12-31</ToDate>
+				<TransferDate>2012-08-27</TransferDate>
+				<CertificateType>LECs</CertificateType>
+				<ProductionFacility>Virtual OK Power</ProductionFacility>
+				<EnvironmentLabel>OK Power</EnvironmentLabel>
+				<FromCountry>Angola</FromCountry>
+				<ToCountry>Cyprus</ToCountry>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>40</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GreenCertificateForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2007-12-24T00:00:00</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>false</Authorised>
+			<Paid>false</Paid>
+			<TimeStampClearedUTC>2013-11-20T15:00:00</TimeStampClearedUTC>
+			<TimeStampConfirmationBrokerUTC>2013-11-21T13:00:00</TimeStampConfirmationBrokerUTC>
+			<TimeStampConfirmationCounterPartyUTC>2013-11-22T17:00:00</TimeStampConfirmationCounterPartyUTC>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>GreenCertificateForward; should pass</Comment>
+			<ExternalId>PassGreenCertificateForwardCustom Property</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+		<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="PassGreenCert Custom Property"/>
+				<DateProperty name="TerminationDate" value="2013-11-20"/>
+				<BooleanProperty name="DealCompression" value="1"/>
+				<StringProperty name="EMIRStatus" value="EMIR speculative"/>
+			</PropertyGroup>
+			<PropertyGroup name="Deal Group">
+				<StringProperty name="GroupField1" value="API Test"/>
+				<StringProperty name="GroupField2" value="DealGroupOne"/>
+				<StringProperty name="GroupField3" value="DealGroupGreenCert"/>
+			</PropertyGroup>
+			<PropertyGroup name="QA">
+				<StringProperty name="PropertyCustom1" value="Custom Property"/>
+				<StringProperty name="PropertyCustom2" value="Custom Property"/>
+				<StringProperty name="PropertyCustom3" value="Custom Property"/>
+			</PropertyGroup>
+			<PropertyGroup name="TestCustomer">
+				<StringProperty name="PropertyCustom4" value="Custom Property 4"/>
+				<StringProperty name="PropertyCustom5" value="Custom Property 5"/>
+				<StringProperty name="PropertyCustom6" value="Custom Property 6"/>
+				<StringProperty name="PropertyCustom7" value="Custom Property 7"/>
+				<StringProperty name="PropertyCustom8" value="Custom Property 8"/>
+				<StringProperty name="PropertyCustom9" value="Custom Property 9"/>
+				<StringProperty name="PropertyCustom10" value="Custom Property 10"/>
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>461</TransactionId>
+  <DealType>Green Certificate-Forward</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+	<ExecutionVenue>None</ExecutionVenue>  
+    <InstrumentName>LECs YR-13</InstrumentName>
+	<PriceBasis>TestGreenCert</PriceBasis>
+    <FromDate>2013-01-01T00:00:00</FromDate>
+    <ToDate>2013-12-31T00:00:00</ToDate>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <TransferDate>2012-08-27T00:00:00</TransferDate>
+    <CertificateType>LECs</CertificateType>
+    <ProductionFacility>Virtual OK Power</ProductionFacility>
+    <EnvironmentLabel>OK Power</EnvironmentLabel>
+    <FromCountry>Angola</FromCountry>
+    <ToCountry>Cyprus</ToCountry>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>40</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>28</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2007-12-23T23:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassGreenCertificateForwardCustom Property</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>GreenCertificateForward; should pass</Comment>
+    <ModificationDateTimeUtc>2014-07-31T09:46:51Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>8760</Deliveries>
+    <OriginalQuantity>40</OriginalQuantity>
+    <ReferringId>462</ReferringId>
+  </ReferenceData>
+   <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="PassGreenCert Custom Property" ValueType="System.String" />
+        <Property Name="DealCompression" Value="True" ValueType="System.Boolean" />
+        <Property Name="TerminationDate" Value="2013-11-20T00:00:00" ValueType="System.DateTime" />
+        <Property Name="EMIRStatus" Value="EMIR speculative" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+    <PropertyGroup Name="Deal Group">
+      <Properties>
+        <Property Name="GroupField1" Value="API Test" ValueType="System.String" />
+        <Property Name="GroupField2" Value="DealGroupOne" ValueType="System.String" />
+        <Property Name="GroupField3" Value="DealGroupGreenCert" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+    <PropertyGroup Name="QA">
+      <Properties>
+        <Property Name="PropertyCustom1" Value="Custom Property" ValueType="System.String" />
+        <Property Name="PropertyCustom2" Value="Custom Property" ValueType="System.String" />
+        <Property Name="PropertyCustom3" Value="Custom Property" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+    <PropertyGroup Name="TestCustomer">
+      <Properties>
+        <Property Name="PropertyCustom4" Value="Custom Property 4" ValueType="System.String" />
+        <Property Name="PropertyCustom5" Value="Custom Property 5" ValueType="System.String" />
+        <Property Name="PropertyCustom6" Value="Custom Property 6" ValueType="System.String" />
+        <Property Name="PropertyCustom7" Value="Custom Property 7" ValueType="System.String" />
+        <Property Name="PropertyCustom8" Value="Custom Property 8" ValueType="System.String" />
+        <Property Name="PropertyCustom9" Value="Custom Property 9" ValueType="System.String" />
+        <Property Name="PropertyCustom10" Value="Custom Property 10" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+    <TimeStampClearedUtc>2013-11-20T15:00:00Z</TimeStampClearedUtc>
+	<TimeStampConfirmationBrokerUtc>2013-11-21T13:00:00Z</TimeStampConfirmationBrokerUtc>
+    <TimeStampConfirmationCounterPartyUtc>2013-11-22T17:00:00Z</TimeStampConfirmationCounterPartyUtc>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

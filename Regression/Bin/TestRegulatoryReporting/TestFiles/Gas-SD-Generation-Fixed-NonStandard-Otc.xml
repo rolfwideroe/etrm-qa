@@ -1,0 +1,153 @@
+<TestCase>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>				
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>TTF</PriceBasis>
+        <PriceType>Fixed</PriceType>
+				<FromDate>2016-06-01</FromDate>
+				<ToDate>2016-06-02</ToDate>
+				<Physical>
+					<DeliveryArea AreaName='TTF' />
+				</Physical>
+        <TransactionName>Remit-SD-Generation-Physical</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+          <ModelType>Generation</ModelType>
+          <TimeSeries>
+            <TimeSeriesType>ForecastedVolume</TimeSeriesType>
+            <Resolution>Daily</Resolution>
+            <TimeZone>CET</TimeZone>
+            <TimeSeriesDetail FromDateTime="2016-06-01T00:00:00" Value="1"/>
+            <TimeSeriesDetail FromDateTime="2016-06-02T00:00:00" Value="2"/>
+          </TimeSeries>
+          <TimeSeries>
+            <TimeSeriesType>ForecastedPrice</TimeSeriesType>
+            <Resolution>Daily</Resolution>
+            <TimeZone>CET</TimeZone>
+            <TimeSeriesDetail FromDateTime="2016-06-01T00:00:00" Value="5"/>
+            <TimeSeriesDetail FromDateTime="2016-06-02T00:00:00" Value="6"/>
+          </TimeSeries>
+          <TimeSeries>
+            <TimeSeriesType>RealizedVolume</TimeSeriesType>
+            <Resolution>Daily</Resolution>
+            <TimeZone>CET</TimeZone>
+            <TimeSeriesDetail FromDateTime="2016-06-01T00:00:00" Value="23.57"/>
+            <TimeSeriesDetail FromDateTime="2016-06-02T00:00:00" Value="32.24"/>
+          </TimeSeries>
+          <TimeSeries>
+            <TimeSeriesType>RealizedPrice</TimeSeriesType>
+            <Resolution>Daily</Resolution>
+            <TimeZone>CET</TimeZone>
+            <TimeSeriesDetail FromDateTime="2016-06-01T00:00:00" Value="7"/>
+            <TimeSeriesDetail FromDateTime="2016-06-02T00:00:00" Value="8"/>
+          </TimeSeries>
+        </FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>NordPool</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2016-04-01T00:00:00Z</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<!--<Audited>true</Audited>-->
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>API test: GasSDGenerationFixedPhysical; should pass</Comment>		
+      <GroupFields>
+        <GroupField1>API Test</GroupField1>
+        <GroupField2>REMIT</GroupField2>
+      </GroupFields>
+			<ExternalId>GasSDFlexGenerationPhysical</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+		<CustomProperties>
+			<PropertyGroup name='Compliance'>
+				<BooleanProperty name='RemitReporting' value='true' />	
+				<StringProperty name='UTI' value='GASSDGENFIXPH' />
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<RegulatoryReporting>
+<REMITTable2 xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.acer.europa.eu/REMIT/REMITTable2_V1.xsd">
+  <reportingEntityID>
+    <ace>T1241247G.EU</ace>
+  </reportingEntityID>
+  <TradeList>
+    <nonStandardContractReport>
+      <RecordSeqNumber>1</RecordSeqNumber>
+      <idOfMarketParticipant>
+		<ace>ACER12345.EU</ace>
+	  </idOfMarketParticipant>      <otherMarketParticipant>
+		<ace>ACER12346.EU</ace>
+	  </otherMarketParticipant>
+	  <beneficiaryIdentification>
+		<ace>ACER12345.EU</ace>
+	  </beneficiaryIdentification>
+      <tradingCapacity>A</tradingCapacity>
+      <buySellIndicator>B</buySellIndicator>
+      <contractId>GASSDGENFIXPH</contractId>
+      <contractDate>2016-04-01</contractDate>
+      <contractType>OT</contractType>
+      <energyCommodity>NG</energyCommodity>
+      <priceOrPriceFormula>
+        <price>
+          <value>5.66667</value>
+          <currency>EUR</currency>
+        </price>
+      </priceOrPriceFormula>
+      <estimatedNotionalAmount>
+        <value>408</value>
+        <currency>EUR</currency>
+      </estimatedNotionalAmount>
+      <totalNotionalContractQuantity>
+        <value>72</value>
+        <unit>MWh</unit>
+      </totalNotionalContractQuantity>
+      <volumeOptionality>V</volumeOptionality>
+      <typeOfIndexPrice>F</typeOfIndexPrice>
+      <fixingIndexDetails>
+        <fixingIndex>APXGas DAM TTF Hi All day</fixingIndex>
+        <fixingIndexType>OT</fixingIndexType>
+        <fixingIndexSource>TTF</fixingIndexSource>
+        <firstFixingDate>2016-06-01</firstFixingDate>
+        <lastFixingDate>2016-06-02</lastFixingDate>
+        <fixingFrequency>H</fixingFrequency>
+      </fixingIndexDetails>
+      <settlementMethod>P</settlementMethod>
+      <deliveryPointOrZone>21YNL----TTF---1</deliveryPointOrZone>
+      <deliveryStartDate>2016-06-01</deliveryStartDate>
+      <deliveryEndDate>2016-06-02</deliveryEndDate>
+      <loadType>SH</loadType>
+      <actionType>M</actionType>
+    </nonStandardContractReport>
+  </TradeList>
+</REMITTable2>
+</RegulatoryReporting>
+</TestCase>

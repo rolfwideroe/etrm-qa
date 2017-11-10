@@ -1,0 +1,50 @@
+﻿<!--?xml version="1.0" encoding="utf-8"?>
+<PriceFeed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <param Venue="NORDPOOL" Couterparty="NORDPOOL" Commodity="Emission" RefArea="EUA" TimeZone="(UTC+01:00) Central Europe Standard Time" Feed="APITestEmission" IsExchange="true" IsOption="false" IsSwap="false" Currency="EUR" />
+  <price LoadType="Base" Ticker="NED2503-15" From="2015-03-27T00:00:00" To="2015-03-27T00:00:00" PeriodType="WorkDay">
+    <Bid>8.21</Bid>
+    <Ask>8.32</Ask>
+    <Last>8.22</Last>
+    <Close>8.23</Close>
+  </price>
+  <price LoadType="Base" Ticker="NEDec9" From="2019-12-16T00:00:00" To="2019-12-16T00:00:00" PeriodType="CustomPeriod">
+    <Bid>7.21</Bid>
+    <Ask>7.32</Ask>
+    <Last>7.22</Last>
+    <Close>7.23</Close>
+  </price>
+</PriceFeed-->
+<LiveCurveSchedulingTestCase>
+  <Venue>NORDPOOL</Venue>
+  <Couterparty>NORDPOOL</Couterparty>
+  <Commodity>Emission</Commodity>
+  <RefArea>EUA</RefArea>
+  <TimeZone>(UTC+01:00) Central Europe Standard Time</TimeZone>
+  <Feed>APITestEmission</Feed>
+  <IsOption>false</IsOption>
+  <IsSwap>false</IsSwap>
+  <Currency>EUR</Currency>
+  <LivePrices>
+    <LivePrice>
+      <ReportDateOffSet>1</ReportDateOffSet>
+      <TickerRule>NED{dd}{MM}-{yy}</TickerRule>
+      <PeriodType>WorkDay</PeriodType>
+      <CustomFromToDate>2018-03-16</CustomFromToDate>
+      <LoadType>Base</LoadType>
+      <Bid>8.21</Bid>
+      <Ask>8.32</Ask>
+      <Last>8.22</Last>
+    <Close>8.23</Close>
+    </LivePrice>
+	<LivePrice>
+      <TickerRule>NEDec8</TickerRule>
+      <PeriodType>CustomPeriod</PeriodType>
+      <CustomFromToDate>2018-12-17</CustomFromToDate>
+      <LoadType>Base</LoadType>
+      <Bid>7.21</Bid>
+	  <Ask>7.32</Ask>
+	  <Last>7.22</Last>
+	  <Close>7.23</Close>
+    </LivePrice>
+  </LivePrices>
+</LiveCurveSchedulingTestCase>

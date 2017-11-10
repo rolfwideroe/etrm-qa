@@ -1,0 +1,444 @@
+<test type="EcmBatch" name="Gas-Storage-TTF-Mix-ActualPL-EUR-IntraDay" description="some more information can be put here">
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-Storage-TTF-Mix-ActualPL-EUR-IntraDay</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <tollerance>1E-08</tollerance>
+    <reportdate>2011-11-15T00:00:00</reportdate>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-02-01 00:00:00.000,0,HI,122,EUR,-9778.25412400474,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-02 00:00:00.000,0,HI,122,EUR,-9783.01512400475,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-03 00:00:00.000,0,HI,122,EUR,-8881.59912400475,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-04 00:00:00.000,0,HI,122,EUR,-8289.64812400475,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-05 00:00:00.000,0,HI,122,EUR,-8166.33822400475,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-06 00:00:00.000,0,HI,122,EUR,-8166.33822400475,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-07 00:00:00.000,0,HI,122,EUR,-8434.06512400476,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-08 00:00:00.000,0,HI,122,EUR,-8534.04612400475,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-09 00:00:00.000,0,HI,122,EUR,-9029.19012400476,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-10 00:00:00.000,0,HI,122,EUR,-9535.44312400475,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-11 00:00:00.000,0,HI,122,EUR,-9851.25612400475,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-12 00:00:00.000,0,HI,122,EUR,-9796.66332400477,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-13 00:00:00.000,0,HI,122,EUR,-9796.66332400477,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-14 00:00:00.000,0,HI,122,EUR,-9057.75612400476,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-15 00:00:00.000,0,HI,122,EUR,-9268.82712400477,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-16 00:00:00.000,0,HI,122,EUR,-8886.36012400478,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-17 00:00:00.000,0,HI,122,EUR,-9537.03012400476,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-18 00:00:00.000,0,HI,122,EUR,-9237.08712400481,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-19 00:00:00.000,0,HI,122,EUR,-9183.12912400477,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-20 00:00:00.000,0,HI,122,EUR,-9183.12912400477,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-21 00:00:00.000,0,HI,122,EUR,-9324.37212400478,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-22 00:00:00.000,0,HI,122,EUR,-8551.50312400478,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-23 00:00:00.000,0,HI,122,EUR,-7724.67612400477,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-24 00:00:00.000,0,HI,122,EUR,-7921.46412400478,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-25 00:00:00.000,0,HI,122,EUR,-8235.6901240048,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-26 00:00:00.000,0,HI,122,EUR,-8346.14532400478,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-27 00:00:00.000,0,HI,122,EUR,-8346.14532400478,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-02-28 00:00:00.000,0,HI,122,EUR,-8622.91812400478,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-01 00:00:00.000,0,HI,122,EUR,-405.40697803807,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-02 00:00:00.000,0,HI,122,EUR,-419.66297803807,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-03 00:00:00.000,0,HI,122,EUR,-419.662978038071,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-04 00:00:00.000,0,HI,122,EUR,-302.68697803807,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-05 00:00:00.000,0,HI,122,EUR,-418.606978038071,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-06 00:00:00.000,0,HI,122,EUR,-558.046978038071,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-07 00:00:00.000,0,HI,122,EUR,-674.68697803807,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-08 00:00:00.000,0,HI,122,EUR,-643.72697803807,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-09 00:00:00.000,0,HI,122,EUR,-673.654978038071,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-10 00:00:00.000,0,HI,122,EUR,-673.65497803807,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-11 00:00:00.000,0,HI,122,EUR,-599.32697803807,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-12 00:00:00.000,0,HI,122,EUR,-468.52697803807,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-13 00:00:00.000,0,HI,122,EUR,-446.926978038069,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-14 00:00:00.000,0,HI,122,EUR,-481.48697803807,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-04-15 00:00:00.000,0,HI,122,EUR,-448.366978038068,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-11-11 00:00:00.000,0,HI,122,EUR,-406161.058,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-11-15 00:00:00.000,0,TR,122,EUR,5838.58190225525,daily,Storage,Gas-Storage-TTF-Mix,Gas-Storage-TTF-Mix1</record>
+        <record>2011-03-01 00:00:00.000,0,HI,122,EUR,-5110.57186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-02 00:00:00.000,0,HI,122,EUR,-5095.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-03 00:00:00.000,0,HI,122,EUR,-5074.27186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-04 00:00:00.000,0,HI,122,EUR,-5050.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-05 00:00:00.000,0,HI,122,EUR,-5049.89186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-06 00:00:00.000,0,HI,122,EUR,-5049.89186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-07 00:00:00.000,0,HI,122,EUR,-5042.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-08 00:00:00.000,0,HI,122,EUR,-4976.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-09 00:00:00.000,0,HI,122,EUR,-5020.67186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-10 00:00:00.000,0,HI,122,EUR,-5022.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-11 00:00:00.000,0,HI,122,EUR,-5043.47186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-12 00:00:00.000,0,HI,122,EUR,-5028.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-13 00:00:00.000,0,HI,122,EUR,-5028.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-14 00:00:00.000,0,HI,122,EUR,-5023.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-15 00:00:00.000,0,HI,122,EUR,-4890.97186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-16 00:00:00.000,0,HI,122,EUR,-4875.97186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-17 00:00:00.000,0,HI,122,EUR,-4801.07186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-18 00:00:00.000,0,HI,122,EUR,-4815.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-19 00:00:00.000,0,HI,122,EUR,-4816.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-20 00:00:00.000,0,HI,122,EUR,-4816.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-21 00:00:00.000,0,HI,122,EUR,-4887.57186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-22 00:00:00.000,0,HI,122,EUR,-4958.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-23 00:00:00.000,0,HI,122,EUR,-4948.27186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-24 00:00:00.000,0,HI,122,EUR,-4914.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-25 00:00:00.000,0,HI,122,EUR,-4935.57186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-26 00:00:00.000,0,HI,122,EUR,-4930.92186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-27 00:00:00.000,0,HI,122,EUR,-4930.92186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-28 00:00:00.000,0,HI,122,EUR,-4966.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-29 00:00:00.000,0,HI,122,EUR,-4980.27186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-30 00:00:00.000,0,HI,122,EUR,-4991.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-31 00:00:00.000,0,HI,122,EUR,-5087.87186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0001</record>
+        <record>2011-03-01 00:00:00.000,0,HI,122,EUR,5010.57186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-02 00:00:00.000,0,HI,122,EUR,4995.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-03 00:00:00.000,0,HI,122,EUR,4974.27186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-04 00:00:00.000,0,HI,122,EUR,4950.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-05 00:00:00.000,0,HI,122,EUR,4949.89186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-06 00:00:00.000,0,HI,122,EUR,4949.89186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-07 00:00:00.000,0,HI,122,EUR,4942.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-08 00:00:00.000,0,HI,122,EUR,4876.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-09 00:00:00.000,0,HI,122,EUR,4920.67186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-10 00:00:00.000,0,HI,122,EUR,4922.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-11 00:00:00.000,0,HI,122,EUR,4943.47186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-12 00:00:00.000,0,HI,122,EUR,4928.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-13 00:00:00.000,0,HI,122,EUR,4928.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-14 00:00:00.000,0,HI,122,EUR,4923.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-15 00:00:00.000,0,HI,122,EUR,4790.97186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-16 00:00:00.000,0,HI,122,EUR,4775.97186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-17 00:00:00.000,0,HI,122,EUR,4701.07186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-18 00:00:00.000,0,HI,122,EUR,4715.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-19 00:00:00.000,0,HI,122,EUR,4716.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-20 00:00:00.000,0,HI,122,EUR,4716.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-21 00:00:00.000,0,HI,122,EUR,4787.57186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-22 00:00:00.000,0,HI,122,EUR,4858.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-23 00:00:00.000,0,HI,122,EUR,4848.27186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-24 00:00:00.000,0,HI,122,EUR,4814.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-25 00:00:00.000,0,HI,122,EUR,4835.57186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-26 00:00:00.000,0,HI,122,EUR,4830.92186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-27 00:00:00.000,0,HI,122,EUR,4830.92186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-28 00:00:00.000,0,HI,122,EUR,4866.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-29 00:00:00.000,0,HI,122,EUR,4880.27186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-30 00:00:00.000,0,HI,122,EUR,4891.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-31 00:00:00.000,0,HI,122,EUR,4987.87186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0002</record>
+        <record>2011-03-01 00:00:00.000,0,HI,122,EUR,-5010.57186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-02 00:00:00.000,0,HI,122,EUR,-4995.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-03 00:00:00.000,0,HI,122,EUR,-4974.27186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-04 00:00:00.000,0,HI,122,EUR,-4950.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-05 00:00:00.000,0,HI,122,EUR,-4949.89186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-06 00:00:00.000,0,HI,122,EUR,-4949.89186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-07 00:00:00.000,0,HI,122,EUR,-4942.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-08 00:00:00.000,0,HI,122,EUR,-4876.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-09 00:00:00.000,0,HI,122,EUR,-4920.67186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-10 00:00:00.000,0,HI,122,EUR,-4922.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-11 00:00:00.000,0,HI,122,EUR,-4943.47186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-12 00:00:00.000,0,HI,122,EUR,-4928.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-13 00:00:00.000,0,HI,122,EUR,-4928.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-14 00:00:00.000,0,HI,122,EUR,-4923.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-15 00:00:00.000,0,HI,122,EUR,-4790.97186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-16 00:00:00.000,0,HI,122,EUR,-4775.97186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-17 00:00:00.000,0,HI,122,EUR,-4701.07186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-18 00:00:00.000,0,HI,122,EUR,-4715.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-19 00:00:00.000,0,HI,122,EUR,-4716.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-20 00:00:00.000,0,HI,122,EUR,-4716.37186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-21 00:00:00.000,0,HI,122,EUR,-4787.57186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-22 00:00:00.000,0,HI,122,EUR,-4858.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-23 00:00:00.000,0,HI,122,EUR,-4848.27186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-24 00:00:00.000,0,HI,122,EUR,-4814.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-25 00:00:00.000,0,HI,122,EUR,-4835.57186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-26 00:00:00.000,0,HI,122,EUR,-4830.92186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-27 00:00:00.000,0,HI,122,EUR,-4830.92186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-28 00:00:00.000,0,HI,122,EUR,-4866.77186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-29 00:00:00.000,0,HI,122,EUR,-4880.27186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-30 00:00:00.000,0,HI,122,EUR,-4891.17186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-03-31 00:00:00.000,0,HI,122,EUR,-4987.87186783589,daily,Floating Price,Mar-11,Gas-Storage-TTF-Mix-Floating-MWhd-0003</record>
+        <record>2011-01-01 00:00:00.000,0,HI,122,EUR,0.959999999999127,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-02 00:00:00.000,0,HI,122,EUR,0.959999999999127,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-03 00:00:00.000,0,HI,122,EUR,624.360000000001,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-04 00:00:00.000,0,HI,122,EUR,542.399999999998,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-05 00:00:00.000,0,HI,122,EUR,-1224,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-06 00:00:00.000,0,HI,122,EUR,-1716,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-07 00:00:00.000,0,HI,122,EUR,-1561.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-08 00:00:00.000,0,HI,122,EUR,-1593.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-09 00:00:00.000,0,HI,122,EUR,-1593.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-10 00:00:00.000,0,HI,122,EUR,-1510.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-11 00:00:00.000,0,HI,122,EUR,-2056.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-12 00:00:00.000,0,HI,122,EUR,-1850.4,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-13 00:00:00.000,0,HI,122,EUR,-1893.6,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-14 00:00:00.000,0,HI,122,EUR,-2101.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-15 00:00:00.000,0,HI,122,EUR,-2168.64,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-16 00:00:00.000,0,HI,122,EUR,-2168.64,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-17 00:00:00.000,0,HI,122,EUR,-2724,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-18 00:00:00.000,0,HI,122,EUR,-2174.4,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-19 00:00:00.000,0,HI,122,EUR,-1944,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-20 00:00:00.000,0,HI,122,EUR,-1807.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-21 00:00:00.000,0,HI,122,EUR,-1662,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-22 00:00:00.000,0,HI,122,EUR,-1654.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-23 00:00:00.000,0,HI,122,EUR,-1654.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-24 00:00:00.000,0,HI,122,EUR,-2091.59999999999,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-25 00:00:00.000,0,HI,122,EUR,-2488.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-26 00:00:00.000,0,HI,122,EUR,-2982,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-27 00:00:00.000,0,HI,122,EUR,-2698.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-28 00:00:00.000,0,HI,122,EUR,-2200.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-29 00:00:00.000,0,HI,122,EUR,-1998.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-30 00:00:00.000,0,HI,122,EUR,-1998.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-31 00:00:00.000,0,HI,122,EUR,-3085.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0001</record>
+        <record>2011-01-01 00:00:00.000,0,HI,122,EUR,-0.959999999999127,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-02 00:00:00.000,0,HI,122,EUR,-0.959999999999127,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-03 00:00:00.000,0,HI,122,EUR,-624.360000000001,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-04 00:00:00.000,0,HI,122,EUR,-542.399999999998,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-05 00:00:00.000,0,HI,122,EUR,1224,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-06 00:00:00.000,0,HI,122,EUR,1716,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-07 00:00:00.000,0,HI,122,EUR,1561.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-08 00:00:00.000,0,HI,122,EUR,1593.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-09 00:00:00.000,0,HI,122,EUR,1593.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-10 00:00:00.000,0,HI,122,EUR,1510.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-11 00:00:00.000,0,HI,122,EUR,2056.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-12 00:00:00.000,0,HI,122,EUR,1850.4,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-13 00:00:00.000,0,HI,122,EUR,1893.6,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-14 00:00:00.000,0,HI,122,EUR,2101.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-15 00:00:00.000,0,HI,122,EUR,2168.64,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-16 00:00:00.000,0,HI,122,EUR,2168.64,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-17 00:00:00.000,0,HI,122,EUR,2724,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-18 00:00:00.000,0,HI,122,EUR,2174.4,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-19 00:00:00.000,0,HI,122,EUR,1944,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-20 00:00:00.000,0,HI,122,EUR,1807.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-21 00:00:00.000,0,HI,122,EUR,1662,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-22 00:00:00.000,0,HI,122,EUR,1654.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-23 00:00:00.000,0,HI,122,EUR,1654.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-24 00:00:00.000,0,HI,122,EUR,2091.59999999999,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-25 00:00:00.000,0,HI,122,EUR,2488.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-26 00:00:00.000,0,HI,122,EUR,2982,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-27 00:00:00.000,0,HI,122,EUR,2698.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-28 00:00:00.000,0,HI,122,EUR,2200.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-29 00:00:00.000,0,HI,122,EUR,1998.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-30 00:00:00.000,0,HI,122,EUR,1998.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-31 00:00:00.000,0,HI,122,EUR,3085.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0002</record>
+        <record>2011-01-01 00:00:00.000,0,HI,122,EUR,0.959999999999127,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-02 00:00:00.000,0,HI,122,EUR,0.959999999999127,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-03 00:00:00.000,0,HI,122,EUR,624.360000000001,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-04 00:00:00.000,0,HI,122,EUR,542.399999999998,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-05 00:00:00.000,0,HI,122,EUR,-1224,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-06 00:00:00.000,0,HI,122,EUR,-1716,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-07 00:00:00.000,0,HI,122,EUR,-1561.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-08 00:00:00.000,0,HI,122,EUR,-1593.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-09 00:00:00.000,0,HI,122,EUR,-1593.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-10 00:00:00.000,0,HI,122,EUR,-1510.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-11 00:00:00.000,0,HI,122,EUR,-2056.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-12 00:00:00.000,0,HI,122,EUR,-1850.4,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-13 00:00:00.000,0,HI,122,EUR,-1893.6,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-14 00:00:00.000,0,HI,122,EUR,-2101.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-15 00:00:00.000,0,HI,122,EUR,-2168.64,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-16 00:00:00.000,0,HI,122,EUR,-2168.64,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-17 00:00:00.000,0,HI,122,EUR,-2724,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-18 00:00:00.000,0,HI,122,EUR,-2174.4,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-19 00:00:00.000,0,HI,122,EUR,-1944,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-20 00:00:00.000,0,HI,122,EUR,-1807.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-21 00:00:00.000,0,HI,122,EUR,-1662,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-22 00:00:00.000,0,HI,122,EUR,-1654.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-23 00:00:00.000,0,HI,122,EUR,-1654.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-24 00:00:00.000,0,HI,122,EUR,-2091.59999999999,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-25 00:00:00.000,0,HI,122,EUR,-2488.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-26 00:00:00.000,0,HI,122,EUR,-2982,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-27 00:00:00.000,0,HI,122,EUR,-2698.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-28 00:00:00.000,0,HI,122,EUR,-2200.8,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-29 00:00:00.000,0,HI,122,EUR,-1998.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-30 00:00:00.000,0,HI,122,EUR,-1998.24,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-01-31 00:00:00.000,0,HI,122,EUR,-3085.2,daily,Future,Jan-11,Gas-Storage-TTF-Mix-Future-0003</record>
+        <record>2011-02-01 00:00:00.000,0,HI,122,EUR,66129.83025,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-02 00:00:00.000,0,HI,122,EUR,66298.84575,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-03 00:00:00.000,0,HI,122,EUR,65623.974,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-04 00:00:00.000,0,HI,122,EUR,64954.65675,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-05 00:00:00.000,0,HI,122,EUR,64714.186575,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-06 00:00:00.000,0,HI,122,EUR,64683.3591,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-07 00:00:00.000,0,HI,122,EUR,64884.154275,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-08 00:00:00.000,0,HI,122,EUR,65026.07175,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-09 00:00:00.000,0,HI,122,EUR,65422.425,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-10 00:00:00.000,0,HI,122,EUR,65925.90075,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-11 00:00:00.000,0,HI,122,EUR,66289.32375,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-12 00:00:00.000,0,HI,122,EUR,66327.3324,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-13 00:00:00.000,0,HI,122,EUR,66313.6842,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-14 00:00:00.000,0,HI,122,EUR,65759.5038,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-15 00:00:00.000,0,HI,122,EUR,65733.08025,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-16 00:00:00.000,0,HI,122,EUR,65498.99775,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-17 00:00:00.000,0,HI,122,EUR,65891.3835,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-18 00:00:00.000,0,HI,122,EUR,65829.09375,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-19 00:00:00.000,0,HI,122,EUR,65713.6395,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-20 00:00:00.000,0,HI,122,EUR,65700.15,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-21 00:00:00.000,0,HI,122,EUR,65806.08225,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-22 00:00:00.000,0,HI,122,EUR,65261.74125,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-23 00:00:00.000,0,HI,122,EUR,64448.40375,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-24 00:00:00.000,0,HI,122,EUR,64389.288,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-25 00:00:00.000,0,HI,122,EUR,64674.1545,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-26 00:00:00.000,0,HI,122,EUR,64835.5524,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-27 00:00:00.000,0,HI,122,EUR,64863.1662,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-28 00:00:00.000,0,HI,122,EUR,65070.7458,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0001</record>
+        <record>2011-02-01 00:00:00.000,0,HI,122,EUR,-82779.83025,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-02 00:00:00.000,0,HI,122,EUR,-82948.84575,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-03 00:00:00.000,0,HI,122,EUR,-82273.974,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-04 00:00:00.000,0,HI,122,EUR,-81604.65675,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-05 00:00:00.000,0,HI,122,EUR,-81364.186575,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-06 00:00:00.000,0,HI,122,EUR,-81333.3591,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-07 00:00:00.000,0,HI,122,EUR,-81534.154275,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-08 00:00:00.000,0,HI,122,EUR,-81676.07175,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-09 00:00:00.000,0,HI,122,EUR,-82072.425,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-10 00:00:00.000,0,HI,122,EUR,-82575.90075,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-11 00:00:00.000,0,HI,122,EUR,-82939.32375,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-12 00:00:00.000,0,HI,122,EUR,-82977.3324,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-13 00:00:00.000,0,HI,122,EUR,-82963.6842,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-14 00:00:00.000,0,HI,122,EUR,-82409.5038,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-15 00:00:00.000,0,HI,122,EUR,-82383.08025,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-16 00:00:00.000,0,HI,122,EUR,-82148.99775,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-17 00:00:00.000,0,HI,122,EUR,-82541.3835,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-18 00:00:00.000,0,HI,122,EUR,-82479.09375,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-19 00:00:00.000,0,HI,122,EUR,-82363.6395,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-20 00:00:00.000,0,HI,122,EUR,-82350.15,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-21 00:00:00.000,0,HI,122,EUR,-82456.08225,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-22 00:00:00.000,0,HI,122,EUR,-81911.74125,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-23 00:00:00.000,0,HI,122,EUR,-81098.40375,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-24 00:00:00.000,0,HI,122,EUR,-81039.288,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-25 00:00:00.000,0,HI,122,EUR,-81324.1545,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-26 00:00:00.000,0,HI,122,EUR,-81485.5524,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-27 00:00:00.000,0,HI,122,EUR,-81513.1662,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-28 00:00:00.000,0,HI,122,EUR,-81720.7458,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0002</record>
+        <record>2011-02-01 00:00:00.000,0,HI,122,EUR,99429.83025,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-02 00:00:00.000,0,HI,122,EUR,99598.84575,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-03 00:00:00.000,0,HI,122,EUR,98923.974,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-04 00:00:00.000,0,HI,122,EUR,98254.65675,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-05 00:00:00.000,0,HI,122,EUR,98014.186575,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-06 00:00:00.000,0,HI,122,EUR,97983.3591,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-07 00:00:00.000,0,HI,122,EUR,98184.154275,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-08 00:00:00.000,0,HI,122,EUR,98326.07175,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-09 00:00:00.000,0,HI,122,EUR,98722.425,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-10 00:00:00.000,0,HI,122,EUR,99225.90075,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-11 00:00:00.000,0,HI,122,EUR,99589.32375,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-12 00:00:00.000,0,HI,122,EUR,99627.3324,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-13 00:00:00.000,0,HI,122,EUR,99613.6842,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-14 00:00:00.000,0,HI,122,EUR,99059.5038,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-15 00:00:00.000,0,HI,122,EUR,99033.08025,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-16 00:00:00.000,0,HI,122,EUR,98798.99775,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-17 00:00:00.000,0,HI,122,EUR,99191.3835,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-18 00:00:00.000,0,HI,122,EUR,99129.09375,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-19 00:00:00.000,0,HI,122,EUR,99013.6395,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-20 00:00:00.000,0,HI,122,EUR,99000.15,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-21 00:00:00.000,0,HI,122,EUR,99106.08225,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-22 00:00:00.000,0,HI,122,EUR,98561.74125,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-23 00:00:00.000,0,HI,122,EUR,97748.40375,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-24 00:00:00.000,0,HI,122,EUR,97689.288,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-25 00:00:00.000,0,HI,122,EUR,97974.1545,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-26 00:00:00.000,0,HI,122,EUR,98135.5524,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-27 00:00:00.000,0,HI,122,EUR,98163.1662,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-02-28 00:00:00.000,0,HI,122,EUR,98370.7458,daily,Forward,Feb-11,Gas-Storage-TTF-Mix-Fwd-Sm3-0003</record>
+        <record>2011-10-01 00:00:00.000,0,HI,122,EUR,12014.952,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-02 00:00:00.000,0,HI,122,EUR,12014.952,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-03 00:00:00.000,0,HI,122,EUR,13182.864,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-04 00:00:00.000,0,HI,122,EUR,12977.448,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-05 00:00:00.000,0,HI,122,EUR,12667.416,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-06 00:00:00.000,0,HI,122,EUR,12650.76,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-07 00:00:00.000,0,HI,122,EUR,12315.984,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-08 00:00:00.000,0,HI,122,EUR,12315.984,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-09 00:00:00.000,0,HI,122,EUR,12315.984,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-10 00:00:00.000,0,HI,122,EUR,11982,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-11 00:00:00.000,0,HI,122,EUR,11964,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-12 00:00:00.000,0,HI,122,EUR,11795.04,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-13 00:00:00.000,0,HI,122,EUR,11797.92,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-14 00:00:00.000,0,HI,122,EUR,11844.24,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-15 00:00:00.000,0,HI,122,EUR,11878.848,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-16 00:00:00.000,0,HI,122,EUR,11878.848,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-17 00:00:00.000,0,HI,122,EUR,11804.16,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-18 00:00:00.000,0,HI,122,EUR,11564.4,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-19 00:00:00.000,0,HI,122,EUR,11445.36,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-20 00:00:00.000,0,HI,122,EUR,11519.28,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-21 00:00:00.000,0,HI,122,EUR,11461.92,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-22 00:00:00.000,0,HI,122,EUR,11428.8,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-23 00:00:00.000,0,HI,122,EUR,11428.8,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-24 00:00:00.000,0,HI,122,EUR,11463.6,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-25 00:00:00.000,0,HI,122,EUR,11450.4,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-26 00:00:00.000,0,HI,122,EUR,11427.36,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-27 00:00:00.000,0,HI,122,EUR,11526.48,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-28 00:00:00.000,0,HI,122,EUR,11547.36,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-29 00:00:00.000,0,HI,122,EUR,12040.725,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-30 00:00:00.000,0,HI,122,EUR,11559.096,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-31 00:00:00.000,0,HI,122,EUR,11612.16,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0001,Gas-Storage-TTF-Mix-StructFlex-GJh-0001</record>
+        <record>2011-10-01 00:00:00.000,0,HI,122,EUR,-24029.904,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-02 00:00:00.000,0,HI,122,EUR,-24029.904,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-03 00:00:00.000,0,HI,122,EUR,-26365.728,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-04 00:00:00.000,0,HI,122,EUR,-25954.896,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-05 00:00:00.000,0,HI,122,EUR,-25334.832,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-06 00:00:00.000,0,HI,122,EUR,-25301.52,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-07 00:00:00.000,0,HI,122,EUR,-24631.968,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-08 00:00:00.000,0,HI,122,EUR,-24631.968,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-09 00:00:00.000,0,HI,122,EUR,-24631.968,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-10 00:00:00.000,0,HI,122,EUR,-23964,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-11 00:00:00.000,0,HI,122,EUR,-23928,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-12 00:00:00.000,0,HI,122,EUR,-23590.08,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-13 00:00:00.000,0,HI,122,EUR,-23595.84,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-14 00:00:00.000,0,HI,122,EUR,-23688.48,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-15 00:00:00.000,0,HI,122,EUR,-23757.696,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-16 00:00:00.000,0,HI,122,EUR,-23757.696,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-17 00:00:00.000,0,HI,122,EUR,-23608.32,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-18 00:00:00.000,0,HI,122,EUR,-23128.8,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-19 00:00:00.000,0,HI,122,EUR,-22890.72,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-20 00:00:00.000,0,HI,122,EUR,-23038.56,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-21 00:00:00.000,0,HI,122,EUR,-22923.84,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-22 00:00:00.000,0,HI,122,EUR,-22857.6,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-23 00:00:00.000,0,HI,122,EUR,-22857.6,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-24 00:00:00.000,0,HI,122,EUR,-22927.2,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-25 00:00:00.000,0,HI,122,EUR,-22900.8,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-26 00:00:00.000,0,HI,122,EUR,-22854.72,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-27 00:00:00.000,0,HI,122,EUR,-23052.96,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-28 00:00:00.000,0,HI,122,EUR,-23094.72,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-29 00:00:00.000,0,HI,122,EUR,-24081.45,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-30 00:00:00.000,0,HI,122,EUR,-23118.192,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-10-31 00:00:00.000,0,HI,122,EUR,-23224.32,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-GJh-0002,Gas-Storage-TTF-Mix-StructFlex-GJh-0002</record>
+        <record>2011-11-02 00:00:00.000,0,HI,122,EUR,-18.612,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-03 00:00:00.000,0,HI,122,EUR,-609.42,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-04 00:00:00.000,0,HI,122,EUR,-1180.668,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-05 00:00:00.000,0,HI,122,EUR,-1757.8464,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-06 00:00:00.000,0,HI,122,EUR,-2333.8464,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-07 00:00:00.000,0,HI,122,EUR,-2901.3,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-08 00:00:00.000,0,HI,122,EUR,-3467.988,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-09 00:00:00.000,0,HI,122,EUR,-4042.464,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-10 00:00:00.000,0,HI,122,EUR,-4623.372,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-11 00:00:00.000,0,HI,122,EUR,-5196.588,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-12 00:00:00.000,0,HI,122,EUR,-5774.2344,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-13 00:00:00.000,0,HI,122,EUR,-6350.2344,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-14 00:00:00.000,0,HI,122,EUR,-4234.776,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-15 00:00:00.000,0,TR,122,EUR,44160,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-16 00:00:00.000,0,TR,122,EUR,42408.6174670048,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-17 00:00:00.000,0,TR,122,EUR,40658.5086598714,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-18 00:00:00.000,0,TR,122,EUR,38911.0059040446,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-19 00:00:00.000,0,TR,122,EUR,37168.2774342114,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-11-20 00:00:00.000,0,TR,122,EUR,35433.1586341932,daily,Structured Deal,Gas-Storage-TTF-Mix-StructFlex-MW-0001,Gas-Storage-TTF-Mix-StructFlex-MW-0001</record>
+        <record>2011-04-01 00:00:00.000,0,HI,122,EUR,1454.30643580589,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-02 00:00:00.000,0,HI,122,EUR,-728.927586216182,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-03 00:00:00.000,0,HI,122,EUR,-5024.61226186658,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-04 00:00:00.000,0,HI,122,EUR,-1837.5868591995,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-05 00:00:00.000,0,HI,122,EUR,718.781532866803,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-06 00:00:00.000,0,HI,122,EUR,1865.91619875822,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-07 00:00:00.000,0,HI,122,EUR,1333.55710092161,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-08 00:00:00.000,0,HI,122,EUR,3252.12905190089,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-09 00:00:00.000,0,HI,122,EUR,908.043002609026,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-10 00:00:00.000,0,HI,122,EUR,2425.96193075844,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-11 00:00:00.000,0,HI,122,EUR,2855.16295288132,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-12 00:00:00.000,0,HI,122,EUR,-3879.42486819189,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-13 00:00:00.000,0,HI,122,EUR,-4549.98164503698,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-14 00:00:00.000,0,HI,122,EUR,402.087115498803,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-15 00:00:00.000,0,HI,122,EUR,2851.78032055441,daily,Transport,01-Apr-11 - 15-Apr-11,Gas-Storage-TTF-Mix-Transport-0001</record>
+        <record>2011-04-16 00:00:00.000,0,HI,122,EUR,-1759.45064007479,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-17 00:00:00.000,0,HI,122,EUR,6733.17850325788,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-18 00:00:00.000,0,HI,122,EUR,-3006.73933854522,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-19 00:00:00.000,0,HI,122,EUR,-221.636389294027,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-20 00:00:00.000,0,HI,122,EUR,9709.20195439049,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-21 00:00:00.000,0,HI,122,EUR,8631.83526755275,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-22 00:00:00.000,0,HI,122,EUR,2053.3046339952,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-23 00:00:00.000,0,HI,122,EUR,4189.37834935808,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-24 00:00:00.000,0,HI,122,EUR,6392.08867975828,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-25 00:00:00.000,0,HI,122,EUR,10116.7042312034,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-26 00:00:00.000,0,HI,122,EUR,-3699.61969817491,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-27 00:00:00.000,0,HI,122,EUR,-6819.2163243068,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-28 00:00:00.000,0,HI,122,EUR,7819.14478554017,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-29 00:00:00.000,0,HI,122,EUR,7597.16025767755,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+        <record>2011-04-30 00:00:00.000,0,HI,122,EUR,7052.94657060075,daily,Transport,16-Apr-11 - 30-Apr-11,Gas-Storage-TTF-Mix-Transport-0002</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,20 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-Storage-TTF-Mix-CurrExposure-NOK</workspace>
+    <monitor>Gas-Storage-TTF-Mix-CurrExposure-NOK</monitor>
+    <reportdate>2011-12-29T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>StorageCustomerTTF,Gas,Transaction For Negative Storage,2011-12-01 00:00:00.000,2011-12-31 00:00:00.000,Structured deal,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-GetNegativeStorage,EUR,2011-12-30 00:00:00.000,217.306370497161</record>
+        <record>StorageCustomerTTF,Gas,Transaction For Negative Storage,2011-12-01 00:00:00.000,2011-12-31 00:00:00.000,Structured deal,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-GetNegativeStorage,EUR,2011-12-31 00:00:00.000,217.501029878058</record>
+        <record>StorageCustomerTTF,Gas,Transaction For Negative Storage,2011-12-01 00:00:00.000,2011-12-31 00:00:00.000,Structured deal,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-GetNegativeStorage,EUR,2012-01-01 00:00:00.000,54.4032770523481</record>
+        <record>StorageCustomerTTF,Gas,Gas-Storage-TTF-Mix,2011-01-01 00:00:00.000,2011-12-31 00:00:00.000,Storage,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-TTF-Mix1,EUR,2011-12-30 00:00:00.000,2389.09</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

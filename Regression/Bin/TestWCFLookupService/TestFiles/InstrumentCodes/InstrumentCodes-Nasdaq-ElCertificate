@@ -1,0 +1,55 @@
+<InstrumentCodesTestCase>
+	<InsertXml>
+	<![CDATA[ 
+<DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Elcertificate-Forward</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <CounterpartyPortfolio>ICE</CounterpartyPortfolio>
+        <BuySell>Buy</BuySell>
+      </Portfolios>
+      <ElcertificateForward>
+        <InstrumentData>
+          <ExecutionVenue>Nord Pool</ExecutionVenue>
+          <PriceBasis>Elcertificate</PriceBasis>
+          <SettlementDate>2016-03-18</SettlementDate>
+          <Physical />
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>50000</Quantity>
+          <QuantityUnit>ECS</QuantityUnit>
+          <Price>144.17</Price>
+          <Currency>SEK</Currency>
+          <PriceVolumeUnit>PerECS</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </ElcertificateForward>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2007-01-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>ElCertificate-Forward-ElCertificate-0001</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+	]]>
+	</InsertXml>
+	<ExpectedResult>
+		<ExpectedTransaction ExternalId="ElCertificate-Forward-ElCertificate-0001">
+			<ExpectedCodes>
+				<ExpectedCode CodeType="ISIN" Code="NONK00245187"/>
+			</ExpectedCodes>
+		</ExpectedTransaction>
+	</ExpectedResult>
+</InstrumentCodesTestCase>

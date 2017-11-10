@@ -1,0 +1,21 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-FPFV-FSD-PosMon-EUR</workspace>
+    <monitor>Special-Cases-FPFV-FSD-PosMon-EUR</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0109 Special-Cases,Base,Financial,EEX,Other Period,Other Period - Base,,CET,EUR,Viz,Electricity,,Fixed Price Floating Volume,D0111-11 - Base,,,,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Expired,0,7559.89137500005,0,7559.89137500005,0,0,7559.89137500005,0,7559.89137500005,0,0,0,25,0,0,435.300000000003,24,0,NULL,0,0,0,0,0,0,30,-13059.0000000001,0,0,0,Special-Cases-FPFV-FSD-Day-EEX</record>
+        <record>0109 Special-Cases,Base,Financial,EEX,Other Period,Other Period - Base,,CET,EUR,Viz,Electricity,,Fixed Price Floating Volume,D0111-11 - Base,,,,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Expired,0,623.273274999965,0,623.273274999965,0,0,623.273274999965,0,623.273274999965,0,0,0,25,0,0,32.4749999999985,24,0,NULL,0,0,0,0,0,0,30,-974.249999999956,0,0,0,Special-Cases-FPFV-FSD-Hour-EEX</record>
+        <record>0109 Special-Cases,Base,Financial,EEX,Q4-11,Q4-11 - Base,ECS Curve,CET,EUR,Viz,Electricity,,Fixed Price Floating Volume,Q4-11 - Base,,,,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Active,0,28215.0666,571625.207888819,599840.274488819,1222419.40788882,571625.207888819,28215.0666,571625.207888819,599840.274488819,0,0,0,25,0,0,1337.47,1440,0,NULL,0,0,0,0,0,0,30,-650794.2,56.3505056385945,0,0,Special-Cases-FPFV-FSD-Hour-Q411-EEX</record>
+        <record>0109 Special-Cases,Base,Financial,EEX,Other Period,Other Period - Base,,CET,EUR,Viz,Electricity,,Fixed Price Floating Volume,D0111-11 - Base,,,,2011-11-01 00:00:00.000,2011-11-01 00:00:00.000,Expired,0,7559.89137500005,0,7559.89137500005,0,0,7559.89137500005,0,7559.89137500005,0,0,0,25,0,0,435.300000000003,24,0,NULL,0,0,0,0,0,0,30,-13059.0000000001,0,0,0,Special-Cases-FPFV-FSD-Month-Day-EEX</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

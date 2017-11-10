@@ -1,0 +1,51 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Special-Cases-AsianDandQ" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0001,ASIC/D W47-11 30.00,NordPool System Price,Asian,Special-Cases,10511.860000007,10492.8878536636,-968.225263970093,-968.225263970093,-968.225263970093,-953.74159015435,-952.908353643707,-952.908353643707,-952.908353643707</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0002,ASIC/Q YR-11 30.00,NordPool System Price,Asian,Special-Cases,354950.014372563,348867.997604926,287990.499001289,287990.499001289,287990.499001289,287918.399597863,287930.334496203,287930.334496203,287930.334496203</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0003,ASIC/D W47-11 30.00,NordPool System Price,Asian,Special-Cases,13122.4183048779,13093.5869985734,-1836.48234312363,-1836.48234312363,-1836.48234312363,-1814.89163079685,-1813.80167038913,-1813.80167038913,-1813.80167038913</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0004,ASIC/Q 01-Jan-12 - 30-Jun-12 30.00,NordPool System Price,Asian,Special-Cases,131421.017225029,130058.105519681,3793.54232733254,3793.54232733254,3793.54232733254,4540.94444012758,4652.58962393715,4652.58962393715,4652.58962393715</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0005,ASIC/D W47-11 30.00,NordPool System Price,Asian,Special-Cases,6906.05605859794,6896.68553922562,3003.87641482308,3003.87641482308,3003.87641482308,3004.48442589421,3004.86858001926,3004.86858001926,3004.86858001926</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0006,ASIC/Q YR-11 30.00,NordPool System Price,Asian,Special-Cases,243105.776654431,239234.107847279,218531.166728662,218531.166728662,218531.166728662,218511.087351784,218517.562759911,218517.562759911,218517.562759911</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0007;Special-Cases-AsianDandQ-EUR-0008,ASIC/D Q4-11 30.00,NordPool System Price,Asian,Special-Cases,22090,22090,22090,22090,22090,22090,22090,22090,22090</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0001,ASIC/D W47-11 30.00,NordPool System Price,Asian,Special-Cases,35711.860000007,35692.8878536636,24231.7747360299,24231.7747360299,24231.7747360299,24246.2584098457,24247.0916463563,24247.0916463563,24247.0916463563</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0002,ASIC/Q YR-11 30.00,NordPool System Price,Asian,Special-Cases,268816.714372565,262734.697604928,201857.199001291,201857.199001291,201857.199001291,201785.099597864,201797.034496205,201797.034496205,201797.034496205</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0003,ASIC/D W47-11 30.00,NordPool System Price,Asian,Special-Cases,45882.4183048779,45853.5869985734,30923.5176568764,30923.5176568764,30923.5176568764,30945.1083692032,30946.1983296109,30946.1983296109,30946.1983296109</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0004,ASIC/Q 01-Jan-12 - 30-Jun-12 30.00,NordPool System Price,Asian,Special-Cases,950241.017225029,948878.105519681,822613.542327333,822613.542327333,822613.542327333,823360.944440128,823472.589623937,823472.589623937,823472.589623937</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0005,ASIC/D W47-11 30.00,NordPool System Price,Asian,Special-Cases,15906.0560585979,15896.6855392256,12003.8764148231,12003.8764148231,12003.8764148231,12004.4844258942,12004.8685800193,12004.8685800193,12004.8685800193</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0006,ASIC/Q YR-11 30.00,NordPool System Price,Asian,Special-Cases,134075.376654432,130203.70784728,109500.766728662,109500.766728662,109500.766728662,109480.687351785,109487.162759912,109487.162759912,109487.162759912</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0007;Special-Cases-AsianDandQ-EUR-0008,ASIC/D Q4-11 30.00,NordPool System Price,Asian,Special-Cases,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0001,ASIC/D W47-11 30.00,NordPool System Price,Asian,Special-Cases,-25200,-25200,-25200,-25200,-25200,-25200,-25200,-25200,-25200</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0002,ASIC/Q YR-11 30.00,NordPool System Price,Asian,Special-Cases,86133.2999999982,86133.2999999982,86133.2999999982,86133.2999999982,86133.2999999982,86133.2999999982,86133.2999999982,86133.2999999982,86133.2999999982</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0003,ASIC/D W47-11 30.00,NordPool System Price,Asian,Special-Cases,-32760,-32760,-32760,-32760,-32760,-32760,-32760,-32760,-32760</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0004,ASIC/Q 01-Jan-12 - 30-Jun-12 30.00,NordPool System Price,Asian,Special-Cases,-818820,-818820,-818820,-818820,-818820,-818820,-818820,-818820,-818820</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0005,ASIC/D W47-11 30.00,NordPool System Price,Asian,Special-Cases,-9000,-9000,-9000,-9000,-9000,-9000,-9000,-9000,-9000</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0006,ASIC/Q YR-11 30.00,NordPool System Price,Asian,Special-Cases,109030.399999999,109030.399999999,109030.399999999,109030.399999999,109030.399999999,109030.399999999,109030.399999999,109030.399999999,109030.399999999</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-AsianDandQ-EUR-0007;Special-Cases-AsianDandQ-EUR-0008,ASIC/D Q4-11 30.00,NordPool System Price,Asian,Special-Cases,22090,22090,22090,22090,22090,22090,22090,22090,22090</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

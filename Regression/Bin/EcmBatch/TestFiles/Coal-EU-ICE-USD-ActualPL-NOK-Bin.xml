@@ -1,0 +1,34 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Coal-EU-ICE-USD-ActualPL-NOK-Bin</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURC Nov11 30-SEP-11 130.00 - Premium,Coal-EU-ICE-USD-0001</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURP Nov11 30-SEP-11 130.00 - Premium,Coal-EU-ICE-USD-0002</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURC Nov11 30-SEP-11 80.00 - Premium,Coal-EU-ICE-USD-0003</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURP Nov11 30-SEP-11 80.00 - Premium,Coal-EU-ICE-USD-0004</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURC Sep11 02-AUG-11 130.00 - Premium,Coal-EU-ICE-USD-0005</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURP Sep11 02-AUG-11 130.00 - Premium,Coal-EU-ICE-USD-0006</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURC Sep11 02-AUG-11 80.00 - Premium,Coal-EU-ICE-USD-0007</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURP Sep11 02-AUG-11 80.00 - Premium,Coal-EU-ICE-USD-0008</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURC Mar12 31-JAN-12 130.00 - Premium,Coal-EU-ICE-USD-0009</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURP Mar12 31-JAN-12 130.00 - Premium,Coal-EU-ICE-USD-0010</record>
+        <record>2012-01-01 00:00:00.000,0,TR,180,NOK,822.11465315952,monthly,European,EURP Mar12 31-JAN-12 130.00 - Settlement,Coal-EU-ICE-USD-0010</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURC Mar12 31-JAN-12 80.00 - Premium,Coal-EU-ICE-USD-0011</record>
+        <record>2012-01-01 00:00:00.000,0,TR,180,NOK,602.69410448735,monthly,European,EURC Mar12 31-JAN-12 80.00 - Settlement,Coal-EU-ICE-USD-0011</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURP Mar12 31-JAN-12 80.00 - Premium,Coal-EU-ICE-USD-0012</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURC May11 01-APR-11 130.00 - Premium,Coal-EU-ICE-USD-0013</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,104.032457717439,monthly,European,EURC May11 01-APR-11 130.00 - Premium,Coal-EU-ICE-USD-0014</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,104.032457717439,monthly,European,EURC Jun12 02-MAY-12 130.00 - Premium,Coal-EU-ICE-USD-0015</record>
+        <record>2010-01-01 00:00:00.000,0,PR,180,NOK,-104.032457717439,monthly,European,EURC Jun12 02-MAY-12 130.00 - Premium,Coal-EU-ICE-USD-0016</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

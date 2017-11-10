@@ -1,0 +1,1 @@
+start ..\Prerequisites\NUnit\bin\nunit.exe TestSeleniumCRV.dll

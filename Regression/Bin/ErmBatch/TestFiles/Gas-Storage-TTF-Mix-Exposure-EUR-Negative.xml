@@ -1,0 +1,27 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Gas-Storage-TTF-Mix-Exposure-EUR</workspace>
+    <monitor>Gas-Storage-TTF-Mix-Exposure-EUR</monitor>
+    <reportdate>2011-12-29T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\Exposure.xml" />
+      <returns>
+        <record>StorageCustomerTTF,Gas,Transaction For Negative Storage,2011-12-01 00:00:00.000,2011-12-31 00:00:00.000,Structured deal,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-GetNegativeStorage,ICE TTF,MWh,2011-12-30 00:00:00.000,2011-12-31 00:00:00.000,9.99999999999909,0,0</record>
+        <record>StorageCustomerTTF,Gas,Transaction For Negative Storage,2011-12-01 00:00:00.000,2011-12-31 00:00:00.000,Structured deal,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-GetNegativeStorage,ICE TTF,MWh,2011-12-31 00:00:00.000,2012-01-01 00:00:00.000,9.99999999999909,0,0</record>
+        <record>StorageCustomerTTF,Gas,Gas-Storage-TTF-Mix,2011-01-01 00:00:00.000,2011-12-31 00:00:00.000,Storage,Physical,Base,ICE TTF,,CET 06-06,EUR,Gas-Storage-TTF-Mix1,ICE TTF,MWh,2011-12-30 00:00:00.000,2011-12-31 00:00:00.000,110,0,0</record>
+      </returns>
+    </datawarehouse>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\ExposureCurvePrices.xml" />
+      <returns>
+        <record>ICE TTF,2011-12-30 00:00:00.000,2011-12-31 00:00:00.000,21.7367383308283,0,0</record>
+        <record>ICE TTF,2011-12-31 00:00:00.000,2012-01-01 00:00:00.000,21.7545794119285,0,0</record>
+        <record>ICE TTF,2012-01-01 00:00:00.000,2012-01-02 00:00:00.000,21.7725992489848,0,0</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

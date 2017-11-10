@@ -1,0 +1,58 @@
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Reserve Capacity can only be Sell contract</Message>
+<TestData>
+		<DealInsert>
+			<MetaData>
+				<Timezone>CET</Timezone>
+			</MetaData>
+			<Transaction>
+				<TransactionType>Automatic</TransactionType>
+				<DealType>Electricity-ReserveCapacity</DealType>
+				<Portfolios>
+					<Portfolio>API Test Customer</Portfolio>
+					<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+					<BuySell>Buy</BuySell>
+				</Portfolios>
+				<ElectricityReserveCapacity>
+					<InstrumentData>
+						<AuctionType>Secondary Market</AuctionType>
+						<PriceBasis>EEX</PriceBasis>
+						<LoadProfile>Base</LoadProfile>
+						<FromDate>2016-06-06</FromDate>
+						<ToDate>2016-06-10</ToDate>
+						<Physical>
+							<DeliveryArea AreaName="ENBW" />
+						</Physical>
+					</InstrumentData>
+					<SettlementData>
+					<CapacityBidQuantity>2</CapacityBidQuantity>
+					<CapacityTradeQuantity>2</CapacityTradeQuantity>
+					<CapacityPrice>11.2</CapacityPrice>
+					<Price>50.77</Price>
+					<ReserveCapacityTimeSeries>
+					  <TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>15Minute</Resolution>
+					  </TimeSeries>
+					</ReserveCapacityTimeSeries>
+						<QuantityUnit>MW</QuantityUnit>
+						<Currency>EUR</Currency>
+						<CurrencySource>Viz</CurrencySource>
+					</SettlementData>
+				</ElectricityReserveCapacity>
+				<DealDetails>
+					<Status>Active</Status>
+					<Trader>DealImport</Trader>
+					<TradeDate>2016-01-01T00:00:00</TradeDate>					
+				</DealDetails>
+				<ReferenceData>
+					<Comment>Fail_ElectricityReserveCapacityBuy</Comment>
+					<ExternalId>El-Reserve-Capacity-EEX-003</ExternalId>
+					<ExternalSource>API Test</ExternalSource>
+					<TicketNumber>TicketNumber</TicketNumber>					
+				</ReferenceData>
+			</Transaction>
+		</DealInsert>
+</TestData>
+</TestCase>

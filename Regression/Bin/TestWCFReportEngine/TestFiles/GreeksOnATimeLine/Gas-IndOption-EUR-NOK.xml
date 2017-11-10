@@ -1,0 +1,202 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>GreeksOnATimelineReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="NOK" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseEndDate" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="PosCalcMethod" IsNotSet="false" XmlEncodedValue="NPVWA" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="TimeResolution" IsNotSet="false" XmlEncodedValue="Month" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Gas-IndOption-EUR" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedTimeSeriesArtifacts>
+      <ExpectedTimeSeriesArtifact ArtifactId="greeksOnATimeline" Columns="GroupBy,Greek,ReferenceArea,TimeZone,From,Until,Value" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.DateTime,System.DateTime,System.Double">
+        <TimeSeriesProperties>
+          <Property Name="GroupBy" DataType="System.String" />
+          <Property Name="Greek" DataType="System.String" />
+          <Property Name="ReferenceArea" DataType="System.String" />
+        </TimeSeriesProperties>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,-400.553933926435</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,-377.605812691264</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,-403.473208831672</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,-1145.75442769637</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,-1189.9304119625</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,-1150.95071739653</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,-1573.59436339557</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,-1575.71481480003</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,-1523.78944467558</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,647.473292268984</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,648.057975109233</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,672.087690234426</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),BrentOil,Central Europe Standard Time,2013-01-01T00:00:00,2013-02-01T00:00:00,5.41725773358406</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2011-11-15T00:00:00,2011-12-01T00:00:00,3359.37542998544</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,7433.54034961458</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,7424.92087301326</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,6937.36230525842</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,7406.31587649301</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,7157.73346232975</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,7385.9636161493</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,7137.33399992213</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-07-01T00:00:00,2012-08-01T00:00:00,7364.1520007917</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-08-01T00:00:00,2012-09-01T00:00:00,7352.47490384581</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-09-01T00:00:00,2012-10-01T00:00:00,7103.77092405932</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-10-01T00:00:00,2012-11-01T00:00:00,-7084.3085751884</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-11-01T00:00:00,2012-12-01T00:00:00,-6878.01345910285</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (Curve Unit),ICE TTF,CET 06-06,2012-12-01T00:00:00,2013-01-01T00:00:00,-7117.70399283235</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,-0.538378943449509</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,-0.542537087200091</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,-0.543032582545991</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,-1.59132559402273</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,-1.59936883328293</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,-1.59854266305074</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,-2.11504618735963</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,-2.11789625645165</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,-2.11637422871609</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,0.869091667475147</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,0.900080520985046</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,0.903343669669927</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),BrentOil,Central Europe Standard Time,2013-01-01T00:00:00,2013-02-01T00:00:00,0.00728126039460223</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2011-11-15T00:00:00,2011-12-01T00:00:00,8.74837351558709</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,9.99131767421315</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,9.97973235620061</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,9.96747457652071</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,9.96812365611441</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,9.94129647545799</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,9.92737045181357</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,9.91296388878074</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-07-01T00:00:00,2012-08-01T00:00:00,9.89805376450497</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-08-01T00:00:00,2012-09-01T00:00:00,9.88235874172824</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-09-01T00:00:00,2012-10-01T00:00:00,9.86634850563794</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-10-01T00:00:00,2012-11-01T00:00:00,-9.50913902709852</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-11-01T00:00:00,2012-12-01T00:00:00,-9.55279647097619</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Delta (MW),ICE TTF,CET 06-06,2012-12-01T00:00:00,2013-01-01T00:00:00,-9.56680644197896</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,1.61288381332693</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,1.51049898979819</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,1.45402785398535</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,12.4599483166718</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,12.1785924167664</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,12.0996811934028</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,20.0967543249712</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,20.9029466132354</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,20.8152219332805</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,-1.57216877636825</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,-1.52026403042599</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,-1.42117855127951</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),BrentOil,Central Europe Standard Time,2013-01-01T00:00:00,2013-02-01T00:00:00,-0.0112887999945867</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2011-11-15T00:00:00,2011-12-01T00:00:00,-0.000919494934414899</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,-0.0041680144970826</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,-0.00328226968838408</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,-0.00240468210077438</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,-0.00238429480114633</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,-0.00219886965061278</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,-0.00210593062541875</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,-0.00175306036211964</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-07-01T00:00:00,2012-08-01T00:00:00,-0.00195653909284488</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-08-01T00:00:00,2012-09-01T00:00:00,-0.00167748030770554</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-09-01T00:00:00,2012-10-01T00:00:00,-0.00139094514423732</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-10-01T00:00:00,2012-11-01T00:00:00,-81.6482091585715</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-11-01T00:00:00,2012-12-01T00:00:00,-65.6573857337332</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (Curve Unit),ICE TTF,CET 06-06,2012-12-01T00:00:00,2013-01-01T00:00:00,-58.6479512002399</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,0.00216785458780502</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,0.00217025716925027</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,0.00195696884789415</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,0.0173054837731553</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,0.0163690758289871</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,0.016805112768615</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,0.0270117665658215</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,0.0280953583511228</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,0.0289100304628897</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,-0.0021102936595547</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,-0.00211147782003609</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,-0.00191018622483806</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),BrentOil,Central Europe Standard Time,2013-01-01T00:00:00,2013-02-01T00:00:00,-1.5173118272294E-05</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2011-11-15T00:00:00,2011-12-01T00:00:00,-2.39451805837676E-06</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,-5.60217002310189E-06</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,-4.41165280717221E-06</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,-3.45500301824828E-06</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,-3.20901049952194E-06</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,-3.05398562583381E-06</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,-2.83055191586251E-06</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,-2.43480605856966E-06</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-07-01T00:00:00,2012-08-01T00:00:00,-2.62975684529008E-06</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-08-01T00:00:00,2012-09-01T00:00:00,-2.25467783313525E-06</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-09-01T00:00:00,2012-10-01T00:00:00,-1.93186825609912E-06</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-10-01T00:00:00,2012-11-01T00:00:00,-0.109594911622244</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-11-01T00:00:00,2012-12-01T00:00:00,-0.0911908135190739</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Gamma (MW),ICE TTF,CET 06-06,2012-12-01T00:00:00,2013-01-01T00:00:00,-0.078827891398172</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,68155.9420631772</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,802531.697101832</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,1355648.54802015</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,1277812.3408522</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,1233576.19160766</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,1212024.65168135</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,1177487.24323838</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,1171725.33141228</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,1104239.66003869</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,1144503.37649486</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,1139549.33887619</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,-137279.778281029</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,-125333.653625332</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,-115552.624787026</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),BrentOil,Central Europe Standard Time,2013-01-01T00:00:00,2013-02-01T00:00:00,-904.028717199354</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2011-11-15T00:00:00,2011-12-01T00:00:00,71458.1243787102</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,807845.603350388</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,1358391.83121603</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,1276864.68614572</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,1232966.48743414</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,1211973.06994541</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,1177364.47142865</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,1171366.57548039</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-07-01T00:00:00,2012-08-01T00:00:00,1103866.83145347</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-08-01T00:00:00,2012-09-01T00:00:00,1144708.10565772</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-09-01T00:00:00,2012-10-01T00:00:00,1141123.12811359</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-10-01T00:00:00,2012-11-01T00:00:00,-148999.647646917</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-11-01T00:00:00,2012-12-01T00:00:00,-125263.651905068</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Theta (NOK/day),ICE TTF,CET 06-06,2012-12-01T00:00:00,2013-01-01T00:00:00,-115481.379076052</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2011-11-15T00:00:00,2011-12-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2011-12-01T00:00:00,2012-01-01T00:00:00,0</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-01-01T00:00:00,2012-02-01T00:00:00,-63.5875102712345</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-02-01T00:00:00,2012-03-01T00:00:00,-45.3346270715423</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-03-01T00:00:00,2012-04-01T00:00:00,-36.9556378119576</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-04-01T00:00:00,2012-05-01T00:00:00,-123.500683946369</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-05-01T00:00:00,2012-06-01T00:00:00,-92.7921796131498</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-06-01T00:00:00,2012-07-01T00:00:00,-80.1775393860566</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-07-01T00:00:00,2012-08-01T00:00:00,224.585920098116</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-08-01T00:00:00,2012-09-01T00:00:00,247.294632883147</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-09-01T00:00:00,2012-10-01T00:00:00,241.339522626763</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-10-01T00:00:00,2012-11-01T00:00:00,-21.850078743019</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-11-01T00:00:00,2012-12-01T00:00:00,-22.8422716380908</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2012-12-01T00:00:00,2013-01-01T00:00:00,-21.5099382700516</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),BrentOil,Central Europe Standard Time,2013-01-01T00:00:00,2013-02-01T00:00:00,-0.168175175847021</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2011-11-15T00:00:00,2011-12-01T00:00:00,43.1946446190292</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2011-12-01T00:00:00,2012-01-01T00:00:00,1080.60613056521</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-01-01T00:00:00,2012-02-01T00:00:00,2760.07478317937</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-02-01T00:00:00,2012-03-01T00:00:00,3355.45068272506</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-03-01T00:00:00,2012-04-01T00:00:00,3879.68684474175</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-04-01T00:00:00,2012-05-01T00:00:00,4021.77123061605</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-05-01T00:00:00,2012-06-01T00:00:00,4449.08869213884</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-06-01T00:00:00,2012-07-01T00:00:00,4922.73054149932</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-07-01T00:00:00,2012-08-01T00:00:00,4453.1316980853</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-08-01T00:00:00,2012-09-01T00:00:00,5104.16161100471</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-09-01T00:00:00,2012-10-01T00:00:00,5545.62309700269</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-10-01T00:00:00,2012-11-01T00:00:00,-765.280859487865</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-11-01T00:00:00,2012-12-01T00:00:00,-705.354611560502</ExpectedRecord>
+        <ExpectedRecord>Gas-IndexedOption-EUR,Vega (NOK/Vol(%)),ICE TTF,CET 06-06,2012-12-01T00:00:00,2013-01-01T00:00:00,-706.217021413584</ExpectedRecord>
+      </ExpectedTimeSeriesArtifact>
+    </ExpectedTimeSeriesArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

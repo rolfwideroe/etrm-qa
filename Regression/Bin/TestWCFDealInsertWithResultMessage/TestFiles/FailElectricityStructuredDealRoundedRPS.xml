@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>Reference price series of type Rounded Average is only allowed for forwards</Message>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Schemas\DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<ReferencePriceSeries>ElectricityNegativeTest</ReferencePriceSeries>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2014-01-01</FromDate>
+				<ToDate>2014-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="ENBW"/>
+				</Physical>
+				<TransactionName>FailElectricityStructuredDealRoundedRPS</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<StructuredDealInformation Resolution="Monthly">
+					<TimeSeriesDetail FromDateTime="2014-01-01T00:00:00" Price="0" Volume="0" ToDateTime="2014-02-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2014-02-01T00:00:00" Price="0" Volume="0" ToDateTime="2014-03-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2014-03-01T00:00:00" Price="0" Volume="0" ToDateTime="2014-04-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2014-04-01T00:00:00" Price="0" Volume="0" ToDateTime="2014-05-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2014-05-01T00:00:00" Price="0" Volume="0" ToDateTime="2014-06-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2014-06-01T00:00:00" Price="0" Volume="0" ToDateTime="2014-07-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2014-07-01T00:00:00" Price="0" Volume="0" ToDateTime="2014-08-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2014-08-01T00:00:00" Price="0" Volume="0" ToDateTime="2014-09-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2014-09-01T00:00:00" Price="0" Volume="0" ToDateTime="2014-10-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2014-10-01T00:00:00" Price="0" Volume="0" ToDateTime="2014-11-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2014-11-01T00:00:00" Price="0" Volume="0" ToDateTime="2014-12-01T00:00:00"/>
+					<TimeSeriesDetail FromDateTime="2014-12-01T00:00:00" Price="0" Volume="0" ToDateTime="2015-01-01T00:00:00"/>
+				</StructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2013-09-10T21:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>FailElectricityStructuredDealRoundedRPS</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailElectricityStructuredDealRoundedRPS</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

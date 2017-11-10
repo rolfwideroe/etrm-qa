@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2016-01-01</FromDate>
+				<ToDate>2016-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="ENBW" />
+				</Physical>
+				<TransactionName>FSD ProfileDistribution</TransactionName>
+			</InstrumentData>
+			<SettlementData>				
+				<FlexibleStructuredDealInformation>
+					<!--ModelType>Flexible Volume</ModelType-->
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>													
+							<ProfileDistribution>
+								<VolumeUnit>MWh</VolumeUnit>	
+								<ProfileDetail FromDateTime="2016-01-01T00:00:00" ToDateTime="2016-12-31T00:00:00" Volume="3660" Profile = "YearVolumeProfileLeap"/>
+							</ProfileDistribution>
+					</TimeSeries>					
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Yearly</Resolution>
+						<TimeZone>CET</TimeZone>					
+							<TimeSeriesDetail FromDateTime="2016-01-01T00:00:00" ToDateTime="2017-01-01T00:00:00"  Value="100" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>				
+							<ProfileDistribution>
+								<VolumeUnit>MWh</VolumeUnit>	
+								<ProfileDetail FromDateTime="2016-01-01T00:00:00" ToDateTime="2016-12-31T00:00:00" Volume="3860" Profile = "YearVolumeProfile"/>
+							</ProfileDistribution>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Yearly</Resolution>
+						<TimeZone>CET</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2016-01-01T00:00:00" ToDateTime="2017-01-01T00:00:00"  Value="105" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2015-12-17T09:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>ElectricityStructuredDealDaily; should pass</Comment>
+			<ExternalId>PassElectricityFlexibleVolumeStructuredDealProfiledVolume</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO>
+  <TransactionId>2493</TransactionId>
+  <DealType>Electricity-StructuredDeal</DealType>
+  <BuySell>Buy</BuySell>
+  <ContractModelType>Flexible Volume</ContractModelType>
+  <DeliveryType>Physical</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>None</ExecutionVenue>
+    <InstrumentName>FSD ProfileDistribution</InstrumentName>
+    <PriceBasis>NordPool System Price</PriceBasis>
+    <FromDate>2016-01-01T00:00:00</FromDate>
+    <ToDate>2016-12-31T00:00:00</ToDate>
+    <LoadProfile>Base</LoadProfile>
+    <TimeZone>Central Europe Standard Time</TimeZone>
+    <PriceType>Fixed</PriceType>
+    <BalanceArea>ENBW</BalanceArea>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>0.416666666666668</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>100</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+    <TimeSeriesSet>
+      <TimeSeries>
+        <TimeSeries>
+          <Resolution>Year</Resolution>
+          <TimeSeriesTypeName>Forecasted Price</TimeSeriesTypeName>
+          <TimezoneName>Central Europe Standard Time</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2016-01-01T00:00:00" ToDateTime="2017-01-01T00:00:00" Value="100" />
+          </TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>Day</Resolution>
+          <TimeSeriesTypeName>Forecasted Volume</TimeSeriesTypeName>
+          <TimezoneName>Central Europe Standard Time</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2016-01-01T00:00:00" ToDateTime="2016-01-02T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-01-02T00:00:00" ToDateTime="2016-01-03T00:00:00" Value="0.57930741518962" />
+            <TimeSeriesValue FromDateTime="2016-01-03T00:00:00" ToDateTime="2016-01-04T00:00:00" Value="0.53103179725715" />
+            <TimeSeriesValue FromDateTime="2016-01-04T00:00:00" ToDateTime="2016-01-05T00:00:00" Value="0.57904118935543" />
+            <TimeSeriesValue FromDateTime="2016-01-05T00:00:00" ToDateTime="2016-01-06T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-01-06T00:00:00" ToDateTime="2016-01-07T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-01-07T00:00:00" ToDateTime="2016-01-08T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-01-08T00:00:00" ToDateTime="2016-01-09T00:00:00" Value="0.60344522415585" />
+            <TimeSeriesValue FromDateTime="2016-01-09T00:00:00" ToDateTime="2016-01-10T00:00:00" Value="0.72413426898702" />
+            <TimeSeriesValue FromDateTime="2016-01-10T00:00:00" ToDateTime="2016-01-11T00:00:00" Value="0.66378974657143" />
+            <TimeSeriesValue FromDateTime="2016-01-11T00:00:00" ToDateTime="2016-01-12T00:00:00" Value="0.46323295148434" />
+            <TimeSeriesValue FromDateTime="2016-01-12T00:00:00" ToDateTime="2016-01-13T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-01-13T00:00:00" ToDateTime="2016-01-14T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-01-14T00:00:00" ToDateTime="2016-01-15T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-01-15T00:00:00" ToDateTime="2016-01-16T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-01-16T00:00:00" ToDateTime="2016-01-17T00:00:00" Value="0.57930741518962" />
+            <TimeSeriesValue FromDateTime="2016-01-17T00:00:00" ToDateTime="2016-01-18T00:00:00" Value="0.53103179725715" />
+            <TimeSeriesValue FromDateTime="2016-01-18T00:00:00" ToDateTime="2016-01-19T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-01-19T00:00:00" ToDateTime="2016-01-20T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-01-20T00:00:00" ToDateTime="2016-01-21T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-01-21T00:00:00" ToDateTime="2016-01-22T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-01-22T00:00:00" ToDateTime="2016-01-23T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-01-23T00:00:00" ToDateTime="2016-01-24T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-01-24T00:00:00" ToDateTime="2016-01-25T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-01-25T00:00:00" ToDateTime="2016-01-26T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-01-26T00:00:00" ToDateTime="2016-01-27T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-01-27T00:00:00" ToDateTime="2016-01-28T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-01-28T00:00:00" ToDateTime="2016-01-29T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-01-29T00:00:00" ToDateTime="2016-01-30T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-01-30T00:00:00" ToDateTime="2016-01-31T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-01-31T00:00:00" ToDateTime="2016-02-01T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-02-01T00:00:00" ToDateTime="2016-02-02T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-02-02T00:00:00" ToDateTime="2016-02-03T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-03T00:00:00" ToDateTime="2016-02-04T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-04T00:00:00" ToDateTime="2016-02-05T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-05T00:00:00" ToDateTime="2016-02-06T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-02-06T00:00:00" ToDateTime="2016-02-07T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-02-07T00:00:00" ToDateTime="2016-02-08T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-02-08T00:00:00" ToDateTime="2016-02-09T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-02-09T00:00:00" ToDateTime="2016-02-10T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-10T00:00:00" ToDateTime="2016-02-11T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-11T00:00:00" ToDateTime="2016-02-12T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-12T00:00:00" ToDateTime="2016-02-13T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-02-13T00:00:00" ToDateTime="2016-02-14T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-02-14T00:00:00" ToDateTime="2016-02-15T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-02-15T00:00:00" ToDateTime="2016-02-16T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-02-16T00:00:00" ToDateTime="2016-02-17T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-17T00:00:00" ToDateTime="2016-02-18T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-18T00:00:00" ToDateTime="2016-02-19T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-19T00:00:00" ToDateTime="2016-02-20T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-02-20T00:00:00" ToDateTime="2016-02-21T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-02-21T00:00:00" ToDateTime="2016-02-22T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-02-22T00:00:00" ToDateTime="2016-02-23T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-02-23T00:00:00" ToDateTime="2016-02-24T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-24T00:00:00" ToDateTime="2016-02-25T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-25T00:00:00" ToDateTime="2016-02-26T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-02-26T00:00:00" ToDateTime="2016-02-27T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-02-27T00:00:00" ToDateTime="2016-02-28T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-02-28T00:00:00" ToDateTime="2016-02-29T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-02-29T00:00:00" ToDateTime="2016-03-01T00:00:00" Value="0.57904118935543" />
+            <TimeSeriesValue FromDateTime="2016-03-01T00:00:00" ToDateTime="2016-03-02T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-03-02T00:00:00" ToDateTime="2016-03-03T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-03-03T00:00:00" ToDateTime="2016-03-04T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-03-04T00:00:00" ToDateTime="2016-03-05T00:00:00" Value="0.60344522415585" />
+            <TimeSeriesValue FromDateTime="2016-03-05T00:00:00" ToDateTime="2016-03-06T00:00:00" Value="0.72413426898702" />
+            <TimeSeriesValue FromDateTime="2016-03-06T00:00:00" ToDateTime="2016-03-07T00:00:00" Value="0.66378974657143" />
+            <TimeSeriesValue FromDateTime="2016-03-07T00:00:00" ToDateTime="2016-03-08T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-03-08T00:00:00" ToDateTime="2016-03-09T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-03-09T00:00:00" ToDateTime="2016-03-10T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-03-10T00:00:00" ToDateTime="2016-03-11T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-03-11T00:00:00" ToDateTime="2016-03-12T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-03-12T00:00:00" ToDateTime="2016-03-13T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-03-13T00:00:00" ToDateTime="2016-03-14T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-03-14T00:00:00" ToDateTime="2016-03-15T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-03-15T00:00:00" ToDateTime="2016-03-16T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-03-16T00:00:00" ToDateTime="2016-03-17T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-03-17T00:00:00" ToDateTime="2016-03-18T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-03-18T00:00:00" ToDateTime="2016-03-19T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-03-19T00:00:00" ToDateTime="2016-03-20T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-03-20T00:00:00" ToDateTime="2016-03-21T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-03-21T00:00:00" ToDateTime="2016-03-22T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-03-22T00:00:00" ToDateTime="2016-03-23T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-03-23T00:00:00" ToDateTime="2016-03-24T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-03-24T00:00:00" ToDateTime="2016-03-25T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-03-25T00:00:00" ToDateTime="2016-03-26T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-03-26T00:00:00" ToDateTime="2016-03-27T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-03-27T00:00:00" ToDateTime="2016-03-28T00:00:00" Value="0.45837143625137" />
+            <TimeSeriesValue FromDateTime="2016-03-28T00:00:00" ToDateTime="2016-03-29T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-03-29T00:00:00" ToDateTime="2016-03-30T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-03-30T00:00:00" ToDateTime="2016-03-31T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-03-31T00:00:00" ToDateTime="2016-04-01T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-04-01T00:00:00" ToDateTime="2016-04-02T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-04-02T00:00:00" ToDateTime="2016-04-03T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-04-03T00:00:00" ToDateTime="2016-04-04T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-04-04T00:00:00" ToDateTime="2016-04-05T00:00:00" Value="0.42463020552731" />
+            <TimeSeriesValue FromDateTime="2016-04-05T00:00:00" ToDateTime="2016-04-06T00:00:00" Value="0.47181133947479" />
+            <TimeSeriesValue FromDateTime="2016-04-06T00:00:00" ToDateTime="2016-04-07T00:00:00" Value="0.47181133947479" />
+            <TimeSeriesValue FromDateTime="2016-04-07T00:00:00" ToDateTime="2016-04-08T00:00:00" Value="0.47181133947479" />
+            <TimeSeriesValue FromDateTime="2016-04-08T00:00:00" ToDateTime="2016-04-09T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-04-09T00:00:00" ToDateTime="2016-04-10T00:00:00" Value="0.53103179725715" />
+            <TimeSeriesValue FromDateTime="2016-04-10T00:00:00" ToDateTime="2016-04-11T00:00:00" Value="0.48677914748572" />
+            <TimeSeriesValue FromDateTime="2016-04-11T00:00:00" ToDateTime="2016-04-12T00:00:00" Value="0.46323295148434" />
+            <TimeSeriesValue FromDateTime="2016-04-12T00:00:00" ToDateTime="2016-04-13T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-04-13T00:00:00" ToDateTime="2016-04-14T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-04-14T00:00:00" ToDateTime="2016-04-15T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-04-15T00:00:00" ToDateTime="2016-04-16T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-04-16T00:00:00" ToDateTime="2016-04-17T00:00:00" Value="0.57930741518962" />
+            <TimeSeriesValue FromDateTime="2016-04-17T00:00:00" ToDateTime="2016-04-18T00:00:00" Value="0.53103179725715" />
+            <TimeSeriesValue FromDateTime="2016-04-18T00:00:00" ToDateTime="2016-04-19T00:00:00" Value="0.57904118935543" />
+            <TimeSeriesValue FromDateTime="2016-04-19T00:00:00" ToDateTime="2016-04-20T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-04-20T00:00:00" ToDateTime="2016-04-21T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-04-21T00:00:00" ToDateTime="2016-04-22T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-04-22T00:00:00" ToDateTime="2016-04-23T00:00:00" Value="0.60344522415585" />
+            <TimeSeriesValue FromDateTime="2016-04-23T00:00:00" ToDateTime="2016-04-24T00:00:00" Value="0.72413426898702" />
+            <TimeSeriesValue FromDateTime="2016-04-24T00:00:00" ToDateTime="2016-04-25T00:00:00" Value="0.66378974657143" />
+            <TimeSeriesValue FromDateTime="2016-04-25T00:00:00" ToDateTime="2016-04-26T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-04-26T00:00:00" ToDateTime="2016-04-27T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-04-27T00:00:00" ToDateTime="2016-04-28T00:00:00" Value="0.54687223439124" />
+            <TimeSeriesValue FromDateTime="2016-04-28T00:00:00" ToDateTime="2016-04-29T00:00:00" Value="0.57904118935543" />
+            <TimeSeriesValue FromDateTime="2016-04-29T00:00:00" ToDateTime="2016-04-30T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-04-30T00:00:00" ToDateTime="2016-05-01T00:00:00" Value="0.54310070174026" />
+            <TimeSeriesValue FromDateTime="2016-05-01T00:00:00" ToDateTime="2016-05-02T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-05-02T00:00:00" ToDateTime="2016-05-03T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-05-03T00:00:00" ToDateTime="2016-05-04T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-05-04T00:00:00" ToDateTime="2016-05-05T00:00:00" Value="0.54687223439124" />
+            <TimeSeriesValue FromDateTime="2016-05-05T00:00:00" ToDateTime="2016-05-06T00:00:00" Value="0.57904118935543" />
+            <TimeSeriesValue FromDateTime="2016-05-06T00:00:00" ToDateTime="2016-05-07T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-05-07T00:00:00" ToDateTime="2016-05-08T00:00:00" Value="0.54310070174026" />
+            <TimeSeriesValue FromDateTime="2016-05-08T00:00:00" ToDateTime="2016-05-09T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-05-09T00:00:00" ToDateTime="2016-05-10T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-05-10T00:00:00" ToDateTime="2016-05-11T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-05-11T00:00:00" ToDateTime="2016-05-12T00:00:00" Value="0.54687223439124" />
+            <TimeSeriesValue FromDateTime="2016-05-12T00:00:00" ToDateTime="2016-05-13T00:00:00" Value="0.57904118935543" />
+            <TimeSeriesValue FromDateTime="2016-05-13T00:00:00" ToDateTime="2016-05-14T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-05-14T00:00:00" ToDateTime="2016-05-15T00:00:00" Value="0.54310070174026" />
+            <TimeSeriesValue FromDateTime="2016-05-15T00:00:00" ToDateTime="2016-05-16T00:00:00" Value="0.64337909928381" />
+            <TimeSeriesValue FromDateTime="2016-05-16T00:00:00" ToDateTime="2016-05-17T00:00:00" Value="0.68627103923606" />
+            <TimeSeriesValue FromDateTime="2016-05-17T00:00:00" ToDateTime="2016-05-18T00:00:00" Value="0.54901683138885" />
+            <TimeSeriesValue FromDateTime="2016-05-18T00:00:00" ToDateTime="2016-05-19T00:00:00" Value="0.58333038335065" />
+            <TimeSeriesValue FromDateTime="2016-05-19T00:00:00" ToDateTime="2016-05-20T00:00:00" Value="0.61764393531246" />
+            <TimeSeriesValue FromDateTime="2016-05-20T00:00:00" ToDateTime="2016-05-21T00:00:00" Value="0.51493992461299" />
+            <TimeSeriesValue FromDateTime="2016-05-21T00:00:00" ToDateTime="2016-05-22T00:00:00" Value="0.57930741518962" />
+            <TimeSeriesValue FromDateTime="2016-05-22T00:00:00" ToDateTime="2016-05-23T00:00:00" Value="0.68627103923606" />
+            <TimeSeriesValue FromDateTime="2016-05-23T00:00:00" ToDateTime="2016-05-24T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-05-24T00:00:00" ToDateTime="2016-05-25T00:00:00" Value="0.41176262354164" />
+            <TimeSeriesValue FromDateTime="2016-05-25T00:00:00" ToDateTime="2016-05-26T00:00:00" Value="0.43749778751299" />
+            <TimeSeriesValue FromDateTime="2016-05-26T00:00:00" ToDateTime="2016-05-27T00:00:00" Value="0.46323295148434" />
+            <TimeSeriesValue FromDateTime="2016-05-27T00:00:00" ToDateTime="2016-05-28T00:00:00" Value="0.38620494345974" />
+            <TimeSeriesValue FromDateTime="2016-05-28T00:00:00" ToDateTime="2016-05-29T00:00:00" Value="0.43448056139221" />
+            <TimeSeriesValue FromDateTime="2016-05-29T00:00:00" ToDateTime="2016-05-30T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-05-30T00:00:00" ToDateTime="2016-05-31T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-05-31T00:00:00" ToDateTime="2016-06-01T00:00:00" Value="0.41176262354164" />
+            <TimeSeriesValue FromDateTime="2016-06-01T00:00:00" ToDateTime="2016-06-02T00:00:00" Value="0.43749778751299" />
+            <TimeSeriesValue FromDateTime="2016-06-02T00:00:00" ToDateTime="2016-06-03T00:00:00" Value="0.46323295148434" />
+            <TimeSeriesValue FromDateTime="2016-06-03T00:00:00" ToDateTime="2016-06-04T00:00:00" Value="0.38620494345974" />
+            <TimeSeriesValue FromDateTime="2016-06-04T00:00:00" ToDateTime="2016-06-05T00:00:00" Value="0.43448056139221" />
+            <TimeSeriesValue FromDateTime="2016-06-05T00:00:00" ToDateTime="2016-06-06T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-06-06T00:00:00" ToDateTime="2016-06-07T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-06-07T00:00:00" ToDateTime="2016-06-08T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-06-08T00:00:00" ToDateTime="2016-06-09T00:00:00" Value="0.36458148959416" />
+            <TimeSeriesValue FromDateTime="2016-06-09T00:00:00" ToDateTime="2016-06-10T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-06-10T00:00:00" ToDateTime="2016-06-11T00:00:00" Value="0.32183745288312" />
+            <TimeSeriesValue FromDateTime="2016-06-11T00:00:00" ToDateTime="2016-06-12T00:00:00" Value="0.36206713449351" />
+            <TimeSeriesValue FromDateTime="2016-06-12T00:00:00" ToDateTime="2016-06-13T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-06-13T00:00:00" ToDateTime="2016-06-14T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-06-14T00:00:00" ToDateTime="2016-06-15T00:00:00" Value="0.27450841569443" />
+            <TimeSeriesValue FromDateTime="2016-06-15T00:00:00" ToDateTime="2016-06-16T00:00:00" Value="0.29166519167533" />
+            <TimeSeriesValue FromDateTime="2016-06-16T00:00:00" ToDateTime="2016-06-17T00:00:00" Value="0.30882196765623" />
+            <TimeSeriesValue FromDateTime="2016-06-17T00:00:00" ToDateTime="2016-06-18T00:00:00" Value="0.2574699623065" />
+            <TimeSeriesValue FromDateTime="2016-06-18T00:00:00" ToDateTime="2016-06-19T00:00:00" Value="0.28965370759481" />
+            <TimeSeriesValue FromDateTime="2016-06-19T00:00:00" ToDateTime="2016-06-20T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-06-20T00:00:00" ToDateTime="2016-06-21T00:00:00" Value="0.30024357966578" />
+            <TimeSeriesValue FromDateTime="2016-06-21T00:00:00" ToDateTime="2016-06-22T00:00:00" Value="0.24019486373262" />
+            <TimeSeriesValue FromDateTime="2016-06-22T00:00:00" ToDateTime="2016-06-23T00:00:00" Value="0.25520704271591" />
+            <TimeSeriesValue FromDateTime="2016-06-23T00:00:00" ToDateTime="2016-06-24T00:00:00" Value="0.2702192216992" />
+            <TimeSeriesValue FromDateTime="2016-06-24T00:00:00" ToDateTime="2016-06-25T00:00:00" Value="0.22528621701818" />
+            <TimeSeriesValue FromDateTime="2016-06-25T00:00:00" ToDateTime="2016-06-26T00:00:00" Value="0.25344699414546" />
+            <TimeSeriesValue FromDateTime="2016-06-26T00:00:00" ToDateTime="2016-06-27T00:00:00" Value="0.30024357966578" />
+            <TimeSeriesValue FromDateTime="2016-06-27T00:00:00" ToDateTime="2016-06-28T00:00:00" Value="0.25735163971352" />
+            <TimeSeriesValue FromDateTime="2016-06-28T00:00:00" ToDateTime="2016-06-29T00:00:00" Value="0.20588131177082" />
+            <TimeSeriesValue FromDateTime="2016-06-29T00:00:00" ToDateTime="2016-06-30T00:00:00" Value="0.2187488937565" />
+            <TimeSeriesValue FromDateTime="2016-06-30T00:00:00" ToDateTime="2016-07-01T00:00:00" Value="0.23161647574217" />
+            <TimeSeriesValue FromDateTime="2016-07-01T00:00:00" ToDateTime="2016-07-02T00:00:00" Value="0.19310247172987" />
+            <TimeSeriesValue FromDateTime="2016-07-02T00:00:00" ToDateTime="2016-07-03T00:00:00" Value="0.21724028069611" />
+            <TimeSeriesValue FromDateTime="2016-07-03T00:00:00" ToDateTime="2016-07-04T00:00:00" Value="0.25735163971352" />
+            <TimeSeriesValue FromDateTime="2016-07-04T00:00:00" ToDateTime="2016-07-05T00:00:00" Value="0.21445969976127" />
+            <TimeSeriesValue FromDateTime="2016-07-05T00:00:00" ToDateTime="2016-07-06T00:00:00" Value="0.17156775980902" />
+            <TimeSeriesValue FromDateTime="2016-07-06T00:00:00" ToDateTime="2016-07-07T00:00:00" Value="0.18229074479708" />
+            <TimeSeriesValue FromDateTime="2016-07-07T00:00:00" ToDateTime="2016-07-08T00:00:00" Value="0.19301372978514" />
+            <TimeSeriesValue FromDateTime="2016-07-08T00:00:00" ToDateTime="2016-07-09T00:00:00" Value="0.16091872644156" />
+            <TimeSeriesValue FromDateTime="2016-07-09T00:00:00" ToDateTime="2016-07-10T00:00:00" Value="0.18103356724675" />
+            <TimeSeriesValue FromDateTime="2016-07-10T00:00:00" ToDateTime="2016-07-11T00:00:00" Value="0.21445969976127" />
+            <TimeSeriesValue FromDateTime="2016-07-11T00:00:00" ToDateTime="2016-07-12T00:00:00" Value="0.21445969976127" />
+            <TimeSeriesValue FromDateTime="2016-07-12T00:00:00" ToDateTime="2016-07-13T00:00:00" Value="0.17156775980902" />
+            <TimeSeriesValue FromDateTime="2016-07-13T00:00:00" ToDateTime="2016-07-14T00:00:00" Value="0.18229074479708" />
+            <TimeSeriesValue FromDateTime="2016-07-14T00:00:00" ToDateTime="2016-07-15T00:00:00" Value="0.19301372978514" />
+            <TimeSeriesValue FromDateTime="2016-07-15T00:00:00" ToDateTime="2016-07-16T00:00:00" Value="0.16091872644156" />
+            <TimeSeriesValue FromDateTime="2016-07-16T00:00:00" ToDateTime="2016-07-17T00:00:00" Value="0.18103356724675" />
+            <TimeSeriesValue FromDateTime="2016-07-17T00:00:00" ToDateTime="2016-07-18T00:00:00" Value="0.21445969976127" />
+            <TimeSeriesValue FromDateTime="2016-07-18T00:00:00" ToDateTime="2016-07-19T00:00:00" Value="0.21445969976127" />
+            <TimeSeriesValue FromDateTime="2016-07-19T00:00:00" ToDateTime="2016-07-20T00:00:00" Value="0.17156775980902" />
+            <TimeSeriesValue FromDateTime="2016-07-20T00:00:00" ToDateTime="2016-07-21T00:00:00" Value="0.18229074479708" />
+            <TimeSeriesValue FromDateTime="2016-07-21T00:00:00" ToDateTime="2016-07-22T00:00:00" Value="0.19301372978514" />
+            <TimeSeriesValue FromDateTime="2016-07-22T00:00:00" ToDateTime="2016-07-23T00:00:00" Value="0.16091872644156" />
+            <TimeSeriesValue FromDateTime="2016-07-23T00:00:00" ToDateTime="2016-07-24T00:00:00" Value="0.18103356724675" />
+            <TimeSeriesValue FromDateTime="2016-07-24T00:00:00" ToDateTime="2016-07-25T00:00:00" Value="0.21445969976127" />
+            <TimeSeriesValue FromDateTime="2016-07-25T00:00:00" ToDateTime="2016-07-26T00:00:00" Value="0.21445969976127" />
+            <TimeSeriesValue FromDateTime="2016-07-26T00:00:00" ToDateTime="2016-07-27T00:00:00" Value="0.17156775980902" />
+            <TimeSeriesValue FromDateTime="2016-07-27T00:00:00" ToDateTime="2016-07-28T00:00:00" Value="0.18229074479708" />
+            <TimeSeriesValue FromDateTime="2016-07-28T00:00:00" ToDateTime="2016-07-29T00:00:00" Value="0.19301372978514" />
+            <TimeSeriesValue FromDateTime="2016-07-29T00:00:00" ToDateTime="2016-07-30T00:00:00" Value="0.16091872644156" />
+            <TimeSeriesValue FromDateTime="2016-07-30T00:00:00" ToDateTime="2016-07-31T00:00:00" Value="0.18103356724675" />
+            <TimeSeriesValue FromDateTime="2016-07-31T00:00:00" ToDateTime="2016-08-01T00:00:00" Value="0.21445969976127" />
+            <TimeSeriesValue FromDateTime="2016-08-01T00:00:00" ToDateTime="2016-08-02T00:00:00" Value="0.25735163971352" />
+            <TimeSeriesValue FromDateTime="2016-08-02T00:00:00" ToDateTime="2016-08-03T00:00:00" Value="0.20588131177082" />
+            <TimeSeriesValue FromDateTime="2016-08-03T00:00:00" ToDateTime="2016-08-04T00:00:00" Value="0.2187488937565" />
+            <TimeSeriesValue FromDateTime="2016-08-04T00:00:00" ToDateTime="2016-08-05T00:00:00" Value="0.23161647574217" />
+            <TimeSeriesValue FromDateTime="2016-08-05T00:00:00" ToDateTime="2016-08-06T00:00:00" Value="0.19310247172987" />
+            <TimeSeriesValue FromDateTime="2016-08-06T00:00:00" ToDateTime="2016-08-07T00:00:00" Value="0.21724028069611" />
+            <TimeSeriesValue FromDateTime="2016-08-07T00:00:00" ToDateTime="2016-08-08T00:00:00" Value="0.25735163971352" />
+            <TimeSeriesValue FromDateTime="2016-08-08T00:00:00" ToDateTime="2016-08-09T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-08-09T00:00:00" ToDateTime="2016-08-10T00:00:00" Value="0.27450841569443" />
+            <TimeSeriesValue FromDateTime="2016-08-10T00:00:00" ToDateTime="2016-08-11T00:00:00" Value="0.29166519167533" />
+            <TimeSeriesValue FromDateTime="2016-08-11T00:00:00" ToDateTime="2016-08-12T00:00:00" Value="0.30882196765623" />
+            <TimeSeriesValue FromDateTime="2016-08-12T00:00:00" ToDateTime="2016-08-13T00:00:00" Value="0.2574699623065" />
+            <TimeSeriesValue FromDateTime="2016-08-13T00:00:00" ToDateTime="2016-08-14T00:00:00" Value="0.28965370759481" />
+            <TimeSeriesValue FromDateTime="2016-08-14T00:00:00" ToDateTime="2016-08-15T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-08-15T00:00:00" ToDateTime="2016-08-16T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-08-16T00:00:00" ToDateTime="2016-08-17T00:00:00" Value="0.27450841569443" />
+            <TimeSeriesValue FromDateTime="2016-08-17T00:00:00" ToDateTime="2016-08-18T00:00:00" Value="0.29166519167533" />
+            <TimeSeriesValue FromDateTime="2016-08-18T00:00:00" ToDateTime="2016-08-19T00:00:00" Value="0.30882196765623" />
+            <TimeSeriesValue FromDateTime="2016-08-19T00:00:00" ToDateTime="2016-08-20T00:00:00" Value="0.2574699623065" />
+            <TimeSeriesValue FromDateTime="2016-08-20T00:00:00" ToDateTime="2016-08-21T00:00:00" Value="0.28965370759481" />
+            <TimeSeriesValue FromDateTime="2016-08-21T00:00:00" ToDateTime="2016-08-22T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-08-22T00:00:00" ToDateTime="2016-08-23T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-08-23T00:00:00" ToDateTime="2016-08-24T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-08-24T00:00:00" ToDateTime="2016-08-25T00:00:00" Value="0.36458148959416" />
+            <TimeSeriesValue FromDateTime="2016-08-25T00:00:00" ToDateTime="2016-08-26T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-08-26T00:00:00" ToDateTime="2016-08-27T00:00:00" Value="0.32183745288312" />
+            <TimeSeriesValue FromDateTime="2016-08-27T00:00:00" ToDateTime="2016-08-28T00:00:00" Value="0.36206713449351" />
+            <TimeSeriesValue FromDateTime="2016-08-28T00:00:00" ToDateTime="2016-08-29T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-08-29T00:00:00" ToDateTime="2016-08-30T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-08-30T00:00:00" ToDateTime="2016-08-31T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-08-31T00:00:00" ToDateTime="2016-09-01T00:00:00" Value="0.36458148959416" />
+            <TimeSeriesValue FromDateTime="2016-09-01T00:00:00" ToDateTime="2016-09-02T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-09-02T00:00:00" ToDateTime="2016-09-03T00:00:00" Value="0.32183745288312" />
+            <TimeSeriesValue FromDateTime="2016-09-03T00:00:00" ToDateTime="2016-09-04T00:00:00" Value="0.36206713449351" />
+            <TimeSeriesValue FromDateTime="2016-09-04T00:00:00" ToDateTime="2016-09-05T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-09-05T00:00:00" ToDateTime="2016-09-06T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-09-06T00:00:00" ToDateTime="2016-09-07T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-09-07T00:00:00" ToDateTime="2016-09-08T00:00:00" Value="0.36458148959416" />
+            <TimeSeriesValue FromDateTime="2016-09-08T00:00:00" ToDateTime="2016-09-09T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-09-09T00:00:00" ToDateTime="2016-09-10T00:00:00" Value="0.32183745288312" />
+            <TimeSeriesValue FromDateTime="2016-09-10T00:00:00" ToDateTime="2016-09-11T00:00:00" Value="0.36206713449351" />
+            <TimeSeriesValue FromDateTime="2016-09-11T00:00:00" ToDateTime="2016-09-12T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-09-12T00:00:00" ToDateTime="2016-09-13T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-09-13T00:00:00" ToDateTime="2016-09-14T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-09-14T00:00:00" ToDateTime="2016-09-15T00:00:00" Value="0.36458148959416" />
+            <TimeSeriesValue FromDateTime="2016-09-15T00:00:00" ToDateTime="2016-09-16T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-09-16T00:00:00" ToDateTime="2016-09-17T00:00:00" Value="0.32183745288312" />
+            <TimeSeriesValue FromDateTime="2016-09-17T00:00:00" ToDateTime="2016-09-18T00:00:00" Value="0.36206713449351" />
+            <TimeSeriesValue FromDateTime="2016-09-18T00:00:00" ToDateTime="2016-09-19T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-09-19T00:00:00" ToDateTime="2016-09-20T00:00:00" Value="0.47181133947479" />
+            <TimeSeriesValue FromDateTime="2016-09-20T00:00:00" ToDateTime="2016-09-21T00:00:00" Value="0.37744907157984" />
+            <TimeSeriesValue FromDateTime="2016-09-21T00:00:00" ToDateTime="2016-09-22T00:00:00" Value="0.40103963855358" />
+            <TimeSeriesValue FromDateTime="2016-09-22T00:00:00" ToDateTime="2016-09-23T00:00:00" Value="0.42463020552731" />
+            <TimeSeriesValue FromDateTime="2016-09-23T00:00:00" ToDateTime="2016-09-24T00:00:00" Value="0.35402119817143" />
+            <TimeSeriesValue FromDateTime="2016-09-24T00:00:00" ToDateTime="2016-09-25T00:00:00" Value="0.39827384794286" />
+            <TimeSeriesValue FromDateTime="2016-09-25T00:00:00" ToDateTime="2016-09-26T00:00:00" Value="0.47181133947479" />
+            <TimeSeriesValue FromDateTime="2016-09-26T00:00:00" ToDateTime="2016-09-27T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-09-27T00:00:00" ToDateTime="2016-09-28T00:00:00" Value="0.41176262354164" />
+            <TimeSeriesValue FromDateTime="2016-09-28T00:00:00" ToDateTime="2016-09-29T00:00:00" Value="0.43749778751299" />
+            <TimeSeriesValue FromDateTime="2016-09-29T00:00:00" ToDateTime="2016-09-30T00:00:00" Value="0.46323295148434" />
+            <TimeSeriesValue FromDateTime="2016-09-30T00:00:00" ToDateTime="2016-10-01T00:00:00" Value="0.38620494345974" />
+            <TimeSeriesValue FromDateTime="2016-10-01T00:00:00" ToDateTime="2016-10-02T00:00:00" Value="0.43448056139221" />
+            <TimeSeriesValue FromDateTime="2016-10-02T00:00:00" ToDateTime="2016-10-03T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-10-03T00:00:00" ToDateTime="2016-10-04T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-10-04T00:00:00" ToDateTime="2016-10-05T00:00:00" Value="0.41176262354164" />
+            <TimeSeriesValue FromDateTime="2016-10-05T00:00:00" ToDateTime="2016-10-06T00:00:00" Value="0.43749778751299" />
+            <TimeSeriesValue FromDateTime="2016-10-06T00:00:00" ToDateTime="2016-10-07T00:00:00" Value="0.46323295148434" />
+            <TimeSeriesValue FromDateTime="2016-10-07T00:00:00" ToDateTime="2016-10-08T00:00:00" Value="0.38620494345974" />
+            <TimeSeriesValue FromDateTime="2016-10-08T00:00:00" ToDateTime="2016-10-09T00:00:00" Value="0.43448056139221" />
+            <TimeSeriesValue FromDateTime="2016-10-09T00:00:00" ToDateTime="2016-10-10T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-10-10T00:00:00" ToDateTime="2016-10-11T00:00:00" Value="0.46323295148434" />
+            <TimeSeriesValue FromDateTime="2016-10-11T00:00:00" ToDateTime="2016-10-12T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-10-12T00:00:00" ToDateTime="2016-10-13T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-10-13T00:00:00" ToDateTime="2016-10-14T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-10-14T00:00:00" ToDateTime="2016-10-15T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-10-15T00:00:00" ToDateTime="2016-10-16T00:00:00" Value="0.57930741518962" />
+            <TimeSeriesValue FromDateTime="2016-10-16T00:00:00" ToDateTime="2016-10-17T00:00:00" Value="0.53103179725715" />
+            <TimeSeriesValue FromDateTime="2016-10-17T00:00:00" ToDateTime="2016-10-18T00:00:00" Value="0.30882196765623" />
+            <TimeSeriesValue FromDateTime="2016-10-18T00:00:00" ToDateTime="2016-10-19T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-10-19T00:00:00" ToDateTime="2016-10-20T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-10-20T00:00:00" ToDateTime="2016-10-21T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-10-21T00:00:00" ToDateTime="2016-10-22T00:00:00" Value="0.32183745288312" />
+            <TimeSeriesValue FromDateTime="2016-10-22T00:00:00" ToDateTime="2016-10-23T00:00:00" Value="0.38620494345974" />
+            <TimeSeriesValue FromDateTime="2016-10-23T00:00:00" ToDateTime="2016-10-24T00:00:00" Value="0.35402119817143" />
+            <TimeSeriesValue FromDateTime="2016-10-24T00:00:00" ToDateTime="2016-10-25T00:00:00" Value="0.30882196765623" />
+            <TimeSeriesValue FromDateTime="2016-10-25T00:00:00" ToDateTime="2016-10-26T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-10-26T00:00:00" ToDateTime="2016-10-27T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-10-27T00:00:00" ToDateTime="2016-10-28T00:00:00" Value="0.34313551961803" />
+            <TimeSeriesValue FromDateTime="2016-10-28T00:00:00" ToDateTime="2016-10-29T00:00:00" Value="0.32183745288312" />
+            <TimeSeriesValue FromDateTime="2016-10-29T00:00:00" ToDateTime="2016-10-30T00:00:00" Value="0.38620494345974" />
+            <TimeSeriesValue FromDateTime="2016-10-30T00:00:00" ToDateTime="2016-10-31T00:00:00" Value="0.34235932340814" />
+            <TimeSeriesValue FromDateTime="2016-10-31T00:00:00" ToDateTime="2016-11-01T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-11-01T00:00:00" ToDateTime="2016-11-02T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-02T00:00:00" ToDateTime="2016-11-03T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-03T00:00:00" ToDateTime="2016-11-04T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-04T00:00:00" ToDateTime="2016-11-05T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-11-05T00:00:00" ToDateTime="2016-11-06T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-11-06T00:00:00" ToDateTime="2016-11-07T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-11-07T00:00:00" ToDateTime="2016-11-08T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-11-08T00:00:00" ToDateTime="2016-11-09T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-09T00:00:00" ToDateTime="2016-11-10T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-10T00:00:00" ToDateTime="2016-11-11T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-11T00:00:00" ToDateTime="2016-11-12T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-11-12T00:00:00" ToDateTime="2016-11-13T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-11-13T00:00:00" ToDateTime="2016-11-14T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-11-14T00:00:00" ToDateTime="2016-11-15T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-11-15T00:00:00" ToDateTime="2016-11-16T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-16T00:00:00" ToDateTime="2016-11-17T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-17T00:00:00" ToDateTime="2016-11-18T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-18T00:00:00" ToDateTime="2016-11-19T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-11-19T00:00:00" ToDateTime="2016-11-20T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-11-20T00:00:00" ToDateTime="2016-11-21T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-11-21T00:00:00" ToDateTime="2016-11-22T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-11-22T00:00:00" ToDateTime="2016-11-23T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-23T00:00:00" ToDateTime="2016-11-24T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-24T00:00:00" ToDateTime="2016-11-25T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-25T00:00:00" ToDateTime="2016-11-26T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-11-26T00:00:00" ToDateTime="2016-11-27T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-11-27T00:00:00" ToDateTime="2016-11-28T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-11-28T00:00:00" ToDateTime="2016-11-29T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-11-29T00:00:00" ToDateTime="2016-11-30T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-11-30T00:00:00" ToDateTime="2016-12-01T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-12-01T00:00:00" ToDateTime="2016-12-02T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-12-02T00:00:00" ToDateTime="2016-12-03T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-12-03T00:00:00" ToDateTime="2016-12-04T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-12-04T00:00:00" ToDateTime="2016-12-05T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-12-05T00:00:00" ToDateTime="2016-12-06T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-12-06T00:00:00" ToDateTime="2016-12-07T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-12-07T00:00:00" ToDateTime="2016-12-08T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-12-08T00:00:00" ToDateTime="2016-12-09T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-12-09T00:00:00" ToDateTime="2016-12-10T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-12-10T00:00:00" ToDateTime="2016-12-11T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-12-11T00:00:00" ToDateTime="2016-12-12T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-12-12T00:00:00" ToDateTime="2016-12-13T00:00:00" Value="0.38602745957029" />
+            <TimeSeriesValue FromDateTime="2016-12-13T00:00:00" ToDateTime="2016-12-14T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-12-14T00:00:00" ToDateTime="2016-12-15T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-12-15T00:00:00" ToDateTime="2016-12-16T00:00:00" Value="0.42891939952254" />
+            <TimeSeriesValue FromDateTime="2016-12-16T00:00:00" ToDateTime="2016-12-17T00:00:00" Value="0.4022968161039" />
+            <TimeSeriesValue FromDateTime="2016-12-17T00:00:00" ToDateTime="2016-12-18T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-12-18T00:00:00" ToDateTime="2016-12-19T00:00:00" Value="0.44252649771429" />
+            <TimeSeriesValue FromDateTime="2016-12-19T00:00:00" ToDateTime="2016-12-20T00:00:00" Value="0.46323295148434" />
+            <TimeSeriesValue FromDateTime="2016-12-20T00:00:00" ToDateTime="2016-12-21T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-12-21T00:00:00" ToDateTime="2016-12-22T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-12-22T00:00:00" ToDateTime="2016-12-23T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-12-23T00:00:00" ToDateTime="2016-12-24T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-12-24T00:00:00" ToDateTime="2016-12-25T00:00:00" Value="0.57930741518962" />
+            <TimeSeriesValue FromDateTime="2016-12-25T00:00:00" ToDateTime="2016-12-26T00:00:00" Value="0.53103179725715" />
+            <TimeSeriesValue FromDateTime="2016-12-26T00:00:00" ToDateTime="2016-12-27T00:00:00" Value="0.46323295148434" />
+            <TimeSeriesValue FromDateTime="2016-12-27T00:00:00" ToDateTime="2016-12-28T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-12-28T00:00:00" ToDateTime="2016-12-29T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-12-29T00:00:00" ToDateTime="2016-12-30T00:00:00" Value="0.51470327942705" />
+            <TimeSeriesValue FromDateTime="2016-12-30T00:00:00" ToDateTime="2016-12-31T00:00:00" Value="0.48275617932468" />
+            <TimeSeriesValue FromDateTime="2016-12-31T00:00:00" ToDateTime="2017-01-01T00:00:00" />
+          </TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>Year</Resolution>
+          <TimeSeriesTypeName>Realized Price</TimeSeriesTypeName>
+          <TimezoneName>Central Europe Standard Time</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2016-01-01T00:00:00" ToDateTime="2017-01-01T00:00:00" Value="105" />
+          </TimeSeriesValues>
+        </TimeSeries>
+        <TimeSeries>
+          <Resolution>Day</Resolution>
+          <TimeSeriesTypeName>Realized Volume</TimeSeriesTypeName>
+          <TimezoneName>Central Europe Standard Time</TimezoneName>
+          <TimeSeriesValues>
+            <TimeSeriesValue FromDateTime="2016-01-01T00:00:00" ToDateTime="2016-01-02T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-01-02T00:00:00" ToDateTime="2016-01-03T00:00:00" Value="0.6243258253919" />
+            <TimeSeriesValue FromDateTime="2016-01-03T00:00:00" ToDateTime="2016-01-04T00:00:00" Value="0.57229867327591" />
+            <TimeSeriesValue FromDateTime="2016-01-04T00:00:00" ToDateTime="2016-01-05T00:00:00" Value="0.62403891095008" />
+            <TimeSeriesValue FromDateTime="2016-01-05T00:00:00" ToDateTime="2016-01-06T00:00:00" Value="0.69337656772231" />
+            <TimeSeriesValue FromDateTime="2016-01-06T00:00:00" ToDateTime="2016-01-07T00:00:00" Value="0.69337656772231" />
+            <TimeSeriesValue FromDateTime="2016-01-07T00:00:00" ToDateTime="2016-01-08T00:00:00" Value="0.69337656772231" />
+            <TimeSeriesValue FromDateTime="2016-01-08T00:00:00" ToDateTime="2016-01-09T00:00:00" Value="0.65033940144989" />
+            <TimeSeriesValue FromDateTime="2016-01-09T00:00:00" ToDateTime="2016-01-10T00:00:00" Value="0.78040728173987" />
+            <TimeSeriesValue FromDateTime="2016-01-10T00:00:00" ToDateTime="2016-01-11T00:00:00" Value="0.71537334159488" />
+            <TimeSeriesValue FromDateTime="2016-01-11T00:00:00" ToDateTime="2016-01-12T00:00:00" Value="0.49923112876006" />
+            <TimeSeriesValue FromDateTime="2016-01-12T00:00:00" ToDateTime="2016-01-13T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-01-13T00:00:00" ToDateTime="2016-01-14T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-01-14T00:00:00" ToDateTime="2016-01-15T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-01-15T00:00:00" ToDateTime="2016-01-16T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-01-16T00:00:00" ToDateTime="2016-01-17T00:00:00" Value="0.6243258253919" />
+            <TimeSeriesValue FromDateTime="2016-01-17T00:00:00" ToDateTime="2016-01-18T00:00:00" Value="0.57229867327591" />
+            <TimeSeriesValue FromDateTime="2016-01-18T00:00:00" ToDateTime="2016-01-19T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-01-19T00:00:00" ToDateTime="2016-01-20T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-01-20T00:00:00" ToDateTime="2016-01-21T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-01-21T00:00:00" ToDateTime="2016-01-22T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-01-22T00:00:00" ToDateTime="2016-01-23T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-01-23T00:00:00" ToDateTime="2016-01-24T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-01-24T00:00:00" ToDateTime="2016-01-25T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-01-25T00:00:00" ToDateTime="2016-01-26T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-01-26T00:00:00" ToDateTime="2016-01-27T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-01-27T00:00:00" ToDateTime="2016-01-28T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-01-28T00:00:00" ToDateTime="2016-01-29T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-01-29T00:00:00" ToDateTime="2016-01-30T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-01-30T00:00:00" ToDateTime="2016-01-31T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-01-31T00:00:00" ToDateTime="2016-02-01T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-02-01T00:00:00" ToDateTime="2016-02-02T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-02-02T00:00:00" ToDateTime="2016-02-03T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-03T00:00:00" ToDateTime="2016-02-04T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-04T00:00:00" ToDateTime="2016-02-05T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-05T00:00:00" ToDateTime="2016-02-06T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-02-06T00:00:00" ToDateTime="2016-02-07T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-02-07T00:00:00" ToDateTime="2016-02-08T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-02-08T00:00:00" ToDateTime="2016-02-09T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-02-09T00:00:00" ToDateTime="2016-02-10T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-10T00:00:00" ToDateTime="2016-02-11T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-11T00:00:00" ToDateTime="2016-02-12T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-12T00:00:00" ToDateTime="2016-02-13T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-02-13T00:00:00" ToDateTime="2016-02-14T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-02-14T00:00:00" ToDateTime="2016-02-15T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-02-15T00:00:00" ToDateTime="2016-02-16T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-02-16T00:00:00" ToDateTime="2016-02-17T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-17T00:00:00" ToDateTime="2016-02-18T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-18T00:00:00" ToDateTime="2016-02-19T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-19T00:00:00" ToDateTime="2016-02-20T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-02-20T00:00:00" ToDateTime="2016-02-21T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-02-21T00:00:00" ToDateTime="2016-02-22T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-02-22T00:00:00" ToDateTime="2016-02-23T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-02-23T00:00:00" ToDateTime="2016-02-24T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-24T00:00:00" ToDateTime="2016-02-25T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-25T00:00:00" ToDateTime="2016-02-26T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-02-26T00:00:00" ToDateTime="2016-02-27T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-02-27T00:00:00" ToDateTime="2016-02-28T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-02-28T00:00:00" ToDateTime="2016-02-29T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-02-29T00:00:00" ToDateTime="2016-03-01T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-03-01T00:00:00" ToDateTime="2016-03-02T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-02T00:00:00" ToDateTime="2016-03-03T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-03T00:00:00" ToDateTime="2016-03-04T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-04T00:00:00" ToDateTime="2016-03-05T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-03-05T00:00:00" ToDateTime="2016-03-06T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-03-06T00:00:00" ToDateTime="2016-03-07T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-03-07T00:00:00" ToDateTime="2016-03-08T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-03-08T00:00:00" ToDateTime="2016-03-09T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-09T00:00:00" ToDateTime="2016-03-10T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-10T00:00:00" ToDateTime="2016-03-11T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-11T00:00:00" ToDateTime="2016-03-12T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-03-12T00:00:00" ToDateTime="2016-03-13T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-03-13T00:00:00" ToDateTime="2016-03-14T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-03-14T00:00:00" ToDateTime="2016-03-15T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-03-15T00:00:00" ToDateTime="2016-03-16T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-16T00:00:00" ToDateTime="2016-03-17T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-17T00:00:00" ToDateTime="2016-03-18T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-18T00:00:00" ToDateTime="2016-03-19T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-03-19T00:00:00" ToDateTime="2016-03-20T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-03-20T00:00:00" ToDateTime="2016-03-21T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-03-21T00:00:00" ToDateTime="2016-03-22T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-03-22T00:00:00" ToDateTime="2016-03-23T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-23T00:00:00" ToDateTime="2016-03-24T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-24T00:00:00" ToDateTime="2016-03-25T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-25T00:00:00" ToDateTime="2016-03-26T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-03-26T00:00:00" ToDateTime="2016-03-27T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-03-27T00:00:00" ToDateTime="2016-03-28T00:00:00" Value="0.49399182156168" />
+            <TimeSeriesValue FromDateTime="2016-03-28T00:00:00" ToDateTime="2016-03-29T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-03-29T00:00:00" ToDateTime="2016-03-30T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-30T00:00:00" ToDateTime="2016-03-31T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-03-31T00:00:00" ToDateTime="2016-04-01T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-04-01T00:00:00" ToDateTime="2016-04-02T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-04-02T00:00:00" ToDateTime="2016-04-03T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-04-03T00:00:00" ToDateTime="2016-04-04T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-04-04T00:00:00" ToDateTime="2016-04-05T00:00:00" Value="0.45762853469673" />
+            <TimeSeriesValue FromDateTime="2016-04-05T00:00:00" ToDateTime="2016-04-06T00:00:00" Value="0.50847614966303" />
+            <TimeSeriesValue FromDateTime="2016-04-06T00:00:00" ToDateTime="2016-04-07T00:00:00" Value="0.50847614966303" />
+            <TimeSeriesValue FromDateTime="2016-04-07T00:00:00" ToDateTime="2016-04-08T00:00:00" Value="0.50847614966303" />
+            <TimeSeriesValue FromDateTime="2016-04-08T00:00:00" ToDateTime="2016-04-09T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-04-09T00:00:00" ToDateTime="2016-04-10T00:00:00" Value="0.57229867327591" />
+            <TimeSeriesValue FromDateTime="2016-04-10T00:00:00" ToDateTime="2016-04-11T00:00:00" Value="0.52460711716958" />
+            <TimeSeriesValue FromDateTime="2016-04-11T00:00:00" ToDateTime="2016-04-12T00:00:00" Value="0.45762853469673" />
+            <TimeSeriesValue FromDateTime="2016-04-12T00:00:00" ToDateTime="2016-04-13T00:00:00" Value="0.50847614966303" />
+            <TimeSeriesValue FromDateTime="2016-04-13T00:00:00" ToDateTime="2016-04-14T00:00:00" Value="0.50847614966303" />
+            <TimeSeriesValue FromDateTime="2016-04-14T00:00:00" ToDateTime="2016-04-15T00:00:00" Value="0.50847614966303" />
+            <TimeSeriesValue FromDateTime="2016-04-15T00:00:00" ToDateTime="2016-04-16T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-04-16T00:00:00" ToDateTime="2016-04-17T00:00:00" Value="0.57229867327591" />
+            <TimeSeriesValue FromDateTime="2016-04-17T00:00:00" ToDateTime="2016-04-18T00:00:00" Value="0.52460711716958" />
+            <TimeSeriesValue FromDateTime="2016-04-18T00:00:00" ToDateTime="2016-04-19T00:00:00" Value="0.5408337228234" />
+            <TimeSeriesValue FromDateTime="2016-04-19T00:00:00" ToDateTime="2016-04-20T00:00:00" Value="0.60092635869267" />
+            <TimeSeriesValue FromDateTime="2016-04-20T00:00:00" ToDateTime="2016-04-21T00:00:00" Value="0.60092635869267" />
+            <TimeSeriesValue FromDateTime="2016-04-21T00:00:00" ToDateTime="2016-04-22T00:00:00" Value="0.60092635869267" />
+            <TimeSeriesValue FromDateTime="2016-04-22T00:00:00" ToDateTime="2016-04-23T00:00:00" Value="0.56362748125657" />
+            <TimeSeriesValue FromDateTime="2016-04-23T00:00:00" ToDateTime="2016-04-24T00:00:00" Value="0.67635297750789" />
+            <TimeSeriesValue FromDateTime="2016-04-24T00:00:00" ToDateTime="2016-04-25T00:00:00" Value="0.61999022938223" />
+            <TimeSeriesValue FromDateTime="2016-04-25T00:00:00" ToDateTime="2016-04-26T00:00:00" Value="0.64715146320749" />
+            <TimeSeriesValue FromDateTime="2016-04-26T00:00:00" ToDateTime="2016-04-27T00:00:00" Value="0.51772117056599" />
+            <TimeSeriesValue FromDateTime="2016-04-27T00:00:00" ToDateTime="2016-04-28T00:00:00" Value="0.55007874372637" />
+            <TimeSeriesValue FromDateTime="2016-04-28T00:00:00" ToDateTime="2016-04-29T00:00:00" Value="0.58243631688674" />
+            <TimeSeriesValue FromDateTime="2016-04-29T00:00:00" ToDateTime="2016-04-30T00:00:00" Value="0.48558675308259" />
+            <TimeSeriesValue FromDateTime="2016-04-30T00:00:00" ToDateTime="2016-05-01T00:00:00" Value="0.54628509721791" />
+            <TimeSeriesValue FromDateTime="2016-05-01T00:00:00" ToDateTime="2016-05-02T00:00:00" Value="0.64715146320749" />
+            <TimeSeriesValue FromDateTime="2016-05-02T00:00:00" ToDateTime="2016-05-03T00:00:00" Value="0.69337656772231" />
+            <TimeSeriesValue FromDateTime="2016-05-03T00:00:00" ToDateTime="2016-05-04T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-05-04T00:00:00" ToDateTime="2016-05-05T00:00:00" Value="0.58937008256397" />
+            <TimeSeriesValue FromDateTime="2016-05-05T00:00:00" ToDateTime="2016-05-06T00:00:00" Value="0.62403891095008" />
+            <TimeSeriesValue FromDateTime="2016-05-06T00:00:00" ToDateTime="2016-05-07T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-05-07T00:00:00" ToDateTime="2016-05-08T00:00:00" Value="0.5853054613049" />
+            <TimeSeriesValue FromDateTime="2016-05-08T00:00:00" ToDateTime="2016-05-09T00:00:00" Value="0.69337656772231" />
+            <TimeSeriesValue FromDateTime="2016-05-09T00:00:00" ToDateTime="2016-05-10T00:00:00" Value="0.69337656772231" />
+            <TimeSeriesValue FromDateTime="2016-05-10T00:00:00" ToDateTime="2016-05-11T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-05-11T00:00:00" ToDateTime="2016-05-12T00:00:00" Value="0.58937008256397" />
+            <TimeSeriesValue FromDateTime="2016-05-12T00:00:00" ToDateTime="2016-05-13T00:00:00" Value="0.62403891095008" />
+            <TimeSeriesValue FromDateTime="2016-05-13T00:00:00" ToDateTime="2016-05-14T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-05-14T00:00:00" ToDateTime="2016-05-15T00:00:00" Value="0.5853054613049" />
+            <TimeSeriesValue FromDateTime="2016-05-15T00:00:00" ToDateTime="2016-05-16T00:00:00" Value="0.69337656772231" />
+            <TimeSeriesValue FromDateTime="2016-05-16T00:00:00" ToDateTime="2016-05-17T00:00:00" Value="0.73960167223713" />
+            <TimeSeriesValue FromDateTime="2016-05-17T00:00:00" ToDateTime="2016-05-18T00:00:00" Value="0.59168133778971" />
+            <TimeSeriesValue FromDateTime="2016-05-18T00:00:00" ToDateTime="2016-05-19T00:00:00" Value="0.62866142140156" />
+            <TimeSeriesValue FromDateTime="2016-05-19T00:00:00" ToDateTime="2016-05-20T00:00:00" Value="0.66564150501342" />
+            <TimeSeriesValue FromDateTime="2016-05-20T00:00:00" ToDateTime="2016-05-21T00:00:00" Value="0.55495628923724" />
+            <TimeSeriesValue FromDateTime="2016-05-21T00:00:00" ToDateTime="2016-05-22T00:00:00" Value="0.6243258253919" />
+            <TimeSeriesValue FromDateTime="2016-05-22T00:00:00" ToDateTime="2016-05-23T00:00:00" Value="0.73960167223713" />
+            <TimeSeriesValue FromDateTime="2016-05-23T00:00:00" ToDateTime="2016-05-24T00:00:00" Value="0.60092635869267" />
+            <TimeSeriesValue FromDateTime="2016-05-24T00:00:00" ToDateTime="2016-05-25T00:00:00" Value="0.48074108695414" />
+            <TimeSeriesValue FromDateTime="2016-05-25T00:00:00" ToDateTime="2016-05-26T00:00:00" Value="0.51078740488877" />
+            <TimeSeriesValue FromDateTime="2016-05-26T00:00:00" ToDateTime="2016-05-27T00:00:00" Value="0.5408337228234" />
+            <TimeSeriesValue FromDateTime="2016-05-27T00:00:00" ToDateTime="2016-05-28T00:00:00" Value="0.45090198500526" />
+            <TimeSeriesValue FromDateTime="2016-05-28T00:00:00" ToDateTime="2016-05-29T00:00:00" Value="0.50726473313092" />
+            <TimeSeriesValue FromDateTime="2016-05-29T00:00:00" ToDateTime="2016-05-30T00:00:00" Value="0.60092635869267" />
+            <TimeSeriesValue FromDateTime="2016-05-30T00:00:00" ToDateTime="2016-05-31T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-05-31T00:00:00" ToDateTime="2016-06-01T00:00:00" Value="0.44376100334228" />
+            <TimeSeriesValue FromDateTime="2016-06-01T00:00:00" ToDateTime="2016-06-02T00:00:00" Value="0.47149606605117" />
+            <TimeSeriesValue FromDateTime="2016-06-02T00:00:00" ToDateTime="2016-06-03T00:00:00" Value="0.49923112876006" />
+            <TimeSeriesValue FromDateTime="2016-06-03T00:00:00" ToDateTime="2016-06-04T00:00:00" Value="0.41621721692793" />
+            <TimeSeriesValue FromDateTime="2016-06-04T00:00:00" ToDateTime="2016-06-05T00:00:00" Value="0.46824436904392" />
+            <TimeSeriesValue FromDateTime="2016-06-05T00:00:00" ToDateTime="2016-06-06T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-06-06T00:00:00" ToDateTime="2016-06-07T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-06-07T00:00:00" ToDateTime="2016-06-08T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-06-08T00:00:00" ToDateTime="2016-06-09T00:00:00" Value="0.39291338837598" />
+            <TimeSeriesValue FromDateTime="2016-06-09T00:00:00" ToDateTime="2016-06-10T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-06-10T00:00:00" ToDateTime="2016-06-11T00:00:00" Value="0.34684768077328" />
+            <TimeSeriesValue FromDateTime="2016-06-11T00:00:00" ToDateTime="2016-06-12T00:00:00" Value="0.39020364086994" />
+            <TimeSeriesValue FromDateTime="2016-06-12T00:00:00" ToDateTime="2016-06-13T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-06-13T00:00:00" ToDateTime="2016-06-14T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-06-14T00:00:00" ToDateTime="2016-06-15T00:00:00" Value="0.29584066889485" />
+            <TimeSeriesValue FromDateTime="2016-06-15T00:00:00" ToDateTime="2016-06-16T00:00:00" Value="0.31433071070078" />
+            <TimeSeriesValue FromDateTime="2016-06-16T00:00:00" ToDateTime="2016-06-17T00:00:00" Value="0.33282075250671" />
+            <TimeSeriesValue FromDateTime="2016-06-17T00:00:00" ToDateTime="2016-06-18T00:00:00" Value="0.27747814461862" />
+            <TimeSeriesValue FromDateTime="2016-06-18T00:00:00" ToDateTime="2016-06-19T00:00:00" Value="0.31216291269595" />
+            <TimeSeriesValue FromDateTime="2016-06-19T00:00:00" ToDateTime="2016-06-20T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-06-20T00:00:00" ToDateTime="2016-06-21T00:00:00" Value="0.32357573160375" />
+            <TimeSeriesValue FromDateTime="2016-06-21T00:00:00" ToDateTime="2016-06-22T00:00:00" Value="0.258860585283" />
+            <TimeSeriesValue FromDateTime="2016-06-22T00:00:00" ToDateTime="2016-06-23T00:00:00" Value="0.27503937186318" />
+            <TimeSeriesValue FromDateTime="2016-06-23T00:00:00" ToDateTime="2016-06-24T00:00:00" Value="0.29121815844337" />
+            <TimeSeriesValue FromDateTime="2016-06-24T00:00:00" ToDateTime="2016-06-25T00:00:00" Value="0.24279337654129" />
+            <TimeSeriesValue FromDateTime="2016-06-25T00:00:00" ToDateTime="2016-06-26T00:00:00" Value="0.27314254860896" />
+            <TimeSeriesValue FromDateTime="2016-06-26T00:00:00" ToDateTime="2016-06-27T00:00:00" Value="0.32357573160375" />
+            <TimeSeriesValue FromDateTime="2016-06-27T00:00:00" ToDateTime="2016-06-28T00:00:00" Value="0.27735062708892" />
+            <TimeSeriesValue FromDateTime="2016-06-28T00:00:00" ToDateTime="2016-06-29T00:00:00" Value="0.22188050167114" />
+            <TimeSeriesValue FromDateTime="2016-06-29T00:00:00" ToDateTime="2016-06-30T00:00:00" Value="0.23574803302559" />
+            <TimeSeriesValue FromDateTime="2016-06-30T00:00:00" ToDateTime="2016-07-01T00:00:00" Value="0.24961556438003" />
+            <TimeSeriesValue FromDateTime="2016-07-01T00:00:00" ToDateTime="2016-07-02T00:00:00" Value="0.20810860846397" />
+            <TimeSeriesValue FromDateTime="2016-07-02T00:00:00" ToDateTime="2016-07-03T00:00:00" Value="0.23412218452196" />
+            <TimeSeriesValue FromDateTime="2016-07-03T00:00:00" ToDateTime="2016-07-04T00:00:00" Value="0.27735062708892" />
+            <TimeSeriesValue FromDateTime="2016-07-04T00:00:00" ToDateTime="2016-07-05T00:00:00" Value="0.2311255225741" />
+            <TimeSeriesValue FromDateTime="2016-07-05T00:00:00" ToDateTime="2016-07-06T00:00:00" Value="0.18490041805928" />
+            <TimeSeriesValue FromDateTime="2016-07-06T00:00:00" ToDateTime="2016-07-07T00:00:00" Value="0.19645669418799" />
+            <TimeSeriesValue FromDateTime="2016-07-07T00:00:00" ToDateTime="2016-07-08T00:00:00" Value="0.20801297031669" />
+            <TimeSeriesValue FromDateTime="2016-07-08T00:00:00" ToDateTime="2016-07-09T00:00:00" Value="0.17342384038664" />
+            <TimeSeriesValue FromDateTime="2016-07-09T00:00:00" ToDateTime="2016-07-10T00:00:00" Value="0.19510182043497" />
+            <TimeSeriesValue FromDateTime="2016-07-10T00:00:00" ToDateTime="2016-07-11T00:00:00" Value="0.2311255225741" />
+            <TimeSeriesValue FromDateTime="2016-07-11T00:00:00" ToDateTime="2016-07-12T00:00:00" Value="0.2311255225741" />
+            <TimeSeriesValue FromDateTime="2016-07-12T00:00:00" ToDateTime="2016-07-13T00:00:00" Value="0.18490041805928" />
+            <TimeSeriesValue FromDateTime="2016-07-13T00:00:00" ToDateTime="2016-07-14T00:00:00" Value="0.19645669418799" />
+            <TimeSeriesValue FromDateTime="2016-07-14T00:00:00" ToDateTime="2016-07-15T00:00:00" Value="0.20801297031669" />
+            <TimeSeriesValue FromDateTime="2016-07-15T00:00:00" ToDateTime="2016-07-16T00:00:00" Value="0.17342384038664" />
+            <TimeSeriesValue FromDateTime="2016-07-16T00:00:00" ToDateTime="2016-07-17T00:00:00" Value="0.19510182043497" />
+            <TimeSeriesValue FromDateTime="2016-07-17T00:00:00" ToDateTime="2016-07-18T00:00:00" Value="0.2311255225741" />
+            <TimeSeriesValue FromDateTime="2016-07-18T00:00:00" ToDateTime="2016-07-19T00:00:00" Value="0.2311255225741" />
+            <TimeSeriesValue FromDateTime="2016-07-19T00:00:00" ToDateTime="2016-07-20T00:00:00" Value="0.18490041805928" />
+            <TimeSeriesValue FromDateTime="2016-07-20T00:00:00" ToDateTime="2016-07-21T00:00:00" Value="0.19645669418799" />
+            <TimeSeriesValue FromDateTime="2016-07-21T00:00:00" ToDateTime="2016-07-22T00:00:00" Value="0.20801297031669" />
+            <TimeSeriesValue FromDateTime="2016-07-22T00:00:00" ToDateTime="2016-07-23T00:00:00" Value="0.17342384038664" />
+            <TimeSeriesValue FromDateTime="2016-07-23T00:00:00" ToDateTime="2016-07-24T00:00:00" Value="0.19510182043497" />
+            <TimeSeriesValue FromDateTime="2016-07-24T00:00:00" ToDateTime="2016-07-25T00:00:00" Value="0.2311255225741" />
+            <TimeSeriesValue FromDateTime="2016-07-25T00:00:00" ToDateTime="2016-07-26T00:00:00" Value="0.2311255225741" />
+            <TimeSeriesValue FromDateTime="2016-07-26T00:00:00" ToDateTime="2016-07-27T00:00:00" Value="0.18490041805928" />
+            <TimeSeriesValue FromDateTime="2016-07-27T00:00:00" ToDateTime="2016-07-28T00:00:00" Value="0.19645669418799" />
+            <TimeSeriesValue FromDateTime="2016-07-28T00:00:00" ToDateTime="2016-07-29T00:00:00" Value="0.20801297031669" />
+            <TimeSeriesValue FromDateTime="2016-07-29T00:00:00" ToDateTime="2016-07-30T00:00:00" Value="0.17342384038664" />
+            <TimeSeriesValue FromDateTime="2016-07-30T00:00:00" ToDateTime="2016-07-31T00:00:00" Value="0.19510182043497" />
+            <TimeSeriesValue FromDateTime="2016-07-31T00:00:00" ToDateTime="2016-08-01T00:00:00" Value="0.2311255225741" />
+            <TimeSeriesValue FromDateTime="2016-08-01T00:00:00" ToDateTime="2016-08-02T00:00:00" Value="0.27735062708892" />
+            <TimeSeriesValue FromDateTime="2016-08-02T00:00:00" ToDateTime="2016-08-03T00:00:00" Value="0.22188050167114" />
+            <TimeSeriesValue FromDateTime="2016-08-03T00:00:00" ToDateTime="2016-08-04T00:00:00" Value="0.23574803302559" />
+            <TimeSeriesValue FromDateTime="2016-08-04T00:00:00" ToDateTime="2016-08-05T00:00:00" Value="0.24961556438003" />
+            <TimeSeriesValue FromDateTime="2016-08-05T00:00:00" ToDateTime="2016-08-06T00:00:00" Value="0.20810860846397" />
+            <TimeSeriesValue FromDateTime="2016-08-06T00:00:00" ToDateTime="2016-08-07T00:00:00" Value="0.23412218452196" />
+            <TimeSeriesValue FromDateTime="2016-08-07T00:00:00" ToDateTime="2016-08-08T00:00:00" Value="0.27735062708892" />
+            <TimeSeriesValue FromDateTime="2016-08-08T00:00:00" ToDateTime="2016-08-09T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-08-09T00:00:00" ToDateTime="2016-08-10T00:00:00" Value="0.29584066889485" />
+            <TimeSeriesValue FromDateTime="2016-08-10T00:00:00" ToDateTime="2016-08-11T00:00:00" Value="0.31433071070078" />
+            <TimeSeriesValue FromDateTime="2016-08-11T00:00:00" ToDateTime="2016-08-12T00:00:00" Value="0.33282075250671" />
+            <TimeSeriesValue FromDateTime="2016-08-12T00:00:00" ToDateTime="2016-08-13T00:00:00" Value="0.27747814461862" />
+            <TimeSeriesValue FromDateTime="2016-08-13T00:00:00" ToDateTime="2016-08-14T00:00:00" Value="0.31216291269595" />
+            <TimeSeriesValue FromDateTime="2016-08-14T00:00:00" ToDateTime="2016-08-15T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-08-15T00:00:00" ToDateTime="2016-08-16T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-08-16T00:00:00" ToDateTime="2016-08-17T00:00:00" Value="0.29584066889485" />
+            <TimeSeriesValue FromDateTime="2016-08-17T00:00:00" ToDateTime="2016-08-18T00:00:00" Value="0.31433071070078" />
+            <TimeSeriesValue FromDateTime="2016-08-18T00:00:00" ToDateTime="2016-08-19T00:00:00" Value="0.33282075250671" />
+            <TimeSeriesValue FromDateTime="2016-08-19T00:00:00" ToDateTime="2016-08-20T00:00:00" Value="0.27747814461862" />
+            <TimeSeriesValue FromDateTime="2016-08-20T00:00:00" ToDateTime="2016-08-21T00:00:00" Value="0.31216291269595" />
+            <TimeSeriesValue FromDateTime="2016-08-21T00:00:00" ToDateTime="2016-08-22T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-08-22T00:00:00" ToDateTime="2016-08-23T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-08-23T00:00:00" ToDateTime="2016-08-24T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-08-24T00:00:00" ToDateTime="2016-08-25T00:00:00" Value="0.39291338837598" />
+            <TimeSeriesValue FromDateTime="2016-08-25T00:00:00" ToDateTime="2016-08-26T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-08-26T00:00:00" ToDateTime="2016-08-27T00:00:00" Value="0.34684768077328" />
+            <TimeSeriesValue FromDateTime="2016-08-27T00:00:00" ToDateTime="2016-08-28T00:00:00" Value="0.39020364086994" />
+            <TimeSeriesValue FromDateTime="2016-08-28T00:00:00" ToDateTime="2016-08-29T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-08-29T00:00:00" ToDateTime="2016-08-30T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-08-30T00:00:00" ToDateTime="2016-08-31T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-08-31T00:00:00" ToDateTime="2016-09-01T00:00:00" Value="0.39291338837598" />
+            <TimeSeriesValue FromDateTime="2016-09-01T00:00:00" ToDateTime="2016-09-02T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-09-02T00:00:00" ToDateTime="2016-09-03T00:00:00" Value="0.34684768077328" />
+            <TimeSeriesValue FromDateTime="2016-09-03T00:00:00" ToDateTime="2016-09-04T00:00:00" Value="0.39020364086994" />
+            <TimeSeriesValue FromDateTime="2016-09-04T00:00:00" ToDateTime="2016-09-05T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-09-05T00:00:00" ToDateTime="2016-09-06T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-09-06T00:00:00" ToDateTime="2016-09-07T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-09-07T00:00:00" ToDateTime="2016-09-08T00:00:00" Value="0.39291338837598" />
+            <TimeSeriesValue FromDateTime="2016-09-08T00:00:00" ToDateTime="2016-09-09T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-09-09T00:00:00" ToDateTime="2016-09-10T00:00:00" Value="0.34684768077328" />
+            <TimeSeriesValue FromDateTime="2016-09-10T00:00:00" ToDateTime="2016-09-11T00:00:00" Value="0.39020364086994" />
+            <TimeSeriesValue FromDateTime="2016-09-11T00:00:00" ToDateTime="2016-09-12T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-09-12T00:00:00" ToDateTime="2016-09-13T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-09-13T00:00:00" ToDateTime="2016-09-14T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-09-14T00:00:00" ToDateTime="2016-09-15T00:00:00" Value="0.39291338837598" />
+            <TimeSeriesValue FromDateTime="2016-09-15T00:00:00" ToDateTime="2016-09-16T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-09-16T00:00:00" ToDateTime="2016-09-17T00:00:00" Value="0.34684768077328" />
+            <TimeSeriesValue FromDateTime="2016-09-17T00:00:00" ToDateTime="2016-09-18T00:00:00" Value="0.39020364086994" />
+            <TimeSeriesValue FromDateTime="2016-09-18T00:00:00" ToDateTime="2016-09-19T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-09-19T00:00:00" ToDateTime="2016-09-20T00:00:00" Value="0.50847614966303" />
+            <TimeSeriesValue FromDateTime="2016-09-20T00:00:00" ToDateTime="2016-09-21T00:00:00" Value="0.40678091973042" />
+            <TimeSeriesValue FromDateTime="2016-09-21T00:00:00" ToDateTime="2016-09-22T00:00:00" Value="0.43220472721357" />
+            <TimeSeriesValue FromDateTime="2016-09-22T00:00:00" ToDateTime="2016-09-23T00:00:00" Value="0.45762853469673" />
+            <TimeSeriesValue FromDateTime="2016-09-23T00:00:00" ToDateTime="2016-09-24T00:00:00" Value="0.3815324488506" />
+            <TimeSeriesValue FromDateTime="2016-09-24T00:00:00" ToDateTime="2016-09-25T00:00:00" Value="0.42922400495693" />
+            <TimeSeriesValue FromDateTime="2016-09-25T00:00:00" ToDateTime="2016-09-26T00:00:00" Value="0.50847614966303" />
+            <TimeSeriesValue FromDateTime="2016-09-26T00:00:00" ToDateTime="2016-09-27T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-09-27T00:00:00" ToDateTime="2016-09-28T00:00:00" Value="0.44376100334228" />
+            <TimeSeriesValue FromDateTime="2016-09-28T00:00:00" ToDateTime="2016-09-29T00:00:00" Value="0.47149606605117" />
+            <TimeSeriesValue FromDateTime="2016-09-29T00:00:00" ToDateTime="2016-09-30T00:00:00" Value="0.49923112876006" />
+            <TimeSeriesValue FromDateTime="2016-09-30T00:00:00" ToDateTime="2016-10-01T00:00:00" Value="0.41621721692793" />
+            <TimeSeriesValue FromDateTime="2016-10-01T00:00:00" ToDateTime="2016-10-02T00:00:00" Value="0.46824436904392" />
+            <TimeSeriesValue FromDateTime="2016-10-02T00:00:00" ToDateTime="2016-10-03T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-10-03T00:00:00" ToDateTime="2016-10-04T00:00:00" Value="0.50847614966303" />
+            <TimeSeriesValue FromDateTime="2016-10-04T00:00:00" ToDateTime="2016-10-05T00:00:00" Value="0.40678091973042" />
+            <TimeSeriesValue FromDateTime="2016-10-05T00:00:00" ToDateTime="2016-10-06T00:00:00" Value="0.43220472721357" />
+            <TimeSeriesValue FromDateTime="2016-10-06T00:00:00" ToDateTime="2016-10-07T00:00:00" Value="0.45762853469673" />
+            <TimeSeriesValue FromDateTime="2016-10-07T00:00:00" ToDateTime="2016-10-08T00:00:00" Value="0.3815324488506" />
+            <TimeSeriesValue FromDateTime="2016-10-08T00:00:00" ToDateTime="2016-10-09T00:00:00" Value="0.42922400495693" />
+            <TimeSeriesValue FromDateTime="2016-10-09T00:00:00" ToDateTime="2016-10-10T00:00:00" Value="0.50847614966303" />
+            <TimeSeriesValue FromDateTime="2016-10-10T00:00:00" ToDateTime="2016-10-11T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-10-11T00:00:00" ToDateTime="2016-10-12T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-10-12T00:00:00" ToDateTime="2016-10-13T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-10-13T00:00:00" ToDateTime="2016-10-14T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-10-14T00:00:00" ToDateTime="2016-10-15T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-10-15T00:00:00" ToDateTime="2016-10-16T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-10-16T00:00:00" ToDateTime="2016-10-17T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-10-17T00:00:00" ToDateTime="2016-10-18T00:00:00" Value="0.33282075250671" />
+            <TimeSeriesValue FromDateTime="2016-10-18T00:00:00" ToDateTime="2016-10-19T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-10-19T00:00:00" ToDateTime="2016-10-20T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-10-20T00:00:00" ToDateTime="2016-10-21T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-10-21T00:00:00" ToDateTime="2016-10-22T00:00:00" Value="0.34684768077328" />
+            <TimeSeriesValue FromDateTime="2016-10-22T00:00:00" ToDateTime="2016-10-23T00:00:00" Value="0.41621721692793" />
+            <TimeSeriesValue FromDateTime="2016-10-23T00:00:00" ToDateTime="2016-10-24T00:00:00" Value="0.3815324488506" />
+            <TimeSeriesValue FromDateTime="2016-10-24T00:00:00" ToDateTime="2016-10-25T00:00:00" Value="0.33282075250671" />
+            <TimeSeriesValue FromDateTime="2016-10-25T00:00:00" ToDateTime="2016-10-26T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-10-26T00:00:00" ToDateTime="2016-10-27T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-10-27T00:00:00" ToDateTime="2016-10-28T00:00:00" Value="0.36980083611857" />
+            <TimeSeriesValue FromDateTime="2016-10-28T00:00:00" ToDateTime="2016-10-29T00:00:00" Value="0.34684768077328" />
+            <TimeSeriesValue FromDateTime="2016-10-29T00:00:00" ToDateTime="2016-10-30T00:00:00" Value="0.41621721692793" />
+            <TimeSeriesValue FromDateTime="2016-10-30T00:00:00" ToDateTime="2016-10-31T00:00:00" Value="0.36896432112376" />
+            <TimeSeriesValue FromDateTime="2016-10-31T00:00:00" ToDateTime="2016-11-01T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-11-01T00:00:00" ToDateTime="2016-11-02T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-02T00:00:00" ToDateTime="2016-11-03T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-03T00:00:00" ToDateTime="2016-11-04T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-04T00:00:00" ToDateTime="2016-11-05T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-11-05T00:00:00" ToDateTime="2016-11-06T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-11-06T00:00:00" ToDateTime="2016-11-07T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-11-07T00:00:00" ToDateTime="2016-11-08T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-11-08T00:00:00" ToDateTime="2016-11-09T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-09T00:00:00" ToDateTime="2016-11-10T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-10T00:00:00" ToDateTime="2016-11-11T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-11T00:00:00" ToDateTime="2016-11-12T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-11-12T00:00:00" ToDateTime="2016-11-13T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-11-13T00:00:00" ToDateTime="2016-11-14T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-11-14T00:00:00" ToDateTime="2016-11-15T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-11-15T00:00:00" ToDateTime="2016-11-16T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-16T00:00:00" ToDateTime="2016-11-17T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-17T00:00:00" ToDateTime="2016-11-18T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-18T00:00:00" ToDateTime="2016-11-19T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-11-19T00:00:00" ToDateTime="2016-11-20T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-11-20T00:00:00" ToDateTime="2016-11-21T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-11-21T00:00:00" ToDateTime="2016-11-22T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-11-22T00:00:00" ToDateTime="2016-11-23T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-23T00:00:00" ToDateTime="2016-11-24T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-24T00:00:00" ToDateTime="2016-11-25T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-25T00:00:00" ToDateTime="2016-11-26T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-11-26T00:00:00" ToDateTime="2016-11-27T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-11-27T00:00:00" ToDateTime="2016-11-28T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-11-28T00:00:00" ToDateTime="2016-11-29T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-11-29T00:00:00" ToDateTime="2016-11-30T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-11-30T00:00:00" ToDateTime="2016-12-01T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-12-01T00:00:00" ToDateTime="2016-12-02T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-12-02T00:00:00" ToDateTime="2016-12-03T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-12-03T00:00:00" ToDateTime="2016-12-04T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-12-04T00:00:00" ToDateTime="2016-12-05T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-12-05T00:00:00" ToDateTime="2016-12-06T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-12-06T00:00:00" ToDateTime="2016-12-07T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-12-07T00:00:00" ToDateTime="2016-12-08T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-12-08T00:00:00" ToDateTime="2016-12-09T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-12-09T00:00:00" ToDateTime="2016-12-10T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-12-10T00:00:00" ToDateTime="2016-12-11T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-12-11T00:00:00" ToDateTime="2016-12-12T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-12-12T00:00:00" ToDateTime="2016-12-13T00:00:00" Value="0.41602594063339" />
+            <TimeSeriesValue FromDateTime="2016-12-13T00:00:00" ToDateTime="2016-12-14T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-12-14T00:00:00" ToDateTime="2016-12-15T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-12-15T00:00:00" ToDateTime="2016-12-16T00:00:00" Value="0.46225104514821" />
+            <TimeSeriesValue FromDateTime="2016-12-16T00:00:00" ToDateTime="2016-12-17T00:00:00" Value="0.4335596009666" />
+            <TimeSeriesValue FromDateTime="2016-12-17T00:00:00" ToDateTime="2016-12-18T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-12-18T00:00:00" ToDateTime="2016-12-19T00:00:00" Value="0.47691556106325" />
+            <TimeSeriesValue FromDateTime="2016-12-19T00:00:00" ToDateTime="2016-12-20T00:00:00" Value="0.49923112876006" />
+            <TimeSeriesValue FromDateTime="2016-12-20T00:00:00" ToDateTime="2016-12-21T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-12-21T00:00:00" ToDateTime="2016-12-22T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-12-22T00:00:00" ToDateTime="2016-12-23T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-12-23T00:00:00" ToDateTime="2016-12-24T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-12-24T00:00:00" ToDateTime="2016-12-25T00:00:00" Value="0.6243258253919" />
+            <TimeSeriesValue FromDateTime="2016-12-25T00:00:00" ToDateTime="2016-12-26T00:00:00" Value="0.57229867327591" />
+            <TimeSeriesValue FromDateTime="2016-12-26T00:00:00" ToDateTime="2016-12-27T00:00:00" Value="0.49923112876006" />
+            <TimeSeriesValue FromDateTime="2016-12-27T00:00:00" ToDateTime="2016-12-28T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-12-28T00:00:00" ToDateTime="2016-12-29T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-12-29T00:00:00" ToDateTime="2016-12-30T00:00:00" Value="0.55470125417785" />
+            <TimeSeriesValue FromDateTime="2016-12-30T00:00:00" ToDateTime="2016-12-31T00:00:00" Value="0.52027152115991" />
+            <TimeSeriesValue FromDateTime="2016-12-31T00:00:00" ToDateTime="2017-01-01T00:00:00" />
+          </TimeSeriesValues>
+        </TimeSeries>
+      </TimeSeries>
+    </TimeSeriesSet>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2015-12-17T08:22:23Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassElectricityFlexibleVolumeStructuredDealProfiledVolume</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+    <Comment>ElectricityStructuredDealDaily; should pass</Comment>
+    <ModificationDateTimeUtc>2015-12-17T09:18:06Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>8784</Deliveries>
+    <OriginalQuantity>0</OriginalQuantity>
+    <ReferringId>2494</ReferringId>
+  </ReferenceData>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

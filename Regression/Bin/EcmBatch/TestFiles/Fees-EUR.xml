@@ -1,0 +1,324 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Fees-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitorFees.xml" />
+      <returns>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1688,daily,Asian,ASIC/A M01-10 45.00 - Broker Fees,Fee-Test-Asian,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-844,daily,Asian,ASIC/A M01-10 45.00 - Clearing Fees,Fee-Test-Asian,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2976,daily,Asian,ASIC/A M01-10 45.00 - Commission Fees,Fee-Test-Asian,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2232,daily,Asian,ASIC/A M01-10 45.00 - Trading Fees,Fee-Test-Asian,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,1688,daily,Asian,ASIC/A M01-10 45.00 - Broker Fees,Fee-Test-Asian,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,844,daily,Asian,ASIC/A M01-10 45.00 - Clearing Fees,Fee-Test-Asian,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,2976,daily,Asian,ASIC/A M01-10 45.00 - Commission Fees,Fee-Test-Asian,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,2232,daily,Asian,ASIC/A M01-10 45.00 - Trading Fees,Fee-Test-Asian,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-24020,daily,Forward,Dec-11 - Broker Fees,Fee-Test-CoalForward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-12010,daily,Forward,Dec-11 - Clearing Fees,Fee-Test-CoalForward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-5818.79842003798,daily,Forward,Dec-11 - Commission Fees,Fee-Test-CoalForward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-36030,daily,Forward,Dec-11 - Trading Fees,Fee-Test-CoalForward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,24020,daily,Forward,Dec-11 - Broker Fees,Fee-Test-CoalForward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,12010,daily,Forward,Dec-11 - Clearing Fees,Fee-Test-CoalForward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,5818.79842003798,daily,Forward,Dec-11 - Commission Fees,Fee-Test-CoalForward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,36030,daily,Forward,Dec-11 - Trading Fees,Fee-Test-CoalForward,Buy</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Counterparty-Fee-Test,EUR,-24020,daily,Future,Dec11 - Broker Fees,Fee-Test-CoalFuture,Sell</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Counterparty-Fee-Test,EUR,-12010,daily,Future,Dec11 - Clearing Fees,Fee-Test-CoalFuture,Sell</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Counterparty-Fee-Test,EUR,-6202.37366632338,daily,Future,Dec11 - Commission Fees,Fee-Test-CoalFuture,Sell</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Counterparty-Fee-Test,EUR,-36030,daily,Future,Dec11 - Trading Fees,Fee-Test-CoalFuture,Sell</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Fee-Test,EUR,24020,daily,Future,Dec11 - Broker Fees,Fee-Test-CoalFuture,Buy</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Fee-Test,EUR,12010,daily,Future,Dec11 - Clearing Fees,Fee-Test-CoalFuture,Buy</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Fee-Test,EUR,6202.37366632338,daily,Future,Dec11 - Commission Fees,Fee-Test-CoalFuture,Buy</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Fee-Test,EUR,36030,daily,Future,Dec11 - Trading Fees,Fee-Test-CoalFuture,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-73.3061063811948,daily,Currency Forward,USDEUR 01-Jun-11 - Broker Fees,Fee-Test-Currency-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-143.99413753449,daily,Currency Forward,USDEUR 01-Jun-11 - Clearing Fees,Fee-Test-Currency-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-214.682168687785,daily,Currency Forward,USDEUR 01-Jun-11 - Commission Fees,Fee-Test-Currency-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-285.37019984108,daily,Currency Forward,USDEUR 01-Jun-11 - Trading Fees,Fee-Test-Currency-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,73.3061063811948,daily,Currency Forward,USDEUR 01-Jun-11 - Broker Fees,Fee-Test-Currency-Forward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,143.99413753449,daily,Currency Forward,USDEUR 01-Jun-11 - Clearing Fees,Fee-Test-Currency-Forward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,214.682168687785,daily,Currency Forward,USDEUR 01-Jun-11 - Commission Fees,Fee-Test-Currency-Forward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,285.37019984108,daily,Currency Forward,USDEUR 01-Jun-11 - Trading Fees,Fee-Test-Currency-Forward,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1655.75373677428,daily,Currency Forward,USDEUR 01-Jun-11 - Broker Fees,Fee-Test-Currency-Forward-0001,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-827.876868387139,daily,Currency Forward,USDEUR 01-Jun-11 - Clearing Fees,Fee-Test-Currency-Forward-0001,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-3010.4613395896,daily,Currency Forward,USDEUR 01-Jun-11 - Commission Fees,Fee-Test-Currency-Forward-0001,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2257.8460046922,daily,Currency Forward,USDEUR 01-Jun-11 - Trading Fees,Fee-Test-Currency-Forward-0001,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,1655.75373677428,daily,Currency Forward,USDEUR 01-Jun-11 - Broker Fees,Fee-Test-Currency-Forward-0001,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,827.876868387139,daily,Currency Forward,USDEUR 01-Jun-11 - Clearing Fees,Fee-Test-Currency-Forward-0001,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,3010.4613395896,daily,Currency Forward,USDEUR 01-Jun-11 - Commission Fees,Fee-Test-Currency-Forward-0001,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,2257.8460046922,daily,Currency Forward,USDEUR 01-Jun-11 - Trading Fees,Fee-Test-Currency-Forward-0001,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-7460.12,daily,Asian,ASIC/A M11-11 30.00 - Broker Fees,Fee-Test-El-Asian-Struct,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-3730.06,daily,Asian,ASIC/A M11-11 30.00 - Clearing Fees,Fee-Test-El-Asian-Struct,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-14520.24,daily,Asian,ASIC/A M11-11 30.00 - Commission Fees,Fee-Test-El-Asian-Struct,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-10890.18,daily,Asian,ASIC/A M11-11 30.00 - Trading Fees,Fee-Test-El-Asian-Struct,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,7460.12,daily,Asian,ASIC/A M11-11 30.00 - Broker Fees,Fee-Test-El-Asian-Struct,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,3730.06,daily,Asian,ASIC/A M11-11 30.00 - Clearing Fees,Fee-Test-El-Asian-Struct,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,14520.24,daily,Asian,ASIC/A M11-11 30.00 - Commission Fees,Fee-Test-El-Asian-Struct,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,10890.18,daily,Asian,ASIC/A M11-11 30.00 - Trading Fees,Fee-Test-El-Asian-Struct,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2200,daily,Forward,ECS Mar-11 - Broker Fees,Fee-TestElCert-Forward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1100,daily,Forward,ECS Mar-11 - Clearing Fees,Fee-TestElCert-Forward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-4000,daily,Forward,ECS Mar-11 - Commission Fees,Fee-TestElCert-Forward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-3000,daily,Forward,ECS Mar-11 - Trading Fees,Fee-TestElCert-Forward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,2200,daily,Forward,ECS Mar-11 - Broker Fees,Fee-TestElCert-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,1100,daily,Forward,ECS Mar-11 - Clearing Fees,Fee-TestElCert-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,4000,daily,Forward,ECS Mar-11 - Commission Fees,Fee-TestElCert-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,3000,daily,Forward,ECS Mar-11 - Trading Fees,Fee-TestElCert-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1220,daily,Structured Deal,q4-10 - Broker Fees,Fee-Test-ElCertificateStructuredDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-59.7067521002637,daily,Structured Deal,q4-10 - Clearing Fees,Fee-Test-ElCertificateStructuredDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-295.5426341568,daily,Structured Deal,q4-10 - Commission Fees,Fee-Test-ElCertificateStructuredDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-245.903657257995,daily,Structured Deal,q4-10 - Trading Fees,Fee-Test-ElCertificateStructuredDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,1220,daily,Structured Deal,q4-10 - Broker Fees,Fee-Test-ElCertificateStructuredDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,59.7067521002637,daily,Structured Deal,q4-10 - Clearing Fees,Fee-Test-ElCertificateStructuredDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,295.5426341568,daily,Structured Deal,q4-10 - Commission Fees,Fee-Test-ElCertificateStructuredDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,245.903657257995,daily,Structured Deal,q4-10 - Trading Fees,Fee-Test-ElCertificateStructuredDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-4908.68,daily,Capacity,M10-10 - Broker Fees,Fee-Test-ElectricityCapacity,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-4326.8,daily,Capacity,M10-10 - Clearing Fees,Fee-Test-ElectricityCapacity,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1492,daily,Capacity,M10-10 - Commission Fees,Fee-Test-ElectricityCapacity,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-3730,daily,Capacity,M10-10 - Entry Fees,Fee-Test-ElectricityCapacity,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-4476,daily,Capacity,M10-10 - Exit Fees,Fee-Test-ElectricityCapacity,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2984,daily,Capacity,M10-10 - Trading Fees,Fee-Test-ElectricityCapacity,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,4908.68,daily,Capacity,M10-10 - Broker Fees,Fee-Test-ElectricityCapacity,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,4326.8,daily,Capacity,M10-10 - Clearing Fees,Fee-Test-ElectricityCapacity,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,1492,daily,Capacity,M10-10 - Commission Fees,Fee-Test-ElectricityCapacity,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,3730,daily,Capacity,M10-10 - Entry Fees,Fee-Test-ElectricityCapacity,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,4476,daily,Capacity,M10-10 - Exit Fees,Fee-Test-ElectricityCapacity,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,2984,daily,Capacity,M10-10 - Trading Fees,Fee-Test-ElectricityCapacity,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-203.98,daily,Capacity Spot,D1109-10 - Broker Fees,Fee-Test-ElectricityCapacitySpot,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-179.8,daily,Capacity Spot,D1109-10 - Clearing Fees,Fee-Test-ElectricityCapacitySpot,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-62,daily,Capacity Spot,D1109-10 - Commission Fees,Fee-Test-ElectricityCapacitySpot,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-155,daily,Capacity Spot,D1109-10 - Entry Fees,Fee-Test-ElectricityCapacitySpot,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-186,daily,Capacity Spot,D1109-10 - Exit Fees,Fee-Test-ElectricityCapacitySpot,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-124,daily,Capacity Spot,D1109-10 - Trading Fees,Fee-Test-ElectricityCapacitySpot,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,203.98,daily,Capacity Spot,D1109-10 - Broker Fees,Fee-Test-ElectricityCapacitySpot,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,179.8,daily,Capacity Spot,D1109-10 - Clearing Fees,Fee-Test-ElectricityCapacitySpot,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,62,daily,Capacity Spot,D1109-10 - Commission Fees,Fee-Test-ElectricityCapacitySpot,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,155,daily,Capacity Spot,D1109-10 - Entry Fees,Fee-Test-ElectricityCapacitySpot,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,186,daily,Capacity Spot,D1109-10 - Exit Fees,Fee-Test-ElectricityCapacitySpot,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,124,daily,Capacity Spot,D1109-10 - Trading Fees,Fee-Test-ElectricityCapacitySpot,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-203.98,daily,Capacity Structured Deal,D1109-10 - Broker Fees,Fee-Test-ElectricityCapacityStrDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-179.8,daily,Capacity Structured Deal,D1109-10 - Clearing Fees,Fee-Test-ElectricityCapacityStrDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-62,daily,Capacity Structured Deal,D1109-10 - Commission Fees,Fee-Test-ElectricityCapacityStrDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-155,daily,Capacity Structured Deal,D1109-10 - Entry Fees,Fee-Test-ElectricityCapacityStrDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-186,daily,Capacity Structured Deal,D1109-10 - Exit Fees,Fee-Test-ElectricityCapacityStrDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-124,daily,Capacity Structured Deal,D1109-10 - Trading Fees,Fee-Test-ElectricityCapacityStrDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,203.98,daily,Capacity Structured Deal,D1109-10 - Broker Fees,Fee-Test-ElectricityCapacityStrDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,179.8,daily,Capacity Structured Deal,D1109-10 - Clearing Fees,Fee-Test-ElectricityCapacityStrDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,62,daily,Capacity Structured Deal,D1109-10 - Commission Fees,Fee-Test-ElectricityCapacityStrDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,155,daily,Capacity Structured Deal,D1109-10 - Entry Fees,Fee-Test-ElectricityCapacityStrDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,186,daily,Capacity Structured Deal,D1109-10 - Exit Fees,Fee-Test-ElectricityCapacityStrDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,124,daily,Capacity Structured Deal,D1109-10 - Trading Fees,Fee-Test-ElectricityCapacityStrDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-155,daily,Transport,D2810-10 - Entry Fees,Fee-Test-ElectricityTransport,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-186,daily,Transport,D2810-10 - Exit Fees,Fee-Test-ElectricityTransport,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,155,daily,Transport,D2810-10 - Entry Fees,Fee-Test-ElectricityTransport,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,186,daily,Transport,D2810-10 - Exit Fees,Fee-Test-ElectricityTransport,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-728,daily,European,EURC M11-11 20-OCT-11 45.00 - Broker Fees,Fee-Test-El-European,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-364,daily,European,EURC M11-11 20-OCT-11 45.00 - Clearing Fees,Fee-Test-El-European,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1056,daily,European,EURC M11-11 20-OCT-11 45.00 - Commission Fees,Fee-Test-El-European,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-792,daily,European,EURC M11-11 20-OCT-11 45.00 - Trading Fees,Fee-Test-El-European,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,728,daily,European,EURC M11-11 20-OCT-11 45.00 - Broker Fees,Fee-Test-El-European,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,364,daily,European,EURC M11-11 20-OCT-11 45.00 - Clearing Fees,Fee-Test-El-European,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,1056,daily,European,EURC M11-11 20-OCT-11 45.00 - Commission Fees,Fee-Test-El-European,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,792,daily,European,EURC M11-11 20-OCT-11 45.00 - Trading Fees,Fee-Test-El-European,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-70951.9999999999,daily,European,EURC M11-11 20-OCT-11 20.00 - Broker Fees,Fee-Test-El-EU-Struct,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-35476,daily,European,EURC M11-11 20-OCT-11 20.00 - Clearing Fees,Fee-Test-El-EU-Struct,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-141504,daily,European,EURC M11-11 20-OCT-11 20.00 - Commission Fees,Fee-Test-El-EU-Struct,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-106128,daily,European,EURC M11-11 20-OCT-11 20.00 - Trading Fees,Fee-Test-El-EU-Struct,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,70951.9999999999,daily,European,EURC M11-11 20-OCT-11 20.00 - Broker Fees,Fee-Test-El-EU-Struct,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,35476,daily,European,EURC M11-11 20-OCT-11 20.00 - Clearing Fees,Fee-Test-El-EU-Struct,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,141504,daily,European,EURC M11-11 20-OCT-11 20.00 - Commission Fees,Fee-Test-El-EU-Struct,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,106128,daily,European,EURC M11-11 20-OCT-11 20.00 - Trading Fees,Fee-Test-El-EU-Struct,Sell</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-846.575,daily,Fixed Price Floating Volume,D0702-10 - Broker Fees,Fee-Test-El-FixedPriceFloatingVolume,Sell</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-423.2875,daily,Fixed Price Floating Volume,D0702-10 - Clearing Fees,Fee-Test-El-FixedPriceFloatingVolume,Sell</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1293.15,daily,Fixed Price Floating Volume,D0702-10 - Commission Fees,Fee-Test-El-FixedPriceFloatingVolume,Sell</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-969.8625,daily,Fixed Price Floating Volume,D0702-10 - Trading Fees,Fee-Test-El-FixedPriceFloatingVolume,Sell</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Fee-Test,EUR,846.575,daily,Fixed Price Floating Volume,D0702-10 - Broker Fees,Fee-Test-El-FixedPriceFloatingVolume,Buy</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Fee-Test,EUR,423.2875,daily,Fixed Price Floating Volume,D0702-10 - Clearing Fees,Fee-Test-El-FixedPriceFloatingVolume,Buy</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Fee-Test,EUR,1293.15,daily,Fixed Price Floating Volume,D0702-10 - Commission Fees,Fee-Test-El-FixedPriceFloatingVolume,Buy</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Fee-Test,EUR,969.8625,daily,Fixed Price Floating Volume,D0702-10 - Trading Fees,Fee-Test-El-FixedPriceFloatingVolume,Buy</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-206,daily,Fixed Price Floating Volume,D0702-11 - Broker Fees,Fee-Test-El-FixedPriceFloatingVolume-FSD,Sell</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-103,daily,Fixed Price Floating Volume,D0702-11 - Clearing Fees,Fee-Test-El-FixedPriceFloatingVolume-FSD,Sell</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-12,daily,Fixed Price Floating Volume,D0702-11 - Commission Fees,Fee-Test-El-FixedPriceFloatingVolume-FSD,Sell</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-9,daily,Fixed Price Floating Volume,D0702-11 - Trading Fees,Fee-Test-El-FixedPriceFloatingVolume-FSD,Sell</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Fee-Test,EUR,206,daily,Fixed Price Floating Volume,D0702-11 - Broker Fees,Fee-Test-El-FixedPriceFloatingVolume-FSD,Buy</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Fee-Test,EUR,103,daily,Fixed Price Floating Volume,D0702-11 - Clearing Fees,Fee-Test-El-FixedPriceFloatingVolume-FSD,Buy</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Fee-Test,EUR,12,daily,Fixed Price Floating Volume,D0702-11 - Commission Fees,Fee-Test-El-FixedPriceFloatingVolume-FSD,Buy</record>
+        <record>2010-01-06 00:00:00.000,0,HI,Fee-Test,EUR,9,daily,Fixed Price Floating Volume,D0702-11 - Trading Fees,Fee-Test-El-FixedPriceFloatingVolume-FSD,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-200,daily,Structured Deal,El-StructFlex-Versioned-FeeTest - Broker Fees,Fee-Test-El-FlexStruct-Versioned,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-100,daily,Structured Deal,El-StructFlex-Versioned-FeeTest - Clearing Fees,Fee-Test-El-FlexStruct-Versioned,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-400,daily,Structured Deal,El-StructFlex-Versioned-FeeTest - Commission Fees,Fee-Test-El-FlexStruct-Versioned,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-300,daily,Structured Deal,El-StructFlex-Versioned-FeeTest - Trading Fees,Fee-Test-El-FlexStruct-Versioned,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,200,daily,Structured Deal,El-StructFlex-Versioned-FeeTest - Broker Fees,Fee-Test-El-FlexStruct-Versioned,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,100,daily,Structured Deal,El-StructFlex-Versioned-FeeTest - Clearing Fees,Fee-Test-El-FlexStruct-Versioned,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,400,daily,Structured Deal,El-StructFlex-Versioned-FeeTest - Commission Fees,Fee-Test-El-FlexStruct-Versioned,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,300,daily,Structured Deal,El-StructFlex-Versioned-FeeTest - Trading Fees,Fee-Test-El-FlexStruct-Versioned,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-248,daily,Floating Price,FLOAT D0106-10 - Broker Fees,Fee-Test-El-Floating-Spot,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-124,daily,Floating Price,FLOAT D0106-10 - Clearing Fees,Fee-Test-El-Floating-Spot,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-96,daily,Floating Price,FLOAT D0106-10 - Commission Fees,Fee-Test-El-Floating-Spot,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-72,daily,Floating Price,FLOAT D0106-10 - Trading Fees,Fee-Test-El-Floating-Spot,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,248,daily,Floating Price,FLOAT D0106-10 - Broker Fees,Fee-Test-El-Floating-Spot,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,124,daily,Floating Price,FLOAT D0106-10 - Clearing Fees,Fee-Test-El-Floating-Spot,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,96,daily,Floating Price,FLOAT D0106-10 - Commission Fees,Fee-Test-El-Floating-Spot,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,72,daily,Floating Price,FLOAT D0106-10 - Trading Fees,Fee-Test-El-Floating-Spot,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-248,daily,Forward,D0106-10 - Broker Fees,Fee-Test-El-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-124,daily,Forward,D0106-10 - Clearing Fees,Fee-Test-El-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-96,daily,Forward,D0106-10 - Commission Fees,Fee-Test-El-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-72,daily,Forward,D0106-10 - Trading Fees,Fee-Test-El-Forward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,248,daily,Forward,D0106-10 - Broker Fees,Fee-Test-El-Forward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,124,daily,Forward,D0106-10 - Clearing Fees,Fee-Test-El-Forward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,96,daily,Forward,D0106-10 - Commission Fees,Fee-Test-El-Forward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,72,daily,Forward,D0106-10 - Trading Fees,Fee-Test-El-Forward,Buy</record>
+        <record>2011-10-28 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-248,daily,Future,D2910-11 - Broker Fees,Fee-Test-El-Future-NordPool,Sell</record>
+        <record>2011-10-28 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-124,daily,Future,D2910-11 - Clearing Fees,Fee-Test-El-Future-NordPool,Sell</record>
+        <record>2011-10-28 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-96,daily,Future,D2910-11 - Commission Fees,Fee-Test-El-Future-NordPool,Sell</record>
+        <record>2011-10-28 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-72,daily,Future,D2910-11 - Trading Fees,Fee-Test-El-Future-NordPool,Sell</record>
+        <record>2011-10-28 00:00:00.000,0,HI,Fee-Test,EUR,248,daily,Future,D2910-11 - Broker Fees,Fee-Test-El-Future-NordPool,Buy</record>
+        <record>2011-10-28 00:00:00.000,0,HI,Fee-Test,EUR,124,daily,Future,D2910-11 - Clearing Fees,Fee-Test-El-Future-NordPool,Buy</record>
+        <record>2011-10-28 00:00:00.000,0,HI,Fee-Test,EUR,96,daily,Future,D2910-11 - Commission Fees,Fee-Test-El-Future-NordPool,Buy</record>
+        <record>2011-10-28 00:00:00.000,0,HI,Fee-Test,EUR,72,daily,Future,D2910-11 - Trading Fees,Fee-Test-El-Future-NordPool,Buy</record>
+        <record>2010-01-02 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-234766.4,daily,Structured Deal,Electricity-Struct-Fixed-FeeTest - Broker Fees,Fee-Test-El-Struct-Fixed,Sell</record>
+        <record>2010-01-02 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-117383.2,daily,Structured Deal,Electricity-Struct-Fixed-FeeTest - Clearing Fees,Fee-Test-El-Struct-Fixed,Sell</record>
+        <record>2010-01-02 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-469132.8,daily,Structured Deal,Electricity-Struct-Fixed-FeeTest - Commission Fees,Fee-Test-El-Struct-Fixed,Sell</record>
+        <record>2010-01-02 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-351849.6,daily,Structured Deal,Electricity-Struct-Fixed-FeeTest - Trading Fees,Fee-Test-El-Struct-Fixed,Sell</record>
+        <record>2010-01-02 00:00:00.000,0,HI,Fee-Test,EUR,234766.4,daily,Structured Deal,Electricity-Struct-Fixed-FeeTest - Broker Fees,Fee-Test-El-Struct-Fixed,Buy</record>
+        <record>2010-01-02 00:00:00.000,0,HI,Fee-Test,EUR,117383.2,daily,Structured Deal,Electricity-Struct-Fixed-FeeTest - Clearing Fees,Fee-Test-El-Struct-Fixed,Buy</record>
+        <record>2010-01-02 00:00:00.000,0,HI,Fee-Test,EUR,469132.8,daily,Structured Deal,Electricity-Struct-Fixed-FeeTest - Commission Fees,Fee-Test-El-Struct-Fixed,Buy</record>
+        <record>2010-01-02 00:00:00.000,0,HI,Fee-Test,EUR,351849.6,daily,Structured Deal,Electricity-Struct-Fixed-FeeTest - Trading Fees,Fee-Test-El-Struct-Fixed,Buy</record>
+        <record>2010-12-08 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-7620,daily,European,EURC EUADEC-10 15-DEC-10 10.00 - Broker Fees,Fee-Test-EmissionEuropean,Sell</record>
+        <record>2010-12-08 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-3810,daily,European,EURC EUADEC-10 15-DEC-10 10.00 - Clearing Fees,Fee-Test-EmissionEuropean,Sell</record>
+        <record>2010-12-08 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1913.58238119269,daily,European,EURC EUADEC-10 15-DEC-10 10.00 - Commission Fees,Fee-Test-EmissionEuropean,Sell</record>
+        <record>2010-12-08 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-11430,daily,European,EURC EUADEC-10 15-DEC-10 10.00 - Trading Fees,Fee-Test-EmissionEuropean,Sell</record>
+        <record>2010-12-08 00:00:00.000,0,HI,Fee-Test,EUR,7620,daily,European,EURC EUADEC-10 15-DEC-10 10.00 - Broker Fees,Fee-Test-EmissionEuropean,Buy</record>
+        <record>2010-12-08 00:00:00.000,0,HI,Fee-Test,EUR,3810,daily,European,EURC EUADEC-10 15-DEC-10 10.00 - Clearing Fees,Fee-Test-EmissionEuropean,Buy</record>
+        <record>2010-12-08 00:00:00.000,0,HI,Fee-Test,EUR,1913.58238119269,daily,European,EURC EUADEC-10 15-DEC-10 10.00 - Commission Fees,Fee-Test-EmissionEuropean,Buy</record>
+        <record>2010-12-08 00:00:00.000,0,HI,Fee-Test,EUR,11430,daily,European,EURC EUADEC-10 15-DEC-10 10.00 - Trading Fees,Fee-Test-EmissionEuropean,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-7620,daily,Forward,EUA SPOT 301210 - Broker Fees,Fee-Test-EmissionForward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-3810,daily,Forward,EUA SPOT 301210 - Clearing Fees,Fee-Test-EmissionForward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1846.32977638408,daily,Forward,EUA SPOT 301210 - Commission Fees,Fee-Test-EmissionForward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-11430,daily,Forward,EUA SPOT 301210 - Trading Fees,Fee-Test-EmissionForward,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,7620,daily,Forward,EUA SPOT 301210 - Broker Fees,Fee-Test-EmissionForward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,3810,daily,Forward,EUA SPOT 301210 - Clearing Fees,Fee-Test-EmissionForward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,1846.32977638408,daily,Forward,EUA SPOT 301210 - Commission Fees,Fee-Test-EmissionForward,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,11430,daily,Forward,EUA SPOT 301210 - Trading Fees,Fee-Test-EmissionForward,Buy</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Counterparty-Fee-Test,EUR,-2200,daily,Future,EUA DAILY 011111 - Broker Fees,Fee-Test-Emission-Future-ICE,Sell</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Counterparty-Fee-Test,EUR,-1100,daily,Future,EUA DAILY 011111 - Clearing Fees,Fee-Test-Emission-Future-ICE,Sell</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Counterparty-Fee-Test,EUR,-4000,daily,Future,EUA DAILY 011111 - Commission Fees,Fee-Test-Emission-Future-ICE,Sell</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Counterparty-Fee-Test,EUR,-3000,daily,Future,EUA DAILY 011111 - Trading Fees,Fee-Test-Emission-Future-ICE,Sell</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Fee-Test,EUR,2200,daily,Future,EUA DAILY 011111 - Broker Fees,Fee-Test-Emission-Future-ICE,Buy</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Fee-Test,EUR,1100,daily,Future,EUA DAILY 011111 - Clearing Fees,Fee-Test-Emission-Future-ICE,Buy</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Fee-Test,EUR,4000,daily,Future,EUA DAILY 011111 - Commission Fees,Fee-Test-Emission-Future-ICE,Buy</record>
+        <record>2011-11-01 00:00:00.000,0,TR,Fee-Test,EUR,3000,daily,Future,EUA DAILY 011111 - Trading Fees,Fee-Test-Emission-Future-ICE,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-101.332,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Broker Fees,Fee-Test-GasapacityStructuredDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-89.32,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Clearing Fees,Fee-Test-GasapacityStructuredDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-30.8,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Commission Fees,Fee-Test-GasapacityStructuredDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-77,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Entry Fees,Fee-Test-GasapacityStructuredDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-11.1918604082329,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Exit Fees,Fee-Test-GasapacityStructuredDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-61.6,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Trading Fees,Fee-Test-GasapacityStructuredDeal,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,101.332,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Broker Fees,Fee-Test-GasapacityStructuredDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,89.32,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Clearing Fees,Fee-Test-GasapacityStructuredDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,30.8,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Commission Fees,Fee-Test-GasapacityStructuredDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,77,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Entry Fees,Fee-Test-GasapacityStructuredDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,11.1918604082329,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Exit Fees,Fee-Test-GasapacityStructuredDeal,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,61.6,daily,Capacity Structured Deal,11-Sep-10 - 13-Sep-10 - Trading Fees,Fee-Test-GasapacityStructuredDeal,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-304.516097448367,daily,Swap,SWAP Mar-11 - Broker Fees,Fee-TestGas-FFF-ICEMonthAheadNBP,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-152.258048724183,daily,Swap,SWAP Mar-11 - Clearing Fees,Fee-TestGas-FFF-ICEMonthAheadNBP,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-144.122122456479,daily,Swap,SWAP Mar-11 - Commission Fees,Fee-TestGas-FFF-ICEMonthAheadNBP,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-108.091591842359,daily,Swap,SWAP Mar-11 - Trading Fees,Fee-TestGas-FFF-ICEMonthAheadNBP,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,304.516097448367,daily,Swap,SWAP Mar-11 - Broker Fees,Fee-TestGas-FFF-ICEMonthAheadNBP,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,152.258048724183,daily,Swap,SWAP Mar-11 - Clearing Fees,Fee-TestGas-FFF-ICEMonthAheadNBP,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,144.122122456479,daily,Swap,SWAP Mar-11 - Commission Fees,Fee-TestGas-FFF-ICEMonthAheadNBP,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,108.091591842359,daily,Swap,SWAP Mar-11 - Trading Fees,Fee-TestGas-FFF-ICEMonthAheadNBP,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-9133.04,daily,Floating Price,CAL-10 - Broker Fees,Fee-Test-GasFloatingPrice,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-8050.4,daily,Floating Price,CAL-10 - Clearing Fees,Fee-Test-GasFloatingPrice,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2776,daily,Floating Price,CAL-10 - Commission Fees,Fee-Test-GasFloatingPrice,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-672.480616737113,daily,Floating Price,CAL-10 - Trading Fees,Fee-Test-GasFloatingPrice,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,9133.04,daily,Floating Price,CAL-10 - Broker Fees,Fee-Test-GasFloatingPrice,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,8050.4,daily,Floating Price,CAL-10 - Clearing Fees,Fee-Test-GasFloatingPrice,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,2776,daily,Floating Price,CAL-10 - Commission Fees,Fee-Test-GasFloatingPrice,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,672.480616737113,daily,Floating Price,CAL-10 - Trading Fees,Fee-Test-GasFloatingPrice,Buy</record>
+        <record>2009-12-30 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-260,daily,Forward,Sep-11 - Broker Fees,Fee-Test-Gas-Forward-MWhd,Sell</record>
+        <record>2009-12-30 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-130,daily,Forward,Sep-11 - Clearing Fees,Fee-Test-Gas-Forward-MWhd,Sell</record>
+        <record>2009-12-30 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-120,daily,Forward,Sep-11 - Commission Fees,Fee-Test-Gas-Forward-MWhd,Sell</record>
+        <record>2009-12-30 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-90,daily,Forward,Sep-11 - Trading Fees,Fee-Test-Gas-Forward-MWhd,Sell</record>
+        <record>2009-12-30 00:00:00.000,0,HI,Fee-Test,EUR,260,daily,Forward,Sep-11 - Broker Fees,Fee-Test-Gas-Forward-MWhd,Buy</record>
+        <record>2009-12-30 00:00:00.000,0,HI,Fee-Test,EUR,130,daily,Forward,Sep-11 - Clearing Fees,Fee-Test-Gas-Forward-MWhd,Buy</record>
+        <record>2009-12-30 00:00:00.000,0,HI,Fee-Test,EUR,120,daily,Forward,Sep-11 - Commission Fees,Fee-Test-Gas-Forward-MWhd,Buy</record>
+        <record>2009-12-30 00:00:00.000,0,HI,Fee-Test,EUR,90,daily,Forward,Sep-11 - Trading Fees,Fee-Test-Gas-Forward-MWhd,Buy</record>
+        <record>2011-09-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1690,daily,Future,Oct11 - Broker Fees,Fee-Test-Gas-Future-ICE-TTF,Sell</record>
+        <record>2011-09-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-845,daily,Future,Oct11 - Clearing Fees,Fee-Test-Gas-Future-ICE-TTF,Sell</record>
+        <record>2011-09-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2980,daily,Future,Oct11 - Commission Fees,Fee-Test-Gas-Future-ICE-TTF,Sell</record>
+        <record>2011-09-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2235,daily,Future,Oct11 - Trading Fees,Fee-Test-Gas-Future-ICE-TTF,Sell</record>
+        <record>2011-09-01 00:00:00.000,0,HI,Fee-Test,EUR,1690,daily,Future,Oct11 - Broker Fees,Fee-Test-Gas-Future-ICE-TTF,Buy</record>
+        <record>2011-09-01 00:00:00.000,0,HI,Fee-Test,EUR,845,daily,Future,Oct11 - Clearing Fees,Fee-Test-Gas-Future-ICE-TTF,Buy</record>
+        <record>2011-09-01 00:00:00.000,0,HI,Fee-Test,EUR,2980,daily,Future,Oct11 - Commission Fees,Fee-Test-Gas-Future-ICE-TTF,Buy</record>
+        <record>2011-09-01 00:00:00.000,0,HI,Fee-Test,EUR,2235,daily,Future,Oct11 - Trading Fees,Fee-Test-Gas-Future-ICE-TTF,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-127.652,daily,Structured Deal,Transaction Name - Broker Fees,Fee-Test-GasStructuredDealMonthly,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-112.52,daily,Structured Deal,Transaction Name - Clearing Fees,Fee-Test-GasStructuredDealMonthly,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-38.8,daily,Structured Deal,Transaction Name - Commission Fees,Fee-Test-GasStructuredDealMonthly,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-77.6,daily,Structured Deal,Transaction Name - Trading Fees,Fee-Test-GasStructuredDealMonthly,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,127.652,daily,Structured Deal,Transaction Name - Broker Fees,Fee-Test-GasStructuredDealMonthly,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,112.52,daily,Structured Deal,Transaction Name - Clearing Fees,Fee-Test-GasStructuredDealMonthly,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,38.8,daily,Structured Deal,Transaction Name - Commission Fees,Fee-Test-GasStructuredDealMonthly,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,77.6,daily,Structured Deal,Transaction Name - Trading Fees,Fee-Test-GasStructuredDealMonthly,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-905,daily,Transport,WEND40-10 - Entry Fees,Fee-Test-GasTransport,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1086,daily,Transport,WEND40-10 - Exit Fees,Fee-Test-GasTransport,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,905,daily,Transport,WEND40-10 - Entry Fees,Fee-Test-GasTransport,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,1086,daily,Transport,WEND40-10 - Exit Fees,Fee-Test-GasTransport,Buy</record>
+        <record>2009-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-7899912.65985864,daily,Forward,LECs YR-10 - Broker Fees,Fee-Test-GreenCertificateForwardEnvLabelNone,Sell</record>
+        <record>2009-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-3949956.32992932,daily,Forward,LECs YR-10 - Clearing Fees,Fee-Test-GreenCertificateForwardEnvLabelNone,Sell</record>
+        <record>2009-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-15799825.3197173,daily,Forward,LECs YR-10 - Commission Fees,Fee-Test-GreenCertificateForwardEnvLabelNone,Sell</record>
+        <record>2009-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-11849868.989788,daily,Forward,LECs YR-10 - Trading Fees,Fee-Test-GreenCertificateForwardEnvLabelNone,Sell</record>
+        <record>2009-01-01 00:00:00.000,0,HI,Fee-Test,EUR,7899912.65985864,daily,Forward,LECs YR-10 - Broker Fees,Fee-Test-GreenCertificateForwardEnvLabelNone,Buy</record>
+        <record>2009-01-01 00:00:00.000,0,HI,Fee-Test,EUR,3949956.32992932,daily,Forward,LECs YR-10 - Clearing Fees,Fee-Test-GreenCertificateForwardEnvLabelNone,Buy</record>
+        <record>2009-01-01 00:00:00.000,0,HI,Fee-Test,EUR,15799825.3197173,daily,Forward,LECs YR-10 - Commission Fees,Fee-Test-GreenCertificateForwardEnvLabelNone,Buy</record>
+        <record>2009-01-01 00:00:00.000,0,HI,Fee-Test,EUR,11849868.989788,daily,Forward,LECs YR-10 - Trading Fees,Fee-Test-GreenCertificateForwardEnvLabelNone,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-30.91789344,daily,Indexed Option,Indexed Option C Q4-10 - Broker Fees,Fee-Test-IndexedOptionFinancial,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-27.2528544,daily,Indexed Option,Indexed Option C Q4-10 - Clearing Fees,Fee-Test-IndexedOptionFinancial,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-9.397536,daily,Indexed Option,Indexed Option C Q4-10 - Commission Fees,Fee-Test-IndexedOptionFinancial,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2.27653487215029,daily,Indexed Option,Indexed Option C Q4-10 - Trading Fees,Fee-Test-IndexedOptionFinancial,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,30.91789344,daily,Indexed Option,Indexed Option C Q4-10 - Broker Fees,Fee-Test-IndexedOptionFinancial,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,27.2528544,daily,Indexed Option,Indexed Option C Q4-10 - Clearing Fees,Fee-Test-IndexedOptionFinancial,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,9.397536,daily,Indexed Option,Indexed Option C Q4-10 - Commission Fees,Fee-Test-IndexedOptionFinancial,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,2.27653487215029,daily,Indexed Option,Indexed Option C Q4-10 - Trading Fees,Fee-Test-IndexedOptionFinancial,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-6.58,daily,Structured Deal,Q4-10 - Broker Fees,Fee-Test-IndexedOptionFinancial-Underlying,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-5.8,daily,Structured Deal,Q4-10 - Clearing Fees,Fee-Test-IndexedOptionFinancial-Underlying,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2,daily,Structured Deal,Q4-10 - Commission Fees,Fee-Test-IndexedOptionFinancial-Underlying,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-0.484496121568525,daily,Structured Deal,Q4-10 - Trading Fees,Fee-Test-IndexedOptionFinancial-Underlying,Sell</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,6.58,daily,Structured Deal,Q4-10 - Broker Fees,Fee-Test-IndexedOptionFinancial-Underlying,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,5.8,daily,Structured Deal,Q4-10 - Clearing Fees,Fee-Test-IndexedOptionFinancial-Underlying,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,2,daily,Structured Deal,Q4-10 - Commission Fees,Fee-Test-IndexedOptionFinancial-Underlying,Buy</record>
+        <record>2010-01-01 00:00:00.000,0,HI,Fee-Test,EUR,0.484496121568525,daily,Structured Deal,Q4-10 - Trading Fees,Fee-Test-IndexedOptionFinancial-Underlying,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2200,daily,Swap,SWAP Oct-11 - Broker Fees,Fee-Test-Oil-FFF-ICEBrentOilFLFSwap,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1100,daily,Swap,SWAP Oct-11 - Clearing Fees,Fee-Test-Oil-FFF-ICEBrentOilFLFSwap,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-4000,daily,Swap,SWAP Oct-11 - Commission Fees,Fee-Test-Oil-FFF-ICEBrentOilFLFSwap,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-3000,daily,Swap,SWAP Oct-11 - Trading Fees,Fee-Test-Oil-FFF-ICEBrentOilFLFSwap,Sell</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,2200,daily,Swap,SWAP Oct-11 - Broker Fees,Fee-Test-Oil-FFF-ICEBrentOilFLFSwap,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,1100,daily,Swap,SWAP Oct-11 - Clearing Fees,Fee-Test-Oil-FFF-ICEBrentOilFLFSwap,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,4000,daily,Swap,SWAP Oct-11 - Commission Fees,Fee-Test-Oil-FFF-ICEBrentOilFLFSwap,Buy</record>
+        <record>2011-01-01 00:00:00.000,0,HI,Fee-Test,EUR,3000,daily,Swap,SWAP Oct-11 - Trading Fees,Fee-Test-Oil-FFF-ICEBrentOilFLFSwap,Buy</record>
+        <record>2010-01-04 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-7620,daily,Future,Apr-11 - Broker Fees,FeeTest-OilFutureBrentOil,Sell</record>
+        <record>2010-01-04 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-3810,daily,Future,Apr-11 - Clearing Fees,FeeTest-OilFutureBrentOil,Sell</record>
+        <record>2010-01-04 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1856.5215859301,daily,Future,Apr-11 - Commission Fees,FeeTest-OilFutureBrentOil,Sell</record>
+        <record>2010-01-04 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-11430,daily,Future,Apr-11 - Trading Fees,FeeTest-OilFutureBrentOil,Sell</record>
+        <record>2010-01-04 00:00:00.000,0,HI,Fee-Test,EUR,7620,daily,Future,Apr-11 - Broker Fees,FeeTest-OilFutureBrentOil,Buy</record>
+        <record>2010-01-04 00:00:00.000,0,HI,Fee-Test,EUR,3810,daily,Future,Apr-11 - Clearing Fees,FeeTest-OilFutureBrentOil,Buy</record>
+        <record>2010-01-04 00:00:00.000,0,HI,Fee-Test,EUR,1856.5215859301,daily,Future,Apr-11 - Commission Fees,FeeTest-OilFutureBrentOil,Buy</record>
+        <record>2010-01-04 00:00:00.000,0,HI,Fee-Test,EUR,11430,daily,Future,Apr-11 - Trading Fees,FeeTest-OilFutureBrentOil,Buy</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-4908.68,daily,Capacity,Oct-10 - Broker Fees,Fee-Test-PassGasCapacity,Sell</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-4326.8,daily,Capacity,Oct-10 - Clearing Fees,Fee-Test-PassGasCapacity,Sell</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-1492,daily,Capacity,Oct-10 - Commission Fees,Fee-Test-PassGasCapacity,Sell</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-3730,daily,Capacity,Oct-10 - Entry Fees,Fee-Test-PassGasCapacity,Sell</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-556.463510770017,daily,Capacity,Oct-10 - Exit Fees,Fee-Test-PassGasCapacity,Sell</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Counterparty-Fee-Test,EUR,-2984,daily,Capacity,Oct-10 - Trading Fees,Fee-Test-PassGasCapacity,Sell</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Fee-Test,EUR,4908.68,daily,Capacity,Oct-10 - Broker Fees,Fee-Test-PassGasCapacity,Buy</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Fee-Test,EUR,4326.8,daily,Capacity,Oct-10 - Clearing Fees,Fee-Test-PassGasCapacity,Buy</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Fee-Test,EUR,1492,daily,Capacity,Oct-10 - Commission Fees,Fee-Test-PassGasCapacity,Buy</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Fee-Test,EUR,3730,daily,Capacity,Oct-10 - Entry Fees,Fee-Test-PassGasCapacity,Buy</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Fee-Test,EUR,556.463510770017,daily,Capacity,Oct-10 - Exit Fees,Fee-Test-PassGasCapacity,Buy</record>
+        <record>2010-10-01 00:00:00.000,0,HI,Fee-Test,EUR,2984,daily,Capacity,Oct-10 - Trading Fees,Fee-Test-PassGasCapacity,Buy</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

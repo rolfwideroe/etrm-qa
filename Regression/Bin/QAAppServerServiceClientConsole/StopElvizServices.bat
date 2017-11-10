@@ -1,0 +1,1 @@
+QAAppServerServiceClientConsole.exe STOPELVIZSERVICES

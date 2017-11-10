@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>The trade date is invalid. It can't be a date after the end date or the settlement date of the contract.</Message>
+<TestData>
+<DealInsert xsi:noNamespaceSchemaLocation="DealInsert.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET+1</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Forward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityForward>
+			<InstrumentData>
+				<Timezone>CET+1</Timezone>
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<LoadProfile>SystemBase</LoadProfile>
+				<FromDate>2010-05-01</FromDate>
+				<ToDate>2010-05-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="RWE"/>
+					<!--DeliveryLocation>Test GridPoint</DeliveryLocation-->
+					<!--<SchedulingAccount></SchedulingAccount>-->
+					<!--<CounterpartySchedulingAccount></CounterpartySchedulingAccount>-->
+					<!--<SchedulingNominationProcedure></SchedulingNominationProcedure>-->
+				</Physical>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>2.0</Quantity>
+				<QuantityUnit/>
+				<Price>3.0</Price>
+				<Currency>NOK</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>NordPool</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>NOK</ClearingCurrency>
+				<ClearingFee>4.0</ClearingFee>
+				<BrokerTradingFee>5.0</BrokerTradingFee>
+				<BrokerCurrency>NOK</BrokerCurrency>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+		</ElectricityForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-05-31T23:00:01</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<!--<Audited>true</Audited>-->
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>API test: ElectricityForward Physical, TradeDate after ToDate</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FailElectricityForwardPhysicalTradeDateAfterFromDate</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</TestData>
+</TestCase>

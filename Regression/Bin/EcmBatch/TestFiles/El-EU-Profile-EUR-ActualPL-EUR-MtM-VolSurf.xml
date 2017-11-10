@@ -1,0 +1,100 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-EU-Profile-EUR-ActualPL-EUR-MtM-VolSurf</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-16T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-3704.8,monthly,European,EURC Jun-12 17-MAY-12 46.00 - Premium,El-EU-Profile-EUR-0005</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,33939.4570090631,monthly,European,EURC Jun-12 17-MAY-12 46.00 - Settlement,El-EU-Profile-EUR-0005</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,3704.8,monthly,European,EURP Jun-12 17-MAY-12 46.00 - Premium,El-EU-Profile-EUR-0006</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,-913.232603692779,monthly,European,EURP Jun-12 17-MAY-12 46.00 - Settlement,El-EU-Profile-EUR-0006</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-3704.8,monthly,European,EURC Jun-12 17-MAY-12 46.00 - Premium,El-EU-Profile-EUR-0007</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,33939.4570090631,monthly,European,EURC Jun-12 17-MAY-12 46.00 - Settlement,El-EU-Profile-EUR-0007</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,3704.8,monthly,European,EURP Jun-12 17-MAY-12 46.00 - Premium,El-EU-Profile-EUR-0008</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,-913.232603692779,monthly,European,EURP Jun-12 17-MAY-12 46.00 - Settlement,El-EU-Profile-EUR-0008</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-5304.6,monthly,European,EURC Q4-10 16-SEP-10 46.00 - Premium,El-EU-Profile-EUR-0009</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,5304.6,monthly,European,EURP Q4-10 16-SEP-10 46.00 - Premium,El-EU-Profile-EUR-0010</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-5304.6,monthly,European,EURC Q4-10 16-SEP-10 46.00 - Premium,El-EU-Profile-EUR-0011</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,5304.6,monthly,European,EURP Q4-10 16-SEP-10 46.00 - Premium,El-EU-Profile-EUR-0012</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-3704.8,monthly,European,EURC Q2-12 15-MAR-12 46.00 - Premium,El-EU-Profile-EUR-0013</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,33162.0768222634,monthly,European,EURC Q2-12 15-MAR-12 46.00 - Settlement,El-EU-Profile-EUR-0013</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,3704.8,monthly,European,EURP Q2-12 15-MAR-12 46.00 - Premium,El-EU-Profile-EUR-0014</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,-70.303246517145,monthly,European,EURP Q2-12 15-MAR-12 46.00 - Settlement,El-EU-Profile-EUR-0014</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-3704.8,monthly,European,EURC Q2-12 15-MAR-12 46.00 - Premium,El-EU-Profile-EUR-0015</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,33162.0768222634,monthly,European,EURC Q2-12 15-MAR-12 46.00 - Settlement,El-EU-Profile-EUR-0015</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,3704.8,monthly,European,EURP Q2-12 15-MAR-12 46.00 - Premium,El-EU-Profile-EUR-0016</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,-70.303246517145,monthly,European,EURP Q2-12 15-MAR-12 46.00 - Settlement,El-EU-Profile-EUR-0016</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-26523,monthly,European,EURC CAL-11 16-DEC-10 46.00 - Premium,El-EU-Profile-EUR-0017</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,26523,monthly,European,EURP CAL-11 16-DEC-10 46.00 - Premium,El-EU-Profile-EUR-0018</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-26523,monthly,European,EURC CAL-11 16-DEC-10 46.00 - Premium,El-EU-Profile-EUR-0019</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,26523,monthly,European,EURP CAL-11 16-DEC-10 46.00 - Premium,El-EU-Profile-EUR-0020</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-26775.6,monthly,European,EURC CAL-12 15-DEC-11 46.00 - Premium,El-EU-Profile-EUR-0021</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,268241.973380971,monthly,European,EURC CAL-12 15-DEC-11 46.00 - Settlement,El-EU-Profile-EUR-0021</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,26775.6,monthly,European,EURP CAL-12 15-DEC-11 46.00 - Premium,El-EU-Profile-EUR-0022</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-26775.6,monthly,European,EURC CAL-12 15-DEC-11 46.00 - Premium,El-EU-Profile-EUR-0023</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,268241.973380971,monthly,European,EURC CAL-12 15-DEC-11 46.00 - Settlement,El-EU-Profile-EUR-0023</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,26775.6,monthly,European,EURP CAL-12 15-DEC-11 46.00 - Premium,El-EU-Profile-EUR-0024</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-11451.2,monthly,European,EURC 13-Jun-10 - 10-Nov-10 20-MAY-10 46.00 - Premium,El-EU-Profile-EUR-0025</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,11451.2,monthly,European,EURP 13-Jun-10 - 10-Nov-10 20-MAY-10 46.00 - Premium,El-EU-Profile-EUR-0026</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-11451.2,monthly,European,EURC 13-Jun-10 - 10-Nov-10 20-MAY-10 46.00 - Premium,El-EU-Profile-EUR-0027</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,11451.2,monthly,European,EURP 13-Jun-10 - 10-Nov-10 20-MAY-10 46.00 - Premium,El-EU-Profile-EUR-0028</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-15913.8,monthly,European,EURC 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Premium,El-EU-Profile-EUR-0029</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,144018.219735205,monthly,European,EURC 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Settlement,El-EU-Profile-EUR-0029</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,15913.8,monthly,European,EURP 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Premium,El-EU-Profile-EUR-0030</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-15913.8,monthly,European,EURC 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Premium,El-EU-Profile-EUR-0031</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,144018.219735205,monthly,European,EURC 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Settlement,El-EU-Profile-EUR-0031</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,15913.8,monthly,European,EURP 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Premium,El-EU-Profile-EUR-0032</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-16166.4,monthly,European,EURC Nov-11 20-OCT-11 46.00 - Premium,El-EU-Profile-EUR-0033</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,16166.4,monthly,European,EURP Nov-11 20-OCT-11 46.00 - Premium,El-EU-Profile-EUR-0034</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-16166.4,monthly,European,EURC Nov-11 20-OCT-11 46.00 - Premium,El-EU-Profile-EUR-0035</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,16166.4,monthly,European,EURP Nov-11 20-OCT-11 46.00 - Premium,El-EU-Profile-EUR-0036</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-16166.4,monthly,European,EURC Jun-12 17-MAY-12 46.00 - Premium,El-EU-Profile-EUR-0037</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,46355.8448035613,monthly,European,EURC Jun-12 17-MAY-12 46.00 - Settlement,El-EU-Profile-EUR-0037</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,16166.4,monthly,European,EURP Jun-12 17-MAY-12 46.00 - Premium,El-EU-Profile-EUR-0038</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,-21559.6977039127,monthly,European,EURP Jun-12 17-MAY-12 46.00 - Settlement,El-EU-Profile-EUR-0038</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-16166.4,monthly,European,EURC Jun-12 17-MAY-12 46.00 - Premium,El-EU-Profile-EUR-0039</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,46355.8448035613,monthly,European,EURC Jun-12 17-MAY-12 46.00 - Settlement,El-EU-Profile-EUR-0039</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,16166.4,monthly,European,EURP Jun-12 17-MAY-12 46.00 - Premium,El-EU-Profile-EUR-0040</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,-21559.6977039127,monthly,European,EURP Jun-12 17-MAY-12 46.00 - Settlement,El-EU-Profile-EUR-0040</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-51235.7,monthly,European,EURC Q4-10 16-SEP-10 46.00 - Premium,El-EU-Profile-EUR-0041</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,51235.7,monthly,European,EURP Q4-10 16-SEP-10 46.00 - Premium,El-EU-Profile-EUR-0042</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-51235.7,monthly,European,EURC Q4-10 16-SEP-10 46.00 - Premium,El-EU-Profile-EUR-0043</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,51235.7,monthly,European,EURP Q4-10 16-SEP-10 46.00 - Premium,El-EU-Profile-EUR-0044</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-48836,monthly,European,EURC Q2-12 15-MAR-12 46.00 - Premium,El-EU-Profile-EUR-0045</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,168552.823123661,monthly,European,EURC Q2-12 15-MAR-12 46.00 - Settlement,El-EU-Profile-EUR-0045</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,48836,monthly,European,EURP Q2-12 15-MAR-12 46.00 - Premium,El-EU-Profile-EUR-0046</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,-15382.2667571996,monthly,European,EURP Q2-12 15-MAR-12 46.00 - Settlement,El-EU-Profile-EUR-0046</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-48836,monthly,European,EURC Q2-12 15-MAR-12 46.00 - Premium,El-EU-Profile-EUR-0047</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,168552.823123661,monthly,European,EURC Q2-12 15-MAR-12 46.00 - Settlement,El-EU-Profile-EUR-0047</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,48836,monthly,European,EURP Q2-12 15-MAR-12 46.00 - Premium,El-EU-Profile-EUR-0048</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,-15382.2667571996,monthly,European,EURP Q2-12 15-MAR-12 46.00 - Settlement,El-EU-Profile-EUR-0048</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-211847.2,monthly,European,EURC CAL-11 16-DEC-10 46.00 - Premium,El-EU-Profile-EUR-0049</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,211847.2,monthly,European,EURP CAL-11 16-DEC-10 46.00 - Premium,El-EU-Profile-EUR-0050</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-211847.2,monthly,European,EURC CAL-11 16-DEC-10 46.00 - Premium,El-EU-Profile-EUR-0051</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,211847.2,monthly,European,EURP CAL-11 16-DEC-10 46.00 - Premium,El-EU-Profile-EUR-0052</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-212857.6,monthly,European,EURC CAL-12 15-DEC-11 46.00 - Premium,El-EU-Profile-EUR-0053</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,1433696.7919915,monthly,European,EURC CAL-12 15-DEC-11 46.00 - Settlement,El-EU-Profile-EUR-0053</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,212857.6,monthly,European,EURP CAL-12 15-DEC-11 46.00 - Premium,El-EU-Profile-EUR-0054</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-212857.6,monthly,European,EURC CAL-12 15-DEC-11 46.00 - Premium,El-EU-Profile-EUR-0055</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,1433696.7919915,monthly,European,EURC CAL-12 15-DEC-11 46.00 - Settlement,El-EU-Profile-EUR-0055</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,212857.6,monthly,European,EURP CAL-12 15-DEC-11 46.00 - Premium,El-EU-Profile-EUR-0056</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-96030.1,monthly,European,EURC 13-Jun-10 - 10-Nov-10 20-MAY-10 46.00 - Premium,El-EU-Profile-EUR-0057</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,96030.1,monthly,European,EURP 13-Jun-10 - 10-Nov-10 20-MAY-10 46.00 - Premium,El-EU-Profile-EUR-0058</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-96030.1,monthly,European,EURC 13-Jun-10 - 10-Nov-10 20-MAY-10 46.00 - Premium,El-EU-Profile-EUR-0059</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,96030.1,monthly,European,EURP 13-Jun-10 - 10-Nov-10 20-MAY-10 46.00 - Premium,El-EU-Profile-EUR-0060</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-49509.6,monthly,European,EURC 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Premium,El-EU-Profile-EUR-0061</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,49509.6,monthly,European,EURP 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Premium,El-EU-Profile-EUR-0062</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,-9394.56792922673,monthly,European,EURP 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Settlement,El-EU-Profile-EUR-0062</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,-49509.6,monthly,European,EURC 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Premium,El-EU-Profile-EUR-0063</record>
+        <record>2010-01-01 00:00:00.000,0,PR,112,EUR,49509.6,monthly,European,EURP 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Premium,El-EU-Profile-EUR-0064</record>
+        <record>2011-11-01 00:00:00.000,0,HI,112,EUR,-9394.56792922673,monthly,European,EURP 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00 - Settlement,El-EU-Profile-EUR-0064</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BulkDealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<DealInsert>
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Gas-StructFlex-CapFloor-EUR</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Gas-StructFlex-CapFloor-EUR</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Cap/Floor</PriceType>
+				<CapFloorPricingResolution>Daily</CapFloorPricingResolution>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-12-31</ToDate>
+				<Financial />
+				<TransactionName>Gas-StructFlex-FV-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<ModelType>Flexible Volume</ModelType>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>						
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="100"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="200"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="300"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>	
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="50"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="100"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="200"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>CapPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="10000"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MultiplierBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MultiplierAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="0"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="0"/>
+					</TimeSeries>
+					</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Gas-StructFlex-FV-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price</Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Gas-StructFlex-FV-CapFloor-EUR-0001</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<TicketNumber></TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Gas-StructFlex-CapFloor-EUR</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Gas-StructFlex-CapFloor-EUR</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Cap/Floor</PriceType>
+				<CapFloorPricingResolution>Daily</CapFloorPricingResolution>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Gas-StructFlex-Retail_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<ModelType>Retail</ModelType>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>						
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="100"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="200"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="300"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>	
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="50"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="100"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="200"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>CapPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="10000"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MultiplierBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1.1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MultiplierAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1.2"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="2"/>
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Gas-StructFlex-FV-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2</Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Gas-StructFlex-FV-CapFloor-EUR-0002</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<TicketNumber></TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Gas-StructFlex-CapFloor-EUR</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Gas-StructFlex-CapFloor-EUR</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Cap/Floor</PriceType>
+				<CapFloorPricingResolution>Daily</CapFloorPricingResolution>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Gas-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<ModelType>Flexible Volume</ModelType>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>						
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="100"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="200"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="300"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>	
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="50"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="100"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="200"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>CapPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="23"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>FloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="20"/>
+					</TimeSeries>					
+					<TimeSeries>
+						<TimeSeriesType>MultiplierBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1.1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MultiplierAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1.2"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="2"/>
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Gas-StructFlex-FV_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50</Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Gas-StructFlex-FV-CapFloor-EUR-0003</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<TicketNumber></TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Gas-StructFlex-CapFloor-EUR</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Gas-StructFlex-CapFloor-EUR</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Cap/Floor</PriceType>
+				<CapFloorPricingResolution>Daily</CapFloorPricingResolution>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Gas-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<ModelType>Generation</ModelType>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>						
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="100"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="200"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="300"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>	
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="50"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="100"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="200"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>CapPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="23"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>FloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="20"/>
+					</TimeSeries>					
+					<TimeSeries>
+						<TimeSeriesType>MultiplierBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1.1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MultiplierAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1.2"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>EntireContractPeriod</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="2"/>
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Gas-StructFlex-GEN_PH-CapFloor-EUR-Monthly-Vol-SingleCapFloor_Above_Cap_Equal_Market_price_*1.1+1*1.2+2_cap60_floor50_HourlyPrice</Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Gas-StructFlex-FV-CapFloor-EUR-0004</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<TicketNumber></TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Gas-StructFlex-CapFloor-EUR</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Gas-StructFlex-CapFloor-EUR</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Cap/Floor</PriceType>
+				<CapFloorPricingResolution>Daily</CapFloorPricingResolution>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<ModelType>Generation</ModelType>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>						
+						<Resolution>Quarterly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="100"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>	
+						<Resolution>Quarterly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="200"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>CapPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="23"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="24"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>FloorPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" />
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="21"/>
+					</TimeSeries>					
+					<TimeSeries>
+						<TimeSeriesType>MultiplierBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="1.1"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="1.2"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MultiplierAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="1.2"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" />
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1.3"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="1"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" />
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="2"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="2.1"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="2.2"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_DailyPrice</Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Gas-StructFlex-FV-CapFloor-EUR-0005</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<TicketNumber></TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Gas-StructFlex-CapFloor-EUR</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Gas-StructFlex-CapFloor-EUR</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Cap/Floor</PriceType>
+				<CapFloorPricingResolution>Daily</CapFloorPricingResolution>
+				<FromDate>2011-01-01</FromDate>
+				<ToDate>2011-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<ModelType>Retail</ModelType>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>						
+						<Resolution>Yearly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-01-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="100"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>	
+						<Resolution>Yearly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-01-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="200"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>CapPrice</TimeSeriesType>
+						<Resolution>Yearly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-01-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="23"/>
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Gas-StructFlex-FV-CapFloor-EUR-Yearly-Vol-YearlyCapFloor_Cap60</Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Gas-StructFlex-FV-CapFloor-EUR-0006</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<TicketNumber></TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>Gas-StructFlex-CapFloor-EUR</Portfolio>
+			<CounterpartyPortfolio>Counterparty-Gas-StructFlex-CapFloor-EUR</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Cap/Floor</PriceType>
+				<CapFloorPricingResolution>Daily</CapFloorPricingResolution>
+				<FromDate>2011-10-01</FromDate>
+				<ToDate>2011-12-31</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<ModelType>Generation</ModelType>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>						
+						<Resolution>Quarterly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="100"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>	
+						<Resolution>Quarterly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="200"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>CapPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="23"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="24"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>FloorPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" />
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="21"/>
+					</TimeSeries>					
+					<TimeSeries>
+						<TimeSeriesType>MultiplierBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="1.1"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="1.2"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MultiplierAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="1.2"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" />
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="1.3"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginBeforeCapFloorPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="1"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" />
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" Value="2"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>MarginAfterCapFloorPrice</TimeSeriesType>
+						<Resolution>Monthly</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2011-10-01T00:00:00" ToDateTime="2011-11-01T00:00:00" Value="2.1"/>
+						<TimeSeriesDetail FromDateTime="2011-11-01T00:00:00" ToDateTime="2011-12-01T00:00:00" Value="2.2"/>
+						<TimeSeriesDetail FromDateTime="2011-12-01T00:00:00" ToDateTime="2012-01-01T00:00:00" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Gas-StructFlex-FV_PH-CapFloor-EUR-Quarterly-Vol-MonthlyCapFloor_MixOfValues_HourlyPrice</Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>Gas-StructFlex-FV-CapFloor-EUR-0007</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<TicketNumber></TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</BulkDealInsert>

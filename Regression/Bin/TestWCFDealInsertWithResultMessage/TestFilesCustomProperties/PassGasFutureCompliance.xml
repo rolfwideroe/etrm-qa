@@ -1,0 +1,144 @@
+<TestCase>
+<TestResult>Success</TestResult>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-Future</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasFuture>
+			<InstrumentData>
+				<ExecutionVenue>Endex</ExecutionVenue>
+				<PriceBasis>Endex TTF</PriceBasis>
+				<LoadProfile>Base Week</LoadProfile>
+				<FromDate>2008-01-01</FromDate>
+				<ToDate>2008-12-31</ToDate>
+				<Financial/>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>38</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>28</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasFuture>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2007-06-24T00:00:00.0</TradeDate>			
+			<TradeDateTimeZone>CET+1</TradeDateTimeZone>
+			<TimeStampClearedUTC>2013-11-20T15:00:00</TimeStampClearedUTC>
+			<TimeStampConfirmationBrokerUTC>2013-11-21T13:00:00</TimeStampConfirmationBrokerUTC>
+			<TimeStampConfirmationCounterPartyUTC>2013-11-22T17:00:00</TimeStampConfirmationCounterPartyUTC>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>GasFuture; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>PassGasFutureCompliance</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>		
+		<CustomProperties>
+			<PropertyGroup name="Compliance">
+				<StringProperty name="UTI" value="PassGasFutureCompliance"/>
+				<DateProperty name="TerminationDate" value="2013-11-20"/>
+				<BooleanProperty name="DealCompression" value="0"/>
+				<StringProperty name="EMIRStatus" value="EMIR risk reducing"/>
+				<StringProperty name="BuyerInitiatorAggressor" value="Aggressor"/>
+				<StringProperty name="SellerInitiatorAggressor" value="Initiator"/>
+				<BooleanProperty name="RemitReporting" value="1"/>
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<AssertQaTransactionDTO>True</AssertQaTransactionDTO>
+<QaTransactionDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransactionId>435</TransactionId>
+  <DealType>Gas-Future</DealType>
+  <BuySell>Buy</BuySell>
+  <DeliveryType>Financial</DeliveryType>
+  <Portfolios>
+    <PortfolioName>API Test Customer</PortfolioName>
+    <PortfolioExternalId>API Test Customer</PortfolioExternalId>
+    <CounterpartyPortfolioName>API Test Counterparty</CounterpartyPortfolioName>
+    <CounterpartyPortfolioExternalId>API Test Counterparty</CounterpartyPortfolioExternalId>
+  </Portfolios>
+  <InstrumentData>
+    <ExecutionVenue>Endex</ExecutionVenue>
+    <InstrumentName>Cal-08</InstrumentName>
+    <PriceBasis>Endex TTF</PriceBasis>
+    <FromDate>2008-01-01T00:00:00</FromDate>
+    <ToDate>2008-12-31T00:00:00</ToDate>
+    <LoadProfile>Base Week</LoadProfile>
+    <TimeZone>CET 06-06</TimeZone>
+  </InstrumentData>
+  <SettlementData>
+    <Quantity>38</Quantity>
+    <QuantityUnit>MW</QuantityUnit>
+    <Price>28</Price>
+    <PriceIsoCurrency>EUR</PriceIsoCurrency>
+    <PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+    <CurrencySource>Viz</CurrencySource>
+  </SettlementData>
+  <DealDetails>
+    <Trader>DealImport</Trader>
+    <Status>Active</Status>
+    <TradeDateTimeUtc>2007-06-23T21:00:00Z</TradeDateTimeUtc>
+  </DealDetails>
+  <FeesData>
+    <ClearingType>Electronic</ClearingType>
+  </FeesData>
+  <ReferenceData>
+    <ExternalId>PassGasFutureCompliance</ExternalId>
+    <ExternalSource>XMLFileImport</ExternalSource>
+    <TicketNumber>TicketNumber</TicketNumber>
+	<DealGroups>
+      <DealGroup Name="DealGroup1" Value="API Test" />
+    </DealGroups>
+    <Comment>GasFuture; should pass</Comment>
+    <ModificationDateTimeUtc>2014-08-12T12:53:33Z</ModificationDateTimeUtc>
+    <RiskValue>0</RiskValue>
+    <Originator>true</Originator>
+    <Deliveries>8784</Deliveries>
+    <OriginalQuantity>38</OriginalQuantity>
+    <ReferringId>436</ReferringId>
+  </ReferenceData>
+  <PropertyGroups>
+    <PropertyGroup Name="Compliance">
+      <Properties>
+        <Property Name="UTI" Value="PassGasFutureCompliance" ValueType="System.String" />
+        <Property Name="DealCompression" Value="False" ValueType="System.Boolean" />
+        <Property Name="TerminationDate" Value="2013-11-20T00:00:00" ValueType="System.DateTime" />
+        <Property Name="EMIRStatus" Value="EMIR risk reducing" ValueType="System.String" />		
+		<Property Name="RemitReporting" Value="True" ValueType="System.Boolean" />
+        <Property Name="BuyerInitiatorAggressor" Value="Aggressor" ValueType="System.String" />
+        <Property Name="SellerInitiatorAggressor" Value="Initiator" ValueType="System.String" />
+      </Properties>
+    </PropertyGroup>
+  <PropertyGroup Name="Deal Group"> <Properties> <Property Name="GroupField1" Value="API Test" ValueType="System.String" /> </Properties> </PropertyGroup> </PropertyGroups>
+  <TransactionWorkFlowDetails>
+    <Authorised>false</Authorised>
+    <Paid>false</Paid>
+    <ConfirmedByBroker>false</ConfirmedByBroker>
+    <ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+    <Audited>false</Audited>
+    <TimeStampClearedUtc>2013-11-20T15:00:00Z</TimeStampClearedUtc>
+	<TimeStampConfirmationBrokerUtc>2013-11-21T13:00:00Z</TimeStampConfirmationBrokerUtc>
+    <TimeStampConfirmationCounterPartyUtc>2013-11-22T17:00:00Z</TimeStampConfirmationCounterPartyUtc>
+  </TransactionWorkFlowDetails>
+</QaTransactionDTO>
+</TestCase>

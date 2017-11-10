@@ -1,0 +1,91 @@
+<DbQuery>
+	<Columns>
+		<Column ColumnName="Portfolio" ColumnDataType="System.String"/>
+		<Column ColumnName="Commodity" ColumnDataType="System.String"/>
+		<Column ColumnName="Instrument" ColumnDataType="System.String"/>
+		<Column ColumnName="FromDate" ColumnDataType="System.DateTime"/>
+		<Column ColumnName="ToDate" ColumnDataType="System.DateTime"/>
+		<Column ColumnName="InstrumentType" ColumnDataType="System.String"/>
+		<Column ColumnName="DeliveryType" ColumnDataType="System.String"/>
+		<Column ColumnName="LoadType" ColumnDataType="System.String"/>
+		<Column ColumnName="PositionPriceBasis" ColumnDataType="System.String"/>
+		<Column ColumnName="ExecutionVenue" ColumnDataType="System.String"/>
+		<Column ColumnName="PositonTimeZone" ColumnDataType="System.String"/>
+		<Column ColumnName="PositionCurrency" ColumnDataType="System.String"/>
+		<Column ColumnName="ExternalIds" ColumnDataType="System.String"/>
+		<Column ColumnName="ExposureAgainstCurrency" ColumnDataType="System.String"/>
+		<Column ColumnName="CurrencyExposureDate" ColumnDataType="System.DateTime"/>
+		<Column ColumnName="CurrencyExposure" ColumnDataType="System.Double"/>
+	</Columns>
+	<SqlQuery>
+	<![CDATA[
+		DECLARE @workspace varchar(255)
+		DECLARE @monitor varchar(255)
+		DECLARE @reportDate varchar(255)
+
+		set @workspace='{workspace}'
+		set @monitor='{monitor}'
+		set @reportDate='{reportdate}'
+
+		declare @mappingTable TABLE (TransIds NVARCHAR(4000),ExtIds VARCHAR(4000))
+		insert into @mappingTable
+		SELECT 
+		c.RCC_TransactionIds,dbo.ufn_TransIdCsvToExtIdCsv(c.RCC_TransactionIds) AS ExtIds
+		  FROM RCC_Contracts c
+
+				WHERE c.RCC_RCR_ID=(
+								SELECT RCR_ID FROM RCR_ReportHeader 
+								WHERE RCR_Workspace=@workspace
+								AND RCR_FrmName=@monitor
+								AND RCR_RpDate=@reportDate
+							)
+
+	   declare @extIdTable TABLE (TransIds NVARCHAR(4000),ExtIds VARCHAR(4000))
+	
+	   insert into @extIdTable
+	   SELECT m.TransIds,m.ExtIds FROM @mappingTable m GROUP BY m.TransIds,m.ExtIds	
+			
+	
+		
+
+
+			SELECT 
+
+			   c.RCC_PortfolioName as Portfolio
+			   ,c.RCC_Commodity as Commodity
+			   ,c.RCC_Instrument as Instrument
+			   ,c.RCC_InstPerFrom as FromDate
+			   ,c.RCC_InstPerTo as ToDate
+			   ,c.RCC_InstType as InstrumentType
+			   ,c.RCC_DelType as DeliveryType
+			  ,c.RCC_LoadType as LoadType
+			  ,c.RCC_Pricebasis as PositionPriceBasis
+			  ,c.RCC_Executionvenue as ExecutionVenue
+			  ,c.RCC_TimeZone as PositonTimeZone
+			  ,c.RCC_Currency as PositionCurrency
+			  			   
+			   ,ext.ExtIds as ExternalIds
+			   
+			  ,e.RCV_Currency as ExposureAgainstCurrency
+			  ,e.RCV_Date as CurrencyExposureDate
+			  ,e.RCV_CurrencyExposure CurrencyExposure
+
+		  FROM RCC_Contracts c
+		  left JOIN @extIdTable ext
+		  ON ext.TransIds=c.RCC_TransactionIds
+		  JOIN RCV_Values e 
+		  ON c.RCC_ContractId=e.RCV_RCC_ContractId
+
+
+			WHERE c.RCC_RCR_ID=(
+								SELECT RCR_ID FROM RCR_ReportHeader 
+								WHERE RCR_Workspace=@workspace
+								AND RCR_FrmName=@monitor
+								AND RCR_RpDate=@reportDate
+							)
+
+		 --and e.RCV_CurrencyExposure = 0
+		 ORDER BY ext.ExtIds,c.RCC_Instrument,e.RCV_Currency,e.RCV_Date
+	]]>
+	</SqlQuery>
+</DbQuery>

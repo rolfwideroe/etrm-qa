@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<TestCase>
+<TestResult>Failure</TestResult>
+<Message>No location could be found for the area and location passed: Non-Existant Storage Location area name: TTF</Message>
+<TestData>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Gas-Forward</DealType>
+      <Portfolios>
+        <Portfolio>API Test Customer</Portfolio>
+        <CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+        <BuySell>Sell</BuySell>
+      </Portfolios>
+      <GasForward>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>TTF</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2014-11-01</FromDate>
+          <ToDate>2014-11-28</ToDate>
+          <Physical>
+            <DeliveryArea AreaName="TTF" />
+			<DeliveryLocation>Non-Existant Storage Location</DeliveryLocation>
+          </Physical>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>150000</Quantity>
+          <QuantityUnit>Sm3/d</QuantityUnit>
+          <Price>0.666</Price>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerSm3</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </GasForward>
+      <DealDetails>
+        <Status>Active</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2014-10-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+        <ExternalId>FailGasStorageFwdLocationDoesNotExist.xml</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+</TestData>
+</TestCase>

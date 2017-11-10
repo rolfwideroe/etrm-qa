@@ -1,0 +1,25 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-ReserveCapacity-EUR-VolOrg</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2011-10-01 00:00:00.000,0,HI,174,EUR,40,monthly,Reserve Capacity,ReserveCapacity-Quarterly-Pre-Delivery-00-04-Tertiary-Day-Ahead,El-ReserveCapacity-EEX-0001</record>
+        <record>2011-11-01 00:00:00.000,0,TR,174,EUR,-40,monthly,Reserve Capacity,ReserveCapacity-Quarterly-In-Delivery-00-04-Tertiary-Day-Ahead,El-ReserveCapacity-EEX-0002</record>
+        <record>2011-11-01 00:00:00.000,0,TR,174,EUR,20,monthly,Reserve Capacity,ReserveCapacity-Quarterly-Post-Delivery-00-04-Tertiary-Day-Ahead,El-ReserveCapacity-EEX-0003</record>
+        <record>2011-10-01 00:00:00.000,0,HI,174,EUR,540,monthly,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0004</record>
+        <record>2011-10-01 00:00:00.000,0,HI,174,EUR,60,monthly,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0005</record>
+        <record>2011-11-01 00:00:00.000,0,TR,174,EUR,480,monthly,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Offpeak-Secondary,El-ReserveCapacity-EEX-0005</record>
+        <record>2011-10-01 00:00:00.000,0,HI,174,EUR,300,monthly,Reserve Capacity,ReserveCapacity-Weekly-Pre-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0007</record>
+        <record>2011-10-01 00:00:00.000,0,HI,174,EUR,60,monthly,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0008</record>
+        <record>2011-11-01 00:00:00.000,0,TR,174,EUR,240,monthly,Reserve Capacity,ReserveCapacity-Weekly-In-Delivery-Peak-Secondary,El-ReserveCapacity-EEX-0008</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

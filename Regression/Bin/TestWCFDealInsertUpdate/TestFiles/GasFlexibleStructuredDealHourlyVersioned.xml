@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (x64) (http://www.altova.com) by Jan Stavenes (private) -->
+<DealInsertUpdateTestCase>
+<InsertXml>
+<![CDATA[ 
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>Endex TTF</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2014-10-01</FromDate>
+				<ToDate>2014-10-01</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>Flexible_Gas_New_Hourly_0001, Initial</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>						
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2014-02-01</EffectiveFromDate>
+        							<Comment>Inital Load</Comment>
+							</EffectiveDateVersion>
+						</Version>
+							<TimeSeriesDetail FromDateTime="2014-10-01T06:00:00" ToDateTime="2014-10-01T07:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T07:00:00" ToDateTime="2014-10-01T08:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T08:00:00" ToDateTime="2014-10-01T09:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T09:00:00" ToDateTime="2014-10-01T10:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T10:00:00" ToDateTime="2014-10-01T11:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T11:00:00" ToDateTime="2014-10-01T12:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T12:00:00" ToDateTime="2014-10-01T13:00:00" Value="7" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T13:00:00" ToDateTime="2014-10-01T14:00:00" Value="8" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T14:00:00" ToDateTime="2014-10-01T15:00:00" Value="9" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T15:00:00" ToDateTime="2014-10-01T16:00:00" Value="10" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T16:00:00" ToDateTime="2014-10-01T17:00:00" Value="11" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T17:00:00" ToDateTime="2014-10-01T18:00:00" Value="12" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T18:00:00" ToDateTime="2014-10-01T19:00:00" Value="13" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T19:00:00" ToDateTime="2014-10-01T20:00:00" Value="14" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T20:00:00" ToDateTime="2014-10-01T21:00:00" Value="15" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T21:00:00" ToDateTime="2014-10-01T22:00:00" Value="16" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T22:00:00" ToDateTime="2014-10-01T23:00:00" Value="17" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T23:00:00" ToDateTime="2014-10-02T00:00:00" Value="18" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T00:00:00" ToDateTime="2014-10-02T01:00:00" Value="19" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T01:00:00" ToDateTime="2014-10-02T02:00:00" Value="20" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T02:00:00" ToDateTime="2014-10-02T03:00:00" Value="21" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T03:00:00" ToDateTime="2014-10-02T04:00:00" Value="22" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T04:00:00" ToDateTime="2014-10-02T05:00:00" Value="23" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T05:00:00" ToDateTime="2014-10-02T06:00:00" Value="24" />						
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2014-02-01</EffectiveFromDate>
+							</EffectiveDateVersion>
+						</Version>
+							<TimeSeriesDetail FromDateTime="2014-10-01T06:00:00" ToDateTime="2014-10-01T07:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T07:00:00" ToDateTime="2014-10-01T08:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T08:00:00" ToDateTime="2014-10-01T09:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T09:00:00" ToDateTime="2014-10-01T10:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T10:00:00" ToDateTime="2014-10-01T11:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T11:00:00" ToDateTime="2014-10-01T12:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T12:00:00" ToDateTime="2014-10-01T13:00:00" Value="7" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T13:00:00" ToDateTime="2014-10-01T14:00:00" Value="8" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T14:00:00" ToDateTime="2014-10-01T15:00:00" Value="9" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T15:00:00" ToDateTime="2014-10-01T16:00:00" Value="10" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T16:00:00" ToDateTime="2014-10-01T17:00:00" Value="11" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T17:00:00" ToDateTime="2014-10-01T18:00:00" Value="12" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T18:00:00" ToDateTime="2014-10-01T19:00:00" Value="13" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T19:00:00" ToDateTime="2014-10-01T20:00:00" Value="14" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T20:00:00" ToDateTime="2014-10-01T21:00:00" Value="15" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T21:00:00" ToDateTime="2014-10-01T22:00:00" Value="16" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T22:00:00" ToDateTime="2014-10-01T23:00:00" Value="17" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T23:00:00" ToDateTime="2014-10-02T00:00:00" Value="18" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T00:00:00" ToDateTime="2014-10-02T01:00:00" Value="19" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T01:00:00" ToDateTime="2014-10-02T02:00:00" Value="20" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T02:00:00" ToDateTime="2014-10-02T03:00:00" Value="21" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T03:00:00" ToDateTime="2014-10-02T04:00:00" Value="22" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T04:00:00" ToDateTime="2014-10-02T05:00:00" Value="23" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T05:00:00" ToDateTime="2014-10-02T06:00:00" Value="24" />
+						</TimeSeries>
+						<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>						
+						<Version>
+     							<Comment>Inital Load RV</Comment>
+						</Version>
+							<TimeSeriesDetail FromDateTime="2014-10-01T06:00:00" ToDateTime="2014-10-01T07:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T07:00:00" ToDateTime="2014-10-01T08:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T08:00:00" ToDateTime="2014-10-01T09:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T09:00:00" ToDateTime="2014-10-01T10:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T10:00:00" ToDateTime="2014-10-01T11:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T11:00:00" ToDateTime="2014-10-01T12:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T12:00:00" ToDateTime="2014-10-01T13:00:00" Value="7" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T13:00:00" ToDateTime="2014-10-01T14:00:00" Value="8" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T14:00:00" ToDateTime="2014-10-01T15:00:00" Value="9" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T15:00:00" ToDateTime="2014-10-01T16:00:00" Value="10" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T16:00:00" ToDateTime="2014-10-01T17:00:00" Value="11" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T17:00:00" ToDateTime="2014-10-01T18:00:00" Value="12" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T18:00:00" ToDateTime="2014-10-01T19:00:00" Value="13" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T19:00:00" ToDateTime="2014-10-01T20:00:00" Value="14" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T20:00:00" ToDateTime="2014-10-01T21:00:00" Value="15" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T21:00:00" ToDateTime="2014-10-01T22:00:00" Value="16" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T22:00:00" ToDateTime="2014-10-01T23:00:00" Value="17" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T23:00:00" ToDateTime="2014-10-02T00:00:00" Value="18" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T00:00:00" ToDateTime="2014-10-02T01:00:00" Value="19" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T01:00:00" ToDateTime="2014-10-02T02:00:00" Value="20" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T02:00:00" ToDateTime="2014-10-02T03:00:00" Value="21" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T03:00:00" ToDateTime="2014-10-02T04:00:00" Value="22" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T04:00:00" ToDateTime="2014-10-02T05:00:00" Value="23" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T05:00:00" ToDateTime="2014-10-02T06:00:00" Value="24" />
+						</TimeSeries>
+						<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+							<TimeSeriesDetail FromDateTime="2014-10-01T06:00:00" ToDateTime="2014-10-01T07:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T07:00:00" ToDateTime="2014-10-01T08:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T08:00:00" ToDateTime="2014-10-01T09:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T09:00:00" ToDateTime="2014-10-01T10:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T10:00:00" ToDateTime="2014-10-01T11:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T11:00:00" ToDateTime="2014-10-01T12:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T12:00:00" ToDateTime="2014-10-01T13:00:00" Value="7" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T13:00:00" ToDateTime="2014-10-01T14:00:00" Value="8" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T14:00:00" ToDateTime="2014-10-01T15:00:00" Value="9" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T15:00:00" ToDateTime="2014-10-01T16:00:00" Value="10" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T16:00:00" ToDateTime="2014-10-01T17:00:00" Value="11" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T17:00:00" ToDateTime="2014-10-01T18:00:00" Value="12" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T18:00:00" ToDateTime="2014-10-01T19:00:00" Value="13" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T19:00:00" ToDateTime="2014-10-01T20:00:00" Value="14" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T20:00:00" ToDateTime="2014-10-01T21:00:00" Value="15" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T21:00:00" ToDateTime="2014-10-01T22:00:00" Value="16" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T22:00:00" ToDateTime="2014-10-01T23:00:00" Value="17" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T23:00:00" ToDateTime="2014-10-02T00:00:00" Value="18" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T00:00:00" ToDateTime="2014-10-02T01:00:00" Value="19" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T01:00:00" ToDateTime="2014-10-02T02:00:00" Value="20" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T02:00:00" ToDateTime="2014-10-02T03:00:00" Value="21" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T03:00:00" ToDateTime="2014-10-02T04:00:00" Value="22" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T04:00:00" ToDateTime="2014-10-02T05:00:00" Value="23" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T05:00:00" ToDateTime="2014-10-02T06:00:00" Value="24" />						
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MWh/d</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2013-09-30T21:22:23</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Flexible_Gas_Hourly_Versioned_0002, Initial</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>Flexible_Gas_New_Versioned_0002</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+]]>
+</InsertXml>
+<UpdateXml>
+<![CDATA[ 
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+		<TransactionPart>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>						
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2014-02-01</EffectiveFromDate>
+        							<Comment>Inital Load</Comment>
+							</EffectiveDateVersion>
+						</Version>
+							<TimeSeriesDetail FromDateTime="2014-10-01T06:00:00" ToDateTime="2014-10-01T07:00:00" Value="0.2" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T07:00:00" ToDateTime="2014-10-01T08:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T08:00:00" ToDateTime="2014-10-01T09:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T09:00:00" ToDateTime="2014-10-01T10:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T10:00:00" ToDateTime="2014-10-01T11:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T11:00:00" ToDateTime="2014-10-01T12:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T12:00:00" ToDateTime="2014-10-01T13:00:00" Value="7" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T13:00:00" ToDateTime="2014-10-01T14:00:00" Value="8" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T14:00:00" ToDateTime="2014-10-01T15:00:00" Value="9" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T15:00:00" ToDateTime="2014-10-01T16:00:00" Value="10" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T16:00:00" ToDateTime="2014-10-01T17:00:00" Value="11" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T17:00:00" ToDateTime="2014-10-01T18:00:00" Value="12" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T18:00:00" ToDateTime="2014-10-01T19:00:00" Value="13" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T19:00:00" ToDateTime="2014-10-01T20:00:00" Value="14" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T20:00:00" ToDateTime="2014-10-01T21:00:00" Value="15" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T21:00:00" ToDateTime="2014-10-01T22:00:00" Value="16" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T22:00:00" ToDateTime="2014-10-01T23:00:00" Value="17" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T23:00:00" ToDateTime="2014-10-02T00:00:00" Value="18" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T00:00:00" ToDateTime="2014-10-02T01:00:00" Value="19" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T01:00:00" ToDateTime="2014-10-02T02:00:00" Value="20" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T02:00:00" ToDateTime="2014-10-02T03:00:00" Value="21" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T03:00:00" ToDateTime="2014-10-02T04:00:00" Value="22" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T04:00:00" ToDateTime="2014-10-02T05:00:00" Value="23" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T05:00:00" ToDateTime="2014-10-02T06:00:00" Value="240" />						
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+ 							<EffectiveDateVersion>
+        							<EffectiveFromDate>2014-02-01</EffectiveFromDate>
+							</EffectiveDateVersion>
+						</Version>
+							<TimeSeriesDetail FromDateTime="2014-10-01T06:00:00" ToDateTime="2014-10-01T07:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T07:00:00" ToDateTime="2014-10-01T08:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T08:00:00" ToDateTime="2014-10-01T09:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T09:00:00" ToDateTime="2014-10-01T10:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T10:00:00" ToDateTime="2014-10-01T11:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T11:00:00" ToDateTime="2014-10-01T12:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T12:00:00" ToDateTime="2014-10-01T13:00:00" Value="7" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T13:00:00" ToDateTime="2014-10-01T14:00:00" Value="8" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T14:00:00" ToDateTime="2014-10-01T15:00:00" Value="9" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T15:00:00" ToDateTime="2014-10-01T16:00:00" Value="10" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T16:00:00" ToDateTime="2014-10-01T17:00:00" Value="11" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T17:00:00" ToDateTime="2014-10-01T18:00:00" Value="12" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T18:00:00" ToDateTime="2014-10-01T19:00:00" Value="13" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T19:00:00" ToDateTime="2014-10-01T20:00:00" Value="14" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T20:00:00" ToDateTime="2014-10-01T21:00:00" Value="15" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T21:00:00" ToDateTime="2014-10-01T22:00:00" Value="16" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T22:00:00" ToDateTime="2014-10-01T23:00:00" Value="17" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T23:00:00" ToDateTime="2014-10-02T00:00:00" Value="18" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T00:00:00" ToDateTime="2014-10-02T01:00:00" Value="19" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T01:00:00" ToDateTime="2014-10-02T02:00:00" Value="20" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T02:00:00" ToDateTime="2014-10-02T03:00:00" Value="21" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T03:00:00" ToDateTime="2014-10-02T04:00:00" Value="22" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T04:00:00" ToDateTime="2014-10-02T05:00:00" Value="23" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T05:00:00" ToDateTime="2014-10-02T06:00:00" Value="111" />
+						</TimeSeries>
+						<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>						
+						<Version>
+     							<Comment>Inital Load RV</Comment>
+						</Version>
+							<TimeSeriesDetail FromDateTime="2014-10-01T06:00:00" ToDateTime="2014-10-01T07:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T07:00:00" ToDateTime="2014-10-01T08:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T08:00:00" ToDateTime="2014-10-01T09:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T09:00:00" ToDateTime="2014-10-01T10:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T10:00:00" ToDateTime="2014-10-01T11:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T11:00:00" ToDateTime="2014-10-01T12:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T12:00:00" ToDateTime="2014-10-01T13:00:00" Value="7" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T13:00:00" ToDateTime="2014-10-01T14:00:00" Value="8" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T14:00:00" ToDateTime="2014-10-01T15:00:00" Value="9" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T15:00:00" ToDateTime="2014-10-01T16:00:00" Value="10" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T16:00:00" ToDateTime="2014-10-01T17:00:00" Value="11" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T17:00:00" ToDateTime="2014-10-01T18:00:00" Value="12" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T18:00:00" ToDateTime="2014-10-01T19:00:00" Value="13" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T19:00:00" ToDateTime="2014-10-01T20:00:00" Value="14" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T20:00:00" ToDateTime="2014-10-01T21:00:00" Value="15" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T21:00:00" ToDateTime="2014-10-01T22:00:00" Value="16" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T22:00:00" ToDateTime="2014-10-01T23:00:00" Value="17" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T23:00:00" ToDateTime="2014-10-02T00:00:00" Value="18" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T00:00:00" ToDateTime="2014-10-02T01:00:00" Value="19" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T01:00:00" ToDateTime="2014-10-02T02:00:00" Value="20" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T02:00:00" ToDateTime="2014-10-02T03:00:00" Value="21" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T03:00:00" ToDateTime="2014-10-02T04:00:00" Value="22" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T04:00:00" ToDateTime="2014-10-02T05:00:00" Value="23" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T05:00:00" ToDateTime="2014-10-02T06:00:00" Value="24" />
+						</TimeSeries>
+						<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Hourly</Resolution>
+						<TimeZone>CET</TimeZone>
+							<TimeSeriesDetail FromDateTime="2014-10-01T06:00:00" ToDateTime="2014-10-01T07:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T07:00:00" ToDateTime="2014-10-01T08:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T08:00:00" ToDateTime="2014-10-01T09:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T09:00:00" ToDateTime="2014-10-01T10:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T10:00:00" ToDateTime="2014-10-01T11:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T11:00:00" ToDateTime="2014-10-01T12:00:00" Value="0" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T12:00:00" ToDateTime="2014-10-01T13:00:00" Value="7" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T13:00:00" ToDateTime="2014-10-01T14:00:00" Value="8" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T14:00:00" ToDateTime="2014-10-01T15:00:00" Value="9" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T15:00:00" ToDateTime="2014-10-01T16:00:00" Value="10" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T16:00:00" ToDateTime="2014-10-01T17:00:00" Value="11" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T17:00:00" ToDateTime="2014-10-01T18:00:00" Value="12" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T18:00:00" ToDateTime="2014-10-01T19:00:00" Value="13" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T19:00:00" ToDateTime="2014-10-01T20:00:00" Value="14" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T20:00:00" ToDateTime="2014-10-01T21:00:00" Value="15" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T21:00:00" ToDateTime="2014-10-01T22:00:00" Value="16" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T22:00:00" ToDateTime="2014-10-01T23:00:00" Value="17" />
+							<TimeSeriesDetail FromDateTime="2014-10-01T23:00:00" ToDateTime="2014-10-02T00:00:00" Value="18" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T00:00:00" ToDateTime="2014-10-02T01:00:00" Value="19" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T01:00:00" ToDateTime="2014-10-02T02:00:00" Value="20" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T02:00:00" ToDateTime="2014-10-02T03:00:00" Value="21" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T03:00:00" ToDateTime="2014-10-02T04:00:00" Value="22" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T04:00:00" ToDateTime="2014-10-02T05:00:00" Value="23" />
+							<TimeSeriesDetail FromDateTime="2014-10-02T05:00:00" ToDateTime="2014-10-02T06:00:00" Value="24" />						
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				</SettlementData>
+		<ReferenceData>
+			<ExternalId>Flexible_Gas_New_Versioned_0002</ExternalId>			
+		</ReferenceData>
+	</TransactionPart>
+</DealInsert>
+]]>
+</UpdateXml>
+<ExpectedResult ExpectedType="TimeSeries">
+	<ExpectedTimeSeriesSets>
+	<ExpectedTimeSeriesSet ExternalId="Flexible_Gas_New_Versioned_0002">
+		<ExpectedTimeSeries>
+		<Resolution>Hour</Resolution>
+		<TimeSeriesTypeName>Forecasted Price</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T06:00:00" UntilDateTime="2014-10-01T07:00:00" UtcFromDateTime="2014-10-01T04:00:00Z" UtcUntilDateTime="2014-10-01T05:00:00Z" Value="1" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T07:00:00" UntilDateTime="2014-10-01T08:00:00" UtcFromDateTime="2014-10-01T05:00:00Z" UtcUntilDateTime="2014-10-01T06:00:00Z" Value="2" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T08:00:00" UntilDateTime="2014-10-01T09:00:00" UtcFromDateTime="2014-10-01T06:00:00Z" UtcUntilDateTime="2014-10-01T07:00:00Z" Value="3" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T09:00:00" UntilDateTime="2014-10-01T10:00:00" UtcFromDateTime="2014-10-01T07:00:00Z" UtcUntilDateTime="2014-10-01T08:00:00Z" Value="4" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T10:00:00" UntilDateTime="2014-10-01T11:00:00" UtcFromDateTime="2014-10-01T08:00:00Z" UtcUntilDateTime="2014-10-01T09:00:00Z" Value="5" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T11:00:00" UntilDateTime="2014-10-01T12:00:00" UtcFromDateTime="2014-10-01T09:00:00Z" UtcUntilDateTime="2014-10-01T10:00:00Z" Value="6" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T12:00:00" UntilDateTime="2014-10-01T13:00:00" UtcFromDateTime="2014-10-01T10:00:00Z" UtcUntilDateTime="2014-10-01T11:00:00Z" Value="7" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T13:00:00" UntilDateTime="2014-10-01T14:00:00" UtcFromDateTime="2014-10-01T11:00:00Z" UtcUntilDateTime="2014-10-01T12:00:00Z" Value="8" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T14:00:00" UntilDateTime="2014-10-01T15:00:00" UtcFromDateTime="2014-10-01T12:00:00Z" UtcUntilDateTime="2014-10-01T13:00:00Z" Value="9" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T15:00:00" UntilDateTime="2014-10-01T16:00:00" UtcFromDateTime="2014-10-01T13:00:00Z" UtcUntilDateTime="2014-10-01T14:00:00Z" Value="10" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T16:00:00" UntilDateTime="2014-10-01T17:00:00" UtcFromDateTime="2014-10-01T14:00:00Z" UtcUntilDateTime="2014-10-01T15:00:00Z" Value="11" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T17:00:00" UntilDateTime="2014-10-01T18:00:00" UtcFromDateTime="2014-10-01T15:00:00Z" UtcUntilDateTime="2014-10-01T16:00:00Z" Value="12" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T18:00:00" UntilDateTime="2014-10-01T19:00:00" UtcFromDateTime="2014-10-01T16:00:00Z" UtcUntilDateTime="2014-10-01T17:00:00Z" Value="13" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T19:00:00" UntilDateTime="2014-10-01T20:00:00" UtcFromDateTime="2014-10-01T17:00:00Z" UtcUntilDateTime="2014-10-01T18:00:00Z" Value="14" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T20:00:00" UntilDateTime="2014-10-01T21:00:00" UtcFromDateTime="2014-10-01T18:00:00Z" UtcUntilDateTime="2014-10-01T19:00:00Z" Value="15" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T21:00:00" UntilDateTime="2014-10-01T22:00:00" UtcFromDateTime="2014-10-01T19:00:00Z" UtcUntilDateTime="2014-10-01T20:00:00Z" Value="16" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T22:00:00" UntilDateTime="2014-10-01T23:00:00" UtcFromDateTime="2014-10-01T20:00:00Z" UtcUntilDateTime="2014-10-01T21:00:00Z" Value="17" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T23:00:00" UntilDateTime="2014-10-02T00:00:00" UtcFromDateTime="2014-10-01T21:00:00Z" UtcUntilDateTime="2014-10-01T22:00:00Z" Value="18" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T00:00:00" UntilDateTime="2014-10-02T01:00:00" UtcFromDateTime="2014-10-01T22:00:00Z" UtcUntilDateTime="2014-10-01T23:00:00Z" Value="19" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T01:00:00" UntilDateTime="2014-10-02T02:00:00" UtcFromDateTime="2014-10-01T23:00:00Z" UtcUntilDateTime="2014-10-02T00:00:00Z" Value="20" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T02:00:00" UntilDateTime="2014-10-02T03:00:00" UtcFromDateTime="2014-10-02T00:00:00Z" UtcUntilDateTime="2014-10-02T01:00:00Z" Value="21" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T03:00:00" UntilDateTime="2014-10-02T04:00:00" UtcFromDateTime="2014-10-02T01:00:00Z" UtcUntilDateTime="2014-10-02T02:00:00Z" Value="22" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T04:00:00" UntilDateTime="2014-10-02T05:00:00" UtcFromDateTime="2014-10-02T02:00:00Z" UtcUntilDateTime="2014-10-02T03:00:00Z" Value="23" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T05:00:00" UntilDateTime="2014-10-02T06:00:00" UtcFromDateTime="2014-10-02T03:00:00Z" UtcUntilDateTime="2014-10-02T04:00:00Z" Value="111" />
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+	<ExpectedTimeSeries>
+		<Resolution>Hour</Resolution>
+		<TimeSeriesTypeName>Forecasted Volume</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T06:00:00" UntilDateTime="2014-10-01T07:00:00" UtcFromDateTime="2014-10-01T04:00:00Z" UtcUntilDateTime="2014-10-01T05:00:00Z" Value="0.2" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T07:00:00" UntilDateTime="2014-10-01T08:00:00" UtcFromDateTime="2014-10-01T05:00:00Z" UtcUntilDateTime="2014-10-01T06:00:00Z" Value="2" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T08:00:00" UntilDateTime="2014-10-01T09:00:00" UtcFromDateTime="2014-10-01T06:00:00Z" UtcUntilDateTime="2014-10-01T07:00:00Z" Value="3" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T09:00:00" UntilDateTime="2014-10-01T10:00:00" UtcFromDateTime="2014-10-01T07:00:00Z" UtcUntilDateTime="2014-10-01T08:00:00Z" Value="4" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T10:00:00" UntilDateTime="2014-10-01T11:00:00" UtcFromDateTime="2014-10-01T08:00:00Z" UtcUntilDateTime="2014-10-01T09:00:00Z" Value="5" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T11:00:00" UntilDateTime="2014-10-01T12:00:00" UtcFromDateTime="2014-10-01T09:00:00Z" UtcUntilDateTime="2014-10-01T10:00:00Z" Value="6" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T12:00:00" UntilDateTime="2014-10-01T13:00:00" UtcFromDateTime="2014-10-01T10:00:00Z" UtcUntilDateTime="2014-10-01T11:00:00Z" Value="7" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T13:00:00" UntilDateTime="2014-10-01T14:00:00" UtcFromDateTime="2014-10-01T11:00:00Z" UtcUntilDateTime="2014-10-01T12:00:00Z" Value="8" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T14:00:00" UntilDateTime="2014-10-01T15:00:00" UtcFromDateTime="2014-10-01T12:00:00Z" UtcUntilDateTime="2014-10-01T13:00:00Z" Value="9" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T15:00:00" UntilDateTime="2014-10-01T16:00:00" UtcFromDateTime="2014-10-01T13:00:00Z" UtcUntilDateTime="2014-10-01T14:00:00Z" Value="10" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T16:00:00" UntilDateTime="2014-10-01T17:00:00" UtcFromDateTime="2014-10-01T14:00:00Z" UtcUntilDateTime="2014-10-01T15:00:00Z" Value="11" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T17:00:00" UntilDateTime="2014-10-01T18:00:00" UtcFromDateTime="2014-10-01T15:00:00Z" UtcUntilDateTime="2014-10-01T16:00:00Z" Value="12" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T18:00:00" UntilDateTime="2014-10-01T19:00:00" UtcFromDateTime="2014-10-01T16:00:00Z" UtcUntilDateTime="2014-10-01T17:00:00Z" Value="13" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T19:00:00" UntilDateTime="2014-10-01T20:00:00" UtcFromDateTime="2014-10-01T17:00:00Z" UtcUntilDateTime="2014-10-01T18:00:00Z" Value="14" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T20:00:00" UntilDateTime="2014-10-01T21:00:00" UtcFromDateTime="2014-10-01T18:00:00Z" UtcUntilDateTime="2014-10-01T19:00:00Z" Value="15" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T21:00:00" UntilDateTime="2014-10-01T22:00:00" UtcFromDateTime="2014-10-01T19:00:00Z" UtcUntilDateTime="2014-10-01T20:00:00Z" Value="16" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T22:00:00" UntilDateTime="2014-10-01T23:00:00" UtcFromDateTime="2014-10-01T20:00:00Z" UtcUntilDateTime="2014-10-01T21:00:00Z" Value="17" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T23:00:00" UntilDateTime="2014-10-02T00:00:00" UtcFromDateTime="2014-10-01T21:00:00Z" UtcUntilDateTime="2014-10-01T22:00:00Z" Value="18" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T00:00:00" UntilDateTime="2014-10-02T01:00:00" UtcFromDateTime="2014-10-01T22:00:00Z" UtcUntilDateTime="2014-10-01T23:00:00Z" Value="19" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T01:00:00" UntilDateTime="2014-10-02T02:00:00" UtcFromDateTime="2014-10-01T23:00:00Z" UtcUntilDateTime="2014-10-02T00:00:00Z" Value="20" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T02:00:00" UntilDateTime="2014-10-02T03:00:00" UtcFromDateTime="2014-10-02T00:00:00Z" UtcUntilDateTime="2014-10-02T01:00:00Z" Value="21" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T03:00:00" UntilDateTime="2014-10-02T04:00:00" UtcFromDateTime="2014-10-02T01:00:00Z" UtcUntilDateTime="2014-10-02T02:00:00Z" Value="22" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T04:00:00" UntilDateTime="2014-10-02T05:00:00" UtcFromDateTime="2014-10-02T02:00:00Z" UtcUntilDateTime="2014-10-02T03:00:00Z" Value="23" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T05:00:00" UntilDateTime="2014-10-02T06:00:00" UtcFromDateTime="2014-10-02T03:00:00Z" UtcUntilDateTime="2014-10-02T04:00:00Z" Value="240" />
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+	<ExpectedTimeSeries>
+		<Resolution>Hour</Resolution>
+		<TimeSeriesTypeName>Realized Price</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T06:00:00" UntilDateTime="2014-10-01T07:00:00" UtcFromDateTime="2014-10-01T04:00:00Z" UtcUntilDateTime="2014-10-01T05:00:00Z" Value="0" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T07:00:00" UntilDateTime="2014-10-01T08:00:00" UtcFromDateTime="2014-10-01T05:00:00Z" UtcUntilDateTime="2014-10-01T06:00:00Z" Value="0" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T08:00:00" UntilDateTime="2014-10-01T09:00:00" UtcFromDateTime="2014-10-01T06:00:00Z" UtcUntilDateTime="2014-10-01T07:00:00Z" Value="0" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T09:00:00" UntilDateTime="2014-10-01T10:00:00" UtcFromDateTime="2014-10-01T07:00:00Z" UtcUntilDateTime="2014-10-01T08:00:00Z" Value="0" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T10:00:00" UntilDateTime="2014-10-01T11:00:00" UtcFromDateTime="2014-10-01T08:00:00Z" UtcUntilDateTime="2014-10-01T09:00:00Z" Value="0" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T11:00:00" UntilDateTime="2014-10-01T12:00:00" UtcFromDateTime="2014-10-01T09:00:00Z" UtcUntilDateTime="2014-10-01T10:00:00Z" Value="0" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T12:00:00" UntilDateTime="2014-10-01T13:00:00" UtcFromDateTime="2014-10-01T10:00:00Z" UtcUntilDateTime="2014-10-01T11:00:00Z" Value="7" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T13:00:00" UntilDateTime="2014-10-01T14:00:00" UtcFromDateTime="2014-10-01T11:00:00Z" UtcUntilDateTime="2014-10-01T12:00:00Z" Value="8" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T14:00:00" UntilDateTime="2014-10-01T15:00:00" UtcFromDateTime="2014-10-01T12:00:00Z" UtcUntilDateTime="2014-10-01T13:00:00Z" Value="9" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T15:00:00" UntilDateTime="2014-10-01T16:00:00" UtcFromDateTime="2014-10-01T13:00:00Z" UtcUntilDateTime="2014-10-01T14:00:00Z" Value="10" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T16:00:00" UntilDateTime="2014-10-01T17:00:00" UtcFromDateTime="2014-10-01T14:00:00Z" UtcUntilDateTime="2014-10-01T15:00:00Z" Value="11" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T17:00:00" UntilDateTime="2014-10-01T18:00:00" UtcFromDateTime="2014-10-01T15:00:00Z" UtcUntilDateTime="2014-10-01T16:00:00Z" Value="12" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T18:00:00" UntilDateTime="2014-10-01T19:00:00" UtcFromDateTime="2014-10-01T16:00:00Z" UtcUntilDateTime="2014-10-01T17:00:00Z" Value="13" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T19:00:00" UntilDateTime="2014-10-01T20:00:00" UtcFromDateTime="2014-10-01T17:00:00Z" UtcUntilDateTime="2014-10-01T18:00:00Z" Value="14" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T20:00:00" UntilDateTime="2014-10-01T21:00:00" UtcFromDateTime="2014-10-01T18:00:00Z" UtcUntilDateTime="2014-10-01T19:00:00Z" Value="15" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T21:00:00" UntilDateTime="2014-10-01T22:00:00" UtcFromDateTime="2014-10-01T19:00:00Z" UtcUntilDateTime="2014-10-01T20:00:00Z" Value="16" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T22:00:00" UntilDateTime="2014-10-01T23:00:00" UtcFromDateTime="2014-10-01T20:00:00Z" UtcUntilDateTime="2014-10-01T21:00:00Z" Value="17" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T23:00:00" UntilDateTime="2014-10-02T00:00:00" UtcFromDateTime="2014-10-01T21:00:00Z" UtcUntilDateTime="2014-10-01T22:00:00Z" Value="18" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T00:00:00" UntilDateTime="2014-10-02T01:00:00" UtcFromDateTime="2014-10-01T22:00:00Z" UtcUntilDateTime="2014-10-01T23:00:00Z" Value="19" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T01:00:00" UntilDateTime="2014-10-02T02:00:00" UtcFromDateTime="2014-10-01T23:00:00Z" UtcUntilDateTime="2014-10-02T00:00:00Z" Value="20" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T02:00:00" UntilDateTime="2014-10-02T03:00:00" UtcFromDateTime="2014-10-02T00:00:00Z" UtcUntilDateTime="2014-10-02T01:00:00Z" Value="21" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T03:00:00" UntilDateTime="2014-10-02T04:00:00" UtcFromDateTime="2014-10-02T01:00:00Z" UtcUntilDateTime="2014-10-02T02:00:00Z" Value="22" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T04:00:00" UntilDateTime="2014-10-02T05:00:00" UtcFromDateTime="2014-10-02T02:00:00Z" UtcUntilDateTime="2014-10-02T03:00:00Z" Value="23" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T05:00:00" UntilDateTime="2014-10-02T06:00:00" UtcFromDateTime="2014-10-02T03:00:00Z" UtcUntilDateTime="2014-10-02T04:00:00Z" Value="24" />
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+	<ExpectedTimeSeries>
+		<Resolution>Hour</Resolution>
+		<TimeSeriesTypeName>Realized Volume</TimeSeriesTypeName>
+		<TimezoneName>Central Europe Standard Time</TimezoneName>
+		<ExpectedTimeSeriesValues>
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T06:00:00" UntilDateTime="2014-10-01T07:00:00" UtcFromDateTime="2014-10-01T04:00:00Z" UtcUntilDateTime="2014-10-01T05:00:00Z" Value="1" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T07:00:00" UntilDateTime="2014-10-01T08:00:00" UtcFromDateTime="2014-10-01T05:00:00Z" UtcUntilDateTime="2014-10-01T06:00:00Z" Value="2" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T08:00:00" UntilDateTime="2014-10-01T09:00:00" UtcFromDateTime="2014-10-01T06:00:00Z" UtcUntilDateTime="2014-10-01T07:00:00Z" Value="3" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T09:00:00" UntilDateTime="2014-10-01T10:00:00" UtcFromDateTime="2014-10-01T07:00:00Z" UtcUntilDateTime="2014-10-01T08:00:00Z" Value="4" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T10:00:00" UntilDateTime="2014-10-01T11:00:00" UtcFromDateTime="2014-10-01T08:00:00Z" UtcUntilDateTime="2014-10-01T09:00:00Z" Value="5" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T11:00:00" UntilDateTime="2014-10-01T12:00:00" UtcFromDateTime="2014-10-01T09:00:00Z" UtcUntilDateTime="2014-10-01T10:00:00Z" Value="6" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T12:00:00" UntilDateTime="2014-10-01T13:00:00" UtcFromDateTime="2014-10-01T10:00:00Z" UtcUntilDateTime="2014-10-01T11:00:00Z" Value="7" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T13:00:00" UntilDateTime="2014-10-01T14:00:00" UtcFromDateTime="2014-10-01T11:00:00Z" UtcUntilDateTime="2014-10-01T12:00:00Z" Value="8" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T14:00:00" UntilDateTime="2014-10-01T15:00:00" UtcFromDateTime="2014-10-01T12:00:00Z" UtcUntilDateTime="2014-10-01T13:00:00Z" Value="9" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T15:00:00" UntilDateTime="2014-10-01T16:00:00" UtcFromDateTime="2014-10-01T13:00:00Z" UtcUntilDateTime="2014-10-01T14:00:00Z" Value="10" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T16:00:00" UntilDateTime="2014-10-01T17:00:00" UtcFromDateTime="2014-10-01T14:00:00Z" UtcUntilDateTime="2014-10-01T15:00:00Z" Value="11" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T17:00:00" UntilDateTime="2014-10-01T18:00:00" UtcFromDateTime="2014-10-01T15:00:00Z" UtcUntilDateTime="2014-10-01T16:00:00Z" Value="12" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T18:00:00" UntilDateTime="2014-10-01T19:00:00" UtcFromDateTime="2014-10-01T16:00:00Z" UtcUntilDateTime="2014-10-01T17:00:00Z" Value="13" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T19:00:00" UntilDateTime="2014-10-01T20:00:00" UtcFromDateTime="2014-10-01T17:00:00Z" UtcUntilDateTime="2014-10-01T18:00:00Z" Value="14" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T20:00:00" UntilDateTime="2014-10-01T21:00:00" UtcFromDateTime="2014-10-01T18:00:00Z" UtcUntilDateTime="2014-10-01T19:00:00Z" Value="15" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T21:00:00" UntilDateTime="2014-10-01T22:00:00" UtcFromDateTime="2014-10-01T19:00:00Z" UtcUntilDateTime="2014-10-01T20:00:00Z" Value="16" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T22:00:00" UntilDateTime="2014-10-01T23:00:00" UtcFromDateTime="2014-10-01T20:00:00Z" UtcUntilDateTime="2014-10-01T21:00:00Z" Value="17" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-01T23:00:00" UntilDateTime="2014-10-02T00:00:00" UtcFromDateTime="2014-10-01T21:00:00Z" UtcUntilDateTime="2014-10-01T22:00:00Z" Value="18" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T00:00:00" UntilDateTime="2014-10-02T01:00:00" UtcFromDateTime="2014-10-01T22:00:00Z" UtcUntilDateTime="2014-10-01T23:00:00Z" Value="19" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T01:00:00" UntilDateTime="2014-10-02T02:00:00" UtcFromDateTime="2014-10-01T23:00:00Z" UtcUntilDateTime="2014-10-02T00:00:00Z" Value="20" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T02:00:00" UntilDateTime="2014-10-02T03:00:00" UtcFromDateTime="2014-10-02T00:00:00Z" UtcUntilDateTime="2014-10-02T01:00:00Z" Value="21" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T03:00:00" UntilDateTime="2014-10-02T04:00:00" UtcFromDateTime="2014-10-02T01:00:00Z" UtcUntilDateTime="2014-10-02T02:00:00Z" Value="22" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T04:00:00" UntilDateTime="2014-10-02T05:00:00" UtcFromDateTime="2014-10-02T02:00:00Z" UtcUntilDateTime="2014-10-02T03:00:00Z" Value="23" />
+			<ExpectedTimeSeriesValue FromDateTime="2014-10-02T05:00:00" UntilDateTime="2014-10-02T06:00:00" UtcFromDateTime="2014-10-02T03:00:00Z" UtcUntilDateTime="2014-10-02T04:00:00Z" Value="24" />
+		</ExpectedTimeSeriesValues>
+	</ExpectedTimeSeries>
+	</ExpectedTimeSeriesSet>
+	</ExpectedTimeSeriesSets>
+</ExpectedResult>
+</DealInsertUpdateTestCase>
+

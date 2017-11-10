@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DealInsertUpdateTestCase>
+<InsertXml>
+<![CDATA[ 
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2014-04-07</FromDate>
+				<ToDate>2014-04-13</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="ENBW" />
+				</Physical>
+				<TransactionName>Transaction Name FSD Daily with versions</TransactionName>
+			</InstrumentData>
+			<SettlementData>				
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>
+							<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-04-08T00:00:00" ToDateTime="2014-04-09T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-04-09T00:00:00" ToDateTime="2014-04-10T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-04-10T00:00:00" ToDateTime="2014-04-11T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-04-11T00:00:00" ToDateTime="2014-04-12T00:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2014-04-12T00:00:00" ToDateTime="2014-04-13T00:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2014-04-13T00:00:00" ToDateTime="2014-04-14T00:00:00" Value="7" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>
+							<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1.1" />
+							<TimeSeriesDetail FromDateTime="2014-04-08T00:00:00" ToDateTime="2014-04-09T00:00:00" Value="2.1" />
+							<TimeSeriesDetail FromDateTime="2014-04-09T00:00:00" ToDateTime="2014-04-10T00:00:00" Value="3.1" />
+							<TimeSeriesDetail FromDateTime="2014-04-10T00:00:00" ToDateTime="2014-04-11T00:00:00" Value="4.1"/>
+							<TimeSeriesDetail FromDateTime="2014-04-11T00:00:00" ToDateTime="2014-04-12T00:00:00" Value="5.1" />
+							<TimeSeriesDetail FromDateTime="2014-04-12T00:00:00" ToDateTime="2014-04-13T00:00:00" Value="6.1" />
+							<TimeSeriesDetail FromDateTime="2014-04-13T00:00:00" ToDateTime="2014-04-14T00:00:00" Value="7.1" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+     							<Comment>Initial Load RV</Comment>
+						</Version>								
+							<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-04-08T00:00:00" ToDateTime="2014-04-09T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-04-09T00:00:00" ToDateTime="2014-04-10T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-04-10T00:00:00" ToDateTime="2014-04-11T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-04-11T00:00:00" ToDateTime="2014-04-12T00:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2014-04-12T00:00:00" ToDateTime="2014-04-13T00:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2014-04-13T00:00:00" ToDateTime="2014-04-14T00:00:00" Value="7" />
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>				
+							<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-04-08T00:00:00" ToDateTime="2014-04-09T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-04-09T00:00:00" ToDateTime="2014-04-10T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-04-10T00:00:00" ToDateTime="2014-04-11T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-04-11T00:00:00" ToDateTime="2014-04-12T00:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2014-04-12T00:00:00" ToDateTime="2014-04-13T00:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2014-04-13T00:00:00" ToDateTime="2014-04-14T00:00:00" Value="7" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				</SettlementData>
+		</ElectricityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2014-02-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>			
+			<Comment>ElectricityStructuredDealDaily; should pass</Comment>
+			<DealGroup>API Test</DealGroup>
+			<ExternalId>FlexibleDaily InsertUpdate versioned extract default</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+]]>
+</InsertXml>
+<UpdateXml>
+<![CDATA[ 
+		<DealInsert>
+		<MetaData>
+			<Timezone>CET</Timezone>
+		</MetaData>
+		<TransactionPart>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET</TimeZone>
+						<Version>
+     							<Comment>Initial Load RV</Comment>
+						</Version>								
+							<TimeSeriesDetail FromDateTime="2014-04-07T00:00:00" ToDateTime="2014-04-08T00:00:00" Value="1" />
+							<TimeSeriesDetail FromDateTime="2014-04-08T00:00:00" ToDateTime="2014-04-09T00:00:00" Value="2" />
+							<TimeSeriesDetail FromDateTime="2014-04-09T00:00:00" ToDateTime="2014-04-10T00:00:00" Value="3" />
+							<TimeSeriesDetail FromDateTime="2014-04-10T00:00:00" ToDateTime="2014-04-11T00:00:00" Value="4" />
+							<TimeSeriesDetail FromDateTime="2014-04-11T00:00:00" ToDateTime="2014-04-12T00:00:00" Value="5" />
+							<TimeSeriesDetail FromDateTime="2014-04-12T00:00:00" ToDateTime="2014-04-13T00:00:00" Value="6" />
+							<TimeSeriesDetail FromDateTime="2014-04-13T00:00:00" ToDateTime="2014-04-14T00:00:00" Value="7" />
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+			</SettlementData>
+			<ReferenceData>
+				<ExternalId>FlexibleDaily InsertUpdate versioned extract default</ExternalId>
+			</ReferenceData>
+		</TransactionPart>
+	</DealInsert>
+	]]>
+</UpdateXml>
+<ReportDate Value="2014-03-01" />
+<ExpectedResult ExpectedType="Versions">
+		<ExpectedVersions ExternalId="FlexibleDaily InsertUpdate versioned extract default">	
+				<ExpectedVersion IsLatestVersion="true">
+					<EffectiveDate>2014-02-01T00:00:00</EffectiveDate>
+					<ExpectedVersionDate>2014-02-01T00:00:00</ExpectedVersionDate>
+				</ExpectedVersion>
+		</ExpectedVersions>
+</ExpectedResult>			
+</DealInsertUpdateTestCase>

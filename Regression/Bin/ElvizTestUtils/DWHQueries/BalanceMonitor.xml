@@ -1,0 +1,113 @@
+<DbQuery>
+	<Columns>
+		<Column ColumnName="Period" ColumnDataType="System.String"/>
+		<Column ColumnName="FromDate" ColumnDataType="System.DateTime"/>
+		<Column ColumnName="ToDate" ColumnDataType="System.DateTime"/>
+		<Column ColumnName="Hours" ColumnDataType="System.Double"/>
+		<Column ColumnName="PeakFlag" ColumnDataType="System.Boolean"/>
+		<Column ColumnName="GenconMWh" ColumnDataType="System.Double"/>
+		<Column ColumnName="GenConMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="GenconPrice" ColumnDataType="System.Double"/>
+		<Column ColumnName="GenconValue" ColumnDataType="System.Double"/>
+		<Column ColumnName="RetailMWh" ColumnDataType="System.Double"/>
+		<Column ColumnName="RetailMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="RetailPrice" ColumnDataType="System.Double"/>
+		<Column ColumnName="RetailValue" ColumnDataType="System.Double"/>
+	    <Column ColumnName="PhysMWh" ColumnDataType="System.Double"/>
+		<Column ColumnName="PhysMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="PhysPrice" ColumnDataType="System.Double"/>
+		<Column ColumnName="PhysValue" ColumnDataType="System.Double"/>
+		<Column ColumnName="FinMWh" ColumnDataType="System.Double"/>
+		<Column ColumnName="FinMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="FinPrice" ColumnDataType="System.Double"/>
+		<Column ColumnName="FinValue" ColumnDataType="System.Double"/>
+		<Column ColumnName="NetMWh" ColumnDataType="System.Double"/>
+		<Column ColumnName="NetMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="PeakNetMWh" ColumnDataType="System.Double"/>
+		<Column ColumnName="PeakNetMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="OffPeakNetMWh" ColumnDataType="System.Double"/>
+		<Column ColumnName="OffPeakNetMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="AvgPrice" ColumnDataType="System.Double"/>
+		<Column ColumnName="NetResult" ColumnDataType="System.Double"/>
+		<Column ColumnName="MarketPrice" ColumnDataType="System.Double"/>
+		<Column ColumnName="Peakprice" ColumnDataType="System.Double"/>
+		<Column ColumnName="PeakHours" ColumnDataType="System.Double"/>
+		<Column ColumnName="OffPeakPrice" ColumnDataType="System.Double"/>
+		<Column ColumnName="PeakGenConMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="OffPeakGenConMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="PeakRetailMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="OffPeakRetailMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="PeakPhysMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="OffPeakPhysMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="PeakFinMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="OffPeakFinMW" ColumnDataType="System.Double"/>
+		<Column ColumnName="AvgPurchPrice" ColumnDataType="System.Double"/>
+		<Column ColumnName="AvgPurchPricePeak" ColumnDataType="System.Double"/>
+		<Column ColumnName="AvgPurchPriceOffPeak" ColumnDataType="System.Double"/>
+		<Column ColumnName="RetailLatestForecastMwh" ColumnDataType="System.Double"/> 
+	</Columns>
+	<SqlQuery>
+		DECLARE @workspace VARCHAR(255)
+		DECLARE @monitor VARCHAR(255)
+		DECLARE @reportDate DATE
+
+		SET @workspace='{workspace}'
+		SET @monitor='{monitor}'
+		SET @reportDate='{reportdate}'
+
+		SELECT 
+			  [Period]
+			  ,[From] As FromDate
+			  ,[To] AS ToDate
+			  ,[Hours]
+			  ,[PeakFlag]
+			  ,[GenconMWh]
+			  ,[GenConMW]
+			  ,[GenconPrice]
+			  ,[GenconValue]
+			  ,[RetailMWh]
+			  ,[RetailMW]
+			  ,[RetailPrice]
+			  ,[RetailValue]
+			  ,[PhysMWh]
+			  ,[PhysMW]
+			  ,[PhysPrice]
+			  ,[PhysValue]
+			  ,[FinMWh]
+			  ,[FinMW]
+			  ,[FinPrice]
+			  ,[FinValue]
+			  ,[NetMWh]
+			  ,[NetMW]
+			  ,[PeakNetMWh]
+			  ,[PeakNetMW]
+			  ,[OffPeakNetMWh]
+			  ,[OffPeakNetMW]
+			  ,[AvgPrice]
+			  ,[NetResult]
+			  ,[MarketPrice]
+			  ,[Peakprice]
+			  ,[PeakHours]
+			  ,[OffPeakPrice]
+			  ,[PeakGenConMW]
+			  ,[OffPeakGenConMW]
+			  ,[PeakRetailMW]
+			  ,[OffPeakRetailMW]
+			  ,[PeakPhysMW]
+			  ,[OffPeakPhysMW]
+			  ,[PeakFinMW]
+			  ,[OffPeakFinMW]
+			  ,[AvgPurchPrice]
+			  ,[AvgPurchPricePeak]
+			  ,[AvgPurchPriceOffPeak]
+			  ,[RetailLatestForecastMwh]
+		  FROM [VizBalMonData]
+		   WHERE [VizBalMonData].[ReportID]=(
+												SELECT [VizBalMonReports].[ReportID]
+												FROM [VizBalMonReports] 
+												WHERE [VizBalMonReports].[Workspace]=@workspace
+												AND [VizBalMonReports].[MonitorTitle]=@monitor
+												AND [VizBalMonReports].[Reportdate]=@reportDate
+											)
+	</SqlQuery>
+</DbQuery>

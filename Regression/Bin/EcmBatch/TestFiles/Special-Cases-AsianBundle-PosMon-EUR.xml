@@ -1,0 +1,25 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-AsianBundle-PosMon-EUR</workspace>
+    <monitor>Special-Cases-AsianBundle-PosMon-EUR</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\PositionMonitor.xml" />
+      <returns>
+        <record>0109 Special-Cases,Base,Financial,Norway 1,Q4-11,Q4-11 - Base,ECS Curve,CET,EUR,Viz,Electricity,,Asian,ASIC/M Q4-11 45.00 - Base,,,,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Active,0,-44170,61715.3416646919,17545.3416646919,61715.3416646919,61715.3416646919,-44170,61715.3416646919,17545.3416646919,0,0,0,19.9954730647352,0,0,0,2209,0,NULL,45,0,0,0,0,0,1,-44170,1.6807010257269,0,0,Special-Cases-AsianBundle-Buy-Call-NO1-Base-InDelviery-EUR</record>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,Q1-11,Q1-11 - Base,,CET,EUR,Viz,Electricity,,Asian,ASIC/M Q1-11 45.00 - Base,,,,2011-01-01 00:00:00.000,2011-03-31 00:00:00.000,Expired,0,829980.599999999,0,829980.599999999,0,0,829980.599999999,0,829980.599999999,0,0,0,19.9953682260306,0,0,0,2159,0,NULL,45,0,0,0,0,0,1,-43170,0,0,0,Special-Cases-AsianBundle-Buy-Call-System Base-PostDelivery-EUR</record>
+        <record>0109 Special-Cases,Base,Financial,Norway 1,Q1-11,Q1-11 - Base,,CET,EUR,Viz,Electricity,,Asian,ASIP/M Q1-11 45.00 - Base,,,,2011-01-01 00:00:00.000,2011-03-31 00:00:00.000,Expired,0,-43170,0,-43170,0,0,-43170,0,-43170,0,0,0,19.9953682260306,0,0,0,2159,0,NULL,45,0,0,0,0,0,1,-43170,0,0,0,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PostDelivery-EUR</record>
+        <record>0109 Special-Cases,Base,Financial,Norway 1,Q1-12,Q1-12 - Base,ECS Curve,CET,NOK,NordPool,Electricity,,Asian,ASIP/M Q1-12 300.00 - Base,,,,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Active,0,-5280.79556727721,33217.9912752234,27937.1957079461,33217.9912752234,33217.9912752234,-5280.79556727721,33217.9912752234,27937.1957079461,0,0,0,19.9954191479615,0,0,0,2183,0,NULL,300,0,0,0,0,0,0.120980425367176,-5280.79556727721,0.76100781844727,0,0,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PreDelivery-NOK</record>
+        <record>0109 Special-Cases,Base,Financial,Norway 1,Q1-11,Q1-11 - Base,,CET,NOK,NordPool,Electricity,,Asian,ASIC/M Q1-11 300.00 - Base,,,,2011-01-01 00:00:00.000,2011-03-31 00:00:00.000,Expired,0,-1215429.78818948,0,-1215429.78818948,0,0,-1215429.78818948,0,-1215429.78818948,0,0,0,-19.9953682260306,0,0,0,2159,0,NULL,300,0,0,0,0,0,0.120980425367176,5222.72496310097,0,0,0,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PostDelivery-NOK</record>
+        <record>0109 Special-Cases,Base,Financial,Norway 1,Q1-12,Q1-12 - Base,ECS Curve,CET,EUR,Viz,Electricity,,Asian,ASIC/M Q1-12 45.00 - Base,,,,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Active,0,43650,-167927.568368656,-124277.568368656,-167927.568368656,-167927.568368656,43650,-167927.568368656,-124277.568368656,0,0,0,-19.9954191479615,0,0,0,2183,0,NULL,45,0,0,0,0,0,1,43650,3.84713787786152,0,0,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PreDelivery-EUR</record>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,Q4-11,Q4-11 - Base,ECS Curve,CET,NOK,NordPool,Electricity,,Asian,ASIP/M Q4-11 300.00 - Base,,,,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Active,0,-75853.4854035725,-29073.9173008825,-104927.402704455,-29073.9173008825,-29073.9173008825,-75853.4854035725,-29073.9173008825,-104927.402704455,0,0,0,-19.9954730647352,0,0,0,2209,0,NULL,300,0,0,0,0,0,0.120980425367176,5343.70538846814,0.791773346973925,0,0,Special-Cases-AsianBundle-Sell-Put-System-Base-InDelviery-NOK</record>
+        <record>0109 Special-Cases,Base,Financial,NordPool System Price,Q1-12,Q1-12 - Base,ECS Curve,CET,EUR,Viz,Electricity,,Asian,ASIP/M Q1-12 45.00 - Base,,,,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Active,0,43650,-222779.602818235,-179129.602818235,-222779.602818235,-222779.602818235,43650,-222779.602818235,-179129.602818235,0,0,0,-19.9954191479615,0,0,0,2183,0,NULL,45,0,0,0,0,0,1,43650,5.10377096948991,0,0,Special-Cases-AsianBundle-Sell-Put-System-Base-PreDelivery-EUR</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

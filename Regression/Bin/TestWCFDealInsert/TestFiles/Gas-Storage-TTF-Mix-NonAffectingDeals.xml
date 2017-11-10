@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BulkDealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-CapacityStructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>NonStorageCustomer</Portfolio>
+			<CounterpartyPortfolio>NonStorageCounterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasCapacityStructuredDeal>
+			<InstrumentData>				
+				<FromDate>2011-05-01</FromDate>
+				<ToDate>2011-05-03</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="TTF"/>
+						<DestinationBalanceArea AreaName="NBP"/>
+					</Interconnector>
+				</Physical>
+				<Priority>Interruptible</Priority>
+				<ExpiryOffset>1</ExpiryOffset>
+				<ExpiryTime>07:30:00</ExpiryTime>
+			</InstrumentData>
+			<SettlementData>
+				<DailyInformation>
+					<TimeSeriesDetail DateTime="2011-05-01T00:00:00" Volume="1000"/>
+					<TimeSeriesDetail DateTime="2011-05-02T00:00:00" Volume="1000"/>
+					<TimeSeriesDetail DateTime="2011-05-03T00:00:00" Volume="1000"/>
+				</DailyInformation>
+				<Price>0</Price>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<BrokerTradingFee>4</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				<EntryFee>123</EntryFee>
+				<EntryFeeCurrency>EUR</EntryFeeCurrency>
+				<ExitFee>123</ExitFee>
+				<ExitFeeCurrency>EUR</ExitFeeCurrency>
+			</SettlementData>
+		</GasCapacityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2011-01-03T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Should NOT affect Storage</Comment>
+			<ExternalId>NonStorageCustomer-Gas-CapacityStructuredDeal-0001</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-CapacityStructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>NonStorageCustomer</Portfolio>
+			<CounterpartyPortfolio>NonStorageCounterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasCapacityStructuredDeal>
+			<InstrumentData>				
+				<FromDate>2011-06-01</FromDate>
+				<ToDate>2011-06-03</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="NBP"/>
+						<DestinationBalanceArea AreaName="TTF"/>
+					</Interconnector>
+				</Physical>
+				<Priority>Interruptible</Priority>
+				<ExpiryOffset>1</ExpiryOffset>
+				<ExpiryTime>07:30:00</ExpiryTime>
+			</InstrumentData>
+			<SettlementData>
+				<DailyInformation>
+					<TimeSeriesDetail DateTime="2011-06-01T00:00:00" Volume="2000"/>
+					<TimeSeriesDetail DateTime="2011-06-02T00:00:00" Volume="2000"/>
+					<TimeSeriesDetail DateTime="2011-06-03T00:00:00" Volume="2000"/>
+				</DailyInformation>
+				<Price>0</Price>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency>
+				<PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<BrokerTradingFee>4</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+				<EntryFee>123</EntryFee>
+				<EntryFeeCurrency>EUR</EntryFeeCurrency>
+				<ExitFee>123</ExitFee>
+				<ExitFeeCurrency>EUR</ExitFeeCurrency>
+			</SettlementData>
+		</GasCapacityStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2011-01-03T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Should NOT affect Storag</Comment>
+			<ExternalId>NonStorageCustomer-Gas-CapacityStructuredDeal-0002</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-Capacity</DealType>
+		<Portfolios>
+			<Portfolio>NonStorageCustomer</Portfolio>
+			<CounterpartyPortfolio>NonStorageCounterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasCapacity>
+			<InstrumentData>
+				<FromDate>2011-07-01</FromDate>
+				<ToDate>2011-07-31</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="TTF"/>
+						<DestinationBalanceArea AreaName="NBP"/>
+					</Interconnector>
+				</Physical>
+				<Priority>Firm</Priority>
+				<ExpiryTime>07:30:00</ExpiryTime>
+				<ExpiryOffset>1</ExpiryOffset>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>100</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>0</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<TradingFee>4</TradingFee>
+				<EntryFee>5</EntryFee>
+				<EntryFeeCurrency>EUR</EntryFeeCurrency>
+				<ExitFee>6</ExitFee>
+				<ExitFeeCurrency>EUR</ExitFeeCurrency>
+			</SettlementData>
+		</GasCapacity>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2011-01-03T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Should NOT affect Storag</Comment>
+			<ExternalId>NonStorageCustomer-Gas-Capacity-0001</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET-6</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-Capacity</DealType>
+		<Portfolios>
+			<Portfolio>NonStorageCustomer</Portfolio>
+			<CounterpartyPortfolio>NonStorageCounterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasCapacity>
+			<InstrumentData>
+				<FromDate>2011-08-01</FromDate>
+				<ToDate>2011-08-31</ToDate>
+				<Physical>
+					<Interconnector>
+						<OriginBalanceArea AreaName="NBP"/>
+						<DestinationBalanceArea AreaName="TTF"/>
+					</Interconnector>
+				</Physical>
+				<Priority>Firm</Priority>
+				<ExpiryTime>07:30:00</ExpiryTime>
+				<ExpiryOffset>1</ExpiryOffset>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>200</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>0</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<TradingFee>4</TradingFee>
+				<EntryFee>5</EntryFee>
+				<EntryFeeCurrency>EUR</EntryFeeCurrency>
+				<ExitFee>6</ExitFee>
+				<ExitFeeCurrency>EUR</ExitFeeCurrency>
+			</SettlementData>
+		</GasCapacity>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2011-01-03T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>Should NOT affect Storag</Comment>
+			<ExternalId>NonStorageCustomer-Gas-Capacity-0002</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+  <DealInsert>
+    <MetaData>
+      <Timezone>CET</Timezone>
+    </MetaData>
+    <Transaction>
+      <TransactionType>Automatic</TransactionType>
+      <DealType>Gas-Forward</DealType>
+      <Portfolios>
+			<Portfolio>NonStorageCustomer</Portfolio>
+			<CounterpartyPortfolio>NonStorageCounterparty</CounterpartyPortfolio>
+        <BuySell>Sell</BuySell>
+      </Portfolios>
+      <GasForward>
+        <InstrumentData>
+          <ExecutionVenue>None</ExecutionVenue>
+          <PriceBasis>ICE TTF</PriceBasis>
+          <LoadProfile>Base</LoadProfile>
+          <FromDate>2011-09-01</FromDate>
+          <ToDate>2011-09-30</ToDate>
+          <Physical>
+            <DeliveryArea AreaName="TTF" />
+          </Physical>
+        </InstrumentData>
+        <SettlementData>
+          <Quantity>99999</Quantity>
+          <QuantityUnit>Sm3/d</QuantityUnit>
+          <Price>50</Price>
+          <Currency>EUR</Currency>
+          <PriceVolumeUnit>PerSm3</PriceVolumeUnit>
+          <CurrencySource>Viz</CurrencySource>
+          <Clearing>Electronic</Clearing>
+          <ClearingCurrency>EUR</ClearingCurrency>
+          <BrokerCurrency>EUR</BrokerCurrency>
+        </SettlementData>
+      </GasForward>
+      <DealDetails>
+        <Status>Deleted</Status>
+        <Trader>DealImport</Trader>
+        <TradeDate>2010-12-01T00:00:00</TradeDate>
+      </DealDetails>
+      <ReferenceData>
+	    <Comment>Should NOT affect Storag</Comment>
+        <ExternalId>NonStorageCustomer-Gas-Forward-Deleted-0001</ExternalId>
+        <ExternalSource>RegTest</ExternalSource>
+      </ReferenceData>
+    </Transaction>
+  </DealInsert>
+  <DealInsert>
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>NonStorageCustomer</Portfolio>
+			<CounterpartyPortfolio>NonStorageCounterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2010-11-02</FromDate>
+				<ToDate>2010-11-20</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>NonStorageCustomer-Gas-FlexStruct-NoRealized-BeforeRD</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2010-11-02T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-03T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-04T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-05T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-06T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-07T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-08T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-09T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-10T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-11T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-12T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-13T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-14T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-15T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-16T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-17T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-18T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-19T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2010-11-20T00:00:00" Value="40"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2010-11-02T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-03T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-04T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-05T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-06T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-07T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-08T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-09T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-10T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-11T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-12T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-13T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-14T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-15T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-16T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-17T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-18T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-19T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2010-11-20T00:00:00" Value="20"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency><PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>NonStorageCustomer-Gas-FlexStruct-NoRealized-BeforeRD</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<TicketNumber></TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+<DealInsert>
+	<MetaData>
+		<Timezone>CET 06-06</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Gas-StructuredDeal</DealType>
+		<Portfolios>
+			<Portfolio>NonStorageCustomer</Portfolio>
+			<CounterpartyPortfolio>NonStorageCounterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<GasStructuredDeal>
+			<InstrumentData>
+				<ExecutionVenue>None</ExecutionVenue>
+				<PriceBasis>ICE TTF</PriceBasis>
+				<PriceType>Fixed</PriceType>
+				<FromDate>2012-11-02</FromDate>
+				<ToDate>2012-11-20</ToDate>
+				<Physical>
+					<DeliveryArea AreaName="TTF"/>
+				</Physical>
+				<TransactionName>NonStorageCustomer-Gas-FlexStruct-NoRealized-AfterRD</TransactionName>
+			</InstrumentData>
+			<SettlementData>
+				<FlexibleStructuredDealInformation>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2012-11-02T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-03T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-04T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-05T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-06T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-07T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-08T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-09T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-10T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-11T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-12T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-13T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-14T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-15T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-16T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-17T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-18T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-19T00:00:00" Value="40"/>
+						<TimeSeriesDetail FromDateTime="2012-11-20T00:00:00" Value="40"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>ForecastedPrice</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+						<TimeSeriesDetail FromDateTime="2012-11-02T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-03T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-04T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-05T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-06T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-07T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-08T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-09T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-10T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-11T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-12T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-13T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-14T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-15T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-16T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-17T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-18T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-19T00:00:00" Value="20"/>
+						<TimeSeriesDetail FromDateTime="2012-11-20T00:00:00" Value="20"/>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedVolume</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+					</TimeSeries>
+					<TimeSeries>
+						<TimeSeriesType>RealizedPrice</TimeSeriesType>
+						<Resolution>Daily</Resolution>
+						<TimeZone>CET 06-06</TimeZone>
+					</TimeSeries>
+				</FlexibleStructuredDealInformation>
+				<QuantityUnit>MW</QuantityUnit>
+				<Currency>EUR</Currency><PriceVolumeUnit>PerMWh</PriceVolumeUnit>
+				<CurrencySource>Viz</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<ClearingCurrency>EUR</ClearingCurrency>
+				<ClearingFee>0</ClearingFee>
+				<BrokerTradingFee>0</BrokerTradingFee>
+				<BrokerCurrency>EUR</BrokerCurrency>
+			</SettlementData>
+		</GasStructuredDeal>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2010-01-01T00:00:00</TradeDate>
+		</DealDetails>
+		<ReferenceData>
+			<Comment></Comment>
+			<DealGroup></DealGroup>
+			<ExternalId>NonStorageCustomer-Gas-FlexStruct-NoRealized-AfterRD</ExternalId>
+			<ExternalSource>RegTest</ExternalSource>
+			<TicketNumber></TicketNumber>
+		</ReferenceData>
+	</Transaction>
+</DealInsert>
+</BulkDealInsert>

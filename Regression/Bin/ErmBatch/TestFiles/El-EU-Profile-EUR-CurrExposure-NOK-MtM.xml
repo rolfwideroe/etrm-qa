@@ -1,0 +1,47 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-EU-Profile-EUR-CurrExposure-NOK-MtM</workspace>
+    <monitor>El-EU-Profile-EUR-CurrExposure-NOK-MtM</monitor>
+    <reportdate>2011-11-01T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>El-EU-Profile-EUR,Electricity,EURC Jun-12 17-MAY-12 46.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European call,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0005,EUR,2011-11-02 00:00:00.000,31271.3941708822</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP Jun-12 17-MAY-12 46.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0006,EUR,2011-11-02 00:00:00.000,-0.560557336665308</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC Jun-12 17-MAY-12 46.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European call,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0007,EUR,2011-11-02 00:00:00.000,31271.3941708822</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP Jun-12 17-MAY-12 46.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0008,EUR,2011-11-02 00:00:00.000,-0.560557336665308</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC Q2-12 15-MAR-12 46.00,2012-04-01 00:00:00.000,2012-06-30 00:00:00.000,European call,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0013,EUR,2011-11-02 00:00:00.000,31336.374225718</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP Q2-12 15-MAR-12 46.00,2012-04-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0014,EUR,2011-11-02 00:00:00.000,-0.00473347396257111</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC Q2-12 15-MAR-12 46.00,2012-04-01 00:00:00.000,2012-06-30 00:00:00.000,European call,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0015,EUR,2011-11-02 00:00:00.000,31336.374225718</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP Q2-12 15-MAR-12 46.00,2012-04-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0016,EUR,2011-11-02 00:00:00.000,-0.00473347396257111</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC CAL-12 15-DEC-11 46.00,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,European call,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0021,EUR,2011-11-02 00:00:00.000,198898.424003387</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC CAL-12 15-DEC-11 46.00,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,European call,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0023,EUR,2011-11-02 00:00:00.000,198898.424003387</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00,2011-12-01 00:00:00.000,2012-02-29 00:00:00.000,European call,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0029,EUR,2011-11-02 00:00:00.000,77049.7627807812</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00,2011-12-01 00:00:00.000,2012-02-29 00:00:00.000,European put,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0030,EUR,2011-11-02 00:00:00.000,-3.18480204250934E-05</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00,2011-12-01 00:00:00.000,2012-02-29 00:00:00.000,European call,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0031,EUR,2011-11-02 00:00:00.000,77049.7627807812</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00,2011-12-01 00:00:00.000,2012-02-29 00:00:00.000,European put,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0032,EUR,2011-11-02 00:00:00.000,-3.18480204250934E-05</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC Jun-12 17-MAY-12 46.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European call,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0037,EUR,2011-11-02 00:00:00.000,70913.0779974592</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP Jun-12 17-MAY-12 46.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0038,EUR,2011-11-02 00:00:00.000,-255.857462829602</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC Jun-12 17-MAY-12 46.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European call,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0039,EUR,2011-11-02 00:00:00.000,70913.0779974592</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP Jun-12 17-MAY-12 46.00,2012-06-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0040,EUR,2011-11-02 00:00:00.000,-255.857462829602</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC Q2-12 15-MAR-12 46.00,2012-04-01 00:00:00.000,2012-06-30 00:00:00.000,European call,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0045,EUR,2011-11-02 00:00:00.000,204605.748026659</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP Q2-12 15-MAR-12 46.00,2012-04-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0046,EUR,2011-11-02 00:00:00.000,-137.126202474829</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC Q2-12 15-MAR-12 46.00,2012-04-01 00:00:00.000,2012-06-30 00:00:00.000,European call,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0047,EUR,2011-11-02 00:00:00.000,204605.748026659</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP Q2-12 15-MAR-12 46.00,2012-04-01 00:00:00.000,2012-06-30 00:00:00.000,European put,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0048,EUR,2011-11-02 00:00:00.000,-137.126202474829</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC CAL-12 15-DEC-11 46.00,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,European call,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0053,EUR,2011-11-02 00:00:00.000,719938.991360474</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP CAL-12 15-DEC-11 46.00,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,European put,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0054,EUR,2011-11-02 00:00:00.000,-0.176961304844283</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC CAL-12 15-DEC-11 46.00,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,European call,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0055,EUR,2011-11-02 00:00:00.000,719938.991360474</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP CAL-12 15-DEC-11 46.00,2012-01-01 00:00:00.000,2012-12-31 00:00:00.000,European put,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0056,EUR,2011-11-02 00:00:00.000,-0.176961304844283</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00,2011-12-01 00:00:00.000,2012-02-29 00:00:00.000,European call,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0061,EUR,2011-11-02 00:00:00.000,20418.3187840096</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00,2011-12-01 00:00:00.000,2012-02-29 00:00:00.000,European put,Financial,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0062,EUR,2011-11-02 00:00:00.000,-9613.35416957111</record>
+        <record>El-EU-Profile-EUR,Electricity,EURC 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00,2011-12-01 00:00:00.000,2012-02-29 00:00:00.000,European call,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0063,EUR,2011-11-02 00:00:00.000,20418.3187840096</record>
+        <record>El-EU-Profile-EUR,Electricity,EURP 01-Dec-11 - 29-Feb-12 20-NOV-11 46.00,2011-12-01 00:00:00.000,2012-02-29 00:00:00.000,European put,Physical,Custom load,OMIP,,CET,EUR,El-EU-Profile-EUR-0064,EUR,2011-11-02 00:00:00.000,-9613.35416957111</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

@@ -1,0 +1,30 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>Special-Cases-AsianBundle-CurrExp-SEK-Delta</workspace>
+    <monitor>Special-Cases-AsianBundle-CurrExp-SEK-Delta</monitor>
+    <reportdate>2011-11-14T00:00:00</reportdate>
+    <tollerance p3:nil="true" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CurrencyExposure.xml" />
+      <returns>
+        <record>Special-Cases,Electricity,ASIC/M Q4-11 45.00,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Asian call,Financial,Base,Norway 1,,CET,EUR,Special-Cases-AsianBundle-Buy-Call-NO1-Base-InDelviery-EUR,EUR,2011-11-30 00:00:00.000,-5821.91059602225</record>
+        <record>Special-Cases,Electricity,ASIC/M Q4-11 45.00,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Asian call,Financial,Base,Norway 1,,CET,EUR,Special-Cases-AsianBundle-Buy-Call-NO1-Base-InDelviery-EUR,EUR,2011-12-31 00:00:00.000,592.168339329268</record>
+        <record>Special-Cases,Electricity,ASIP/M Q1-12 300.00,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Asian put,Financial,Base,Norway 1,,CET,NOK,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PreDelivery-NOK,NOK,2012-01-31 00:00:00.000,-56352.8093330543</record>
+        <record>Special-Cases,Electricity,ASIP/M Q1-12 300.00,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Asian put,Financial,Base,Norway 1,,CET,NOK,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PreDelivery-NOK,NOK,2012-02-29 00:00:00.000,-113560.221176118</record>
+        <record>Special-Cases,Electricity,ASIP/M Q1-12 300.00,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Asian put,Financial,Base,Norway 1,,CET,NOK,Special-Cases-AsianBundle-Buy-Put-NO1-Base-PreDelivery-NOK,NOK,2012-03-31 00:00:00.000,-205968.593334446</record>
+        <record>Special-Cases,Electricity,ASIC/M Q1-12 45.00,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Asian call,Financial,Base,Norway 1,,CET,EUR,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PreDelivery-EUR,EUR,2012-01-31 00:00:00.000,-4573.19096950363</record>
+        <record>Special-Cases,Electricity,ASIC/M Q1-12 45.00,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Asian call,Financial,Base,Norway 1,,CET,EUR,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PreDelivery-EUR,EUR,2012-02-29 00:00:00.000,-15509.9629894987</record>
+        <record>Special-Cases,Electricity,ASIC/M Q1-12 45.00,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Asian call,Financial,Base,Norway 1,,CET,EUR,Special-Cases-AsianBundle-Sell-Call-NO1-Base-PreDelivery-EUR,EUR,2012-03-31 00:00:00.000,-2318.73982272514</record>
+        <record>Special-Cases,Electricity,ASIP/M Q4-11 300.00,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Asian put,Financial,Base,NordPool System Price,,CET,NOK,Special-Cases-AsianBundle-Sell-Put-System-Base-InDelviery-NOK,NOK,2011-11-30 00:00:00.000,17060.6553411787</record>
+        <record>Special-Cases,Electricity,ASIP/M Q4-11 300.00,2011-10-01 00:00:00.000,2011-12-31 00:00:00.000,Asian put,Financial,Base,NordPool System Price,,CET,NOK,Special-Cases-AsianBundle-Sell-Put-System-Base-InDelviery-NOK,NOK,2011-12-31 00:00:00.000,243699.519399131</record>
+        <record>Special-Cases,Electricity,ASIP/M Q1-12 45.00,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Asian put,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-AsianBundle-Sell-Put-System-Base-PreDelivery-EUR,EUR,2012-01-31 00:00:00.000,6409.40995560656</record>
+        <record>Special-Cases,Electricity,ASIP/M Q1-12 45.00,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Asian put,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-AsianBundle-Sell-Put-System-Base-PreDelivery-EUR,EUR,2012-02-29 00:00:00.000,14320.2231349982</record>
+        <record>Special-Cases,Electricity,ASIP/M Q1-12 45.00,2012-01-01 00:00:00.000,2012-03-31 00:00:00.000,Asian put,Financial,Base,NordPool System Price,,CET,EUR,Special-Cases-AsianBundle-Sell-Put-System-Base-PreDelivery-EUR,EUR,2012-03-31 00:00:00.000,8166.29199277939</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

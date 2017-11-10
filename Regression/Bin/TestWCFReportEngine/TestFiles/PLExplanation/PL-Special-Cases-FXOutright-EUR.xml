@@ -1,0 +1,51 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-11-07T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-14T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Special-Cases-FXOutright" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Total" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+    <ElvizConfigurations>
+      <ElvizConfiguration Name="EnableFxOutright" Value="True" />
+    </ElvizConfigurations>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Special-Cases-FXOutright-Currency-Forward-0001,USDEUR 07-Dec-11,,CurrencyForward,Special-Cases,-54305.5078920714,-54305.5078920714,-54305.5078920714,-54305.5078920714,-54305.5078920714,-54305.5078920714,-54305.5078920714,-58874.4409767664,-58874.4409767664</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-El-Asian-NOK-0001,ASIC/A M11-11 335.00,NordPool System Price,Asian,Special-Cases,18295.8880961866,14276.682658338,6277.48018062247,6277.48018062247,6277.48018062247,5596.15399638061,5596.47659337412,4515.94388069286,4515.94388069286</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-ElCert-Forward-OTC-0001,ECS Mar-12,Elcertificate,Forward,Special-Cases,462465.916601721,462465.916601721,779330.558872549,779330.558872549,779330.558872549,779330.558872549,779330.558872549,854908.854949578,854908.854949578</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-El-Forward-EUR-0001,M11-11,NordPool System Price,Forward,Special-Cases,-23520.2709188312,-29627.3485099087,-50188.0617358906,-50188.0617358906,-50188.0617358906,-50188.0617358906,-50188.0617358906,-50188.0617358906,-50188.0617358906</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-El-Forward-NOK-0001,M11-11,NordPool System Price,Forward,Special-Cases,38262.3042869531,34347.3286376786,24146.0191878165,24146.0191878165,24146.0191878165,24146.0191878165,24146.0191878165,23036.0174971197,23036.0174971197</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,Nov-11,ICE TTF,Forward,Special-Cases,-550897.305195587,-549822.7813977,-554498.237311721,-554498.237311721,-554498.237311721,-554498.237311721,-554498.237311721,-554498.237311721,-554498.237311721</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Special-Cases-FXOutright-Currency-Forward-0001,USDEUR 07-Dec-11,,CurrencyForward,Special-Cases,-54305.5078920714,-54305.5078920714,-54305.5078920714,-54305.5078920714,-54305.5078920714,-54305.5078920714,-54305.5078920714,-58874.4409767664,-58874.4409767664</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-El-Asian-NOK-0001,ASIC/A M11-11 335.00,NordPool System Price,Asian,Special-Cases,19381.9523433349,15362.7469054862,7363.54442777071,7363.54442777071,7363.54442777071,6682.21824352885,6682.54084052236,5602.0081278411,5602.0081278411</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-ElCert-Forward-OTC-0001,ECS Mar-12,Elcertificate,Forward,Special-Cases,462465.916601721,462465.916601721,779330.558872549,779330.558872549,779330.558872549,779330.558872549,779330.558872549,854908.854949578,854908.854949578</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-El-Forward-EUR-0001,M11-11,NordPool System Price,Forward,Special-Cases,-6129.87091883115,-203.348509908712,-20764.0617358906,-20764.0617358906,-20764.0617358906,-20764.0617358906,-20764.0617358906,-20764.0617358906,-20764.0617358906</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-El-Forward-NOK-0001,M11-11,NordPool System Price,Forward,Special-Cases,35557.673200862,26985.3960189083,16784.0865690463,16784.0865690463,16784.0865690463,16784.0865690463,16784.0865690463,15674.0848783494,15674.0848783494</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,Nov-11,ICE TTF,Forward,Special-Cases,-423110.980195587,-293258.8813977,-297934.337311721,-297934.337311721,-297934.337311721,-297934.337311721,-297934.337311721,-297934.337311721,-297934.337311721</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>Special-Cases-FXOutright-Currency-Forward-0001,USDEUR 07-Dec-11,,CurrencyForward,Special-Cases,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-El-Asian-NOK-0001,ASIC/A M11-11 335.00,NordPool System Price,Asian,Special-Cases,-1086.06424714824,-1086.06424714824,-1086.06424714824,-1086.06424714824,-1086.06424714824,-1086.06424714824,-1086.06424714824,-1086.06424714824,-1086.06424714824</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-ElCert-Forward-OTC-0001,ECS Mar-12,Elcertificate,Forward,Special-Cases,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-El-Forward-EUR-0001,M11-11,NordPool System Price,Forward,Special-Cases,-17390.4,-29424,-29424,-29424,-29424,-29424,-29424,-29424,-29424</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-El-Forward-NOK-0001,M11-11,NordPool System Price,Forward,Special-Cases,2704.6310860911,7361.93261877025,7361.93261877025,7361.93261877025,7361.93261877025,7361.93261877025,7361.93261877025,7361.93261877025,7361.93261877025</ExpectedRecord>
+        <ExpectedRecord>Special-Cases-FXOutright-Gas-Forward-MWhd-EUR-0001,Nov-11,ICE TTF,Forward,Special-Cases,-127786.325,-256563.9,-256563.9,-256563.9,-256563.9,-256563.9,-256563.9,-256563.9,-256563.9</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>
