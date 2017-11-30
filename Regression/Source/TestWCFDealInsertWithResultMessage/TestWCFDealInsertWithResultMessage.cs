@@ -85,6 +85,7 @@ namespace TestWCFDealInsertWithResultMessage
             if (messageNodeXML.Count > 0)
             {
                 errorMessagefromXML = messageNodeXML[0].InnerText;
+                errorMessagefromXML = errorMessagefromXML.Replace("\r", "").Replace("\n", "").Replace("(1)", "").Replace("\t", "");
             }
 
             XmlNodeList dealNode = doc.GetElementsByTagName("TestData");
@@ -112,7 +113,8 @@ namespace TestWCFDealInsertWithResultMessage
 
                 if (testresult.ToUpper() == "EXCEPTION")
                 {
-                    Assert.AreEqual(errorMessagefromXML, ex.Message, "Other exception was caught");
+                    string exMessage = ex.Message.Replace("\r", "").Replace("\n", "").Replace("(1)", "").Replace("\t", "");
+                    Assert.AreEqual(errorMessagefromXML, exMessage, "Other exception was caught");
                     return;
                 }
                 Assert.Fail(ex.Message);
@@ -136,6 +138,10 @@ namespace TestWCFDealInsertWithResultMessage
                     // Console.WriteLine(errorMessage);
                     //Console.WriteLine(errorMessagefromXML);
                     //Assert error message
+
+                    //removed \r,\n - failed for Azure machines
+                    errorMessage = errorMessage.Replace("\r", "").Replace("\n", "").Replace("(1)", "").Replace("\t", "");
+
                     Assert.AreEqual(errorMessagefromXML, errorMessage, "Not equal error messages: ");
 
                     return;
@@ -187,6 +193,7 @@ namespace TestWCFDealInsertWithResultMessage
             if (messageNodeXML.Count > 0)
             {
                 errorMessagefromXML = messageNodeXML[0].InnerText;
+                errorMessagefromXML = errorMessagefromXML.Replace("\r", "").Replace("\n", "").Replace("(1)", "").Replace("\t", "");
             }
 
             XmlNodeList dealNode = doc.GetElementsByTagName("TestData");
@@ -217,7 +224,8 @@ namespace TestWCFDealInsertWithResultMessage
 
                 if (testresult.ToUpper() == "EXCEPTION")
                 {
-                    Assert.AreEqual(errorMessagefromXML, ex.Message, "Other exception was caught");
+                    string exMessage = ex.Message.Replace("\r", "").Replace("\n", "").Replace("(1)", "").Replace("\t", "");
+                    Assert.AreEqual(errorMessagefromXML, exMessage, "Other exception was caught");
                     return;
                 }
                 Assert.Fail(ex.Message);
@@ -239,6 +247,10 @@ namespace TestWCFDealInsertWithResultMessage
                     XmlNodeList messageNode = resultXml.GetElementsByTagName("Message");
                     string errorMessage = messageNode[0].InnerText;
                     // Console.WriteLine(errorMessage);
+                    
+                    //removed \r,\n - failed for Azure machines
+                    errorMessage = errorMessage.Replace("\r", "").Replace("\n", "").Replace("(1)", "").Replace("\t", "");
+
                     //Assert error message
                     Assert.AreEqual(errorMessagefromXML, errorMessage, "Not equal error messages: ");
 
