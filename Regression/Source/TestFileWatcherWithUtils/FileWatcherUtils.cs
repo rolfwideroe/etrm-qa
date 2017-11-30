@@ -11,10 +11,10 @@ namespace TestFileWatcherWithUtils
     /// </summary>
     public class FileWatcherUtils
     {
-            const string logDirectoryConst = @"\\{0}\Elviz\Integration\DealImport\Results";
-            const string processedDirectoryConst = @"\\{0}\Elviz\Integration\DealImport\Processed";
-            const string quarantineDirectoryConst = @"\\{0}\Elviz\Integration\DealImport\Quarantined";
-            const string watchPathConst = @"\\{0}\Elviz\Integration\DealImport";
+            const string logDirectoryConst = @"\\{0}\BradyETRM\Integration\DealImport\Results";
+            const string processedDirectoryConst = @"\\{0}\BradyETRM\Integration\DealImport\Processed";
+            const string quarantineDirectoryConst = @"\\{0}\BradyETRM\Integration\DealImport\Quarantined";
+            const string watchPathConst = @"\\{0}\BradyETRM\Integration\DealImport";
             const string testFilesFolderConst = @"TestFiles\";
            
         public class FileWatcherConfiguration

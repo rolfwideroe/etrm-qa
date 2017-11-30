@@ -10,20 +10,12 @@ using ElvizTestUtils.LookUpServiceReference;
 using NUnit.Framework;
 
 
-
-
 namespace TestWCFDealServiceFees
 {
         [TestFixture]
         public class InserDealAndCheckFees
         {
            
-
-
-            
-
-
-
             private TestCase DeserializeXml(string testFilepath)
             {
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof (TestCase));
