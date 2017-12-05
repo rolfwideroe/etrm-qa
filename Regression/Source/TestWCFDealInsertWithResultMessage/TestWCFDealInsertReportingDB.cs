@@ -23,8 +23,11 @@ namespace TestWCFDealInsertWithResultMessage
             {
                 ConfigurationTool.PamEnabled = false;
             }
+            Console.WriteLine("pam passed");
             JobAPI.ExecuteAndAssertJob(12, 300);
+            Console.WriteLine("execute job passed");
             initializationConnectionToReportingDB();
+            Console.WriteLine("initializationConnectionToReportingDB");
         }
 
         private const string TestFilesPath = "Testfiles\\";

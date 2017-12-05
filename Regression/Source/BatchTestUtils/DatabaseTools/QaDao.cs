@@ -123,7 +123,7 @@ namespace ElvizTestUtils.DatabaseTools
             DataTable table = new DataTable();
 
             SqlCommand command = new SqlCommand(sql, connection);
-            command.CommandTimeout = 60;
+            command.CommandTimeout = 90;
             try
             {
                 connection.Open();

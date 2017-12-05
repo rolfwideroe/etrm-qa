@@ -1,0 +1,42 @@
+<TestCaseReportEngine>
+  <InputData>
+    <ReportId>ProfitLossExplanationReport</ReportId>
+    <Tolerance>0</Tolerance>
+    <Settings>
+      <Setting SettingId="CompareDate" IsNotSet="false" XmlEncodedValue="2011-10-31T00:00:00" />
+      <Setting SettingId="ReportDate" IsNotSet="false" XmlEncodedValue="2011-11-01T00:00:00" />
+      <Setting SettingId="TransactionFilter" IsNotSet="false" XmlEncodedValue="Electricity-FTR-EUR" />
+      <Setting SettingId="ReportCurrency" IsNotSet="false" XmlEncodedValue="EUR" />
+      <Setting SettingId="ShowValuesAs" IsNotSet="false" XmlEncodedValue="Change" />
+      <Setting SettingId="GroupPositionsBy" IsNotSet="false" XmlEncodedValue="Portfolio" />
+      <Setting SettingId="UseVolatilitySurface" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="UseEndOfDayReporting" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="UseActualDateSpotRates" IsNotSet="false" XmlEncodedValue="true" />
+      <Setting SettingId="AggregateStructuredDeals" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="IntrinsicEvaluation" IsNotSet="false" XmlEncodedValue="false" />
+      <Setting SettingId="ParameterOrder" IsNotSet="false" XmlEncodedValue="UndeliveredToDelivered,MarketPrice,NewContracts,UpdatedForecasts,Volatility,InterestRate,ExchangeRate" />
+    </Settings>
+  </InputData>
+  <ExpectedValues>
+    <ExpectedDataTableArtifacts>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="netProfitLossExplanation" Columns="Net TransactionIds,Net Name,Net Price Area,Net Instrument Type,Net Portfolio,Net Compare date,Net UndeliveredToDelivered,Net MarketPrice,Net NewContracts,Net UpdatedForecasts,Net Volatility,Net InterestRate,Net ExchangeRate,Net Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>El-FTR-Option-001,SEMYR-11/12,,FTROption,Electricity-FTR-EUR,-25415982.6877655,0,0,0,0,0,0,0,-25415982.6877655</ExpectedRecord>
+        <ExpectedRecord>El-FTR-Option-002,Q1-12,,FTROption,Electricity-FTR-EUR,-6549000,0,37440.0773821678,0,0,0,0,204827.702989276,-6306732.21962856</ExpectedRecord>
+        <ExpectedRecord>El-FTR-Option-003,CALYR-12,,FTROption,Electricity-FTR-EUR,-27230400,0,0,0,0,0,0,0,-27230400</ExpectedRecord>
+        <ExpectedRecord>El-FTR-Option-004,M10-11,,FTROption,Electricity-FTR-EUR,-147856.502665988,0,0,0,0,0,0,0,-147856.502665988</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="undeliveredProfitLossExplanation" Columns="Undelivered TransactionIds,Undelivered Name,Undelivered Price Area,Undelivered Instrument Type,Undelivered Portfolio,Undelivered Compare date,Undelivered UndeliveredToDelivered,Undelivered MarketPrice,Undelivered NewContracts,Undelivered UpdatedForecasts,Undelivered Volatility,Undelivered InterestRate,Undelivered ExchangeRate,Undelivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>El-FTR-Option-001,SEMYR-11/12,,FTROption,Electricity-FTR-EUR,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>El-FTR-Option-002,Q1-12,,FTROption,Electricity-FTR-EUR,0,0,37440.0773821678,0,0,0,0,204827.702989276,242267.780371444</ExpectedRecord>
+        <ExpectedRecord>El-FTR-Option-003,CALYR-12,,FTROption,Electricity-FTR-EUR,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+        <ExpectedRecord>El-FTR-Option-004,M10-11,,FTROption,Electricity-FTR-EUR,0,0,0,0,0,0,0,0,0</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+      <ExpectedDataTableArtifact TransactionIdColumnIndex="0" ArtifactId="deliveredProfitLossExplanation" Columns="Delivered TransactionIds,Delivered Name,Delivered Price Area,Delivered Instrument Type,Delivered Portfolio,Delivered Compare date,Delivered UndeliveredToDelivered,Delivered MarketPrice,Delivered NewContracts,Delivered UpdatedForecasts,Delivered Volatility,Delivered InterestRate,Delivered ExchangeRate,Delivered Report date" ColumnsDataTypes="System.String,System.String,System.String,System.String,System.String,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double">
+        <ExpectedRecord>El-FTR-Option-001,SEMYR-11/12,,FTROption,Electricity-FTR-EUR,-25415982.6877655,0,0,0,0,0,0,0,-25415982.6877655</ExpectedRecord>
+        <ExpectedRecord>El-FTR-Option-002,Q1-12,,FTROption,Electricity-FTR-EUR,-6549000,0,0,0,0,0,0,0,-6549000</ExpectedRecord>
+        <ExpectedRecord>El-FTR-Option-003,CALYR-12,,FTROption,Electricity-FTR-EUR,-27230400,0,0,0,0,0,0,0,-27230400</ExpectedRecord>
+        <ExpectedRecord>El-FTR-Option-004,M10-11,,FTROption,Electricity-FTR-EUR,-147856.502665988,0,0,0,0,0,0,0,-147856.502665988</ExpectedRecord>
+      </ExpectedDataTableArtifact>
+    </ExpectedDataTableArtifacts>
+  </ExpectedValues>
+</TestCaseReportEngine>

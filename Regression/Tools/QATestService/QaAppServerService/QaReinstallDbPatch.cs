@@ -31,7 +31,7 @@ namespace QATestService
         private void InstallDBPatch()
         {
             string Arguments;
-            string DbPatch_Path = @"C:\Elviz\Support\BradyDbPatch.msi";
+            string DbPatch_Path = @"C:\BradyETRM\Support\BradyDbPatch.msi";
             string USERNAME = "";
             string PASSWORD = "";
             string DBSYS = "";
@@ -148,13 +148,13 @@ namespace QATestService
             if (INTSECURITY == "1")
             {
                 Arguments = string.Format(
-                   @"/c {0} /l* C:\Elviz\Integration\QATestService\Log\Install.log /qn ALLUSERS=1 IS_SQLSERVER_SERVER={1} IS_SQLSERVER_AUTHENTICATION=0 IS_SQLSERVER_DBSYS={2} IS_SQLSERVER_DBECM={3} IS_SQLSERVER_DBPRC={4} IS_SQLSERVER_DBDWH={5} IS_SQLSERVER_DBRD={6}",
+                   @"/c {0} /l* C:\BradyETRM\Integration\QATestService\Log\Install.log /qn ALLUSERS=1 IS_SQLSERVER_SERVER={1} IS_SQLSERVER_AUTHENTICATION=0 IS_SQLSERVER_DBSYS={2} IS_SQLSERVER_DBECM={3} IS_SQLSERVER_DBPRC={4} IS_SQLSERVER_DBDWH={5} IS_SQLSERVER_DBRD={6}",
                    DbPatch_Path, SERVER, DBSYS, DBECM, DBPRC, DBDWH, DBRDB);
             }
             else
             {
                 Arguments = string.Format(
-                    @"/c {0} /l* C:\Elviz\Integration\QATestService\Log\Install.log /qn ALLUSERS=1 IS_SQLSERVER_SERVER={1} IS_SQLSERVER_USERNAME={2} IS_SQLSERVER_PASSWORD={3} IS_SQLSERVER_DBSYS={4} IS_SQLSERVER_DBECM={5} IS_SQLSERVER_DBPRC={6} IS_SQLSERVER_DBDWH={7} IS_SQLSERVER_DBRD={8}",
+                    @"/c {0} /l* C:\BradyETRM\Integration\QATestService\Log\Install.log /qn ALLUSERS=1 IS_SQLSERVER_SERVER={1} IS_SQLSERVER_USERNAME={2} IS_SQLSERVER_PASSWORD={3} IS_SQLSERVER_DBSYS={4} IS_SQLSERVER_DBECM={5} IS_SQLSERVER_DBPRC={6} IS_SQLSERVER_DBDWH={7} IS_SQLSERVER_DBRD={8}",
                     DbPatch_Path, SERVER, USERNAME, PASSWORD, DBSYS, DBECM, DBPRC, DBDWH, DBRDB);
 
             }
@@ -188,7 +188,7 @@ namespace QATestService
         //uninstalling Brady DBPatch
         private void UninstallDbPatch()
         {
-            const string command = @"/c msiexec /X{E957CFF0-DB0B-43B9-ACF3-BF11EAF2EB59} /l* C:\Elviz\Integration\QATestService\Log\Uninstall.log /qn";
+            const string command = @"/c msiexec /X{E957CFF0-DB0B-43B9-ACF3-BF11EAF2EB59} /l* C:\BradyETRM\Integration\QATestService\Log\Uninstall.log /qn";
             try
             {
                 ProcessStartInfo startInfo = new ProcessStartInfo("cmd", command);

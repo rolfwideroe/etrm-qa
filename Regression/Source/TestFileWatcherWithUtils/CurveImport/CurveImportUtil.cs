@@ -13,10 +13,10 @@ namespace CurveImport
 {
     class CurveImportUtil
     {
-         const string logDirectoryConst = @"\\{0}\Elviz\Integration\CurveImport\Official\Results";
-         const string processedDirectoryConst = @"\\{0}\Elviz\Integration\CurveImport\Official\Processed";
-         const string quarantineDirectoryConst = @"\\{0}\Elviz\Integration\CurveImport\Official\Quarantined";
-         const string watchPathConst = @"\\{0}\Elviz\Integration\CurveImport\Official";
+         const string logDirectoryConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official\Results";
+         const string processedDirectoryConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official\Processed";
+         const string quarantineDirectoryConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official\Quarantined";
+         const string watchPathConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official";
          const string testFilesFolderConst = @"TestFilesCurveImport\";
 
         public class FileWatcherConfigurationCurveImport
