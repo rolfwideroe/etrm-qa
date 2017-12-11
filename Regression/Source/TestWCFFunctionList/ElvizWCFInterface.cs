@@ -39,7 +39,8 @@ namespace TestWCFFunctionList
                     "GetProductNames",
                     "GetOriginalTransactionsByExternalIds",
                     "GetOriginalTransactionsByUTI",
-                    "GetProductionFacilities"
+                    "GetProductionFacilities",
+                    "GetTransactionIdsByFilter"
                 });
                 expectedFunctionList.Sort();
 
