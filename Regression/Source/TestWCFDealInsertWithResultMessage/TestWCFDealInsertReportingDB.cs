@@ -131,7 +131,7 @@ namespace TestWCFDealInsertWithResultMessage
             {
                 result = dealServiceClient.ImportDeal(dealNode[0].InnerXml);
                 //  Console.WriteLine(dealNode[0].InnerXml);
-               // Console.WriteLine(result);
+                Console.WriteLine(result);
             }
             catch (Exception ex)
             {
@@ -193,7 +193,7 @@ namespace TestWCFDealInsertWithResultMessage
                 XmlNodeList expectedDtoNode = doc.GetElementsByTagName("QaTransactionDTO");
                 if (expectedDtoNode.Count > 0)
                 {
-                    Thread.Sleep(3000);
+                    Thread.Sleep(7000);
                     CompareTransactionDto(filePath, insertedTransactionID, reportingDbExternalId, reportingDbCaplId, reportingDbUTI);
                 }
                 else

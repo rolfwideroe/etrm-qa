@@ -30,7 +30,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(ex.Message.Contains("Parameter 'ExternalId' can't be empty."));
+                Assert.IsTrue(ex.Message.Contains("Failed to create companies. ExternalId can't be empty"));
             }
             myCompany.ExternalId = "Test Company A";
             try
@@ -75,7 +75,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-               Assert.IsTrue(ex.Message.Contains("Parameter 'Name' can't be empty."));
+                Assert.IsTrue(ex.Message.Contains("Name can't be empty"));
             }
             //OrgNo = String.Empty
             myCompany.Name = "TestCompany";
@@ -144,7 +144,7 @@ namespace TestWCFPortfolioManagementService
         }
         catch (Exception ex)
         {
-            Assert.IsTrue(ex.Message.Contains("Update company failed."));
+            Assert.IsTrue(ex.Message.Contains("Failed to update companies. Company with ExternalId 'not possible to update' doesn't exist."));
         }
         myCompany.ExternalId = myExternalId;
         //update to the status = null
@@ -176,7 +176,7 @@ namespace TestWCFPortfolioManagementService
         }
         catch (Exception ex)
         {
-            Assert.IsTrue(ex.Message.Contains("Parameter 'Name' can't be empty."));
+            Assert.IsTrue(ex.Message.Contains("Failed to update companies. Name can't be empty"));
         }  
         myCompany.Name = "CompanyUpdated";
         myCompany.OrgNo = String.Empty;
@@ -234,7 +234,7 @@ namespace TestWCFPortfolioManagementService
         }
         catch (Exception ex)
         {
-            Assert.IsTrue(ex.Message.Contains("Create company failed."));
+            Assert.IsTrue(ex.Message.Contains("Failed to create companies. Company with ExternalId"));
         }
         //successful company creating
         myCompany.ParentExternalId = null;
@@ -265,7 +265,7 @@ namespace TestWCFPortfolioManagementService
         }
         catch (Exception ex)
         {
-            Assert.IsTrue(ex.Message.Contains("Update company failed."));
+            Assert.IsTrue(ex.Message.Contains("Failed to update companies"));
         }
         ////successful updating, set Status = deleted
         myCompany.ParentExternalId = null;
