@@ -2,15 +2,15 @@
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="Elviz.API" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Elviz.API" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xsd:schema targetNamespace="Elviz.API/Imports">
-      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd0" namespace="Elviz.API" />
-      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model" />
-      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Viz.Base" />
-      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model.Transactions" />
-      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Viz.Services.AuditTrailService.ClientLibrary" />
-      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
-      <xsd:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API" />
+      <xsd:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd0" namespace="Elviz.API" />
+      <xsd:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model" />
+      <xsd:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Viz.Base" />
+      <xsd:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model.Transactions" />
+      <xsd:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Viz.Services.AuditTrailService.ClientLibrary" />
+      <xsd:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ILookupService_LookUp_InputMessage">
@@ -139,6 +139,12 @@
   <wsdl:message name="ILookupService_GetProductionFacilities_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetProductionFacilitiesResponse" />
   </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionIdsByFilter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionIdsByFilter" />
+  </wsdl:message>
+  <wsdl:message name="ILookupService_GetTransactionIdsByFilter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionIdsByFilterResponse" />
+  </wsdl:message>
   <wsdl:portType name="ILookupService">
     <wsdl:operation name="LookUp">
       <wsdl:input wsaw:Action="Elviz.API/ILookupService/LookUp" message="tns:ILookupService_LookUp_InputMessage" />
@@ -223,6 +229,10 @@
     <wsdl:operation name="GetProductionFacilities">
       <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetProductionFacilities" message="tns:ILookupService_GetProductionFacilities_InputMessage" />
       <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetProductionFacilitiesResponse" message="tns:ILookupService_GetProductionFacilities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionIdsByFilter">
+      <wsdl:input wsaw:Action="Elviz.API/ILookupService/GetTransactionIdsByFilter" message="tns:ILookupService_GetTransactionIdsByFilter_InputMessage" />
+      <wsdl:output wsaw:Action="Elviz.API/ILookupService/GetTransactionIdsByFilterResponse" message="tns:ILookupService_GetTransactionIdsByFilter_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>
