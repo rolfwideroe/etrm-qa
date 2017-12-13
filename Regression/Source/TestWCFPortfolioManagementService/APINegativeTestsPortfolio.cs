@@ -42,7 +42,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-                Assert.AreEqual("Failed to create portfolios. Parameter 'ExternalId' can't be empty.", ex.Message);
+                Assert.IsTrue(ex.Message.Contains("Failed to create portfolios. Portfolio's ExternalId can't be empty"));
             }
 
             //ExternalId is not unique
@@ -89,7 +89,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(ex.Message.Contains("Create portfolio failed"));
+                Assert.IsTrue(ex.Message.Contains("Failed to create portfolios"));
                 return;
             }
 
@@ -125,7 +125,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(ex.Message.Contains("Parameter 'CompanyExternalId' can't be empty."));
+                Assert.IsTrue(ex.Message.Contains("CompanyExternalId can't be empty"));
 
             }
             //ParentExternalID does not belong to the current company
@@ -187,7 +187,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(ex.Message.Contains("Parameter 'Name' can't be empty."));
+                Assert.IsTrue(ex.Message.Contains("Name can't be empty"));
                 return;
             }
 
@@ -227,7 +227,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(ex.Message.Contains("Update portfolio failed."));
+                Assert.IsTrue(ex.Message.Contains("Failed to update portfolios"));
             }
             myPortfolio.ExternalId = myExternalId;
             //update to the status = null
@@ -238,7 +238,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(ex.Message.Contains("Update portfolio failed."));
+               Assert.IsTrue(ex.Message.Contains("Failed to update portfolios"));
             }
             //update to the wrong status
             myPortfolio.Status = "Created";
@@ -248,7 +248,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(ex.Message.Contains("Update portfolio failed."));
+                Assert.IsTrue(ex.Message.Contains("Failed to update portfolios"));
             }
             myPortfolio.Status = StatusActive;
             myPortfolio.Name = null;
@@ -258,7 +258,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(ex.Message.Contains("Parameter 'Name' can't be empty."));
+                Assert.IsTrue(ex.Message.Contains("Name can't be empty"));
             }
         }
 

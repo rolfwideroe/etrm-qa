@@ -176,7 +176,7 @@ namespace TestWCFCurveService
                         s = " <ExpectedCurveValue Date=\"" + record.DateTime.ToString("yyyy-MM-ddTHH:mm:ss") +
                              "\" Value=\"" + record.Value + "\"/>";
 
-                           Console.WriteLine(s);
+                          // Console.WriteLine(s);
                     }
 
                     Assert.AreEqual(expectedTimevalues.Count, dateTimevalues.Count,
