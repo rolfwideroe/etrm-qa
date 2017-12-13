@@ -23,6 +23,9 @@ namespace ElvizTestUtils.LookUpServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ContractsAllowedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ExternalIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -53,6 +56,19 @@ namespace ElvizTestUtils.LookUpServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool ContractsAllowed {
+            get {
+                return this.ContractsAllowedField;
+            }
+            set {
+                if ((this.ContractsAllowedField.Equals(value) != true)) {
+                    this.ContractsAllowedField = value;
+                    this.RaisePropertyChanged("ContractsAllowed");
+                }
             }
         }
         
@@ -6273,6 +6289,9 @@ namespace ElvizTestUtils.LookUpServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="Elviz.API/ILookupService/GetProductionFacilities", ReplyAction="Elviz.API/ILookupService/GetProductionFacilitiesResponse")]
         ElvizTestUtils.LookUpServiceReference.ProductionFacility[] GetProductionFacilities();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Elviz.API/ILookupService/GetTransactionIdsByFilter", ReplyAction="Elviz.API/ILookupService/GetTransactionIdsByFilterResponse")]
+        int[] GetTransactionIdsByFilter(string filterName);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -6384,6 +6403,10 @@ namespace ElvizTestUtils.LookUpServiceReference {
         
         public ElvizTestUtils.LookUpServiceReference.ProductionFacility[] GetProductionFacilities() {
             return base.Channel.GetProductionFacilities();
+        }
+        
+        public int[] GetTransactionIdsByFilter(string filterName) {
+            return base.Channel.GetTransactionIdsByFilter(filterName);
         }
     }
 }

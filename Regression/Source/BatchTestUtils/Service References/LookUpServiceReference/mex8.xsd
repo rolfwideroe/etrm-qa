@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="Elviz.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model" />
-  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Viz.Base" />
-  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model.Transactions" />
-  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Viz.Services.AuditTrailService.ClientLibrary" />
-  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
-  <xs:import schemaLocation="http://netvs-qa172a02:8009/LookupService/mex?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API" />
+  <xs:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model" />
+  <xs:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Viz.Base" />
+  <xs:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Contract.Model.Transactions" />
+  <xs:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Viz.Services.AuditTrailService.ClientLibrary" />
+  <xs:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:import schemaLocation="http://dev-app-etrm-02:8009/LookupService/mex?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Viz.Integration.Core.Services.API" />
   <xs:element name="LookUp">
     <xs:complexType>
       <xs:sequence>
@@ -42,6 +42,7 @@
   <xs:element xmlns:q3="Elviz.API" name="ArrayOfPortfolio" nillable="true" type="q3:ArrayOfPortfolio" />
   <xs:complexType name="Portfolio">
     <xs:sequence>
+      <xs:element minOccurs="0" name="ContractsAllowed" type="xs:boolean" />
       <xs:element minOccurs="0" name="ExternalId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ParentCompanyId" type="xs:int" />
       <xs:element minOccurs="0" name="ParentPortfolioId" nillable="true" type="xs:int" />
@@ -1584,4 +1585,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element xmlns:q190="Elviz.API" name="ProductionFacility" nillable="true" type="q190:ProductionFacility" />
+  <xs:element name="GetTransactionIdsByFilter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="filterName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTransactionIdsByFilterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q191="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetTransactionIdsByFilterResult" nillable="true" type="q191:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
