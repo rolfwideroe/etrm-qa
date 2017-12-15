@@ -187,7 +187,7 @@ namespace TestExecute
                                numberOfErrors = Convert.ToInt32(errorCountNode.Item(0).Attributes["value"].Value);
                            }
                        }
-                       string pathToLog = @"file://netvs-tfs/mstest/2017.2/CurveServer/"+ projectName+ "_" + elvizVersion + ".mht";
+                       string pathToLog = @"file://netvs-tfs/mstest/2018.1/CurveServer/"+ projectName+ "_" + elvizVersion + ".mht";
 
                        if ((numberOfErrors != 0)) Assert.Fail(pathToLog);
                    }
