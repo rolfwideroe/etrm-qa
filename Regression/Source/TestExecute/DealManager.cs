@@ -172,7 +172,7 @@ namespace TestExecute
 
             string logDescription = "DealManagerFunctions.mds.tcLogs";
             string absolutePath = Path.GetFullPath(PathToLogFolder + logDescription);
-            string pathToLog = @"file://netvs-tfs/mstest/2017.2/DealManager/" + testName + "_" + elvizVersion + ".mht";
+            string pathToLog = @"file://netvs-tfs/mstest/2018.1/DealManager/" + testName + "_" + elvizVersion + ".mht";
 
             //Console.WriteLine(absolutePath);
 

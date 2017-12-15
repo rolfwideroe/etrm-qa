@@ -63,7 +63,7 @@ namespace TestExecute
                 }
             }
 
-            string pathToLog = @"file://netvs-tfs/mstest/2017.2/CurveServerTemplates_" + elvizVersion + ".mht";
+            string pathToLog = @"file://netvs-tfs/mstest/2018.1/CurveServerTemplates_" + elvizVersion + ".mht";
 
             if ((numberOfErrors != 0))
                 Assert.Fail(pathToLog);
