@@ -21,13 +21,13 @@ namespace TestExecute
         [TestFixtureSetUp]
         public void SetUp()
         {
-            IVizAutomatedLogin automatedLogin = (IVizAutomatedLogin)new VizLogin();
-            object defaultLogin = automatedLogin.SetDefaultLogin("Vizard", "elviz");
+          //  IVizAutomatedLogin automatedLogin = (IVizAutomatedLogin)new VizLogin();
+           // object defaultLogin = automatedLogin.SetDefaultLogin("Vizard", "elviz");
 
-           // DirectoryInfo testcompleteDirectoty = new DirectoryInfo("..\\..\\Source\\TestComplete\\CurveServer");
+            DirectoryInfo testcompleteDirectoty = new DirectoryInfo("..\\..\\Source\\TestComplete\\CurveServer");
 
-           // foreach (FileInfo file in testcompleteDirectoty.GetFiles("*", SearchOption.AllDirectories))
-           //     file.Attributes = FileAttributes.Normal;
+            foreach (FileInfo file in testcompleteDirectoty.GetFiles("*", SearchOption.AllDirectories))
+                file.Attributes = FileAttributes.Normal;
 
             elvizVersion = ElvizInstallationUtility.GetElvizVersion();
 
