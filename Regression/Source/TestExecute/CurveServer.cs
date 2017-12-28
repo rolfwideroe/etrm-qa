@@ -21,13 +21,13 @@ namespace TestExecute
         [TestFixtureSetUp]
         public void SetUp()
         {
-            IVizAutomatedLogin automatedLogin = (IVizAutomatedLogin)new VizLogin();
-            object defaultLogin = automatedLogin.SetDefaultLogin("Vizard", "elviz");
+          //  IVizAutomatedLogin automatedLogin = (IVizAutomatedLogin)new VizLogin();
+           // object defaultLogin = automatedLogin.SetDefaultLogin("Vizard", "elviz");
 
-            DirectoryInfo testcompleteDirectoty = new DirectoryInfo("..\\..\\Source\\TestComplete\\CurveServer");
+           // DirectoryInfo testcompleteDirectoty = new DirectoryInfo("..\\..\\Source\\TestComplete\\CurveServer");
 
-            foreach (FileInfo file in testcompleteDirectoty.GetFiles("*", SearchOption.AllDirectories))
-                file.Attributes = FileAttributes.Normal;
+         //   foreach (FileInfo file in testcompleteDirectoty.GetFiles("*", SearchOption.AllDirectories))
+         //       file.Attributes = FileAttributes.Normal;
 
             elvizVersion = ElvizInstallationUtility.GetElvizVersion();
 
@@ -187,7 +187,7 @@ namespace TestExecute
                                numberOfErrors = Convert.ToInt32(errorCountNode.Item(0).Attributes["value"].Value);
                            }
                        }
-                       string pathToLog = @"file://netvs-tfs/mstest/2017.2/CurveServer/"+ projectName+ "_" + elvizVersion + ".mht";
+                       string pathToLog = @"file://netvs-tfs/mstest/2018.1/CurveServer/"+ projectName+ "_" + elvizVersion + ".mht";
 
                        if ((numberOfErrors != 0)) Assert.Fail(pathToLog);
                    }

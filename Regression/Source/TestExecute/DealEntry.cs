@@ -195,7 +195,7 @@ namespace TestExecute
             string logDescription = "DealEntry.mds.tcLogs";
             string absolutePath = Path.GetFullPath(PathToLogFolder + logDescription);
             Console.WriteLine("elvizVersion = " + elvizVersion);
-            string pathToLog = @"file://netvs-tfs/mstest/2017.2/DealEntry/"+testName + "_" + elvizVersion + ".mht";
+            string pathToLog = @"file://netvs-tfs/mstest/2018.1/DealEntry/"+testName + "_" + elvizVersion + ".mht";
 
             Console.WriteLine(absolutePath);
 
