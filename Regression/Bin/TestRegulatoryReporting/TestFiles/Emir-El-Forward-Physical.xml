@@ -1,0 +1,289 @@
+<TestCase>
+<TestData>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+	<MetaData>
+		<MessageId>MessageId</MessageId>
+		<AuthenticationToken>AuthenticationToken</AuthenticationToken>
+		<Timezone>CET</Timezone>
+	</MetaData>
+	<Transaction>
+		<TransactionType>Automatic</TransactionType>
+		<DealType>Electricity-Forward</DealType>
+		<Portfolios>
+			<Portfolio>API Test Customer</Portfolio>
+			<CounterpartyPortfolio>API Test Counterparty</CounterpartyPortfolio>
+			<BuySell>Buy</BuySell>
+		</Portfolios>
+		<ElectricityForward>
+			<InstrumentData>				
+				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<PriceBasis>NordPool System Price</PriceBasis>
+				<LoadProfile>Base</LoadProfile>
+				<FromDate>2017-12-01</FromDate>
+				<ToDate>2017-12-31</ToDate>
+        <Physical>
+          <DeliveryArea AreaName='RTE' />
+        </Physical>
+			</InstrumentData>
+			<SettlementData>
+				<Quantity>2.0</Quantity>
+				<QuantityUnit>MW</QuantityUnit>
+				<Price>3.0</Price>
+				<Currency>EUR</Currency>
+				<CurrencySource>NordPool</CurrencySource>
+				<Clearing>Electronic</Clearing>
+				<Broker>API Test Broker</Broker>
+			</SettlementData>
+		</ElectricityForward>
+		<DealDetails>
+			<Status>Active</Status>
+			<Trader>DealImport</Trader>
+			<TradeDate>2017-08-31T09:09:09Z</TradeDate>
+			<ConfirmedByBroker>false</ConfirmedByBroker>
+			<ConfirmedByCounterparty>false</ConfirmedByCounterparty>
+			<Authorised>true</Authorised>
+			<!--<Audited>true</Audited>-->
+			<Paid>false</Paid>
+		</DealDetails>
+		<ReferenceData>
+			<Comment>API test: ElectricityForwardFinancial Spread; should pass</Comment>		
+			<ExternalId>EmirTest12</ExternalId>
+			<ExternalSource>XMLFileImport</ExternalSource>
+			<TicketNumber>TicketNumber</TicketNumber>
+		</ReferenceData>
+		<CustomProperties>
+			<PropertyGroup name='Compliance'>
+				<StringProperty name='UTI' value='AbcTest23' />
+			</PropertyGroup>
+		</CustomProperties>
+	</Transaction>
+</DealInsert>
+</TestData>
+<RegulatoryReporting>
+<reportingOperations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://regis-tr.com/schema/2017/2.0.0/Reporting">
+  <reportingOperation>
+    <header>
+      <messageId>3447</messageId>
+      <tradeType>ReportedTrade</tradeType>
+      <sentBy>963932316XXXXXXXXXXX</sentBy>
+      <sentTo>RGTRESMMXXX</sentTo>
+      <creationTimestamp>2017-12-18T13:46:53Z</creationTimestamp>
+    </header>
+    <trade>
+      <counterpartyData>
+        <partyDetails>
+          <idTypeRptgCpty>LEI</idTypeRptgCpty>
+          <idRptgCpty>TestLEIXXXXXXXXXXXXX</idRptgCpty>
+          <rptgCptyCtr>DE</rptgCptyCtr>
+          <corporateSector>4</corporateSector>
+          <natureRptgCpty>N</natureRptgCpty>
+        </partyDetails>
+        <counterpartyDetails>
+          <idTypeOtherCpty>LEI</idTypeOtherCpty>
+          <idOtherCpty>TestLEICtpyXXXXXXXXX</idOtherCpty>
+          <otherCptyCtr>SE</otherCptyCtr>
+        </counterpartyDetails>
+        <otherDetails>
+          <idTypeRptSubmEnt>LEI</idTypeRptSubmEnt>
+          <idRptSubmEnt>963932316XXXXXXXXXXX</idRptSubmEnt>
+          <beneficiaryIdType>LEI</beneficiaryIdType>
+          <beneficiaryId>TestLEIXXXXXXXXXXXXX</beneficiaryId>
+          <tradingCapacity>P</tradingCapacity>
+          <counterpartySide>B</counterpartySide>
+          <commercialActivity>Y</commercialActivity>
+          <clearingThreshold>N</clearingThreshold>
+        </otherDetails>
+        <exposures>
+          <collateralisation>U</collateralisation>
+          <collateralPortfolio>N</collateralPortfolio>
+        </exposures>
+      </counterpartyData>
+      <commonData>
+        <delegation>N</delegation>
+        <contractType>
+          <contractType>FW</contractType>
+          <assetClass>CO</assetClass>
+          <contractInformation>
+            <productClassificationType>C</productClassificationType>
+            <productClassification>FCXCSX</productClassification>
+            <productIdType>I</productIdType>
+            <productId>No ISIN Code available</productId>
+            <currency1>EUR</currency1>
+            <deliverableCurrency>EUR</deliverableCurrency>
+          </contractInformation>
+        </contractType>
+        <transactionDetails>
+          <tradeId>AbcTest234765</tradeId>
+          <reportTrackingNumber>NA</reportTrackingNumber>
+          <venue>NORX</venue>
+          <compression>N</compression>
+          <price>3</price>
+          <priceNotation>U</priceNotation>
+          <priceCcy>EUR</priceCcy>
+          <notionalAmount>4464</notionalAmount>
+          <priceMultiplier>744</priceMultiplier>
+          <quantity>2</quantity>
+          <deliveryType>P</deliveryType>
+          <executionTimestamp>2017-08-31T09:09:00Z</executionTimestamp>
+          <effectiveDate>2017-08-31</effectiveDate>
+          <maturityDate>2017-12-31</maturityDate>
+          <settlementDate>2017-12-31</settlementDate>
+        </transactionDetails>
+        <reporting>
+          <confirmationMeans>N</confirmationMeans>
+        </reporting>
+        <clearing>
+          <clearingObligation>N</clearingObligation>
+          <cleared>N</cleared>
+          <intragroup>N</intragroup>
+        </clearing>
+        <commodities>
+          <commodityBase>EN</commodityBase>
+          <commodityDetails>EL</commodityDetails>
+          <energy>
+            <deliveryPoint>10YFR-RTE------C</deliveryPoint>
+            <loadType>BL</loadType>
+            <delivery>
+              <loadDeliveryIntervals>00:00Z</loadDeliveryIntervals>
+              <deliveryStartDate>2017-11-30T23:00:00Z</deliveryStartDate>
+              <deliveryEndDate>2017-12-31T23:00:00Z</deliveryEndDate>
+              <duration>M</duration>
+              <daysWeek>WD/WN</daysWeek>
+              <deliveryCapacity>1</deliveryCapacity>
+              <quantityUnit>MW</quantityUnit>
+              <priceTimeIntervalQuantities>3</priceTimeIntervalQuantities>
+            </delivery>
+          </energy>
+        </commodities>
+        <options />
+        <actionDetails>
+          <actionType>N</actionType>
+          <level>T</level>
+        </actionDetails>
+      </commonData>
+    </trade>
+  </reportingOperation>
+</reportingOperations>
+</RegulatoryReporting>
+<RegulatoryReportingModification>
+<reportingOperations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://regis-tr.com/schema/2017/2.0.0/Reporting">
+  <reportingModification>
+    <header>
+      <messageId>3449</messageId>
+      <tradeType>Modification</tradeType>
+      <sentBy>963932316XXXXXXXXXXX</sentBy>
+      <sentTo>RGTRESMMXXX</sentTo>
+      <creationTimestamp>2017-12-18T13:52:03Z</creationTimestamp>
+    </header>
+    <trade>
+      <counterpartyData>
+        <partyDetails>
+          <idTypeRptgCpty>LEI</idTypeRptgCpty>
+          <idRptgCpty>TestLEIXXXXXXXXXXXXX</idRptgCpty>
+          <rptgCptyCtr>DE</rptgCptyCtr>
+          <corporateSector>4</corporateSector>
+          <natureRptgCpty>N</natureRptgCpty>
+        </partyDetails>
+        <counterpartyDetails>
+          <idTypeOtherCpty>LEI</idTypeOtherCpty>
+          <idOtherCpty>TestLEICtpyXXXXXXXXX</idOtherCpty>
+          <otherCptyCtr>SE</otherCptyCtr>
+        </counterpartyDetails>
+        <otherDetails>
+          <brokerId xsi:nil="true" />
+          <idTypeRptSubmEnt>LEI</idTypeRptSubmEnt>
+          <idRptSubmEnt>963932316XXXXXXXXXXX</idRptSubmEnt>
+          <clearingMemberId xsi:nil="true" />
+          <beneficiaryIdType>LEI</beneficiaryIdType>
+          <beneficiaryId>TestLEIXXXXXXXXXXXXX</beneficiaryId>
+          <tradingCapacity>P</tradingCapacity>
+          <counterpartySide>B</counterpartySide>
+          <commercialActivity>Y</commercialActivity>
+          <clearingThreshold>N</clearingThreshold>
+        </otherDetails>
+        <exposures>
+          <collateralPortfolioCode xsi:nil="true" />
+        </exposures>
+      </counterpartyData>
+      <commonData>
+        <delegation>N</delegation>
+        <contractType>
+          <contractType>FW</contractType>
+          <assetClass>CO</assetClass>
+          <contractInformation>
+            <productClassificationType>C</productClassificationType>
+            <productClassification>FCXCSX</productClassification>
+            <productIdType>I</productIdType>
+            <productId>No ISIN Code available</productId>
+            <underlyingCountry xsi:nil="true" />
+            <currency1>EUR</currency1>
+            <currency2 xsi:nil="true" />
+            <deliverableCurrency>EUR</deliverableCurrency>
+            <deliverableCurrency2 xsi:nil="true" />
+          </contractInformation>
+        </contractType>
+        <transactionDetails>
+          <tradeId>AbcTest23107</tradeId>
+          <reportTrackingNumber>NA</reportTrackingNumber>
+          <complexTradeComponentId xsi:nil="true" />
+          <venue>NORX</venue>
+          <compression>N</compression>
+          <price>3</price>
+          <priceNotation>U</priceNotation>
+          <priceCcy>EUR</priceCcy>
+          <notionalAmount>4464</notionalAmount>
+          <priceMultiplier>744</priceMultiplier>
+          <quantity>2</quantity>
+          <deliveryType>P</deliveryType>
+          <executionTimestamp>2017-08-31T09:09:00Z</executionTimestamp>
+          <effectiveDate>2017-08-31</effectiveDate>
+          <modificationDate>2017-12-18</modificationDate>
+          <maturityDate>2017-12-31</maturityDate>
+          <terminationDate />
+          <settlementDate>2017-12-31</settlementDate>
+          <masterAgreementType xsi:nil="true" />
+          <masterAgreementVersion xsi:nil="true" />
+        </transactionDetails>
+        <reporting>
+          <confirmationTimestamp xsi:nil="true" />
+          <confirmationMeans>N</confirmationMeans>
+        </reporting>
+        <clearing>
+          <clearingObligation>N</clearingObligation>
+          <cleared>N</cleared>
+          <clearingTimestamp xsi:nil="true" />
+          <ccpIdentification xsi:nil="true" />
+          <intragroup>N</intragroup>
+        </clearing>
+        <commodities>
+          <commodityBase>EN</commodityBase>
+          <commodityDetails>EL</commodityDetails>
+          <energy>
+            <deliveryPoint>10YFR-RTE------C</deliveryPoint>
+            <interconnectionPoint xsi:nil="true" />
+            <loadType>BL</loadType>
+            <delivery>
+              <loadDeliveryIntervals>00:00Z</loadDeliveryIntervals>
+              <deliveryStartDate>2017-11-30T23:00:00Z</deliveryStartDate>
+              <deliveryEndDate>2017-12-31T23:00:00Z</deliveryEndDate>
+              <duration>M</duration>
+              <daysWeek>WD/WN</daysWeek>
+              <deliveryCapacity>1</deliveryCapacity>
+              <quantityUnit>MW</quantityUnit>
+              <priceTimeIntervalQuantities>3</priceTimeIntervalQuantities>
+            </delivery>
+          </energy>
+        </commodities>
+        <options>
+          <underlyingMaturityDate xsi:nil="true" />
+        </options>
+        <actionDetails>
+          <actionType>R</actionType>
+          <level>T</level>
+        </actionDetails>
+      </commonData>
+    </trade>
+  </reportingModification>
+</reportingOperations>
+</RegulatoryReportingModification>
+</TestCase>
