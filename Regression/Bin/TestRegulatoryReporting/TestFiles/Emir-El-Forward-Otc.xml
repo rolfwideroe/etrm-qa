@@ -16,7 +16,7 @@
 		</Portfolios>
 		<ElectricityForward>
 			<InstrumentData>				
-				<ExecutionVenue>Nord Pool</ExecutionVenue>
+				<ExecutionVenue>OTC</ExecutionVenue>
 				<PriceBasis>NordPool System Price</PriceBasis>
 				<LoadProfile>Base</LoadProfile>
 				<FromDate>2017-12-01</FromDate>
@@ -51,47 +51,49 @@
 		</ReferenceData>
 		<CustomProperties>
 			<PropertyGroup name='Compliance'>
-				<StringProperty name='UTI' value='AbcTest23' />
+				<StringProperty name='UTI' value='AbcTest25' />
 			</PropertyGroup>
 		</CustomProperties>
 	</Transaction>
 </DealInsert>
 </TestData>
 <RegulatoryReporting>
-<reportingOperations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://regis-tr.com/schema/2017/2.0.0/Reporting">
+<reportingOperations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://regis-tr.com/schema/2017/2.0.0/Reporting">
   <reportingOperation>
     <header>
-      <messageId>8607</messageId>
+      <messageId>3447</messageId>
       <tradeType>ReportedTrade</tradeType>
       <sentBy>963932316XXXXXXXXXXX</sentBy>
       <sentTo>RGTRESMMXXX</sentTo>
-      <creationTimestamp>2017-09-01T11:38:38Z</creationTimestamp>
+      <creationTimestamp>2017-12-18T13:46:53Z</creationTimestamp>
     </header>
     <trade>
       <counterpartyData>
         <partyDetails>
           <idTypeRptgCpty>LEI</idTypeRptgCpty>
-          <idRptgCpty>ACER12345.EU</idRptgCpty>
+          <idRptgCpty>TestLEIXXXXXXXXXXXXX</idRptgCpty>
           <rptgCptyCtr>DE</rptgCptyCtr>
+          <corporateSector>4</corporateSector>
           <natureRptgCpty>N</natureRptgCpty>
         </partyDetails>
         <counterpartyDetails>
           <idTypeOtherCpty>LEI</idTypeOtherCpty>
-          <idOtherCpty>ACER12346.EU</idOtherCpty>
+          <idOtherCpty>TestLEICtpyXXXXXXXXX</idOtherCpty>
           <otherCptyCtr>SE</otherCptyCtr>
         </counterpartyDetails>
         <otherDetails>
           <idTypeRptSubmEnt>LEI</idTypeRptSubmEnt>
           <idRptSubmEnt>963932316XXXXXXXXXXX</idRptSubmEnt>
           <beneficiaryIdType>LEI</beneficiaryIdType>
-          <beneficiaryId>ACER12345.EU</beneficiaryId>
-          <tradingCapacity>A</tradingCapacity>
+          <beneficiaryId>TestLEIXXXXXXXXXXXXX</beneficiaryId>
+          <tradingCapacity>P</tradingCapacity>
           <counterpartySide>B</counterpartySide>
           <commercialActivity>Y</commercialActivity>
           <clearingThreshold>N</clearingThreshold>
         </otherDetails>
         <exposures>
-          <collateralPortfolio>Y</collateralPortfolio>
+          <collateralisation>U</collateralisation>
+          <collateralPortfolio>N</collateralPortfolio>
         </exposures>
       </counterpartyData>
       <commonData>
@@ -102,16 +104,14 @@
           <contractInformation>
             <productClassificationType>C</productClassificationType>
             <productClassification>FCXCSX</productClassification>
-            <productIdType>I</productIdType>
-            <productId>CO</productId>
             <currency1>EUR</currency1>
             <deliverableCurrency>EUR</deliverableCurrency>
           </contractInformation>
         </contractType>
         <transactionDetails>
-          <tradeId>AbcTest23</tradeId>
+          <tradeId>AbcTest234765</tradeId>
           <reportTrackingNumber>NA</reportTrackingNumber>
-          <venue>NORX</venue>
+          <venue>XXXX</venue>
           <compression>N</compression>
           <price>3</price>
           <priceNotation>U</priceNotation>
@@ -138,10 +138,9 @@
           <commodityDetails>EL</commodityDetails>
           <energy>
             <deliveryPoint>10Y1001A1001A91G</deliveryPoint>
-            <interconnectionPoint>10Y1001A1001A91G</interconnectionPoint>
             <loadType>BL</loadType>
             <delivery>
-              <loadDeliveryIntervals>24:00Z</loadDeliveryIntervals>
+              <loadDeliveryIntervals>00:00Z</loadDeliveryIntervals>
               <deliveryStartDate>2017-11-30T23:00:00Z</deliveryStartDate>
               <deliveryEndDate>2017-12-31T23:00:00Z</deliveryEndDate>
               <duration>M</duration>
@@ -163,27 +162,27 @@
 </reportingOperations>
 </RegulatoryReporting>
 <RegulatoryReportingModification>
-<reportingOperations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://regis-tr.com/schema/2017/2.0.0/Reporting">
+<reportingOperations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://regis-tr.com/schema/2017/2.0.0/Reporting">
   <reportingModification>
     <header>
-      <messageId>8607</messageId>
+      <messageId>3449</messageId>
       <tradeType>Modification</tradeType>
       <sentBy>963932316XXXXXXXXXXX</sentBy>
       <sentTo>RGTRESMMXXX</sentTo>
-      <creationTimestamp>2017-09-01T11:43:37Z</creationTimestamp>
+      <creationTimestamp>2017-12-18T13:52:03Z</creationTimestamp>
     </header>
     <trade>
       <counterpartyData>
         <partyDetails>
           <idTypeRptgCpty>LEI</idTypeRptgCpty>
-          <idRptgCpty>ACER12345.EU</idRptgCpty>
+          <idRptgCpty>TestLEIXXXXXXXXXXXXX</idRptgCpty>
           <rptgCptyCtr>DE</rptgCptyCtr>
-          <corporateSector xsi:nil="true" />
+          <corporateSector>4</corporateSector>
           <natureRptgCpty>N</natureRptgCpty>
         </partyDetails>
         <counterpartyDetails>
           <idTypeOtherCpty>LEI</idTypeOtherCpty>
-          <idOtherCpty>ACER12346.EU</idOtherCpty>
+          <idOtherCpty>TestLEICtpyXXXXXXXXX</idOtherCpty>
           <otherCptyCtr>SE</otherCptyCtr>
         </counterpartyDetails>
         <otherDetails>
@@ -192,8 +191,8 @@
           <idRptSubmEnt>963932316XXXXXXXXXXX</idRptSubmEnt>
           <clearingMemberId xsi:nil="true" />
           <beneficiaryIdType>LEI</beneficiaryIdType>
-          <beneficiaryId>ACER12345.EU</beneficiaryId>
-          <tradingCapacity>A</tradingCapacity>
+          <beneficiaryId>TestLEIXXXXXXXXXXXXX</beneficiaryId>
+          <tradingCapacity>P</tradingCapacity>
           <counterpartySide>B</counterpartySide>
           <commercialActivity>Y</commercialActivity>
           <clearingThreshold>N</clearingThreshold>
@@ -210,8 +209,7 @@
           <contractInformation>
             <productClassificationType>C</productClassificationType>
             <productClassification>FCXCSX</productClassification>
-            <productIdType>I</productIdType>
-            <productId>CO</productId>
+            <productId xsi:nil="true" />
             <underlyingCountry xsi:nil="true" />
             <currency1>EUR</currency1>
             <currency2 xsi:nil="true" />
@@ -220,10 +218,10 @@
           </contractInformation>
         </contractType>
         <transactionDetails>
-          <tradeId>AbcTest23</tradeId>
+          <tradeId>AbcTest23107</tradeId>
           <reportTrackingNumber>NA</reportTrackingNumber>
           <complexTradeComponentId xsi:nil="true" />
-          <venue>NORX</venue>
+          <venue>XXXX</venue>
           <compression>N</compression>
           <price>3</price>
           <priceNotation>U</priceNotation>
@@ -234,7 +232,7 @@
           <deliveryType>C</deliveryType>
           <executionTimestamp>2017-08-31T09:09:00Z</executionTimestamp>
           <effectiveDate>2017-08-31</effectiveDate>
-          <modificationDate>2017-10-03</modificationDate>
+          <modificationDate>2017-12-18</modificationDate>
           <maturityDate>2017-12-31</maturityDate>
           <terminationDate />
           <settlementDate>2017-12-31</settlementDate>
@@ -256,12 +254,14 @@
           <commodityBase>EN</commodityBase>
           <commodityDetails>EL</commodityDetails>
           <energy>
+            <deliveryPoint>10Y1001A1001A91G</deliveryPoint>
             <interconnectionPoint xsi:nil="true" />
             <loadType>BL</loadType>
             <delivery>
-              <loadDeliveryIntervals>24:00Z</loadDeliveryIntervals>
+              <loadDeliveryIntervals>00:00Z</loadDeliveryIntervals>
               <deliveryStartDate>2017-11-30T23:00:00Z</deliveryStartDate>
               <deliveryEndDate>2017-12-31T23:00:00Z</deliveryEndDate>
+              <duration>M</duration>
               <daysWeek>WD/WN</daysWeek>
               <deliveryCapacity>1</deliveryCapacity>
               <quantityUnit>MW</quantityUnit>
