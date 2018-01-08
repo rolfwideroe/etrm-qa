@@ -1,0 +1,18 @@
+<test type="EcmBatch" name="El-Future-Nasdaq-France-EUR-CFMon-ActualCF-EUR" description="some more information can be put here">
+	<setup>
+		<user>Vizard</user>
+		<password>elviz</password>
+		<workspace>El-Future-Nasdaq-France-EUR-CFMon-ActualCF-EUR</workspace>
+		<monitor>TransMon-Fixture</monitor>
+		<reportdate>2017-12-14</reportdate>
+    <tollerance>0.00000001</tollerance>
+    <executeElvizBatch>True</executeElvizBatch>
+  </setup>
+	<assert>
+		<datawarehouse>
+			<query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+			<returns>
+			</returns>
+		</datawarehouse>		
+	</assert>
+</test>
