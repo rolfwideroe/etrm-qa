@@ -53,7 +53,7 @@ namespace TestReportingDB
                 QaDao.NonQuery(connection, script);
             }
 
-            Thread.Sleep(7000);
+            Thread.Sleep(60000);
         }
     }
 

@@ -1,0 +1,26 @@
+<test>
+  <setup>
+    <user>Vizard</user>
+    <password>elviz</password>
+    <workspace>El-Future-Nasdaq-France-EUR-CFMon-ActualCF-EUR</workspace>
+    <monitor>TransMon-Fixture</monitor>
+    <reportdate>2017-12-14T00:00:00</reportdate>
+    <tollerance>1E-08</tollerance>
+  </setup>
+  <assert>
+    <datawarehouse>
+      <query file="..\..\ElvizTestUtils\DWHQueries\CashFlowMonitor.xml" />
+      <returns>
+        <record>2017-12-04 00:00:00.000,0,HI,203,EUR,874200,daily,Future,EFRFFUTMJan-18,El-Future-NP-France-EUR-0001</record>
+        <record>2017-12-05 00:00:00.000,0,HI,203,EUR,-111600,daily,Future,EFRFFUTMJan-18,El-Future-NP-France-EUR-0001</record>
+        <record>2017-12-06 00:00:00.000,0,HI,203,EUR,-115320,daily,Future,EFRFFUTMJan-18,El-Future-NP-France-EUR-0001</record>
+        <record>2017-12-07 00:00:00.000,0,HI,203,EUR,-5208,daily,Future,EFRFFUTMJan-18,El-Future-NP-France-EUR-0001</record>
+        <record>2017-12-08 00:00:00.000,0,HI,203,EUR,-11160,daily,Future,EFRFFUTMJan-18,El-Future-NP-France-EUR-0001</record>
+        <record>2017-12-11 00:00:00.000,0,HI,203,EUR,-9672,daily,Future,EFRFFUTMJan-18,El-Future-NP-France-EUR-0001</record>
+        <record>2017-12-12 00:00:00.000,0,HI,203,EUR,48360,daily,Future,EFRFFUTMJan-18,El-Future-NP-France-EUR-0001</record>
+        <record>2017-12-13 00:00:00.000,0,HI,203,EUR,-119040,daily,Future,EFRFFUTMJan-18,El-Future-NP-France-EUR-0001</record>
+        <record>2017-12-14 00:00:00.000,0,TR,203,EUR,18600,daily,Future,EFRFFUTMJan-18,El-Future-NP-France-EUR-0001</record>
+      </returns>
+    </datawarehouse>
+  </assert>
+</test>

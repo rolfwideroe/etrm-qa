@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<DealInsert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DealInsert.xsd">
+  <MetaData>
+    <Timezone>CET</Timezone>
+  </MetaData>
+  <Transaction>
+    <TransactionType>Automatic</TransactionType>
+    <DealType>Electricity-Future</DealType>
+    <Portfolios>
+      <Portfolio>Electricity-Future-Nasdaq-France-EUR</Portfolio>
+      <CounterpartyPortfolio>Counterparty-Electricity-Future-Nasdaq-France-EUR</CounterpartyPortfolio>
+      <BuySell>Buy</BuySell>
+    </Portfolios>
+    <ElectricityFuture>
+      <InstrumentData>
+        <ExecutionVenue>Nord Pool</ExecutionVenue>
+        <PriceBasis>Nasdaq France</PriceBasis>
+        <LoadProfile>Base</LoadProfile>
+        <FromDate>2018-01-01</FromDate>
+        <ToDate>2018-01-31</ToDate>
+        <Financial />
+      </InstrumentData>
+      <SettlementData>
+        <Quantity>100</Quantity>
+        <QuantityUnit>MW</QuantityUnit>
+        <Price>55</Price>
+        <Currency>EUR</Currency>
+        <CurrencySource>Viz</CurrencySource>
+        <Clearing>Electronic</Clearing>
+        <ClearingCurrency>EUR</ClearingCurrency>
+        <ClearingFee>0</ClearingFee>
+        <BrokerTradingFee>0</BrokerTradingFee>
+        <BrokerCurrency>EUR</BrokerCurrency>
+      </SettlementData>
+    </ElectricityFuture>
+    <DealDetails>
+      <Status>Active</Status>
+      <Trader>DealImport</Trader>
+      <TradeDate>2017-12-04T00:00:00</TradeDate>
+    </DealDetails>
+    <ReferenceData>
+      <ExternalId>El-Future-NP-France-EUR-0001</ExternalId>
+      <ExternalSource>RegTest</ExternalSource>
+    </ReferenceData>
+  </Transaction>
+</DealInsert>
