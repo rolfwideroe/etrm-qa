@@ -47,7 +47,7 @@ namespace TestWCFDealInsertWithResultMessage
                 XmlNodeList expectedDtoNode = doc.GetElementsByTagName("QaTransactionDTO");
                 if (expectedDtoNode.Count > 0)
                 {
-                    Thread.Sleep(3000);
+                    Thread.Sleep(5000);
                     TestWCFDealInsertReportingDB.CompareTransactionDto(testFilePath, trID);
                 }
                 else

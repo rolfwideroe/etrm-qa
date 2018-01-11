@@ -23,7 +23,7 @@ namespace TestLiveCurveScheduling
             //update LastDateRunFor for Volatilities because Volatility job can be run only once for report date
             QaDao.UpdateLastDateRunForVolatilities("EEX_volatilities", DateTime.Now.AddDays(-365).ToString("yyyy-MM-dd"));
 
-            JobAPI.RunEutJobOncePerDay("EEX (power and gas)");
+          //  JobAPI.RunEutJobOncePerDay("EEX (power and gas)");
         }
 
         [Test]
@@ -118,7 +118,7 @@ namespace TestLiveCurveScheduling
                 ToDate = Convert.ToDateTime(reportdate.ToString("d")),
                 LoadType = "Base",
                 PriceBookAppendix = string.Empty,
-                ReferenceAreaName = "DE",
+                ReferenceAreaName = "DE/AT",
                 ReportCurrencyIsoCode = "EUR",
                 ReportDate = Convert.ToDateTime(reportdate.ToString("d")),
                 Resolution = "Day",
