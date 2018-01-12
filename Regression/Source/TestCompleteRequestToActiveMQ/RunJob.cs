@@ -60,7 +60,7 @@ namespace TestCompleteRequestToActiveMQ
             const double tollerance = GlobalConstTestSettings.DEFAULT_FLOATING_POINT_TOLLERANCE;
             IList<string> errors = new List<string>();
 
-            //string testFilePath = @"C:\Git\qa-etrm\Regression\Source\TestComplete\CurveServer\EditRepublishPriceBooks\TestFiles\ExpectedCurves\ExpectedCurve_NPX_HourPrices_20171108.xml";
+            //string testFilePath = @"C:\Git\qa-etrm\Regression\Source\TestComplete\CurveServer\EditRepublishPriceBooks\TestFiles\ExpectedCurves\ExpectedCurve_NPX_HourPrices_20171108_Profiled.xml";
 
             CurveTestCase curveTest = TestXmlTool.Deserialize<CurveTestCase>(testFilePath);
 
@@ -147,7 +147,7 @@ namespace TestCompleteRequestToActiveMQ
                     // s += record.DateTime + " ; " + record.Value;
                     s += "<ExpectedCurveValue Date=\"" + record.DateTime.ToString("yyyy-MM-ddTHH:mm:ss") +
                          "\" Value=\"" + record.Value + "\"/>";
-                  //    Console.WriteLine(s);
+                      Console.WriteLine(s);
                    // Console.WriteLine(record.Value);
                 }
 
