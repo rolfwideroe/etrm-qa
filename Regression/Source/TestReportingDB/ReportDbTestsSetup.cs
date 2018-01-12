@@ -46,6 +46,7 @@ namespace TestReportingDB
 
             foreach (string scriptFile in ScriptFiles)
             {
+                Console.WriteLine("Executing script:" + scriptFile);
                 string scriptPath = Path.Combine(ScriptFolder, scriptFile);
 
                 string script = File.ReadAllText(scriptPath);

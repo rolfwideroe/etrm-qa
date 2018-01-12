@@ -357,7 +357,7 @@ namespace ElvizTestUtils.DatabaseTools
 
         public static void NonQuery(SqlConnection connection, string query,IEnumerable<SqlParameter> parameters)
         {
-            SqlCommand command = new SqlCommand(query, connection) { CommandTimeout = 60 };
+            SqlCommand command = new SqlCommand(query, connection) { CommandTimeout = 120 };
             if (parameters != null)
             {
 
