@@ -32,6 +32,9 @@ namespace TestExecute
         [Test]
         public void TestCurveServer_PriceBookTemplates()
         {
+            string elvizVersion = ElvizInstallationUtility.GetElvizVersion().Trim();
+            string releaseNumber = elvizVersion.Substring(0, 6);
+
             const string arguments = "\"..\\..\\Source\\TestComplete\\CurveServerTemplates\\SimpleObjTest.pjs\" -r -e";
 
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 10, "ElvizETRMClient");
@@ -63,7 +66,8 @@ namespace TestExecute
                 }
             }
 
-            string pathToLog = @"file://netvs-tfs/mstest/2018.1/CurveServerTemplates_" + elvizVersion + ".mht";
+            //string pathToLog = @"file://netvs-tfs/mstest/2018.1/CurveServerTemplates_" + elvizVersion + ".mht";
+            string pathToLog = @"file://bradydevstorage.file.core.windows.net/bradydevstorage/ETRM/QA/MSTest/" + releaseNumber + "/CurveServerTemplates_" + elvizVersion + ".mht";
 
             if ((numberOfErrors != 0))
                 Assert.Fail(pathToLog);
