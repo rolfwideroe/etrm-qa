@@ -164,7 +164,8 @@ namespace TestExecute
         {
 
             int numberOfErrors = 0;
-            string elvizVersion = ElvizInstallationUtility.GetElvizVersion();
+            string elvizVersion = ElvizInstallationUtility.GetElvizVersion().Trim();
+            string releaseNumber = elvizVersion.Substring(0, 6);
 
             string relativePath = "\\Source\\TestComplete\\DealManager\\DealManager\\Log\\";
             string baseDirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString()).ToString();
@@ -172,7 +173,8 @@ namespace TestExecute
 
             string logDescription = "DealManagerFunctions.mds.tcLogs";
             string absolutePath = Path.GetFullPath(PathToLogFolder + logDescription);
-            string pathToLog = @"file://netvs-tfs/mstest/2018.1/DealManager/" + testName + "_" + elvizVersion + ".mht";
+            //string pathToLog = @"file://netvs-tfs/mstest/2018.1/DealManager/" + testName + "_" + elvizVersion + ".mht";
+            string pathToLog = @"file://bradydevstorage.file.core.windows.net/bradydevstorage/ETRM/QA/MSTest/" + releaseNumber + "/DealManager/" + testName + "_" + elvizVersion + ".mht";
 
             //Console.WriteLine(absolutePath);
 

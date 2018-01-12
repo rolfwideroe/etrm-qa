@@ -146,6 +146,8 @@ namespace TestExecute
            // string projectName = "PriceImportInterestRates";
            //parse Log
             int numberOfErrors = 0;
+            string elvizVersion = ElvizInstallationUtility.GetElvizVersion().Trim();
+            string releaseNumber = elvizVersion.Substring(0, 6);
 
             string relativePath = "\\Source\\TestComplete\\CurveServer\\" + projectName + "\\Log\\";
             string baseDirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString()).ToString();
@@ -187,9 +189,10 @@ namespace TestExecute
                                numberOfErrors = Convert.ToInt32(errorCountNode.Item(0).Attributes["value"].Value);
                            }
                        }
-                       string pathToLog = @"file://netvs-tfs/mstest/2018.1/CurveServer/"+ projectName+ "_" + elvizVersion + ".mht";
+                       //string pathToLog = @"file://netvs-tfs/mstest/2018.1/CurveServer/"+ projectName+ "_" + elvizVersion + ".mht";
+                       string pathToLog = @"file://bradydevstorage.file.core.windows.net/bradydevstorage/ETRM/QA/MSTest/" + releaseNumber + "/CurveServer/" + projectName + "_" + elvizVersion + ".mht";
 
-                       if ((numberOfErrors != 0)) Assert.Fail(pathToLog);
+                        if ((numberOfErrors != 0)) Assert.Fail(pathToLog);
                    }
                    else Assert.Fail("Errors when parsing log file for project " + projectName); 
 
