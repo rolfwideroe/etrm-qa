@@ -179,28 +179,28 @@ namespace TestExecute
 
         public void ParseLogs(string testName)
         {
-            
-            //[Test]
+        //}
+        //[Test]
+
             //public void ParseLogs2()
             //{
-            //    string testName = "Currency";
-            //parse Log
-            int numberOfErrors = 0;
-            string elvizVersion = ElvizInstallationUtility.GetElvizVersion();
+            // string testName = "Electricity";
 
-            string relativePath = "\\Source\\TestComplete\\DealEntry\\DealEntry\\Log\\";
-            string baseDirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString()).ToString();
-            string PathToLogFolder = Path.GetFullPath(baseDirectory + relativePath);
+        int numberOfErrors = 0;
+        string elvizVersion = ElvizInstallationUtility.GetElvizVersion().Trim();
+        string releaseNumber = elvizVersion.Substring(0, 6);
 
-            string logDescription = "DealEntry.mds.tcLogs";
-            string absolutePath = Path.GetFullPath(PathToLogFolder + logDescription);
-            Console.WriteLine("elvizVersion = " + elvizVersion);
-            string pathToLog = @"file://netvs-tfs/mstest/2018.1/DealEntry/"+testName + "_" + elvizVersion + ".mht";
+        string relativePath = "\\Source\\TestComplete\\DealEntry\\DealEntry\\Log\\";
+        string baseDirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString()).ToString();
+        string PathToLogFolder = Path.GetFullPath(baseDirectory + relativePath);
 
-            Console.WriteLine(absolutePath);
+        string logDescription = "DealEntry.mds.tcLogs";
+        string absolutePath = Path.GetFullPath(PathToLogFolder + logDescription);
 
-            XmlDocument doc = new XmlDocument();
-            doc.Load(absolutePath); // log XML
+        string pathToLog = @"file://bradydevstorage.file.core.windows.net/bradydevstorage/ETRM/QA/MSTest/" + releaseNumber + "/DealEntry/" + testName + "_" + elvizVersion + ".mht";
+
+        XmlDocument doc = new XmlDocument();
+        doc.Load(absolutePath); // log XML
 
             XmlElement root = doc.DocumentElement;
             if (root != null)
@@ -212,7 +212,7 @@ namespace TestExecute
                     if (xmlNode != null)
                     {
                         XmlNodeList logNode = xmlNode.ChildNodes;
-                        for (int child = 0; child < logNode.Count; child++)
+                        for (int child = 0; child<logNode.Count; child++)
                         {
 
                             //check that testname is correspond test execution
@@ -220,8 +220,8 @@ namespace TestExecute
                             if (nameofrootNode.Item(0).Attributes["value"].Value.Contains(testName))
                             {
                                 XmlNodeList relpathNode = logNode.Item(child).SelectNodes("Prp[@name='relpath']");
-                                string testLogFile = PathToLogFolder + relpathNode.Item(0).Attributes["value"].Value;
-                                Console.WriteLine(testLogFile);
+        string testLogFile = PathToLogFolder + relpathNode.Item(0).Attributes["value"].Value;
+        Console.WriteLine(testLogFile);
 
                                 //parse log file for current test
                                 XmlDocument log = new XmlDocument();
