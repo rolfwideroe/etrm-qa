@@ -17,14 +17,14 @@ namespace TestReportingDB
         private static readonly IEnumerable<string> TestFilesFolderBcrContractExport = TestCasesFileEnumeratorByFolder.TestCaseFiles(BcrContractExportFolder);
         
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
             //ReportDbTestsSetup.LoadStaticData();
 
         }
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void TearDown()
         {
             ElvizConfigurationTool configurationTool = new ElvizConfigurationTool();

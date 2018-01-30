@@ -12,7 +12,7 @@ namespace TestEcmBatch
 	    private static readonly IEnumerable<string> TestFilesECM = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles");
 		private static readonly IEnumerable<string> TestFilesMutablePosMon = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles_MutablePosMon");
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
         public void SetUp()
         {
             ConfigurationTool.MissingRealizedDataStrategy = "ThrowException";
@@ -21,7 +21,7 @@ namespace TestEcmBatch
             EcmTestUtil.ExportAllTransactionsToDwh();
         }
 
-	    [TestFixtureTearDown]
+	    [OneTimeTearDown]
         public void TearDown()
         {
             ElvizConfigurationTool utility =new ElvizConfigurationTool();
