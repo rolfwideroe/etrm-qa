@@ -19,7 +19,7 @@ namespace TestReportingDB
 		private const string KeyValuesFolder_Options = "TestFiles\\KeyValues_Options\\";
 
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
         public void Setup()
         {
             ReportDbTestsSetup.LoadStaticData();
@@ -27,7 +27,7 @@ namespace TestReportingDB
 
         }
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void TearDown()
         {
             ElvizConfigurationTool configurationTool = new ElvizConfigurationTool();

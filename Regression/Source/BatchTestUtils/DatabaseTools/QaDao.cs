@@ -151,7 +151,7 @@ namespace ElvizTestUtils.DatabaseTools
             string dbName = ElvizInstallationUtility.GetEtrmDbName(dbType);
 
             SqlConnection connection = new SqlConnection(
-                $"Data Source={sqlServerName};Initial Catalog={dbName};User ID={"EcmDbReader"};Password={"EcmDbReader"};Trusted_Connection=False;");
+                $"Data Source={sqlServerName};Initial Catalog={dbName};User ID={"EcmDbUser"};Password={"EcmDbQaReg"};Trusted_Connection=False;");
 
             NonQuery(connection,sql);
         }
