@@ -17,7 +17,7 @@ namespace TestReportingDB
     {
 
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
             ReportDbTestsSetup.LoadStaticData();

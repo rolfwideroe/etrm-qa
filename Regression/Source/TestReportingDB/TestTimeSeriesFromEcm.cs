@@ -20,7 +20,7 @@ namespace TestReportingDB
     {
         private QaDao qaDao;
         private Exception ex;
-        [TestFixtureSetUp,Timeout(610*1000)]
+        [SetUp,Timeout(610*1000)]
         public void Setup()
         {
             this.qaDao=new QaDao();

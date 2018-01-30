@@ -9,10 +9,10 @@ namespace TestErmBatch
 	[TestFixture]
 	public class TestErm
 	{
-     //   readonly ElvizConfiguration[] configurations = { new ElvizConfiguration("ForwardExchangeSource", "Viz") };
+        //   readonly ElvizConfiguration[] configurations = { new ElvizConfiguration("ForwardExchangeSource", "Viz") };
 
-		[TestFixtureSetUp]
-		public void SetUp()
+	    [OneTimeSetUp]
+        public void SetUp()
 		{
             ConfigurationTool.MissingRealizedDataStrategy = "ThrowException";
             ElvizConfigurationTool utility = new ElvizConfigurationTool();
@@ -20,7 +20,7 @@ namespace TestErmBatch
             EcmTestUtil.ExportAllTransactionsToDwh();
         }
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void TearDown()
         {
             ElvizConfigurationTool utility = new ElvizConfigurationTool();
