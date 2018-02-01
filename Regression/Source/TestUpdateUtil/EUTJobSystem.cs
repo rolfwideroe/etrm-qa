@@ -19,6 +19,12 @@ namespace TestElvizUpdateTool
     [TestFixture]
     class EUTJobSystem
     {
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+
         private static string testcasename = @"TestFiles\EUTJobs.xml";
         private static string localfolderpath = @"\TestFiles\TestsInLocalFolder";
 

@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFDealInsertUpdate.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFDealInsertUpdate.dll

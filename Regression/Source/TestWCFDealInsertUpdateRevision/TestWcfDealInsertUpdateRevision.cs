@@ -15,21 +15,19 @@ using System.Data.SqlClient;
 namespace TestWCFDealInsertUpdateRevision
 {
     
-        [TestFixture]
-    public class TestWcfDealInsertUpdateRevision
+     [TestFixture]
+     public class TestWcfDealInsertUpdateRevision
         {
       
-
-
-        
-
-            [TestFixtureSetUp]
-            public void Setup()
-            {
-                if (ConfigurationTool.PamEnabled)
+            [OneTimeSetUp]
+                public void Setup()
                 {
-                    ConfigurationTool.PamEnabled = false;
-                }
+                    if (ConfigurationTool.PamEnabled)
+                    {
+                        ConfigurationTool.PamEnabled = false;
+                    }
+
+                    Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
             }
 
      

@@ -1,4 +1,5 @@
-﻿using ElvizTestUtils;
+﻿using System;
+using ElvizTestUtils;
 using ElvizTestUtils.InternalReportingServiceReference;
 using ElvizTestUtils.ReportEngineTests;
 using NUnit.Framework;
@@ -9,6 +10,12 @@ namespace TestWCFReportEngine
     [TestFixture]
     public class TestNasdaqClearingReports
     {
+
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
         [Test,Timeout(10*1000)]
         public void TestNasdaqReportPreDefinedSettings()

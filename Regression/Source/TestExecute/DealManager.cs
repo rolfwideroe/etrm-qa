@@ -17,7 +17,7 @@ namespace TestExecute
         //private const string TestExecuteFileName =
         //    "\"C:\\Program Files (x86)\\SmartBear\\TestComplete 9\\Bin\\TestComplete.exe\"";
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             IVizAutomatedLogin automatedLogin = (IVizAutomatedLogin)new VizLogin();

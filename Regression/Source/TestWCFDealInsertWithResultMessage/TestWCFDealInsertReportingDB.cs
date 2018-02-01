@@ -16,7 +16,7 @@ namespace TestWCFDealInsertWithResultMessage
 {
     public class TestWCFDealInsertReportingDB
     {
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
             if (ConfigurationTool.PamEnabled)
@@ -25,6 +25,8 @@ namespace TestWCFDealInsertWithResultMessage
             }
             JobAPI.ExecuteAndAssertJob(12, 300);
             initializationConnectionToReportingDB();
+
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
         private const string TestFilesPath = "Testfiles\\";

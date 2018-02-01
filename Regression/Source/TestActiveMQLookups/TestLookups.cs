@@ -12,10 +12,16 @@ using NUnit.Framework;
 
 namespace TestActiveMQLookups
 {
+    [TestFixture]
     public class TestLookups
     {
 
-       private static readonly IEnumerable<string> TestFileLookUp = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles\\TransactionLookup");
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+        private static readonly IEnumerable<string> TestFileLookUp = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles\\TransactionLookup");
        private const string TestFilesTransactionLookup = "Testfiles\\TransactionLookup\\";
 
        private static readonly IEnumerable<string> TestFileAllLookUps = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles\\AllLookups");

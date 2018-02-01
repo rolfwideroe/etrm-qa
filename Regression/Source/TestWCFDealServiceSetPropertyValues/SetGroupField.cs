@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 using ElvizTestUtils;
@@ -16,7 +17,12 @@ namespace TestWCFDealServiceSetGroupeField
         [TestFixture]
         public class TestSetGroupValues
         {
-   
+            [OneTimeSetUp]
+            public void RunBeforeAnyTests()
+            {
+                Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+            }
+
             private TestCase DeserializeXml(string testFilepath)
             {
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(TestCase));

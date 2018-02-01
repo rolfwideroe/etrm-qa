@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFPortfolioManagementService.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFPortfolioManagementService.dll

@@ -13,6 +13,7 @@ namespace TestFileWatcherWithUtils
     [TestFixture]
     public class TestFileWatcher
     {
+       
         /// <param name="fileName">Name of the file to test by the file watcher</param>
         /// 
         private static readonly IEnumerable<string> TestFilesWatcher = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles");

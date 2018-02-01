@@ -10,7 +10,7 @@ namespace SalesManager.WebUI.SeleniumTests.TestClasses
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClass]
     public class ChartTests : SeleniumBase
     {
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
             List<string> jobs = new List<string>(new String[]

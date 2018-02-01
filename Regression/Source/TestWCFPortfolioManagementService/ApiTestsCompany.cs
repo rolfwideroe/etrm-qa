@@ -28,7 +28,13 @@ namespace TestWCFPortfolioManagementService
         private CompanyDto expectedChildCompany;
         private CompanyDto expectedMotherCompany;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+
+        [SetUp]
         public void SetUp()
         {
             //Generate Company ExternalID

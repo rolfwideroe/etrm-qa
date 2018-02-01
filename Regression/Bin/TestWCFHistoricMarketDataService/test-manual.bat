@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFHistoricMarketDataService.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFHistoricMarketDataService.dll

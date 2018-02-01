@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWSMSelenium.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWSMSelenium.dll

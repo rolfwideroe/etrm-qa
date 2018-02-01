@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestReportingDB.dll 
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestReportingDB.dll 

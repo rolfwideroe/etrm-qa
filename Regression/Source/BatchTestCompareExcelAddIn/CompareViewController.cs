@@ -69,7 +69,7 @@ namespace BatchTestCompareExcelAddIn
 
         public void CompareRdTimeSeriesFromEcmTests()
         {
-            const string EcmTestFolder = "..\\ECMBatch\\TestFiles\\";
+           // const string EcmTestFolder = "..\\ECMBatch\\TestFiles\\";
             try
             {
 

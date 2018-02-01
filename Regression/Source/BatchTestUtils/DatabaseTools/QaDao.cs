@@ -18,7 +18,7 @@ namespace ElvizTestUtils.DatabaseTools
         private readonly SqlConnection ecmDbConnection;
         private readonly SqlConnection systemDbConnection;
         private readonly SqlConnection reportingDbConnection;
-        private readonly SqlConnection vizProcesDbConnection;
+        //private readonly SqlConnection vizProcesDbConnection;
 
         private bool disposed;
 
@@ -579,7 +579,7 @@ namespace ElvizTestUtils.DatabaseTools
                 this.systemDbConnection.Close();
                 this.ecmDbConnection.Dispose();
                 this.systemDbConnection.Dispose();
-                this.vizProcesDbConnection.Dispose();
+                //this.vizProcesDbConnection.Dispose();
                 // Free any other managed objects here. 
                 //
             }

@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFVolatilityService.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFVolatilityService.dll

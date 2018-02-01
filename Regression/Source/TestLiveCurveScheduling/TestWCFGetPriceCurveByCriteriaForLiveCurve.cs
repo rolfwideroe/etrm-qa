@@ -15,9 +15,14 @@ namespace TestLiveCurveScheduling
 {
     class TestWCFGetPriceCurveByCriteria
     {
-           //send ActiveMQ request with prices to PriceBook
-           
-            private static readonly IEnumerable<string> TestFilesLiveCurve = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles");    
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+        //send ActiveMQ request with prices to PriceBook
+
+        private static readonly IEnumerable<string> TestFilesLiveCurve = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles");    
             [Test, Timeout(1000 * 1000), TestCaseSource("TestFilesLiveCurve")]
             public static void ProcessQuery(string testFilepath) 
             {

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using ElvizTestUtils;
@@ -9,6 +10,12 @@ namespace TestGenConExport
     [TestFixture]
     public class TestGenConExport
     {
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+
         //test gencon exports
         // in \TestFiles need a file per GenCon filter name
         // the tests will run 

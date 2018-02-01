@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFAuditTrailAPI.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFAuditTrailAPI.dll

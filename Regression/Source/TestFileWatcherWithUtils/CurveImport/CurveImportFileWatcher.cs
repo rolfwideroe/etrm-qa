@@ -15,13 +15,23 @@ using TestFileWatcherWithUtils;
 
 namespace CurveImport
 {
+
+
     [TestFixture]
     public class CurveImportFileWatcher
     {
+
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+
         private static readonly IEnumerable<string> TestFilesCurveImport =
             TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFilesCurveImport");
         private const string PriceCurveExpectedValues = "TestFilesCurveImport\\ExpectedValues\\";
-      
+
+       
 
         [Test, Timeout(1000*100), TestCaseSource("TestFilesCurveImport")]
         public void CurveImportTest(string fileName)

@@ -16,8 +16,7 @@ namespace TestWCFDealInsertWithResultMessage
     public class TestWcfDealInsertWithResultMessage
     {
         
-        
-        [TestFixtureSetUp]
+        [SetUp]
         public void Setup()
         {
             if (ConfigurationTool.PamEnabled)
@@ -30,6 +29,7 @@ namespace TestWCFDealInsertWithResultMessage
                 ConfigurationTool.AutorizationEnabled = true;
             }
 
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
         private const string TestFilesWithResultMessagePath = "Testfiles\\";

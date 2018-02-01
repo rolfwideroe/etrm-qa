@@ -13,14 +13,14 @@ namespace SalesManager.Tests.Selenium.WAAD
         private const string WAADUserUserName = "wsm-user@bradyplc.com";
         private const string WAADUserPassword = "Passw0rd2014!";
 
-        [TestFixtureSetUp]
+        [SetUp]
         public void SetupTest()
         {
             _testDriver = new TestDriver();
             _testDriver.Redirect("/");
         }
 
-        [TestFixtureTearDown]
+        [TearDown]
         public void TeardownTest()
         {
             try
@@ -75,7 +75,7 @@ namespace SalesManager.Tests.Selenium.WAAD
         }
 
         [Test]
-        [Repeat(10)]
+       // [Repeat(10)]
         public void LoginAsAdminAndUser10Times()
         {
             CanLoginAsAdmin();

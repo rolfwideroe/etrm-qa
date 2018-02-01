@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFFunctionList.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFFunctionList.dll

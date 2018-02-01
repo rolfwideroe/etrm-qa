@@ -16,7 +16,11 @@ namespace TestWCFCurveService
     public class TestWCFCurveServiceForwardInterestRates
     {
 
-      
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
         private const string ForwarInterestRateFilePath = "TestFiles\\InterestRates\\";
 
