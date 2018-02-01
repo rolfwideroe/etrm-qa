@@ -175,7 +175,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-               
+
                 Assert.IsTrue(ex.Message.Contains("Portfolio may have the following statuses only: Active,Deleted"));
             }
             //empty Name
@@ -210,7 +210,7 @@ namespace TestWCFPortfolioManagementService
             };
             try
             {
-                service.CreatePortfolios(new[] {myPortfolio});
+                service.CreatePortfolios(new[] { myPortfolio });
             }
             catch (Exception)
             {
@@ -223,7 +223,7 @@ namespace TestWCFPortfolioManagementService
             myPortfolio.ExternalId = "not possible to update";
             try
             {
-                service.UpdatePortfolios(new[] {myPortfolio});
+                service.UpdatePortfolios(new[] { myPortfolio });
             }
             catch (Exception ex)
             {
@@ -234,17 +234,17 @@ namespace TestWCFPortfolioManagementService
             myPortfolio.Status = null;
             try
             {
-                service.UpdatePortfolios(new[] {myPortfolio});
+                service.UpdatePortfolios(new[] { myPortfolio });
             }
             catch (Exception ex)
             {
-               Assert.IsTrue(ex.Message.Contains("Failed to update portfolios"));
+                Assert.IsTrue(ex.Message.Contains("Failed to update portfolios"));
             }
             //update to the wrong status
             myPortfolio.Status = "Created";
             try
             {
-                service.UpdatePortfolios(new[] {myPortfolio});
+                service.UpdatePortfolios(new[] { myPortfolio });
             }
             catch (Exception ex)
             {
@@ -254,7 +254,7 @@ namespace TestWCFPortfolioManagementService
             myPortfolio.Name = null;
             try
             {
-                service.UpdatePortfolios(new[] {myPortfolio});
+                service.UpdatePortfolios(new[] { myPortfolio });
             }
             catch (Exception ex)
             {
@@ -280,17 +280,17 @@ namespace TestWCFPortfolioManagementService
             {
                 service.CreatePortfolios(new[] { myPortfolio });
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Assert.Fail("Expect to pass.");
+                Assert.Fail("Create portfolio. Expect to pass: " + ex.Message);
             }
-            
+
             //wrong ParentPortfolioExternalId
             myPortfolio.Name = "PortfolioUpdated";
             myPortfolio.ParentPortfolioExternalId = string.Empty;
             try
             {
-                service.UpdatePortfolios(new[] {myPortfolio});
+                service.UpdatePortfolios(new[] { myPortfolio });
             }
             catch (Exception ex)
             {
@@ -300,25 +300,25 @@ namespace TestWCFPortfolioManagementService
             myPortfolio.ParentPortfolioExternalId = PortfolioForTest_ExternalID;
             try
             {
-                service.UpdatePortfolios(new[] {myPortfolio});
+                service.UpdatePortfolios(new[] { myPortfolio });
             }
             catch (Exception ex)
             {
-               Assert.Fail("Expect to pass.");
+                Assert.Fail("Expect to pass after correct update: " + ex.Message);
             }
 
             myPortfolio.ParentPortfolioExternalId = "null";
             myPortfolio.Status = StatusDeleted;
             try
             {
-                service.UpdatePortfolios(new[] {myPortfolio});
+                service.UpdatePortfolios(new[] { myPortfolio });
             }
             catch (Exception ex)
             {
                 Assert.IsTrue(ex.Message.Contains("Portfolio with ExternalId 'null' doesnt exist."));
             }
-            
+
         }
-   
+
     }
 }
