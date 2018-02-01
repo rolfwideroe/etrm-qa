@@ -16,8 +16,15 @@ using TestWCFLookupService.TestCases;
 
 namespace TestWCFLookupService.Tests
 {
+    [TestFixture]
     class TestGetOriginalTransactionsByUTI
     {
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+
         private const string TestFilePath = "Testfiles\\TransactionsByUTI\\";
 
         private static readonly IEnumerable<string> TestCases =

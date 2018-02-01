@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFLookupService.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFLookupService.dll

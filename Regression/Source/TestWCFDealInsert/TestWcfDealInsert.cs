@@ -15,11 +15,14 @@ namespace TestWcfDealInsert
     public class TestWcfDealInsert
     {
        // for creating portfolios and new filter
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
             ElvizTestUtils.LoadStaticData.LoadStaticData loadStatic = new ElvizTestUtils.LoadStaticData.LoadStaticData();
             loadStatic.InsertPortfolios();
+
         }
 
         private static readonly IEnumerable<string> TestFilesDealInsertFromZip = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFilesZip");

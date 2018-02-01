@@ -11,9 +11,16 @@ using TestWCFLookupService.TestCases;
 
 namespace TestWCFLookupService.Tests
 {
+    [TestFixture]
     public class TestGetInstrumentCodes
     {
-       private const string TestFilePath = "Testfiles\\InstrumentCodes\\";
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+
+        private const string TestFilePath = "Testfiles\\InstrumentCodes\\";
 
         private static readonly IEnumerable<string> TestCases = TestCasesFileEnumeratorByFolder.TestCaseFiles(TestFilePath);
 

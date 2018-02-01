@@ -15,10 +15,16 @@ namespace TestWCFCurveService
 
     public class TestWCFCurveServiceForwardExchangeRate
     {
-        [TestFixtureTearDown]
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+
+        [TearDown]
         public void TearDown()
         {
-            ElvizConfigurationTool utility =new ElvizConfigurationTool();
+            ElvizConfigurationTool utility = new ElvizConfigurationTool();
             utility.RevertAllConfigurationsToDefault();
         }
 

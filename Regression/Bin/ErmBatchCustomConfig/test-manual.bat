@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestErmCustomConfig.dll  /exclude:ERM_New
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestErmCustomConfig.dll  /exclude:ERM_New

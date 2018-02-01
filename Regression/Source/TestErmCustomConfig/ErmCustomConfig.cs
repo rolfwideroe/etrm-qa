@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using ElvizTestUtils;
 using ElvizTestUtils.BatchTests;
@@ -9,9 +10,13 @@ namespace TestErmCustomConfig
     [TestFixture]
     public class ErmCustomConfig
     {
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
-
-        [TestFixtureSetUp]
+        [SetUp]
         public void SetUp()
         {
             ConfigurationTool.MissingRealizedDataStrategy = "ThrowException";
@@ -19,7 +24,7 @@ namespace TestErmCustomConfig
 
         }
 
-        [TestFixtureTearDown]
+        [TearDown]
         public void TearDown()
         {
             ElvizConfigurationTool utility = new ElvizConfigurationTool();

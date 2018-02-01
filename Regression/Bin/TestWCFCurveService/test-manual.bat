@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFCurveService.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFCurveService.dll

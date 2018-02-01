@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestLiveCurveScheduling.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestLiveCurveScheduling.dll

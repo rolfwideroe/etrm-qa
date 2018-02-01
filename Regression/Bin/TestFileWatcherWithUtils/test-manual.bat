@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestFileWatcherWithUtils.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestFileWatcherWithUtils.dll

@@ -21,7 +21,7 @@ namespace TestWCFDealInsertUpdate
          public class TestWcfDealInsertUpdate
         {
            
-            [TestFixtureSetUp]
+            [SetUp]
             public void Setup()
             {
                 if (ConfigurationTool.PamEnabled)

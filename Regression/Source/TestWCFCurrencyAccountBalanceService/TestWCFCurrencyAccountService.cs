@@ -9,8 +9,16 @@ using NUnit.Framework;
 
 namespace TestWCFCurrencyAccountBalanceService
 {
+    [TestFixture]
     public class TestWCFCurrencyAccountService
     {
+
+        
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
         [Test]
         public void FailIncorrectIsoCurrency()

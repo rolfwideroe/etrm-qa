@@ -11,8 +11,13 @@ namespace TestWCFReportEngine
 	[TestFixture]
 	public class TestPLExplanationReport
 	{
+	    [OneTimeSetUp]
+	    public void RunBeforeAnyTests()
+	    {
+	        Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+	    }
 
-		[Test,Timeout(10*1000)]
+        [Test,Timeout(10*1000)]
 		public void TestGetPredefinedSettingSet()
 		{
 			string dateNowAsXmlEncodedValue = TestXmlTool.ConvertToXmlDateTimeString(DateTime.Now.Date);

@@ -25,15 +25,6 @@ namespace TestWCFDealInsertUpdate
     public class TestWCFDealInsertExcelUpdate
     {
     
-        [TestFixtureSetUp]
-        public void Setup()
-        {
-            //if (ElvizInstallationUtility.PamEnabled)
-            //{
-            //    ElvizInstallationUtility.PamEnabled = false;
-            //}
-        }
-
         private static readonly IEnumerable<string> TestFilesDealInsertUpdateExcel = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles\\ExcelUpdateTests");
 
         [Test, Timeout(1000 * 1000), TestCaseSource("TestFilesDealInsertUpdateExcel")]

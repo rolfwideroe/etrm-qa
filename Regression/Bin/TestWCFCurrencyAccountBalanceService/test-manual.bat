@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFCurrencyAccountBalanceService.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFCurrencyAccountBalanceService.dll

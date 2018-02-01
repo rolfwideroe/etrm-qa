@@ -15,9 +15,16 @@ using Action = ElvizTestUtils.LookUpServiceReference.Action;
 
 namespace TestWCFAuditTrailAPI
 {
+    [TestFixture]
     public class GetAuditTrailEntries
     {
-        readonly string newExternalID = Guid.NewGuid().ToString(); 
+        readonly string newExternalID = Guid.NewGuid().ToString();
+      
+        [OneTimeSetUp]
+            public void RunBeforeAnyTests()
+            {
+                Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+            }
 
         [Test]
         public void TestGetAuditTrailEntriesWithNullParams()

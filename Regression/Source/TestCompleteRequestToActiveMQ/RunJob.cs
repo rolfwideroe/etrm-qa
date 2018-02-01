@@ -5,7 +5,6 @@ using ElvizTestUtils;
 using ElvizTestUtils.CurveServiceReference;
 using ElvizTestUtils.CurveTests;
 using ElvizTestUtils.InternalJobService;
-using ElvizTestUtils;
 using ElvizTestUtils.QaLookUp;
 using NUnit.Framework;
 

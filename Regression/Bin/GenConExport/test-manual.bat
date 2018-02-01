@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestGenConExport.dll 
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestGenConExport.dll 

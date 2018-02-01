@@ -11,7 +11,11 @@ namespace TestWCFReportEngine
     [TestFixture]
     public class TestGreeksTimeLineReports
     {
-
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
         [Test,Timeout(10*1000)]
         public void TestGetPredefinedSettingSet()

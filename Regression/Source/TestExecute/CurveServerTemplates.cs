@@ -10,11 +10,10 @@ namespace TestExecute
 {
     class CurveServerTemplates
     {
-        private string elvizVersion;
-
+     
         const string TestExecuteFileName = "\"C:\\Program Files (x86)\\SmartBear\\TestExecute 9\\Bin\\TestExecute.exe\"";
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
             IVizAutomatedLogin automatedLogin = (IVizAutomatedLogin)new VizLogin();
@@ -24,8 +23,6 @@ namespace TestExecute
 
             foreach (FileInfo file in testcompleteDirectoty.GetFiles("*", SearchOption.AllDirectories))
                 file.Attributes = FileAttributes.Normal;
-
-            elvizVersion = ElvizInstallationUtility.GetElvizVersion();
 
         }
         

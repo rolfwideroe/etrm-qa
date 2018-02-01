@@ -8,7 +8,6 @@ namespace TestWCFAuditTrailAPI
 {
     public class AuditTrailTestCasesClass
     {
-       
             public string InsertXml { get; set; }
             public string UpdateXml { get; set; }
             //public UpdateExcel UpdateExcel { get; set; }

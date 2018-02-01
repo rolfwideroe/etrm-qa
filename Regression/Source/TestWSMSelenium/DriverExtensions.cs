@@ -135,7 +135,7 @@ namespace SalesManager.WebUI.SeleniumTests
             //Web table "curvesTable" doesn't have set data-row-index property for now, so will find row index by cell text
             IList<IWebElement> rows = driver.FindElements(By.TagName("tr"));
 
-            int matchedRow = 0;
+           // int matchedRow = 0;
             for (int i = 1; i < rows.Count; i++)
             {
                 if (rows[i].Text.Contains(priceBookDisplayName))

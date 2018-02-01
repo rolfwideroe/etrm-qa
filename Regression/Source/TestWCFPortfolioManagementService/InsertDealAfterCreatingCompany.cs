@@ -12,7 +12,11 @@ namespace TestWCFPortfolioManagementService
 {
     internal class InsertDealAfterCreatingCompany
     {
-        
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
         [Test]
         public void InsertDeal()

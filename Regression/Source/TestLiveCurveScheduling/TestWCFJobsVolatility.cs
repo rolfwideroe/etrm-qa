@@ -14,9 +14,10 @@ namespace TestLiveCurveScheduling
     {
         const double tolerance = GlobalConstTestSettings.DEFAULT_FLOATING_POINT_TOLLERANCE;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
             //return to default
             QaDao.RevertVolatilitiesToDefault("EEX_today");
 

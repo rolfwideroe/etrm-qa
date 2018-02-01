@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFDealServiceFees.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFDealServiceFees.dll
