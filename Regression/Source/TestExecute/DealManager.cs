@@ -9,10 +9,9 @@ using VizLoginManager;
 
 namespace TestExecute
 {
-    class Deal_Manager : OrderedTestFixture
+    [TestFixture]
+    class Deal_Manager 
     {
-        private static int MyInt;
-
         const string TestExecuteFileName = "\"C:\\Program Files (x86)\\SmartBear\\TestExecute 9\\Bin\\TestExecute.exe\"";
         //private const string TestExecuteFileName =
         //    "\"C:\\Program Files (x86)\\SmartBear\\TestComplete 9\\Bin\\TestComplete.exe\"";
@@ -30,31 +29,20 @@ namespace TestExecute
             foreach (FileInfo file in testcompleteDirectoty.GetFiles("*", SearchOption.AllDirectories))
                 file.Attributes = FileAttributes.Normal;
 
-            MyInt = 0;
-
         }
 
-        [TestCaseSource(sourceName: "TestSource")]
-        public void DealManagerSolution(TestStructure test)
+        [Test, Order(1)]
+        public void TestDealManager_1StartEAM()
         {
-            test.Test();
-        }
-
-        //[Test]
-        [OrderedTest(0)]
-        public void TestDealManager_StartEAM()
-        {
-            MyInt++;
             string arguments = "\"..\\..\\Source\\TestComplete\\DealManager\\DealManager.pjs\" -r -p:DealManagerFunctions /test:Script|DealManager|Init -exit";
 
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 5, "ElvizTM");
             ParseLogs("Init");//testName
         }
 
-     
-        //[Test]
-        [OrderedTest(1)]
-        public void TestDealManager_ChangeStatus()
+
+        [Test, Order(2)]
+        public void TestDealManager_2ChangeStatus()
         {
             string arguments = "\"..\\..\\Source\\TestComplete\\DealManager\\DealManager.pjs\" -r -p:DealManagerFunctions /test:Script|Status|ChangeStatus -exit";
 
@@ -62,99 +50,82 @@ namespace TestExecute
             ParseLogs("ChangeStatus");//testName
         }
 
-        //[Test]
-        [OrderedTest(2)]
-        public void TestDealManager_CopyTransaction()
+        [Test, Order(3)]
+        public void TestDealManager_3CopyTransaction()
         {
-            MyInt++;
             string arguments = "\"..\\..\\Source\\TestComplete\\DealManager\\DealManager.pjs\" -r -p:DealManagerFunctions /test:Script|CopyDeal|CopyTransaction -exit";
 
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 20, "ElvizTM");
             ParseLogs("CopyTransaction");//testName
         }
 
-        //[Test]
-        [OrderedTest(3)]
-        public void TestDealManager_UpdateTransaction()
+        [Test, Order(4)]
+        public void TestDealManager_4UpdateTransaction()
         {
-            MyInt++;
             string arguments = "\"..\\..\\Source\\TestComplete\\DealManager\\DealManager.pjs\" -r -p:DealManagerFunctions /test:Script|DealManager|UpdateTransactions -exit";
 
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 30, "ElvizTM");
             ParseLogs("UpdateTransactions");//testName
         }
 
-        ////[Test]
-        //[OrderedTest(4)]
+        // [Test, Order(5)]
+        //change oreder number if needed
         //public void TestDealManager_CopyAndUpdateTransaction()
         //{
-        //    MyInt++;
         //    string arguments = "\"..\\..\\Source\\TestComplete\\DealManager\\DealManager.pjs\" -r -p:DealManagerFunctions /test:Script|CopyDeal|CopyAndUpdateTransaction -exit";
 
         //    LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 30, "ElvizTM");
         //    ParseLogs("CopyAndUpdateTransaction");//testName
         //}
 
-        //[Test]
-        [OrderedTest(5)]
-        public void TestDealManager_ImportFSDTimeSeries()
+        [Test, Order(5)]
+        public void TestDealManager_5ImportFSDTimeSeries()
         {
-            MyInt++;
             string arguments = "\"..\\..\\Source\\TestComplete\\DealManager\\DealManager.pjs\" -r -p:DealManagerFunctions /test:Script|ImportFSDTimeseries|ImportFSDTimeSeries -exit";
 
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 10, "ElvizTM");
             ParseLogs("ImportFSDTimeSeries");//testName
         }
 
-        //[Test]
-        [OrderedTest(6)]
-        public void TestDealManager_EmirTimestamps()
+        [Test, Order(6)]
+        public void TestDealManager_6EmirTimestamps()
         {
-            MyInt++;
             string arguments = "\"..\\..\\Source\\TestComplete\\DealManager\\DealManager.pjs\" -r -p:DealManagerFunctions /test:Script|EMIR|EMIRTimestamps -exit";
 
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 20, "ElvizTM");
             ParseLogs("EMIRTimestamps");//testName
         }
 
-        //[Test]
-        [OrderedTest(7)]
-        public void TestDealManager_MultipleUpdate()
+        [Test, Order(7)]
+        public void TestDealManager_7MultipleUpdate()
         {
-            MyInt++;
             string arguments = "\"..\\..\\Source\\TestComplete\\DealManager\\DealManager.pjs\" -r -p:DealManagerFunctions /test:Script|BulkUpdate|MultipleUpdate -exit";
 
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 10, "ElvizTM");
             ParseLogs("MultipleUpdate");//testName
         }
 
-        //[Test]
-        [OrderedTest(8)]
-        public void TestDealManager_TradeTo()
+        [Test, Order(8)]
+        public void TestDealManager_8TradeTo()
         {
-            MyInt++;
             string arguments = "\"..\\..\\Source\\TestComplete\\DealManager\\DealManager.pjs\" -r -p:DealManagerFunctions /test:Script|TradeTo|TradeTo -exit";
 
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 10, "ElvizTM");
             ParseLogs("TradeTo");//testName
         }
 
-        //[Test]
-        [OrderedTest(9)]
-        public void TestDealManager_Distribution()
+        [Test, Order(9)]
+        public void TestDealManager_9Distribution()
         {
-            MyInt++;
             string arguments = "\"..\\..\\Source\\TestComplete\\DealManager\\DealManager.pjs\" -r -p:DealManagerFunctions /test:Script|Distribution|Distribution -exit";
 
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 20, "ElvizTM");
             ParseLogs("Distribution");//testName
         }
 
-        //[Test]
-        [OrderedTest(10)]
-        public void TestDealManager_TimezoneTest()
+        [Test, Order(10)]
+        public void TestDealManager_zTimezoneTest()
         {
-            MyInt++;
             string arguments = "\"..\\..\\Source\\TestComplete\\DealManager\\DealManager.pjs\" -r -p:DealManagerFunctions /test:Script|TimeZones|RunTimezoneTest -exit";
 
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 10, "ElvizTM");

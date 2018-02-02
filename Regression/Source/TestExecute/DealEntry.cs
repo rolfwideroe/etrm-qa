@@ -10,12 +10,10 @@ using VizLoginManager;
 
 namespace TestExecute
 {
-    
+
     [TestFixture]
-    public class DealEntry : OrderedTestFixture
+    public class DealEntry 
     {
-       // private string elvizVersion;
-        private static int MyInt;
 
         const string TestExecuteFileName = "\"C:\\Program Files (x86)\\SmartBear\\TestExecute 9\\Bin\\TestExecute.exe\"";
         //private const string TestExecuteFileName =
@@ -33,176 +31,155 @@ namespace TestExecute
 
             foreach (FileInfo file in testcompleteDirectoty.GetFiles("*", SearchOption.AllDirectories))
                 file.Attributes = FileAttributes.Normal;
-            MyInt = 0;
-
-        }
-       
-        [TestCaseSource(sourceName: "TestSource")]
-        public static void DealEntrySolution(TestStructure test)
-        {
-            test.Test();
+           
         }
 
-        ////[Test]
-        //[OrderedTest(0)]
+        //[Test, Order(0)]//update
         //public void TestStartEAM()
-        //{
-        //    MyInt++;
+        //{  
         //    const string arguments = "\"..\\..\\Source\\TestComplete\\DealEntry\\DealEntry.pjs\" -r -p:DealEntry /test:Script|Main|Init -exit";
         //    LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 5, "ElvizTM");
         //    //ParseLogs("RunEAMwithCMDParams");//testName
         // }
 
-        [OrderedTest(0)]
-        public void TestDealEntry_CreateDealAndAssertDTO()
+        [Test, Order(1)]
+        public void TestDealEntry_1CreateDealAndAssertDTO()
         {
-            MyInt++;
             const string arguments = "\"..\\..\\Source\\TestComplete\\DealEntry\\DealEntry.pjs\" -r -p:DealEntry /test:Script|CreateCompareQATransactionDTO|CreateDealAndAssertDTO -exit";
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 60, "ElvizTM");
             ParseLogs("CreateDealAndAssertDTO");//testName
         }
 
-        [OrderedTest(1)]
-        public void TestDealEntry_Electricity()
+        [Test, Order(2)]
+        public void TestDealEntry_2Electricity()
         {
-            Console.WriteLine(DateTime.Now);
-            MyInt++;
             const string arguments = "\"..\\..\\Source\\TestComplete\\DealEntry\\DealEntry.pjs\" -r -p:DealEntry /test:Script|Electricity|Electricity -exit";
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 360, "ElvizTM");
             ParseLogs("Electricity");//testName
         }
 
-        [OrderedTest(2)]
-        public void TestDealEntry_Gas()
+        [Test, Order(3)]
+        public void TestDealEntry_3Gas()
         {
-            Console.WriteLine(DateTime.Now);
-            MyInt++;
             const string arguments = "\"..\\..\\Source\\TestComplete\\DealEntry\\DealEntry.pjs\" -r -p:DealEntry /test:Script|Gas|Gas -exit";
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 120, "ElvizTM");
             ParseLogs("Gas");//testName
         }
 
-        [OrderedTest(3)]
+        [Test, Order(4)]
         public void TestDealEntry_Oil()
         {
-            MyInt++;
             const string arguments = "\"..\\..\\Source\\TestComplete\\DealEntry\\DealEntry.pjs\" -r -p:DealEntry /test:Script|Oil|Oil -exit";
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 15, "ElvizTM");
             ParseLogs("Oil");//testName
         }
 
-        [OrderedTest(4)]
+        [Test, Order(5)]
         public void TestDealEntry_Emission()
         {
-            MyInt++;
             const string arguments = "\"..\\..\\Source\\TestComplete\\DealEntry\\DealEntry.pjs\" -r -p:DealEntry /test:Script|Emission|Emission -exit";
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 15, "ElvizTM");
             ParseLogs("Emission");//testName
         }
 
-        [OrderedTest(5)]
+        [Test, Order(6)]
         public void TestDealEntry_Elcertificate()
         {
-            MyInt++;
             const string arguments = "\"..\\..\\Source\\TestComplete\\DealEntry\\DealEntry.pjs\" -r -p:DealEntry /test:Script|Elcertificate|Elcertificate -exit";
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 20, "ElvizTM");
             ParseLogs("Elcertificate");//testName
         }
 
-        [OrderedTest(6)]
+        [Test, Order(7)]
         public void TestDealEntry_Currency()
         {
-            MyInt++;
             const string arguments = "\"..\\..\\Source\\TestComplete\\DealEntry\\DealEntry.pjs\" -r -p:DealEntry /test:Script|Currency|Currency -exit";
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 60, "ElvizTM");
             ParseLogs("Currency");//testName
         }
 
-        [OrderedTest(7)]
+        [Test, Order(8)]
         public void TestDealEntry_GreenCertificate()
         {
-            MyInt++;
             const string arguments = "\"..\\..\\Source\\TestComplete\\DealEntry\\DealEntry.pjs\" -r -p:DealEntry /test:Script|GreenCertificate|GreenCertificateForward -exit";
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 20, "ElvizTM");
             ParseLogs("GreenCertificateForward");//testName
         }
 
-        [OrderedTest(8)]
+        [Test, Order(9)]
         public void TestDealEntry_Coal()
         {
-            MyInt++;
             const string arguments = "\"..\\..\\Source\\TestComplete\\DealEntry\\DealEntry.pjs\" -r -p:DealEntry /test:Script|Coal|Coal -exit";
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 20, "ElvizTM");
             ParseLogs("Coal");//testName
         }
 
-        [OrderedTest(9)]
-        public void TestDealEntry_LogInWithPAM()
+        [Test, Order(10)]
+        public void TestDealEntry_zLogInWithPAM()
         {
-            MyInt++;
             const string arguments = "\"..\\..\\Source\\TestComplete\\DealEntry\\DealEntry.pjs\" -r -p:DealEntry /test:Script|UsingPAM|LogInWithPAM -exit";
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 15, "ElvizTM");
             ParseLogs("LogInWithPAM");//testName
         }
 
-        public void LaunchTestExecute(string fileName, string arguments, int timeOutMillisecs,string testedProgramName)
+        public void LaunchTestExecute(string fileName, string arguments, int timeOutMillisecs, string testedProgramName)
         {
-            
-                ProcessStartInfo startInfo = new ProcessStartInfo(fileName, arguments)
+
+            ProcessStartInfo startInfo = new ProcessStartInfo(fileName, arguments)
+            {
+                UseShellExecute = false
+            };
+            Process p = Process.Start(startInfo);
+            bool hasFinishd = p.WaitForExit(timeOutMillisecs); //timeOut
+            if (!hasFinishd)
+            {
+                p.Kill();
+
+                Process[] testedProgramPrs = Process.GetProcessesByName(testedProgramName);
+
+                foreach (Process process in testedProgramPrs)
                 {
-                    UseShellExecute = false
-                };
-                Process p = Process.Start(startInfo);
-                bool hasFinishd = p.WaitForExit(timeOutMillisecs); //timeOut
-                if (!hasFinishd)
-                {
-                    p.Kill();
-
-                    Process[] testedProgramPrs = Process.GetProcessesByName(testedProgramName);
-
-                    foreach (Process process in testedProgramPrs)
-                    {
-                        process.Kill();
-                    }
-
-                    Assert.Fail("Test Execute has timed out, exceeded "+new TimeSpan(0,0,0,0,timeOutMillisecs));
-    
+                    process.Kill();
                 }
 
-                if (p.HasExited == false)
-                {
-                    p.Kill();
-                    Console.WriteLine("Process was not responding. Closing...");
-                    Assert.Fail("Had to Kill process");
-                }
-            
-           
+                Assert.Fail("Test Execute has timed out, exceeded " + new TimeSpan(0, 0, 0, 0, timeOutMillisecs));
+
+            }
+
+            if (p.HasExited == false)
+            {
+                p.Kill();
+                Console.WriteLine("Process was not responding. Closing...");
+                Assert.Fail("Had to Kill process");
+            }
+
+
         }
 
         public void ParseLogs(string testName)
         {
-        //}
-        //[Test]
+            //}
+            //[Test]
 
             //public void ParseLogs2()
             //{
             // string testName = "Electricity";
 
-        int numberOfErrors = 0;
-        string elvizVersion = ElvizInstallationUtility.GetElvizVersion().Trim();
-        string releaseNumber = elvizVersion.Substring(0, 6);
+            int numberOfErrors = 0;
+            string elvizVersion = ElvizInstallationUtility.GetElvizVersion().Trim();
+            string releaseNumber = elvizVersion.Substring(0, 6);
 
-        string relativePath = "\\Source\\TestComplete\\DealEntry\\DealEntry\\Log\\";
-        string baseDirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString()).ToString();
-        string PathToLogFolder = Path.GetFullPath(baseDirectory + relativePath);
+            string relativePath = "\\Source\\TestComplete\\DealEntry\\DealEntry\\Log\\";
+            string baseDirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).ToString()).ToString();
+            string PathToLogFolder = Path.GetFullPath(baseDirectory + relativePath);
 
-        string logDescription = "DealEntry.mds.tcLogs";
-        string absolutePath = Path.GetFullPath(PathToLogFolder + logDescription);
+            string logDescription = "DealEntry.mds.tcLogs";
+            string absolutePath = Path.GetFullPath(PathToLogFolder + logDescription);
 
-        string pathToLog = @"file://bradydevstorage.file.core.windows.net/bradydevstorage/ETRM/QA/MSTest/" + releaseNumber + "/DealEntry/" + testName + "_" + elvizVersion + ".mht";
+            string pathToLog = @"file://bradydevstorage.file.core.windows.net/bradydevstorage/ETRM/QA/MSTest/" + releaseNumber + "/DealEntry/" + testName + "_" + elvizVersion + ".mht";
 
-        XmlDocument doc = new XmlDocument();
-        doc.Load(absolutePath); // log XML
+            XmlDocument doc = new XmlDocument();
+            doc.Load(absolutePath); // log XML
 
             XmlElement root = doc.DocumentElement;
             if (root != null)
@@ -214,7 +191,7 @@ namespace TestExecute
                     if (xmlNode != null)
                     {
                         XmlNodeList logNode = xmlNode.ChildNodes;
-                        for (int child = 0; child<logNode.Count; child++)
+                        for (int child = 0; child < logNode.Count; child++)
                         {
 
                             //check that testname is correspond test execution
@@ -222,8 +199,8 @@ namespace TestExecute
                             if (nameofrootNode.Item(0).Attributes["value"].Value.Contains(testName))
                             {
                                 XmlNodeList relpathNode = logNode.Item(child).SelectNodes("Prp[@name='relpath']");
-        string testLogFile = PathToLogFolder + relpathNode.Item(0).Attributes["value"].Value;
-        Console.WriteLine(testLogFile);
+                                string testLogFile = PathToLogFolder + relpathNode.Item(0).Attributes["value"].Value;
+                                Console.WriteLine(testLogFile);
 
                                 //parse log file for current test
                                 XmlDocument log = new XmlDocument();

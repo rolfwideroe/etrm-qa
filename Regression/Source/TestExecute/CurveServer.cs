@@ -9,12 +9,10 @@ using VizLoginManager;
 
 namespace TestExecute
 {
-    class CurveServer : OrderedTestFixture
+    [TestFixture]
+    class CurveServer 
     {
-        //private string elvizVersion;
-        private static int MyInt;
-
-        const string TestExecuteFileName = "\"C:\\Program Files (x86)\\SmartBear\\TestExecute 9\\Bin\\TestExecute.exe\"";
+       const string TestExecuteFileName = "\"C:\\Program Files (x86)\\SmartBear\\TestExecute 9\\Bin\\TestExecute.exe\"";
         //private const string TestExecuteFileName =
         //    "\"C:\\Program Files (x86)\\SmartBear\\TestComplete 9\\Bin\\TestComplete.exe\"";
 
@@ -34,27 +32,15 @@ namespace TestExecute
 
             string guiRegressionSysTradeDate = "2013-06-10";
             QaDao.SetSysTradeDate(guiRegressionSysTradeDate);
-
-            MyInt = 0;
+           
 
         }
-      
-        [TestCaseSource(sourceName: "TestSource")]
-        public void CurveServerSolution(TestStructure test)
-        {
-            test.Test();
-        }
-
-        //[Test]
-        [OrderedTest(0)]
+       
+        [Test, Order(1)]
         public void TestCurveServer_Adapter()
         {
             //string logName = "\\\\Netvs-tfs\\MSTest\\2015.3\\CurveServer\\Adapter_" + elvizVersion + ".mht";
-            //string logName = "\\\\Netvs-tfs\\MSTest\\2015.3\\CurveServer\\Adapter_" + elvizVersion + "_.mht";
-
-            //if (File.Exists(logName)) File.Move(logName, logName);
-
-
+           
             string arguments = "\"..\\..\\Source\\TestComplete\\CurveServer\\CurveServer.pjs\" -r -p:Adapter -exit";
             Console.WriteLine(arguments);
 
@@ -62,11 +48,9 @@ namespace TestExecute
             ParseLogs("Adapter");
         }
 
-        //[Test]
-        [OrderedTest(1)]
+        [Test, Order(2)]
         public void TestCurveServer_PriceImportInterestRates()
         {
-            MyInt++;
             //string logName = "\\\\Netvs-tfs\\MSTest\\2015.3\\CurveServer\\PriceImportInterestRates" + elvizVersion + ".mht";
             string arguments = "\"..\\..\\Source\\TestComplete\\CurveServer\\CurveServer.pjs\" -r -p:PriceImportInterestRates -exit";
 
@@ -74,13 +58,10 @@ namespace TestExecute
 
             ParseLogs("PriceImportInterestRates");
         }
-
-
-        //[Test]
-        [OrderedTest(2)]
+        
+        [Test, Order(3)]
         public void TestCurveServer_FXandInterestRates()
         {
-            MyInt++;
             //string logName = "\\\\Netvs-tfs\\MSTest\\2015.3\\CurveServer\\FXandInterestRates" + elvizVersion + ".mht";
             string arguments = "\"..\\..\\Source\\TestComplete\\CurveServer\\CurveServer.pjs\" -r -p:FXandInterestRates -exit";
 
@@ -88,13 +69,10 @@ namespace TestExecute
 
             ParseLogs("FXandInterestRates");
         }
-
-
-        //[Test]
-        [OrderedTest(3)]
+        
+        [Test, Order(4)]
         public void TestCurveServer_Jobs()
         {
-            MyInt++;
             //string logName = "\\\\Netvs-tfs\\MSTest\\2015.3\\CurveServer\\JobScheduling" + elvizVersion + ".mht";
             string arguments = "\"..\\..\\Source\\TestComplete\\CurveServer\\CurveServer.pjs\" -r -p:Jobs -exit";
 
@@ -102,23 +80,20 @@ namespace TestExecute
 
             ParseLogs("Jobs");
         }
-
-        [OrderedTest(4)]
+        
+        [Test, Order(5)]
         public void TestCurveServer_EditRepublishPricebooks()
         {
-            MyInt++;
             string arguments = "\"..\\..\\Source\\TestComplete\\CurveServer\\CurveServer.pjs\" -r -p:EditRepublishPriceBooks -exit";
 
             LaunchTestExecute(TestExecuteFileName, arguments, 1000 * 60 * 30, "ElvizETRMClient");
 
             ParseLogs("EditRepublishPriceBooks");
         }
-
-        //[Test]
-        [OrderedTest(5)]
+        
+        [Test, Order(6)]
         public void TestCurveServer_Templates()
         {
-            MyInt++;
             // string logName = "\\\\Netvs-tfs\\MSTest\\2015.3\\CurveServer\\Templates" + elvizVersion + ".mht";
             string arguments = "\"..\\..\\Source\\TestComplete\\CurveServer\\CurveServer.pjs\" -r -p:Templates -exit";
 
@@ -127,12 +102,10 @@ namespace TestExecute
             ParseLogs("Templates");
         }
 
-
-        //[Test]
-        [OrderedTest(6)]
+        
+        [Test, Order(7)]
         public void TestCurveServer_Configuration()
         {
-            MyInt++;
             // string logName = "\\\\Netvs-tfs\\MSTest\\2015.3\\CurveServer\\Configuration" + elvizVersion + ".mht";
             string arguments = "\"..\\..\\Source\\TestComplete\\CurveServer\\CurveServer.pjs\" -r -p:Configuration -exit";
 
