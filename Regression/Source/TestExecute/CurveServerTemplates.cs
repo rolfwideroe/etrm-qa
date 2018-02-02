@@ -16,6 +16,8 @@ namespace TestExecute
         [OneTimeSetUp]
         public void SetUp()
         {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
             IVizAutomatedLogin automatedLogin = (IVizAutomatedLogin)new VizLogin();
             object defaultLogin = automatedLogin.SetDefaultLogin("Vizard", "elviz");
 
