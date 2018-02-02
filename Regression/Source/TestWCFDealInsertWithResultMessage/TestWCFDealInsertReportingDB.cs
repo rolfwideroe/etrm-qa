@@ -19,14 +19,15 @@ namespace TestWCFDealInsertWithResultMessage
         [OneTimeSetUp]
         public void Setup()
         {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
             if (ConfigurationTool.PamEnabled)
             {
                 ConfigurationTool.PamEnabled = false;
             }
             JobAPI.ExecuteAndAssertJob(12, 300);
             initializationConnectionToReportingDB();
-
-            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+            
         }
 
         private const string TestFilesPath = "Testfiles\\";

@@ -12,7 +12,9 @@ namespace TestSeleniumCRV
  
     public class LoginAndCreate : SeleniumBase
     {
-    //[Test]
+
+       
+        [Test]
         public void IsLoginPossible()
         {
             ExecuteTest(driver =>

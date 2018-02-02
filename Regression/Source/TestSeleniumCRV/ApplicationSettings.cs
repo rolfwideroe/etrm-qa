@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Reflection;
+using NUnit.Framework;
 
 namespace TestSeleniumCRV
 {
@@ -9,7 +10,7 @@ namespace TestSeleniumCRV
         /// <summary>
         /// Root application url.
         /// </summary>
-        public static string ApplicationUrl = "http://netvs-qa161a02/CRV";
+        public static string ApplicationUrl = "http://netvs-qa161a02.nortest.bradyplc.com/CRV";
 
 
         /// <summary>
@@ -27,6 +28,8 @@ namespace TestSeleniumCRV
         /// </summary>
         static ApplicationSettings()
         {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
             Type type = typeof(ApplicationSettings);
             FieldInfo[] settings = type.GetFields();
 

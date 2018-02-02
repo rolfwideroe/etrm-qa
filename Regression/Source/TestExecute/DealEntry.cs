@@ -24,6 +24,8 @@ namespace TestExecute
         [OneTimeSetUp]
         public void SetUp()
         {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
             IVizAutomatedLogin automatedLogin = (IVizAutomatedLogin)new VizLogin();
             object defaultLogin = automatedLogin.SetDefaultLogin("Vizard", "elviz");
 
@@ -36,7 +38,7 @@ namespace TestExecute
         }
        
         [TestCaseSource(sourceName: "TestSource")]
-        public void DealEntrySolution(TestStructure test)
+        public static void DealEntrySolution(TestStructure test)
         {
             test.Test();
         }
