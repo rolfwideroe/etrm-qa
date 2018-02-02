@@ -19,7 +19,7 @@ namespace TestReportingDB
     public class TestTimeSeriesFromEcm
     {
         private QaDao qaDao;
-        private Exception ex;
+       
         [SetUp,Timeout(610*1000)]
         public void Setup()
         {

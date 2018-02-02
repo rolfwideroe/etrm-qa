@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestEcmCustomConfig.dll 
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestEcmCustomConfig.dll 

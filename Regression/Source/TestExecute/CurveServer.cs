@@ -11,14 +11,14 @@ namespace TestExecute
 {
     class CurveServer : OrderedTestFixture
     {
-        private string elvizVersion;
+        //private string elvizVersion;
         private static int MyInt;
 
         const string TestExecuteFileName = "\"C:\\Program Files (x86)\\SmartBear\\TestExecute 9\\Bin\\TestExecute.exe\"";
         //private const string TestExecuteFileName =
         //    "\"C:\\Program Files (x86)\\SmartBear\\TestComplete 9\\Bin\\TestComplete.exe\"";
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void SetUp()
         {
           //  IVizAutomatedLogin automatedLogin = (IVizAutomatedLogin)new VizLogin();
@@ -29,7 +29,7 @@ namespace TestExecute
          //   foreach (FileInfo file in testcompleteDirectoty.GetFiles("*", SearchOption.AllDirectories))
          //       file.Attributes = FileAttributes.Normal;
 
-            elvizVersion = ElvizInstallationUtility.GetElvizVersion();
+           // elvizVersion = ElvizInstallationUtility.GetElvizVersion();
 
             string guiRegressionSysTradeDate = "2013-06-10";
             QaDao.SetSysTradeDate(guiRegressionSysTradeDate);

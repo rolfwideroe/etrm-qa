@@ -14,7 +14,11 @@ namespace TestWCFHistoricMarketDataService
     [TestFixture]
     public class GetHistoricExchangeRatesClass
     {
-        
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
         private TestCase DeserializeXml(string testFilepath)
         {

@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestElvizUpdateTool.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestElvizUpdateTool.dll

@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFGetPriceCurveByCriteriaLive.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFGetPriceCurveByCriteriaLive.dll

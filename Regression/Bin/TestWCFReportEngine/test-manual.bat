@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWcFReportEngine.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWcFReportEngine.dll

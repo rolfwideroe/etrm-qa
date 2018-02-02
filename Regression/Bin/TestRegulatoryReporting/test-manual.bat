@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestRegulatoryReporting.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestRegulatoryReporting.dll

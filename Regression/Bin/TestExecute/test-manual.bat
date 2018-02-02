@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestExecute.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestExecute.dll

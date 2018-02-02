@@ -15,8 +15,7 @@ namespace TestReportingDB
     [TestFixture]
     public class TestSpecialCases
     {
-
-
+        
         [OneTimeSetUp]
         public void Setup()
         {

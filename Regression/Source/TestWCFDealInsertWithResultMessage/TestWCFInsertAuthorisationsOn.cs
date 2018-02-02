@@ -14,16 +14,18 @@ namespace TestWCFDealInsertWithResultMessage
     {
         private const string TestFilesAuthPath = "TestFilesAuthorisations\\";
         private static readonly IEnumerable<string> TestFilesAuthorisations = TestCasesFileEnumeratorByFolder.TestCaseFiles(TestFilesAuthPath);
-        [TestFixtureSetUp]
+        [SetUp]
         public void Setup()
         {
             if (!ConfigurationTool.AutorizationEnabled)
             {
                 ConfigurationTool.AutorizationEnabled = true;
             }
+
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        [TestFixtureTearDown]
+        [TearDown]
         public void TearDown()
         {
             if (ConfigurationTool.AutorizationEnabled)

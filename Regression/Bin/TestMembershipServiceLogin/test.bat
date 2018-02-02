@@ -1,1 +1,0 @@
-..\Prerequisites\NUnit-3.8\NUnit.Console-3.6.1\nunit3-console.exe TestMembershipServiceLogin.dll

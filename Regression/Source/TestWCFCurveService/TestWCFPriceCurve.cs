@@ -16,6 +16,12 @@ namespace TestWCFCurveService
     [TestFixture]
     public class TestWCFCurveServiceGetPriceCurve
     {
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+
         private const string PriceCurveFilePath = "Testfiles\\PriceCurve\\";
 
         private static readonly IEnumerable<string> PriceCurve = TestCasesFileEnumeratorByFolder.TestCaseFiles(PriceCurveFilePath);

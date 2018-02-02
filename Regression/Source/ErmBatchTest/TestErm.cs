@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using ElvizTestUtils;
 using ElvizTestUtils.BatchTests;
@@ -14,6 +15,8 @@ namespace TestErmBatch
 	    [OneTimeSetUp]
         public void SetUp()
 		{
+		    Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+
             ConfigurationTool.MissingRealizedDataStrategy = "ThrowException";
             ElvizConfigurationTool utility = new ElvizConfigurationTool();
             utility.RevertAllConfigurationsToDefault();

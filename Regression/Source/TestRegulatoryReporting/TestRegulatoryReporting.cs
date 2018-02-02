@@ -32,6 +32,11 @@ namespace TestRegulatoryReporting
             return new DealServiceClient(binding, address);
         }
 
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
         [Test, Timeout(2000 * 1000), TestCaseSource("TestFilesRegulatoryReporting")]
         public void TestRegulatoryReportingTestFromXmlFile(string testFile)

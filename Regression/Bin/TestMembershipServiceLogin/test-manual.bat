@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit-3.8\NUnit-Gui-0.5\nunit-gui.exe TestMembershipServiceLogin.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestMembershipServiceLogin.dll

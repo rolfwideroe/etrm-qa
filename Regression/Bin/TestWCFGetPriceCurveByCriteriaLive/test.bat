@@ -1,1 +1,0 @@
-..\Prerequisites\NUnit\bin\nunit-console.exe TestWCFGetPriceCurveByCriteriaLive.dll

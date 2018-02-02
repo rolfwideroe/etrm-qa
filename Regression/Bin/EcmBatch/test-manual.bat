@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestEcmBatch.dll 
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestEcmBatch.dll 

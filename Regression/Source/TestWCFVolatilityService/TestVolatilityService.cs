@@ -12,7 +12,11 @@ namespace TestWCFVolatilityService
     [TestFixture]
     public class TestVolatilityService
     {
-        
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
         private Option GetDefaultOption()
         {
             return new Option

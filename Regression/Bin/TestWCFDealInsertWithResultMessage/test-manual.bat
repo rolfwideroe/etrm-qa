@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestWCFDealInsertWithResultMessage.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestWCFDealInsertWithResultMessage.dll

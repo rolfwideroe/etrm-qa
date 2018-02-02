@@ -19,7 +19,12 @@ namespace TestWCFDealServiceSetPropertyValues
     [TestFixture]
     public class TestSetPropertyValues
     {
-        
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
+
 
         [Test]
         public void SetUTI()

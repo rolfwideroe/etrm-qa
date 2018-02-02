@@ -23,7 +23,7 @@ namespace TestWCFGetPriceCurveByCriteriaLive
     {
         private const string FXSpotPath = "Testfiles\\FXSpot\\SPOT.xml";
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void Setup()
         {
 

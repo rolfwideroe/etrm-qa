@@ -16,10 +16,17 @@ using NUnit.Framework;
 
 namespace TestWCFDealInsertWithResultMessage
 {
+    [TestFixture]
     class TestWCFForceSyncReportingDB
     {
         private const string TestFilesPath = "TestFilesForceSync\\";
         private static readonly IEnumerable<string> TestFiles = TestCasesFileEnumeratorByFolder.TestCaseFilesFiltred(TestFilesPath);
+
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
         [Test, Timeout(2000 * 1000), TestCaseSource("TestFiles")]
         public void UpdateDealForceSync(string testFile)

@@ -10,15 +10,20 @@ namespace TestEcmCustomConfig
     [TestFixture]
     public class EcmCustomConfig
     {
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
-        [TestFixtureSetUp]
+        [SetUp]
         public void SetUp()
         {
             ConfigurationTool.MissingRealizedDataStrategy = "ThrowException";
             EcmTestUtil.ExportAllTransactionsToDwh();
         }
 
-        [TestFixtureTearDown]
+        [TearDown]
         public void TearDown()
         {
             ElvizConfigurationTool utility = new ElvizConfigurationTool();

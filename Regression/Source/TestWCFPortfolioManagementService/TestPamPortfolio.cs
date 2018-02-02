@@ -8,7 +8,7 @@ namespace TestWCFPortfolioManagementService
     public class TestPamPortfolio
     {
 
-        [TestFixtureSetUp]
+        [SetUp]
         public void Setup()
         {
             if (!ConfigurationTool.PamEnabled)
@@ -17,7 +17,7 @@ namespace TestWCFPortfolioManagementService
             }
         }
 
-        [TestFixtureTearDown]
+        [TearDown]
         public void Teardown()
         {
             ConfigurationTool.PamEnabled = false;

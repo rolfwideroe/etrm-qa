@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit.exe TestSeleniumCRV.dll
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestSeleniumCRV.dll
