@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Configuration;
 using System.Reflection;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace SalesManager.WebUI.SeleniumTests
 {
@@ -27,6 +29,8 @@ namespace SalesManager.WebUI.SeleniumTests
         /// </summary>
         static ApplicationSettings()
         {
+            Environment.CurrentDirectory = NUnit.Framework.TestContext.CurrentContext.TestDirectory;
+
             Type type = typeof(ApplicationSettings);
             FieldInfo[] settings = type.GetFields();
 
