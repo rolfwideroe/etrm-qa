@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Xml.Serialization;
 using ElvizTestUtils;
 using ElvizTestUtils.PortfolioManagementServiceReference;
@@ -15,7 +16,11 @@ namespace TestWCFPortfolioManagementService
 
     public class TestPortfolioAPI
     {
-
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
         [Test]
         public void CreateAndFindPortfolios()
@@ -90,6 +95,7 @@ namespace TestWCFPortfolioManagementService
         }
 
         [Test]
+        [Retry(2)]
         public void DeletedPortfolioDtos()
         {
             string motherCompanyExtid = "Del_MotherCompany_" + Guid.NewGuid();
@@ -109,6 +115,7 @@ namespace TestWCFPortfolioManagementService
             childPortfolio.ParentPortfolioExternalId = null;
 
             CompanyPortfolioUtil.UpdatePortfolios(new[] { childPortfolio });
+            Thread.Sleep(1000);
             CompanyPortfolioUtil.UpdatePortfolios(new[] { motherPortfolio });
 
 

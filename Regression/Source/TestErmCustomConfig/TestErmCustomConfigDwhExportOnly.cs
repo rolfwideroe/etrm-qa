@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using ElvizTestUtils;
 using ElvizTestUtils.BatchTests;
@@ -10,7 +11,11 @@ namespace TestErmCustomConfig
     public class TestErmCustomConfigDwhExportOnly
     {
 
-
+        [OneTimeSetUp]
+        public void RunBeforeAnyTests()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+        }
 
 
         private static readonly IEnumerable<string> NewTestMonthFiles = TestCasesFileEnumeratorByFolder.TestCaseFiles("NewTestFiles");
