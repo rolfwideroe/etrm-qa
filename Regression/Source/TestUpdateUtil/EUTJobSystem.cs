@@ -4,6 +4,7 @@ using System.Data;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,7 +12,6 @@ using ElvizTestUtils;
 using ElvizTestUtils.DatabaseTools;
 using ElvizTestUtils.QaLookUp;
 using NUnit.Framework;
-using NUnit.Framework.Constraints;
 using ElvizTestUtils.InternalJobService;
 
 namespace TestElvizUpdateTool
@@ -33,7 +33,11 @@ namespace TestElvizUpdateTool
 
         public static List<string> GetList()
         {
-            string testcasefile = Path.Combine(Directory.GetCurrentDirectory(), testcasename);
+            var assembly = Assembly.GetExecutingAssembly();
+            var localPath = new Uri(assembly.CodeBase).LocalPath;
+            var directoryName = Path.GetDirectoryName(localPath);
+            Environment.CurrentDirectory = directoryName;
+            string testcasefile = Path.Combine(directoryName, testcasename);
 
             List<string> list=new List<string>();
             JobsTestCase Jobs = TestXmlTool.Deserialize<JobsTestCase>(testcasefile);

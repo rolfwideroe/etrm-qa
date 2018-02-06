@@ -20,7 +20,7 @@ namespace TestRegulatoryReporting
         private static readonly IEnumerable<string> TestFilesRegulatoryReporting = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles");
 
         //private string Path2EmirServer = "localhost";
-        private string Path2EmirServer = "NETVS-QA161A02";
+        private string Path2EmirServer = "NETVS-QA161A02.nortest.bradyplc.com";
         private const string DealServiceUrl = "http://{0}:8009/DealService";
 
         private DealServiceClient GetDealServiceServiceProxy()
