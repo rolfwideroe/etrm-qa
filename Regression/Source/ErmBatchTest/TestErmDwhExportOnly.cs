@@ -9,8 +9,9 @@ namespace TestErmBatch
     [TestFixture]
     public class TestErmDwhExportOnly
     {
- 
-
+        //[Category("DwhExportOnly")] is not for regression purposes
+        //it was used when creating new DWH export
+        //can be used for checking calculation
 
 
         private static readonly IEnumerable<string> NewTestMonthFiles = TestCasesFileEnumeratorByFolder.TestCaseFiles("NewTestFiles");

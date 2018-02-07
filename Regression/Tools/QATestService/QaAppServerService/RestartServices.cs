@@ -16,7 +16,7 @@ namespace QATestService
         public void RestartElvizServices()
         {
             StopElvizServices();
-            Thread.Sleep(5000);
+            Thread.Sleep(10000);
             StartElvizServices();
         }
         public void StopElvizServices()
@@ -60,7 +60,7 @@ namespace QATestService
                     service.WaitForStatus(ServiceControllerStatus.Stopped);
 
                     if (serviceName == "Brady.ETRM" || serviceName == "Brady.ETRM.Priceboard")
-                        Thread.Sleep(30000);
+                        Thread.Sleep(40000);
                 }
                 if(service.Status!=ServiceControllerStatus.Stopped) throw new ArgumentException("The service: "+serviceName+" was not stopped");
                 

@@ -38,7 +38,7 @@ namespace TestRegulatoryReporting
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
         }
 
-        [Test, Timeout(2000 * 1000), TestCaseSource("TestFilesRegulatoryReporting")]
+        [Test, Timeout(200 * 1000), TestCaseSource("TestFilesRegulatoryReporting")]
         public void TestRegulatoryReportingTestFromXmlFile(string testFile)
         {
             Thread.Sleep(5000);
