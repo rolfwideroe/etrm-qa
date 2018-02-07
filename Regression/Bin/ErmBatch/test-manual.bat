@@ -1,1 +1,1 @@
-start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestErmBatch.dll /exclude:ERM_New
+start ..\Prerequisites\NUnit\bin\nunit-gui.exe TestErmBatch.dll

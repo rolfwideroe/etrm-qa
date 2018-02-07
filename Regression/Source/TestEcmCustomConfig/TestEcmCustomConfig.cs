@@ -57,6 +57,9 @@ namespace TestEcmCustomConfig
 
     }
 
+    //[Category("DwhExportOnly")] is not for regression purposes
+    //it was used when creating new DWH export
+    //can be used for checking calculation
     public class EcmCustomConfigDwhOnly
     {
         private const string TestFiles = "Testfiles\\";

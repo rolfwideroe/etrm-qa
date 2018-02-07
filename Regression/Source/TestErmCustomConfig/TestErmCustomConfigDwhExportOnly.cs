@@ -10,6 +10,9 @@ namespace TestErmCustomConfig
     [TestFixture]
     public class TestErmCustomConfigDwhExportOnly
     {
+        //[Category("DwhExportOnly")] is not for regression purposes
+        //it was used when creating new DWH export
+        //can be used for checking calculation
 
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
@@ -46,7 +49,7 @@ namespace TestErmCustomConfig
             ErmTestUtil.DoTestERM(test, "ERM_New_Month_Paralell", newVersion_calculations, newVersion_verification, true, resolution, false);
         }
 
-        private static readonly IEnumerable<string> ExposureByHourTestFiles = TestCasesFileEnumeratorByFolder.TestCaseFiles("ExposureByHourTestFiles");
+        private static readonly IEnumerable<string> ExposureByHourTestFiles = TestCasesFileEnumeratorByFolder.TestCaseFilesFiltred("ExposureByHourTestFiles");
 
         [Test, TestCaseSource("ExposureByHourTestFiles")]
         [Category("DwhExportOnly")]

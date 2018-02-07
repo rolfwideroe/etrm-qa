@@ -10,6 +10,10 @@ namespace TestEcmBatch
 {
     public class TestEcmDwhExportOnly
     {
+        //[Category("DwhExportOnly")] is not for regression purposes
+        //it was used when creating new DWH export
+        //can be used for checking calculation
+
         private const string TestFiles = "Testfiles\\";
         private static readonly IEnumerable<string> TestFilesECM = TestCasesFileEnumeratorByFolder.TestCaseFiles(TestFiles);
 
