@@ -207,8 +207,29 @@ namespace ElvizTestUtils
             }
             else
                 ExecuteAndAssertJob(eutJobs[0].Id, 600);
+       
+        }
+        //added extra function to avoid test to fail because of problem with EEX source when downloading prices 
+        //which is not related to current test
+        public static void RunEutJobOncePerDayWithoutAssert(string description, string jobType = "Historic Data Update Job")
+        {
+            //string description = "EEX (power and gas)";
+            Job[] eutJobs = GetJobsByDescriptionOrJobtype(description, jobType);
+
+            Assert.AreEqual(1, eutJobs.Length, "Function returned more that one job corresponding specified description/jobtype " + description + "/" + jobType);
+            if (eutJobs[0].LastRunResult == "Success")
+            {
+                DateTime lastRunTime = eutJobs[0].LastRunTimeUtc;
+                DateTime localLastRunTime = lastRunTime.ToLocalTime();
+                int today = DateTime.Today.Day;
+                if (today > localLastRunTime.Day)
+                    ExecuteJob(eutJobs[0].Id, null, 600);
+            }
+            else
+                ExecuteJob(eutJobs[0].Id, null, 600);
 
         }
+
 
     }
 }

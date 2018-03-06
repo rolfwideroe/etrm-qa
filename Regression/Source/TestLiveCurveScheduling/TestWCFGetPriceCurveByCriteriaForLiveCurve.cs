@@ -174,13 +174,13 @@ namespace TestLiveCurveScheduling
                                 //}
                               //  Console.WriteLine("For period= " + fromDate.ToString("d") + " - " + toDate.ToString("d") + " price =" + testCurveDto.Prices[0]);
                                 double actualPrice = testCurveDto.Prices[0];
-                                if (Math.Abs(actualPrice) >= 1e-8 || Math.Abs(l.Close) >= 1e-8)
+                                if (Math.Abs(actualPrice) >= 1e-6 || Math.Abs(l.Close) >= 1e-6)
                                 {
                                     double relativeError = (actualPrice / l.Close) - 1;
                                     string errorMessage = "The actual Value for period : " + l.FromDateTime.ToString("d") + " - " + l.ToDateTime.ToString("d") + " did not match expected value " +
                                                           actualPrice + " vs " + l.Close;
                                     //Assert value
-                                    Assert.AreEqual(0, relativeError, 1e-7, errorMessage);
+                                    Assert.AreEqual(0, relativeError, 1e-6, errorMessage);
                                 }
 
                                 Assert.AreEqual(l.LoadType, testCurveDto.LoadType, "LoadType not equal");
