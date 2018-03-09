@@ -32,7 +32,7 @@ namespace TestGenConExport
             string testFilePathCFIN = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\CF\\" + Path.GetFileNameWithoutExtension(testFile) + "_CF_IN.xml");
             string testFilePathCFOUT = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\CF\\" + Path.GetFileNameWithoutExtension(testFile) + "_CF_OUT.xml");
             string exportFilePath = Path.Combine("\\\\" + ElvizTestUtils.ElvizInstallationUtility.GetAppServerName(),
-                            "BradyETRM\\Integration\\Viz.Integration.Core.ElvizEntityExport", "Files\\");
+                            "BradyETRM\\Integration", "ElvizEntityExportParameters\\");
 
             string exportLocalFilePath = Path.Combine(Directory.GetCurrentDirectory(), "ExportFiles\\");
             if (!Directory.Exists(exportLocalFilePath)) Directory.CreateDirectory(exportLocalFilePath);

@@ -16,6 +16,16 @@ namespace TestLiveCurveScheduling
         const double tolerance = GlobalConstTestSettings.DEFAULT_FLOATING_POINT_TOLLERANCE;
 
         [OneTimeSetUp]
+        public void OneTimeSetup()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+          
+            //we need up2date prices to publish price books 
+            JobAPI.RunEutJobOncePerDayWithoutAssert("EEX (power and gas)");
+
+        }
+
+        [SetUp]
         public void Setup()
         {
             Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
@@ -24,9 +34,6 @@ namespace TestLiveCurveScheduling
 
             //update LastDateRunFor for Volatilities because Volatility job can be run only once for report date
             QaDao.UpdateLastDateRunForVolatilities("EEX_volatilities","2017-12-31");
-
-            //we need up2date prices to publish price books 
-            JobAPI.RunEutJobOncePerDayWithoutAssert("EEX (power and gas)");
             
         }
 
