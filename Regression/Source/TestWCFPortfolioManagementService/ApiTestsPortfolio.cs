@@ -95,7 +95,7 @@ namespace TestWCFPortfolioManagementService
         }
 
         [Test]
-        [Retry(2)]
+        [Retry(3)]
         public void DeletedPortfolioDtos()
         {
             string motherCompanyExtid = "Del_MotherCompany_" + Guid.NewGuid();
