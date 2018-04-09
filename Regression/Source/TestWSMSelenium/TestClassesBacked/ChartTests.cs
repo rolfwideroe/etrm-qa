@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using ElvizTestUtils;
 
 namespace SalesManager.WebUI.SeleniumTests.TestClasses
@@ -15,15 +16,17 @@ namespace SalesManager.WebUI.SeleniumTests.TestClasses
         {
             List<string> jobs = new List<string>(new String[]
             {
-                "NPXSYSALL(Close Price)",
-                "NPX4WSM(Close Price)",
-                "__WSM_BID_TEST(Bid Price)",
-                "__WSM_ASK_TEST(Ask Price)"
+                "NPXSYSALL (Close Price)",
+                "NPX4WSM (Close Price)",
+                "__WSM_BID_TEST (Bid Price)",
+                "__WSM_ASK_TEST (Ask Price)"
             });
+
+            string integrationAppServerName = ConfigurationManager.AppSettings["IntegrationAppServerName"];
 
             foreach (string jobDescription in jobs)
             {
-                int jobId = JobAPI.GetJobsIdByDescription(jobDescription, "Live Price Book Snapshot Job");
+                int jobId = JobAPI.GetJobsIdByDescription(jobDescription, "Live Price Book Snapshot Job", appServerName: integrationAppServerName);
                 JobAPI.ExecuteAndAssertJob(jobId, 300);
             }
 

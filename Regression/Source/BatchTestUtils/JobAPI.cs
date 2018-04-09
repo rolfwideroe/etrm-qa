@@ -32,6 +32,26 @@ namespace ElvizTestUtils
             
         }
 
+        public static int GetJobsIdByDescription(string description, string jobType, string appServerName)
+        {
+            IJobService service = WCFClientUtil.GetJobServiceClient(appServerName);
+
+            JobCriteria curveJob = new JobCriteria
+            {
+                Description = description,
+                JobType = jobType
+            };
+
+            Job[] jobs = service.QueryJobs(curveJob);
+            foreach (Job job in jobs)
+            {
+                if (job.Description == description && job.JobType == jobType)
+                    return job.Id;
+            }
+            throw new ArgumentException("Could not find job by description: " + description);
+
+        }
+
         public static IEnumerable<Job> GetJobsByJobtype(string jobType,string appServerName)
         {
             IJobService service = WCFClientUtil.GetJobServiceClient(appServerName);
