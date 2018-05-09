@@ -41,7 +41,9 @@ namespace TestRegulatoryReporting
         [Test, Timeout(200 * 1000), TestCaseSource("TestFilesRegulatoryReporting")]
         public void TestRegulatoryReportingTestFromXmlFile(string testFile)
         {
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
+
+            var transactionID = new int();
 
             string testFilePath = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\" + testFile);
             string resultFileDirectory = ElvizInstallationUtility.AcerXmlFolder(Path2EmirServer);
@@ -114,11 +116,11 @@ namespace TestRegulatoryReporting
                 }
                 else
                     uti = doc.GetElementsByTagName("CustomProperties").Item(0)?.FirstChild.ChildNodes[1].Attributes?[1].Value;
-                RunDealInsert(dealInsertResult, dealNode);
+                transactionID = RunDealInsert(dealInsertResult, dealNode);
             }
 
 
-            string resultFilePath = CheckResultFilePath(resultFileDirectory, timeAtDealImport, uti);
+            string resultFilePath = CheckResultFilePath(resultFileDirectory, timeAtDealImport, uti, transactionID);
 
             XmlDocument newDocument = new XmlDocument();
             newDocument.Load(resultFilePath);
@@ -127,10 +129,10 @@ namespace TestRegulatoryReporting
 
             if (isEmir)
             {
-                RunDealInsert(dealInsertResult, dealNode);
+                transactionID = RunDealInsert(dealInsertResult, dealNode);
 
                 timeAtDealImport = DateTime.Now;
-                resultFilePath = CheckResultFilePath(resultFileDirectory, timeAtDealImport, uti);
+                resultFilePath = CheckResultFilePath(resultFileDirectory, timeAtDealImport, uti, transactionID);
                 newDocument = new XmlDocument();
                 newDocument.Load(resultFilePath);
 
@@ -139,7 +141,7 @@ namespace TestRegulatoryReporting
             }
         }
 
-        private void RunDealInsert(string dealInsertResult, XmlNodeList dealNode)
+        private int RunDealInsert(string dealInsertResult, XmlNodeList dealNode)
         {
             IDealService dealServiceClient = GetDealServiceServiceProxy();
 
@@ -158,6 +160,7 @@ namespace TestRegulatoryReporting
 
             XmlNodeList resultNode = resultXml.GetElementsByTagName("Result");
             string dealinsertResult = resultNode[0].InnerText;
+                       
 
             Assert.AreEqual(1, resultNode.Count, "Result Message is not valid, it has multiple results");
 
@@ -169,6 +172,19 @@ namespace TestRegulatoryReporting
 
                 Assert.Fail("Expected Success, but was Failure: " + " \n ErrorMessage : " + actualErrorString);
             }
+
+            var transactionId = resultXml.GetElementsByTagName("TransactionId")[0].InnerText;
+
+            try
+            {
+                return Int32.Parse(transactionId);
+            }
+            catch (FormatException e)
+            {
+                Assert.Fail("Expected Transaction Id to be integer but was " + transactionId + "\n\n" + e);
+                return -1;
+            }
+            
         }
 
         private void CompareResult(XmlDocument newDocument, XmlNodeList regulatoryReportingNode)
@@ -226,25 +242,35 @@ namespace TestRegulatoryReporting
             }
         }
 
-        private static string CheckResultFilePath(string resultFileDirectory, DateTime timeAtDealImport, string uti)
+        private static string CheckResultFilePath(string resultFileDirectoryPath, DateTime timeAtDealImport, string uti, int transactionID)
         {
             string resultFilePath = "";
             int timeout = 25000;
             Stopwatch sw = Stopwatch.StartNew();
             int numberOfResultFiles = 0;
+
+            var resultFileWildcard = "*"+ transactionID + "*.xml";
+
             while (sw.ElapsedMilliseconds < timeout)
             {
-                string[] resultFiles = new string[0];
-                if (Directory.Exists(resultFileDirectory))
-                    resultFiles = Directory.GetFiles(resultFileDirectory);
-
-                numberOfResultFiles = resultFiles.Length;
-                foreach (string resultFile in resultFiles)
+                FileInfo[] resultFiles = new FileInfo[0];
+               
+                if (Directory.Exists(resultFileDirectoryPath))
                 {
-                    if ((Directory.GetLastWriteTime(resultFile) - timeAtDealImport) > TimeSpan.Zero)
+                    var resultFileDirectoryInfo = new DirectoryInfo(resultFileDirectoryPath);
+                    resultFiles = resultFileDirectoryInfo.GetFiles(resultFileWildcard);
+
+                }
+                
+                foreach (FileInfo resultFile in resultFiles)
+                {
+                    if ((resultFile.LastWriteTime - timeAtDealImport) > TimeSpan.Zero)
                     {
+                        
                         XmlDocument newDocument = new XmlDocument();
-                        newDocument.Load(resultFile);
+
+                        resultFilePath = resultFile.DirectoryName + "\\\\" + resultFile.Name;
+                        newDocument.Load(resultFilePath);
                         XmlNode utiNode = newDocument.GetElementsByTagName("tradeId").Item(0);
                         string foundUti = utiNode?.InnerText;
                         if (string.IsNullOrEmpty(foundUti))
@@ -262,19 +288,19 @@ namespace TestRegulatoryReporting
 
                         if (foundUti == uti)
                         {
-                            resultFilePath = resultFile;
+                            //resultFilePath = resultFile.Name;
                             timeout = 0;
                             break;
                         }
                     }
                 }
 
-                Thread.Sleep(1000);
+                //Thread.Sleep(1000);
             }
 
             if (string.IsNullOrEmpty(resultFilePath))
                 Assert.Fail(string.Format("No result file found, either timeout or something went wrong: {0}; {1}",
-                    resultFileDirectory, numberOfResultFiles));
+                    resultFileDirectoryPath, numberOfResultFiles));
             return resultFilePath;
         }
 
