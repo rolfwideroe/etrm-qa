@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TestElvizUpdateTool;
 using TestElvizUpdateTool.Helpers;
 
 namespace TestElvizUpdateTools.Tests
