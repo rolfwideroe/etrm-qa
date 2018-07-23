@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using ElvizTestUtils;
 using NUnit.Framework;
@@ -14,11 +15,6 @@ namespace TestElvizUpdateTool
     {
         public EUTJobSystem()
         {
-            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
-            TestcaseName = @"TestFiles\EUTJobs.xml";
-            Localfolderpath = @"\TestFiles\TestsInLocalFolder";
-            EutJobs = new EutJobs(TestcaseName);
-            JobItemsList = EutJobs.TestCaseJobItemsList;
             DestinationPath = @"\\BERSV-FS01\Felles\QA\Regression_EUT\PricesFromLocalFolder\";
             FullTestCaseFilePath = Path.Combine(Directory.GetCurrentDirectory() + Localfolderpath);
             ManageWindowsDirectories = new ManageWindowsDirectories(FullTestCaseFilePath, DestinationPath, true);
@@ -27,20 +23,23 @@ namespace TestElvizUpdateTool
             IsDayLightTime = ReportDateHandler.IsDayLightTime();
         }
 
-        private string DestinationPath { get; }
-        private string FullTestCaseFilePath { get; }
+        string DestinationPath { get; }
+        string FullTestCaseFilePath { get; }
         public bool IsDayLightTime { get; }
-        private string TestcaseName { get; }
-        private string Localfolderpath { get; }
-        private EutJobs EutJobs { get; }
-        public IEnumerable<JobItem> JobItemsList { get; set; }
-        private ManageWindowsDirectories ManageWindowsDirectories { get; }
-        private DateTime ReportDate { get; set; }
-        private ReportDateHandler ReportDateHandler { get; set; }
-        private static readonly ILog Log =
+        static string TestcaseName { get; set; }
+        static string Localfolderpath { get; set; }
+        static EutJobs EutJobs { get; set; }
+        static IEnumerable<JobItem> JobItemsList { get; set; }
+        ManageWindowsDirectories ManageWindowsDirectories { get; }
+        DateTime ReportDate { get; set; }
+        ReportDateHandler ReportDateHandler { get; set; }
+        static readonly ILog Log =
             LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
-        [Test, TestCaseSource(nameof(JobItemsList))]
+        static IEnumerable<string> EUTJobDescriptions = ConvertObjectToListOfString();
+
+
+        [Test, TestCaseSource("EUTJobDescriptions")]
         public void DownloadAndCheckAreaPricesVizPrices(string description)
         {
             var execution = new Execution(description);
@@ -57,6 +56,17 @@ namespace TestElvizUpdateTool
             var jobid = JobAPI.GetJobsIdByDescription("Prices from local folder", "Historic Data Update Job");
 
             JobAPI.ExecuteAndAssertJob(jobid, 3600);
+        }
+
+        private static IEnumerable<string> ConvertObjectToListOfString()
+        {
+            Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
+            TestcaseName = @"TestFiles\EUTJobs.xml";
+            Localfolderpath = @"\TestFiles\TestsInLocalFolder";
+            EutJobs = new EutJobs(TestcaseName);
+            JobItemsList = EutJobs.TestCaseJobItemsList;
+
+            return JobItemsList.Select(jobItem => jobItem.Description).ToList();
         }
     }
 }

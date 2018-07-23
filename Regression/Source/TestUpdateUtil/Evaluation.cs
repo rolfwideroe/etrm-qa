@@ -21,20 +21,20 @@ namespace TestElvizUpdateTool
             IsDayLightTime = isDayLightTime;
         }
 
-        private int RecordMultiplier { get; set; } = 1;
-        private string CurrentInstrumentArea { get; set; }
-        private string CurrentResolution { get; set; }
-        private string TestCaseName { get; set; }
-        private string Description { get; set; }
-        private DateTime ReportDate { get; set; }
-        private string ExecutionVenue { get; set; }
-        private IEnumerable<InstrumentPrice> InstrumentPricesList { get; set; }
-        private IEnumerable<SpotPrice> SpotPricesList { get; set; }
-        private List<string> ErrorRecordingList { get; set; } = new List<string>();
-        private bool IsDayLightTime { get; set; }
-        private IList<ErrorRecorder> ErrorRecorderList { get; set; } = new List<ErrorRecorder>();
-        private string SpotPriceQueryMessage { get; set; } = "Query did not return correct number of spot price records for report date";
-        private string InstrumentPriceQueryMessage { get; set; } = "Query did not return any instrument price record for report date";
+        int RecordMultiplier { get; set; } = 1;
+        string CurrentInstrumentArea { get; set; }
+        string CurrentResolution { get; set; }
+        string TestCaseName { get; set; }
+        string Description { get; set; }
+        DateTime ReportDate { get; set; }
+        string ExecutionVenue { get; set; }
+        IEnumerable<InstrumentPrice> InstrumentPricesList { get; set; }
+        IEnumerable<SpotPrice> SpotPricesList { get; set; }
+        List<string> ErrorRecordingList { get; set; } = new List<string>();
+        bool IsDayLightTime { get; set; }
+        IList<ErrorRecorder> ErrorRecorderList { get; set; } = new List<ErrorRecorder>();
+        string SpotPriceQueryMessage { get; set; } = "Query did not return correct number of spot price records for report date";
+        string InstrumentPriceQueryMessage { get; set; } = "Query did not return any instrument price record for report date";
 
         public bool Result()
         {

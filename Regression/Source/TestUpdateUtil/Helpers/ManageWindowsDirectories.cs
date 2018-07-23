@@ -13,9 +13,9 @@ namespace TestElvizUpdateTool.Helpers
             CopySubDirectories = copySubDirectories;
         }
 
-        private string SourceDirectoryName { get; }
-        private string DestinationDirectoryName { get; }
-        private bool CopySubDirectories { get; }
+        string SourceDirectoryName { get; }
+        string DestinationDirectoryName { get; }
+        bool CopySubDirectories { get; }
         public static int ProcessTimeOut { get; } = 10000;
 
         public void Replenish()

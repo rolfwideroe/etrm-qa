@@ -9,9 +9,9 @@ namespace TestElvizUpdateTool
             Description = description;
             JobId  = JobAPI.GetJobsIdByDescription(Description, "Historic Data Update Job");
         }
-        private string Description { get; }
-        private bool Status { get; set; } = true;
-        private int JobId { get; set; }
+        string Description { get; }
+        bool Status { get; set; } = true;
+        int JobId { get; set; }
 
         public bool JobExecuted()
         {

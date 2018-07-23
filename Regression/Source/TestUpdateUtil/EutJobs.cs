@@ -23,12 +23,12 @@ namespace TestElvizUpdateTool
             TestCaseJobsList = TestXmlTool.Deserialize<JobsTestCase>(TestCaseFile);
         }
 
-        private static string TestCaseName { get; set; }
-        private Assembly ExecutingAssembly { get; }
-        private string LocalPath { get; }
-        private string DirectoryName { get; }
-        private string TestCaseFile { get; }
-        private JobsTestCase TestCaseJobsList { get; }
+        static string TestCaseName { get; set; }
+        Assembly ExecutingAssembly { get; }
+        string LocalPath { get; }
+        string DirectoryName { get; }
+        string TestCaseFile { get; }
+        JobsTestCase TestCaseJobsList { get; }
         public IEnumerable<JobItem> TestCaseJobItemsList => TestCaseJobsList.JobItems.ToList();
     }
 }

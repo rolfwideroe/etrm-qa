@@ -12,10 +12,10 @@ namespace TestElvizUpdateTool.Helpers
             StartOfDayLightTime = DaylightTime.Start.Date;
             EndOfDayLightTime = DaylightTime.End.Date;
         }
-        private DateTime ReportDate { get; }
-        private DaylightTime DaylightTime { get; }
-        private DateTime StartOfDayLightTime {get;}
-        private DateTime EndOfDayLightTime { get; }
+        DateTime ReportDate { get; }
+        DaylightTime DaylightTime { get; }
+        DateTime StartOfDayLightTime {get;}
+        DateTime EndOfDayLightTime { get; }
 
         public bool IsDayLightTime() => ReportDate == StartOfDayLightTime || ReportDate == EndOfDayLightTime;
         public DateTime IgnoreWeekends() => ReportDate.DayOfWeek == DayOfWeek.Sunday ?
