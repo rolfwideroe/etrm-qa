@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TestProjectType>UnitTest</TestProjectType>    
+    <TestProjectType>UnitTest</TestProjectType>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A914D8BC-D6BC-4CF1-BF10-6BDC5575896E}</ProjectGuid>
@@ -40,6 +40,9 @@
     <OutputPath>bin\Pretest\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -53,7 +56,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\ErrorRecorder.cs" />
+    <Compile Include="EutJobs.cs" />
     <Compile Include="EUTJobSystem.cs" />
+    <Compile Include="Evaluation.cs" />
+    <Compile Include="Execution.cs" />
+    <Compile Include="Helpers\ManageWindowsDirectories.cs" />
+    <Compile Include="Helpers\ReportDateHandler.cs" />
     <Compile Include="TestElvizUpdateTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
