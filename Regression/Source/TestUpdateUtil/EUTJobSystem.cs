@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using ElvizTestUtils;
 using NUnit.Framework;
-using log4net;
+using Shouldly;
 using TestElvizUpdateTool.Helpers;
 
 namespace TestElvizUpdateTool
@@ -33,8 +32,6 @@ namespace TestElvizUpdateTool
         ManageWindowsDirectories ManageWindowsDirectories { get; }
         DateTime ReportDate { get; set; }
         ReportDateHandler ReportDateHandler { get; set; }
-        static readonly ILog Log =
-            LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         static IEnumerable<string> EUTJobDescriptions = ConvertObjectToListOfString();
 
@@ -45,7 +42,10 @@ namespace TestElvizUpdateTool
             var execution = new Execution(description);
             Assert.IsTrue(execution.JobExecuted());
             var evaluation = new Evaluation(TestcaseName, description, ReportDate, IsDayLightTime);
-            Assert.IsTrue(evaluation.Result());
+
+            var evaluationErrors = evaluation.Result();
+
+            evaluationErrors.Count().ShouldBeLessThanOrEqualTo(1, "There were serious errors, please check the Error logs");
         }
 
         [Test]

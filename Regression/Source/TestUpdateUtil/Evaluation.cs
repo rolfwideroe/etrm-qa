@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using ElvizTestUtils;
 using ElvizTestUtils.DatabaseTools;
-using TestElvizUpdateTool.Helpers;
+using ErrorManager;
+
 
 namespace TestElvizUpdateTool
 {
@@ -30,16 +30,20 @@ namespace TestElvizUpdateTool
         string ExecutionVenue { get; set; }
         IEnumerable<InstrumentPrice> InstrumentPricesList { get; set; }
         IEnumerable<SpotPrice> SpotPricesList { get; set; }
-        List<string> ErrorRecordingList { get; set; } = new List<string>();
         bool IsDayLightTime { get; set; }
-        IList<ErrorRecorder> ErrorRecorderList { get; set; } = new List<ErrorRecorder>();
+        IList<LoggingDetails> ErrorRecorderList { get; set; } = new List<LoggingDetails>();
+        IList<ErrorDetails> ErrorDetails = new List<ErrorDetails>();
+        Type CallingClass { get; set; } = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
         string SpotPriceQueryMessage { get; set; } = "Query did not return correct number of spot price records for report date";
         string InstrumentPriceQueryMessage { get; set; } = "Query did not return any instrument price record for report date";
 
-        public bool Result()
+        public IEnumerable<ErrorDetails> Result()
         {
             SetUpAndEvaluate();
-            return ErrorRecordingList.Count == 0;
+
+            ErrorChecker();
+
+            return ErrorDetails;
         }
 
         private void SetUpAndEvaluate()
@@ -126,17 +130,16 @@ namespace TestElvizUpdateTool
             }
         }
 
-        private void RecordAnError(string testName, string field, string description)
+        private void RecordAnError(string methodName, string field, string description)
         {
-            var errorRecorder = new ErrorRecorder
+            var loggingDetail = new LoggingDetails
             {
-                TestName = testName,
-                Field = field,
-                Description = description,
-                RecordedOn = DateTime.UtcNow
+                Level = LogLevel.Error,
+                Message = $"{description} for {field} in {methodName}",
+                CallingClass = CallingClass
             };
 
-            ErrorRecorderList.Add(errorRecorder);
+            ErrorRecorderList.Add(loggingDetail);
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
@@ -146,6 +149,54 @@ namespace TestElvizUpdateTool
             var stackFrame = stackTrace.GetFrame(1);
 
             return stackFrame.GetMethod().Name;
+        }
+
+        private void ErrorChecker()
+        {
+            if (ErrorRecorderList.Count == 0)
+            {
+                var errorDetail = new ErrorDetails
+                {
+                    Occurred = false,
+                    Details = null
+                };
+                ErrorDetails.Add(errorDetail);
+            }
+            else
+            {
+
+                Logger.Record(ErrorRecorderList);
+
+                var fatalErrorException =
+                    ErrorRecorderList.Where(x => x.Level == LogLevel.Exception ||
+                                                 x.Level == LogLevel.Fatal ||
+                                                 x.Level == LogLevel.Error);
+
+                var loggingDetailses = fatalErrorException.ToList();
+
+                if (!loggingDetailses.Any())
+                {
+                    var errorDetail = new ErrorDetails
+                    {
+                        Occurred = false,
+                        Details = null
+                    };
+                    ErrorDetails.Add(errorDetail);
+                    return;
+                }
+
+                foreach (var fatalError in loggingDetailses)
+                {
+                    if (fatalError.Level != LogLevel.Error && fatalError.Level != LogLevel.Exception &&
+                        fatalError.Level != LogLevel.Fatal) continue;
+                    var errorDetail = new ErrorDetails
+                    {
+                        Occurred = true,
+                        Details = fatalError
+                    };
+                    ErrorDetails.Add(errorDetail);
+                }
+            }
         }
     }
 }
