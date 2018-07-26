@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace ErrorManager
+﻿namespace MessageHandler.Pocos
 {
     public class LoggingDetails
     {

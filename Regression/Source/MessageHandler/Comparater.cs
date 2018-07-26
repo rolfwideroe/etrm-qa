@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ErrorManager
+namespace MessageHandler
 {
-    class Reporter
+    public class Comparater
     {
     }
 }

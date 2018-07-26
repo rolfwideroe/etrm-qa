@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ErrorManager")]
-[assembly: AssemblyDescription("Dealing with errors. logging, reporting and comparisons")]
+[assembly: AssemblyTitle("MessageHandler.Tests")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Brady PLC")]
-[assembly: AssemblyProduct("ErrorManager")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("MessageHandler.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6c962956-ae1b-44e8-9c84-d7850508a569")]
+[assembly: Guid("9008cfbf-d055-4d14-a543-d25fa17dfe4b")]
 
 // Version information for an assembly consists of the following four values:
 //

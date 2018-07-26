@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using ElvizTestUtils;
+using MessageHandler;
 using NUnit.Framework;
 using Shouldly;
 using TestElvizUpdateTool.Helpers;
+using static MessageHandler.Reporter;
 
 namespace TestElvizUpdateTool
 {
@@ -33,6 +35,7 @@ namespace TestElvizUpdateTool
         DateTime ReportDate { get; set; }
         ReportDateHandler ReportDateHandler { get; set; }
 
+
         static IEnumerable<string> EUTJobDescriptions = ConvertObjectToListOfString();
 
 
@@ -40,12 +43,11 @@ namespace TestElvizUpdateTool
         public void DownloadAndCheckAreaPricesVizPrices(string description)
         {
             var execution = new Execution(description);
-            Assert.IsTrue(execution.JobExecuted());
+            execution.JobExecuted().ShouldBeTrue();
+
             var evaluation = new Evaluation(TestcaseName, description, ReportDate, IsDayLightTime);
 
-            var evaluationErrors = evaluation.Result();
-
-            evaluationErrors.Count().ShouldBeLessThanOrEqualTo(1, "There were serious errors, please check the Error logs");
+            Display(evaluation.Result(), ShouldlyEvaluation.Empty);
         }
 
         [Test]

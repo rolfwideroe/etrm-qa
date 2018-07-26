@@ -1,4 +1,4 @@
-﻿namespace ErrorManager
+﻿namespace MessageHandler
 {
     public enum LogLevel
     {
@@ -17,5 +17,12 @@
         Two,
         Three,
         Unlimited
+    }
+
+    public enum ShouldlyEvaluation
+    {
+        Empty = 0,
+        Null,
+        NotNull
     }
 }
