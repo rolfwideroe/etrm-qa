@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using ElvizTestUtils;
+using MessageHandler;
 using NUnit.Framework;
-using log4net;
+using Shouldly;
 using TestElvizUpdateTool.Helpers;
+using static MessageHandler.Reporter;
 
 namespace TestElvizUpdateTool
 {
@@ -33,8 +34,7 @@ namespace TestElvizUpdateTool
         ManageWindowsDirectories ManageWindowsDirectories { get; }
         DateTime ReportDate { get; set; }
         ReportDateHandler ReportDateHandler { get; set; }
-        static readonly ILog Log =
-            LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+
 
         static IEnumerable<string> EUTJobDescriptions = ConvertObjectToListOfString();
 
@@ -43,9 +43,11 @@ namespace TestElvizUpdateTool
         public void DownloadAndCheckAreaPricesVizPrices(string description)
         {
             var execution = new Execution(description);
-            Assert.IsTrue(execution.JobExecuted());
+            execution.JobExecuted().ShouldBeTrue();
+
             var evaluation = new Evaluation(TestcaseName, description, ReportDate, IsDayLightTime);
-            Assert.IsTrue(evaluation.Result());
+
+            Display(evaluation.Result(), ShouldlyEvaluation.Empty);
         }
 
         [Test]

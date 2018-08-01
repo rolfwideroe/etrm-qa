@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using ElvizTestUtils;
 using ElvizTestUtils.DatabaseTools;
-using TestElvizUpdateTool.Helpers;
+using MessageHandler;
+using MessageHandler.Pocos;
+
 
 namespace TestElvizUpdateTool
 {
@@ -30,16 +31,17 @@ namespace TestElvizUpdateTool
         string ExecutionVenue { get; set; }
         IEnumerable<InstrumentPrice> InstrumentPricesList { get; set; }
         IEnumerable<SpotPrice> SpotPricesList { get; set; }
-        List<string> ErrorRecordingList { get; set; } = new List<string>();
         bool IsDayLightTime { get; set; }
-        IList<ErrorRecorder> ErrorRecorderList { get; set; } = new List<ErrorRecorder>();
+        IList<MessageDetails> MessageDetails = new List<MessageDetails>();
+        Type CallingClass { get; set; } = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
         string SpotPriceQueryMessage { get; set; } = "Query did not return correct number of spot price records for report date";
         string InstrumentPriceQueryMessage { get; set; } = "Query did not return any instrument price record for report date";
 
-        public bool Result()
+        public IEnumerable<MessageDetails> Result()
         {
             SetUpAndEvaluate();
-            return ErrorRecordingList.Count == 0;
+
+            return MessageDetails;
         }
 
         private void SetUpAndEvaluate()
@@ -49,15 +51,17 @@ namespace TestElvizUpdateTool
             var jobsTestCase = TestXmlTool.Deserialize<JobsTestCase>(testCaseFilePath);
 
             var jobItem = jobsTestCase.JobItems.Single(x => x.Description == Description);
-            if (jobItem == null) throw new ArgumentException("Could not find EUT source by description: " + Description);
-            {
-                ExecutionVenue = jobItem.ExecutionVenue;
-                InstrumentPricesList = jobItem.InstrumentPrices;
-                SpotPricesList = jobItem.SpotPrices;
 
-                if (InstrumentPricesList != null && ExecutionVenue != null) EvaluateInstrumentPrices();
-                if (SpotPricesList != null) EvaluateSpotPrices();
-            }
+            if (jobItem == null)
+                throw new ArgumentException("Could not find EUT source by description: " + Description);
+
+            ExecutionVenue = jobItem.ExecutionVenue;
+            InstrumentPricesList = jobItem.InstrumentPrices;
+            SpotPricesList = jobItem.SpotPrices;
+
+            if (InstrumentPricesList != null && ExecutionVenue != null) EvaluateInstrumentPrices();
+            if (SpotPricesList != null) EvaluateSpotPrices();
+
         }
 
         private void EvaluateSpotPrices()
@@ -78,31 +82,31 @@ namespace TestElvizUpdateTool
                 switch (CurrentResolution.ToUpper())
                 {
                     case "DAY" when results != 1 * RecordMultiplier:
-                        RecordAnError(GetCurrentMethodName(), CurrentResolution,
+                       MessageDetails.Add(Evaluator.MessageConstructor(LogLevel.Error, CallingClass, GetCurrentMethodName(), CurrentResolution,
                             $"{SpotPriceQueryMessage} = {ReportDate} , price area = {CurrentInstrumentArea}, " +
-                            $"resolution = {CurrentResolution}.Expected: 1, but was {results}");
+                            $"resolution = {CurrentResolution}.Expected: 1, but was {results}"));
                         break;
                     case "HOUR" when IsDayLightTime:
                         switch (ReportDate.Month)
                         {
                             case 10 when results != 25 * RecordMultiplier:
-                                RecordAnError(GetCurrentMethodName(), CurrentResolution,
+                                MessageDetails.Add(Evaluator.MessageConstructor(LogLevel.Error, CallingClass, GetCurrentMethodName(), CurrentResolution,
                                     $"{SpotPriceQueryMessage} (daylight Saving) = {ReportDate} price area = {CurrentInstrumentArea}, " +
-                                    $"resolution = {CurrentResolution}.Expected: 25(100), but was {results}");
+                                    $"resolution = {CurrentResolution}.Expected: 25(100), but was {results}"));
                                 break;
                             default:
                                 if (results != 23 * RecordMultiplier)
-                                    RecordAnError(GetCurrentMethodName(), CurrentResolution,
+                                    MessageDetails.Add(Evaluator.MessageConstructor(LogLevel.Error, CallingClass, GetCurrentMethodName(), CurrentResolution,
                                         $"{SpotPriceQueryMessage} (daylight Saving) = {ReportDate} price area = {CurrentInstrumentArea}, " +
-                                        $"resolution = {CurrentResolution}.Expected: 23(92), but was {results}");
+                                        $"resolution = {CurrentResolution}.Expected: 23(92), but was {results}"));
                                 break;
                         }
                         break;
                     case "HOUR":
                         if (results != 24 * RecordMultiplier)
-                            RecordAnError(GetCurrentMethodName(), CurrentResolution,
+                            MessageDetails.Add(Evaluator.MessageConstructor(LogLevel.Error, CallingClass, GetCurrentMethodName(), CurrentResolution,
                                 $"{SpotPriceQueryMessage} = {ReportDate} price area = {CurrentInstrumentArea}, " +
-                                $"resolution = {CurrentResolution}.Expected: 24(96), but was {results}");
+                                $"resolution = {CurrentResolution}.Expected: 24(96), but was {results}"));
                         break;
                     default:
                         break;
@@ -120,27 +124,14 @@ namespace TestElvizUpdateTool
                     ReportDate.ToString("yyyy-MM-dd"), areaPrice.CfdArea);
 
                 if (results.Rows.Count >= 1) continue;
-                RecordAnError(GetCurrentMethodName(), CurrentInstrumentArea,
+                MessageDetails.Add(Evaluator.MessageConstructor(LogLevel.Error, CallingClass, GetCurrentMethodName(), CurrentInstrumentArea,
                                                                         $"{InstrumentPriceQueryMessage} = {ReportDate}, price area = {CurrentInstrumentArea}, " +
-                                                                        $"execution venue = {ExecutionVenue}");
+                                                                        $"execution venue = {ExecutionVenue}"));
             }
         }
 
-        private void RecordAnError(string testName, string field, string description)
-        {
-            var errorRecorder = new ErrorRecorder
-            {
-                TestName = testName,
-                Field = field,
-                Description = description,
-                RecordedOn = DateTime.UtcNow
-            };
-
-            ErrorRecorderList.Add(errorRecorder);
-        }
-
         [MethodImpl(MethodImplOptions.NoInlining)]
-        public string GetCurrentMethodName()
+        private static string GetCurrentMethodName()
         {
             var stackTrace = new StackTrace();
             var stackFrame = stackTrace.GetFrame(1);
