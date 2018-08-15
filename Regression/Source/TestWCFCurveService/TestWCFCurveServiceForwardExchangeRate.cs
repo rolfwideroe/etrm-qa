@@ -78,7 +78,7 @@ namespace TestWCFCurveService
 
         }
 
-    
+
         [Test]
         public void FailDateTimeKindisNotUnspecified()
         {
@@ -117,7 +117,7 @@ namespace TestWCFCurveService
             }
             catch (FaultException<ExceptionDetail> ex)
             {
-                const string ExpectedError = "Failed to return forward exchange rates: Currency source 'z' is not supported";
+                const string ExpectedError = "Failed to return forward exchange rates: The currencySource parameter must be set to the forward currency source configured in the system (Viz)";
                 Assert.IsTrue(ex.Message.Contains(ExpectedError), "Wrong Error Message \n Expexted : " + ExpectedError + " \n Actual : " + ex.Message);
             }
             try
