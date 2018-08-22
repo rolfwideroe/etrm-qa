@@ -84,7 +84,7 @@ namespace TestWCFDealInsertWithResultMessage
             if (externalIdNode != null && externalIdNode.Item(0) != null)
             {
                 string externalIdNodeValue = externalIdNode.Item(0).InnerText;
-                reportingDbExternalId =  "Reporting_" + externalIdNodeValue + DateTime.Now.ToString();
+                reportingDbExternalId =  "Reporting_" + externalIdNodeValue + DateTime.Now.ToString("yyyy-MM-dd_HH:mm:ss");
                 externalIdNode.Item(0).InnerText = reportingDbExternalId;
 
             }
