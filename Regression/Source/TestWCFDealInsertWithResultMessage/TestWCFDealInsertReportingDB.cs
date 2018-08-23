@@ -84,7 +84,7 @@ namespace TestWCFDealInsertWithResultMessage
             if (externalIdNode != null && externalIdNode.Item(0) != null)
             {
                 string externalIdNodeValue = externalIdNode.Item(0).InnerText;
-                reportingDbExternalId =  "Reporting_" + externalIdNodeValue + DateTime.Now.ToString("yyyy-MM-dd_HH:mm:ss");
+                reportingDbExternalId =  "Reporting_" + externalIdNodeValue + DateTime.Now;
                 externalIdNode.Item(0).InnerText = reportingDbExternalId;
 
             }
@@ -101,7 +101,7 @@ namespace TestWCFDealInsertWithResultMessage
                 string utiValue = uti.Attributes["value"].Value;
                 if (utiValue.Length > 22)
                     utiValue = uti.Attributes["value"].Value.Substring(0, 22);
-                reportingDbUTI = "ReportinDB_" + utiValue + "_" + DateTime.Now;
+                reportingDbUTI = "ReportinDB_" + utiValue + "_" + DateTime.Now.ToString("yyyy-MM-dd_HH:mm:ss");
                 uti.Attributes["value"].Value = reportingDbUTI;
             }
 
