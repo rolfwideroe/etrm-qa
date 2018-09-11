@@ -492,6 +492,16 @@ namespace ElvizTestUtils.DatabaseTools
             NonQuery(VizEcmDbConnection, query);
         }
 
+        public static int GetLastResultCodeForVolatilities(string volatilityJobName)
+        {
+            string query = $@"SELECT ResultCode FROM JobExecutions WHERE JobExecutionId IN 
+                (SELECT TOP (1) JobExecutionId FROM ScheduledJobRuns WHERE ScheduledJobId IN 
+                (SELECT scj.ScheduledJobId FROM ScheduledJobs scj INNER JOIN StoredJobs stj ON scj.StoredJobId = stj.StoredJobId 
+                WHERE stj.JobTypeName = 'Update volatilities and correlations' AND stj.Description = '{volatilityJobName}')
+                ORDER BY StartedTimeUtc DESC)";
+            return ReadScalar<int>(VizEcmDbConnection, query);
+        }
+
         public ElvizConfiguration[] GetAllElvizConfigurations()
         {
             return GetElvizConfigurations("");
