@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace TestLiveCurveScheduling
@@ -23,8 +19,6 @@ namespace TestLiveCurveScheduling
         public LivePrice[] LivePrices { get; set; }
     }
 
-    
-
     public class LivePrice
     {
         public string LoadType { get; set; }
@@ -43,47 +37,45 @@ namespace TestLiveCurveScheduling
         public double Close { get; set; }
 
         [XmlIgnore]
-        public string Ticker {
+        public string Ticker
+        {
             get
             {
-
                 if (PeriodType.ToUpper() == "CUSTOMPERIOD")
                 {
-                    if (CustomFromToDate == null) throw new ArgumentException("Customperiod requres CustomFrom/ToDate");
-                    if (CustomFromToDate == null) throw new ArgumentException("Customperiod requres CustomFrom/ToDate");
+                    if (CustomFromToDate == null) throw new ArgumentException("PeriodType=CustomPeriod requires CustomFromToDate");
                     return TickerParser.ParseCustomPeriod(TickerRule, CustomFromToDate.Value);
-
                 }
                 return TickerParser.Parse(TickerRule, PeriodType, ReportDateOffSet);
-;
-            }  }
+            }
+        }
+
         [XmlIgnore]
-        public DateTime FromDateTime {
+        public DateTime FromDateTime
+        {
             get
             {
                 if (PeriodType.ToUpper() == "CUSTOMPERIOD")
                 {
-                    if (CustomFromToDate == null) throw new ArgumentException("Customperiod requres CustomFrom/ToDate");
+                    if (CustomFromToDate == null) throw new ArgumentException("PeriodType=CustomPeriod requires CustomFromToDate");
                     return CustomFromToDate.Value;
-   
-
                 }
                 return TickerParser.GetStartDate(DateTime.Today, PeriodType, ReportDateOffSet);
-            }  }
+            }
+        }
 
         [XmlIgnore]
-        public DateTime ToDateTime {
+        public DateTime ToDateTime
+        {
             get
             {
                 if (PeriodType.ToUpper() == "CUSTOMPERIOD")
                 {
-                    if (CustomFromToDate == null) throw new ArgumentException("Customperiod requres CustomFrom/ToDate");
-                    if (CustomFromToDate == null) throw new ArgumentException("Customperiod requres CustomFrom/ToDate");
+                    if (CustomFromToDate == null) throw new ArgumentException("PeriodType=CustomPeriod requires CustomFromToDate");
                     return CustomFromToDate.Value;
-
-
                 }
                 return TickerParser.GetToDate(DateTime.Today, PeriodType, ReportDateOffSet);
-            }  }
+            }
+        }
     }
 }
