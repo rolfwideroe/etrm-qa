@@ -174,7 +174,7 @@ namespace ElvizTestUtils
         {
             JobExecutionStatus finalStatus = ExecuteJob(jobId, optionalParams, statusChangeTimeoutSeconds, appServerName);
 
-            if(finalStatus==null) throw new ArgumentException("JobId "+jobId+" did not complete within the set timeout of :"+ statusChangeTimeoutSeconds + " secconds");
+            if(finalStatus==null) throw new ArgumentException("JobId "+jobId+" did not complete within the set timeout of :"+ statusChangeTimeoutSeconds + " seconds");
             JobServiceClient client = GetJobServiceClient(appServerName);
 
             Console.WriteLine("job ended "+DateTime.Now);

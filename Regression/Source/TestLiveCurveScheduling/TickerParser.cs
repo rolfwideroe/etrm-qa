@@ -1,21 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace TestLiveCurveScheduling
 {
     public class TickerParser
     {
+        private const string pattern = @"\{(.*?)\}";
 
         public static string ParseCustomPeriod(string tickerRule, DateTime dateTime)
         {
             string parsedTicker = tickerRule;
-
-            string pattern = @"\{(.*?)\}";
             string query = tickerRule;
             MatchCollection matches = Regex.Matches(query, pattern);
 
@@ -31,17 +26,12 @@ namespace TestLiveCurveScheduling
 
             }
 
-            //Console.WriteLine(parsedTicker);
             return parsedTicker;
         }
-
-        
 
         public static string Parse(string tickerRule,string resolution,int offSet)
         {
             string parsedTicker = tickerRule;
-
-            string pattern = @"\{(.*?)\}";
             string query = tickerRule;
             MatchCollection matches = Regex.Matches(query, pattern);
             
@@ -50,14 +40,11 @@ namespace TestLiveCurveScheduling
                 string datePart = ParseDate(r.ToString(), resolution, offSet);
                 string replacedDate = r.ToString();
 
-                parsedTicker= parsedTicker.Replace(replacedDate, datePart);
-     
+                parsedTicker = parsedTicker.Replace(replacedDate, datePart);
             }
 
-            //Console.WriteLine(parsedTicker);
             return parsedTicker;
         }
-
 
         private static string ParseDate(string dateFormat, string resolution, int offSet)
         {
@@ -75,9 +62,7 @@ namespace TestLiveCurveScheduling
                 default:
                     return GetStartDate(DateTime.Today, resolution, offSet).ToString(dateFormat, CultureInfo.CreateSpecificCulture("en-US")).ToUpper();
             }
-            
         }
-
 
         public static DateTime GetStartDate(DateTime dateTime, string resolution, int offSet)
         {
@@ -162,6 +147,5 @@ namespace TestLiveCurveScheduling
                     throw new ArgumentException(resolution + " Not supported");
             }
         }
-
     }
 }
