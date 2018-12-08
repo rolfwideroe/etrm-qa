@@ -1,5 +1,6 @@
-﻿using System;
-using MessageHandler.Pocos;
+﻿using MessageHandler.Pocos;
+using System;
+using System.Diagnostics;
 
 namespace MessageHandler
 {
@@ -26,7 +27,7 @@ namespace MessageHandler
             return GradeError();
         }
 
-        public static void LogError()
+        static void LogError()
         {
             LoggingDetails.Level = LogLevel;
             LoggingDetails.Message = $"{Description} for {Field} in {MethodName}";
@@ -36,7 +37,7 @@ namespace MessageHandler
         }
 
 
-        public static MessageDetails GradeError()
+        static MessageDetails GradeError()
         {
 
             var messageDetail = new MessageDetails
