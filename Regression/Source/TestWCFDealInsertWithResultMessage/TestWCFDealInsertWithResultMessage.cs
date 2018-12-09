@@ -1,21 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Xml;
-using System.Xml.Serialization;
-using ElvizTestUtils;
+﻿using ElvizTestUtils;
 using ElvizTestUtils.DealServiceReference;
 using ElvizTestUtils.QaLookUp;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace TestWCFDealInsertWithResultMessage
 {
     [TestFixture]
     public class TestWcfDealInsertWithResultMessage
     {
-        
+
         [SetUp]
         public void Setup()
         {
@@ -78,7 +77,7 @@ namespace TestWCFDealInsertWithResultMessage
         public static void TestWcfDealInsertByTestFile(string filePath)
         {
             XmlDocument doc = new XmlDocument();
-            
+
             doc.Load(filePath); // input XML
             string errorMessagefromXML = "";
             XmlNodeList messageNodeXML = doc.GetElementsByTagName("Message");
@@ -96,6 +95,7 @@ namespace TestWCFDealInsertWithResultMessage
 
             //get result value from input XML
             XmlNodeList testresultNodeXml = doc.GetElementsByTagName("TestResult");
+
             string testresult = testresultNodeXml.Item(0).InnerText;
 
             string result = "";
@@ -105,7 +105,7 @@ namespace TestWCFDealInsertWithResultMessage
             {
                 result = dealServiceClient.ImportDeal(dealNode[0].InnerXml);
                 //Console.WriteLine(dealNode[0].InnerXml);
-              //  Console.WriteLine(result);
+                //  Console.WriteLine(result);
             }
             catch (Exception ex)
             {
@@ -247,7 +247,7 @@ namespace TestWCFDealInsertWithResultMessage
                     XmlNodeList messageNode = resultXml.GetElementsByTagName("Message");
                     string errorMessage = messageNode[0].InnerText;
                     // Console.WriteLine(errorMessage);
-                    
+
                     //removed \r,\n - failed for Azure machines
                     errorMessage = errorMessage.Replace("\r", "").Replace("\n", "").Replace("(1)", "").Replace("\t", "");
 
@@ -279,7 +279,7 @@ namespace TestWCFDealInsertWithResultMessage
 
                 XmlNodeList IdNode = resultXml.GetElementsByTagName("ExternalTransactionId");
                 string[] externalIds = IdNode[0].InnerText.Split(';');
-                
+
                 XmlNodeList expectedDtoNodes = doc.GetElementsByTagName("QaTransactionDTO");
 
                 if (externalIds.Length != expectedDtoNodes.Count)
@@ -303,14 +303,14 @@ namespace TestWCFDealInsertWithResultMessage
 
             List<QaTransactionDTO> resultDtos = c.GetQaTransactionDtos(externalIds);
 
-            XmlSerializer serializer = new XmlSerializer(typeof (QaTransactionDTO));
+            XmlSerializer serializer = new XmlSerializer(typeof(QaTransactionDTO));
             XmlTextReader reader = new XmlTextReader(testFilePath);
 
             List<QaTransactionDTO> expectedTransactionDtos = new List<QaTransactionDTO>();
 
             while (reader.ReadToDescendant("QaTransactionDTO"))
             {
-                QaTransactionDTO expectedTransactionDto = (QaTransactionDTO) serializer.Deserialize(reader.ReadSubtree());
+                QaTransactionDTO expectedTransactionDto = (QaTransactionDTO)serializer.Deserialize(reader.ReadSubtree());
 
                 expectedTransactionDtos.Add(expectedTransactionDto);
             }
@@ -326,7 +326,7 @@ namespace TestWCFDealInsertWithResultMessage
 
         public static void CompareTransactionDto(string testFilePath, int insertedTransactionID)
         {
-         ///   string testFilePath = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\" + testFile);
+            ///   string testFilePath = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\" + testFile);
             //get inserted transactionDTO
             QaLookUpClient c = new QaLookUpClient();
 
@@ -337,29 +337,29 @@ namespace TestWCFDealInsertWithResultMessage
             //    ) AddNewNode2QaTransactionDTOXml(testFilePath, dto.InstrumentData.ReferencePriceSeries);
 
 
-            XmlSerializer serializer = new XmlSerializer(typeof (QaTransactionDTO));
+            XmlSerializer serializer = new XmlSerializer(typeof(QaTransactionDTO));
             XmlTextReader reader = new XmlTextReader(testFilePath);
             reader.ReadToDescendant("QaTransactionDTO");
-            QaTransactionDTO expectedTransactionDTO = (QaTransactionDTO) serializer.Deserialize(reader.ReadSubtree());
+            QaTransactionDTO expectedTransactionDTO = (QaTransactionDTO)serializer.Deserialize(reader.ReadSubtree());
             reader.Close();
 
             string[] excludeProps = new string[] { "TransactionId", "ReferenceData.ModificationDateTimeUtc", "ReferenceData.ReferringId", "TransactionWorkFlowDetails.TimeStampAuthorised", "TransactionWorkFlowDetails.TimeStampCounterpartyAuthorised" };
 
-        
-            QaTransactionDtoAssert.AreEqual(expectedTransactionDTO,dto,excludeProps,false);
+
+            QaTransactionDtoAssert.AreEqual(expectedTransactionDTO, dto, excludeProps, false);
         }
 
-     //   [Test]
+        //   [Test]
         public static void AddNewNode2QaTransactionDTOXml(string testFile, string value)
         {
-           // string testFile = @"C:\TFS\Development\QA\Regression\Bin\TestWCFDealInsertWithResultMessage\TestFiles\PassElectricity-FixedPriceFloatingVolume.xml";
+            // string testFile = @"C:\TFS\Development\QA\Regression\Bin\TestWCFDealInsertWithResultMessage\TestFiles\PassElectricity-FixedPriceFloatingVolume.xml";
 
             XmlDocument doc = new XmlDocument();
 
             doc.Load(testFile); // input XML
 
             XmlNode newElement = doc.CreateElement("ReferencePriceSeries");
-            newElement.InnerText = value ;
+            newElement.InnerText = value;
 
             XmlNodeList instData = doc.SelectNodes("/TestCase/QaTransactionDTO/InstrumentData");
             if (instData.Count > 0)
@@ -372,13 +372,13 @@ namespace TestWCFDealInsertWithResultMessage
                 {
                     refPS.InnerText = value;
                 }
-               // else Assert.Fail("remove second node");
+                // else Assert.Fail("remove second node");
             }
 
             doc.Save(testFile);
 
             Console.WriteLine("Added new element" + instData.Item(0).OuterXml);
-           
+
         }
 
         public void CompareTransactionDtoOld(string testFile, int insertedTransactionID)
@@ -388,7 +388,7 @@ namespace TestWCFDealInsertWithResultMessage
             QaLookUpClient c = new QaLookUpClient();
 
             QaTransactionDTO dto = c.GetQaTransactionDTO(insertedTransactionID);
-         
+
             XmlSerializer serializer = new XmlSerializer(typeof(QaTransactionDTO));
             XmlTextReader reader = new XmlTextReader(testFilePath);
             reader.ReadToDescendant("QaTransactionDTO");
@@ -405,7 +405,7 @@ namespace TestWCFDealInsertWithResultMessage
             Assert.AreEqual(expectedTransactionDTO.Portfolios.PortfolioExternalId, dto.Portfolios.PortfolioExternalId, "Values for property 'PortfolioExternalId' are not equal:");
             Assert.AreEqual(expectedTransactionDTO.Portfolios.CounterpartyPortfolioExternalId, dto.Portfolios.CounterpartyPortfolioExternalId, "Values for property 'CounterpartyPortfolioExternalId' are not equal:");
             Assert.AreEqual(expectedTransactionDTO.Portfolios.CounterpartyPortfolioName, dto.Portfolios.CounterpartyPortfolioName, "Values for property 'CounterpartyPortfolioName'  are not equal:");
-            Assert.AreEqual(expectedTransactionDTO.ContractModelType,dto.ContractModelType,"Values for property 'ContractModelType' are not equal");
+            Assert.AreEqual(expectedTransactionDTO.ContractModelType, dto.ContractModelType, "Values for property 'ContractModelType' are not equal");
             //Console.WriteLine(expectedTransactionDTO.TransactionId);
             //Console.WriteLine(expectedTransactionDTO.DealType);
             //Console.WriteLine(expectedTransactionDTO.Portfolios.PortfolioName);
@@ -463,7 +463,7 @@ namespace TestWCFDealInsertWithResultMessage
             Assert.AreEqual(expectedTransactionDTO.SettlementData.SettlementRule, dto.SettlementData.SettlementRule, "Values for property 'SettlementRule' are not equal:");
             Assert.AreEqual(expectedTransactionDTO.SettlementData.Resolution, dto.SettlementData.Resolution, "Values for property 'Resolution' are not equal:");
             Assert.AreEqual(expectedTransactionDTO.SettlementData.NominationsHourly, dto.SettlementData.NominationsHourly, "Values for property 'NominationsHourly' are not equal:");
-           
+
             if (expectedTransactionDTO.SettlementData.TimeSeriesSet != null)
             {
                 for (int i = 0; i < expectedTransactionDTO.SettlementData.TimeSeriesSet.TimeSeries.Count(); i++)
@@ -498,7 +498,7 @@ namespace TestWCFDealInsertWithResultMessage
                 Assert.AreEqual(expectedTransactionDTO.SettlementData.PriceVolumeTimeSeriesDetails.Count(), dto.SettlementData.PriceVolumeTimeSeriesDetails.Count(), "Values for property 'PriceVolumeTimeSeriesDetails' are not equal:");
                 for (int i = 0; i < expectedTransactionDTO.SettlementData.PriceVolumeTimeSeriesDetails.Count(); i++)
                 {
-                    Assert.AreEqual(expectedTransactionDTO.SettlementData.PriceVolumeTimeSeriesDetails[i].FromDateTime, dto.SettlementData.PriceVolumeTimeSeriesDetails[i].FromDateTime, "'PriceVolumeTimeSeriesDetails[" +i +"].FromDate' properties are not equal:");
+                    Assert.AreEqual(expectedTransactionDTO.SettlementData.PriceVolumeTimeSeriesDetails[i].FromDateTime, dto.SettlementData.PriceVolumeTimeSeriesDetails[i].FromDateTime, "'PriceVolumeTimeSeriesDetails[" + i + "].FromDate' properties are not equal:");
                     Assert.AreEqual(expectedTransactionDTO.SettlementData.PriceVolumeTimeSeriesDetails[i].ToDateTime, dto.SettlementData.PriceVolumeTimeSeriesDetails[i].ToDateTime, "'PriceVolumeTimeSeriesDetails[" + i + "].ToDate' properties are not equal:");
                     Assert.AreEqual(expectedTransactionDTO.SettlementData.PriceVolumeTimeSeriesDetails[i].Price, dto.SettlementData.PriceVolumeTimeSeriesDetails[i].Price, "'PriceVolumeTimeSeriesDetails[" + i + "].Price' properties are not equal:");
                     Assert.AreEqual(expectedTransactionDTO.SettlementData.PriceVolumeTimeSeriesDetails[i].Volume, dto.SettlementData.PriceVolumeTimeSeriesDetails[i].Volume, "'PriceVolumeTimeSeriesDetails[" + i + "].Volume' properties are not equal:");
@@ -540,9 +540,9 @@ namespace TestWCFDealInsertWithResultMessage
                 }
             }
             else Assert.AreEqual(expectedTransactionDTO.ReferenceData.DealGroups, dto.ReferenceData.DealGroups, "Values for property 'DealGroups' are not equal:");
-            
+
             Assert.AreEqual(expectedTransactionDTO.ReferenceData.Comment, dto.ReferenceData.Comment, "Values for property 'Comment' are not equal:");
-           // Assert.AreEqual(expectedTransactionDTO.ReferenceData.ModificationDateTimeUtc, dto.ReferenceData.ModificationDateTimeUtc, "Values for property 'ModificationDateTimeUtc' are not equal:");
+            // Assert.AreEqual(expectedTransactionDTO.ReferenceData.ModificationDateTimeUtc, dto.ReferenceData.ModificationDateTimeUtc, "Values for property 'ModificationDateTimeUtc' are not equal:");
             Assert.AreEqual(expectedTransactionDTO.ReferenceData.QuotaRegion, dto.ReferenceData.QuotaRegion, "Values for property 'QuotaRegion' are not equal:");
             Assert.AreEqual(expectedTransactionDTO.ReferenceData.RiskValue, dto.ReferenceData.RiskValue, "Values for property 'RiskValue' are not equal:");
             Assert.AreEqual(expectedTransactionDTO.ReferenceData.Originator, dto.ReferenceData.Originator, "Values for property 'Originator' are not equal:");
@@ -553,7 +553,7 @@ namespace TestWCFDealInsertWithResultMessage
             Assert.AreEqual(expectedTransactionDTO.ReferenceData.DistributionParentTransactionId, dto.ReferenceData.DistributionParentTransactionId, "Values for property 'DistributionParentTransactionId' are not equal:");
             Assert.AreEqual(expectedTransactionDTO.ReferenceData.DistributedQuantity, dto.ReferenceData.DistributedQuantity, "Values for property 'DistributedQuantity' are not equal:");
             Assert.AreEqual(expectedTransactionDTO.ReferenceData.OriginalQuantity, dto.ReferenceData.OriginalQuantity, "Values for property 'OriginalQuantity' are not equal:");
-           // Assert.AreEqual(expectedTransactionDTO.ReferenceData.ReferringId, dto.ReferenceData.ReferringId, "Values for property 'ReferringId' are not equal:");
+            // Assert.AreEqual(expectedTransactionDTO.ReferenceData.ReferringId, dto.ReferenceData.ReferringId, "Values for property 'ReferringId' are not equal:");
             Assert.AreEqual(expectedTransactionDTO.ReferenceData.CascadingOriginIds, dto.ReferenceData.CascadingOriginIds, "Values for property 'CascadingOriginIds' are not equal:");
 
             //TransactionWorkFlowDetails
@@ -566,35 +566,35 @@ namespace TestWCFDealInsertWithResultMessage
             Assert.That(dto.TransactionWorkFlowDetails.TimeStampClearedUtc, Is.EqualTo(expectedTransactionDTO.TransactionWorkFlowDetails.TimeStampClearedUtc).Within(1).Seconds, "Values for property 'TimeStampClearedUTC' are not equal:");
             Assert.That(dto.TransactionWorkFlowDetails.TimeStampConfirmationBrokerUtc, Is.EqualTo(expectedTransactionDTO.TransactionWorkFlowDetails.TimeStampConfirmationBrokerUtc).Within(1).Seconds, "Values for property 'TimeStampConfirmationBrokerUTC' are not equal: ");
             Assert.That(dto.TransactionWorkFlowDetails.TimeStampConfirmationCounterPartyUtc, Is.EqualTo(expectedTransactionDTO.TransactionWorkFlowDetails.TimeStampConfirmationCounterPartyUtc).Within(1).Seconds, "Values for property 'TimeStampConfirmationCounterPartyUTC' are not equal:");
-        
+
             //Assert.AreEqual(expectedTransactionDTO.TransactionWorkFlowDetails.TimeStampCounterpartyAuthorised, dto.TransactionWorkFlowDetails.TimeStampCounterpartyAuthorised, "Values for property 'TimeStampCounterpartyAuthorised' are not equal:");
 
             if (expectedTransactionDTO.PropertyGroups != null)
             {
-                Assert.AreEqual(expectedTransactionDTO.PropertyGroups.Length,dto.PropertyGroups.Length);
+                Assert.AreEqual(expectedTransactionDTO.PropertyGroups.Length, dto.PropertyGroups.Length);
 
                 for (int i = 0; i < expectedTransactionDTO.PropertyGroups.Length; i++)
                 {
-                    Assert.AreEqual(expectedTransactionDTO.PropertyGroups[i].Name,dto.PropertyGroups[i].Name,"PropertyGroup Name was not equal");
+                    Assert.AreEqual(expectedTransactionDTO.PropertyGroups[i].Name, dto.PropertyGroups[i].Name, "PropertyGroup Name was not equal");
 
-                    Assert.AreEqual(expectedTransactionDTO.PropertyGroups[i].Properties.Length,dto.PropertyGroups[i].Properties.Length,"Differnt number of Properites in : "+expectedTransactionDTO.PropertyGroups[i].Name);
+                    Assert.AreEqual(expectedTransactionDTO.PropertyGroups[i].Properties.Length, dto.PropertyGroups[i].Properties.Length, "Differnt number of Properites in : " + expectedTransactionDTO.PropertyGroups[i].Name);
 
                     if (expectedTransactionDTO.PropertyGroups[i].Properties != null)
                     {
                         for (int j = 0; j < expectedTransactionDTO.PropertyGroups[i].Properties.Length; j++)
                         {
-                            Assert.AreEqual(expectedTransactionDTO.PropertyGroups[i].Properties[j].Name,dto.PropertyGroups[i].Properties[j].Name,"Property Name is not equal in PropertyGroup"+expectedTransactionDTO.PropertyGroups[i].Name);
-                            Assert.AreEqual(expectedTransactionDTO.PropertyGroups[i].Properties[j].Value,dto.PropertyGroups[i].Properties[j].Value,"Property FeeValue is not equal in PropertyGroup"+expectedTransactionDTO.PropertyGroups[i].Name);
-                            Assert.AreEqual(expectedTransactionDTO.PropertyGroups[i].Properties[j].ValueType,dto.PropertyGroups[i].Properties[j].ValueType,"Property ValueType is not equal in PropertyGroup"+expectedTransactionDTO.PropertyGroups[i].Name);
+                            Assert.AreEqual(expectedTransactionDTO.PropertyGroups[i].Properties[j].Name, dto.PropertyGroups[i].Properties[j].Name, "Property Name is not equal in PropertyGroup" + expectedTransactionDTO.PropertyGroups[i].Name);
+                            Assert.AreEqual(expectedTransactionDTO.PropertyGroups[i].Properties[j].Value, dto.PropertyGroups[i].Properties[j].Value, "Property FeeValue is not equal in PropertyGroup" + expectedTransactionDTO.PropertyGroups[i].Name);
+                            Assert.AreEqual(expectedTransactionDTO.PropertyGroups[i].Properties[j].ValueType, dto.PropertyGroups[i].Properties[j].ValueType, "Property ValueType is not equal in PropertyGroup" + expectedTransactionDTO.PropertyGroups[i].Name);
                         }
                     }
                 }
             }
 
-           
-    }
-        
-     //  [Test]
+
+        }
+
+        //  [Test]
         public void GetQATransactionDTOByID()
         {
             int id = 239;
