@@ -3,7 +3,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TestProjectType>UnitTest</TestProjectType>    
+    <TestProjectType>UnitTest</TestProjectType>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{139B4DA2-D394-43F4-9974-8641CBAE86B5}</ProjectGuid>
@@ -67,6 +67,10 @@
     <ProjectReference Include="..\BatchTestUtils\ElvizTestUtils.csproj">
       <Project>{499b3141-df25-497c-aa4f-4915481cd406}</Project>
       <Name>ElvizTestUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MessageHandler\MessageHandler.csproj">
+      <Project>{6C962956-AE1B-44E8-9C84-D7850508A569}</Project>
+      <Name>MessageHandler</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

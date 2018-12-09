@@ -59,27 +59,42 @@ namespace TestFileWatcherWithUtils
 
         static string getTestcaseFolderFilePath(string fileName)
         {
+            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
+            AddMessage(fileName, callingClass, $"Current Directory : {Directory.GetCurrentDirectory()}");
+
             string currentPath = Path.Combine(Directory.GetCurrentDirectory(), testFilesFolderConst);
             return Path.Combine(currentPath, fileName);
         }
 
         static string getWatchedFolderFilePath(string fileName)
         {
+            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
+            AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.WatchPath}");
+
             return Path.Combine(currentConfiguration.WatchPath, fileName);
         }
 
         static string getQuarantineFolderFilePath(string fileName)
         {
+            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
+            AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.QuarantineDirectory}");
+
             return Path.Combine(currentConfiguration.QuarantineDirectory, fileName);
         }
 
         static string getProcessedFolderFilePath(string fileName)
         {
+            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
+            AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.ProcessedDirectory}");
+
             return Path.Combine(currentConfiguration.ProcessedDirectory, fileName);
         }
 
         static string getLogFolderFilePath(string fileName)
         {
+            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
+            AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.LogDirectory}");
+
             return Path.Combine(currentConfiguration.LogDirectory, fileName);
         }
 
@@ -198,10 +213,10 @@ namespace TestFileWatcherWithUtils
 
         private static void AddMessage(string fileName, Type callingClass, string filePath)
         {
-            MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass, GetCurrentMethodName(), filePath,
-                "DeleteFileIfExist"));
+            MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
+                                   GetCurrentMethodName(), $"Path : {filePath} - file : {fileName}",
+                                   "Debugging Reg Test Failures"));
         }
-
 
         [MethodImpl(MethodImplOptions.NoInlining)]
         static string GetCurrentMethodName()
