@@ -144,11 +144,8 @@ namespace TestFileWatcherWithUtils
 
             SystemUtils.DeleteFileIfExist(getLogFolderFilePath(fileName));
             AddMessage(fileName, callingClass, getLogFolderFilePath(fileName));
-
         }
-
-
-
+        
         /// <summary>
         /// Waits until a testcase file is being processed
         /// </summary>

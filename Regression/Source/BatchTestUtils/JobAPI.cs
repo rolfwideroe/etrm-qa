@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ElvizTestUtils.InternalJobService;
+﻿using ElvizTestUtils.InternalJobService;
+using MessageHandler;
+using MessageHandler.Pocos;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 namespace ElvizTestUtils
 {
     public class JobAPI
     {
+        static List<MessageDetails> MessageDetailsList { get; set; }
+
         [Test]
         public static int GetJobsIdByDescription(string description, string jobType)
         {
@@ -28,8 +30,8 @@ namespace ElvizTestUtils
                 if (job.Description == description && job.JobType == jobType)
                     return job.Id;
             }
-            throw new ArgumentException("Could not find job by description: "+description);
-            
+            throw new ArgumentException("Could not find job by description: " + description);
+
         }
 
         public static int GetJobsIdByDescription(string description, string jobType, string appServerName)
@@ -52,7 +54,7 @@ namespace ElvizTestUtils
 
         }
 
-        public static IEnumerable<Job> GetJobsByJobtype(string jobType,string appServerName)
+        public static IEnumerable<Job> GetJobsByJobtype(string jobType, string appServerName)
         {
             IJobService service = WCFClientUtil.GetJobServiceClient(appServerName);
 
@@ -76,7 +78,7 @@ namespace ElvizTestUtils
             return WCFClientUtil.GetJobServiceClient(appServerName);
         }
 
-        public static Job[] GetJobsByDescriptionOrJobtype(string description, string jobType = null,string appServerName =null)
+        public static Job[] GetJobsByDescriptionOrJobtype(string description, string jobType = null, string appServerName = null)
         {
             IJobService service = GetJobServiceClient(appServerName);
 
@@ -110,7 +112,7 @@ namespace ElvizTestUtils
             if (jobs.Length == 0)
                 return null;
 
-            if (jobs.Length ==1)
+            if (jobs.Length == 1)
                 return jobs[0];
 
             throw new ArgumentException("Found more than one Job with description = " + description + " and job type= " + jobType);
@@ -120,26 +122,26 @@ namespace ElvizTestUtils
 
         public static int ExecuteAndAssertJob(int jobId, int statusChangeTimeoutSeconds)
         {
-           return ExecuteAndAssertJob(jobId, new Dictionary<string, string>(), statusChangeTimeoutSeconds);
+            return ExecuteAndAssertJob(jobId, new Dictionary<string, string>(), statusChangeTimeoutSeconds);
         }
 
         public static string GetJobExecutionLog(int jobExecutionId, string appServerName = null)
         {
             JobServiceClient client = GetJobServiceClient(appServerName);
 
-            LogEntry[] errorLog = client.QueryJobExecutionLog(new JobLogCriteria() { ExecutionId = jobExecutionId});
+            LogEntry[] errorLog = client.QueryJobExecutionLog(new JobLogCriteria() { ExecutionId = jobExecutionId });
 
             string log = "";
 
             foreach (LogEntry logEntry in errorLog)
             {
-                log +=logEntry.Severity + "\t" + logEntry.Source +Environment.NewLine+ "\t\t" +
-                       logEntry.Message + Environment.NewLine+Environment.NewLine;
+                log += logEntry.Severity + "\t" + logEntry.Source + Environment.NewLine + "\t\t" +
+                       logEntry.Message + Environment.NewLine + Environment.NewLine;
             }
             return log;
         }
 
-        public static JobExecutionStatus ExecuteJob(int jobId, Dictionary<string, string> optionalParams,int statusChangeTimeoutSeconds, string appServerName = null)
+        public static JobExecutionStatus ExecuteJob(int jobId, Dictionary<string, string> optionalParams, int statusChangeTimeoutSeconds, string appServerName = null)
         {
             JobServiceClient client = GetJobServiceClient(appServerName);
 
@@ -149,20 +151,23 @@ namespace ElvizTestUtils
                 OptionalParameters = optionalParams
             };
 
+            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
+            AddMessage($"Job ID : {jobId}", callingClass, $"Optional Parameters : {optionalParams.Values}");
+
             Console.WriteLine("job started " + DateTime.Now);
             JobExecutionStatus status = client.SubmitJobExecution(request);
             int executionId = status.ExecutionId;
-            JobStatusRequest jobStatusRequest = new JobStatusRequest {ExecutionId = executionId};
+            JobStatusRequest jobStatusRequest = new JobStatusRequest { ExecutionId = executionId };
 
-            if(statusChangeTimeoutSeconds<6000)
+            if (statusChangeTimeoutSeconds < 6000)
                 return client.WaitForExecutionStatusChange(jobStatusRequest, statusChangeTimeoutSeconds);
 
             int cycleInSeconds = 600;
-            int cyclesToWait = statusChangeTimeoutSeconds/cycleInSeconds + 1;
+            int cyclesToWait = statusChangeTimeoutSeconds / cycleInSeconds + 1;
 
             for (int i = 0; i < cyclesToWait; i++)
             {
-                JobExecutionStatus cycleStatus= client.WaitForExecutionStatusChange(jobStatusRequest, cycleInSeconds);
+                JobExecutionStatus cycleStatus = client.WaitForExecutionStatusChange(jobStatusRequest, cycleInSeconds);
 
                 if (cycleStatus != null) return cycleStatus;
             }
@@ -170,14 +175,14 @@ namespace ElvizTestUtils
             return null;
         }
 
-        public static int ExecuteAndAssertJob(int jobId, Dictionary<string, string> optionalParams, int statusChangeTimeoutSeconds,string appServerName =null)
+        public static int ExecuteAndAssertJob(int jobId, Dictionary<string, string> optionalParams, int statusChangeTimeoutSeconds, string appServerName = null)
         {
             JobExecutionStatus finalStatus = ExecuteJob(jobId, optionalParams, statusChangeTimeoutSeconds, appServerName);
 
-            if(finalStatus==null) throw new ArgumentException("JobId "+jobId+" did not complete within the set timeout of :"+ statusChangeTimeoutSeconds + " seconds");
+            if (finalStatus == null) throw new ArgumentException("JobId " + jobId + " did not complete within the set timeout of :" + statusChangeTimeoutSeconds + " seconds");
             JobServiceClient client = GetJobServiceClient(appServerName);
 
-            Console.WriteLine("job ended "+DateTime.Now);
+            Console.WriteLine("job ended " + DateTime.Now);
             if (finalStatus.Status != "Success")
             {
                 IList<string> errorAndDebugLog = new List<string>();
@@ -227,7 +232,7 @@ namespace ElvizTestUtils
             }
             else
                 ExecuteAndAssertJob(eutJobs[0].Id, 600);
-       
+
         }
         //added extra function to avoid test to fail because of problem with EEX source when downloading prices 
         //which is not related to current test
@@ -248,6 +253,22 @@ namespace ElvizTestUtils
             else
                 ExecuteJob(eutJobs[0].Id, null, 600);
 
+        }
+
+        private static void AddMessage(string fileName, Type callingClass, string filePath)
+        {
+            MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
+                GetCurrentMethodName(), $"JobId : {fileName} - Optional Parameters : {filePath}",
+                "Debugging Reg Test Failures"));
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        static string GetCurrentMethodName()
+        {
+            var stackTrace = new StackTrace();
+            var stackFrame = stackTrace.GetFrame(1);
+
+            return stackFrame.GetMethod().Name;
         }
 
 
