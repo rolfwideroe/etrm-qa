@@ -11,7 +11,7 @@ namespace ElvizTestUtils
 {
     public class JobAPI
     {
-        static List<MessageDetails> MessageDetailsList { get; set; }
+        static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
 
         [Test]
         public static int GetJobsIdByDescription(string description, string jobType)
