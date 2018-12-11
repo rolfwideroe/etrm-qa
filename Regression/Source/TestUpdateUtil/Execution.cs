@@ -20,7 +20,7 @@ namespace TestElvizUpdateTool
         bool Status { get; set; } = true;
         int JobId { get; set; }
 
-        static List<MessageDetails> MessageDetailsList { get; set; }
+        static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
 
         public bool JobExecuted()
         {

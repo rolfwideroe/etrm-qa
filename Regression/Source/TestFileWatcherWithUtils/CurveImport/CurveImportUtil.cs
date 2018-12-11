@@ -35,7 +35,7 @@ namespace CurveImport
                 CurveWatchPath = watch;
             }
         }
-        static List<MessageDetails> MessageDetailsList { get; set; }
+        static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
 
         static public FileWatcherConfigurationCurveImport GetConfiguration()
         {

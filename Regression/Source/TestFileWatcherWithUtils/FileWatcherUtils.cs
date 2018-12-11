@@ -39,7 +39,7 @@ namespace TestFileWatcherWithUtils
             }
         }
 
-        static List<MessageDetails> MessageDetailsList { get; set; }
+        static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
 
         public static FileWatcherConfiguration GetConfiguration()
         {
@@ -70,6 +70,9 @@ namespace TestFileWatcherWithUtils
         {
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
             AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.WatchPath}");
+
+            if (!Directory.Exists(currentConfiguration.WatchPath))
+                Directory.CreateDirectory(currentConfiguration.WatchPath);
 
             return Path.Combine(currentConfiguration.WatchPath, fileName);
         }
