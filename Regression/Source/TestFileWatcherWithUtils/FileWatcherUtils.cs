@@ -21,6 +21,7 @@ namespace TestFileWatcherWithUtils
         const string quarantineDirectoryConst = @"\\{0}\BradyETRM\Integration\DealImport\Quarantined";
         const string watchPathConst = @"\\{0}\BradyETRM\Integration\DealImport";
         const string testFilesFolderConst = @"TestFiles\";
+        private const bool additionalLogging = false;
 
         public class FileWatcherConfiguration
         {
@@ -63,6 +64,9 @@ namespace TestFileWatcherWithUtils
             AddMessage(fileName, callingClass, $"Current Directory : {Directory.GetCurrentDirectory()}");
 
             string currentPath = Path.Combine(Directory.GetCurrentDirectory(), testFilesFolderConst);
+
+            CheckAndCreateDirectory(currentPath);
+
             return Path.Combine(currentPath, fileName);
         }
 
@@ -71,8 +75,7 @@ namespace TestFileWatcherWithUtils
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
             AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.WatchPath}");
 
-            if (!Directory.Exists(currentConfiguration.WatchPath))
-                Directory.CreateDirectory(currentConfiguration.WatchPath);
+            CheckAndCreateDirectory(currentConfiguration.WatchPath);
 
             return Path.Combine(currentConfiguration.WatchPath, fileName);
         }
@@ -82,13 +85,17 @@ namespace TestFileWatcherWithUtils
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
             AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.QuarantineDirectory}");
 
+            CheckAndCreateDirectory(currentConfiguration.QuarantineDirectory);
+
             return Path.Combine(currentConfiguration.QuarantineDirectory, fileName);
         }
 
         static string getProcessedFolderFilePath(string fileName)
         {
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.ProcessedDirectory}");
+           AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.ProcessedDirectory}");
+
+            CheckAndCreateDirectory(currentConfiguration.ProcessedDirectory);
 
             return Path.Combine(currentConfiguration.ProcessedDirectory, fileName);
         }
@@ -97,6 +104,8 @@ namespace TestFileWatcherWithUtils
         {
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
             AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.LogDirectory}");
+
+            CheckAndCreateDirectory(currentConfiguration.LogDirectory);
 
             return Path.Combine(currentConfiguration.LogDirectory, fileName);
         }
@@ -213,7 +222,8 @@ namespace TestFileWatcherWithUtils
 
         private static void AddMessage(string fileName, Type callingClass, string filePath)
         {
-            MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
+            if (additionalLogging)
+                MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
                                    GetCurrentMethodName(), $"Path : {filePath} - file : {fileName}",
                                    "Debugging Reg Test Failures"));
         }
@@ -227,6 +237,11 @@ namespace TestFileWatcherWithUtils
             return stackFrame.GetMethod().Name;
         }
 
+        private static void CheckAndCreateDirectory(string path)
+        {
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+        }
     }
 
 
