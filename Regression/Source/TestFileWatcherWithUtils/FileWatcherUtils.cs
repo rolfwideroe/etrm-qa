@@ -65,8 +65,6 @@ namespace TestFileWatcherWithUtils
 
             string currentPath = Path.Combine(Directory.GetCurrentDirectory(), testFilesFolderConst);
 
-            CheckAndCreateDirectory(currentPath);
-
             return Path.Combine(currentPath, fileName);
         }
 
@@ -74,8 +72,6 @@ namespace TestFileWatcherWithUtils
         {
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
             AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.WatchPath}");
-
-            CheckAndCreateDirectory(currentConfiguration.WatchPath);
 
             return Path.Combine(currentConfiguration.WatchPath, fileName);
         }
@@ -85,8 +81,6 @@ namespace TestFileWatcherWithUtils
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
             AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.QuarantineDirectory}");
 
-            CheckAndCreateDirectory(currentConfiguration.QuarantineDirectory);
-
             return Path.Combine(currentConfiguration.QuarantineDirectory, fileName);
         }
 
@@ -95,8 +89,6 @@ namespace TestFileWatcherWithUtils
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
            AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.ProcessedDirectory}");
 
-            CheckAndCreateDirectory(currentConfiguration.ProcessedDirectory);
-
             return Path.Combine(currentConfiguration.ProcessedDirectory, fileName);
         }
 
@@ -104,8 +96,6 @@ namespace TestFileWatcherWithUtils
         {
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
             AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.LogDirectory}");
-
-            CheckAndCreateDirectory(currentConfiguration.LogDirectory);
 
             return Path.Combine(currentConfiguration.LogDirectory, fileName);
         }
@@ -123,6 +113,8 @@ namespace TestFileWatcherWithUtils
 
             string destinationPath = getWatchedFolderFilePath(fileName);
             AddMessage(fileName, callingClass, getLogFolderFilePath(fileName));
+
+            CheckAndCreateDirectory(currentConfiguration.WatchPath);
 
             File.Copy(fullTestCaseFileName, destinationPath);
         }
