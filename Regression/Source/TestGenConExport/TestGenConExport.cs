@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using static ElvizTestUtils.HelperMethods.FileSystemManager;
 
 namespace TestGenConExport
 {
@@ -27,6 +28,8 @@ namespace TestGenConExport
         private static readonly IEnumerable<string> TestFilesGenConExport = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles");
         static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
 
+        private const bool additionalLogging = false;
+
         [Test, TestCaseSource("TestFilesGenConExport")]
         public void TestGenCon(string testFile)
         {
@@ -35,7 +38,7 @@ namespace TestGenConExport
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
             AddMessage(testFile, callingClass, $"Logs Path : {path}");
 
-            if (!Directory.Exists(path)) Directory.CreateDirectory(path);
+            CheckAndCreateDirectory(path);
 
             string testFilePath = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\" + testFile);
             AddMessage(testFile, callingClass, $"testFilePath : {testFilePath}");
@@ -50,10 +53,12 @@ namespace TestGenConExport
                             "BradyETRM\\Integration", "ElvizEntityExportParameters\\");
             AddMessage(testFile, callingClass, $"exportFilePath : {exportFilePath}");
 
+            CheckAndCreateDirectory(exportFilePath);
+
             string exportLocalFilePath = Path.Combine(Directory.GetCurrentDirectory(), "ExportFiles\\");
             AddMessage(testFile, callingClass, $"exportLocalFilePath : {exportLocalFilePath}");
 
-            if (!Directory.Exists(exportLocalFilePath)) Directory.CreateDirectory(exportLocalFilePath);
+            CheckAndCreateDirectory(exportLocalFilePath);
 
             string localPath;
             string localTestfile;
@@ -155,6 +160,7 @@ namespace TestGenConExport
 
         private static void AddMessage(string fileName, Type callingClass, string filePath)
         {
+            if(additionalLogging)
             MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
                 GetCurrentMethodName(), $"Path : {filePath} - file : {fileName}",
                 "Debugging Reg Test Failures"));

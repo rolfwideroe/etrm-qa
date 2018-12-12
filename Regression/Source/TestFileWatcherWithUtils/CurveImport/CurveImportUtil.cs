@@ -8,6 +8,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Xml.Linq;
+using static ElvizTestUtils.HelperMethods.FileSystemManager;
 
 namespace CurveImport
 {
@@ -18,6 +19,7 @@ namespace CurveImport
         const string quarantineDirectoryConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official\Quarantined";
         const string watchPathConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official";
         const string testFilesFolderConst = @"TestFilesCurveImport\";
+        private const bool additionalLogging = false;
 
         public class FileWatcherConfigurationCurveImport
         {
@@ -78,6 +80,9 @@ namespace CurveImport
             AddMessage(fileName, callingClass, $"ProcessedFolderFilePath : {getProcessedFolderFilePath(fileName)}");
 
             AddMessage(fileName, callingClass, $"TestCaseFileName : {fullTestCaseFileName} - Destination Path {destinationPath}");
+
+            CheckAndCreateDirectory(CurrentCurveImportConfiguration.CurveWatchPath);
+
             File.Copy(fullTestCaseFileName, destinationPath);
         }
 
@@ -191,9 +196,10 @@ namespace CurveImport
 
         private static void AddMessage(string fileName, Type callingClass, string filePath)
         {
-            MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
-                GetCurrentMethodName(), $"Path : {filePath} - file : {fileName}",
-                "Debugging Reg Test Failures"));
+            if (additionalLogging)
+                MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
+                    GetCurrentMethodName(), $"Path : {filePath} - file : {fileName}",
+                    "Debugging Reg Test Failures"));
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ServiceModel;
+using System.Threading;
 using ElvizTestUtils;
 using ElvizTestUtils.PortfolioManagementServiceReference;
 using NUnit.Framework;
@@ -284,6 +285,8 @@ namespace TestWCFPortfolioManagementService
             {
                 Assert.Fail("Create portfolio. Expect to pass: " + ex.Message);
             }
+
+            Thread.Sleep(5000);
 
             //wrong ParentPortfolioExternalId
             myPortfolio.Name = "PortfolioUpdated";

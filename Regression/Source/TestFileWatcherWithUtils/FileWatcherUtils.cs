@@ -8,6 +8,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Xml.Linq;
+using static ElvizTestUtils.HelperMethods.FileSystemManager;
 
 namespace TestFileWatcherWithUtils
 {
@@ -21,7 +22,6 @@ namespace TestFileWatcherWithUtils
         const string quarantineDirectoryConst = @"\\{0}\BradyETRM\Integration\DealImport\Quarantined";
         const string watchPathConst = @"\\{0}\BradyETRM\Integration\DealImport";
         const string testFilesFolderConst = @"TestFiles\";
-        private const bool additionalLogging = false;
 
         public class FileWatcherConfiguration
         {
@@ -41,6 +41,7 @@ namespace TestFileWatcherWithUtils
         }
 
         static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
+        private const bool additionalLogging = false;
 
         public static FileWatcherConfiguration GetConfiguration()
         {
@@ -87,7 +88,7 @@ namespace TestFileWatcherWithUtils
         static string getProcessedFolderFilePath(string fileName)
         {
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-           AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.ProcessedDirectory}");
+            AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.ProcessedDirectory}");
 
             return Path.Combine(currentConfiguration.ProcessedDirectory, fileName);
         }
@@ -149,7 +150,7 @@ namespace TestFileWatcherWithUtils
             SystemUtils.DeleteFileIfExist(getLogFolderFilePath(fileName));
             AddMessage(fileName, callingClass, getLogFolderFilePath(fileName));
         }
-        
+
         /// <summary>
         /// Waits until a testcase file is being processed
         /// </summary>
@@ -227,12 +228,6 @@ namespace TestFileWatcherWithUtils
             var stackFrame = stackTrace.GetFrame(1);
 
             return stackFrame.GetMethod().Name;
-        }
-
-        private static void CheckAndCreateDirectory(string path)
-        {
-            if (!Directory.Exists(path))
-                Directory.CreateDirectory(path);
         }
     }
 
