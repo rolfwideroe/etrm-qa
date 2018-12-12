@@ -21,7 +21,7 @@ namespace TestElvizUpdateTool
         int JobId { get; set; }
 
         static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
-
+        private const bool additionalLogging = false;
         public bool JobExecuted()
         {
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
@@ -40,9 +40,10 @@ namespace TestElvizUpdateTool
 
         private static void AddMessage(string fileName, Type callingClass, string filePath)
         {
-            MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
-                GetCurrentMethodName(), $"{fileName} ----  {filePath}",
-                "Debugging Reg Test Failures"));
+            if (additionalLogging)
+                MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
+                    GetCurrentMethodName(), $"{fileName} ----  {filePath}",
+                    "Debugging Reg Test Failures"));
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]

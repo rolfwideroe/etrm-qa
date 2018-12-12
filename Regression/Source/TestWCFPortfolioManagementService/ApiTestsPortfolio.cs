@@ -53,6 +53,8 @@ namespace TestWCFPortfolioManagementService
                 CompanyPortfolioUtil.CreateCompanyAndPortfolios(motherCompanyExtid, chilldCompanyExtid,
                     motherPortfolioExtid, childPortFolioExtid);
 
+            Thread.Sleep(5000);
+
             PortfolioDto motherPortfolio = expectedCompanyAndPortfolios.MotherPortfolio;
             PortfolioDto childPortfolio = expectedCompanyAndPortfolios.ChildPortfolio;
 
@@ -79,6 +81,8 @@ namespace TestWCFPortfolioManagementService
             CompanyAndPortfolios expectedCompanyAndPortfolios =
                 CompanyPortfolioUtil.CreateCompanyAndPortfolios(motherCompanyExtid, chilldCompanyExtid,
                     motherPortfolioExtid, childPortFolioExtid);
+
+            Thread.Sleep(5000);
 
             PortfolioDto motherPortfolio = expectedCompanyAndPortfolios.MotherPortfolio;
             PortfolioDto childPortfolio = expectedCompanyAndPortfolios.ChildPortfolio;
@@ -107,6 +111,8 @@ namespace TestWCFPortfolioManagementService
             CompanyAndPortfolios expectedCompanyAndPortfolios =
                 CompanyPortfolioUtil.CreateCompanyAndPortfolios(motherCompanyExtid, chilldCompanyExtid,
                     motherPortfolioExtid, childPortFolioExtid);
+
+            Thread.Sleep(5000);
 
             PortfolioDto motherPortfolio = expectedCompanyAndPortfolios.MotherPortfolio;
             PortfolioDto childPortfolio = expectedCompanyAndPortfolios.ChildPortfolio;

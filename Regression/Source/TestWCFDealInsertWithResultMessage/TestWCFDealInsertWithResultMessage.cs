@@ -4,10 +4,14 @@ using ElvizTestUtils.QaLookUp;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Xml;
 using System.Xml.Serialization;
+using MessageHandler;
+using MessageHandler.Pocos;
 
 namespace TestWCFDealInsertWithResultMessage
 {
@@ -40,6 +44,9 @@ namespace TestWCFDealInsertWithResultMessage
         private static readonly IEnumerable<string> TestFilesWithResultMessageCustomProperties = TestCasesFileEnumeratorByFolder.TestCaseFiles(TestFilesWithResultMessageCustomPropertiesPath);
         private static readonly IEnumerable<string> TestFilesWithResultMessageFees = TestCasesFileEnumeratorByFolder.TestCaseFiles(TestFilesWithResultMessageFeesPath);
         private static readonly IEnumerable<string> TestFilesWithResultMessageCurrencySwap = TestCasesFileEnumeratorByFolder.TestCaseFiles(TestFilesWithResultMessageCurrencySwapPath);
+
+        static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
+        private const bool additionalLogging = true;
 
         [Test, Timeout(2000 * 1000), TestCaseSource("TestFilesWithResultMessage")]
         public void TestWcfDealInsertTestFromXmlFile(string testFile)
@@ -76,6 +83,7 @@ namespace TestWCFDealInsertWithResultMessage
 
         public static void TestWcfDealInsertByTestFile(string filePath)
         {
+
             XmlDocument doc = new XmlDocument();
 
             doc.Load(filePath); // input XML
@@ -97,6 +105,8 @@ namespace TestWCFDealInsertWithResultMessage
             XmlNodeList testresultNodeXml = doc.GetElementsByTagName("TestResult");
 
             string testresult = testresultNodeXml.Item(0).InnerText;
+
+
 
             string result = "";
 
@@ -624,6 +634,23 @@ namespace TestWCFDealInsertWithResultMessage
             x.Serialize(textWriter, dto);
 
             return textWriter.ToString();
+        }
+
+        private static void AddMessage(string fileName, Type callingClass, string filePath)
+        {
+            if (additionalLogging)
+                MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
+                    GetCurrentMethodName(), $"JobId : {fileName} - Optional Parameters : {filePath}",
+                    "Debugging Reg Test Failures"));
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        static string GetCurrentMethodName()
+        {
+            var stackTrace = new StackTrace();
+            var stackFrame = stackTrace.GetFrame(1);
+
+            return stackFrame.GetMethod().Name;
         }
     }
 }

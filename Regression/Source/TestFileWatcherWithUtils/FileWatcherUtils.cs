@@ -8,6 +8,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Xml.Linq;
+using static ElvizTestUtils.HelperMethods.FileSystemManager;
 
 namespace TestFileWatcherWithUtils
 {
@@ -40,6 +41,7 @@ namespace TestFileWatcherWithUtils
         }
 
         static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
+        private const bool additionalLogging = false;
 
         public static FileWatcherConfiguration GetConfiguration()
         {
@@ -63,6 +65,7 @@ namespace TestFileWatcherWithUtils
             AddMessage(fileName, callingClass, $"Current Directory : {Directory.GetCurrentDirectory()}");
 
             string currentPath = Path.Combine(Directory.GetCurrentDirectory(), testFilesFolderConst);
+
             return Path.Combine(currentPath, fileName);
         }
 
@@ -70,9 +73,6 @@ namespace TestFileWatcherWithUtils
         {
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
             AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.WatchPath}");
-
-            if (!Directory.Exists(currentConfiguration.WatchPath))
-                Directory.CreateDirectory(currentConfiguration.WatchPath);
 
             return Path.Combine(currentConfiguration.WatchPath, fileName);
         }
@@ -115,6 +115,8 @@ namespace TestFileWatcherWithUtils
             string destinationPath = getWatchedFolderFilePath(fileName);
             AddMessage(fileName, callingClass, getLogFolderFilePath(fileName));
 
+            CheckAndCreateDirectory(currentConfiguration.WatchPath);
+
             File.Copy(fullTestCaseFileName, destinationPath);
         }
 
@@ -148,7 +150,7 @@ namespace TestFileWatcherWithUtils
             SystemUtils.DeleteFileIfExist(getLogFolderFilePath(fileName));
             AddMessage(fileName, callingClass, getLogFolderFilePath(fileName));
         }
-        
+
         /// <summary>
         /// Waits until a testcase file is being processed
         /// </summary>
@@ -213,7 +215,8 @@ namespace TestFileWatcherWithUtils
 
         private static void AddMessage(string fileName, Type callingClass, string filePath)
         {
-            MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
+            if (additionalLogging)
+                MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
                                    GetCurrentMethodName(), $"Path : {filePath} - file : {fileName}",
                                    "Debugging Reg Test Failures"));
         }
@@ -226,7 +229,6 @@ namespace TestFileWatcherWithUtils
 
             return stackFrame.GetMethod().Name;
         }
-
     }
 
 
