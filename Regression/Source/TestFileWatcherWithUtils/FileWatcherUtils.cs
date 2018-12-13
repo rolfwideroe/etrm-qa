@@ -29,7 +29,6 @@ namespace TestFileWatcherWithUtils
             public string ProcessedDirectory { get; set; }
             public string QuarantineDirectory { get; set; }
             public string WatchPath { get; set; }
-            public string TestFilesFolder { get; set; }
 
             public FileWatcherConfiguration(string log, string processed, string quarantine, string watch)
             {
@@ -115,7 +114,7 @@ namespace TestFileWatcherWithUtils
             string destinationPath = getWatchedFolderFilePath(fileName);
             AddMessage(fileName, callingClass, getLogFolderFilePath(fileName));
 
-            CheckAndCreateDirectory(currentConfiguration.WatchPath);
+            ManageFileStructure(destinationPath);
 
             File.Copy(fullTestCaseFileName, destinationPath);
         }
@@ -228,6 +227,17 @@ namespace TestFileWatcherWithUtils
             var stackFrame = stackTrace.GetFrame(1);
 
             return stackFrame.GetMethod().Name;
+        }
+
+        private static void ManageFileStructure(string path)
+        {
+            CheckAndCreateDirectory(currentConfiguration.WatchPath);
+            CheckAndCreateDirectory(currentConfiguration.ProcessedDirectory);
+            CheckAndCreateDirectory(currentConfiguration.LogDirectory);
+            CheckAndCreateDirectory(currentConfiguration.QuarantineDirectory);
+
+            if (File.Exists(path))
+                File.Delete(Path.Combine(path));
         }
     }
 

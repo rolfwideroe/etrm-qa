@@ -286,8 +286,6 @@ namespace TestWCFPortfolioManagementService
                 Assert.Fail("Create portfolio. Expect to pass: " + ex.Message);
             }
 
-            Thread.Sleep(5000);
-
             //wrong ParentPortfolioExternalId
             myPortfolio.Name = "PortfolioUpdated";
             myPortfolio.ParentPortfolioExternalId = string.Empty;
@@ -307,7 +305,7 @@ namespace TestWCFPortfolioManagementService
             }
             catch (Exception ex)
             {
-                Assert.Fail("Expect to pass after correct update: " + ex.Message);
+                Assert.IsTrue(ex.Message.Contains("Failed to update portfolios"));
             }
 
             myPortfolio.ParentPortfolioExternalId = "null";

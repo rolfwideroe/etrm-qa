@@ -24,7 +24,7 @@ namespace TestWCFPortfolioManagementService
             CompanyPortfolioUtil.CreateCompany(expectedCompanies.ChildCompany);
 
             Console.WriteLine(DateTime.Now);
-            Thread.Sleep(5000);
+
             CompanyDto createdMotherCompanyDto = ElvizTestUtils.QaLookUp.QAReportingDBCompanyDTOLookUp.GetCompanyDtoFromReportingDb(rdMotherExtId);
             CompanyDto createdChildCompanyDto = ElvizTestUtils.QaLookUp.QAReportingDBCompanyDTOLookUp.GetCompanyDtoFromReportingDb(rdChildExtId);
 
@@ -52,7 +52,6 @@ namespace TestWCFPortfolioManagementService
 
             CompanyPortfolioUtil.UpdateCompanies(new []{expectedCompanies.MotherCompany,expectedCompanies.ChildCompany});
 
-            Thread.Sleep(5000);
             CompanyDto createdMotherCompanyDto = ElvizTestUtils.QaLookUp.QAReportingDBCompanyDTOLookUp.GetCompanyDtoFromReportingDb(rdMotherExtId);
             CompanyDto createdChildCompanyDto = ElvizTestUtils.QaLookUp.QAReportingDBCompanyDTOLookUp.GetCompanyDtoFromReportingDb(rdChildExtId);
 
@@ -75,8 +74,6 @@ namespace TestWCFPortfolioManagementService
 
             CompanyPortfolioUtil.UpdateCompanies(new[] { expectedCompanies.MotherCompany, expectedCompanies.ChildCompany });
 
-
-            Thread.Sleep(5000);
             CompanyDto createdMotherCompanyDto = ElvizTestUtils.QaLookUp.QAReportingDBCompanyDTOLookUp.GetCompanyDtoFromReportingDb(rdMotherExtId);
             CompanyDto createdChildCompanyDto = ElvizTestUtils.QaLookUp.QAReportingDBCompanyDTOLookUp.GetCompanyDtoFromReportingDb(rdChildExtId);
 
