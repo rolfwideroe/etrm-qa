@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using ElvizTestUtils.PortfolioManagementServiceReference;
+using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using ElvizTestUtils.PortfolioManagementServiceReference;
-using NUnit.Framework;
 
 namespace TestWCFPortfolioManagementService
 {
@@ -17,7 +14,7 @@ namespace TestWCFPortfolioManagementService
         {
             string rdMotherExtId = "Mother_RDB_" + Guid.NewGuid();
             string rdChildExtId = "_Child_" + rdMotherExtId;
-            MotherAndChildCompanies expectedCompanies = CompanyPortfolioUtil.GetTestCompanyDtos(rdMotherExtId,rdChildExtId);
+            MotherAndChildCompanies expectedCompanies = CompanyPortfolioUtil.GetTestCompanyDtos(rdMotherExtId, rdChildExtId);
 
             //breakpoint here
             CompanyPortfolioUtil.CreateCompany(expectedCompanies.MotherCompany);
@@ -50,7 +47,7 @@ namespace TestWCFPortfolioManagementService
             roles.Add(CompanyRole.BalanceResponsibleParty);
             expectedCompanies.MotherCompany.Roles = roles.ToArray();
 
-            CompanyPortfolioUtil.UpdateCompanies(new []{expectedCompanies.MotherCompany,expectedCompanies.ChildCompany});
+            CompanyPortfolioUtil.UpdateCompanies(new[] { expectedCompanies.MotherCompany, expectedCompanies.ChildCompany });
 
             CompanyDto createdMotherCompanyDto = ElvizTestUtils.QaLookUp.QAReportingDBCompanyDTOLookUp.GetCompanyDtoFromReportingDb(rdMotherExtId);
             CompanyDto createdChildCompanyDto = ElvizTestUtils.QaLookUp.QAReportingDBCompanyDTOLookUp.GetCompanyDtoFromReportingDb(rdChildExtId);
@@ -71,6 +68,8 @@ namespace TestWCFPortfolioManagementService
 
             expectedCompanies.MotherCompany.Status = "Deleted";
             expectedCompanies.ChildCompany.Status = "Deleted";
+
+            Thread.Sleep(5000);
 
             CompanyPortfolioUtil.UpdateCompanies(new[] { expectedCompanies.MotherCompany, expectedCompanies.ChildCompany });
 
