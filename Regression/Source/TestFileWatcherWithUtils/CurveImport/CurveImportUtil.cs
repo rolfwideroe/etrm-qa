@@ -83,7 +83,7 @@ namespace CurveImport
 
             CheckAndCreateDirectory(CurrentCurveImportConfiguration.CurveWatchPath);
 
-            File.Copy(fullTestCaseFileName, destinationPath);
+            File.Copy(fullTestCaseFileName, destinationPath, true);
         }
 
         // Checks if file has been processed
