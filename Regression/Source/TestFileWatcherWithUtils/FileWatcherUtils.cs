@@ -17,11 +17,11 @@ namespace TestFileWatcherWithUtils
     /// </summary>
     public class FileWatcherUtils
     {
-        const string logDirectoryConst = @"\\{0}\BradyETRM\Integration\DealImport\Results";
-        const string processedDirectoryConst = @"\\{0}\BradyETRM\Integration\DealImport\Processed";
-        const string quarantineDirectoryConst = @"\\{0}\BradyETRM\Integration\DealImport\Quarantined";
-        const string watchPathConst = @"\\{0}\BradyETRM\Integration\DealImport";
-        const string testFilesFolderConst = @"TestFiles\";
+        const string logDirectoryConst = @"{0}\BradyETRM\Integration\CurveImport\Official\Results";
+        const string processedDirectoryConst = @"{0}\BradyETRM\Integration\CurveImport\Official\Processed";
+        const string quarantineDirectoryConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official\Quarantined";
+        const string watchPathConst = @"{0}\BradyETRM\Integration\CurveImport\Official";
+        const string testFilesFolderConst = @"TestFilesCurveImport\";
 
         public class FileWatcherConfiguration
         {
