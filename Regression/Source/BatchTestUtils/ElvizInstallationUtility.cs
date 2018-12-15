@@ -125,7 +125,7 @@ namespace ElvizTestUtils
 
                 return (string)Registry.GetValue(ClientRegistryPath, app_server_name, String.Empty);
             }
-            return Path.GetPathRoot(Environment.GetFolderPath(Environment.SpecialFolder.System));
+            return Environment.MachineName;
         }
 
         public static string GetElvizVersion()

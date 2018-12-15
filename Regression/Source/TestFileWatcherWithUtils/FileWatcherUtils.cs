@@ -19,7 +19,7 @@ namespace TestFileWatcherWithUtils
     {
         const string logDirectoryConst = @"{0}\BradyETRM\Integration\CurveImport\Official\Results";
         const string processedDirectoryConst = @"{0}\BradyETRM\Integration\CurveImport\Official\Processed";
-        const string quarantineDirectoryConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official\Quarantined";
+        const string quarantineDirectoryConst = @"{0}\BradyETRM\Integration\CurveImport\Official\Quarantined";
         const string watchPathConst = @"{0}\BradyETRM\Integration\CurveImport\Official";
         const string testFilesFolderConst = @"TestFilesCurveImport\";
 
@@ -116,7 +116,7 @@ namespace TestFileWatcherWithUtils
 
             ManageFileStructure(destinationPath);
 
-            File.Copy(fullTestCaseFileName, destinationPath);
+            File.Copy(fullTestCaseFileName, destinationPath, true);
         }
 
         /// <summary>
