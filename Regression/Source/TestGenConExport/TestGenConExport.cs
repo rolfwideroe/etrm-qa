@@ -34,30 +34,14 @@ namespace TestGenConExport
         public void TestGenCon(string testFile)
         {
             string path = Path.Combine(Directory.GetCurrentDirectory(), "Logs\\");
-
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(testFile, callingClass, $"Logs Path : {path}");
-
             CheckAndCreateDirectory(path);
-
             string testFilePath = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\" + testFile);
-            AddMessage(testFile, callingClass, $"testFilePath : {testFilePath}");
-
             string testFilePathCFIN = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\CF\\" + Path.GetFileNameWithoutExtension(testFile) + "_CF_IN.xml");
-            AddMessage(testFile, callingClass, $"testFilePathCFIN : {testFilePathCFIN}");
-
             string testFilePathCFOUT = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\CF\\" + Path.GetFileNameWithoutExtension(testFile) + "_CF_OUT.xml");
-            AddMessage(testFile, callingClass, $"testFilePathCFOUT : {testFilePathCFOUT}");
-
             string exportFilePath = Path.Combine("\\\\" + ElvizTestUtils.ElvizInstallationUtility.GetAppServerName(),
                             "BradyETRM\\Integration", "ElvizEntityExportParameters\\");
-            AddMessage(testFile, callingClass, $"exportFilePath : {exportFilePath}");
-
             CheckAndCreateDirectory(exportFilePath);
-
             string exportLocalFilePath = Path.Combine(Directory.GetCurrentDirectory(), "ExportFiles\\");
-            AddMessage(testFile, callingClass, $"exportLocalFilePath : {exportLocalFilePath}");
-
             CheckAndCreateDirectory(exportLocalFilePath);
 
             string localPath;
@@ -67,17 +51,12 @@ namespace TestGenConExport
             File.SetAttributes(path, FileAttributes.Normal);
             File.SetAttributes(exportFilePath, FileAttributes.Normal);
             File.SetAttributes(exportLocalFilePath, FileAttributes.Normal);
-
-            AddMessage(testFile, callingClass, $"exportFilePath : {exportFilePath}");
-
             string[] exportFiles = Directory.GetFiles(exportFilePath, "*_" + Path.GetFileNameWithoutExtension(testFile) + "_*.xml");
             foreach (string f in exportFiles)
             {
                 //deletes the files for the filter
                 File.Delete(f);
             }
-
-            AddMessage(testFile, callingClass, $"exportLocalFilePath : {exportLocalFilePath}");
 
             string[] exportLocalFiles = Directory.GetFiles(exportLocalFilePath, "*_" + Path.GetFileNameWithoutExtension(testFile) + "_*.xml");
             foreach (string f in exportLocalFiles)
@@ -143,8 +122,6 @@ namespace TestGenConExport
                 }
                 localPath = exportLocalFilePath + Path.GetFileName(exportFilePath);
 
-                AddMessage(testFile, callingClass, $"localPath : {localPath}");
-
                 File.Move(exportFilePath, localPath);
                 if (!GenConExportUtils.XMLDiffCompare(path, localPath, testFilePath, testFile))
                 {
@@ -156,23 +133,6 @@ namespace TestGenConExport
                     Assert.Fail("The GenConExport does not match the expected. See Logs folder for details");
                 }
             }
-        }
-
-        private static void AddMessage(string fileName, Type callingClass, string filePath)
-        {
-            if(additionalLogging)
-            MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
-                GetCurrentMethodName(), $"Path : {filePath} - file : {fileName}",
-                "Debugging Reg Test Failures"));
-        }
-
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        static string GetCurrentMethodName()
-        {
-            var stackTrace = new StackTrace();
-            var stackFrame = stackTrace.GetFrame(1);
-
-            return stackFrame.GetMethod().Name;
         }
     }
 }

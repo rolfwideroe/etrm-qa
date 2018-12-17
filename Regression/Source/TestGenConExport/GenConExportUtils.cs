@@ -51,8 +51,7 @@ namespace TestGenConExport
 
                 ProcessStartInfo startInfo =
                     new ProcessStartInfo(
-                        Path.Combine("\\\\" + ElvizTestUtils.ElvizInstallationUtility.GetAppServerName(),
-                            "BradyETRM\\Integration",
+                        Path.Combine(@"c:\BradyETRM\Integration",
                             "Viz.Integration.Core.ElvizEntityExport.exe"), args) {UseShellExecute = false};
 
                 Process p = Process.Start(startInfo);
