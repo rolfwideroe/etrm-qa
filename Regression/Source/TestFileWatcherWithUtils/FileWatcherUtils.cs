@@ -17,10 +17,10 @@ namespace TestFileWatcherWithUtils
     /// </summary>
     public class FileWatcherUtils
     {
-        const string logDirectoryConst = @"{0}\BradyETRM\Integration\CurveImport\Official\Results";
-        const string processedDirectoryConst = @"{0}\BradyETRM\Integration\CurveImport\Official\Processed";
-        const string quarantineDirectoryConst = @"{0}\BradyETRM\Integration\CurveImport\Official\Quarantined";
-        const string watchPathConst = @"{0}\BradyETRM\Integration\CurveImport\Official";
+        const string logDirectoryConst = @"C:\BradyETRM(Client)\Integration\DealImport\Results";
+        const string processedDirectoryConst = @"C:\BradyETRM(Client)\Integration\DealImport\Processed";
+        const string quarantineDirectoryConst = @"C:\BradyETRM(Client)\Integration\DealImport\Quarantined";
+        const string watchPathConst = @"C:\BradyETRM(Client)\Integration\DealImport";
         const string testFilesFolderConst = @"TestFilesCurveImport\";
 
         public class FileWatcherConfiguration
@@ -46,10 +46,10 @@ namespace TestFileWatcherWithUtils
         {
             string appServerName = ElvizInstallationUtility.GetAppServerName();
 
-            string logDirectory = string.Format(logDirectoryConst, appServerName);
-            string processedDirectory = string.Format(processedDirectoryConst, appServerName);
-            string quarantineDirectory = string.Format(quarantineDirectoryConst, appServerName);
-            string watchPath = string.Format(watchPathConst, appServerName);
+            string logDirectory = logDirectoryConst;
+            string processedDirectory = processedDirectoryConst;
+            string quarantineDirectory = quarantineDirectoryConst;
+            string watchPath = watchPathConst;
 
             return new FileWatcherConfiguration(logDirectory, processedDirectory, quarantineDirectory, watchPath);
         }
@@ -60,43 +60,27 @@ namespace TestFileWatcherWithUtils
 
         static string getTestcaseFolderFilePath(string fileName)
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"Current Directory : {Directory.GetCurrentDirectory()}");
-
             string currentPath = Path.Combine(Directory.GetCurrentDirectory(), testFilesFolderConst);
-
             return Path.Combine(currentPath, fileName);
         }
 
         static string getWatchedFolderFilePath(string fileName)
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.WatchPath}");
-
             return Path.Combine(currentConfiguration.WatchPath, fileName);
         }
 
         static string getQuarantineFolderFilePath(string fileName)
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.QuarantineDirectory}");
-
             return Path.Combine(currentConfiguration.QuarantineDirectory, fileName);
         }
 
         static string getProcessedFolderFilePath(string fileName)
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.ProcessedDirectory}");
-
             return Path.Combine(currentConfiguration.ProcessedDirectory, fileName);
         }
 
         static string getLogFolderFilePath(string fileName)
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"Watch Path : {currentConfiguration.LogDirectory}");
-
             return Path.Combine(currentConfiguration.LogDirectory, fileName);
         }
 
@@ -106,16 +90,9 @@ namespace TestFileWatcherWithUtils
         /// <param name="fileName">The source file location</param>        
         public static void copyFileFromTestCaseFolderToWatchedFolder(string fileName)
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-
             string fullTestCaseFileName = getTestcaseFolderFilePath(fileName);
-            AddMessage(fileName, callingClass, getLogFolderFilePath(fileName));
-
             string destinationPath = getWatchedFolderFilePath(fileName);
-            AddMessage(fileName, callingClass, getLogFolderFilePath(fileName));
-
             ManageFileStructure(destinationPath);
-
             File.Copy(fullTestCaseFileName, destinationPath, true);
         }
 
@@ -141,13 +118,8 @@ namespace TestFileWatcherWithUtils
             var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
 
             SystemUtils.DeleteFileIfExist(getProcessedFolderFilePath(fileName));
-            AddMessage(fileName, callingClass, getProcessedFolderFilePath(fileName));
-
             SystemUtils.DeleteFileIfExist(getQuarantineFolderFilePath(fileName));
-            AddMessage(fileName, callingClass, getQuarantineFolderFilePath(fileName));
-
             SystemUtils.DeleteFileIfExist(getLogFolderFilePath(fileName));
-            AddMessage(fileName, callingClass, getLogFolderFilePath(fileName));
         }
 
         /// <summary>
@@ -212,32 +184,12 @@ namespace TestFileWatcherWithUtils
             return xDoc.Element("DealResult").Element("Message").Value;
         }
 
-        private static void AddMessage(string fileName, Type callingClass, string filePath)
-        {
-            if (additionalLogging)
-                MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
-                                   GetCurrentMethodName(), $"Path : {filePath} - file : {fileName}",
-                                   "Debugging Reg Test Failures"));
-        }
-
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        static string GetCurrentMethodName()
-        {
-            var stackTrace = new StackTrace();
-            var stackFrame = stackTrace.GetFrame(1);
-
-            return stackFrame.GetMethod().Name;
-        }
-
         private static void ManageFileStructure(string path)
         {
             CheckAndCreateDirectory(currentConfiguration.WatchPath);
             CheckAndCreateDirectory(currentConfiguration.ProcessedDirectory);
             CheckAndCreateDirectory(currentConfiguration.LogDirectory);
             CheckAndCreateDirectory(currentConfiguration.QuarantineDirectory);
-
-            if (File.Exists(path))
-                File.Delete(Path.Combine(path));
         }
     }
 
