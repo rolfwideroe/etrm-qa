@@ -1,13 +1,10 @@
 ﻿using ElvizTestUtils;
-using MessageHandler;
 using MessageHandler.Pocos;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using static ElvizTestUtils.HelperMethods.FileSystemManager;
 
 namespace TestGenConExport
@@ -38,8 +35,7 @@ namespace TestGenConExport
             string testFilePath = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\" + testFile);
             string testFilePathCFIN = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\CF\\" + Path.GetFileNameWithoutExtension(testFile) + "_CF_IN.xml");
             string testFilePathCFOUT = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\CF\\" + Path.GetFileNameWithoutExtension(testFile) + "_CF_OUT.xml");
-            string exportFilePath = Path.Combine("\\\\" + ElvizTestUtils.ElvizInstallationUtility.GetAppServerName(),
-                            "BradyETRM\\Integration", "ElvizEntityExportParameters\\");
+            string exportFilePath = Path.Combine(@"c:\BradyETRM(Client)\Integration", @"ElvizEntityExportParameters\");
             CheckAndCreateDirectory(exportFilePath);
             string exportLocalFilePath = Path.Combine(Directory.GetCurrentDirectory(), "ExportFiles\\");
             CheckAndCreateDirectory(exportLocalFilePath);

@@ -14,10 +14,10 @@ namespace CurveImport
 {
     class CurveImportUtil
     {
-        const string logDirectoryConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official\Results";
-        const string processedDirectoryConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official\Processed";
-        const string quarantineDirectoryConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official\Quarantined";
-        const string watchPathConst = @"\\{0}\BradyETRM\Integration\CurveImport\Official";
+        const string logDirectoryConst = @"c:\BradyETRM(Client)\Integration\CurveImport\Official\Results";
+        const string processedDirectoryConst = @"c:\BradyETRM(Client)\Integration\CurveImport\Official\Processed";
+        const string quarantineDirectoryConst = @"c:\BradyETRM(Client)\Integration\CurveImport\Official\Quarantined";
+        const string watchPathConst = @"c:\BradyETRM(Client)\Integration\CurveImport\Official";
         const string testFilesFolderConst = @"TestFilesCurveImport\";
         private const bool additionalLogging = false;
 
