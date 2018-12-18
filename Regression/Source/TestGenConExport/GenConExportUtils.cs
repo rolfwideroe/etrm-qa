@@ -1,9 +1,9 @@
-﻿using System;
-using System.IO;
-using ElvizTestUtils;
+﻿using ElvizTestUtils;
 using Microsoft.XmlDiffPatch;
-using System.Xml;
+using System;
 using System.Diagnostics;
+using System.IO;
+using System.Xml;
 
 namespace TestGenConExport
 {
@@ -51,8 +51,9 @@ namespace TestGenConExport
 
                 ProcessStartInfo startInfo =
                     new ProcessStartInfo(
-                        Path.Combine(@"c:\BradyETRM\Integration",
-                            "Viz.Integration.Core.ElvizEntityExport.exe"), args) {UseShellExecute = false};
+                        Path.Combine(@"c:\BradyETRM(Client)\Integration",
+                            "Viz.Integration.Core.ElvizEntityExport.exe"), args)
+                    { UseShellExecute = false };
 
                 Process p = Process.Start(startInfo);
                 p.WaitForExit(GlobalConstTestSettings.MAX_BATCH_WAIT_TIME);
@@ -87,7 +88,7 @@ namespace TestGenConExport
             {
                 string file1 = expectedfile;
                 string file2 = actualfile;
-                string diffile = path + @"diff-"+ Path.GetFileNameWithoutExtension(Id) + ".xml";
+                string diffile = path + @"diff-" + Path.GetFileNameWithoutExtension(Id) + ".xml";
                 string htmlfile = path + @"errors-" + Path.GetFileNameWithoutExtension(Id) + ".html";
 
                 System.Xml.XmlWriter writer = System.Xml.XmlWriter.Create(diffile);
