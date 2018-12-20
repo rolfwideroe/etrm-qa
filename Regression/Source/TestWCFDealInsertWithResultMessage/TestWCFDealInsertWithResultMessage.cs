@@ -45,9 +45,6 @@ namespace TestWCFDealInsertWithResultMessage
         private static readonly IEnumerable<string> TestFilesWithResultMessageFees = TestCasesFileEnumeratorByFolder.TestCaseFiles(TestFilesWithResultMessageFeesPath);
         private static readonly IEnumerable<string> TestFilesWithResultMessageCurrencySwap = TestCasesFileEnumeratorByFolder.TestCaseFiles(TestFilesWithResultMessageCurrencySwapPath);
 
-        static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
-        private const bool additionalLogging = true;
-
         [Test, Timeout(2000 * 1000), TestCaseSource("TestFilesWithResultMessage")]
         public void TestWcfDealInsertTestFromXmlFile(string testFile)
         {
@@ -634,23 +631,6 @@ namespace TestWCFDealInsertWithResultMessage
             x.Serialize(textWriter, dto);
 
             return textWriter.ToString();
-        }
-
-        private static void AddMessage(string fileName, Type callingClass, string filePath)
-        {
-            if (additionalLogging)
-                MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
-                    GetCurrentMethodName(), $"JobId : {fileName} - Optional Parameters : {filePath}",
-                    "Debugging Reg Test Failures"));
-        }
-
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        static string GetCurrentMethodName()
-        {
-            var stackTrace = new StackTrace();
-            var stackFrame = stackTrace.GetFrame(1);
-
-            return stackFrame.GetMethod().Name;
         }
     }
 }

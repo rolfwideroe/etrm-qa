@@ -12,7 +12,6 @@ namespace ElvizTestUtils
     public class JobAPI
     {
         private const bool additonalLogging = true;
-        static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
 
         [Test]
         public static int GetJobsIdByDescription(string description, string jobType)
@@ -152,9 +151,6 @@ namespace ElvizTestUtils
                 OptionalParameters = optionalParams
             };
 
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage($"Job ID : {request.JobId}", callingClass, $"Optional Parameters : {request.OptionalParameters}");
-
             Console.WriteLine("job started " + DateTime.Now);
             JobExecutionStatus status = client.SubmitJobExecution(request);
             int executionId = status.ExecutionId;
@@ -178,11 +174,6 @@ namespace ElvizTestUtils
 
         public static int ExecuteAndAssertJob(int jobId, Dictionary<string, string> optionalParams, int statusChangeTimeoutSeconds, string appServerName = null)
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage($"Job Id : {jobId} --- ", callingClass, $" --- Optional Parameters : {optionalParams}" +
-                                                               $" --- Change Time : {statusChangeTimeoutSeconds.ToString()}" +
-                                                               $" --- Server : {appServerName}");
-
             JobExecutionStatus finalStatus = ExecuteJob(jobId, optionalParams, statusChangeTimeoutSeconds, appServerName);
 
             if (finalStatus == null) throw new ArgumentException("JobId " + jobId + " did not complete within the set timeout of :" + statusChangeTimeoutSeconds + " seconds");
@@ -260,24 +251,5 @@ namespace ElvizTestUtils
                 ExecuteJob(eutJobs[0].Id, null, 600);
 
         }
-
-        private static void AddMessage(string fileName, Type callingClass, string filePath)
-        {
-            if (additonalLogging)
-                MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
-                    GetCurrentMethodName(), $"JobId : {fileName} - Optional Parameters : {filePath}",
-                    "Debugging Reg Test Failures"));
-        }
-
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        static string GetCurrentMethodName()
-        {
-            var stackTrace = new StackTrace();
-            var stackFrame = stackTrace.GetFrame(1);
-
-            return stackFrame.GetMethod().Name;
-        }
-
-
     }
 }
