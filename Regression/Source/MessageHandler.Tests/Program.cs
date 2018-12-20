@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -7,8 +6,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using MessageHandler.Pocos;
-using Shouldly;
-using static MessageHandler.Logger;
 
 
 namespace MessageHandler.Tests

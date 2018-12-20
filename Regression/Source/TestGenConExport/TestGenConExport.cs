@@ -23,9 +23,6 @@ namespace TestGenConExport
         // the tests will run 
 
         private static readonly IEnumerable<string> TestFilesGenConExport = TestCasesFileEnumeratorByFolder.TestCaseFiles("TestFiles");
-        static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
-
-        private const bool additionalLogging = false;
 
         [Test, TestCaseSource("TestFilesGenConExport")]
         public void TestGenCon(string testFile)

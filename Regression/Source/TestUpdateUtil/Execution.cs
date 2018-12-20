@@ -20,12 +20,8 @@ namespace TestElvizUpdateTool
         bool Status { get; set; } = true;
         int JobId { get; set; }
 
-        static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
-        private const bool additionalLogging = false;
         public bool JobExecuted()
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage($"JobId : {JobId}", callingClass, $"Description : {Description}");
 
             if (ExecutedJobStatus() == "Success") return Status;
             if (ExecutedJobStatus() == "Success") return Status;
@@ -36,23 +32,6 @@ namespace TestElvizUpdateTool
         private string ExecutedJobStatus()
         {
             return JobAPI.ExecuteJob(JobId, null, 800).Status;
-        }
-
-        private static void AddMessage(string fileName, Type callingClass, string filePath)
-        {
-            if (additionalLogging)
-                MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
-                    GetCurrentMethodName(), $"{fileName} ----  {filePath}",
-                    "Debugging Reg Test Failures"));
-        }
-
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        static string GetCurrentMethodName()
-        {
-            var stackTrace = new StackTrace();
-            var stackFrame = stackTrace.GetFrame(1);
-
-            return stackFrame.GetMethod().Name;
         }
     }
 }

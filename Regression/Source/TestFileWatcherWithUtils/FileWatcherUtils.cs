@@ -1,11 +1,8 @@
 ﻿using ElvizTestUtils;
-using MessageHandler;
 using MessageHandler.Pocos;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Xml.Linq;
 using static ElvizTestUtils.HelperMethods.FileSystemManager;
@@ -21,7 +18,7 @@ namespace TestFileWatcherWithUtils
         const string processedDirectoryConst = @"C:\BradyETRM(Client)\Integration\DealImport\Processed";
         const string quarantineDirectoryConst = @"C:\BradyETRM(Client)\Integration\DealImport\Quarantined";
         const string watchPathConst = @"C:\BradyETRM(Client)\Integration\DealImport";
-        const string testFilesFolderConst = @"TestFilesCurveImport\";
+        const string testFilesFolderConst = @"TestFiles\";
 
         public class FileWatcherConfiguration
         {
@@ -38,9 +35,6 @@ namespace TestFileWatcherWithUtils
                 WatchPath = watch;
             }
         }
-
-        static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
-        private const bool additionalLogging = false;
 
         public static FileWatcherConfiguration GetConfiguration()
         {

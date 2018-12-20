@@ -37,7 +37,6 @@ namespace CurveImport
                 CurveWatchPath = watch;
             }
         }
-        static List<MessageDetails> MessageDetailsList { get; set; } = new List<MessageDetails>();
 
         static public FileWatcherConfigurationCurveImport GetConfiguration()
         {
@@ -58,31 +57,13 @@ namespace CurveImport
         {
             //clean folders before test
             SystemUtils.DeleteFileIfExist(getProcessedFolderFilePath(fileName));
-
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"ProcessedFolderFilePath : {getProcessedFolderFilePath(fileName)}");
-
             SystemUtils.DeleteFileIfExist(getQuarantineFolderFilePath(fileName));
-
-            AddMessage(fileName, callingClass, $"LogFolderFilePath : {getLogFolderFilePath(fileName)}");
-
             SystemUtils.DeleteFileIfExist(getLogFolderFilePath(fileName));
-
-            AddMessage(fileName, callingClass, $"TestcaseFolderFilePath : {getTestcaseFolderFilePath(fileName)}");
-
+            
             //copy files from test case folder to ..\CurveImport\Official
             string fullTestCaseFileName = getTestcaseFolderFilePath(fileName);
-
-            AddMessage(fileName, callingClass, $"WatchedFolderFilePath : {getWatchedFolderFilePath(fileName)}");
-
             string destinationPath = getWatchedFolderFilePath(fileName);
-
-            AddMessage(fileName, callingClass, $"ProcessedFolderFilePath : {getProcessedFolderFilePath(fileName)}");
-
-            AddMessage(fileName, callingClass, $"TestCaseFileName : {fullTestCaseFileName} - Destination Path {destinationPath}");
-
             CheckAndCreateDirectory(CurrentCurveImportConfiguration.CurveWatchPath);
-
             File.Copy(fullTestCaseFileName, destinationPath, true);
         }
 
@@ -147,38 +128,23 @@ namespace CurveImport
 
         static string getTestcaseFolderFilePath(string fileName)
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"Current Directory : {Directory.GetCurrentDirectory()}");
-
             string currentPath = Path.Combine(Directory.GetCurrentDirectory(), testFilesFolderConst);
             return Path.Combine(currentPath, fileName);
         }
 
         static string getWatchedFolderFilePath(string fileName)
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"CurrentCurveImportConfiguration.CurveWatchPath : " +
-                                               $"{CurrentCurveImportConfiguration.CurveWatchPath}");
-
             return Path.Combine(CurrentCurveImportConfiguration.CurveWatchPath, fileName);
         }
 
         static string getQuarantineFolderFilePath(string fileName)
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"CurrentCurveImportConfiguration.CurveQuarantineDirectory : " +
-                                               $"{CurrentCurveImportConfiguration.CurveQuarantineDirectory}");
-
             return Path.Combine(CurrentCurveImportConfiguration.CurveQuarantineDirectory, fileName);
         }
 
 
         static string getProcessedFolderFilePath(string fileName)
         {
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"CurrentCurveImportConfiguration.CurveProcessedDirectory : " +
-                                               $"{CurrentCurveImportConfiguration.CurveProcessedDirectory}");
-
             return Path.Combine(CurrentCurveImportConfiguration.CurveProcessedDirectory, fileName);
         }
 
@@ -186,30 +152,7 @@ namespace CurveImport
         {
             string fullFileName = Path.Combine(CurrentCurveImportConfiguration.CurveLogDirectory, fileName);
             string filenameXml = Path.ChangeExtension(fullFileName, "xml");
-
-            var callingClass = System.Reflection.MethodBase.GetCurrentMethod().DeclaringType;
-            AddMessage(fileName, callingClass, $"fullFileName : {fullFileName} - " +
-                                               $"filenameXml : {filenameXml}");
-
             return filenameXml;
         }
-
-        private static void AddMessage(string fileName, Type callingClass, string filePath)
-        {
-            if (additionalLogging)
-                MessageDetailsList.Add(Evaluator.MessageConstructor(LogLevel.Debug, callingClass,
-                    GetCurrentMethodName(), $"Path : {filePath} - file : {fileName}",
-                    "Debugging Reg Test Failures"));
-        }
-
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        static string GetCurrentMethodName()
-        {
-            var stackTrace = new StackTrace();
-            var stackFrame = stackTrace.GetFrame(1);
-
-            return stackFrame.GetMethod().Name;
-        }
-
     }
 }
