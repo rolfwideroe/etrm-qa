@@ -9,6 +9,7 @@ namespace ElvizTestUtils.CurveTests
         public string CurrencyQuote { get; set; }
         public DateTime? FromDate { get; set; }
         public DateTime? ToDate { get; set; }
+        public RelativePeriod RelativePeriod { get; set; }
         public string LoadType { get; set; }
         public string PriceBookAppendix { get; set; }
         public string ReferenceAreaName { get; set; }
@@ -20,4 +21,10 @@ namespace ElvizTestUtils.CurveTests
 		public CurvePriceType CurvePriceType { get; set; }
     }
 
+    public class RelativePeriod
+    {
+        public int NumberOfPeriods { get; set; }
+        public string PeriodKind { get; set; }
+        public int FromDateOffsetFromReportDate { get; set; }
+    }
 }

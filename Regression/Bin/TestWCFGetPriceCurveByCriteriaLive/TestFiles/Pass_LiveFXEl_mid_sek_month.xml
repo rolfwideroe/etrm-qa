@@ -5,8 +5,11 @@
       <ElvizConfiguration Name="EnableFxOutright" Value="True"/>
     </ElvizConfigurations>
 	<CurrencyQuote>mid</CurrencyQuote>	
-	<FromDate>2019-01-01</FromDate>
-	<ToDate>2019-09-30</ToDate>
+  <RelativePeriod>
+    <NumberOfPeriods>9</NumberOfPeriods>
+    <PeriodKind>Month</PeriodKind>
+    <FromDateOffsetFromReportDate>1</FromDateOffsetFromReportDate>
+  </RelativePeriod>
 	<LoadType>Base</LoadType>
 	<PriceBookAppendix></PriceBookAppendix>
 	<ReferenceAreaName>LiveFXEl</ReferenceAreaName>
@@ -31,16 +34,6 @@
       <VolumeUnit>MWh</VolumeUnit>
       <TimeZone>CET</TimeZone>
     </ExpectedProperties>
-    <ExpectedCurveValues>
-	    <ExpectedCurveValue Date="2019-01-01T00:00:00" Value="13.48835"/>
-		<ExpectedCurveValue Date="2019-02-01T00:00:00" Value="13.48835"/>
-		<ExpectedCurveValue Date="2019-03-01T00:00:00" Value="13.48835"/>
-		<ExpectedCurveValue Date="2019-04-01T00:00:00" Value="13.48835"/>
-		<ExpectedCurveValue Date="2019-05-01T00:00:00" Value="13.48835"/>
-		<ExpectedCurveValue Date="2019-06-01T00:00:00" Value="13.48835"/>
-		<ExpectedCurveValue Date="2019-07-01T00:00:00" Value="13.48835"/>
-		<ExpectedCurveValue Date="2019-08-01T00:00:00" Value="13.48835"/>
-		<ExpectedCurveValue Date="2019-09-01T00:00:00" Value="13.48835"/>
-    </ExpectedCurveValues>
+    <ExpectedRepeatingCurveValue>13.48835</ExpectedRepeatingCurveValue>
   </ExpectedValues>
 </CurveTestCase>

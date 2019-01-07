@@ -5,8 +5,11 @@
       <ElvizConfiguration Name="EnableFxOutright" Value="True"/>
     </ElvizConfigurations>
 	<CurrencyQuote>close</CurrencyQuote>	
-	<FromDate>2019-01-01</FromDate>
-	<ToDate>2019-12-31</ToDate>
+  <RelativePeriod>
+    <NumberOfPeriods>1</NumberOfPeriods>
+    <PeriodKind>Year</PeriodKind>
+    <FromDateOffsetFromReportDate>1</FromDateOffsetFromReportDate>
+  </RelativePeriod>
 	<LoadType>Base</LoadType>
 	<PriceBookAppendix></PriceBookAppendix>
 	<ReferenceAreaName>LiveFXGas</ReferenceAreaName>
@@ -31,8 +34,6 @@
       <VolumeUnit>MWh</VolumeUnit>
       <TimeZone>CET</TimeZone>
     </ExpectedProperties>
-    <ExpectedCurveValues>
-	   <ExpectedCurveValue Date="2019-01-01T00:00:00" Value="130.592"/>
-    </ExpectedCurveValues>
+    <ExpectedRepeatingCurveValue>130.592</ExpectedRepeatingCurveValue>
   </ExpectedValues>
 </CurveTestCase>

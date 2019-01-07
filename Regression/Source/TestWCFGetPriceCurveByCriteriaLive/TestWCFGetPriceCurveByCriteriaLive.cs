@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Xml;
 using Apache.NMS;
 using Apache.NMS.Util;
@@ -12,7 +10,6 @@ using ElvizTestUtils;
 using ElvizTestUtils.CurveServiceReference;
 using ElvizTestUtils.CurveTests;
 using ElvizTestUtils.QaLookUp;
-using ElvizTestUtils.ReportEngineTests;
 using NUnit.Framework;
 
 namespace TestWCFGetPriceCurveByCriteriaLive
@@ -26,29 +23,26 @@ namespace TestWCFGetPriceCurveByCriteriaLive
         [OneTimeSetUp]
         public void Setup()
         {
-
             string filename = Path.Combine(Directory.GetCurrentDirectory(), FXSpotPath);
             XmlDocument doc = new XmlDocument();
             doc.Load(filename);
-            this.SendToQueue(doc.InnerXml);
+            SendToQueue(doc.InnerXml);
             Thread.Sleep(200);
             RunJob("LiveFXEl (Close Price)");
             Thread.Sleep(200);
             RunJob("LiveFXGas (Close Price)");
         }
 
-
         public static void RunJob(string description)
-            {
-                //running job for publishing pricebook
-                string curveJobType = "Live Price Book Snapshot Job";
-                int curveJobId = JobAPI.GetJobsIdByDescription(description, curveJobType);
-                JobAPI.ExecuteAndAssertJob(curveJobId,10);
-            }
+        {
+            //running job for publishing pricebook
+            const string curveJobType = "Live Price Book Snapshot Job";
+            int curveJobId = JobAPI.GetJobsIdByDescription(description, curveJobType);
+            JobAPI.ExecuteAndAssertJob(curveJobId, 10);
+        }
 
-
-    //sending spot fx rates
-    public void SendToQueue(string docInnerXml)
+        //sending spot fx rates
+        public void SendToQueue(string docInnerXml)
         {
             string appServerName = ElvizInstallationUtility.GetAppServerName();
             string servername = "tcp://" + appServerName + ":61616/";
@@ -98,22 +92,42 @@ namespace TestWCFGetPriceCurveByCriteriaLive
             TestPriceCurveDto(filepath);
         }
         
-        
         private void TestPriceCurveDto(string testFilePath)
         {
-            
             CurveTestCase curveTest = TestXmlTool.Deserialize<CurveTestCase>(testFilePath);
 
             DateTime reportDate = curveTest.InputData.ReportDate;
-            string dateformat = "yyyy-MM-dd";
-            string time = DateTime.Now.ToString(dateformat); 
+            if (reportDate == DateTime.MinValue) reportDate = new DateTime(DateTime.Now.Date.Ticks, DateTimeKind.Unspecified);
 
-            if (reportDate == DateTime.MinValue) reportDate = DateTime.Parse(time);
+            DateTime? fromDate = curveTest.InputData.FromDate;
+            DateTime? toDate = curveTest.InputData.ToDate;
+            if (!fromDate.HasValue && !toDate.HasValue)
+            {
+                RelativePeriod relativePeriod = curveTest.InputData.RelativePeriod;
+                Assert.IsNotNull(relativePeriod);
+
+                switch (relativePeriod.PeriodKind)
+                {
+                    case "Day":
+                        fromDate = reportDate.AddDays(relativePeriod.FromDateOffsetFromReportDate);
+                        toDate = fromDate.Value.AddDays(relativePeriod.NumberOfPeriods).AddDays(-1);
+                        break;
+                    case "Month":
+                        fromDate = new DateTime(reportDate.Year, reportDate.Month, 1).AddMonths(relativePeriod.FromDateOffsetFromReportDate);
+                        toDate = fromDate.Value.AddMonths(relativePeriod.NumberOfPeriods).AddDays(-1);
+                        break;
+                    case "Year":
+                        fromDate = new DateTime(reportDate.Year, 1, 1).AddYears(relativePeriod.FromDateOffsetFromReportDate);
+                        toDate = fromDate.Value.AddYears(relativePeriod.NumberOfPeriods).AddDays(-1);
+                        break;
+                    default:
+                        throw new NotSupportedException($"RelativePeriod.PeriodKind = {relativePeriod.PeriodKind} is not supported.");
+                }
+            }
 
             ElvizConfiguration[] elvizConfigurations = curveTest.InputData.ElvizConfigurations;
             try
             {
-
                 if (elvizConfigurations != null)
                 {
                     ElvizConfigurationTool utility = new ElvizConfigurationTool();
@@ -125,8 +139,8 @@ namespace TestWCFGetPriceCurveByCriteriaLive
                 PriceCurveCriteria criteria = new PriceCurveCriteria
                 {
                     CurrencyQuote = curveTest.InputData.CurrencyQuote,
-                    FromDate = curveTest.InputData.FromDate,
-                    ToDate = curveTest.InputData.ToDate,
+                    FromDate = fromDate,
+                    ToDate = toDate,
                     LoadType = curveTest.InputData.LoadType,
                     PriceBookAppendix = curveTest.InputData.PriceBookAppendix,
                     ReferenceAreaName = curveTest.InputData.ReferenceAreaName,
@@ -139,26 +153,24 @@ namespace TestWCFGetPriceCurveByCriteriaLive
                 };
 
 
-                if (!string.IsNullOrEmpty(curveTest.ExpectedValues.ErrorMessage))
+                PriceCurveDto testCurveDto = null;
+                try
                 {
-                    try
-                    {
-                        PriceCurveDto testCurveDtoFail = service.GetPriceCurveByCriteria(criteria);
-                    }
-                    catch (Exception ex)
+                    testCurveDto = service.GetPriceCurveByCriteria(criteria);
+                }
+                catch (Exception ex)
+                {
+                    if (!string.IsNullOrEmpty(curveTest.ExpectedValues.ErrorMessage))
                     {
                         Console.WriteLine(ex.Message);
-                        Assert.AreEqual(curveTest.ExpectedValues.ErrorMessage, ex.Message,
-                            "Test Expected to Fail but other Exception was caught: " + ex.Message);
-
+                        Assert.AreEqual(curveTest.ExpectedValues.ErrorMessage, ex.Message, "Test Expected to Fail but other Exception was caught: " + ex.Message);
                     }
+                    else throw;
                 }
-                else
-                {
-                    PriceCurveDto testCurveDto = service.GetPriceCurveByCriteria(criteria);
-                    QaPriceCurveDtoWrapper wrapper =
-                        new QaPriceCurveDtoWrapper(service.GetPriceCurveByCriteria(criteria));
 
+                if (testCurveDto != null)
+                {
+                    QaPriceCurveDtoWrapper wrapper = new QaPriceCurveDtoWrapper(testCurveDto);
 
                     //Addititonal information, get number values from percent value
                     Assert.AreEqual(curveTest.ExpectedValues.ExpectedCurveVolatility.WinterShort,
@@ -191,39 +203,73 @@ namespace TestWCFGetPriceCurveByCriteriaLive
                     Assert.AreEqual(curveTest.ExpectedValues.ExpectedProperties.TimeZone, wrapper.TimeZone,
                         "TimeZone not equal");
 
-                    List<DateTimeValue> dateTimevalues = wrapper.GetCurveValues();
 
-                    List<DateTimeValue> expectedTimevalues =
-                        curveTest.ExpectedValues.ExpectedCurveValues.Select(d => new DateTimeValue(d.Date, d.Value))
-                            .ToList();
+                    List<DateTimeValue> expectedTimeValues;
+                    if (curveTest.ExpectedValues.ExpectedRepeatingCurveValue.HasValue && curveTest.ExpectedValues.ExpectedCurveValues == null)
+                    {
+                        double expectedValue = curveTest.ExpectedValues.ExpectedRepeatingCurveValue.Value;
+                        expectedTimeValues = new List<DateTimeValue>();
 
-                    foreach (DateTimeValue record in wrapper.GetCurveValues())
+                        DateTime dateTime = criteria.FromDate.Value;
+                        do
+                        {
+                            expectedTimeValues.Add(new DateTimeValue(dateTime, expectedValue));
+                            switch (criteria.Resolution)
+                            {
+                                case "15 min":
+                                    dateTime = dateTime.AddMinutes(15);
+                                    break;
+                                case "30 min":
+                                    dateTime = dateTime.AddMinutes(30);
+                                    break;
+                                case "Day":
+                                    dateTime = dateTime.AddDays(1);
+                                    break;
+                                case "Month":
+                                    dateTime = dateTime.AddMonths(1);
+                                    break;
+                                case "Year":
+                                    dateTime = dateTime.AddYears(1);
+                                    break;
+                                default:
+                                    throw new NotSupportedException($"InputData.Resolution = {criteria.Resolution} is not supported for ExpectedRepeatingCurveValue.");
+                            }
+                            
+                        } while (dateTime < criteria.ToDate.Value.AddDays(1));
+                    }
+                    else
+                    {
+                        expectedTimeValues = curveTest.ExpectedValues.ExpectedCurveValues.Select(d => new DateTimeValue(d.Date, d.Value)).ToList();
+                    }
+
+                    List<DateTimeValue> dateTimeValues = wrapper.GetCurveValues();
+/*
+                    foreach (DateTimeValue record in dateTimevalues)
                     {
                         string s = "";
                        // s += record.DateTime + " ; " + record.Value;
                         s += "<ExpectedCurveValue Date=\"" + record.DateTime.ToString("yyyy-MM-ddTHH:mm:ss") +
                              "\" Value=\"" + record.Value + "\"/>";
-
                           // Console.WriteLine(s);
                     }
+*/
 
-                    Assert.AreEqual(expectedTimevalues.Count, dateTimevalues.Count,
-                        "Test case contains wrong number of expected values");
+                    Assert.AreEqual(expectedTimeValues.Count, dateTimeValues.Count, "Test case contains wrong number of expected values");
 
-                    for (int i = 0; i < expectedTimevalues.Count; i++)
+                    for (int i = 0; i < expectedTimeValues.Count; i++)
                     {
                         //Assert Data
-                        Assert.AreEqual(expectedTimevalues[i].DateTime, dateTimevalues[i].DateTime,
-                            "The actual Date : " + dateTimevalues[i].DateTime + " did not match the expected date : " +
-                            expectedTimevalues[i].DateTime + " at index = " + i);
+                        Assert.AreEqual(expectedTimeValues[i].DateTime, dateTimeValues[i].DateTime,
+                            "The actual Date : " + dateTimeValues[i].DateTime + " did not match the expected date : " +
+                            expectedTimeValues[i].DateTime + " at index = " + i);
 
-                        double actual = dateTimevalues[i].Value;
-                        double expected = expectedTimevalues[i].Value;
+                        double actual = dateTimeValues[i].Value;
+                        double expected = expectedTimeValues[i].Value;
                        
                         if (Math.Abs(actual) >= 1e-8 || Math.Abs(expected) >= 1e-8)
                         {
                             double relativeError = (actual / expected) - 1;
-                            string errorMessage = "Failed for record : " + dateTimevalues[i].DateTime +
+                            string errorMessage = "Failed for record : " + dateTimeValues[i].DateTime +
                                                   " : Expected value is : " +
                                                   expected + " , but Actual value was " + actual;
                             //Assert value
@@ -231,8 +277,6 @@ namespace TestWCFGetPriceCurveByCriteriaLive
                                 errorMessage);
                         }
                     }
-
-                    //    if(curveTest.ResultInformation.ResultValue.ToUpper()=="EXCEPTION") Assert.Fail("Test Passed, but expected to fail with error :\n "+curveTest.ResultInformation.ErrorMessage);
 
                     Assert.AreEqual(curveTest.InputData.LoadType, testCurveDto.LoadType, "LoadType not equal");
                     Assert.AreEqual(curveTest.InputData.PriceBookAppendix, testCurveDto.PriceBookAppendix,
@@ -250,14 +294,12 @@ namespace TestWCFGetPriceCurveByCriteriaLive
                     Assert.AreEqual(curveTest.InputData.TemplateName, testCurveDto.PriceBookName,
                         "TemplateName not equal");
                 }
-
             }
             finally
             {
                 if (elvizConfigurations != null)
                 {
                     ElvizConfigurationTool utility = new ElvizConfigurationTool();
-
                     utility.RevertAllConfigurationsToDefault();
                 }
             }

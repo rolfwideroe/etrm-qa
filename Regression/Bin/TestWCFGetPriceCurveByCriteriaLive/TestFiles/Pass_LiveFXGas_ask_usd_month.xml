@@ -4,9 +4,12 @@
       <ElvizConfiguration Name="CurrencySource" Value="Viz"/>
       <ElvizConfiguration Name="EnableFxOutright" Value="True"/>
     </ElvizConfigurations>
-	<CurrencyQuote>ask</CurrencyQuote>	
-	<FromDate>2019-01-01</FromDate>
-	<ToDate>2019-10-31</ToDate>
+	<CurrencyQuote>ask</CurrencyQuote>
+    <RelativePeriod>
+      <NumberOfPeriods>10</NumberOfPeriods>
+      <PeriodKind>Month</PeriodKind>
+      <FromDateOffsetFromReportDate>1</FromDateOffsetFromReportDate>
+    </RelativePeriod>
 	<LoadType>Base</LoadType>
 	<PriceBookAppendix></PriceBookAppendix>
 	<ReferenceAreaName>LiveFXGas</ReferenceAreaName>
@@ -31,17 +34,6 @@
       <VolumeUnit>MWh</VolumeUnit>
       <TimeZone>CET</TimeZone>
     </ExpectedProperties>
-    <ExpectedCurveValues>
-		<ExpectedCurveValue Date="2019-01-01T00:00:00" Value="19.6"/>
-		<ExpectedCurveValue Date="2019-02-01T00:00:00" Value="19.6"/>
-		<ExpectedCurveValue Date="2019-03-01T00:00:00" Value="19.6"/>
-		<ExpectedCurveValue Date="2019-04-01T00:00:00" Value="19.6"/>
-		<ExpectedCurveValue Date="2019-05-01T00:00:00" Value="19.6"/>
-		<ExpectedCurveValue Date="2019-06-01T00:00:00" Value="19.6"/>
-		<ExpectedCurveValue Date="2019-07-01T00:00:00" Value="19.6"/>
-		<ExpectedCurveValue Date="2019-08-01T00:00:00" Value="19.6"/>
-		<ExpectedCurveValue Date="2019-09-01T00:00:00" Value="19.6"/>
-		<ExpectedCurveValue Date="2019-10-01T00:00:00" Value="19.6"/>
-    </ExpectedCurveValues>
+    <ExpectedRepeatingCurveValue>19.6</ExpectedRepeatingCurveValue>
   </ExpectedValues>
 </CurveTestCase>
