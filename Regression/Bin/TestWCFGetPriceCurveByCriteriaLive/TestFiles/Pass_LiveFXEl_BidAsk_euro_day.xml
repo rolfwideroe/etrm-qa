@@ -5,8 +5,11 @@
       <ElvizConfiguration Name="EnableFxOutright" Value="True"/>
     </ElvizConfigurations>
 	<CurrencyQuote>BidAskSpread</CurrencyQuote>	
-	<FromDate>2019-03-01</FromDate>
-	<ToDate>2019-03-02</ToDate>
+  <RelativePeriod>
+    <NumberOfPeriods>2</NumberOfPeriods>
+    <PeriodKind>Day</PeriodKind>
+    <FromDateOffsetFromReportDate>60</FromDateOffsetFromReportDate>
+  </RelativePeriod>
 	<LoadType>Base</LoadType>
 	<PriceBookAppendix></PriceBookAppendix>
 	<ReferenceAreaName>LiveFXEl</ReferenceAreaName>
@@ -31,9 +34,6 @@
       <VolumeUnit>MWh</VolumeUnit>
       <TimeZone>CET</TimeZone>
     </ExpectedProperties>
-    <ExpectedCurveValues>
-	   <ExpectedCurveValue Date="2019-03-01T00:00:00" Value="1"/>
-	   <ExpectedCurveValue Date="2019-03-02T00:00:00" Value="1"/>
-    </ExpectedCurveValues>
+    <ExpectedRepeatingCurveValue>1</ExpectedRepeatingCurveValue>
   </ExpectedValues>
 </CurveTestCase>
