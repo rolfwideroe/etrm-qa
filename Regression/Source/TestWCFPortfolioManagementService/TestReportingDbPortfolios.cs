@@ -22,7 +22,8 @@ namespace TestWCFPortfolioManagementService
 
             CompanyAndPortfolios expectedCompanyAndPortfolios = CompanyPortfolioUtil.CreateCompanyAndPortfolios(motherCompanyExtid, chilldCompanyExtid, motherPortfolioExtid, childPortFolioExtid);
 
-            Thread.Sleep(1000);
+            Thread.Sleep(5000);
+
             PortfolioDto actualMotherPortfolio = ElvizTestUtils.QaLookUp.QAReportingDBPortfolioDTOLookUp.GetPortfolioDtoFromReportingDb(
                     expectedCompanyAndPortfolios.MotherPortfolio.ExternalId);
             
@@ -54,7 +55,7 @@ namespace TestWCFPortfolioManagementService
 
             CompanyPortfolioUtil.UpdatePortfolios(new[] { motherPortfolio, childPortfolio });
 
-            Thread.Sleep(1000);
+            Thread.Sleep(5000);
 
             PortfolioDto actualMotherPortfolio = ElvizTestUtils.QaLookUp.QAReportingDBPortfolioDTOLookUp.GetPortfolioDtoFromReportingDb(expectedCompanyAndPortfolios.MotherPortfolio.ExternalId);
             PortfolioDto actualChildPortfolio = ElvizTestUtils.QaLookUp.QAReportingDBPortfolioDTOLookUp.GetPortfolioDtoFromReportingDb(expectedCompanyAndPortfolios.ChildPortfolio.ExternalId);
@@ -82,7 +83,8 @@ namespace TestWCFPortfolioManagementService
             childPortfolio.Name = "updatedNameChild";
 
             CompanyPortfolioUtil.UpdatePortfolios(new[] { motherPortfolio, childPortfolio });
-            Thread.Sleep(1000);
+
+            Thread.Sleep(5000);
 
             PortfolioDto actualMotherPortfolio = ElvizTestUtils.QaLookUp.QAReportingDBPortfolioDTOLookUp.GetPortfolioDtoFromReportingDb(expectedCompanyAndPortfolios.MotherPortfolio.ExternalId);
             PortfolioDto actualChildPortfolio = ElvizTestUtils.QaLookUp.QAReportingDBPortfolioDTOLookUp.GetPortfolioDtoFromReportingDb(expectedCompanyAndPortfolios.ChildPortfolio.ExternalId);
@@ -112,7 +114,8 @@ namespace TestWCFPortfolioManagementService
 
             CompanyPortfolioUtil.UpdatePortfolios(new[] { childPortfolio });
             CompanyPortfolioUtil.UpdatePortfolios(new[] { motherPortfolio });
-            Thread.Sleep(1000);
+
+            Thread.Sleep(5000);
 
             PortfolioDto actualMotherPortfolio = ElvizTestUtils.QaLookUp.QAReportingDBPortfolioDTOLookUp.GetPortfolioDtoFromReportingDb(expectedCompanyAndPortfolios.MotherPortfolio.ExternalId);
             PortfolioDto actualChildPortfolio = ElvizTestUtils.QaLookUp.QAReportingDBPortfolioDTOLookUp.GetPortfolioDtoFromReportingDb(expectedCompanyAndPortfolios.ChildPortfolio.ExternalId);

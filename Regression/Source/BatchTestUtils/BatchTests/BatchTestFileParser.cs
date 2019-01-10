@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Deployment.Application;
 using System.IO;
 using System.Linq;
 using System.Reflection;

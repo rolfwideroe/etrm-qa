@@ -1,6 +1,4 @@
 ﻿using ElvizTestUtils.InternalJobService;
-using MessageHandler;
-using MessageHandler.Pocos;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;

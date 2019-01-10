@@ -25,7 +25,7 @@ namespace TestWCFPortfolioManagementService
 
     public class CompanyPortfolioUtil
     {
-        static readonly string test1Filepath = Path.Combine(Directory.GetCurrentDirectory(), "TestFiles\\test1.xml");
+        static readonly string test1Filepath = Path.Combine(TestContext.CurrentContext.TestDirectory, "TestFiles\\test1.xml");
         public static MotherAndChildCompanies GetTestCompanyDtos(string motherExternalId,string childExternalId)
         {
             TestClass test = TestXmlTool.Deserialize<TestClass>(test1Filepath);

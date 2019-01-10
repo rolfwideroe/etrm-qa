@@ -56,7 +56,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
@@ -191,7 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CurrencyAccountsServiceReference\CurrencyAccountService.wsdl" />
     <None Include="Service References\CurrencyAccountsServiceReference\ElvizTestUtils.CurrencyAccountsServiceReference.CurrencyAccountDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -638,12 +639,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\LookUpServiceReference\mex2.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MessageHandler\MessageHandler.csproj">
-      <Project>{6C962956-AE1B-44E8-9C84-D7850508A569}</Project>
-      <Name>MessageHandler</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

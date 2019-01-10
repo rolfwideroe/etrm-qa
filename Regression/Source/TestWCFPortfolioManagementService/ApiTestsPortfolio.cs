@@ -41,7 +41,6 @@ namespace TestWCFPortfolioManagementService
 
 
         [Test]
-        [Retry(3)]
         public void UpdateOwnerCompanyPortfolioDtos()
         {
             string motherCompanyExtid = "Upd_Owner_MotherCompany_" + Guid.NewGuid();
@@ -97,7 +96,6 @@ namespace TestWCFPortfolioManagementService
         }
 
         [Test]
-        [Retry(3)]
         public void DeletedPortfolioDtos()
         {
             string motherCompanyExtid = "Del_MotherCompany_" + Guid.NewGuid();
